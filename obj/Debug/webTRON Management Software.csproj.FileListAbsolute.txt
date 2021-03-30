@@ -12,3 +12,16 @@ C:\Users\Pramesh_Karki\Desktop\Projects\webTRON Management Software\obj\Debug\we
 C:\Users\Pramesh_Karki\Desktop\Projects\webTRON Management Software\bin\Debug\Guna.UI2.dll
 C:\Users\Pramesh_Karki\Desktop\Projects\webTRON Management Software\obj\Debug\webTRON Management Software.csproj.CopyComplete
 C:\Users\Pramesh_Karki\Desktop\Projects\webTRON Management Software\obj\Debug\webTRON_Management_Software.CreateAccount.resources
+C:\Users\Lenovo\Desktop\webTRON Management\webTRON-Management-Software\obj\Debug\webTRON Management Software.csprojAssemblyReference.cache
+C:\Users\Lenovo\Desktop\webTRON Management\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.AdminDashboard.resources
+C:\Users\Lenovo\Desktop\webTRON Management\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.CreateAccount.resources
+C:\Users\Lenovo\Desktop\webTRON Management\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.LandingWindow.resources
+C:\Users\Lenovo\Desktop\webTRON Management\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Properties.Resources.resources
+C:\Users\Lenovo\Desktop\webTRON Management\webTRON-Management-Software\obj\Debug\webTRON Management Software.csproj.GenerateResource.cache
+C:\Users\Lenovo\Desktop\webTRON Management\webTRON-Management-Software\obj\Debug\webTRON Management Software.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\webTRON Management\webTRON-Management-Software\obj\Debug\webTRON Management Software.exe
+C:\Users\Lenovo\Desktop\webTRON Management\webTRON-Management-Software\obj\Debug\webTRON Management Software.pdb
+C:\Users\Lenovo\Desktop\webTRON Management\webTRON-Management-Software\bin\Debug\webTRON Management Software.exe.config
+C:\Users\Lenovo\Desktop\webTRON Management\webTRON-Management-Software\bin\Debug\webTRON Management Software.exe
+C:\Users\Lenovo\Desktop\webTRON Management\webTRON-Management-Software\bin\Debug\webTRON Management Software.pdb
+C:\Users\Lenovo\Desktop\webTRON Management\webTRON-Management-Software\obj\Debug\webTRON Management Software.csproj.CopyComplete

@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace webTRON_Management_Software
 {
-    public partial class Form1 : Form
+    public partial class Landing_Window : Form
     {
-        public Form1()
+        public Landing_Window()
         {
             InitializeComponent();
         }
-
-     
     }
 }
