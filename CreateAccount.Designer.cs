@@ -34,28 +34,28 @@ namespace webTRON_Management_Software
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.activeUserPanel = new System.Windows.Forms.Panel();
             this.currentUser = new System.Windows.Forms.Label();
             this.currentUserPicture = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.firstNameTxtBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.lastNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblEmailAddress = new System.Windows.Forms.Label();
+            this.emailAddressTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblDateOfBirth = new System.Windows.Forms.Label();
             this.dateOfBirthPicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblSex = new System.Windows.Forms.Label();
             this.isMale = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.guna2RadioButton1 = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.isFemale = new Guna.UI2.WinForms.Guna2RadioButton();
             this.guna2RadioButton2 = new Guna.UI2.WinForms.Guna2RadioButton();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.addressTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.lblRole = new System.Windows.Forms.Label();
+            this.roleComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSubmit = new Guna.UI2.WinForms.Guna2Button();
             this.sideBar = new Guna.UI2.WinForms.Guna2Panel();
             this.btnUsers = new Guna.UI2.WinForms.Guna2Button();
             this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
@@ -68,7 +68,7 @@ namespace webTRON_Management_Software
             this.sideBarTransition = new Guna.UI2.WinForms.Guna2Transition();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.activeUserPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.currentUserPicture)).BeginInit();
             this.sideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.activeUserPictureSidebar)).BeginInit();
@@ -111,17 +111,17 @@ namespace webTRON_Management_Software
             this.label7.TabIndex = 0;
             this.label7.Text = "Create Account";
             // 
-            // panel1
+            // activeUserPanel
             // 
-            this.panel1.BackgroundImage = global::webTRON_Management_Software.Properties.Resources.rectangle_curved_small;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.currentUser);
-            this.panel1.Controls.Add(this.currentUserPicture);
-            this.sideBarTransition.SetDecoration(this.panel1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.panel1.Location = new System.Drawing.Point(862, 45);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(124, 52);
-            this.panel1.TabIndex = 15;
+            this.activeUserPanel.BackgroundImage = global::webTRON_Management_Software.Properties.Resources.rectangle_curved_small;
+            this.activeUserPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.activeUserPanel.Controls.Add(this.currentUser);
+            this.activeUserPanel.Controls.Add(this.currentUserPicture);
+            this.sideBarTransition.SetDecoration(this.activeUserPanel, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.activeUserPanel.Location = new System.Drawing.Point(862, 45);
+            this.activeUserPanel.Name = "activeUserPanel";
+            this.activeUserPanel.Size = new System.Drawing.Size(124, 52);
+            this.activeUserPanel.TabIndex = 15;
             // 
             // currentUser
             // 
@@ -150,16 +150,16 @@ namespace webTRON_Management_Software
             this.currentUserPicture.TabIndex = 11;
             this.currentUserPicture.TabStop = false;
             // 
-            // label1
+            // lblName
             // 
-            this.label1.AutoSize = true;
-            this.sideBarTransition.SetDecoration(this.label1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.label1.Location = new System.Drawing.Point(356, 159);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 24);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Name*:";
+            this.lblName.AutoSize = true;
+            this.sideBarTransition.SetDecoration(this.lblName, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.lblName.Location = new System.Drawing.Point(356, 159);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(73, 24);
+            this.lblName.TabIndex = 18;
+            this.lblName.Text = "Name*:";
             // 
             // firstNameTxtBox
             // 
@@ -215,54 +215,54 @@ namespace webTRON_Management_Software
             this.lastNameTextBox.Size = new System.Drawing.Size(209, 32);
             this.lastNameTextBox.TabIndex = 2;
             // 
-            // label2
+            // lblEmailAddress
             // 
-            this.label2.AutoSize = true;
-            this.sideBarTransition.SetDecoration(this.label2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.label2.Location = new System.Drawing.Point(355, 208);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 24);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "Email Address*:";
+            this.lblEmailAddress.AutoSize = true;
+            this.sideBarTransition.SetDecoration(this.lblEmailAddress, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblEmailAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.lblEmailAddress.Location = new System.Drawing.Point(355, 208);
+            this.lblEmailAddress.Name = "lblEmailAddress";
+            this.lblEmailAddress.Size = new System.Drawing.Size(144, 24);
+            this.lblEmailAddress.TabIndex = 21;
+            this.lblEmailAddress.Text = "Email Address*:";
             // 
-            // guna2TextBox2
+            // emailAddressTextBox
             // 
-            this.guna2TextBox2.Animated = true;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.sideBarTransition.SetDecoration(this.guna2TextBox2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.FocusedState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox2.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.HoverState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Location = new System.Drawing.Point(496, 205);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(5);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "Email Address";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.ShadowDecoration.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Size = new System.Drawing.Size(407, 32);
-            this.guna2TextBox2.TabIndex = 3;
+            this.emailAddressTextBox.Animated = true;
+            this.emailAddressTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.sideBarTransition.SetDecoration(this.emailAddressTextBox, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.emailAddressTextBox.DefaultText = "";
+            this.emailAddressTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.emailAddressTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.emailAddressTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.emailAddressTextBox.DisabledState.Parent = this.emailAddressTextBox;
+            this.emailAddressTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.emailAddressTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.emailAddressTextBox.FocusedState.Parent = this.emailAddressTextBox;
+            this.emailAddressTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.emailAddressTextBox.ForeColor = System.Drawing.Color.Black;
+            this.emailAddressTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.emailAddressTextBox.HoverState.Parent = this.emailAddressTextBox;
+            this.emailAddressTextBox.Location = new System.Drawing.Point(496, 205);
+            this.emailAddressTextBox.Margin = new System.Windows.Forms.Padding(5);
+            this.emailAddressTextBox.Name = "emailAddressTextBox";
+            this.emailAddressTextBox.PasswordChar = '\0';
+            this.emailAddressTextBox.PlaceholderText = "Email Address";
+            this.emailAddressTextBox.SelectedText = "";
+            this.emailAddressTextBox.ShadowDecoration.Parent = this.emailAddressTextBox;
+            this.emailAddressTextBox.Size = new System.Drawing.Size(407, 32);
+            this.emailAddressTextBox.TabIndex = 3;
             // 
-            // label3
+            // lblDateOfBirth
             // 
-            this.label3.AutoSize = true;
-            this.sideBarTransition.SetDecoration(this.label3, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.label3.Location = new System.Drawing.Point(355, 309);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 24);
-            this.label3.TabIndex = 23;
-            this.label3.Text = "Date of Birth*:";
+            this.lblDateOfBirth.AutoSize = true;
+            this.sideBarTransition.SetDecoration(this.lblDateOfBirth, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblDateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.lblDateOfBirth.Location = new System.Drawing.Point(355, 309);
+            this.lblDateOfBirth.Name = "lblDateOfBirth";
+            this.lblDateOfBirth.Size = new System.Drawing.Size(122, 24);
+            this.lblDateOfBirth.TabIndex = 23;
+            this.lblDateOfBirth.Text = "Date of Birth*:";
             // 
             // dateOfBirthPicker
             // 
@@ -283,16 +283,16 @@ namespace webTRON_Management_Software
             this.dateOfBirthPicker.TabIndex = 5;
             this.dateOfBirthPicker.Value = new System.DateTime(2021, 3, 30, 0, 0, 0, 0);
             // 
-            // label4
+            // lblSex
             // 
-            this.label4.AutoSize = true;
-            this.sideBarTransition.SetDecoration(this.label4, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.label4.Location = new System.Drawing.Point(355, 358);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 24);
-            this.label4.TabIndex = 25;
-            this.label4.Text = "Sex*:";
+            this.lblSex.AutoSize = true;
+            this.sideBarTransition.SetDecoration(this.lblSex, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblSex.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.lblSex.Location = new System.Drawing.Point(355, 358);
+            this.lblSex.Name = "lblSex";
+            this.lblSex.Size = new System.Drawing.Size(55, 24);
+            this.lblSex.TabIndex = 25;
+            this.lblSex.Text = "Sex*:";
             // 
             // isMale
             // 
@@ -317,28 +317,28 @@ namespace webTRON_Management_Software
             this.isMale.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             this.isMale.UseVisualStyleBackColor = true;
             // 
-            // guna2RadioButton1
+            // isFemale
             // 
-            this.guna2RadioButton1.Animated = true;
-            this.guna2RadioButton1.AutoSize = true;
-            this.guna2RadioButton1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            this.guna2RadioButton1.CheckedState.BorderThickness = 0;
-            this.guna2RadioButton1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            this.guna2RadioButton1.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2RadioButton1.CheckedState.InnerOffset = -4;
-            this.sideBarTransition.SetDecoration(this.guna2RadioButton1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2RadioButton1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2RadioButton1.Location = new System.Drawing.Point(496, 358);
-            this.guna2RadioButton1.Name = "guna2RadioButton1";
-            this.guna2RadioButton1.Size = new System.Drawing.Size(78, 25);
-            this.guna2RadioButton1.TabIndex = 7;
-            this.guna2RadioButton1.TabStop = true;
-            this.guna2RadioButton1.Text = "Female";
-            this.guna2RadioButton1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2RadioButton1.UncheckedState.BorderThickness = 2;
-            this.guna2RadioButton1.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton1.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton1.UseVisualStyleBackColor = true;
+            this.isFemale.Animated = true;
+            this.isFemale.AutoSize = true;
+            this.isFemale.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            this.isFemale.CheckedState.BorderThickness = 0;
+            this.isFemale.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            this.isFemale.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.isFemale.CheckedState.InnerOffset = -4;
+            this.sideBarTransition.SetDecoration(this.isFemale, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.isFemale.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.isFemale.Location = new System.Drawing.Point(496, 358);
+            this.isFemale.Name = "isFemale";
+            this.isFemale.Size = new System.Drawing.Size(78, 25);
+            this.isFemale.TabIndex = 7;
+            this.isFemale.TabStop = true;
+            this.isFemale.Text = "Female";
+            this.isFemale.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.isFemale.UncheckedState.BorderThickness = 2;
+            this.isFemale.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.isFemale.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.isFemale.UseVisualStyleBackColor = true;
             // 
             // guna2RadioButton2
             // 
@@ -401,81 +401,81 @@ namespace webTRON_Management_Software
             this.label5.TabIndex = 29;
             this.label5.Text = "Contact Number*:";
             // 
-            // guna2TextBox3
+            // addressTextBox
             // 
-            this.guna2TextBox3.Animated = true;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.sideBarTransition.SetDecoration(this.guna2TextBox3, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2TextBox3.DefaultText = "";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.FocusedState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox3.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.HoverState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Location = new System.Drawing.Point(457, 257);
-            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(5);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PasswordChar = '\0';
-            this.guna2TextBox3.PlaceholderText = "Address";
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.ShadowDecoration.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Size = new System.Drawing.Size(239, 32);
-            this.guna2TextBox3.TabIndex = 4;
+            this.addressTextBox.Animated = true;
+            this.addressTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.sideBarTransition.SetDecoration(this.addressTextBox, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.addressTextBox.DefaultText = "";
+            this.addressTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.addressTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.addressTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.addressTextBox.DisabledState.Parent = this.addressTextBox;
+            this.addressTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.addressTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.addressTextBox.FocusedState.Parent = this.addressTextBox;
+            this.addressTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.addressTextBox.ForeColor = System.Drawing.Color.Black;
+            this.addressTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.addressTextBox.HoverState.Parent = this.addressTextBox;
+            this.addressTextBox.Location = new System.Drawing.Point(457, 257);
+            this.addressTextBox.Margin = new System.Windows.Forms.Padding(5);
+            this.addressTextBox.Name = "addressTextBox";
+            this.addressTextBox.PasswordChar = '\0';
+            this.addressTextBox.PlaceholderText = "Address";
+            this.addressTextBox.SelectedText = "";
+            this.addressTextBox.ShadowDecoration.Parent = this.addressTextBox;
+            this.addressTextBox.Size = new System.Drawing.Size(239, 32);
+            this.addressTextBox.TabIndex = 4;
             // 
-            // label6
+            // lblAddress
             // 
-            this.label6.AutoSize = true;
-            this.sideBarTransition.SetDecoration(this.label6, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.label6.Location = new System.Drawing.Point(356, 257);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(92, 24);
-            this.label6.TabIndex = 31;
-            this.label6.Text = "Address*:";
+            this.lblAddress.AutoSize = true;
+            this.sideBarTransition.SetDecoration(this.lblAddress, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.lblAddress.Location = new System.Drawing.Point(356, 257);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(92, 24);
+            this.lblAddress.TabIndex = 31;
+            this.lblAddress.Text = "Address*:";
             // 
-            // label8
+            // lblRole
             // 
-            this.label8.AutoSize = true;
-            this.sideBarTransition.SetDecoration(this.label8, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.label8.Location = new System.Drawing.Point(355, 110);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 24);
-            this.label8.TabIndex = 33;
-            this.label8.Text = "Role*:";
+            this.lblRole.AutoSize = true;
+            this.sideBarTransition.SetDecoration(this.lblRole, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.lblRole.Location = new System.Drawing.Point(355, 110);
+            this.lblRole.Name = "lblRole";
+            this.lblRole.Size = new System.Drawing.Size(61, 24);
+            this.lblRole.TabIndex = 33;
+            this.lblRole.Text = "Role*:";
             // 
-            // guna2ComboBox1
+            // roleComboBox
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.sideBarTransition.SetDecoration(this.guna2ComboBox1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.Empty;
-            this.guna2ComboBox1.FocusedState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.FormattingEnabled = true;
-            this.guna2ComboBox1.HoverState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Items.AddRange(new object[] {
+            this.roleComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.sideBarTransition.SetDecoration(this.roleComboBox, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.roleComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.roleComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.roleComboBox.FocusedColor = System.Drawing.Color.Empty;
+            this.roleComboBox.FocusedState.Parent = this.roleComboBox;
+            this.roleComboBox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.roleComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.roleComboBox.FormattingEnabled = true;
+            this.roleComboBox.HoverState.Parent = this.roleComboBox;
+            this.roleComboBox.ItemHeight = 30;
+            this.roleComboBox.Items.AddRange(new object[] {
             "Admin",
             "Doctor",
             "Employee",
             "Accountant",
             "Administration",
             "Others"});
-            this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(430, 103);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Size = new System.Drawing.Size(140, 36);
-            this.guna2ComboBox1.TabIndex = 0;
+            this.roleComboBox.ItemsAppearance.Parent = this.roleComboBox;
+            this.roleComboBox.Location = new System.Drawing.Point(430, 103);
+            this.roleComboBox.Name = "roleComboBox";
+            this.roleComboBox.ShadowDecoration.Parent = this.roleComboBox;
+            this.roleComboBox.Size = new System.Drawing.Size(140, 36);
+            this.roleComboBox.TabIndex = 0;
             // 
             // label9
             // 
@@ -488,21 +488,21 @@ namespace webTRON_Management_Software
             this.label9.TabIndex = 35;
             this.label9.Text = "Enter employee information to create new account ";
             // 
-            // guna2Button1
+            // btnSubmit
             // 
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.sideBarTransition.SetDecoration(this.guna2Button1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(733, 505);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button1.TabIndex = 10;
-            this.guna2Button1.Text = "Submit";
+            this.btnSubmit.CheckedState.Parent = this.btnSubmit;
+            this.btnSubmit.CustomImages.Parent = this.btnSubmit;
+            this.sideBarTransition.SetDecoration(this.btnSubmit, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnSubmit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.btnSubmit.ForeColor = System.Drawing.Color.White;
+            this.btnSubmit.HoverState.Parent = this.btnSubmit;
+            this.btnSubmit.Location = new System.Drawing.Point(733, 505);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.ShadowDecoration.Parent = this.btnSubmit;
+            this.btnSubmit.Size = new System.Drawing.Size(180, 45);
+            this.btnSubmit.TabIndex = 10;
+            this.btnSubmit.Text = "Submit";
             // 
             // sideBar
             // 
@@ -660,7 +660,7 @@ namespace webTRON_Management_Software
             animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
             animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
             animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation1.Padding = new System.Windows.Forms.Padding(0);
             animation1.RotateCoeff = 0F;
             animation1.RotateLimit = 0F;
             animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
@@ -677,28 +677,28 @@ namespace webTRON_Management_Software
             this.ClientSize = new System.Drawing.Size(1000, 625);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.sideBar);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.guna2ComboBox1);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.guna2TextBox3);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.roleComboBox);
+            this.Controls.Add(this.lblRole);
+            this.Controls.Add(this.addressTextBox);
+            this.Controls.Add(this.lblAddress);
             this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.guna2RadioButton2);
-            this.Controls.Add(this.guna2RadioButton1);
+            this.Controls.Add(this.isFemale);
             this.Controls.Add(this.isMale);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblSex);
             this.Controls.Add(this.dateOfBirthPicker);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.guna2TextBox2);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblDateOfBirth);
+            this.Controls.Add(this.emailAddressTextBox);
+            this.Controls.Add(this.lblEmailAddress);
             this.Controls.Add(this.lastNameTextBox);
             this.Controls.Add(this.firstNameTxtBox);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblName);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.guna2Panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.activeUserPanel);
             this.sideBarTransition.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CreateAccount";
@@ -706,8 +706,8 @@ namespace webTRON_Management_Software
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.activeUserPanel.ResumeLayout(false);
+            this.activeUserPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.currentUserPicture)).EndInit();
             this.sideBar.ResumeLayout(false);
             this.sideBar.PerformLayout();
@@ -719,31 +719,31 @@ namespace webTRON_Management_Software
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel activeUserPanel;
         private System.Windows.Forms.Label currentUser;
         private Guna.UI2.WinForms.Guna2CirclePictureBox currentUserPicture;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblName;
         private Guna.UI2.WinForms.Guna2TextBox firstNameTxtBox;
         private Guna.UI2.WinForms.Guna2TextBox lastNameTextBox;
-        private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblEmailAddress;
+        private Guna.UI2.WinForms.Guna2TextBox emailAddressTextBox;
+        private System.Windows.Forms.Label lblDateOfBirth;
         private Guna.UI2.WinForms.Guna2DateTimePicker dateOfBirthPicker;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblSex;
         private Guna.UI2.WinForms.Guna2RadioButton isMale;
-        private Guna.UI2.WinForms.Guna2RadioButton guna2RadioButton1;
+        private Guna.UI2.WinForms.Guna2RadioButton isFemale;
         private Guna.UI2.WinForms.Guna2RadioButton guna2RadioButton2;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label8;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2TextBox addressTextBox;
+        private System.Windows.Forms.Label lblAddress;
+        private System.Windows.Forms.Label lblRole;
+        private Guna.UI2.WinForms.Guna2ComboBox roleComboBox;
         private System.Windows.Forms.Label label9;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnSubmit;
         private Guna.UI2.WinForms.Guna2Panel sideBar;
         private Guna.UI2.WinForms.Guna2Button btnUsers;
         private Guna.UI2.WinForms.Guna2Button btnSettings;
