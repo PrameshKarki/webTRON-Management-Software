@@ -1,0 +1,14 @@
+C:\Users\Pramesh_Karki\Desktop\Projects\webTRON Management Software\bin\Debug\webTRON Management Software.exe.config
+C:\Users\Pramesh_Karki\Desktop\Projects\webTRON Management Software\bin\Debug\webTRON Management Software.exe
+C:\Users\Pramesh_Karki\Desktop\Projects\webTRON Management Software\bin\Debug\webTRON Management Software.pdb
+C:\Users\Pramesh_Karki\Desktop\Projects\webTRON Management Software\obj\Debug\webTRON Management Software.csprojAssemblyReference.cache
+C:\Users\Pramesh_Karki\Desktop\Projects\webTRON Management Software\obj\Debug\webTRON_Management_Software.Form1.resources
+C:\Users\Pramesh_Karki\Desktop\Projects\webTRON Management Software\obj\Debug\webTRON_Management_Software.Properties.Resources.resources
+C:\Users\Pramesh_Karki\Desktop\Projects\webTRON Management Software\obj\Debug\webTRON Management Software.csproj.GenerateResource.cache
+C:\Users\Pramesh_Karki\Desktop\Projects\webTRON Management Software\obj\Debug\webTRON Management Software.csproj.CoreCompileInputs.cache
+C:\Users\Pramesh_Karki\Desktop\Projects\webTRON Management Software\obj\Debug\webTRON Management Software.exe
+C:\Users\Pramesh_Karki\Desktop\Projects\webTRON Management Software\obj\Debug\webTRON Management Software.pdb
+C:\Users\Pramesh_Karki\Desktop\Projects\webTRON Management Software\obj\Debug\webTRON_Management_Software.AdminDashboard.resources
+C:\Users\Pramesh_Karki\Desktop\Projects\webTRON Management Software\bin\Debug\Guna.UI2.dll
+C:\Users\Pramesh_Karki\Desktop\Projects\webTRON Management Software\obj\Debug\webTRON Management Software.csproj.CopyComplete
+C:\Users\Pramesh_Karki\Desktop\Projects\webTRON Management Software\obj\Debug\webTRON_Management_Software.CreateAccount.resources

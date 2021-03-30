@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace webTRON_Management_Software
 {
     static class Program
@@ -16,7 +15,8 @@ namespace webTRON_Management_Software
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new CreateAccount());
+          
         }
     }
 }
