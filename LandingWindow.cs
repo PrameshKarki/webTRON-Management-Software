@@ -7,17 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using webTRON_Management_Software.Models;
 
 namespace webTRON_Management_Software
 {
     public partial class LandingWindow : Form
     {
+
+        //Instantiating User Class
+        User newUser = new User();
         public LandingWindow()
         {
             InitializeComponent();
         }
 
-        //for draggable windows form............
+        //for draggable windows form
         protected override void WndProc(ref Message m)
         {
             switch (m.Msg)
@@ -31,43 +35,102 @@ namespace webTRON_Management_Software
 
             base.WndProc(ref m);
         }
-        //..........................................
 
+       
 
-        private void Form1_Load(object sender, EventArgs e)
+        //Login Button Click Event
+        private void btnLogIn_Click(object sender, EventArgs e)
         {
+            //Instantiate object properties
+            newUser.userID = userIDTextBox.Text;
+            newUser.password = passwordTextBox.Text;
+
+            //Validating user input
+            if (newUser.userID == "" || newUser.password == "")
+            {
+                MessageBox.Show("Fll all the fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else
+            {
+                //Check valid user or nont
+                bool isSucess = newUser.CheckUser(newUser);
+                if (isSucess)
+                {
+                    //check wheather the user login is first time or not into the system
+                    bool isFirstTime = newUser.IsFirstTimeLogin(newUser.userID);
+                    if (isFirstTime)
+                    {
+                        newUser.StoreLogInInfo(newUser.userID);
+
+                    }
+                    else
+                    {
+                        newUser.UpdateLogInInfo(newUser.userID);
+
+                    }
+                    //Authorize User
+                    AuthorizeUser();
+
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Username or Password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
 
         }
-
-        private void guna2ImageButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2PictureBox2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void guna2PictureBox3_Click(object sender, EventArgs e)
+        //Minimize button click event
+        private void btnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
-        private void guna2TextBox3_TextChanged(object sender, EventArgs e)
+        //Close button click event
+        private void btnClose_Click(object sender, EventArgs e)
         {
+            Application.Exit();
+        }
+        private void AuthorizeUser()
+        {
+            //Get User Role
+            string userRole = newUser.GetUserRole(newUser.userID);
+            switch (userRole)
+            {
+                case "Admin":
+                    this.Hide();
+                    AdminDashboard adminDashBoard = new AdminDashboard();
+                    adminDashBoard.Show();
+                    break;
+                case "Doctor":
+                    this.Hide();
+                    DoctorDashboard doctorDashboard = new DoctorDashboard();
+                    doctorDashboard.Show();
+                    break;
+                case "Accountant":
+                    this.Hide();
+                    AccountantDashboard accountDashboard = new AccountantDashboard();
+                    accountDashboard.Show();
+                    break;
+                case "Management":
+                    this.Hide();
+                    ManagementDashboard managementDashboard = new ManagementDashboard();
+                    managementDashboard.Show();
+                     break;
+                case "Other":
+                    this.Hide();
+                    OtherDashboard otherDashboard = new OtherDashboard();
+                    otherDashboard.Show();
+                   break;
+
+            }
 
         }
-
-        private void label1_Click(object sender, EventArgs e)
+        //Method to handle click event
+        private void lblForgetPassword_Click(object sender, EventArgs e)
         {
-            //ForgetPassword f = new ForgetPassword();
-           // f.guna2AnimateWindow1.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_CENTER;
+            this.Hide();
+            ForgetPassword forgetPassword = new ForgetPassword();
+            forgetPassword.Show();
         }
-    } 
+    }
 }

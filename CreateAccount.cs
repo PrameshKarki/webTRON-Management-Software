@@ -42,12 +42,12 @@ namespace webTRON_Management_Software
         {
             //Instantiate Object Properties
             obj.Role = roleComboBox.Text;
-            obj.FirstName = firstNameTxtBox.Text;
-            obj.LastName = lastNameTextBox.Text;
-            obj.Email = emailTextBox.Text;
-            obj.Address = addressTextBox.Text;
+            obj.FirstName = firstNameTxtBox.Text.Trim();
+            obj.LastName = lastNameTextBox.Text.Trim();
+            obj.Email = emailTextBox.Text.Trim();
+            obj.Address = addressTextBox.Text.Trim();
             obj.DateOfBirth = dateOfBirthPicker.Value.ToString("yyyy-MM-dd");
-            obj.ContactNumber = contactNumberTextBox.Text;
+            obj.ContactNumber = contactNumberTextBox.Text.Trim();
             obj.userID = Generator.generateUserId(obj.Role);
            
             if (isMale.Checked)

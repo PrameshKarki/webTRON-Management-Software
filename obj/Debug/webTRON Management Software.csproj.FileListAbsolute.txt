@@ -67,3 +67,7 @@ C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-So
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON Management Software.pdb
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.ForgetPassword.resources
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.LandingWindow.resources
+C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.AccountantDashboard.resources
+C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.DoctorDashboard.resources
+C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.ManagementDashboard.resources
+C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.OtherDashboard.resources
