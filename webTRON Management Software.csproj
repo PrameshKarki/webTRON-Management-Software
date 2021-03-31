@@ -64,11 +64,17 @@
     <Compile Include="AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Landing Window.cs">
+    <Compile Include="ForgetPassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Landing Window.Designer.cs">
-      <DependentUpon>Landing Window.cs</DependentUpon>
+    <Compile Include="ForgetPassword.Designer.cs">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LandingWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LandingWindow.designer.cs">
+      <DependentUpon>LandingWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\User.cs" />
@@ -82,8 +88,11 @@
     <EmbeddedResource Include="CreateAccount.resx">
       <DependentUpon>CreateAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Landing Window.resx">
-      <DependentUpon>Landing Window.cs</DependentUpon>
+    <EmbeddedResource Include="ForgetPassword.resx">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LandingWindow.resx">
+      <DependentUpon>LandingWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -108,7 +117,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Minimize.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\man_picture.jpg" />
   </ItemGroup>
@@ -147,6 +158,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\webTRONLogoWithSlogan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rectangle_curved_large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock_password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smallPasswordIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smallUserIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\topLeftCircles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\webTronLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blueUserIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\slogan.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
