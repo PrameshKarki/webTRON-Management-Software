@@ -8,7 +8,7 @@ namespace webTRON_Management_Software.Utils
 {
     class Generator
     {
-        //.........................................................................
+        
         //Possible Characters
         static char[] upperCaseLetters = new char[] { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
         static char[] lowerCaseLetters = new char[] { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
@@ -25,16 +25,9 @@ namespace webTRON_Management_Software.Utils
             int randomNumber = r.Next(min, max);
             return randomNumber;
         }
-        //...............................................................
+        
 
 
-
-
-
-
-
-
-        //...............................................................
         //Method that generates random password and returns it
         public static string generatePassword()
         {
@@ -52,7 +45,9 @@ namespace webTRON_Management_Software.Utils
             }
             return password;
         }
-        //....................................................................
+
+
+        //Here is the User ID generator
 
         public static string generateUserId(string post, int i)
         {
