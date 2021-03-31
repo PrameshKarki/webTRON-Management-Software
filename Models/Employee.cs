@@ -13,7 +13,7 @@ namespace webTRON_Management_Software.Models
         //Connection String
         private static string connectionString="server=localhost;user id=root;pwd=password;database=webtronmanagement";
         //Properties
-        public int userID { get; set; }
+        public string userID { get; set; }
         public  string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
