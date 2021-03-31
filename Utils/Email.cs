@@ -58,7 +58,7 @@ namespace webTRON_Management_Software.Utils
                     smtp.Send(mail);
 
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
                         return false;
                     }

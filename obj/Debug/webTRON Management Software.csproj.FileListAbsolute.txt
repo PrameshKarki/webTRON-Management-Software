@@ -59,10 +59,11 @@ C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-So
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON Management Software.exe.config
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.AdminDashboard.resources
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.CreateAccount.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Landing_Window.resources
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Properties.Resources.resources
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON Management Software.csproj.GenerateResource.cache
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON Management Software.csproj.CoreCompileInputs.cache
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON Management Software.csproj.CopyComplete
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON Management Software.exe
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON Management Software.pdb
+C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.ForgetPassword.resources
+C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.LandingWindow.resources

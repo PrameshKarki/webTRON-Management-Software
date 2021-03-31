@@ -26,7 +26,7 @@ namespace webTRON_Management_Software.Models
             try
             {
                 //String SqlQuery
-                string SQLQuery = "INSERT INTO User(userID,password) VALUES(@userID,AES_ENCRYPT(@password,'webTRON')";
+                string SQLQuery ="INSERT INTO Users(userID,password) VALUES(@userID,AES_ENCRYPT(@password,'webTRON'))";
                 //MySql Command
                 MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
                 cmd.Parameters.AddWithValue("@userID", obj.userID);

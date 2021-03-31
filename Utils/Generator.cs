@@ -92,22 +92,22 @@ namespace webTRON_Management_Software.Utils
             int date = (d.Year) % 100;
            
             if (role == "Doctor")
-                userID += "DIR-" + date + "-" + counter;
+            userID += $"DIR-{date}-{counter}";
             /* WARNINGS:else if (post == "Patient")
                  userID += "PTC-" + date + "-" + counter;
              */
             else if (role == "Employee")
-                userID += "EMP-" + date + "-" + counter;
+                userID += $"EMP-{date}-{counter}";
             else if (role == "Administration")
-                userID += "ADM-" + date + "-" + counter;
+                userID += $"ADM-{date}-{counter}";
             else if (role == "Admin")
-                userID += "ADM-" + date + "-" + counter;
+                userID += $"ADM-{date}-{counter}";
             //WARNINGS:ADM Duplication
             else if (role == "Accountant")
-                userID += "ACC-" + date + "-" + counter;
+                userID += $"ACC-{date}-{counter}";
             else if (role == "Others")
-                userID += "OTH-" + date + "-" + counter;
-           
+                userID += $"OTH-{date}-{counter}";
+
             return userID;
 
         }

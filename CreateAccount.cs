@@ -14,14 +14,17 @@ namespace webTRON_Management_Software
 {
     public partial class CreateAccount : Form
     {
+        //Instantiate Employee Class
         Employee obj = new Employee();
+        //Instantiate USer Class
+        User newUser = new User();
       
        
         public CreateAccount()
         {
             InitializeComponent();
         }
-
+        //Removeable code block
         private void button1_Click(object sender, EventArgs e)
         {
             if (sideBar.Visible)
@@ -68,14 +71,33 @@ namespace webTRON_Management_Software
             }
             else
             {
+                //Insert object in database
                 bool isSucess = obj.Insert(obj);
+
                 if (isSucess)
                 {
-                    MessageBox.Show("New account has been created sucessfully.","Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    bool isS=Email.SendAccountInfo(obj.Email, obj.userID, Generator.generatePassword());
-                    resetFormFields();
-                    MessageBox.Show(isS.ToString());
-                    
+                    //Store user's user ID and password in users table
+                    bool isUserCreated = storeUser();
+                    if (isUserCreated)
+                    {
+                        bool isSend = Email.SendAccountInfo(obj.Email, newUser.userID,newUser.password);
+                        if (isSend)
+                        {
+                            //Show small popup here
+                            MessageBox.Show("New account has been created sucessfully.", "Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            resetFormFields();
+
+                        }
+                        else
+                        {
+                            //Show error popup here
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error Occured.Please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
@@ -99,6 +121,15 @@ namespace webTRON_Management_Software
             isOthers.Checked = false;
         }
 
-        
+        //Method to store user's userID and password in user table when account is sucessfully created
+        private bool storeUser()
+        {
+           //If account is created sucesfully then store corresponding user's userID and password in (users) table
+            newUser.userID = obj.userID;
+            newUser.password = Generator.generatePassword();
+            bool isSucess=newUser.Insert(newUser);
+            return isSucess;
+            
+        }
     }
 }
