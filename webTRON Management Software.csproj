@@ -70,6 +70,12 @@
     <Compile Include="ForgetPassword.Designer.cs">
       <DependentUpon>ForgetPassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreateNewPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateNewPatient.Designer.cs">
+      <DependentUpon>CreateNewPatient.cs</DependentUpon>
+    </Compile>
     <Compile Include="LandingWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,7 @@
       <DependentUpon>LandingWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Patient.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -90,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ForgetPassword.resx">
       <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateNewPatient.resx">
+      <DependentUpon>CreateNewPatient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LandingWindow.resx">
       <DependentUpon>LandingWindow.cs</DependentUpon>
@@ -185,6 +195,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\slogan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RectangleWithBothSideCurved.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlusSign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewPatientCard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RectangleCurved.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

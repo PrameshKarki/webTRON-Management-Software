@@ -173,6 +173,36 @@ namespace webTRON_Management_Software.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap NewPatientCard {
+            get {
+                object obj = ResourceManager.GetObject("NewPatientCard", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PlusSign {
+            get {
+                object obj = ResourceManager.GetObject("PlusSign", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PlusSign1 {
+            get {
+                object obj = ResourceManager.GetObject("PlusSign1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap rectangle_curved {
             get {
                 object obj = ResourceManager.GetObject("rectangle_curved", resourceCulture);
@@ -206,6 +236,26 @@ namespace webTRON_Management_Software.Properties {
         internal static System.Drawing.Bitmap rectangle_curved_small {
             get {
                 object obj = ResourceManager.GetObject("rectangle_curved_small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RectangleCurved {
+            get {
+                object obj = ResourceManager.GetObject("RectangleCurved", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RectangleWithBothSideCurved {
+            get {
+                object obj = ResourceManager.GetObject("RectangleWithBothSideCurved", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -17,7 +17,9 @@ namespace webTRON_Management_Software
             Application.SetCompatibleTextRenderingDefault(false);
            // Application.Run(new CreateAccount());
            // Application.Run(new ForgetPassword());
-           Application.Run(new LandingWindow());
+           //Application.Run(new LandingWindow());
+           //Application.Run(new CreateAccount());
+           Application.Run(new CreateNewPatient());
           
         }
     }
