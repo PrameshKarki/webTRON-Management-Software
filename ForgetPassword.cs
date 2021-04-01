@@ -7,135 +7,173 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using webTRON_Management_Software.Models;
+using webTRON_Management_Software.Utils;
 
 namespace webTRON_Management_Software
 {
     public partial class ForgetPassword : Form
     {
+        //Instantiate Employee Class
+        Employee empObj = new Employee();
 
-        //........ For transparent Labels..............
-        void TransparetBackground(Control C)
-        {
-            C.Visible = false;
-
-            C.Refresh();
-            Application.DoEvents();
-
-            Rectangle screenRectangle = RectangleToScreen(this.ClientRectangle);
-            int titleHeight = screenRectangle.Top - this.Top;
-            int Right = screenRectangle.Left - this.Left;
-
-            Bitmap bmp = new Bitmap(this.Width, this.Height);
-            this.DrawToBitmap(bmp, new Rectangle(0, 0, this.Width, this.Height));
-            Bitmap bmpImage = new Bitmap(bmp);
-            bmp = bmpImage.Clone(new Rectangle(C.Location.X + Right, C.Location.Y + titleHeight, C.Width, C.Height), bmpImage.PixelFormat);
-            C.BackgroundImage = bmp;
-
-            C.Visible = true;
-        }
-        //................................................................
+        //Entered email
+        string enteredEmail;
 
         public ForgetPassword()
         {
             InitializeComponent();
         }
+      
 
-
-        //for draggable windows form............
-        protected override void WndProc(ref Message m)
-        {
-            switch (m.Msg)
-            {
-                case 0x84:
-                    base.WndProc(ref m);
-                    if ((int)m.Result == 0x1)
-                        m.Result = (IntPtr)0x2;
-                    return;
-            }
-
-            base.WndProc(ref m);
-        }
-        //..........................................
-
-
-
-
-
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        //Click event on close button
+        private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
-        private void guna2PictureBox2_Click(object sender, EventArgs e)
+        //Click event on minimize button
+        private void btnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void guna2PictureBox4_Click(object sender, EventArgs e)
+        //Click event on send verification code
+        private void btnSendVerificationCode_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ForgetPassword_Load(object sender, EventArgs e)
-        {
-            //.........transparent background.........
-            TransparetBackground(lblForgotPassword);
-            TransparetBackground(lblYouCanReset);
-            TransparetBackground(guna2PictureBox4);
-            //............-------------------............
-
-            //...........Start animation on load.........
-            // Guna.UI2.WinForms.Guna2AnimateWindow.Start();
-            //guna2AnimateWindow1.Start();
-        }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2TextBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
-        {
-
-        }
-
-        private void testButton_Click(object sender, EventArgs e)
-        {
-            if (sendVerificationCodePanel.Visible)
+            //Check if textbox is empty or null
+            if(string.IsNullOrEmpty(recoveryEmailTextBox.Text))
             {
-                verificationPanelTransition.HideSync(sendVerificationCodePanel);
+                MessageBox.Show("Insert valid email.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                verificationPanelTransition.ShowSync(sendVerificationCodePanel);
-            }
-        }
+                 enteredEmail = recoveryEmailTextBox.Text;
+                //Check email is exist in database or not
+                if (empObj.IsEmailExist(enteredEmail))
+                {
+                    //Send Verification code and store this in database
+                    int generatedVerificationCode = Generator.VerificationCode();
+                    bool isMailSendSucessfully = Email.SendVerificationCode(enteredEmail, generatedVerificationCode);
+                    if (isMailSendSucessfully)
+                    {
+                        bool isCodeStoredSucessfully=empObj.StoreVerificationCode(enteredEmail, generatedVerificationCode);
+                        if (isCodeStoredSucessfully)
+                        {
+                            //Show enterVerificationCodePanel
+                            verificationPanelTransition.ShowSync(enterVerificationCodePanel);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Please try again.","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                      
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please try again.","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                   
+                }
+                else
+                {
+                    MessageBox.Show("Match not found!", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
 
-        private void TEST2_Click(object sender, EventArgs e)
+            }
+    
+            
+
+        }
+        //Click event on verify button click
+        private void btnVerify_Click(object sender, EventArgs e)
         {
-            if (resetPasswordPanel.Visible)
+            //Check all the text fields are filled or not
+            if(string.IsNullOrEmpty(verificationCodeTextBox1.Text) || string.IsNullOrEmpty(verificationCodeTextBox2.Text)|| string.IsNullOrEmpty(verificationCodeTextBox3.Text) || string.IsNullOrEmpty(verificationCodeTextBox4.Text))
             {
-                resetPasswordPanelTransition.HideSync(resetPasswordPanel);
+                MessageBox.Show("Fill all the fields","Warning", MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
             else
             {
-                resetPasswordPanelTransition.ShowSync(resetPasswordPanel);
+                string verificationCode = $"{verificationCodeTextBox1.Text}{verificationCodeTextBox2.Text}{verificationCodeTextBox3.Text}{verificationCodeTextBox4.Text}";
+                int code = Convert.ToInt32(verificationCode);
+                //Check verification is valid or not
+                bool isValid = empObj.IsValidVerificationCode(enteredEmail, code);
+                if (isValid)
+                {
+                    resetPasswordPanelTransition.ShowSync(resetPasswordPanel);
+                }
+                else
+                {
+                    MessageBox.Show("Invalid verification code.", "Invalid Code", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
             }
+
+                  }
+        //TextChange event on different verificationCodeTextBox 
+        private void verificationCodeTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (verificationCodeTextBox1.Text.Length == 1)
+            {
+                verificationCodeTextBox2.Focus();
+            }
+
+        }
+
+        private void verificationCodeTextBox2_TextChanged(object sender, EventArgs e)
+        {
+            if (verificationCodeTextBox2.Text.Length == 1)
+            {
+                verificationCodeTextBox3.Focus();
+            }
+        }
+
+        private void verificationCodeTextBox3_TextChanged(object sender, EventArgs e)
+        {
+            if (verificationCodeTextBox3.Text.Length == 1)
+            {
+                verificationCodeTextBox4.Focus();
+            }
+
+        }
+
+        private void verificationCodeTextBox4_TextChanged(object sender, EventArgs e)
+        {
+            if (verificationCodeTextBox4.Text.Length == 1)
+            {
+                btnVerify.Focus();
+            }
+        }
+        //Click event on password reset button
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(newPasswordTextBox.Text) || string.IsNullOrEmpty(confirmPasswordTextBox.Text))
+            {
+                MessageBox.Show("Fill all the fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (newPasswordTextBox.Text != confirmPasswordTextBox.Text)
+            {
+                MessageBox.Show("Password's do not match.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                string newPassword = newPasswordTextBox.Text;
+                //Store new password in database
+                bool isChanged = empObj.UpdatePassword(enteredEmail, newPassword);
+                if (isChanged)
+                {
+                   MessageBox.Show("Password has changed sucessfully.", "Congratulations", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //Then hide ForgetPassword form and show Landing window again
+                    this.Hide();
+                    LandingWindow landingWindow = new LandingWindow();
+                    landingWindow.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Plase try again later.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
         }
     }
 }

@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountantDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountantDashboard.Designer.cs">
+      <DependentUpon>AccountantDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,12 @@
     </Compile>
     <Compile Include="AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorDashboard.Designer.cs">
+      <DependentUpon>DoctorDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="ForgetPassword.cs">
       <SubType>Form</SubType>
@@ -82,18 +94,36 @@
     <Compile Include="LandingWindow.designer.cs">
       <DependentUpon>LandingWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManagementDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagementDashboard.Designer.cs">
+      <DependentUpon>ManagementDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Patient.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="OtherDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherDashboard.Designer.cs">
+      <DependentUpon>OtherDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\Email.cs" />
     <Compile Include="Utils\Generator.cs" />
+    <EmbeddedResource Include="AccountantDashboard.resx">
+      <DependentUpon>AccountantDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateAccount.resx">
       <DependentUpon>CreateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorDashboard.resx">
+      <DependentUpon>DoctorDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ForgetPassword.resx">
       <DependentUpon>ForgetPassword.cs</DependentUpon>
@@ -103,6 +133,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LandingWindow.resx">
       <DependentUpon>LandingWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagementDashboard.resx">
+      <DependentUpon>ManagementDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherDashboard.resx">
+      <DependentUpon>OtherDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -134,19 +170,10 @@
     <None Include="Resources\man_picture.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\rectangle_curved.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\circle_red.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\circle_green.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rectangle_curved_small.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rectangle_curved_medium.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\exit_icon.png" />

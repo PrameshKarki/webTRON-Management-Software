@@ -35,6 +35,18 @@ namespace webTRON_Management_Software.Utils
             isSucess=SendEmail();
             return isSucess;
         }
+        //Method to send verification code
+        public static bool SendVerificationCode(string userEmail,int verificationCode)
+        {
+            //Set default status false
+            bool isSucess = false;
+            emailToAddress = userEmail;
+            subject = "Forget Password";
+            body = $"Your verification code:{verificationCode}";
+            //Send Email
+            isSucess = SendEmail();
+            return isSucess;
+        }
         //Method to send email
         private static bool SendEmail()
         {
@@ -58,7 +70,7 @@ namespace webTRON_Management_Software.Utils
                     smtp.Send(mail);
 
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
                         return false;
                     }

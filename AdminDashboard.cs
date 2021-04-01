@@ -46,5 +46,7 @@ namespace webTRON_Management_Software
                 sideBarTransition.ShowSync(sideBar);
             }
         }
+
+       
     }
 }

@@ -179,7 +179,7 @@ namespace webTRON_Management_Software
             this.firstNameTxtBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.firstNameTxtBox.HoverState.Parent = this.firstNameTxtBox;
             this.firstNameTxtBox.Location = new System.Drawing.Point(445, 155);
-            this.firstNameTxtBox.Margin = new System.Windows.Forms.Padding(6);
+            this.firstNameTxtBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.firstNameTxtBox.Name = "firstNameTxtBox";
             this.firstNameTxtBox.PasswordChar = '\0';
             this.firstNameTxtBox.PlaceholderText = "First Name";
@@ -206,7 +206,7 @@ namespace webTRON_Management_Software
             this.lastNameTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.lastNameTextBox.HoverState.Parent = this.lastNameTextBox;
             this.lastNameTextBox.Location = new System.Drawing.Point(694, 155);
-            this.lastNameTextBox.Margin = new System.Windows.Forms.Padding(6);
+            this.lastNameTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.PasswordChar = '\0';
             this.lastNameTextBox.PlaceholderText = "Last Name";
@@ -244,7 +244,7 @@ namespace webTRON_Management_Software
             this.emailTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.emailTextBox.HoverState.Parent = this.emailTextBox;
             this.emailTextBox.Location = new System.Drawing.Point(506, 205);
-            this.emailTextBox.Margin = new System.Windows.Forms.Padding(5);
+            this.emailTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.PasswordChar = '\0';
             this.emailTextBox.PlaceholderText = "Email Address";
@@ -381,7 +381,7 @@ namespace webTRON_Management_Software
             this.contactNumberTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.contactNumberTextBox.HoverState.Parent = this.contactNumberTextBox;
             this.contactNumberTextBox.Location = new System.Drawing.Point(518, 398);
-            this.contactNumberTextBox.Margin = new System.Windows.Forms.Padding(5);
+            this.contactNumberTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.contactNumberTextBox.Name = "contactNumberTextBox";
             this.contactNumberTextBox.PasswordChar = '\0';
             this.contactNumberTextBox.PlaceholderText = "Contact Number";
@@ -419,7 +419,7 @@ namespace webTRON_Management_Software
             this.addressTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.addressTextBox.HoverState.Parent = this.addressTextBox;
             this.addressTextBox.Location = new System.Drawing.Point(457, 257);
-            this.addressTextBox.Margin = new System.Windows.Forms.Padding(5);
+            this.addressTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.PasswordChar = '\0';
             this.addressTextBox.PlaceholderText = "Address";
@@ -471,7 +471,7 @@ namespace webTRON_Management_Software
             "Security",
             "Employee"});
             this.roleComboBox.ItemsAppearance.Parent = this.roleComboBox;
-            this.roleComboBox.Location = new System.Drawing.Point(430, 103);
+            this.roleComboBox.Location = new System.Drawing.Point(447, 103);
             this.roleComboBox.Name = "roleComboBox";
             this.roleComboBox.ShadowDecoration.Parent = this.roleComboBox;
             this.roleComboBox.Size = new System.Drawing.Size(140, 36);
@@ -494,7 +494,7 @@ namespace webTRON_Management_Software
             this.btnSubmit.CustomImages.Parent = this.btnSubmit;
             this.sideBarTransition.SetDecoration(this.btnSubmit, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnSubmit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.btnSubmit.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
             this.btnSubmit.HoverState.Parent = this.btnSubmit;
             this.btnSubmit.Location = new System.Drawing.Point(733, 505);
