@@ -15,12 +15,12 @@ namespace webTRON_Management_Software
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-           //Application.Run(new CreateAccount());
-           // Application.Run(new ForgetPassword());
-             Application.Run(new LandingWindow());
+            Application.Run(new CreateAccount());
+           //Application.Run(new ForgetPassword());
            //Application.Run(new LandingWindow());
-           //Application.Run(new CreateAccount());
-           Application.Run(new CreateNewPatient());
+           //Application.Run(new LandingWindow());
+          // Application.Run(new CreateNewPatient());
+           //Application.Run(new SearchAndUpdatePatient());
           
         }
     }

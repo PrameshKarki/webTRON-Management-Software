@@ -36,7 +36,7 @@ namespace webTRON_Management_Software.Utils
             return isSucess;
         }
         //Method to send verification code
-        public static bool SendVerificationCode(string userEmail,int verificationCode)
+        public static bool SendVerificationCode(string userEmail,double verificationCode)
         {
             //Set default status false
             bool isSucess = false;
