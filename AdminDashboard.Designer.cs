@@ -29,7 +29,7 @@ namespace webTRON_Management_Software
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboard));
             this.lblOnline = new System.Windows.Forms.Label();
             this.onlineUser = new System.Windows.Forms.Label();
@@ -54,6 +54,8 @@ namespace webTRON_Management_Software
             this.activeUserPicture = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.sideBarTransition = new Guna.UI2.WinForms.Guna2Transition();
             this.button1 = new System.Windows.Forms.Button();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.sideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.activeUserPictureSidebar)).BeginInit();
             this.activePanel.SuspendLayout();
@@ -63,6 +65,7 @@ namespace webTRON_Management_Software
             ((System.ComponentModel.ISupportInitialize)(this.offlineStatusPicture)).BeginInit();
             this.activeUserPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblOnline
@@ -125,7 +128,7 @@ namespace webTRON_Management_Software
             this.sideBar.Controls.Add(this.activeUserPictureSidebar);
             this.sideBar.Controls.Add(this.btnSignOut);
             this.sideBarTransition.SetDecoration(this.sideBar, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.sideBar.Location = new System.Drawing.Point(0, 0);
+            this.sideBar.Location = new System.Drawing.Point(1, 0);
             this.sideBar.Name = "sideBar";
             this.sideBar.ShadowDecoration.Parent = this.sideBar;
             this.sideBar.Size = new System.Drawing.Size(349, 625);
@@ -252,7 +255,7 @@ namespace webTRON_Management_Software
             this.activePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.activePanel.Controls.Add(this.lblActivePanelName);
             this.sideBarTransition.SetDecoration(this.activePanel, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.activePanel.Location = new System.Drawing.Point(-3, 45);
+            this.activePanel.Location = new System.Drawing.Point(234, 454);
             this.activePanel.Name = "activePanel";
             this.activePanel.ShadowDecoration.Parent = this.activePanel;
             this.activePanel.Size = new System.Drawing.Size(278, 51);
@@ -362,22 +365,22 @@ namespace webTRON_Management_Software
             // 
             this.sideBarTransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide;
             this.sideBarTransition.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.sideBarTransition.DefaultAnimation = animation1;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.sideBarTransition.DefaultAnimation = animation2;
             // 
             // button1
             // 
@@ -390,6 +393,26 @@ namespace webTRON_Management_Software
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Controls.Add(this.guna2Panel2);
+            this.sideBarTransition.SetDecoration(this.guna2Panel1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            this.guna2Panel1.Location = new System.Drawing.Point(0, -1);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
+            this.guna2Panel1.Size = new System.Drawing.Size(68, 556);
+            this.guna2Panel1.TabIndex = 19;
+            // 
+            // guna2Panel2
+            // 
+            this.sideBarTransition.SetDecoration(this.guna2Panel2, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Panel2.Location = new System.Drawing.Point(74, 2);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
+            this.guna2Panel2.Size = new System.Drawing.Size(192, 68);
+            this.guna2Panel2.TabIndex = 20;
+            // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -397,8 +420,9 @@ namespace webTRON_Management_Software
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1000, 625);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.sideBar);
+            this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.activePanel);
             this.Controls.Add(this.arrowRed);
             this.Controls.Add(this.arrowGreen);
@@ -427,6 +451,7 @@ namespace webTRON_Management_Software
             this.activeUserPanel.ResumeLayout(false);
             this.activeUserPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -456,5 +481,7 @@ namespace webTRON_Management_Software
         private Guna.UI2.WinForms.Guna2PictureBox arrowRed;
         private Guna.UI2.WinForms.Guna2Transition sideBarTransition;
         private System.Windows.Forms.Button button1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
     }
 }

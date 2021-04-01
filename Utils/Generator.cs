@@ -111,6 +111,13 @@ namespace webTRON_Management_Software.Utils
             return userID;
 
         }
+        //To generate random verification code
+        public static int VerificationCode()
+        {
+            Random rand = new Random();
+            int code = rand.Next(1000, 9999);
+            return code;
+        }
 
     }
 }

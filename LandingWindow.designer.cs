@@ -35,12 +35,10 @@ namespace webTRON_Management_Software
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LandingWindow));
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.lblForgetPassword = new System.Windows.Forms.Label();
             this.userIDTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.passwordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnLogIn = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.userIconPicture = new Guna.UI2.WinForms.Guna2PictureBox();
             this.inputFormPicture = new Guna.UI2.WinForms.Guna2PictureBox();
             this.subHeroPicture = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -48,6 +46,7 @@ namespace webTRON_Management_Software
             this.btnMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnClose = new Guna.UI2.WinForms.Guna2PictureBox();
             this.topLeftCurvePicture = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.DragableLandingWindow = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.userIconPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputFormPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subHeroPicture)).BeginInit();
@@ -270,6 +269,10 @@ namespace webTRON_Management_Software
             this.topLeftCurvePicture.TabIndex = 0;
             this.topLeftCurvePicture.TabStop = false;
             // 
+            // DragableLandingWindow
+            // 
+            this.DragableLandingWindow.TargetControl = this;
+            // 
             // LandingWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -290,7 +293,7 @@ namespace webTRON_Management_Software
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.topLeftCurvePicture);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "LandingWindow";
             this.Text = "k";
@@ -317,12 +320,11 @@ namespace webTRON_Management_Software
         private Guna.UI2.WinForms.Guna2PictureBox userIconPicture;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label lblForgetPassword;
         private Guna.UI2.WinForms.Guna2TextBox userIDTextBox;
         private Guna.UI2.WinForms.Guna2TextBox passwordTextBox;
         private Guna.UI2.WinForms.Guna2Button btnLogIn;
-        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
+        private Guna.UI2.WinForms.Guna2DragControl DragableLandingWindow;
     }
 }
 
