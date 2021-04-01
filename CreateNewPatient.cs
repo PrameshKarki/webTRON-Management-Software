@@ -53,7 +53,7 @@ namespace webTRON_Management_Software
         {
 
             // check if all the fields are Filled or not.
-            if (string.IsNullOrEmpty(firstNameTxtBox.Text) || string.IsNullOrEmpty(lastNameTextBox.Text) || string.IsNullOrEmpty(addressTextBox.Text) || string.IsNullOrEmpty(ageTextBox.Text) || string.IsNullOrEmpty(contactNumberTextBox.Text) ||( isMale.Checked == false & isFemale.Checked == false & isOthers.Checked == false))
+            if (string.IsNullOrEmpty(firstNameTxtBox.Text) || string.IsNullOrEmpty(lastNameTextBox.Text) || string.IsNullOrEmpty(addressTextBox.Text) || string.IsNullOrEmpty(ageTextBox.Text) || string.IsNullOrEmpty(contactNumberTextBox.Text) || (isMale.Checked == false & isFemale.Checked == false & isOthers.Checked == false))
             {
                 MessageBox.Show("Complete Information Should be Supplied.", "Warning!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -76,10 +76,10 @@ namespace webTRON_Management_Software
                 else if (isOthers.Checked)
                     ptn.Sex = isOthers.Text;
 
-                    bool isSuccess = Patient.Insert(ptn);
-                    if (isSuccess)
-                    {
-                        MessageBox.Show("Registration Completed!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bool isSuccess = Patient.Insert(ptn);
+                if (isSuccess)
+                {
+                    MessageBox.Show("Registration Completed!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
 
@@ -103,21 +103,18 @@ namespace webTRON_Management_Software
                     lblRegistrationIdOutput.Text = regNumber;
                     lblRegistrationDateOutput.Text = regDate;
                 }
-                    else
-                    {
-                        MessageBox.Show("Error!!!", "failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                else
+                {
+                    MessageBox.Show("Error!!!", "failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
-                
+
             }
 
 
 
         }
 
-        private void lblAddress_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }

@@ -109,7 +109,7 @@ namespace webTRON_Management_Software.Models
 
         }
         //Method to store verification code in database
-         public bool StoreVerificationCode(string userEmail,int verificationCode)
+         public bool StoreVerificationCode(string userEmail,double verificationCode)
         {
             //Fetched user ID
             string fetchedUserID = "";
