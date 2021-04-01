@@ -160,19 +160,10 @@
     <None Include="Resources\man_picture.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\rectangle_curved.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\circle_red.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\circle_green.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rectangle_curved_small.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rectangle_curved_medium.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\exit_icon.png" />

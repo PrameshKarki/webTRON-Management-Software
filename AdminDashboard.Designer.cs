@@ -35,37 +35,23 @@ namespace webTRON_Management_Software
             this.onlineUser = new System.Windows.Forms.Label();
             this.offlineUser = new System.Windows.Forms.Label();
             this.lblOffline = new System.Windows.Forms.Label();
-            this.sideBar = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnUsers = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
-            this.activeUserRole = new System.Windows.Forms.Label();
             this.activeUserSidebar = new System.Windows.Forms.Label();
             this.activeUserPictureSidebar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnSignOut = new Guna.UI2.WinForms.Guna2Button();
-            this.activePanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblActivePanelName = new System.Windows.Forms.Label();
             this.arrowRed = new Guna.UI2.WinForms.Guna2PictureBox();
             this.arrowGreen = new Guna.UI2.WinForms.Guna2PictureBox();
             this.onlineStatusPicture = new Guna.UI2.WinForms.Guna2PictureBox();
             this.offlineStatusPicture = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.activeUserPanel = new System.Windows.Forms.Panel();
-            this.activeUser = new System.Windows.Forms.Label();
-            this.activeUserPicture = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.sideBarTransition = new Guna.UI2.WinForms.Guna2Transition();
-            this.button1 = new System.Windows.Forms.Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.sideBar.SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.activeUserPictureSidebar)).BeginInit();
-            this.activePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.arrowRed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arrowGreen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.onlineStatusPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.offlineStatusPicture)).BeginInit();
-            this.activeUserPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).BeginInit();
-            this.guna2Panel1.SuspendLayout();
+            this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblOnline
@@ -116,118 +102,28 @@ namespace webTRON_Management_Software
             this.lblOffline.TabIndex = 6;
             this.lblOffline.Text = "Offline";
             // 
-            // sideBar
-            // 
-            this.sideBar.BackgroundImage = global::webTRON_Management_Software.Properties.Resources.rectangle_curved;
-            this.sideBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.sideBar.Controls.Add(this.btnUsers);
-            this.sideBar.Controls.Add(this.btnSettings);
-            this.sideBar.Controls.Add(this.btnDashboard);
-            this.sideBar.Controls.Add(this.activeUserRole);
-            this.sideBar.Controls.Add(this.activeUserSidebar);
-            this.sideBar.Controls.Add(this.activeUserPictureSidebar);
-            this.sideBar.Controls.Add(this.btnSignOut);
-            this.sideBarTransition.SetDecoration(this.sideBar, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.sideBar.Location = new System.Drawing.Point(1, 0);
-            this.sideBar.Name = "sideBar";
-            this.sideBar.ShadowDecoration.Parent = this.sideBar;
-            this.sideBar.Size = new System.Drawing.Size(349, 625);
-            this.sideBar.TabIndex = 13;
-            this.sideBar.Visible = false;
-            // 
-            // btnUsers
-            // 
-            this.btnUsers.CheckedState.Parent = this.btnUsers;
-            this.btnUsers.CustomImages.Parent = this.btnUsers;
-            this.sideBarTransition.SetDecoration(this.btnUsers, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnUsers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.btnUsers.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsers.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnUsers.HoverState.Parent = this.btnUsers;
-            this.btnUsers.Image = global::webTRON_Management_Software.Properties.Resources.user_icon;
-            this.btnUsers.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnUsers.ImageOffset = new System.Drawing.Point(20, 0);
-            this.btnUsers.Location = new System.Drawing.Point(9, 344);
-            this.btnUsers.Name = "btnUsers";
-            this.btnUsers.ShadowDecoration.Parent = this.btnUsers;
-            this.btnUsers.Size = new System.Drawing.Size(319, 45);
-            this.btnUsers.TabIndex = 6;
-            this.btnUsers.Text = "Users";
-            // 
-            // btnSettings
-            // 
-            this.btnSettings.CheckedState.Parent = this.btnSettings;
-            this.btnSettings.CustomImages.Parent = this.btnSettings;
-            this.sideBarTransition.SetDecoration(this.btnSettings, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnSettings.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.btnSettings.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSettings.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnSettings.HoverState.Parent = this.btnSettings;
-            this.btnSettings.Image = global::webTRON_Management_Software.Properties.Resources.settings_icon;
-            this.btnSettings.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSettings.ImageOffset = new System.Drawing.Point(20, 0);
-            this.btnSettings.Location = new System.Drawing.Point(9, 395);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.ShadowDecoration.Parent = this.btnSettings;
-            this.btnSettings.Size = new System.Drawing.Size(319, 45);
-            this.btnSettings.TabIndex = 5;
-            this.btnSettings.Text = "Settings";
-            // 
-            // btnDashboard
-            // 
-            this.btnDashboard.CheckedState.Parent = this.btnDashboard;
-            this.btnDashboard.CustomImages.Parent = this.btnDashboard;
-            this.sideBarTransition.SetDecoration(this.btnDashboard, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnDashboard.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(3)))), ((int)(((byte)(3)))));
-            this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.btnDashboard.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnDashboard.HoverState.Parent = this.btnDashboard;
-            this.btnDashboard.Image = global::webTRON_Management_Software.Properties.Resources.dashboard_icon;
-            this.btnDashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDashboard.ImageOffset = new System.Drawing.Point(20, 0);
-            this.btnDashboard.Location = new System.Drawing.Point(9, 293);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.ShadowDecoration.Parent = this.btnDashboard;
-            this.btnDashboard.Size = new System.Drawing.Size(319, 45);
-            this.btnDashboard.TabIndex = 3;
-            this.btnDashboard.Text = "Dashboard";
-            // 
-            // activeUserRole
-            // 
-            this.activeUserRole.AutoSize = true;
-            this.activeUserRole.BackColor = System.Drawing.Color.Transparent;
-            this.sideBarTransition.SetDecoration(this.activeUserRole, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.activeUserRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.activeUserRole.ForeColor = System.Drawing.Color.White;
-            this.activeUserRole.Location = new System.Drawing.Point(125, 255);
-            this.activeUserRole.Name = "activeUserRole";
-            this.activeUserRole.Size = new System.Drawing.Size(70, 24);
-            this.activeUserRole.TabIndex = 2;
-            this.activeUserRole.Text = "Admin";
-            // 
             // activeUserSidebar
             // 
             this.activeUserSidebar.AutoSize = true;
             this.activeUserSidebar.BackColor = System.Drawing.Color.Transparent;
             this.sideBarTransition.SetDecoration(this.activeUserSidebar, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.activeUserSidebar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.activeUserSidebar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.activeUserSidebar.ForeColor = System.Drawing.Color.White;
-            this.activeUserSidebar.Location = new System.Drawing.Point(107, 216);
+            this.activeUserSidebar.Location = new System.Drawing.Point(64, 12);
             this.activeUserSidebar.Name = "activeUserSidebar";
-            this.activeUserSidebar.Size = new System.Drawing.Size(116, 29);
+            this.activeUserSidebar.Size = new System.Drawing.Size(52, 24);
             this.activeUserSidebar.TabIndex = 1;
-            this.activeUserSidebar.Text = "John Doe";
+            this.activeUserSidebar.Text = "John";
             // 
             // activeUserPictureSidebar
             // 
             this.activeUserPictureSidebar.BackColor = System.Drawing.Color.Transparent;
             this.sideBarTransition.SetDecoration(this.activeUserPictureSidebar, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.activeUserPictureSidebar.Image = global::webTRON_Management_Software.Properties.Resources.man_picture;
-            this.activeUserPictureSidebar.Location = new System.Drawing.Point(81, 35);
+            this.activeUserPictureSidebar.Location = new System.Drawing.Point(11, 15);
             this.activeUserPictureSidebar.Name = "activeUserPictureSidebar";
             this.activeUserPictureSidebar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.activeUserPictureSidebar.ShadowDecoration.Parent = this.activeUserPictureSidebar;
-            this.activeUserPictureSidebar.Size = new System.Drawing.Size(163, 152);
+            this.activeUserPictureSidebar.Size = new System.Drawing.Size(49, 45);
             this.activeUserPictureSidebar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.activeUserPictureSidebar.TabIndex = 0;
             this.activeUserPictureSidebar.TabStop = false;
@@ -242,37 +138,12 @@ namespace webTRON_Management_Software
             this.btnSignOut.ForeColor = System.Drawing.Color.White;
             this.btnSignOut.HoverState.Parent = this.btnSignOut;
             this.btnSignOut.Image = ((System.Drawing.Image)(resources.GetObject("btnSignOut.Image")));
-            this.btnSignOut.Location = new System.Drawing.Point(81, 533);
+            this.btnSignOut.Location = new System.Drawing.Point(112, 391);
             this.btnSignOut.Name = "btnSignOut";
             this.btnSignOut.ShadowDecoration.Parent = this.btnSignOut;
             this.btnSignOut.Size = new System.Drawing.Size(180, 45);
             this.btnSignOut.TabIndex = 7;
             this.btnSignOut.Text = "Sign Out";
-            // 
-            // activePanel
-            // 
-            this.activePanel.BackgroundImage = global::webTRON_Management_Software.Properties.Resources.rectangle_curved_medium;
-            this.activePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.activePanel.Controls.Add(this.lblActivePanelName);
-            this.sideBarTransition.SetDecoration(this.activePanel, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.activePanel.Location = new System.Drawing.Point(234, 454);
-            this.activePanel.Name = "activePanel";
-            this.activePanel.ShadowDecoration.Parent = this.activePanel;
-            this.activePanel.Size = new System.Drawing.Size(278, 51);
-            this.activePanel.TabIndex = 15;
-            // 
-            // lblActivePanelName
-            // 
-            this.lblActivePanelName.AutoSize = true;
-            this.lblActivePanelName.BackColor = System.Drawing.Color.Transparent;
-            this.sideBarTransition.SetDecoration(this.lblActivePanelName, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lblActivePanelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.lblActivePanelName.ForeColor = System.Drawing.Color.White;
-            this.lblActivePanelName.Location = new System.Drawing.Point(89, 11);
-            this.lblActivePanelName.Name = "lblActivePanelName";
-            this.lblActivePanelName.Size = new System.Drawing.Size(102, 24);
-            this.lblActivePanelName.TabIndex = 0;
-            this.lblActivePanelName.Text = "Dashboard";
             // 
             // arrowRed
             // 
@@ -301,7 +172,6 @@ namespace webTRON_Management_Software
             // onlineStatusPicture
             // 
             this.sideBarTransition.SetDecoration(this.onlineStatusPicture, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.onlineStatusPicture.Image = global::webTRON_Management_Software.Properties.Resources.circle_green;
             this.onlineStatusPicture.Location = new System.Drawing.Point(452, 59);
             this.onlineStatusPicture.Name = "onlineStatusPicture";
             this.onlineStatusPicture.ShadowDecoration.Parent = this.onlineStatusPicture;
@@ -313,7 +183,6 @@ namespace webTRON_Management_Software
             // offlineStatusPicture
             // 
             this.sideBarTransition.SetDecoration(this.offlineStatusPicture, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.offlineStatusPicture.Image = global::webTRON_Management_Software.Properties.Resources.circle_red;
             this.offlineStatusPicture.Location = new System.Drawing.Point(621, 59);
             this.offlineStatusPicture.Name = "offlineStatusPicture";
             this.offlineStatusPicture.ShadowDecoration.Parent = this.offlineStatusPicture;
@@ -321,45 +190,6 @@ namespace webTRON_Management_Software
             this.offlineStatusPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.offlineStatusPicture.TabIndex = 2;
             this.offlineStatusPicture.TabStop = false;
-            // 
-            // activeUserPanel
-            // 
-            this.activeUserPanel.BackgroundImage = global::webTRON_Management_Software.Properties.Resources.rectangle_curved_small;
-            this.activeUserPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.activeUserPanel.Controls.Add(this.activeUser);
-            this.activeUserPanel.Controls.Add(this.activeUserPicture);
-            this.sideBarTransition.SetDecoration(this.activeUserPanel, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.activeUserPanel.Location = new System.Drawing.Point(880, 45);
-            this.activeUserPanel.Name = "activeUserPanel";
-            this.activeUserPanel.Size = new System.Drawing.Size(124, 52);
-            this.activeUserPanel.TabIndex = 14;
-            // 
-            // activeUser
-            // 
-            this.activeUser.AutoSize = true;
-            this.activeUser.BackColor = System.Drawing.Color.Transparent;
-            this.sideBarTransition.SetDecoration(this.activeUser, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.activeUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.activeUser.ForeColor = System.Drawing.Color.White;
-            this.activeUser.Location = new System.Drawing.Point(57, 10);
-            this.activeUser.Name = "activeUser";
-            this.activeUser.Size = new System.Drawing.Size(52, 24);
-            this.activeUser.TabIndex = 10;
-            this.activeUser.Text = "John";
-            // 
-            // activeUserPicture
-            // 
-            this.activeUserPicture.BackColor = System.Drawing.Color.Transparent;
-            this.sideBarTransition.SetDecoration(this.activeUserPicture, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.activeUserPicture.Image = global::webTRON_Management_Software.Properties.Resources.man_picture;
-            this.activeUserPicture.Location = new System.Drawing.Point(21, 10);
-            this.activeUserPicture.Name = "activeUserPicture";
-            this.activeUserPicture.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.activeUserPicture.ShadowDecoration.Parent = this.activeUserPicture;
-            this.activeUserPicture.Size = new System.Drawing.Size(30, 30);
-            this.activeUserPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.activeUserPicture.TabIndex = 11;
-            this.activeUserPicture.TabStop = false;
             // 
             // sideBarTransition
             // 
@@ -382,36 +212,41 @@ namespace webTRON_Management_Software
             animation2.TransparencyCoeff = 0F;
             this.sideBarTransition.DefaultAnimation = animation2;
             // 
-            // button1
-            // 
-            this.sideBarTransition.SetDecoration(this.button1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.button1.Location = new System.Drawing.Point(901, 121);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Controls.Add(this.guna2Panel2);
             this.sideBarTransition.SetDecoration(this.guna2Panel1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
             this.guna2Panel1.Location = new System.Drawing.Point(0, -1);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(68, 556);
+            this.guna2Panel1.Size = new System.Drawing.Size(68, 532);
             this.guna2Panel1.TabIndex = 19;
             // 
             // guna2Panel2
             // 
+            this.guna2Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Panel2.Controls.Add(this.label1);
+            this.guna2Panel2.Controls.Add(this.activeUserPictureSidebar);
+            this.guna2Panel2.Controls.Add(this.activeUserSidebar);
             this.sideBarTransition.SetDecoration(this.guna2Panel2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Panel2.Location = new System.Drawing.Point(74, 2);
+            this.guna2Panel2.Location = new System.Drawing.Point(63, 0);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(192, 68);
+            this.guna2Panel2.Size = new System.Drawing.Size(164, 76);
             this.guna2Panel2.TabIndex = 20;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.sideBarTransition.SetDecoration(this.label1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(61, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 20);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Dashboard";
             // 
             // AdminDashboard
             // 
@@ -420,11 +255,10 @@ namespace webTRON_Management_Software
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1000, 625);
-            this.Controls.Add(this.sideBar);
             this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.activePanel);
+            this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.arrowRed);
+            this.Controls.Add(this.btnSignOut);
             this.Controls.Add(this.arrowGreen);
             this.Controls.Add(this.offlineUser);
             this.Controls.Add(this.onlineUser);
@@ -432,26 +266,19 @@ namespace webTRON_Management_Software
             this.Controls.Add(this.onlineStatusPicture);
             this.Controls.Add(this.offlineStatusPicture);
             this.Controls.Add(this.lblOffline);
-            this.Controls.Add(this.activeUserPanel);
             this.sideBarTransition.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminDashboard";
             this.Text = "Admin Dashboard";
             this.Load += new System.EventHandler(this.AdminDashboard_Load);
-            this.sideBar.ResumeLayout(false);
-            this.sideBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.activeUserPictureSidebar)).EndInit();
-            this.activePanel.ResumeLayout(false);
-            this.activePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.arrowRed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arrowGreen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.onlineStatusPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.offlineStatusPicture)).EndInit();
-            this.activeUserPanel.ResumeLayout(false);
-            this.activeUserPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).EndInit();
-            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -464,24 +291,14 @@ namespace webTRON_Management_Software
         private System.Windows.Forms.Label onlineUser;
         private System.Windows.Forms.Label offlineUser;
         private System.Windows.Forms.Label lblOffline;
-        private System.Windows.Forms.Label activeUser;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox activeUserPicture;
-        private Guna.UI2.WinForms.Guna2Panel sideBar;
         private Guna.UI2.WinForms.Guna2Button btnSignOut;
-        private Guna.UI2.WinForms.Guna2Button btnUsers;
-        private Guna.UI2.WinForms.Guna2Button btnSettings;
-        private Guna.UI2.WinForms.Guna2Button btnDashboard;
-        private System.Windows.Forms.Label activeUserRole;
         private System.Windows.Forms.Label activeUserSidebar;
         private Guna.UI2.WinForms.Guna2CirclePictureBox activeUserPictureSidebar;
-        private System.Windows.Forms.Panel activeUserPanel;
-        private Guna.UI2.WinForms.Guna2Panel activePanel;
-        private System.Windows.Forms.Label lblActivePanelName;
         private Guna.UI2.WinForms.Guna2PictureBox arrowGreen;
         private Guna.UI2.WinForms.Guna2PictureBox arrowRed;
         private Guna.UI2.WinForms.Guna2Transition sideBarTransition;
-        private System.Windows.Forms.Button button1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private System.Windows.Forms.Label label1;
     }
 }
