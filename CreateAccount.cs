@@ -47,9 +47,16 @@ namespace webTRON_Management_Software
             obj.Email = emailTextBox.Text.Trim();
             obj.Address = addressTextBox.Text.Trim();
             obj.DateOfBirth = dateOfBirthPicker.Value.ToString("yyyy-MM-dd");
-            obj.ContactNumber = contactNumberTextBox.Text.Trim();
-            obj.userID = Generator.generateUserId(obj.Role);
-           
+            obj.ContactNumber = contactNumberTextBox.Text;
+            if(roleComboBox.Text=="Doctor")
+            obj.userID = Generator.generateDoctorId();
+            else if (roleComboBox.Text == "Management")
+                obj.userID = Generator.generateManagementId();
+            else if (roleComboBox.Text == "Adimn")
+                obj.userID = Generator.generateAdminId();
+            else if (roleComboBox.Text == "Accountant")
+                obj.userID = Generator.generateAccountantId();
+
             if (isMale.Checked)
             {
                 obj.Sex = isMale.Text;
@@ -64,7 +71,7 @@ namespace webTRON_Management_Software
             //Set default user status offline
             obj.Status = "Offline";
 
-            //Input validation
+            //Input validation ---------- Much better if done before initializing the values to the object
             if (obj.Role=="" || obj.FirstName == "" || obj.LastName == "" || obj.Email == "" || obj.Address == "" || obj.DateOfBirth == "" || obj.ContactNumber == "" || obj.Sex == "")
             {
                 MessageBox.Show("Fill all the fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
