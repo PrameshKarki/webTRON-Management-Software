@@ -92,3 +92,4 @@ D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\System.Runtime.
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\MySql.Data.xml
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.SearchAndUpdatePatient.resources
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\Properties.Resources.Designer.cs.dll
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON Management Software.csprojAssemblyReference.cache

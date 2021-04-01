@@ -72,32 +72,22 @@ namespace webTRON_Management_Software.Models
             command.Connection = conn;
             command.CommandText = "update patientinfo set Patient_First_Name=@prmFirstName, Patient_Last_Name=@prmLastName, Contact= @prmContact,Age=@prmAge,Address=@prmAddress WHERE Registration_Number=@parmRegistrationNumber";
             command.Parameters.AddWithValue("prmFirstName", ObjUpdate.FirstName);
-            MessageBox.Show(ObjUpdate.FirstName);
             command.Parameters.AddWithValue("prmLastName", ObjUpdate.LastName);
-            MessageBox.Show(ObjUpdate.LastName);
             command.Parameters.AddWithValue("parmRegistrationNumber", ObjUpdate.Registration_Number);
-            MessageBox.Show(ObjUpdate.Registration_Number);
             command.Parameters.AddWithValue("prmContact", ObjUpdate.ContactNumber);
-            MessageBox.Show(ObjUpdate.ContactNumber);
             command.Parameters.AddWithValue("prmAge", ObjUpdate.Age);
-            MessageBox.Show(ObjUpdate.Age);
             command.Parameters.AddWithValue("prmAddress", ObjUpdate.Address);
             MessageBox.Show(ObjUpdate.Address);
-          
                 command.ExecuteNonQuery();
-                MessageBox.Show("Inside TRY...");
 
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message+"Inside CATCH...");
+                MessageBox.Show(e.Message);
                 return false;
-               
-
             }
             finally
             {
-                MessageBox.Show("Inside Finally...");
                 conn.Close();
             }
             return true;
