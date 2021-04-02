@@ -9,27 +9,32 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using webTRON_Management_Software.Models;
-using webTRON_Management_Software.Utils;
 
-namespace webTRON_Management_Software
+namespace webTRON_Management_Software.Views.Accountant
 {
     public partial class SearchAndUpdatePatient : Form
     {
-        Patient ObjUpdate = new Patient();
-        private static string connectionString = "server=localhost;user id=root; password=laxudb;persistsecurityinfo=True;database=webtronmanagement";
-
+         Patient ObjUpdate = new Patient();
+        private static string connectionString = "server=localhost;user id=root;pwd=password;database=webtronmanagement";
         public SearchAndUpdatePatient()
         {
             InitializeComponent();
         }
 
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            //clear all fields
+            Clear();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void guna2PictureBox2_Click(object sender, EventArgs e)
+        private void btnMinimize_Click(object sender, EventArgs e)
         {
+
             this.WindowState = FormWindowState.Minimized;
         }
         private void DisplayInDataGridView()
@@ -38,7 +43,7 @@ namespace webTRON_Management_Software
             MySqlDataAdapter sda = new MySqlDataAdapter("select * from Patientinfo", conn);
 
             DataTable dt = new DataTable();
-            sda.Fill(dt);  // inserts the data table returned from MySqlDataAdapter sda to the DataTable dt;
+            sda.Fill(dt);  // inserts the data table returned from MySqlDataAdapter  sda to the DataTable dt;
             DataGridView.Rows.Clear(); // clear the values in the gridview;
             foreach (DataRow item in dt.Rows) // from DataTable dt we have to read and Insert them in Gridview. DataRow is the datatype. item is name given to them which are rows of dt;
             {
@@ -58,13 +63,13 @@ namespace webTRON_Management_Software
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(firstNameTextBox.Text) || string.IsNullOrEmpty(lastNameTextBox.Text) || string.IsNullOrEmpty(addressTextBox.Text) || string.IsNullOrEmpty(ageTextBox.Text) || string.IsNullOrEmpty(contactNumberTextBox.Text) )
+            if (string.IsNullOrEmpty(firstNameTextBox.Text) || string.IsNullOrEmpty(lastNameTextBox.Text) || string.IsNullOrEmpty(addressTextBox.Text) || string.IsNullOrEmpty(ageTextBox.Text) || string.IsNullOrEmpty(contactNumberTextBox.Text))
             {
                 MessageBox.Show("Complete Information Should be Supplied.", "Warning!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                ObjUpdate.Registration_Number =lblRegistrationNumberOutput.Text;
+                ObjUpdate.Registration_Number = lblRegistrationNumberOutput.Text;
                 ObjUpdate.Registration_Date = lblRegistrationDateOutput.Text;
                 ObjUpdate.FirstName = firstNameTextBox.Text;
                 ObjUpdate.LastName = lastNameTextBox.Text;
@@ -74,30 +79,22 @@ namespace webTRON_Management_Software
                 ObjUpdate.ContactNumber = contactNumberTextBox.Text;
                 ObjUpdate.Status = lblStatusOutput.Text;
                 ObjUpdate.Sex = lblSexOutput.Text;
-                    bool isSuccess = Patient.Update(ObjUpdate);
-                    if (isSuccess)
-                    {
-                        MessageBox.Show("Information Updated.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bool isSuccess = Patient.Update(ObjUpdate);
+                if (isSuccess)
+                {
+                    MessageBox.Show("Information Updated.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
-                        //clear all fields
-                        Clear();
-                        DisplayInDataGridView();
-                    }
-                    else
-                    {
-                        MessageBox.Show("UNSUCCESSFUL.", "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    //clear all fields
+                    Clear();
+                    DisplayInDataGridView();
+                }
+                else
+                {
+                    MessageBox.Show("UNSUCCESSFUL.", "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
-
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-
-            //clear all fields
-            Clear();
-        }
-
         //Method to clear all fields
         private void Clear()
         {
@@ -112,7 +109,7 @@ namespace webTRON_Management_Software
             contactNumberTextBox.Text = "";
             lblReferredToOutput.Text = "------";
             lblRegistrationDateOutput.Text = "------";
-           lblRegistrationNumberOutput.Text = "------";
+            lblRegistrationNumberOutput.Text = "------";
             firstNameTextBox.Focus();
         }
 
@@ -124,16 +121,16 @@ namespace webTRON_Management_Software
         private void searchTextBox_TextChanged(object sender, EventArgs e)
         {
             MySqlConnection conn = new MySqlConnection(connectionString);
-            MySqlDataAdapter sda = new MySqlDataAdapter(@"select * from patientinfo where ( Registration_Number like '%" + searchTextBox.Text + 
-                "%') or ( Registration_Date like '%" + searchTextBox.Text +
-                "%') or (Patient_First_Name like '%" + searchTextBox.Text + 
-                "%')or (Patient_Last_Name like '%" + searchTextBox.Text +
-                "%')or (Contact like '%" + searchTextBox.Text + 
-                "%') or (Sex like '%"+searchTextBox.Text+ 
-                "%') or (Referred_TO like '%"+searchTextBox.Text+
-                "%')or (Status like '%" + searchTextBox.Text +
-                "%')or (Age like '%" + searchTextBox.Text +
-                "%')or (Address like '%" + searchTextBox.Text +
+            MySqlDataAdapter sda = new MySqlDataAdapter(@"select * from patientinfo where ( registrationNumber like '%" + searchTextBox.Text +
+                "%') or ( registrationDate like '%" + searchTextBox.Text +
+                "%') or (firstName like '%" + searchTextBox.Text +
+                "%')or (lastName like '%" + searchTextBox.Text +
+                "%')or (contact like '%" + searchTextBox.Text +
+                "%') or (sex like '%" + searchTextBox.Text +
+                "%') or (referredTo like '%" + searchTextBox.Text +
+                "%')or (status like '%" + searchTextBox.Text +
+                "%')or (age like '%" + searchTextBox.Text +
+                "%')or (address like '%" + searchTextBox.Text +
                 "%')", conn);
             DataTable dt = new DataTable();
             sda.Fill(dt);  // inserts the data table returned from MySqlDataAdapter sda to the DataTable dt;
@@ -154,7 +151,9 @@ namespace webTRON_Management_Software
             }
         }
 
-        private void DataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        
+
+        private void DataGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             lblRegistrationNumberOutput.Text = DataGridView.SelectedRows[0].Cells[0].Value.ToString();
             lblRegistrationDateOutput.Text = DataGridView.SelectedRows[0].Cells[1].Value.ToString();
@@ -166,6 +165,7 @@ namespace webTRON_Management_Software
             lblStatusOutput.Text = DataGridView.SelectedRows[0].Cells[7].Value.ToString();
             ageTextBox.Text = DataGridView.SelectedRows[0].Cells[8].Value.ToString();
             addressTextBox.Text = DataGridView.SelectedRows[0].Cells[9].Value.ToString();
+
         }
     }
 }

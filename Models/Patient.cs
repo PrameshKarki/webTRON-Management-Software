@@ -11,8 +11,8 @@ namespace webTRON_Management_Software.Models
     class Patient
     {
         //connection string
-        private static string connectionString = "server=localhost;user id=root; password=laxudb;persistsecurityinfo=True;database=webtronmanagement";
-
+        //private static string connectionString = "server=localhost;user id=root; password=laxudb;persistsecurityinfo=True;database=webtronmanagement";
+        private static string connectionString = "server=localhost;user id=root;pwd=password;database=webtronmanagement";
         //instance variables of the class Patient
         public string Registration_Number { get; set; }
         public string Registration_Date { get; set; }
@@ -66,11 +66,11 @@ namespace webTRON_Management_Software.Models
             MySqlConnection conn = new MySqlConnection(connectionString);
             try
             {
-            MessageBox.Show("Inside Update...");
+           
             conn.Open();
             MySqlCommand command = new MySqlCommand();
             command.Connection = conn;
-            command.CommandText = "update patientinfo set Patient_First_Name=@prmFirstName, Patient_Last_Name=@prmLastName, Contact= @prmContact,Age=@prmAge,Address=@prmAddress WHERE Registration_Number=@parmRegistrationNumber";
+            command.CommandText = "update patientInfo set firstName=@prmFirstName,lastName=@prmLastName, contact= @prmContact,age=@prmAge,address=@prmAddress WHERE registrationNumber=@parmRegistrationNumber";
             command.Parameters.AddWithValue("prmFirstName", ObjUpdate.FirstName);
             command.Parameters.AddWithValue("prmLastName", ObjUpdate.LastName);
             command.Parameters.AddWithValue("parmRegistrationNumber", ObjUpdate.Registration_Number);
