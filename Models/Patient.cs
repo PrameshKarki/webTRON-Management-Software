@@ -48,10 +48,10 @@ namespace webTRON_Management_Software.Models
             {
                 command.ExecuteNonQuery();
             }
-            catch (Exception)
-            {
-                return false;
-            }
+            //catch (Exception)
+            //{
+            //    return false;
+           // }
             finally
             {
                 conn.Close();
