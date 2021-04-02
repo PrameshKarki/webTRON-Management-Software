@@ -1,5 +1,5 @@
 ﻿
-namespace webTRON_Management_Software
+namespace webTRON_Management_Software.Views.Admin
 {
     partial class CreateAccount
     {

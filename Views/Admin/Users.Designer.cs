@@ -1,5 +1,5 @@
 ﻿
-namespace webTRON_Management_Software
+namespace webTRON_Management_Software.Views.Admin
 {
     partial class Users
     {
@@ -89,6 +89,7 @@ namespace webTRON_Management_Software
             this.btnAddNewAccount.Size = new System.Drawing.Size(173, 45);
             this.btnAddNewAccount.TabIndex = 22;
             this.btnAddNewAccount.Text = "New Account";
+            this.btnAddNewAccount.Click += new System.EventHandler(this.btnAddNewAccount_Click);
             // 
             // activeUserPanel
             // 

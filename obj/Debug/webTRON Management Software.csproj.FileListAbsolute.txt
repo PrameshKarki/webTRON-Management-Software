@@ -57,7 +57,6 @@ C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-So
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\bin\Debug\MySql.Data.xml
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON Management Software.exe.config
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.AdminDashboard.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.CreateAccount.resources
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Properties.Resources.resources
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON Management Software.csproj.GenerateResource.cache
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON Management Software.csproj.CoreCompileInputs.cache
@@ -69,7 +68,9 @@ C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-So
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.AccountantDashboard.resources
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.DoctorDashboard.resources
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.ManagementDashboard.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.OtherDashboard.resources
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.CreateNewPatient.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON Management Software.csprojAssemblyReference.cache
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Users.resources
+C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.Admin_Settings.resources
+C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Others.OtherDashboard.resources
+C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON Management Software.csprojAssemblyReference.cache
+C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.CreateAccount.resources

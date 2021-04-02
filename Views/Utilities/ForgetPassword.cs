@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using webTRON_Management_Software.Models;
 using webTRON_Management_Software.Utils;
 
-namespace webTRON_Management_Software
+namespace webTRON_Management_Software.Views.Utilities
 {
     public partial class ForgetPassword : Form
     {

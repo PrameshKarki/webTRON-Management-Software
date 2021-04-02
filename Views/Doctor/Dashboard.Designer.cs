@@ -1,7 +1,7 @@
 ﻿
-namespace webTRON_Management_Software
+namespace webTRON_Management_Software.Views.Doctor
 {
-    partial class AccountantDashboard
+    partial class Dashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -35,20 +35,23 @@ namespace webTRON_Management_Software
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(333, 128);
+            this.label1.Location = new System.Drawing.Point(345, 219);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Hello i am Accountant";
+            this.label1.Size = new System.Drawing.Size(88, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Hello i am Doctor";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // AccountantDashboard
+            // DoctorDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1000, 625);
             this.Controls.Add(this.label1);
-            this.Name = "AccountantDashboard";
-            this.Text = "AccountantDashboard";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "DoctorDashboard";
+            this.Text = "DoctorDashboard";
             this.ResumeLayout(false);
             this.PerformLayout();
 

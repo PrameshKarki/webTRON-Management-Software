@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace webTRON_Management_Software
+namespace webTRON_Management_Software.Views.Admin
 {
     public partial class AdminDashboard : Form
     {
@@ -42,6 +42,14 @@ namespace webTRON_Management_Software
             Application.Exit();
         }
 
-        
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

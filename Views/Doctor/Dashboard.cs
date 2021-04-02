@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace webTRON_Management_Software
+namespace webTRON_Management_Software.Views.Doctor
 {
-    public partial class OtherDashboard : Form
+    public partial class Dashboard : Form
     {
-        public OtherDashboard()
+        public Dashboard()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace webTRON_Management_Software
+namespace webTRON_Management_Software.Views.Admin
 {
     public partial class Users : Form
     {
@@ -28,6 +28,10 @@ namespace webTRON_Management_Software
         {
             this.WindowState = FormWindowState.Minimized;
         }
-       
+
+        private void btnAddNewAccount_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

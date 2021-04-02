@@ -8,8 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using webTRON_Management_Software.Models;
+using webTRON_Management_Software.Views.Others;
 
-namespace webTRON_Management_Software
+namespace webTRON_Management_Software.Views.Landing_Window
 {
     public partial class LandingWindow : Form
     {
@@ -102,7 +103,7 @@ namespace webTRON_Management_Software
                      break;
                 case "Other":
                     this.Hide();
-                    OtherDashboard otherDashboard = new OtherDashboard();
+                    Dashboard otherDashboard = new Dashboard();
                     otherDashboard.Show();
                    break;
 

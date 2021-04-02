@@ -1,7 +1,4 @@
-﻿
-using System.Windows.Forms;
-
-namespace webTRON_Management_Software
+﻿namespace webTRON_Management_Software.Views.Landing_Window
 {
     partial class LandingWindow
     {

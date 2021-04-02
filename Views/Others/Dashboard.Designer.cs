@@ -1,7 +1,7 @@
 ﻿
-namespace webTRON_Management_Software
+namespace webTRON_Management_Software.Views.Others
 {
-    partial class OtherDashboard
+    partial class Dashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -40,6 +40,7 @@ namespace webTRON_Management_Software
             this.label1.Size = new System.Drawing.Size(82, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Hello i am Other";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // OtherDashboard
             // 
@@ -49,6 +50,7 @@ namespace webTRON_Management_Software
             this.Controls.Add(this.label1);
             this.Name = "OtherDashboard";
             this.Text = "OtherDashboard";
+            this.Load += new System.EventHandler(this.OtherDashboard_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

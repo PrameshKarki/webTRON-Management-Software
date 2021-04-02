@@ -1,5 +1,5 @@
 ﻿
-namespace webTRON_Management_Software
+namespace webTRON_Management_Software.Views.Admin
 {
     partial class AdminDashboard
     {
@@ -179,6 +179,7 @@ namespace webTRON_Management_Software
             this.btnUsers.TabIndex = 22;
             this.btnUsers.Text = "Users";
             this.btnUsers.TextOffset = new System.Drawing.Point(-8, 10);
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
             // btnDashboard
             // 
@@ -199,6 +200,7 @@ namespace webTRON_Management_Software
             this.btnDashboard.TabIndex = 21;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextOffset = new System.Drawing.Point(-6, 10);
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // DragableAdminDashboard
             // 

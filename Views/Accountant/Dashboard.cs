@@ -8,15 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace webTRON_Management_Software
+namespace webTRON_Management_Software.Views.Accountant
 {
-    public partial class AccountantDashboard : Form
+    public partial class Dashboard : Form
     {
-        public AccountantDashboard()
+        public Dashboard()
         {
             InitializeComponent();
         }
 
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

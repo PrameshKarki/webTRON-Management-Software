@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace webTRON_Management_Software
+namespace webTRON_Management_Software.Views.Admin
 {
-    public partial class ManagementDashboard : Form
+    public partial class Settings : Form
     {
-        public ManagementDashboard()
+        public Settings()
         {
             InitializeComponent();
+        }
+
+        private void Admin_Settings_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
