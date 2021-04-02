@@ -58,6 +58,12 @@
     <Compile Include="Views\Accountant\AccountantDashboard.Designer.cs">
       <DependentUpon>AccountantDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Admin\Admin_Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\Admin_Users.Designer.cs">
+      <DependentUpon>Admin_Users.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Admin\Admin_CreateAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,19 +109,14 @@
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Patient.cs" />
     <Compile Include="Models\User.cs" />
-    <Compile Include="Views\Other\OtherDashboard.cs">
+    <Compile Include="Views\Others\OtherDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Other\OtherDashboard.Designer.cs">
+    <Compile Include="Views\Others\OtherDashboard.Designer.cs">
       <DependentUpon>OtherDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Utils\Email.cs" />
     <Compile Include="Utils\Generator.cs" />
     <EmbeddedResource Include="Views\Accountant\AccountantDashboard.resx">
@@ -123,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Admin\Admin_Users.resx">
+      <DependentUpon>Admin_Users.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\Admin_CreateAccount.resx">
       <DependentUpon>Admin_CreateAccount.cs</DependentUpon>
@@ -142,7 +146,7 @@
     <EmbeddedResource Include="Views\Management\ManagementDashboard.resx">
       <DependentUpon>ManagementDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Other\OtherDashboard.resx">
+    <EmbeddedResource Include="Views\Others\OtherDashboard.resx">
       <DependentUpon>OtherDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -154,6 +158,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -234,6 +243,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\RectangleCurved.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation8 = new Guna.UI2.AnimatorNS.Animation();
-            Guna.UI2.AnimatorNS.Animation animation7 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ForgetPassword));
             this.btnMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnClose = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -41,6 +41,12 @@
             this.btnSendVerificationCode = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.enterVerificationCodePanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.resetPasswordPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblConfirmPassword = new System.Windows.Forms.Label();
+            this.confirmPasswordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.newPasswordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblEnterNewPassword = new System.Windows.Forms.Label();
+            this.btnReset = new Guna.UI2.WinForms.Guna2Button();
             this.verificationCodeTextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.verificationCodeTextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             this.verificationCodeTextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -48,12 +54,6 @@
             this.lblEnterVerificationCode = new System.Windows.Forms.Label();
             this.verificationCodeTextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.verificationPanelTransition = new Guna.UI2.WinForms.Guna2Transition();
-            this.resetPasswordPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblConfirmPassword = new System.Windows.Forms.Label();
-            this.confirmPasswordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.newPasswordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblEnterNewPassword = new System.Windows.Forms.Label();
-            this.btnReset = new Guna.UI2.WinForms.Guna2Button();
             this.lblForgotPassword = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.resetPasswordPanelTransition = new Guna.UI2.WinForms.Guna2Transition();
@@ -215,6 +215,123 @@
             this.enterVerificationCodePanel.TabIndex = 13;
             this.enterVerificationCodePanel.Visible = false;
             // 
+            // resetPasswordPanel
+            // 
+            this.resetPasswordPanel.Controls.Add(this.lblConfirmPassword);
+            this.resetPasswordPanel.Controls.Add(this.confirmPasswordTextBox);
+            this.resetPasswordPanel.Controls.Add(this.newPasswordTextBox);
+            this.resetPasswordPanel.Controls.Add(this.lblEnterNewPassword);
+            this.resetPasswordPanel.Controls.Add(this.btnReset);
+            this.resetPasswordPanelTransition.SetDecoration(this.resetPasswordPanel, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.verificationPanelTransition.SetDecoration(this.resetPasswordPanel, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.resetPasswordPanel.Location = new System.Drawing.Point(2, 1);
+            this.resetPasswordPanel.Name = "resetPasswordPanel";
+            this.resetPasswordPanel.ShadowDecoration.Parent = this.resetPasswordPanel;
+            this.resetPasswordPanel.Size = new System.Drawing.Size(561, 480);
+            this.resetPasswordPanel.TabIndex = 15;
+            this.resetPasswordPanel.Visible = false;
+            // 
+            // lblConfirmPassword
+            // 
+            this.lblConfirmPassword.AutoSize = true;
+            this.verificationPanelTransition.SetDecoration(this.lblConfirmPassword, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.resetPasswordPanelTransition.SetDecoration(this.lblConfirmPassword, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.lblConfirmPassword.Location = new System.Drawing.Point(141, 200);
+            this.lblConfirmPassword.Name = "lblConfirmPassword";
+            this.lblConfirmPassword.Size = new System.Drawing.Size(167, 24);
+            this.lblConfirmPassword.TabIndex = 17;
+            this.lblConfirmPassword.Text = "Confirm Password:";
+            // 
+            // confirmPasswordTextBox
+            // 
+            this.confirmPasswordTextBox.Animated = true;
+            this.confirmPasswordTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.resetPasswordPanelTransition.SetDecoration(this.confirmPasswordTextBox, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.verificationPanelTransition.SetDecoration(this.confirmPasswordTextBox, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.confirmPasswordTextBox.DefaultText = "";
+            this.confirmPasswordTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.confirmPasswordTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.confirmPasswordTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.confirmPasswordTextBox.DisabledState.Parent = this.confirmPasswordTextBox;
+            this.confirmPasswordTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.confirmPasswordTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.confirmPasswordTextBox.FocusedState.Parent = this.confirmPasswordTextBox;
+            this.confirmPasswordTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.confirmPasswordTextBox.ForeColor = System.Drawing.Color.Black;
+            this.confirmPasswordTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.confirmPasswordTextBox.HoverState.Parent = this.confirmPasswordTextBox;
+            this.confirmPasswordTextBox.Location = new System.Drawing.Point(146, 238);
+            this.confirmPasswordTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.confirmPasswordTextBox.Name = "confirmPasswordTextBox";
+            this.confirmPasswordTextBox.PasswordChar = '\0';
+            this.confirmPasswordTextBox.PlaceholderText = "Confirm Password";
+            this.confirmPasswordTextBox.SelectedText = "";
+            this.confirmPasswordTextBox.ShadowDecoration.Parent = this.confirmPasswordTextBox;
+            this.confirmPasswordTextBox.Size = new System.Drawing.Size(258, 36);
+            this.confirmPasswordTextBox.TabIndex = 16;
+            this.confirmPasswordTextBox.UseSystemPasswordChar = true;
+            // 
+            // newPasswordTextBox
+            // 
+            this.newPasswordTextBox.Animated = true;
+            this.newPasswordTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.resetPasswordPanelTransition.SetDecoration(this.newPasswordTextBox, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.verificationPanelTransition.SetDecoration(this.newPasswordTextBox, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.newPasswordTextBox.DefaultText = "";
+            this.newPasswordTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.newPasswordTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.newPasswordTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.newPasswordTextBox.DisabledState.Parent = this.newPasswordTextBox;
+            this.newPasswordTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.newPasswordTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.newPasswordTextBox.FocusedState.Parent = this.newPasswordTextBox;
+            this.newPasswordTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.newPasswordTextBox.ForeColor = System.Drawing.Color.Black;
+            this.newPasswordTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.newPasswordTextBox.HoverState.Parent = this.newPasswordTextBox;
+            this.newPasswordTextBox.Location = new System.Drawing.Point(144, 146);
+            this.newPasswordTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.newPasswordTextBox.Name = "newPasswordTextBox";
+            this.newPasswordTextBox.PasswordChar = '\0';
+            this.newPasswordTextBox.PlaceholderText = "New Password";
+            this.newPasswordTextBox.SelectedText = "";
+            this.newPasswordTextBox.ShadowDecoration.Parent = this.newPasswordTextBox;
+            this.newPasswordTextBox.Size = new System.Drawing.Size(258, 36);
+            this.newPasswordTextBox.TabIndex = 15;
+            this.newPasswordTextBox.UseSystemPasswordChar = true;
+            // 
+            // lblEnterNewPassword
+            // 
+            this.lblEnterNewPassword.AutoSize = true;
+            this.verificationPanelTransition.SetDecoration(this.lblEnterNewPassword, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.resetPasswordPanelTransition.SetDecoration(this.lblEnterNewPassword, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblEnterNewPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.lblEnterNewPassword.Location = new System.Drawing.Point(141, 105);
+            this.lblEnterNewPassword.Name = "lblEnterNewPassword";
+            this.lblEnterNewPassword.Size = new System.Drawing.Size(191, 24);
+            this.lblEnterNewPassword.TabIndex = 15;
+            this.lblEnterNewPassword.Text = "Enter New Password:";
+            // 
+            // btnReset
+            // 
+            this.btnReset.Animated = true;
+            this.btnReset.CheckedState.Parent = this.btnReset;
+            this.btnReset.CustomImages.Parent = this.btnReset;
+            this.resetPasswordPanelTransition.SetDecoration(this.btnReset, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.verificationPanelTransition.SetDecoration(this.btnReset, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnReset.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            this.btnReset.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.btnReset.ForeColor = System.Drawing.Color.White;
+            this.btnReset.HoverState.Parent = this.btnReset;
+            this.btnReset.Location = new System.Drawing.Point(192, 313);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.ShadowDecoration.Parent = this.btnReset;
+            this.btnReset.Size = new System.Drawing.Size(175, 53);
+            this.btnReset.TabIndex = 15;
+            this.btnReset.Text = "Reset";
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // verificationCodeTextBox2
             // 
             this.verificationCodeTextBox2.Animated = true;
@@ -369,139 +486,22 @@
             // 
             this.verificationPanelTransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide;
             this.verificationPanelTransition.Cursor = null;
-            animation8.AnimateOnlyDifferences = true;
-            animation8.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.BlindCoeff")));
-            animation8.LeafCoeff = 0F;
-            animation8.MaxTime = 1F;
-            animation8.MinTime = 0F;
-            animation8.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.MosaicCoeff")));
-            animation8.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation8.MosaicShift")));
-            animation8.MosaicSize = 0;
-            animation8.Padding = new System.Windows.Forms.Padding(0);
-            animation8.RotateCoeff = 0F;
-            animation8.RotateLimit = 0F;
-            animation8.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.ScaleCoeff")));
-            animation8.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.SlideCoeff")));
-            animation8.TimeCoeff = 0F;
-            animation8.TransparencyCoeff = 0F;
-            this.verificationPanelTransition.DefaultAnimation = animation8;
-            // 
-            // resetPasswordPanel
-            // 
-            this.resetPasswordPanel.Controls.Add(this.lblConfirmPassword);
-            this.resetPasswordPanel.Controls.Add(this.confirmPasswordTextBox);
-            this.resetPasswordPanel.Controls.Add(this.newPasswordTextBox);
-            this.resetPasswordPanel.Controls.Add(this.lblEnterNewPassword);
-            this.resetPasswordPanel.Controls.Add(this.btnReset);
-            this.resetPasswordPanelTransition.SetDecoration(this.resetPasswordPanel, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.verificationPanelTransition.SetDecoration(this.resetPasswordPanel, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.resetPasswordPanel.Location = new System.Drawing.Point(2, 1);
-            this.resetPasswordPanel.Name = "resetPasswordPanel";
-            this.resetPasswordPanel.ShadowDecoration.Parent = this.resetPasswordPanel;
-            this.resetPasswordPanel.Size = new System.Drawing.Size(561, 480);
-            this.resetPasswordPanel.TabIndex = 15;
-            this.resetPasswordPanel.Visible = false;
-            // 
-            // lblConfirmPassword
-            // 
-            this.lblConfirmPassword.AutoSize = true;
-            this.verificationPanelTransition.SetDecoration(this.lblConfirmPassword, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.resetPasswordPanelTransition.SetDecoration(this.lblConfirmPassword, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lblConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.lblConfirmPassword.Location = new System.Drawing.Point(141, 200);
-            this.lblConfirmPassword.Name = "lblConfirmPassword";
-            this.lblConfirmPassword.Size = new System.Drawing.Size(167, 24);
-            this.lblConfirmPassword.TabIndex = 17;
-            this.lblConfirmPassword.Text = "Confirm Password:";
-            // 
-            // confirmPasswordTextBox
-            // 
-            this.confirmPasswordTextBox.Animated = true;
-            this.confirmPasswordTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.resetPasswordPanelTransition.SetDecoration(this.confirmPasswordTextBox, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.verificationPanelTransition.SetDecoration(this.confirmPasswordTextBox, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.confirmPasswordTextBox.DefaultText = "";
-            this.confirmPasswordTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.confirmPasswordTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.confirmPasswordTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.confirmPasswordTextBox.DisabledState.Parent = this.confirmPasswordTextBox;
-            this.confirmPasswordTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.confirmPasswordTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.confirmPasswordTextBox.FocusedState.Parent = this.confirmPasswordTextBox;
-            this.confirmPasswordTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.confirmPasswordTextBox.ForeColor = System.Drawing.Color.Black;
-            this.confirmPasswordTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.confirmPasswordTextBox.HoverState.Parent = this.confirmPasswordTextBox;
-            this.confirmPasswordTextBox.Location = new System.Drawing.Point(146, 238);
-            this.confirmPasswordTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.confirmPasswordTextBox.Name = "confirmPasswordTextBox";
-            this.confirmPasswordTextBox.PasswordChar = '\0';
-            this.confirmPasswordTextBox.PlaceholderText = "Confirm Password";
-            this.confirmPasswordTextBox.SelectedText = "";
-            this.confirmPasswordTextBox.ShadowDecoration.Parent = this.confirmPasswordTextBox;
-            this.confirmPasswordTextBox.Size = new System.Drawing.Size(258, 36);
-            this.confirmPasswordTextBox.TabIndex = 16;
-            this.confirmPasswordTextBox.UseSystemPasswordChar = true;
-            // 
-            // newPasswordTextBox
-            // 
-            this.newPasswordTextBox.Animated = true;
-            this.newPasswordTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.resetPasswordPanelTransition.SetDecoration(this.newPasswordTextBox, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.verificationPanelTransition.SetDecoration(this.newPasswordTextBox, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.newPasswordTextBox.DefaultText = "";
-            this.newPasswordTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.newPasswordTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.newPasswordTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.newPasswordTextBox.DisabledState.Parent = this.newPasswordTextBox;
-            this.newPasswordTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.newPasswordTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.newPasswordTextBox.FocusedState.Parent = this.newPasswordTextBox;
-            this.newPasswordTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.newPasswordTextBox.ForeColor = System.Drawing.Color.Black;
-            this.newPasswordTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.newPasswordTextBox.HoverState.Parent = this.newPasswordTextBox;
-            this.newPasswordTextBox.Location = new System.Drawing.Point(144, 146);
-            this.newPasswordTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.newPasswordTextBox.Name = "newPasswordTextBox";
-            this.newPasswordTextBox.PasswordChar = '\0';
-            this.newPasswordTextBox.PlaceholderText = "New Password";
-            this.newPasswordTextBox.SelectedText = "";
-            this.newPasswordTextBox.ShadowDecoration.Parent = this.newPasswordTextBox;
-            this.newPasswordTextBox.Size = new System.Drawing.Size(258, 36);
-            this.newPasswordTextBox.TabIndex = 15;
-            this.newPasswordTextBox.UseSystemPasswordChar = true;
-            // 
-            // lblEnterNewPassword
-            // 
-            this.lblEnterNewPassword.AutoSize = true;
-            this.verificationPanelTransition.SetDecoration(this.lblEnterNewPassword, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.resetPasswordPanelTransition.SetDecoration(this.lblEnterNewPassword, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lblEnterNewPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.lblEnterNewPassword.Location = new System.Drawing.Point(141, 105);
-            this.lblEnterNewPassword.Name = "lblEnterNewPassword";
-            this.lblEnterNewPassword.Size = new System.Drawing.Size(191, 24);
-            this.lblEnterNewPassword.TabIndex = 15;
-            this.lblEnterNewPassword.Text = "Enter New Password:";
-            // 
-            // btnReset
-            // 
-            this.btnReset.Animated = true;
-            this.btnReset.CheckedState.Parent = this.btnReset;
-            this.btnReset.CustomImages.Parent = this.btnReset;
-            this.resetPasswordPanelTransition.SetDecoration(this.btnReset, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.verificationPanelTransition.SetDecoration(this.btnReset, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnReset.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            this.btnReset.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.btnReset.ForeColor = System.Drawing.Color.White;
-            this.btnReset.HoverState.Parent = this.btnReset;
-            this.btnReset.Location = new System.Drawing.Point(192, 313);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.ShadowDecoration.Parent = this.btnReset;
-            this.btnReset.Size = new System.Drawing.Size(175, 53);
-            this.btnReset.TabIndex = 15;
-            this.btnReset.Text = "Reset";
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.verificationPanelTransition.DefaultAnimation = animation2;
             // 
             // lblForgotPassword
             // 
@@ -535,22 +535,22 @@
             // 
             this.resetPasswordPanelTransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlideAndRotate;
             this.resetPasswordPanelTransition.Cursor = null;
-            animation7.AnimateOnlyDifferences = true;
-            animation7.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.BlindCoeff")));
-            animation7.LeafCoeff = 0F;
-            animation7.MaxTime = 1F;
-            animation7.MinTime = 0F;
-            animation7.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.MosaicCoeff")));
-            animation7.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation7.MosaicShift")));
-            animation7.MosaicSize = 0;
-            animation7.Padding = new System.Windows.Forms.Padding(50);
-            animation7.RotateCoeff = 0.3F;
-            animation7.RotateLimit = 0.2F;
-            animation7.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.ScaleCoeff")));
-            animation7.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.SlideCoeff")));
-            animation7.TimeCoeff = 0F;
-            animation7.TransparencyCoeff = 0F;
-            this.resetPasswordPanelTransition.DefaultAnimation = animation7;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(50);
+            animation1.RotateCoeff = 0.3F;
+            animation1.RotateLimit = 0.2F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.resetPasswordPanelTransition.DefaultAnimation = animation1;
             // 
             // DragableForgetPasswordForm
             // 
@@ -576,7 +576,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ForgetPassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.passwordIcon)).EndInit();
