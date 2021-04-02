@@ -35,18 +35,7 @@ namespace webTRON_Management_Software
           
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (sideBar.Visible)
-            {
-                sideBarTransition.HideSync(sideBar);
-            }
-            else
-            {
-                sideBarTransition.ShowSync(sideBar);
-            }
-        }
-
+      
        
     }
 }

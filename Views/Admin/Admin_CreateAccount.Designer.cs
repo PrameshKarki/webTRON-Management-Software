@@ -88,7 +88,6 @@ namespace webTRON_Management_Software
             // 
             // guna2Panel2
             // 
-            this.guna2Panel2.BackgroundImage = global::webTRON_Management_Software.Properties.Resources.rectangle_curved_medium;
             this.guna2Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2Panel2.Controls.Add(this.label7);
             this.sideBarTransition.SetDecoration(this.guna2Panel2, Guna.UI2.AnimatorNS.DecorationType.None);
@@ -113,7 +112,6 @@ namespace webTRON_Management_Software
             // 
             // activeUserPanel
             // 
-            this.activeUserPanel.BackgroundImage = global::webTRON_Management_Software.Properties.Resources.rectangle_curved_small;
             this.activeUserPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.activeUserPanel.Controls.Add(this.currentUser);
             this.activeUserPanel.Controls.Add(this.currentUserPicture);
@@ -507,7 +505,6 @@ namespace webTRON_Management_Software
             // 
             // sideBar
             // 
-            this.sideBar.BackgroundImage = global::webTRON_Management_Software.Properties.Resources.rectangle_curved;
             this.sideBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.sideBar.Controls.Add(this.btnUsers);
             this.sideBar.Controls.Add(this.btnSettings);
