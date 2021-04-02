@@ -33,6 +33,8 @@ namespace webTRON_Management_Software
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateAccount));
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblCreateAccount = new System.Windows.Forms.Label();
+            this.activeUserPictureSidebar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.firstNameTxtBox = new Guna.UI2.WinForms.Guna2TextBox();
@@ -59,12 +61,10 @@ namespace webTRON_Management_Software
             this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
             this.btnUsers = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
-            this.activeUserPictureSidebar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.lblCreateAccount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
-            this.sidebarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.activeUserPictureSidebar)).BeginInit();
+            this.sidebarPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2PictureBox1
@@ -90,8 +90,35 @@ namespace webTRON_Management_Software
             this.guna2Panel2.Location = new System.Drawing.Point(60, -1);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(256, 73);
+            this.guna2Panel2.Size = new System.Drawing.Size(237, 73);
             this.guna2Panel2.TabIndex = 16;
+            // 
+            // lblCreateAccount
+            // 
+            this.lblCreateAccount.AutoSize = true;
+            this.lblCreateAccount.BackColor = System.Drawing.Color.Transparent;
+            this.sideBarTransition.SetDecoration(this.lblCreateAccount, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblCreateAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblCreateAccount.ForeColor = System.Drawing.Color.White;
+            this.lblCreateAccount.Location = new System.Drawing.Point(96, 33);
+            this.lblCreateAccount.Name = "lblCreateAccount";
+            this.lblCreateAccount.Size = new System.Drawing.Size(120, 20);
+            this.lblCreateAccount.TabIndex = 2;
+            this.lblCreateAccount.Text = "Create Account";
+            // 
+            // activeUserPictureSidebar
+            // 
+            this.activeUserPictureSidebar.BackColor = System.Drawing.Color.Transparent;
+            this.sideBarTransition.SetDecoration(this.activeUserPictureSidebar, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.activeUserPictureSidebar.Image = global::webTRON_Management_Software.Properties.Resources.man_picture;
+            this.activeUserPictureSidebar.Location = new System.Drawing.Point(44, 8);
+            this.activeUserPictureSidebar.Name = "activeUserPictureSidebar";
+            this.activeUserPictureSidebar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.activeUserPictureSidebar.ShadowDecoration.Parent = this.activeUserPictureSidebar;
+            this.activeUserPictureSidebar.Size = new System.Drawing.Size(49, 45);
+            this.activeUserPictureSidebar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.activeUserPictureSidebar.TabIndex = 1;
+            this.activeUserPictureSidebar.TabStop = false;
             // 
             // label7
             // 
@@ -580,33 +607,6 @@ namespace webTRON_Management_Software
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextOffset = new System.Drawing.Point(-6, 10);
             // 
-            // activeUserPictureSidebar
-            // 
-            this.activeUserPictureSidebar.BackColor = System.Drawing.Color.Transparent;
-            this.sideBarTransition.SetDecoration(this.activeUserPictureSidebar, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.activeUserPictureSidebar.Image = global::webTRON_Management_Software.Properties.Resources.man_picture;
-            this.activeUserPictureSidebar.Location = new System.Drawing.Point(44, 8);
-            this.activeUserPictureSidebar.Name = "activeUserPictureSidebar";
-            this.activeUserPictureSidebar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.activeUserPictureSidebar.ShadowDecoration.Parent = this.activeUserPictureSidebar;
-            this.activeUserPictureSidebar.Size = new System.Drawing.Size(49, 45);
-            this.activeUserPictureSidebar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.activeUserPictureSidebar.TabIndex = 1;
-            this.activeUserPictureSidebar.TabStop = false;
-            // 
-            // lblCreateAccount
-            // 
-            this.lblCreateAccount.AutoSize = true;
-            this.lblCreateAccount.BackColor = System.Drawing.Color.Transparent;
-            this.sideBarTransition.SetDecoration(this.lblCreateAccount, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lblCreateAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblCreateAccount.ForeColor = System.Drawing.Color.White;
-            this.lblCreateAccount.Location = new System.Drawing.Point(96, 33);
-            this.lblCreateAccount.Name = "lblCreateAccount";
-            this.lblCreateAccount.Size = new System.Drawing.Size(120, 20);
-            this.lblCreateAccount.TabIndex = 2;
-            this.lblCreateAccount.Text = "Create Account";
-            // 
             // CreateAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -642,8 +642,8 @@ namespace webTRON_Management_Software
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
-            this.sidebarPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.activeUserPictureSidebar)).EndInit();
+            this.sidebarPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

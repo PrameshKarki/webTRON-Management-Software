@@ -29,32 +29,34 @@ namespace webTRON_Management_Software
         //Submit button click
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            //Input Validation
 
-
-
-            if (obj.Role == "" || obj.FirstName == "" || obj.LastName == "" || obj.Email == "" || obj.Address == "" || obj.DateOfBirth == "" || obj.ContactNumber == "" || obj.Sex == "")
+            if (string.IsNullOrEmpty(roleComboBox.Text) || string.IsNullOrEmpty(firstNameTxtBox.Text)|| string.IsNullOrEmpty(lastNameTextBox.Text) || (string.IsNullOrEmpty(emailTextBox.Text)) || string.IsNullOrEmpty(addressTextBox.Text)|| string.IsNullOrEmpty(dateOfBirthPicker.Value.ToString()) || string.IsNullOrEmpty(contactNumberTextBox.Text))
             {
                 MessageBox.Show("Fill all the fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 //Instantiate Object Properties
-                    obj.Role = roleComboBox.Text;
+                obj.Role = roleComboBox.Text;
                 obj.FirstName = firstNameTxtBox.Text.Trim();
                 obj.LastName = lastNameTextBox.Text.Trim();
                 obj.Email = emailTextBox.Text.Trim();
                 obj.Address = addressTextBox.Text.Trim();
                 obj.DateOfBirth = dateOfBirthPicker.Value.ToString("yyyy-MM-dd");
                 obj.ContactNumber = contactNumberTextBox.Text;
+                
+                //UserID
                 if(roleComboBox.Text=="Doctor")
-                obj.userID = Generator.generateDoctorId();
+                     obj.userID = Generator.generateDoctorId();
                 else if (roleComboBox.Text == "Management")
                     obj.userID = Generator.generateManagementId();
                 else if (roleComboBox.Text == "Adimn")
                     obj.userID = Generator.generateAdminId();
                 else if (roleComboBox.Text == "Accountant")
                     obj.userID = Generator.generateAccountantId();
-
+                
+                //Fetch Sex
                 if (isMale.Checked)
                 {
                     obj.Sex = isMale.Text;
@@ -68,8 +70,6 @@ namespace webTRON_Management_Software
            
                 //Set default user status offline
                 obj.Status = "Offline";
-
-         
                     //Insert object in database
                     bool isSucess = obj.Insert(obj);
 
