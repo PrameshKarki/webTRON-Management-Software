@@ -395,7 +395,7 @@ namespace webTRON_Management_Software.Utils
         }
 
 
-        public static double generateVerificationCode()
+        public static int generateVerificationCode()
         {
             Random r = new Random();
             int number = r.Next(1000, 9999);

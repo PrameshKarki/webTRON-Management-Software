@@ -52,7 +52,7 @@ namespace webTRON_Management_Software
                 if (empObj.IsEmailExist(enteredEmail))
                 {
                     //Send Verification code and store this in database
-                    int generatedVerificationCode = Generator.VerificationCode();
+                    int generatedVerificationCode = Generator.generateVerificationCode();
                     bool isMailSendSucessfully = Email.SendVerificationCode(enteredEmail, generatedVerificationCode);
                     if (isMailSendSucessfully)
                     {

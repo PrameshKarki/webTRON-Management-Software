@@ -52,96 +52,105 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountantDashboard.cs">
+    <Compile Include="Views\Accountant\AccountantDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AccountantDashboard.Designer.cs">
+    <Compile Include="Views\Accountant\AccountantDashboard.Designer.cs">
       <DependentUpon>AccountantDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="CreateAccount.cs">
+    <Compile Include="Views\Admin\Admin_Users.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateAccount.Designer.cs">
-      <DependentUpon>CreateAccount.cs</DependentUpon>
+    <Compile Include="Views\Admin\Admin_Users.Designer.cs">
+      <DependentUpon>Admin_Users.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminDashboard.cs">
+    <Compile Include="Views\Admin\Admin_CreateAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminDashboard.Designer.cs">
+    <Compile Include="Views\Admin\Admin_CreateAccount.Designer.cs">
+      <DependentUpon>Admin_CreateAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\AdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="DoctorDashboard.cs">
+    <Compile Include="Views\Doctor\DoctorDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DoctorDashboard.Designer.cs">
+    <Compile Include="Views\Doctor\DoctorDashboard.Designer.cs">
       <DependentUpon>DoctorDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="ForgetPassword.cs">
+    <Compile Include="Views\Utilities\ForgetPassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ForgetPassword.Designer.cs">
+    <Compile Include="Views\Utilities\ForgetPassword.Designer.cs">
       <DependentUpon>ForgetPassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="CreateNewPatient.cs">
+    <Compile Include="Views\Accountant\CreateNewPatient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateNewPatient.Designer.cs">
+    <Compile Include="Views\Accountant\CreateNewPatient.Designer.cs">
       <DependentUpon>CreateNewPatient.cs</DependentUpon>
     </Compile>
-    <Compile Include="LandingWindow.cs">
+    <Compile Include="Views\Landing Window\LandingWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LandingWindow.designer.cs">
+    <Compile Include="Views\Landing Window\LandingWindow.designer.cs">
       <DependentUpon>LandingWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManagementDashboard.cs">
+    <Compile Include="Views\Management\ManagementDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManagementDashboard.Designer.cs">
+    <Compile Include="Views\Management\ManagementDashboard.Designer.cs">
       <DependentUpon>ManagementDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Patient.cs" />
     <Compile Include="Models\User.cs" />
-    <Compile Include="OtherDashboard.cs">
+    <Compile Include="Views\Others\OtherDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OtherDashboard.Designer.cs">
+    <Compile Include="Views\Others\OtherDashboard.Designer.cs">
       <DependentUpon>OtherDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\Email.cs" />
     <Compile Include="Utils\Generator.cs" />
-    <EmbeddedResource Include="AccountantDashboard.resx">
+    <EmbeddedResource Include="Views\Accountant\AccountantDashboard.resx">
       <DependentUpon>AccountantDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminDashboard.resx">
+    <EmbeddedResource Include="Views\Admin\AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreateAccount.resx">
-      <DependentUpon>CreateAccount.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Admin\Admin_Users.resx">
+      <DependentUpon>Admin_Users.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DoctorDashboard.resx">
+    <EmbeddedResource Include="Views\Admin\Admin_CreateAccount.resx">
+      <DependentUpon>Admin_CreateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Doctor\DoctorDashboard.resx">
       <DependentUpon>DoctorDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ForgetPassword.resx">
+    <EmbeddedResource Include="Views\Utilities\ForgetPassword.resx">
       <DependentUpon>ForgetPassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreateNewPatient.resx">
+    <EmbeddedResource Include="Views\Accountant\CreateNewPatient.resx">
       <DependentUpon>CreateNewPatient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LandingWindow.resx">
+    <EmbeddedResource Include="Views\Landing Window\LandingWindow.resx">
       <DependentUpon>LandingWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManagementDashboard.resx">
+    <EmbeddedResource Include="Views\Management\ManagementDashboard.resx">
       <DependentUpon>ManagementDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OtherDashboard.resx">
+    <EmbeddedResource Include="Views\Others\OtherDashboard.resx">
       <DependentUpon>OtherDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
@@ -234,6 +243,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\RectangleCurved.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

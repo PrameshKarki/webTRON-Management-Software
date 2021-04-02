@@ -20,33 +20,28 @@ namespace webTRON_Management_Software
             InitializeComponent();
         }
 
-        private void guna2PictureBox6_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        //Load event on admin dashboard
         private void AdminDashboard_Load(object sender, EventArgs e)
         {
             //Set primary color of components
             setPrimaryColor();
         }
+        //Method to set primary colour in different components
         private void setPrimaryColor()
         {
           
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        //Click event on minimize button
+        private void btnMinimize_Click(object sender, EventArgs e)
         {
-            if (sideBar.Visible)
-            {
-                sideBarTransition.HideSync(sideBar);
-            }
-            else
-            {
-                sideBarTransition.ShowSync(sideBar);
-            }
+            this.WindowState = FormWindowState.Minimized;
+        }
+        //Click event on exit button
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
-       
+        
     }
 }
