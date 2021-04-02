@@ -114,7 +114,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnSettings.Animated = true;
             this.btnSettings.CheckedState.Parent = this.btnSettings;
             this.btnSettings.CustomImages.Parent = this.btnSettings;
-            this.btnSettings.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            this.btnSettings.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(131)))), ((int)(((byte)(228)))));
             this.btnSettings.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.White;
             this.btnSettings.HoverState.Parent = this.btnSettings;
@@ -148,6 +148,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnUsers.TabIndex = 22;
             this.btnUsers.Text = "Users";
             this.btnUsers.TextOffset = new System.Drawing.Point(-8, 10);
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
             // btnDashboard
             // 
@@ -168,6 +169,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnDashboard.TabIndex = 21;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextOffset = new System.Drawing.Point(-6, 10);
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // activeUserPanel
             // 
@@ -223,7 +225,7 @@ namespace webTRON_Management_Software.Views.Admin
             // 
             this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2CirclePictureBox1.Image = global::webTRON_Management_Software.Properties.Resources.man_picture;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(681, 98);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(702, 70);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox1.ShadowDecoration.Parent = this.guna2CirclePictureBox1;
@@ -245,6 +247,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.Controls.Add(this.btnExit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Settings";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Settings";
             this.Load += new System.EventHandler(this.Admin_Settings_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();

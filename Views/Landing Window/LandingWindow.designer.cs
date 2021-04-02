@@ -128,7 +128,7 @@
             this.userIDTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.userIDTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.userIDTextBox.HoverState.Parent = this.userIDTextBox;
-           this.userIDTextBox.IconLeft = global::webTRON_Management_Software.Properties.Resources.smallUserIcon;
+            this.userIDTextBox.IconLeft = global::webTRON_Management_Software.Properties.Resources.smallUserIcon;
             this.userIDTextBox.Location = new System.Drawing.Point(561, 214);
             this.userIDTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.userIDTextBox.Name = "userIDTextBox";
@@ -154,7 +154,7 @@
             this.passwordTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.passwordTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.passwordTextBox.HoverState.Parent = this.passwordTextBox;
-           this.passwordTextBox.IconLeft = global::webTRON_Management_Software.Properties.Resources.smallPasswordIcon;
+            this.passwordTextBox.IconLeft = global::webTRON_Management_Software.Properties.Resources.smallPasswordIcon;
             this.passwordTextBox.Location = new System.Drawing.Point(561, 284);
             this.passwordTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.passwordTextBox.Name = "passwordTextBox";
@@ -187,7 +187,7 @@
             // 
             // userIconPicture
             // 
-          this.userIconPicture.Image = global::webTRON_Management_Software.Properties.Resources.blueUserIcon;
+            this.userIconPicture.Image = global::webTRON_Management_Software.Properties.Resources.blueUserIcon;
             this.userIconPicture.Location = new System.Drawing.Point(677, 36);
             this.userIconPicture.Name = "userIconPicture";
             this.userIconPicture.ShadowDecoration.Parent = this.userIconPicture;
@@ -209,7 +209,7 @@
             // 
             // subHeroPicture
             // 
-          this.subHeroPicture.Image = global::webTRON_Management_Software.Properties.Resources.slogan;
+            this.subHeroPicture.Image = global::webTRON_Management_Software.Properties.Resources.slogan;
             this.subHeroPicture.Location = new System.Drawing.Point(92, 355);
             this.subHeroPicture.Name = "subHeroPicture";
             this.subHeroPicture.ShadowDecoration.Parent = this.subHeroPicture;
@@ -220,7 +220,7 @@
             // 
             // heroPicture
             // 
-          this.heroPicture.Image = global::webTRON_Management_Software.Properties.Resources.webTronLogo;
+            this.heroPicture.Image = global::webTRON_Management_Software.Properties.Resources.webTronLogo;
             this.heroPicture.Location = new System.Drawing.Point(53, 247);
             this.heroPicture.Name = "heroPicture";
             this.heroPicture.ShadowDecoration.Parent = this.heroPicture;
@@ -257,7 +257,7 @@
             // 
             // topLeftCurvePicture
             // 
-           this.topLeftCurvePicture.Image = global::webTRON_Management_Software.Properties.Resources.topLeftCircles;
+            this.topLeftCurvePicture.Image = global::webTRON_Management_Software.Properties.Resources.topLeftCircles;
             this.topLeftCurvePicture.Location = new System.Drawing.Point(-80, -103);
             this.topLeftCurvePicture.Name = "topLeftCurvePicture";
             this.topLeftCurvePicture.ShadowDecoration.Parent = this.topLeftCurvePicture;
@@ -293,6 +293,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "LandingWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "k";
             ((System.ComponentModel.ISupportInitialize)(this.userIconPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputFormPicture)).EndInit();

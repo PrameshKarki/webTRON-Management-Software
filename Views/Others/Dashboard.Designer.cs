@@ -42,13 +42,14 @@ namespace webTRON_Management_Software.Views.Others
             this.label1.Text = "Hello i am Other";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // OtherDashboard
+            // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
-            this.Name = "OtherDashboard";
+            this.Name = "Dashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OtherDashboard";
             this.Load += new System.EventHandler(this.OtherDashboard_Load);
             this.ResumeLayout(false);

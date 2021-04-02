@@ -56,14 +56,14 @@ namespace webTRON_Management_Software.Utils
             MySqlConnection conn = new MySqlConnection(connectionString);
             
             int initiator = 121212;
-            int counter, countOfTotalUser=0;
+            int counter, countOfTotalUsers=0;
            
             string userID = "";
            
             try
             {
                 //SQL Query to fetch number of total user
-                string SQLQuery = "SELECT COUNT(UserID) FROM employeeInfo WHERE Role=Employee";
+                string SQLQuery = "SELECT COUNT(UserID) FROM employeeInfo WHERE Role='Employee'";
                 //SQL Command
                 MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
                 //Open Connection
@@ -71,7 +71,7 @@ namespace webTRON_Management_Software.Utils
                 object returnValue = cmd.ExecuteScalar();
                 if(returnValue != null)
                 {
-                    countOfTotalUser = Convert.ToInt32(returnValue);
+                    countOfTotalUsers = Convert.ToInt32(returnValue);
                 }
                 else
                 {
@@ -89,7 +89,7 @@ namespace webTRON_Management_Software.Utils
                 //Close Connection
                 conn.Close();
             }
-            counter = initiator + countOfTotalUser;
+            counter = initiator + countOfTotalUsers;
             DateTime d = DateTime.Now;
             int date = (d.Year) % 100;
             userID += "EMP-" + date + "-" + counter;
@@ -104,14 +104,14 @@ namespace webTRON_Management_Software.Utils
             MySqlConnection conn = new MySqlConnection(connectionString);
 
             int initiator = 434343;
-            int counter, countOfDoctor = 0;
+            int counter, countOfDoctors = 0;
 
             string userID = "";
 
             try
             {
                 //SQL Query to fetch number of total user
-                string SQLQuery = "SELECT COUNT(userID) FROM employeeInfo WHERE Role=Doctor";
+                string SQLQuery = "SELECT COUNT(userID) FROM employeeInfo WHERE Role='Doctor'";
                 //SQL Command
                 MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
                 //Open Connection
@@ -119,7 +119,7 @@ namespace webTRON_Management_Software.Utils
                 object returnValue = cmd.ExecuteScalar();
                 if (returnValue != null)
                 {
-                    countOfDoctor = Convert.ToInt32(returnValue);
+                    countOfDoctors = Convert.ToInt32(returnValue);
                 }
                 else
                 {
@@ -137,7 +137,7 @@ namespace webTRON_Management_Software.Utils
                 //Close Connection
                 conn.Close();
             }
-            counter = initiator + countOfDoctor;
+            counter = initiator + countOfDoctors;
             DateTime d = DateTime.Now;
             int date = (d.Year) % 100;
             userID += "DIR-" + date + "-" + counter;
@@ -151,7 +151,7 @@ namespace webTRON_Management_Software.Utils
             MySqlConnection conn = new MySqlConnection(connectionString);
 
             int initiator = 545454;
-            int counter, countOfTotalPatient = 0;
+            int counter, countOfTotalPatients = 0;
 
             string userID = "";
 
@@ -166,7 +166,7 @@ namespace webTRON_Management_Software.Utils
                 object returnValue = cmd.ExecuteScalar();
                 if (returnValue != null)
                 {
-                    countOfTotalPatient = Convert.ToInt32(returnValue);
+                    countOfTotalPatients = Convert.ToInt32(returnValue);
                 }
                 else
                 {
@@ -184,7 +184,7 @@ namespace webTRON_Management_Software.Utils
                 //Close Connection
                 conn.Close();
             }
-            counter = initiator + countOfTotalPatient;
+            counter = initiator + countOfTotalPatients;
             DateTime d = DateTime.Now;
             int date = (d.Year) % 100;
             userID = "PTN-" + date + "-" + counter;
@@ -208,7 +208,7 @@ namespace webTRON_Management_Software.Utils
             try
             {
                 //SQL Query to fetch number of total user
-                string SQLQuery = "SELECT COUNT(userId) FROM employeeInfo WHERE Role=Management";
+                string SQLQuery = "SELECT COUNT(userId) FROM employeeInfo WHERE Role='Management'";
                 //SQL Command
                 MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
                 //Open Connection
@@ -258,7 +258,7 @@ namespace webTRON_Management_Software.Utils
             try
             {
                 //SQL Query to fetch number of total user
-                string SQLQuery = "SELECT COUNT(UserID) FROM employeeInfo WHERE Role=Admin";
+                string SQLQuery = "SELECT COUNT(UserID) FROM employeeInfo WHERE Role='Admin'";
                 //SQL Command
                 MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
                 //Open Connection
@@ -302,14 +302,14 @@ namespace webTRON_Management_Software.Utils
             MySqlConnection conn = new MySqlConnection(connectionString);
 
             int initiator = 545454;
-            int counter, countOfAccountant = 0;
+            int counter, countOfAccountants = 0;
 
             string userID = "";
 
             try
             {
                 //SQL Query to fetch number of total user
-                string SQLQuery = "SELECT COUNT(UserID) FROM employeeInfo WHERE Role=Accountant";
+                string SQLQuery = "SELECT COUNT(UserID) FROM employeeInfo WHERE Role='Accountant'";
                 //SQL Command
                 MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
                 //Open Connection
@@ -317,7 +317,7 @@ namespace webTRON_Management_Software.Utils
                 object returnValue = cmd.ExecuteScalar();
                 if (returnValue != null)
                 {
-                    countOfAccountant = Convert.ToInt32(returnValue);
+                    countOfAccountants = Convert.ToInt32(returnValue);
                 }
                 else
                 {
@@ -335,7 +335,7 @@ namespace webTRON_Management_Software.Utils
                 //Close Connection
                 conn.Close();
             }
-            counter = initiator + countOfAccountant;
+            counter = initiator + countOfAccountants;
             DateTime d = DateTime.Now;
             int date = (d.Year) % 100;
             userID = "ACC-" + date + "-" + counter;
@@ -352,14 +352,14 @@ namespace webTRON_Management_Software.Utils
             MySqlConnection conn = new MySqlConnection(connectionString);
 
             int initiator = 545454;
-            int counter, countOfSecurity = 0;
+            int counter, countOfTotalSecurities = 0;
 
             string userID = "";
 
             try
             {
                 //SQL Query to fetch number of total user
-                string SQLQuery = "SELECT COUNT(UserID) FROM employeeInfo WHERE Role=Others";
+                string SQLQuery = "SELECT COUNT(UserID) FROM employeeInfo WHERE Role='Others'";
                 //SQL Command
                 MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
                 //Open Connection
@@ -367,7 +367,7 @@ namespace webTRON_Management_Software.Utils
                 object returnValue = cmd.ExecuteScalar();
                 if (returnValue != null)
                 {
-                    countOfSecurity = Convert.ToInt32(returnValue);
+                    countOfTotalSecurities = Convert.ToInt32(returnValue);
                 }
                 else
                 {
@@ -385,7 +385,7 @@ namespace webTRON_Management_Software.Utils
                 //Close Connection
                 conn.Close();
             }
-            counter = initiator + countOfSecurity;
+            counter = initiator + countOfTotalSecurities;
             DateTime d = DateTime.Now;
             int date = (d.Year) % 100;
             userID = "SEC-" + date + "-" + counter;

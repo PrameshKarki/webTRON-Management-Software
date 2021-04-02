@@ -33,5 +33,22 @@ namespace webTRON_Management_Software.Views.Admin
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        //Click event on dashboard icon
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            var dashboard = new Admin.Dashboard();
+            dashboard.Show();
+            this.Hide();
+
+        }
+        //Click event on Users icon
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            var users = new Admin.Users();
+            users.Show();
+            this.Hide();
+
+        }
     }
 }

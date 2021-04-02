@@ -130,5 +130,32 @@ namespace webTRON_Management_Software.Views.Admin
             return isSucess;
             
         }
+        //Click event on Dashboard button
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            var dashboard = new Admin.Dashboard();
+            dashboard.Show();
+            this.Hide();
+        }
+        //Click event on Settings button
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            var settings = new Admin.Settings();
+            settings.Show();
+            this.Hide();
+
+        }
+
+        //Click event on Minimize button
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+
+        }
+        //Click event on Exit button
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

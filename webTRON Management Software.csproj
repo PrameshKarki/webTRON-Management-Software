@@ -58,6 +58,12 @@
     <Compile Include="Views\Accountant\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Accountant\SearchAndUpdatePatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Accountant\SearchAndUpdatePatient.Designer.cs">
+      <DependentUpon>SearchAndUpdatePatient.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Admin\Settings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     <Compile Include="Utils\Generator.cs" />
     <EmbeddedResource Include="Views\Accountant\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Accountant\SearchAndUpdatePatient.resx">
+      <DependentUpon>SearchAndUpdatePatient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
@@ -256,5 +265,6 @@
   <ItemGroup>
     <None Include="Resources\search_icon.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
