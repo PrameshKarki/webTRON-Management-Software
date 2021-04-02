@@ -10,8 +10,9 @@
 
 namespace webTRON_Management_Software.Properties {
     using System;
-    
-    
+    using System.Drawing;
+
+
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -106,16 +107,6 @@ namespace webTRON_Management_Software.Properties {
         public static System.Drawing.Bitmap circle_red {
             get {
                 object obj = ResourceManager.GetObject("circle_red", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap Clear_Sign {
-            get {
-                object obj = ResourceManager.GetObject("Clear_Sign", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -273,9 +264,9 @@ namespace webTRON_Management_Software.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Search {
+        public static System.Drawing.Bitmap search_icon {
             get {
-                object obj = ResourceManager.GetObject("Search", resourceCulture);
+                object obj = ResourceManager.GetObject("search_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -359,5 +350,7 @@ namespace webTRON_Management_Software.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+
+        public static Image Clear_Sign { get; internal set; }
     }
 }
