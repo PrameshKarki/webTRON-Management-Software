@@ -8,7 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using webTRON_Management_Software.Models;
-using webTRON_Management_Software.Views.Others;
+using Accountant=webTRON_Management_Software.Views.Accountant;
+using Admin=webTRON_Management_Software.Views.Admin;
+using Doctor=webTRON_Management_Software.Views.Doctor;
+using Management=webTRON_Management_Software.Views.Management;
+using Others=webTRON_Management_Software.Views.Others;
+using Utilities=webTRON_Management_Software.Views.Utilities;
 
 namespace webTRON_Management_Software.Views.Landing_Window
 {
@@ -83,27 +88,27 @@ namespace webTRON_Management_Software.Views.Landing_Window
             {
                 case "Admin":
                     this.Hide();
-                    AdminDashboard adminDashBoard = new AdminDashboard();
+                    var adminDashBoard = new Admin.Dashboard();
                     adminDashBoard.Show();
                     break;
                 case "Doctor":
                     this.Hide();
-                    DoctorDashboard doctorDashboard = new DoctorDashboard();
+                    var doctorDashboard = new Doctor.Dashboard();
                     doctorDashboard.Show();
                     break;
                 case "Accountant":
                     this.Hide();
-                    AccountantDashboard accountDashboard = new AccountantDashboard();
+                    var accountDashboard = new Accountant.Dashboard();
                     accountDashboard.Show();
                     break;
                 case "Management":
                     this.Hide();
-                    ManagementDashboard managementDashboard = new ManagementDashboard();
+                    var managementDashboard = new Management.Dashboard();
                     managementDashboard.Show();
                      break;
                 case "Other":
                     this.Hide();
-                    Dashboard otherDashboard = new Dashboard();
+                    var otherDashboard = new Others.Dashboard();
                     otherDashboard.Show();
                    break;
 
@@ -113,8 +118,9 @@ namespace webTRON_Management_Software.Views.Landing_Window
         //Method to handle click event
         private void lblForgetPassword_Click(object sender, EventArgs e)
         {
+            //Instantiating forget password form
             this.Hide();
-            ForgetPassword forgetPassword = new ForgetPassword();
+            var forgetPassword = new Utilities.ForgetPassword();
             forgetPassword.Show();
         }
     }

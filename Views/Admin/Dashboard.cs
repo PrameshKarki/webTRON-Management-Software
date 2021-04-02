@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace webTRON_Management_Software.Views.Admin
 {
-    public partial class AdminDashboard : Form
+    public partial class Dashboard : Form
     {
         //Primary color of form
         private String primaryColor = "#176BCF";
 
-        public AdminDashboard()
+        public Dashboard()
         {
             InitializeComponent();
         }
@@ -42,13 +42,21 @@ namespace webTRON_Management_Software.Views.Admin
             Application.Exit();
         }
 
+        //Click event on Users button
         private void btnUsers_Click(object sender, EventArgs e)
         {
+            Users userForm = new Users();
+            userForm.Show();
+            this.Hide();
 
         }
 
-        private void btnDashboard_Click(object sender, EventArgs e)
+        //Click event on Settings button
+        private void btnSettings_Click(object sender, EventArgs e)
         {
+            Settings settingForm = new Settings();
+            settingForm.Show();
+            this.Hide();
 
         }
     }

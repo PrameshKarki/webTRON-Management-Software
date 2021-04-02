@@ -370,7 +370,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.contactNumberTextBox.PlaceholderText = "Contact Number";
             this.contactNumberTextBox.SelectedText = "";
             this.contactNumberTextBox.ShadowDecoration.Parent = this.contactNumberTextBox;
-            this.contactNumberTextBox.Size = new System.Drawing.Size(174, 32);
+            this.contactNumberTextBox.Size = new System.Drawing.Size(239, 32);
             this.contactNumberTextBox.TabIndex = 9;
             // 
             // label5

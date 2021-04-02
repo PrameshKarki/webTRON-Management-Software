@@ -67,7 +67,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnSearchUser.Location = new System.Drawing.Point(534, 101);
             this.btnSearchUser.Name = "btnSearchUser";
             this.btnSearchUser.ShadowDecoration.Parent = this.btnSearchUser;
-            this.btnSearchUser.Size = new System.Drawing.Size(173, 45);
+            this.btnSearchUser.Size = new System.Drawing.Size(192, 45);
             this.btnSearchUser.TabIndex = 23;
             this.btnSearchUser.Text = "Search User";
             // 
@@ -86,7 +86,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnAddNewAccount.Location = new System.Drawing.Point(304, 101);
             this.btnAddNewAccount.Name = "btnAddNewAccount";
             this.btnAddNewAccount.ShadowDecoration.Parent = this.btnAddNewAccount;
-            this.btnAddNewAccount.Size = new System.Drawing.Size(173, 45);
+            this.btnAddNewAccount.Size = new System.Drawing.Size(192, 45);
             this.btnAddNewAccount.TabIndex = 22;
             this.btnAddNewAccount.Text = "New Account";
             this.btnAddNewAccount.Click += new System.EventHandler(this.btnAddNewAccount_Click);
@@ -193,13 +193,14 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnSettings.TabIndex = 23;
             this.btnSettings.Text = "Settings";
             this.btnSettings.TextOffset = new System.Drawing.Point(-8, 10);
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // btnUsers
             // 
             this.btnUsers.Animated = true;
             this.btnUsers.CheckedState.Parent = this.btnUsers;
             this.btnUsers.CustomImages.Parent = this.btnUsers;
-            this.btnUsers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            this.btnUsers.FillColor = System.Drawing.Color.Black;
             this.btnUsers.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsers.ForeColor = System.Drawing.Color.White;
             this.btnUsers.HoverState.Parent = this.btnUsers;
@@ -278,6 +279,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.Controls.Add(this.activeUserPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Users";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Admin_Users";
             this.activeUserPanel.ResumeLayout(false);
             this.activeUserPanel.PerformLayout();

@@ -29,9 +29,21 @@ namespace webTRON_Management_Software.Views.Admin
             this.WindowState = FormWindowState.Minimized;
         }
 
+        //Click event on new account button
         private void btnAddNewAccount_Click(object sender, EventArgs e)
         {
+            //Instantiating create account form
+            CreateAccount createAccount = new CreateAccount();
+            createAccount.Show();
+            this.Hide();
+        }
 
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            //Instantiating Settings form
+            var setting = new Settings();
+            setting.Show();
+            this.Hide();
         }
     }
 }

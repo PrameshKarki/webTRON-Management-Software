@@ -1,7 +1,7 @@
 ﻿
 namespace webTRON_Management_Software.Views.Admin
 {
-    partial class AdminDashboard
+    partial class Dashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace webTRON_Management_Software.Views.Admin
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboard));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.lblOnline = new System.Windows.Forms.Label();
             this.onlineUser = new System.Windows.Forms.Label();
             this.offlineUser = new System.Windows.Forms.Label();
@@ -159,6 +159,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnSettings.TabIndex = 23;
             this.btnSettings.Text = "Settings";
             this.btnSettings.TextOffset = new System.Drawing.Point(-8, 10);
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // btnUsers
             // 
@@ -186,7 +187,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnDashboard.Animated = true;
             this.btnDashboard.CheckedState.Parent = this.btnDashboard;
             this.btnDashboard.CustomImages.Parent = this.btnDashboard;
-            this.btnDashboard.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            this.btnDashboard.FillColor = System.Drawing.Color.Black;
             this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.White;
             this.btnDashboard.HoverState.Parent = this.btnDashboard;
@@ -200,7 +201,6 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnDashboard.TabIndex = 21;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextOffset = new System.Drawing.Point(-6, 10);
-            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // DragableAdminDashboard
             // 
@@ -352,6 +352,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminDashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Admin Dashboard";
             this.Load += new System.EventHandler(this.AdminDashboard_Load);
             this.sidebarPanel.ResumeLayout(false);

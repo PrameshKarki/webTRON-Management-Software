@@ -21,5 +21,17 @@ namespace webTRON_Management_Software.Views.Admin
         {
 
         }
+
+        //Click event on exit button
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
+        //Click event on minimize button
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

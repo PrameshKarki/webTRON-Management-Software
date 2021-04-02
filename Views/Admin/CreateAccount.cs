@@ -51,7 +51,7 @@ namespace webTRON_Management_Software.Views.Admin
                      obj.userID = Generator.generateDoctorId();
                 else if (roleComboBox.Text == "Management")
                     obj.userID = Generator.generateManagementId();
-                else if (roleComboBox.Text == "Adimn")
+                else if (roleComboBox.Text == "Admin")
                     obj.userID = Generator.generateAdminId();
                 else if (roleComboBox.Text == "Accountant")
                     obj.userID = Generator.generateAccountantId();
