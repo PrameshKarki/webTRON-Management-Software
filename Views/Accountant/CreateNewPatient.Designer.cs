@@ -96,7 +96,6 @@
             this.lblAddress.Size = new System.Drawing.Size(78, 20);
             this.lblAddress.TabIndex = 49;
             this.lblAddress.Text = "Address*:";
-            this.lblAddress.Click += new System.EventHandler(this.lblAddress_Click);
             // 
             // contactNumberTextBox
             // 
@@ -372,7 +371,7 @@
             this.btnCreateNewPatient.CheckedState.Parent = this.btnCreateNewPatient;
             this.btnCreateNewPatient.CustomImages.Parent = this.btnCreateNewPatient;
             this.btnCreateNewPatient.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            this.btnCreateNewPatient.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.btnCreateNewPatient.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.btnCreateNewPatient.ForeColor = System.Drawing.Color.White;
             this.btnCreateNewPatient.HoverState.Parent = this.btnCreateNewPatient;
             this.btnCreateNewPatient.Location = new System.Drawing.Point(701, 518);
