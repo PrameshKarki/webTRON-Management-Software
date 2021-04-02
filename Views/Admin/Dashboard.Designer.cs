@@ -187,7 +187,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnDashboard.Animated = true;
             this.btnDashboard.CheckedState.Parent = this.btnDashboard;
             this.btnDashboard.CustomImages.Parent = this.btnDashboard;
-            this.btnDashboard.FillColor = System.Drawing.Color.Black;
+            this.btnDashboard.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(131)))), ((int)(((byte)(228)))));
             this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.White;
             this.btnDashboard.HoverState.Parent = this.btnDashboard;
@@ -330,7 +330,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.offlineStatusPicture.TabIndex = 2;
             this.offlineStatusPicture.TabStop = false;
             // 
-            // AdminDashboard
+            // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -351,8 +351,8 @@ namespace webTRON_Management_Software.Views.Admin
             this.Controls.Add(this.activePanel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AdminDashboard";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Name = "Dashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin Dashboard";
             this.Load += new System.EventHandler(this.AdminDashboard_Load);
             this.sidebarPanel.ResumeLayout(false);

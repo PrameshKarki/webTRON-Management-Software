@@ -56,11 +56,11 @@ namespace webTRON_Management_Software.Models
                 isSucess = row > 0 ? true : false;
 
             }
-            /*catch(Exception ex)
+            catch(Exception ex)
             {
                 MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            */
+            
             finally
             {
                 //Close Connection

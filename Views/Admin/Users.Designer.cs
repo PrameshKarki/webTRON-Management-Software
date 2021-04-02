@@ -200,7 +200,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnUsers.Animated = true;
             this.btnUsers.CheckedState.Parent = this.btnUsers;
             this.btnUsers.CustomImages.Parent = this.btnUsers;
-            this.btnUsers.FillColor = System.Drawing.Color.Black;
+            this.btnUsers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(131)))), ((int)(((byte)(228)))));
             this.btnUsers.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsers.ForeColor = System.Drawing.Color.White;
             this.btnUsers.HoverState.Parent = this.btnUsers;
@@ -209,6 +209,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnUsers.Location = new System.Drawing.Point(0, 195);
             this.btnUsers.Margin = new System.Windows.Forms.Padding(0);
             this.btnUsers.Name = "btnUsers";
+            this.btnUsers.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(131)))), ((int)(((byte)(228)))));
             this.btnUsers.ShadowDecoration.Parent = this.btnUsers;
             this.btnUsers.Size = new System.Drawing.Size(68, 48);
             this.btnUsers.TabIndex = 22;
@@ -234,6 +235,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnDashboard.TabIndex = 21;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextOffset = new System.Drawing.Point(-6, 10);
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // btnMinimize
             // 
@@ -279,7 +281,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.Controls.Add(this.activeUserPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Users";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin_Users";
             this.activeUserPanel.ResumeLayout(false);
             this.activeUserPanel.PerformLayout();

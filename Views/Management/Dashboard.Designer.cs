@@ -41,13 +41,14 @@ namespace webTRON_Management_Software.Views.Management
             this.label1.TabIndex = 1;
             this.label1.Text = "Hello i am Manager";
             // 
-            // ManagementDashboard
+            // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
-            this.Name = "ManagementDashboard";
+            this.Name = "Dashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManagementDashboard";
             this.Load += new System.EventHandler(this.ManagementDashboard_Load);
             this.ResumeLayout(false);

@@ -45,5 +45,14 @@ namespace webTRON_Management_Software.Views.Admin
             setting.Show();
             this.Hide();
         }
+        //Click event on Dashboard icon
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            var dashboard = new Admin.Dashboard();
+            dashboard.Show();
+            this.Hide();
+
+
+        }
     }
 }

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using webTRON_Management_Software.Views.Accountant;
-using webTRON_Management_Software.Views.Doctor;
-using webTRON_Management_Software.Views.Admin;
+using Accountant=webTRON_Management_Software.Views.Accountant;
+using Doctor=webTRON_Management_Software.Views.Doctor;
+using Admin=webTRON_Management_Software.Views.Admin;
 using webTRON_Management_Software.Views.Landing_Window;
 using webTRON_Management_Software.Views.Others;
 using webTRON_Management_Software.Views.Management;
@@ -26,6 +26,7 @@ namespace webTRON_Management_Software
 
             //Run main window here
             Application.Run(new LandingWindow());
+         
        
           
         }
