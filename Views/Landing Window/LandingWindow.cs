@@ -46,6 +46,9 @@ namespace webTRON_Management_Software.Views.Landing_Window
                 bool isSucess = newUser.CheckUser(newUser);
                 if (isSucess)
                 {
+                    //Set Logged in user status Online
+                    Employee.SetStatus(newUser.userID, "Online");
+
                     //check wheather the user login is first time or not into the system
                     bool isFirstTime = newUser.IsFirstTimeLogin(newUser.userID);
                     if (isFirstTime)
@@ -84,11 +87,14 @@ namespace webTRON_Management_Software.Views.Landing_Window
         {
             //Get User Role
             string userRole = newUser.GetUserRole(newUser.userID);
+
+            //Get User Details
+            Employee activeUser = Employee.GetActiveUserDetails(newUser.userID);
             switch (userRole)
             {
                 case "Admin":
                     this.Hide();
-                    var adminDashBoard = new Admin.Dashboard();
+                    var adminDashBoard = new Admin.Dashboard(activeUser);
                     adminDashBoard.Show();
                     break;
                 case "Doctor":

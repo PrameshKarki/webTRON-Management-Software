@@ -38,7 +38,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnUsers = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             this.activeUserPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.activeUserRole = new System.Windows.Forms.Label();
+            this.activeForm = new System.Windows.Forms.Label();
             this.activeUserPicture = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.activeUserName = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -74,7 +74,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnExit.TabIndex = 27;
             this.btnExit.TabStop = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnExit.Click += new System.EventHandler(this.SignOut);
             // 
             // sidebarPanel
             // 
@@ -108,6 +108,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnSIgnOut.TabIndex = 24;
             this.btnSIgnOut.Text = "Sign Out";
             this.btnSIgnOut.TextOffset = new System.Drawing.Point(-8, 10);
+            this.btnSIgnOut.Click += new System.EventHandler(this.SignOut);
             // 
             // btnSettings
             // 
@@ -175,7 +176,7 @@ namespace webTRON_Management_Software.Views.Admin
             // 
             this.activeUserPanel.BackgroundImage = global::webTRON_Management_Software.Properties.Resources.rectangle_curved_large;
             this.activeUserPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.activeUserPanel.Controls.Add(this.activeUserRole);
+            this.activeUserPanel.Controls.Add(this.activeForm);
             this.activeUserPanel.Controls.Add(this.activeUserPicture);
             this.activeUserPanel.Controls.Add(this.activeUserName);
             this.activeUserPanel.Location = new System.Drawing.Point(61, -2);
@@ -184,17 +185,17 @@ namespace webTRON_Management_Software.Views.Admin
             this.activeUserPanel.Size = new System.Drawing.Size(165, 80);
             this.activeUserPanel.TabIndex = 29;
             // 
-            // activeUserRole
+            // activeForm
             // 
-            this.activeUserRole.AutoSize = true;
-            this.activeUserRole.BackColor = System.Drawing.Color.Transparent;
-            this.activeUserRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.activeUserRole.ForeColor = System.Drawing.Color.White;
-            this.activeUserRole.Location = new System.Drawing.Point(62, 44);
-            this.activeUserRole.Name = "activeUserRole";
-            this.activeUserRole.Size = new System.Drawing.Size(68, 20);
-            this.activeUserRole.TabIndex = 21;
-            this.activeUserRole.Text = "Settings";
+            this.activeForm.AutoSize = true;
+            this.activeForm.BackColor = System.Drawing.Color.Transparent;
+            this.activeForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.activeForm.ForeColor = System.Drawing.Color.White;
+            this.activeForm.Location = new System.Drawing.Point(62, 44);
+            this.activeForm.Name = "activeForm";
+            this.activeForm.Size = new System.Drawing.Size(68, 20);
+            this.activeForm.TabIndex = 21;
+            this.activeForm.Text = "Settings";
             // 
             // activeUserPicture
             // 
@@ -249,7 +250,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.Name = "Settings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Settings";
-            this.Load += new System.EventHandler(this.Admin_Settings_Load);
+            this.Load += new System.EventHandler(this.Settings_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.sidebarPanel.ResumeLayout(false);
@@ -272,7 +273,7 @@ namespace webTRON_Management_Software.Views.Admin
         private Guna.UI2.WinForms.Guna2Button btnUsers;
         private Guna.UI2.WinForms.Guna2Button btnDashboard;
         private Guna.UI2.WinForms.Guna2Panel activeUserPanel;
-        private System.Windows.Forms.Label activeUserRole;
+        private System.Windows.Forms.Label activeForm;
         private Guna.UI2.WinForms.Guna2CirclePictureBox activeUserPicture;
         private System.Windows.Forms.Label activeUserName;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;

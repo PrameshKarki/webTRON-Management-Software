@@ -95,14 +95,14 @@ namespace webTRON_Management_Software.Views.Accountant
             this.lastNameTextBox.ForeColor = System.Drawing.Color.Black;
             this.lastNameTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.lastNameTextBox.HoverState.Parent = this.lastNameTextBox;
-            this.lastNameTextBox.Location = new System.Drawing.Point(622, 64);
-            this.lastNameTextBox.Margin = new System.Windows.Forms.Padding(6);
+            this.lastNameTextBox.Location = new System.Drawing.Point(829, 79);
+            this.lastNameTextBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.PasswordChar = '\0';
             this.lastNameTextBox.PlaceholderText = "Last Name";
             this.lastNameTextBox.SelectedText = "";
             this.lastNameTextBox.ShadowDecoration.Parent = this.lastNameTextBox;
-            this.lastNameTextBox.Size = new System.Drawing.Size(219, 32);
+            this.lastNameTextBox.Size = new System.Drawing.Size(292, 39);
             this.lastNameTextBox.TabIndex = 20;
             // 
             // firstNameTextBox
@@ -121,23 +121,24 @@ namespace webTRON_Management_Software.Views.Accountant
             this.firstNameTextBox.ForeColor = System.Drawing.Color.Black;
             this.firstNameTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.firstNameTextBox.HoverState.Parent = this.firstNameTextBox;
-            this.firstNameTextBox.Location = new System.Drawing.Point(373, 64);
-            this.firstNameTextBox.Margin = new System.Windows.Forms.Padding(6);
+            this.firstNameTextBox.Location = new System.Drawing.Point(497, 79);
+            this.firstNameTextBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.firstNameTextBox.Name = "firstNameTextBox";
             this.firstNameTextBox.PasswordChar = '\0';
             this.firstNameTextBox.PlaceholderText = "First Name";
             this.firstNameTextBox.SelectedText = "";
             this.firstNameTextBox.ShadowDecoration.Parent = this.firstNameTextBox;
-            this.firstNameTextBox.Size = new System.Drawing.Size(226, 32);
+            this.firstNameTextBox.Size = new System.Drawing.Size(301, 39);
             this.firstNameTextBox.TabIndex = 19;
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(203, 68);
+            this.lblName.Location = new System.Drawing.Point(271, 84);
+            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(55, 20);
+            this.lblName.Size = new System.Drawing.Size(70, 25);
             this.lblName.TabIndex = 21;
             this.lblName.Text = "Name:";
             // 
@@ -157,23 +158,24 @@ namespace webTRON_Management_Software.Views.Accountant
             this.addressTextBox.ForeColor = System.Drawing.Color.Black;
             this.addressTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.addressTextBox.HoverState.Parent = this.addressTextBox;
-            this.addressTextBox.Location = new System.Drawing.Point(373, 106);
-            this.addressTextBox.Margin = new System.Windows.Forms.Padding(5);
+            this.addressTextBox.Location = new System.Drawing.Point(497, 130);
+            this.addressTextBox.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.PasswordChar = '\0';
             this.addressTextBox.PlaceholderText = "Address";
             this.addressTextBox.SelectedText = "";
             this.addressTextBox.ShadowDecoration.Parent = this.addressTextBox;
-            this.addressTextBox.Size = new System.Drawing.Size(239, 32);
+            this.addressTextBox.Size = new System.Drawing.Size(319, 39);
             this.addressTextBox.TabIndex = 32;
             // 
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblAddress.Location = new System.Drawing.Point(203, 107);
+            this.lblAddress.Location = new System.Drawing.Point(271, 132);
+            this.lblAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(72, 20);
+            this.lblAddress.Size = new System.Drawing.Size(91, 25);
             this.lblAddress.TabIndex = 33;
             this.lblAddress.Text = "Address:";
             // 
@@ -193,23 +195,24 @@ namespace webTRON_Management_Software.Views.Accountant
             this.ageTextBox.ForeColor = System.Drawing.Color.Black;
             this.ageTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ageTextBox.HoverState.Parent = this.ageTextBox;
-            this.ageTextBox.Location = new System.Drawing.Point(375, 147);
-            this.ageTextBox.Margin = new System.Windows.Forms.Padding(5);
+            this.ageTextBox.Location = new System.Drawing.Point(500, 181);
+            this.ageTextBox.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.ageTextBox.Name = "ageTextBox";
             this.ageTextBox.PasswordChar = '\0';
             this.ageTextBox.PlaceholderText = "Age";
             this.ageTextBox.SelectedText = "";
             this.ageTextBox.ShadowDecoration.Parent = this.ageTextBox;
-            this.ageTextBox.Size = new System.Drawing.Size(108, 32);
+            this.ageTextBox.Size = new System.Drawing.Size(144, 39);
             this.ageTextBox.TabIndex = 34;
             // 
             // lblAge
             // 
             this.lblAge.AutoSize = true;
             this.lblAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblAge.Location = new System.Drawing.Point(203, 147);
+            this.lblAge.Location = new System.Drawing.Point(271, 181);
+            this.lblAge.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(42, 20);
+            this.lblAge.Size = new System.Drawing.Size(54, 25);
             this.lblAge.TabIndex = 35;
             this.lblAge.Text = "Age:";
             // 
@@ -217,9 +220,10 @@ namespace webTRON_Management_Software.Views.Accountant
             // 
             this.lblSexOutput.AutoSize = true;
             this.lblSexOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblSexOutput.Location = new System.Drawing.Point(371, 192);
+            this.lblSexOutput.Location = new System.Drawing.Point(495, 236);
+            this.lblSexOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSexOutput.Name = "lblSexOutput";
-            this.lblSexOutput.Size = new System.Drawing.Size(53, 20);
+            this.lblSexOutput.Size = new System.Drawing.Size(71, 25);
             this.lblSexOutput.TabIndex = 36;
             this.lblSexOutput.Text = "{{sex}}";
             // 
@@ -227,9 +231,10 @@ namespace webTRON_Management_Software.Views.Accountant
             // 
             this.lblSex.AutoSize = true;
             this.lblSex.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblSex.Location = new System.Drawing.Point(203, 192);
+            this.lblSex.Location = new System.Drawing.Point(271, 236);
+            this.lblSex.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSex.Name = "lblSex";
-            this.lblSex.Size = new System.Drawing.Size(40, 20);
+            this.lblSex.Size = new System.Drawing.Size(53, 25);
             this.lblSex.TabIndex = 37;
             this.lblSex.Text = "Sex:";
             // 
@@ -249,23 +254,24 @@ namespace webTRON_Management_Software.Views.Accountant
             this.contactNumberTextBox.ForeColor = System.Drawing.Color.Black;
             this.contactNumberTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.contactNumberTextBox.HoverState.Parent = this.contactNumberTextBox;
-            this.contactNumberTextBox.Location = new System.Drawing.Point(373, 230);
-            this.contactNumberTextBox.Margin = new System.Windows.Forms.Padding(5);
+            this.contactNumberTextBox.Location = new System.Drawing.Point(497, 283);
+            this.contactNumberTextBox.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.contactNumberTextBox.Name = "contactNumberTextBox";
             this.contactNumberTextBox.PasswordChar = '\0';
             this.contactNumberTextBox.PlaceholderText = "Contact Number";
             this.contactNumberTextBox.SelectedText = "";
             this.contactNumberTextBox.ShadowDecoration.Parent = this.contactNumberTextBox;
-            this.contactNumberTextBox.Size = new System.Drawing.Size(239, 32);
+            this.contactNumberTextBox.Size = new System.Drawing.Size(319, 39);
             this.contactNumberTextBox.TabIndex = 38;
             // 
             // lblContactNumber
             // 
             this.lblContactNumber.AutoSize = true;
             this.lblContactNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblContactNumber.Location = new System.Drawing.Point(203, 233);
+            this.lblContactNumber.Location = new System.Drawing.Point(271, 287);
+            this.lblContactNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContactNumber.Name = "lblContactNumber";
-            this.lblContactNumber.Size = new System.Drawing.Size(129, 20);
+            this.lblContactNumber.Size = new System.Drawing.Size(160, 25);
             this.lblContactNumber.TabIndex = 39;
             this.lblContactNumber.Text = "Contact Number:";
             // 
@@ -274,18 +280,20 @@ namespace webTRON_Management_Software.Views.Accountant
             this.guna2Panel2.BackgroundImage = global::webTRON_Management_Software.Properties.Resources.rectangle_curved_medium;
             this.guna2Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2Panel2.Location = new System.Drawing.Point(1, 1);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(196, 73);
+            this.guna2Panel2.Size = new System.Drawing.Size(261, 90);
             this.guna2Panel2.TabIndex = 40;
             // 
             // lblRefferedTo
             // 
             this.lblRefferedTo.AutoSize = true;
             this.lblRefferedTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblRefferedTo.Location = new System.Drawing.Point(203, 279);
+            this.lblRefferedTo.Location = new System.Drawing.Point(271, 343);
+            this.lblRefferedTo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRefferedTo.Name = "lblRefferedTo";
-            this.lblRefferedTo.Size = new System.Drawing.Size(98, 20);
+            this.lblRefferedTo.Size = new System.Drawing.Size(121, 25);
             this.lblRefferedTo.TabIndex = 44;
             this.lblRefferedTo.Text = "Referred To:";
             // 
@@ -293,9 +301,10 @@ namespace webTRON_Management_Software.Views.Accountant
             // 
             this.lblReferredToOutput.AutoSize = true;
             this.lblReferredToOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblReferredToOutput.Location = new System.Drawing.Point(371, 279);
+            this.lblReferredToOutput.Location = new System.Drawing.Point(495, 343);
+            this.lblReferredToOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblReferredToOutput.Name = "lblReferredToOutput";
-            this.lblReferredToOutput.Size = new System.Drawing.Size(103, 20);
+            this.lblReferredToOutput.Size = new System.Drawing.Size(131, 25);
             this.lblReferredToOutput.TabIndex = 43;
             this.lblReferredToOutput.Text = "{{referredTo}}";
             // 
@@ -303,9 +312,10 @@ namespace webTRON_Management_Software.Views.Accountant
             // 
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblStatus.Location = new System.Drawing.Point(203, 322);
+            this.lblStatus.Location = new System.Drawing.Point(271, 396);
+            this.lblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(60, 20);
+            this.lblStatus.Size = new System.Drawing.Size(74, 25);
             this.lblStatus.TabIndex = 46;
             this.lblStatus.Text = "Status:";
             // 
@@ -313,9 +323,10 @@ namespace webTRON_Management_Software.Views.Accountant
             // 
             this.lblStatusOutput.AutoSize = true;
             this.lblStatusOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblStatusOutput.Location = new System.Drawing.Point(371, 322);
+            this.lblStatusOutput.Location = new System.Drawing.Point(495, 396);
+            this.lblStatusOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStatusOutput.Name = "lblStatusOutput";
-            this.lblStatusOutput.Size = new System.Drawing.Size(76, 20);
+            this.lblStatusOutput.Size = new System.Drawing.Size(96, 25);
             this.lblStatusOutput.TabIndex = 45;
             this.lblStatusOutput.Text = "{{Status}}";
             // 
@@ -327,10 +338,11 @@ namespace webTRON_Management_Software.Views.Accountant
             this.btnClear.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.btnClear.ForeColor = System.Drawing.Color.White;
             this.btnClear.HoverState.Parent = this.btnClear;
-            this.btnClear.Location = new System.Drawing.Point(773, 254);
+            this.btnClear.Location = new System.Drawing.Point(1031, 313);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClear.Name = "btnClear";
             this.btnClear.ShadowDecoration.Parent = this.btnClear;
-            this.btnClear.Size = new System.Drawing.Size(180, 45);
+            this.btnClear.Size = new System.Drawing.Size(240, 55);
             this.btnClear.TabIndex = 47;
             this.btnClear.Text = "Clear";
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -344,10 +356,11 @@ namespace webTRON_Management_Software.Views.Accountant
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.HoverState.Parent = this.btnUpdate;
             this.btnUpdate.Image = global::webTRON_Management_Software.Properties.Resources.PlusSign;
-            this.btnUpdate.Location = new System.Drawing.Point(773, 316);
+            this.btnUpdate.Location = new System.Drawing.Point(1031, 389);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.ShadowDecoration.Parent = this.btnUpdate;
-            this.btnUpdate.Size = new System.Drawing.Size(180, 45);
+            this.btnUpdate.Size = new System.Drawing.Size(240, 55);
             this.btnUpdate.TabIndex = 48;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -368,14 +381,14 @@ namespace webTRON_Management_Software.Views.Accountant
             this.searchTextBox.ForeColor = System.Drawing.Color.Black;
             this.searchTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.searchTextBox.HoverState.Parent = this.searchTextBox;
-            this.searchTextBox.Location = new System.Drawing.Point(19, 368);
-            this.searchTextBox.Margin = new System.Windows.Forms.Padding(6);
+            this.searchTextBox.Location = new System.Drawing.Point(25, 453);
+            this.searchTextBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.searchTextBox.Name = "searchTextBox";
             this.searchTextBox.PasswordChar = '\0';
             this.searchTextBox.PlaceholderText = "Search";
             this.searchTextBox.SelectedText = "";
             this.searchTextBox.ShadowDecoration.Parent = this.searchTextBox;
-            this.searchTextBox.Size = new System.Drawing.Size(226, 32);
+            this.searchTextBox.Size = new System.Drawing.Size(301, 39);
             this.searchTextBox.TabIndex = 49;
             this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
             // 
@@ -383,7 +396,8 @@ namespace webTRON_Management_Software.Views.Accountant
             // 
             this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
-            this.btnMinimize.Location = new System.Drawing.Point(923, 16);
+            this.btnMinimize.Location = new System.Drawing.Point(1231, 20);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.ShadowDecoration.Parent = this.btnMinimize;
             this.btnMinimize.Size = new System.Drawing.Size(21, 4);
@@ -396,7 +410,8 @@ namespace webTRON_Management_Software.Views.Accountant
             // 
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(972, 1);
+            this.btnExit.Location = new System.Drawing.Point(1296, 1);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExit.Name = "btnExit";
             this.btnExit.ShadowDecoration.Parent = this.btnExit;
             this.btnExit.Size = new System.Drawing.Size(28, 28);
@@ -409,9 +424,10 @@ namespace webTRON_Management_Software.Views.Accountant
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label7.Location = new System.Drawing.Point(618, 159);
+            this.label7.Location = new System.Drawing.Point(824, 196);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(159, 20);
+            this.label7.Size = new System.Drawing.Size(194, 25);
             this.label7.TabIndex = 54;
             this.label7.Text = "Registration Number:";
             // 
@@ -419,9 +435,10 @@ namespace webTRON_Management_Software.Views.Accountant
             // 
             this.lblRegistrationNumberOutput.AutoSize = true;
             this.lblRegistrationNumberOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblRegistrationNumberOutput.Location = new System.Drawing.Point(786, 159);
+            this.lblRegistrationNumberOutput.Location = new System.Drawing.Point(1048, 196);
+            this.lblRegistrationNumberOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRegistrationNumberOutput.Name = "lblRegistrationNumberOutput";
-            this.lblRegistrationNumberOutput.Size = new System.Drawing.Size(164, 20);
+            this.lblRegistrationNumberOutput.Size = new System.Drawing.Size(204, 25);
             this.lblRegistrationNumberOutput.TabIndex = 53;
             this.lblRegistrationNumberOutput.Text = "{{registrationNumber}}";
             // 
@@ -429,9 +446,10 @@ namespace webTRON_Management_Software.Views.Accountant
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label8.Location = new System.Drawing.Point(621, 192);
+            this.label8.Location = new System.Drawing.Point(828, 236);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(159, 20);
+            this.label8.Size = new System.Drawing.Size(194, 25);
             this.label8.TabIndex = 56;
             this.label8.Text = "Registration Number:";
             // 
@@ -439,9 +457,10 @@ namespace webTRON_Management_Software.Views.Accountant
             // 
             this.lblRegistrationDateOutput.AutoSize = true;
             this.lblRegistrationDateOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblRegistrationDateOutput.Location = new System.Drawing.Point(789, 192);
+            this.lblRegistrationDateOutput.Location = new System.Drawing.Point(1052, 236);
+            this.lblRegistrationDateOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRegistrationDateOutput.Name = "lblRegistrationDateOutput";
-            this.lblRegistrationDateOutput.Size = new System.Drawing.Size(164, 20);
+            this.lblRegistrationDateOutput.Size = new System.Drawing.Size(204, 25);
             this.lblRegistrationDateOutput.TabIndex = 55;
             this.lblRegistrationDateOutput.Text = "{{registrationNumber}}";
             // 
@@ -484,11 +503,13 @@ namespace webTRON_Management_Software.Views.Accountant
             this.DataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.DataGridView.EnableHeadersVisualStyles = false;
             this.DataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DataGridView.Location = new System.Drawing.Point(1, 463);
+            this.DataGridView.Location = new System.Drawing.Point(1, 570);
+            this.DataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DataGridView.Name = "DataGridView";
             this.DataGridView.RowHeadersVisible = false;
+            this.DataGridView.RowHeadersWidth = 51;
             this.DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridView.Size = new System.Drawing.Size(999, 161);
+            this.DataGridView.Size = new System.Drawing.Size(1332, 198);
             this.DataGridView.TabIndex = 57;
             this.DataGridView.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.DataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -517,51 +538,61 @@ namespace webTRON_Management_Software.Views.Accountant
             // registrationNumber
             // 
             this.registrationNumber.HeaderText = "Registration Number";
+            this.registrationNumber.MinimumWidth = 6;
             this.registrationNumber.Name = "registrationNumber";
             // 
             // registrationDate
             // 
             this.registrationDate.HeaderText = "Registration Date";
+            this.registrationDate.MinimumWidth = 6;
             this.registrationDate.Name = "registrationDate";
             // 
             // firstName
             // 
             this.firstName.HeaderText = "First Name";
+            this.firstName.MinimumWidth = 6;
             this.firstName.Name = "firstName";
             // 
             // lastName
             // 
             this.lastName.HeaderText = "Last Name";
+            this.lastName.MinimumWidth = 6;
             this.lastName.Name = "lastName";
             // 
             // contactNumber
             // 
             this.contactNumber.HeaderText = "Contact Number";
+            this.contactNumber.MinimumWidth = 6;
             this.contactNumber.Name = "contactNumber";
             // 
             // sex
             // 
             this.sex.HeaderText = "Sex";
+            this.sex.MinimumWidth = 6;
             this.sex.Name = "sex";
             // 
             // referredTo
             // 
             this.referredTo.HeaderText = "Referred To";
+            this.referredTo.MinimumWidth = 6;
             this.referredTo.Name = "referredTo";
             // 
             // status
             // 
             this.status.HeaderText = "Status";
+            this.status.MinimumWidth = 6;
             this.status.Name = "status";
             // 
             // age
             // 
             this.age.HeaderText = "Age";
+            this.age.MinimumWidth = 6;
             this.age.Name = "age";
             // 
             // address
             // 
             this.address.HeaderText = "Address";
+            this.address.MinimumWidth = 6;
             this.address.Name = "address";
             // 
             // guna2DataGridView1
@@ -592,11 +623,13 @@ namespace webTRON_Management_Software.Views.Accountant
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(516, 511);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(688, 629);
+            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
+            this.guna2DataGridView1.RowHeadersWidth = 51;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(320, 185);
             this.guna2DataGridView1.TabIndex = 58;
             this.guna2DataGridView1.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -623,10 +656,10 @@ namespace webTRON_Management_Software.Views.Accountant
             // 
             // SearchAndUpdatePatient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1000, 625);
+            this.ClientSize = new System.Drawing.Size(1333, 769);
             this.Controls.Add(this.guna2DataGridView1);
             this.Controls.Add(this.DataGridView);
             this.Controls.Add(this.label8);
@@ -655,6 +688,7 @@ namespace webTRON_Management_Software.Views.Accountant
             this.Controls.Add(this.firstNameTextBox);
             this.Controls.Add(this.lblName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "SearchAndUpdatePatient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SearchAndUpdatePatient";

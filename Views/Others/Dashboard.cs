@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using webTRON_Management_Software.Models;
 using webTRON_Management_Software.Views.Admin;
 
 namespace webTRON_Management_Software.Views.Others
@@ -20,7 +21,7 @@ namespace webTRON_Management_Software.Views.Others
 
         private void OtherDashboard_Load(object sender, EventArgs e)
         {
-            CreateAccount obj = new CreateAccount();
+           
         }
 
         private void label1_Click(object sender, EventArgs e)

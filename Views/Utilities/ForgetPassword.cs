@@ -15,9 +15,7 @@ namespace webTRON_Management_Software.Views.Utilities
 {
     public partial class ForgetPassword : Form
     {
-        //Instantiate Employee Class
-        Employee empObj = new Employee();
-
+       
         //Entered email
         string enteredEmail;
 
@@ -50,14 +48,14 @@ namespace webTRON_Management_Software.Views.Utilities
             {
                  enteredEmail = recoveryEmailTextBox.Text;
                 //Check email is exist in database or not
-                if (empObj.IsEmailExist(enteredEmail))
+                if (Employee.IsEmailExist(enteredEmail))
                 {
                     //Send Verification code and store this in database
                     int generatedVerificationCode = Generator.generateVerificationCode();
                     bool isMailSendSucessfully = Email.SendVerificationCode(enteredEmail, generatedVerificationCode);
                     if (isMailSendSucessfully)
                     {
-                        bool isCodeStoredSucessfully=empObj.StoreVerificationCode(enteredEmail, generatedVerificationCode);
+                        bool isCodeStoredSucessfully=Employee.StoreVerificationCode(enteredEmail, generatedVerificationCode);
                         if (isCodeStoredSucessfully)
                         {
                             //Show enterVerificationCodePanel
@@ -98,7 +96,7 @@ namespace webTRON_Management_Software.Views.Utilities
                 string verificationCode = $"{verificationCodeTextBox1.Text}{verificationCodeTextBox2.Text}{verificationCodeTextBox3.Text}{verificationCodeTextBox4.Text}";
                 int code = Convert.ToInt32(verificationCode);
                 //Check verification is valid or not
-                bool isValid = empObj.IsValidVerificationCode(enteredEmail, code);
+                bool isValid = Employee.IsValidVerificationCode(enteredEmail, code);
                 if (isValid)
                 {
                     resetPasswordPanelTransition.ShowSync(resetPasswordPanel);
@@ -160,7 +158,7 @@ namespace webTRON_Management_Software.Views.Utilities
             {
                 string newPassword = newPasswordTextBox.Text;
                 //Store new password in database
-                bool isChanged = empObj.UpdatePassword(enteredEmail, newPassword);
+                bool isChanged = Employee.UpdatePassword(enteredEmail, newPassword);
                 if (isChanged)
                 {
                    MessageBox.Show("Password has changed sucessfully.", "Congratulations", MessageBoxButtons.OK, MessageBoxIcon.Information);
