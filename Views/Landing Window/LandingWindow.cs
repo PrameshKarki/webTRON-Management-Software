@@ -28,22 +28,21 @@ namespace webTRON_Management_Software.Views.Landing_Window
         }
 
         //Login Button Click Event
-        private void btnLogIn_Click(object sender, EventArgs e)
+        private void BtnLogIn_Click(object sender, EventArgs e)
         {
-            //Instantiate object properties
-            newUser.userID = userIDTextBox.Text;
-            newUser.password = passwordTextBox.Text;
-
-            //Validating user input
-            if (newUser.userID == "" || newUser.password == "")
+              //Validating user input
+            if (string.IsNullOrEmpty(userIDTextBox.Text) || string.IsNullOrEmpty(passwordTextBox.Text))
             {
                 MessageBox.Show("Fll all the fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             else
             {
+                //Instantiate object properties
+                newUser.userID = userIDTextBox.Text;
+                newUser.password = passwordTextBox.Text;
                 //Check valid user or nont
-                bool isSucess = newUser.CheckUser(newUser);
+                bool isSucess = User.CheckUser(newUser);
                 if (isSucess)
                 {
                     //Set Logged in user status Online
@@ -122,7 +121,7 @@ namespace webTRON_Management_Software.Views.Landing_Window
 
         }
         //Method to handle click event
-        private void lblForgetPassword_Click(object sender, EventArgs e)
+        private void LblForgetPassword_Click(object sender, EventArgs e)
         {
             //Instantiating forget password form
             this.Hide();

@@ -59,7 +59,10 @@ namespace webTRON_Management_Software.Views.Admin
         private void InitializeActiverUserDetails()
         {
             activeUserName.Text = employee.FirstName;
-
+            lblUserIdValue.Text = employee.UserID;
+            lblFullNameValue.Text = $"{employee.FirstName} {employee.LastName}";
+            lblEmailValue.Text = employee.Email;
+            lblContactNumberValue.Text = employee.ContactNumber;
 
         }
         //Click event on signout and exit button
@@ -85,6 +88,14 @@ namespace webTRON_Management_Software.Views.Admin
 
 
             }
+        }
+        //Click event on change password button
+        private void BtnChangePassword_Click(object sender, EventArgs e)
+        {
+            var changePassword = new ChangePassword(employee);
+            changePassword.Show();
+            this.Hide();
+
         }
     }
 }

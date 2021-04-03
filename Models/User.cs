@@ -52,7 +52,7 @@ namespace webTRON_Management_Software.Models
 
         }
         //Method to check wheather the user is authorized or not
-        public bool CheckUser(User obj)
+        public static bool CheckUser(User obj)
         {
             //Declaring default bool variable and initiazling it false
             bool isExist = false;

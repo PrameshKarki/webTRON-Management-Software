@@ -29,52 +29,38 @@ namespace webTRON_Management_Software.Views.Admin
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
-            this.btnMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnExit = new Guna.UI2.WinForms.Guna2PictureBox();
             this.sidebarPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.btnSIgnOut = new Guna.UI2.WinForms.Guna2Button();
             this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
             this.btnUsers = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
+            this.lblUserID = new System.Windows.Forms.Label();
+            this.lblUserIdValue = new System.Windows.Forms.Label();
+            this.lblFullNameValue = new System.Windows.Forms.Label();
+            this.lblFullName = new System.Windows.Forms.Label();
+            this.lblEmailValue = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblContactNumberValue = new System.Windows.Forms.Label();
+            this.lblContactNumber = new System.Windows.Forms.Label();
+            this.DragableSettings = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.btnChangePassword = new Guna.UI2.WinForms.Guna2Button();
+            this.btnChangeInfo = new Guna.UI2.WinForms.Guna2Button();
+            this.userPicture = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.activeUserPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.activeForm = new System.Windows.Forms.Label();
             this.activeUserPicture = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.activeUserName = new System.Windows.Forms.Label();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
+            this.btnMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnExit = new Guna.UI2.WinForms.Guna2PictureBox();
             this.sidebarPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userPicture)).BeginInit();
             this.activeUserPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
-            this.btnMinimize.Location = new System.Drawing.Point(911, 27);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.ShadowDecoration.Parent = this.btnMinimize;
-            this.btnMinimize.Size = new System.Drawing.Size(21, 4);
-            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnMinimize.TabIndex = 28;
-            this.btnMinimize.TabStop = false;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(960, 12);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.ShadowDecoration.Parent = this.btnExit;
-            this.btnExit.Size = new System.Drawing.Size(28, 28);
-            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnExit.TabIndex = 27;
-            this.btnExit.TabStop = false;
-            this.btnExit.Click += new System.EventHandler(this.SignOut);
             // 
             // sidebarPanel
             // 
@@ -172,6 +158,140 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnDashboard.TextOffset = new System.Drawing.Point(-6, 10);
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
+            // lblUserID
+            // 
+            this.lblUserID.AutoSize = true;
+            this.lblUserID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.lblUserID.Location = new System.Drawing.Point(295, 88);
+            this.lblUserID.Name = "lblUserID";
+            this.lblUserID.Size = new System.Drawing.Size(76, 24);
+            this.lblUserID.TabIndex = 34;
+            this.lblUserID.Text = "User ID:";
+            // 
+            // lblUserIdValue
+            // 
+            this.lblUserIdValue.AutoSize = true;
+            this.lblUserIdValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.lblUserIdValue.Location = new System.Drawing.Point(451, 88);
+            this.lblUserIdValue.Name = "lblUserIdValue";
+            this.lblUserIdValue.Size = new System.Drawing.Size(88, 24);
+            this.lblUserIdValue.TabIndex = 35;
+            this.lblUserIdValue.Text = "{{userID}}";
+            // 
+            // lblFullNameValue
+            // 
+            this.lblFullNameValue.AutoSize = true;
+            this.lblFullNameValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.lblFullNameValue.Location = new System.Drawing.Point(451, 136);
+            this.lblFullNameValue.Name = "lblFullNameValue";
+            this.lblFullNameValue.Size = new System.Drawing.Size(108, 24);
+            this.lblFullNameValue.TabIndex = 37;
+            this.lblFullNameValue.Text = "{{fullName}}";
+            // 
+            // lblFullName
+            // 
+            this.lblFullName.AutoSize = true;
+            this.lblFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.lblFullName.Location = new System.Drawing.Point(295, 136);
+            this.lblFullName.Name = "lblFullName";
+            this.lblFullName.Size = new System.Drawing.Size(102, 24);
+            this.lblFullName.TabIndex = 36;
+            this.lblFullName.Text = "Full Name:";
+            // 
+            // lblEmailValue
+            // 
+            this.lblEmailValue.AutoSize = true;
+            this.lblEmailValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.lblEmailValue.Location = new System.Drawing.Point(451, 181);
+            this.lblEmailValue.Name = "lblEmailValue";
+            this.lblEmailValue.Size = new System.Drawing.Size(79, 24);
+            this.lblEmailValue.TabIndex = 39;
+            this.lblEmailValue.Text = "{{email}}";
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.lblEmail.Location = new System.Drawing.Point(295, 181);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(62, 24);
+            this.lblEmail.TabIndex = 38;
+            this.lblEmail.Text = "Email:";
+            // 
+            // lblContactNumberValue
+            // 
+            this.lblContactNumberValue.AutoSize = true;
+            this.lblContactNumberValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.lblContactNumberValue.Location = new System.Drawing.Point(451, 228);
+            this.lblContactNumberValue.Name = "lblContactNumberValue";
+            this.lblContactNumberValue.Size = new System.Drawing.Size(163, 24);
+            this.lblContactNumberValue.TabIndex = 41;
+            this.lblContactNumberValue.Text = "{{contactNumber}}";
+            // 
+            // lblContactNumber
+            // 
+            this.lblContactNumber.AutoSize = true;
+            this.lblContactNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.lblContactNumber.Location = new System.Drawing.Point(295, 228);
+            this.lblContactNumber.Name = "lblContactNumber";
+            this.lblContactNumber.Size = new System.Drawing.Size(152, 24);
+            this.lblContactNumber.TabIndex = 40;
+            this.lblContactNumber.Text = "Contact Number:";
+            // 
+            // DragableSettings
+            // 
+            this.DragableSettings.TargetControl = this;
+            // 
+            // btnChangePassword
+            // 
+            this.btnChangePassword.Animated = true;
+            this.btnChangePassword.AutoRoundedCorners = true;
+            this.btnChangePassword.BorderRadius = 21;
+            this.btnChangePassword.CheckedState.Parent = this.btnChangePassword;
+            this.btnChangePassword.CustomImages.Parent = this.btnChangePassword;
+            this.btnChangePassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            this.btnChangePassword.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.btnChangePassword.ForeColor = System.Drawing.Color.White;
+            this.btnChangePassword.HoverState.Parent = this.btnChangePassword;
+            this.btnChangePassword.Location = new System.Drawing.Point(760, 338);
+            this.btnChangePassword.Name = "btnChangePassword";
+            this.btnChangePassword.ShadowDecoration.Parent = this.btnChangePassword;
+            this.btnChangePassword.Size = new System.Drawing.Size(192, 45);
+            this.btnChangePassword.TabIndex = 43;
+            this.btnChangePassword.Text = "Change Password";
+            this.btnChangePassword.Click += new System.EventHandler(this.BtnChangePassword_Click);
+            // 
+            // btnChangeInfo
+            // 
+            this.btnChangeInfo.Animated = true;
+            this.btnChangeInfo.AutoRoundedCorners = true;
+            this.btnChangeInfo.BorderRadius = 21;
+            this.btnChangeInfo.CheckedState.Parent = this.btnChangeInfo;
+            this.btnChangeInfo.CustomImages.Parent = this.btnChangeInfo;
+            this.btnChangeInfo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            this.btnChangeInfo.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.btnChangeInfo.ForeColor = System.Drawing.Color.White;
+            this.btnChangeInfo.HoverState.Parent = this.btnChangeInfo;
+            this.btnChangeInfo.Location = new System.Drawing.Point(760, 274);
+            this.btnChangeInfo.Name = "btnChangeInfo";
+            this.btnChangeInfo.ShadowDecoration.Parent = this.btnChangeInfo;
+            this.btnChangeInfo.Size = new System.Drawing.Size(192, 45);
+            this.btnChangeInfo.TabIndex = 42;
+            this.btnChangeInfo.Text = "Change Info";
+            // 
+            // userPicture
+            // 
+            this.userPicture.BackColor = System.Drawing.Color.Transparent;
+            this.userPicture.Image = global::webTRON_Management_Software.Properties.Resources.man_picture;
+            this.userPicture.Location = new System.Drawing.Point(760, 77);
+            this.userPicture.Name = "userPicture";
+            this.userPicture.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.userPicture.ShadowDecoration.Parent = this.userPicture;
+            this.userPicture.Size = new System.Drawing.Size(175, 175);
+            this.userPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.userPicture.TabIndex = 31;
+            this.userPicture.TabStop = false;
+            // 
             // activeUserPanel
             // 
             this.activeUserPanel.BackgroundImage = global::webTRON_Management_Software.Properties.Resources.rectangle_curved_large;
@@ -222,18 +342,31 @@ namespace webTRON_Management_Software.Views.Admin
             this.activeUserName.TabIndex = 1;
             this.activeUserName.Text = "John";
             // 
-            // guna2CirclePictureBox1
+            // btnMinimize
             // 
-            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.Image = global::webTRON_Management_Software.Properties.Resources.man_picture;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(702, 70);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.ShadowDecoration.Parent = this.guna2CirclePictureBox1;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(166, 172);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox1.TabIndex = 31;
-            this.guna2CirclePictureBox1.TabStop = false;
+            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
+            this.btnMinimize.Location = new System.Drawing.Point(911, 27);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.ShadowDecoration.Parent = this.btnMinimize;
+            this.btnMinimize.Size = new System.Drawing.Size(21, 4);
+            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnMinimize.TabIndex = 28;
+            this.btnMinimize.TabStop = false;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.Location = new System.Drawing.Point(960, 12);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.ShadowDecoration.Parent = this.btnExit;
+            this.btnExit.Size = new System.Drawing.Size(28, 28);
+            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnExit.TabIndex = 27;
+            this.btnExit.TabStop = false;
+            this.btnExit.Click += new System.EventHandler(this.SignOut);
             // 
             // Settings
             // 
@@ -241,7 +374,17 @@ namespace webTRON_Management_Software.Views.Admin
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1000, 625);
-            this.Controls.Add(this.guna2CirclePictureBox1);
+            this.Controls.Add(this.btnChangePassword);
+            this.Controls.Add(this.btnChangeInfo);
+            this.Controls.Add(this.lblContactNumberValue);
+            this.Controls.Add(this.lblContactNumber);
+            this.Controls.Add(this.lblEmailValue);
+            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.lblFullNameValue);
+            this.Controls.Add(this.lblFullName);
+            this.Controls.Add(this.lblUserIdValue);
+            this.Controls.Add(this.lblUserID);
+            this.Controls.Add(this.userPicture);
             this.Controls.Add(this.sidebarPanel);
             this.Controls.Add(this.activeUserPanel);
             this.Controls.Add(this.btnMinimize);
@@ -251,13 +394,13 @@ namespace webTRON_Management_Software.Views.Admin
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Settings";
             this.Load += new System.EventHandler(this.Settings_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.sidebarPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.userPicture)).EndInit();
             this.activeUserPanel.ResumeLayout(false);
             this.activeUserPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,6 +419,17 @@ namespace webTRON_Management_Software.Views.Admin
         private System.Windows.Forms.Label activeForm;
         private Guna.UI2.WinForms.Guna2CirclePictureBox activeUserPicture;
         private System.Windows.Forms.Label activeUserName;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox userPicture;
+        private System.Windows.Forms.Label lblUserID;
+        private System.Windows.Forms.Label lblUserIdValue;
+        private System.Windows.Forms.Label lblFullNameValue;
+        private System.Windows.Forms.Label lblFullName;
+        private System.Windows.Forms.Label lblEmailValue;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblContactNumberValue;
+        private System.Windows.Forms.Label lblContactNumber;
+        private Guna.UI2.WinForms.Guna2DragControl DragableSettings;
+        private Guna.UI2.WinForms.Guna2Button btnChangePassword;
+        private Guna.UI2.WinForms.Guna2Button btnChangeInfo;
     }
 }
