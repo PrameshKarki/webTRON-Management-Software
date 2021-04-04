@@ -28,13 +28,13 @@ namespace webTRON_Management_Software.Views.Admin
         }
 
         //Click event on minimize button
-        private void btnMinimize_Click(object sender, EventArgs e)
+        private void BtnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
         //Click event on dashboard icon
-        private void btnDashboard_Click(object sender, EventArgs e)
+        private void BtnDashboard_Click(object sender, EventArgs e)
         {
             var dashboard = new Admin.Dashboard(employee);
             dashboard.Show();
@@ -42,7 +42,7 @@ namespace webTRON_Management_Software.Views.Admin
 
         }
         //Click event on Users icon
-        private void btnUsers_Click(object sender, EventArgs e)
+        private void BtnUsers_Click(object sender, EventArgs e)
         {
             var users = new Admin.Users(employee);
             users.Show();

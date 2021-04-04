@@ -214,6 +214,7 @@ namespace webTRON_Management_Software.Utils
                 MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
                 //Open Connection
                 conn.Open();
+                //Execute query
                 object returnValue = cmd.ExecuteScalar();
                 if (returnValue != null)
                 {

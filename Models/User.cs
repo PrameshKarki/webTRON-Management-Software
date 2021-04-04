@@ -8,7 +8,7 @@ using MySql.Data.MySqlClient;
 
 namespace webTRON_Management_Software.Models
 {
-    class User
+    public class User
     {
         //Connection String
         private static string connectionString = "server=localhost;user id=root;pwd=password;database=webtronmanagement";

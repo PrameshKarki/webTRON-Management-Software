@@ -50,7 +50,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.roleComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.sidebarPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnSIgnOut = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSignOut = new Guna.UI2.WinForms.Guna2Button();
             this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
             this.btnUsers = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
@@ -391,7 +391,7 @@ namespace webTRON_Management_Software.Views.Admin
             // 
             // sidebarPanel
             // 
-            this.sidebarPanel.Controls.Add(this.btnSIgnOut);
+            this.sidebarPanel.Controls.Add(this.btnSignOut);
             this.sidebarPanel.Controls.Add(this.btnSettings);
             this.sidebarPanel.Controls.Add(this.btnUsers);
             this.sidebarPanel.Controls.Add(this.btnDashboard);
@@ -402,26 +402,26 @@ namespace webTRON_Management_Software.Views.Admin
             this.sidebarPanel.Size = new System.Drawing.Size(68, 532);
             this.sidebarPanel.TabIndex = 36;
             // 
-            // btnSIgnOut
+            // btnSignOut
             // 
-            this.btnSIgnOut.Animated = true;
-            this.btnSIgnOut.CheckedState.Parent = this.btnSIgnOut;
-            this.btnSIgnOut.CustomImages.Parent = this.btnSIgnOut;
-            this.btnSIgnOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            this.btnSIgnOut.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSIgnOut.ForeColor = System.Drawing.Color.White;
-            this.btnSIgnOut.HoverState.Parent = this.btnSIgnOut;
-            this.btnSIgnOut.Image = global::webTRON_Management_Software.Properties.Resources.exit_icon;
-            this.btnSIgnOut.ImageOffset = new System.Drawing.Point(10, -10);
-            this.btnSIgnOut.Location = new System.Drawing.Point(0, 468);
-            this.btnSIgnOut.Margin = new System.Windows.Forms.Padding(0);
-            this.btnSIgnOut.Name = "btnSIgnOut";
-            this.btnSIgnOut.ShadowDecoration.Parent = this.btnSIgnOut;
-            this.btnSIgnOut.Size = new System.Drawing.Size(68, 48);
-            this.btnSIgnOut.TabIndex = 24;
-            this.btnSIgnOut.Text = "Sign Out";
-            this.btnSIgnOut.TextOffset = new System.Drawing.Point(-8, 10);
-            this.btnSIgnOut.Click += new System.EventHandler(this.SignOut);
+            this.btnSignOut.Animated = true;
+            this.btnSignOut.CheckedState.Parent = this.btnSignOut;
+            this.btnSignOut.CustomImages.Parent = this.btnSignOut;
+            this.btnSignOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            this.btnSignOut.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignOut.ForeColor = System.Drawing.Color.White;
+            this.btnSignOut.HoverState.Parent = this.btnSignOut;
+            this.btnSignOut.Image = global::webTRON_Management_Software.Properties.Resources.exit_icon;
+            this.btnSignOut.ImageOffset = new System.Drawing.Point(10, -10);
+            this.btnSignOut.Location = new System.Drawing.Point(0, 468);
+            this.btnSignOut.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.ShadowDecoration.Parent = this.btnSignOut;
+            this.btnSignOut.Size = new System.Drawing.Size(68, 48);
+            this.btnSignOut.TabIndex = 24;
+            this.btnSignOut.Text = "Sign Out";
+            this.btnSignOut.TextOffset = new System.Drawing.Point(-8, 10);
+            this.btnSignOut.Click += new System.EventHandler(this.SignOut);
             // 
             // btnSettings
             // 
@@ -663,7 +663,7 @@ namespace webTRON_Management_Software.Views.Admin
         private Guna.UI2.WinForms.Guna2ComboBox roleComboBox;
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2Panel sidebarPanel;
-        private Guna.UI2.WinForms.Guna2Button btnSIgnOut;
+        private Guna.UI2.WinForms.Guna2Button btnSignOut;
         private Guna.UI2.WinForms.Guna2Button btnSettings;
         private Guna.UI2.WinForms.Guna2Button btnUsers;
         private Guna.UI2.WinForms.Guna2Button btnDashboard;

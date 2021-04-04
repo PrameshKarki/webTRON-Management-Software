@@ -22,6 +22,8 @@ namespace webTRON_Management_Software.Views.Landing_Window
 
         //Instantiating User Class
         User newUser = new User();
+        //Instantiating Employee Class
+        Employee activeUser;
         public LandingWindow()
         {
             InitializeComponent();
@@ -45,6 +47,9 @@ namespace webTRON_Management_Software.Views.Landing_Window
                 bool isSucess = User.CheckUser(newUser);
                 if (isSucess)
                 {
+                    //Get User Details
+                    activeUser = Employee.GetActiveUserDetails(newUser.userID);
+
                     //Set Logged in user status Online
                     Employee.SetStatus(newUser.userID, "Online");
 
@@ -52,6 +57,11 @@ namespace webTRON_Management_Software.Views.Landing_Window
                     bool isFirstTime = newUser.IsFirstTimeLogin(newUser.userID);
                     if (isFirstTime)
                     {
+                        this.Hide();
+                        //Instantiate change password form
+                        Utilities.ChangePassword changePassword = new Utilities.ChangePassword(activeUser);
+                        changePassword.ShowDialog();
+                        //Than store loginInfo in database
                         newUser.StoreLogInInfo(newUser.userID);
 
                     }
@@ -87,8 +97,6 @@ namespace webTRON_Management_Software.Views.Landing_Window
             //Get User Role
             string userRole = newUser.GetUserRole(newUser.userID);
 
-            //Get User Details
-            Employee activeUser = Employee.GetActiveUserDetails(newUser.userID);
             switch (userRole)
             {
                 case "Admin":
@@ -106,14 +114,9 @@ namespace webTRON_Management_Software.Views.Landing_Window
                     var accountDashboard = new Accountant.Dashboard();
                     accountDashboard.Show();
                     break;
-                case "Management":
+                case "Others":
                     this.Hide();
-                    var managementDashboard = new Management.Dashboard();
-                    managementDashboard.Show();
-                     break;
-                case "Other":
-                    this.Hide();
-                    var otherDashboard = new Others.Dashboard();
+                    var otherDashboard = new Others.Dashboard(activeUser);
                     otherDashboard.Show();
                    break;
 
