@@ -32,13 +32,13 @@ namespace webTRON_Management_Software.Views.Admin
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Users));
             this.sidebarPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.DragableAdmin_Users = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.btnMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnExit = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnSignOut = new Guna.UI2.WinForms.Guna2Button();
             this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
             this.btnUsers = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
+            this.DragableAdmin_Users = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.btnMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnExit = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnSearchUser = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddNewAccount = new Guna.UI2.WinForms.Guna2Button();
             this.activeUserPanel = new Guna.UI2.WinForms.Guna2Panel();
@@ -64,36 +64,6 @@ namespace webTRON_Management_Software.Views.Admin
             this.sidebarPanel.ShadowDecoration.Parent = this.sidebarPanel;
             this.sidebarPanel.Size = new System.Drawing.Size(68, 532);
             this.sidebarPanel.TabIndex = 24;
-            // 
-            // DragableAdmin_Users
-            // 
-            this.DragableAdmin_Users.TargetControl = this;
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
-            this.btnMinimize.Location = new System.Drawing.Point(921, 22);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.ShadowDecoration.Parent = this.btnMinimize;
-            this.btnMinimize.Size = new System.Drawing.Size(21, 4);
-            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnMinimize.TabIndex = 26;
-            this.btnMinimize.TabStop = false;
-            this.btnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(970, 7);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.ShadowDecoration.Parent = this.btnExit;
-            this.btnExit.Size = new System.Drawing.Size(28, 28);
-            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnExit.TabIndex = 25;
-            this.btnExit.TabStop = false;
-            this.btnExit.Click += new System.EventHandler(this.SignOut);
             // 
             // btnSignOut
             // 
@@ -179,6 +149,36 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnDashboard.TextOffset = new System.Drawing.Point(-6, 10);
             this.btnDashboard.Click += new System.EventHandler(this.BtnDashboard_Click);
             // 
+            // DragableAdmin_Users
+            // 
+            this.DragableAdmin_Users.TargetControl = this;
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
+            this.btnMinimize.Location = new System.Drawing.Point(921, 22);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.ShadowDecoration.Parent = this.btnMinimize;
+            this.btnMinimize.Size = new System.Drawing.Size(21, 4);
+            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnMinimize.TabIndex = 26;
+            this.btnMinimize.TabStop = false;
+            this.btnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.Location = new System.Drawing.Point(970, 7);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.ShadowDecoration.Parent = this.btnExit;
+            this.btnExit.Size = new System.Drawing.Size(28, 28);
+            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnExit.TabIndex = 25;
+            this.btnExit.TabStop = false;
+            this.btnExit.Click += new System.EventHandler(this.SignOut);
+            // 
             // btnSearchUser
             // 
             this.btnSearchUser.Animated = true;
@@ -191,7 +191,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnSearchUser.ForeColor = System.Drawing.Color.White;
             this.btnSearchUser.HoverState.Parent = this.btnSearchUser;
             this.btnSearchUser.Image = global::webTRON_Management_Software.Properties.Resources.search_icon;
-            this.btnSearchUser.Location = new System.Drawing.Point(534, 101);
+            this.btnSearchUser.Location = new System.Drawing.Point(536, 170);
             this.btnSearchUser.Name = "btnSearchUser";
             this.btnSearchUser.ShadowDecoration.Parent = this.btnSearchUser;
             this.btnSearchUser.Size = new System.Drawing.Size(192, 45);
@@ -211,7 +211,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnAddNewAccount.ForeColor = System.Drawing.Color.White;
             this.btnAddNewAccount.HoverState.Parent = this.btnAddNewAccount;
             this.btnAddNewAccount.Image = global::webTRON_Management_Software.Properties.Resources.PlusSign;
-            this.btnAddNewAccount.Location = new System.Drawing.Point(304, 101);
+            this.btnAddNewAccount.Location = new System.Drawing.Point(306, 170);
             this.btnAddNewAccount.Name = "btnAddNewAccount";
             this.btnAddNewAccount.ShadowDecoration.Parent = this.btnAddNewAccount;
             this.btnAddNewAccount.Size = new System.Drawing.Size(192, 45);

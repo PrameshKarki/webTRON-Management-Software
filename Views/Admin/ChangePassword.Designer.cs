@@ -276,7 +276,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.confirmPasswordTextBox.SelectedText = "";
             this.confirmPasswordTextBox.ShadowDecoration.Parent = this.confirmPasswordTextBox;
             this.confirmPasswordTextBox.Size = new System.Drawing.Size(258, 36);
-            this.confirmPasswordTextBox.TabIndex = 38;
+            this.confirmPasswordTextBox.TabIndex = 2;
             this.confirmPasswordTextBox.UseSystemPasswordChar = true;
             // 
             // newPasswordTextBox
@@ -303,7 +303,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.newPasswordTextBox.SelectedText = "";
             this.newPasswordTextBox.ShadowDecoration.Parent = this.newPasswordTextBox;
             this.newPasswordTextBox.Size = new System.Drawing.Size(258, 36);
-            this.newPasswordTextBox.TabIndex = 35;
+            this.newPasswordTextBox.TabIndex = 1;
             this.newPasswordTextBox.UseSystemPasswordChar = true;
             // 
             // lblNewPassword
@@ -329,7 +329,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.ShadowDecoration.Parent = this.btnChangePassword;
             this.btnChangePassword.Size = new System.Drawing.Size(258, 53);
-            this.btnChangePassword.TabIndex = 37;
+            this.btnChangePassword.TabIndex = 3;
             this.btnChangePassword.Text = "Change Password";
             this.btnChangePassword.Click += new System.EventHandler(this.BtnChangePassword_Click);
             // 
@@ -357,7 +357,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.currentPasswordTextBox.SelectedText = "";
             this.currentPasswordTextBox.ShadowDecoration.Parent = this.currentPasswordTextBox;
             this.currentPasswordTextBox.Size = new System.Drawing.Size(258, 36);
-            this.currentPasswordTextBox.TabIndex = 40;
+            this.currentPasswordTextBox.TabIndex = 0;
             this.currentPasswordTextBox.UseSystemPasswordChar = true;
             // 
             // lblCurrentPassword
@@ -378,12 +378,13 @@ namespace webTRON_Management_Software.Views.Admin
             this.verificationCodePanel.Controls.Add(this.btnVerify);
             this.verificationCodePanel.Controls.Add(this.lblEnterVerificationCode);
             this.verificationCodePanel.Controls.Add(this.verificationCodeTextBox1);
-            this.verificationCodePanel.Location = new System.Drawing.Point(259, 50);
+            this.verificationCodePanel.Location = new System.Drawing.Point(248, 50);
             this.verificationCodePanel.Name = "verificationCodePanel";
             this.verificationCodePanel.ShadowDecoration.Parent = this.verificationCodePanel;
             this.verificationCodePanel.Size = new System.Drawing.Size(561, 480);
             this.verificationCodePanel.TabIndex = 42;
             this.verificationCodePanel.Visible = false;
+            this.verificationCodePanel.Enter += new System.EventHandler(this.VerificationCodePanel_Enter);
             // 
             // verificationCodeTextBox2
             // 
@@ -411,6 +412,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.verificationCodeTextBox2.Size = new System.Drawing.Size(38, 38);
             this.verificationCodeTextBox2.TabIndex = 1;
             this.verificationCodeTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.verificationCodeTextBox2.TextChanged += new System.EventHandler(this.VerificationCodeTextBox2_TextChanged);
             // 
             // verificationCodeTextBox3
             // 
@@ -438,6 +440,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.verificationCodeTextBox3.Size = new System.Drawing.Size(38, 38);
             this.verificationCodeTextBox3.TabIndex = 2;
             this.verificationCodeTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.verificationCodeTextBox3.TextChanged += new System.EventHandler(this.VerificationCodeTextBox3_TextChanged);
             // 
             // verificationCodeTextBox4
             // 
@@ -465,6 +468,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.verificationCodeTextBox4.Size = new System.Drawing.Size(38, 38);
             this.verificationCodeTextBox4.TabIndex = 3;
             this.verificationCodeTextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.verificationCodeTextBox4.TextChanged += new System.EventHandler(this.VerificationCodeTextBox4_TextChanged);
             // 
             // btnVerify
             // 
@@ -481,6 +485,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnVerify.Size = new System.Drawing.Size(203, 53);
             this.btnVerify.TabIndex = 14;
             this.btnVerify.Text = "Verify";
+            this.btnVerify.Click += new System.EventHandler(this.BtnVerify_Click);
             // 
             // lblEnterVerificationCode
             // 
@@ -518,6 +523,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.verificationCodeTextBox1.Size = new System.Drawing.Size(38, 38);
             this.verificationCodeTextBox1.TabIndex = 0;
             this.verificationCodeTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.verificationCodeTextBox1.TextChanged += new System.EventHandler(this.VerificationCodeTextBox1_TextChanged);
             // 
             // ChangePassword
             // 

@@ -40,7 +40,7 @@ namespace webTRON_Management_Software.Views.Admin
         {
             //Input Validation
 
-            if (string.IsNullOrEmpty(roleComboBox.Text) || string.IsNullOrEmpty(firstNameTxtBox.Text)|| string.IsNullOrEmpty(lastNameTextBox.Text) || (string.IsNullOrEmpty(emailTextBox.Text)) || string.IsNullOrEmpty(addressTextBox.Text)|| string.IsNullOrEmpty(dateOfBirthPicker.Value.ToString()) || string.IsNullOrEmpty(contactNumberTextBox.Text))
+            if (string.IsNullOrEmpty(roleComboBox.Text) || string.IsNullOrEmpty(firstNameTxtBox.Text) || string.IsNullOrEmpty(contactNumberTextBox.Text) || (!isMale.Checked && !isFemale.Checked && !isOthers.Checked))
             {
                 MessageBox.Show("Fill all the fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -57,13 +57,11 @@ namespace webTRON_Management_Software.Views.Admin
                 
                 //UserID
                 if(roleComboBox.Text=="Doctor")
-                     obj.UserID = Generator.generateDoctorId();
-                else if (roleComboBox.Text == "Management")
-                    obj.UserID = Generator.generateManagementId();
+                     obj.UserID = Generator.GenerateDoctorId();
                 else if (roleComboBox.Text == "Admin")
-                    obj.UserID = Generator.generateAdminId();
+                    obj.UserID = Generator.GenerateAdminId();
                 else if (roleComboBox.Text == "Accountant")
-                    obj.UserID = Generator.generateAccountantId();
+                    obj.UserID = Generator.GenerateAccountantId();
                 
                 //Fetch Sex
                 if (isMale.Checked)
@@ -134,7 +132,7 @@ namespace webTRON_Management_Software.Views.Admin
         {
            //If account is created sucesfully then store corresponding user's userID and password in (users) table
             newUser.userID = obj.UserID;
-            newUser.password = Generator.generatePassword();
+            newUser.password = Generator.GeneratePassword();
             bool isSucess=newUser.Insert(newUser);
             return isSucess;
             

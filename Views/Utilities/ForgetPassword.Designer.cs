@@ -80,7 +80,7 @@
             this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnMinimize.TabIndex = 1;
             this.btnMinimize.TabStop = false;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            this.btnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
             // 
             // btnClose
             // 
@@ -95,7 +95,7 @@
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnClose.TabIndex = 0;
             this.btnClose.TabStop = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // lblYouCanReset
             // 
@@ -182,7 +182,7 @@
             this.btnSendVerificationCode.Size = new System.Drawing.Size(258, 53);
             this.btnSendVerificationCode.TabIndex = 8;
             this.btnSendVerificationCode.Text = "Send Verification Code";
-            this.btnSendVerificationCode.Click += new System.EventHandler(this.btnSendVerificationCode_Click);
+            this.btnSendVerificationCode.Click += new System.EventHandler(this.BtnSendVerificationCode_Click);
             // 
             // guna2PictureBox5
             // 
@@ -330,7 +330,7 @@
             this.btnReset.Size = new System.Drawing.Size(175, 53);
             this.btnReset.TabIndex = 15;
             this.btnReset.Text = "Reset";
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            this.btnReset.Click += new System.EventHandler(this.BtnReset_Click);
             // 
             // verificationCodeTextBox2
             // 
@@ -360,7 +360,7 @@
             this.verificationCodeTextBox2.Size = new System.Drawing.Size(38, 38);
             this.verificationCodeTextBox2.TabIndex = 1;
             this.verificationCodeTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.verificationCodeTextBox2.TextChanged += new System.EventHandler(this.verificationCodeTextBox2_TextChanged);
+            this.verificationCodeTextBox2.TextChanged += new System.EventHandler(this.VerificationCodeTextBox2_TextChanged);
             // 
             // verificationCodeTextBox3
             // 
@@ -390,7 +390,7 @@
             this.verificationCodeTextBox3.Size = new System.Drawing.Size(38, 38);
             this.verificationCodeTextBox3.TabIndex = 2;
             this.verificationCodeTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.verificationCodeTextBox3.TextChanged += new System.EventHandler(this.verificationCodeTextBox3_TextChanged);
+            this.verificationCodeTextBox3.TextChanged += new System.EventHandler(this.VerificationCodeTextBox3_TextChanged);
             // 
             // verificationCodeTextBox4
             // 
@@ -420,7 +420,7 @@
             this.verificationCodeTextBox4.Size = new System.Drawing.Size(38, 38);
             this.verificationCodeTextBox4.TabIndex = 3;
             this.verificationCodeTextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.verificationCodeTextBox4.TextChanged += new System.EventHandler(this.verificationCodeTextBox4_TextChanged);
+            this.verificationCodeTextBox4.TextChanged += new System.EventHandler(this.VerificationCodeTextBox4_TextChanged);
             // 
             // btnVerify
             // 
@@ -438,7 +438,7 @@
             this.btnVerify.Size = new System.Drawing.Size(175, 53);
             this.btnVerify.TabIndex = 14;
             this.btnVerify.Text = "Verify";
-            this.btnVerify.Click += new System.EventHandler(this.btnVerify_Click);
+            this.btnVerify.Click += new System.EventHandler(this.BtnVerify_Click);
             // 
             // lblEnterVerificationCode
             // 
@@ -480,7 +480,7 @@
             this.verificationCodeTextBox1.Size = new System.Drawing.Size(38, 38);
             this.verificationCodeTextBox1.TabIndex = 0;
             this.verificationCodeTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.verificationCodeTextBox1.TextChanged += new System.EventHandler(this.verificationCodeTextBox1_TextChanged);
+            this.verificationCodeTextBox1.TextChanged += new System.EventHandler(this.VerificationCodeTextBox1_TextChanged);
             // 
             // verificationPanelTransition
             // 

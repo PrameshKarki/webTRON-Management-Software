@@ -70,6 +70,48 @@ namespace webTRON_Management_Software.Models
             return isSucess;
            
         }
+        public static bool Update(Employee obj)
+        {
+            //Declaring a default bool variable and initializing false
+            bool isSucess = false;
+            //MySQL Connection
+            MySqlConnection conn = new MySqlConnection(connectionString);
+
+            //String SqlQuery
+            string SQLQuery = "UPDATE employeeInfo SET firstName=@firstName,lastName=@lastName,email=@email,address=@address,contactNumber=@contactNumber,dateOfBirth=@dateOfBirth,sex=@sex WHERE userID= BINARY @userID";
+            try
+            {
+                //MySql Command
+                MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
+                cmd.Parameters.AddWithValue("@userID", obj.UserID);
+                cmd.Parameters.AddWithValue("@firstName", obj.FirstName);
+                cmd.Parameters.AddWithValue("@lastName", obj.LastName);
+                cmd.Parameters.AddWithValue("@email", obj.Email);
+                cmd.Parameters.AddWithValue("@address", obj.Address);
+                cmd.Parameters.AddWithValue("@contactNumber", obj.ContactNumber);
+                cmd.Parameters.AddWithValue("@dateOfBirth", obj.DateOfBirth);
+                cmd.Parameters.AddWithValue("@sex", obj.Sex);
+                //Connection Open
+                conn.Open();
+                //Execute Query
+                //Here ExecuteNonQuery() returns the number of rows affected
+                int row = cmd.ExecuteNonQuery();
+                isSucess = row > 0 ? true : false;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            finally
+            {
+                //Close Connection
+                conn.Close();
+            }
+            return isSucess;
+
+        }
         //Method to retreive datas from database
         public static DataTable Fetch()
         {
@@ -384,7 +426,7 @@ namespace webTRON_Management_Software.Models
                     obj.DateOfBirth = reader.GetValue(6).ToString();
                     obj.Sex = reader.GetValue(7).ToString();
                     obj.Role = reader.GetValue(8).ToString();
-                    obj.Role = reader.GetValue(9).ToString();
+                    obj.Status = reader.GetValue(9).ToString();
 
                 }
 

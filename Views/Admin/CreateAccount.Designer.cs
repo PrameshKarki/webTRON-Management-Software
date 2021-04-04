@@ -43,7 +43,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.isFemale = new Guna.UI2.WinForms.Guna2RadioButton();
             this.isOthers = new Guna.UI2.WinForms.Guna2RadioButton();
             this.contactNumberTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblContactNumber = new System.Windows.Forms.Label();
             this.addressTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblRole = new System.Windows.Forms.Label();
@@ -299,15 +299,15 @@ namespace webTRON_Management_Software.Views.Admin
             this.contactNumberTextBox.Size = new System.Drawing.Size(239, 32);
             this.contactNumberTextBox.TabIndex = 9;
             // 
-            // label5
+            // lblContactNumber
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.label5.Location = new System.Drawing.Point(275, 401);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(159, 24);
-            this.label5.TabIndex = 29;
-            this.label5.Text = "Contact Number*:";
+            this.lblContactNumber.AutoSize = true;
+            this.lblContactNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.lblContactNumber.Location = new System.Drawing.Point(275, 401);
+            this.lblContactNumber.Name = "lblContactNumber";
+            this.lblContactNumber.Size = new System.Drawing.Size(159, 24);
+            this.lblContactNumber.TabIndex = 29;
+            this.lblContactNumber.Text = "Contact Number*:";
             // 
             // addressTextBox
             // 
@@ -371,8 +371,6 @@ namespace webTRON_Management_Software.Views.Admin
             "Admin",
             "Doctor",
             "Accountant",
-            "Management",
-            "Security Guard",
             "Others"});
             this.roleComboBox.ItemsAppearance.Parent = this.roleComboBox;
             this.roleComboBox.Location = new System.Drawing.Point(447, 103);
@@ -611,7 +609,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.Controls.Add(this.addressTextBox);
             this.Controls.Add(this.lblAddress);
             this.Controls.Add(this.contactNumberTextBox);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblContactNumber);
             this.Controls.Add(this.isOthers);
             this.Controls.Add(this.isFemale);
             this.Controls.Add(this.isMale);
@@ -658,7 +656,7 @@ namespace webTRON_Management_Software.Views.Admin
         private Guna.UI2.WinForms.Guna2RadioButton isFemale;
         private Guna.UI2.WinForms.Guna2RadioButton isOthers;
         private Guna.UI2.WinForms.Guna2TextBox contactNumberTextBox;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblContactNumber;
         private Guna.UI2.WinForms.Guna2TextBox addressTextBox;
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Label lblRole;

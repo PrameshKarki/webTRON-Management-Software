@@ -26,18 +26,18 @@ namespace webTRON_Management_Software.Views.Utilities
       
 
         //Click event on close button
-        private void btnClose_Click(object sender, EventArgs e)
+        private void BtnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
         //Click event on minimize button
-        private void btnMinimize_Click(object sender, EventArgs e)
+        private void BtnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
         //Click event on send verification code
-        private void btnSendVerificationCode_Click(object sender, EventArgs e)
+        private void BtnSendVerificationCode_Click(object sender, EventArgs e)
         {
             //Check if textbox is empty or null
             if(string.IsNullOrEmpty(recoveryEmailTextBox.Text))
@@ -51,7 +51,7 @@ namespace webTRON_Management_Software.Views.Utilities
                 if (Employee.IsEmailExist(enteredEmail))
                 {
                     //Send Verification code and store this in database
-                    int generatedVerificationCode = Generator.generateVerificationCode();
+                    int generatedVerificationCode = Generator.GenerateVerificationCode();
                     bool isMailSendSucessfully = Email.SendVerificationCode(enteredEmail, generatedVerificationCode);
                     if (isMailSendSucessfully)
                     {
@@ -84,7 +84,7 @@ namespace webTRON_Management_Software.Views.Utilities
 
         }
         //Click event on verify button click
-        private void btnVerify_Click(object sender, EventArgs e)
+        private void BtnVerify_Click(object sender, EventArgs e)
         {
             //Check all the text fields are filled or not
             if(string.IsNullOrEmpty(verificationCodeTextBox1.Text) || string.IsNullOrEmpty(verificationCodeTextBox2.Text)|| string.IsNullOrEmpty(verificationCodeTextBox3.Text) || string.IsNullOrEmpty(verificationCodeTextBox4.Text))
@@ -110,7 +110,7 @@ namespace webTRON_Management_Software.Views.Utilities
 
                   }
         //TextChange event on different verificationCodeTextBox 
-        private void verificationCodeTextBox1_TextChanged(object sender, EventArgs e)
+        private void VerificationCodeTextBox1_TextChanged(object sender, EventArgs e)
         {
             if (verificationCodeTextBox1.Text.Length == 1)
             {
@@ -119,7 +119,7 @@ namespace webTRON_Management_Software.Views.Utilities
 
         }
 
-        private void verificationCodeTextBox2_TextChanged(object sender, EventArgs e)
+        private void VerificationCodeTextBox2_TextChanged(object sender, EventArgs e)
         {
             if (verificationCodeTextBox2.Text.Length == 1)
             {
@@ -127,7 +127,7 @@ namespace webTRON_Management_Software.Views.Utilities
             }
         }
 
-        private void verificationCodeTextBox3_TextChanged(object sender, EventArgs e)
+        private void VerificationCodeTextBox3_TextChanged(object sender, EventArgs e)
         {
             if (verificationCodeTextBox3.Text.Length == 1)
             {
@@ -136,7 +136,7 @@ namespace webTRON_Management_Software.Views.Utilities
 
         }
 
-        private void verificationCodeTextBox4_TextChanged(object sender, EventArgs e)
+        private void VerificationCodeTextBox4_TextChanged(object sender, EventArgs e)
         {
             if (verificationCodeTextBox4.Text.Length == 1)
             {
@@ -144,7 +144,7 @@ namespace webTRON_Management_Software.Views.Utilities
             }
         }
         //Click event on password reset button
-        private void btnReset_Click(object sender, EventArgs e)
+        private void BtnReset_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(newPasswordTextBox.Text) || string.IsNullOrEmpty(confirmPasswordTextBox.Text))
             {

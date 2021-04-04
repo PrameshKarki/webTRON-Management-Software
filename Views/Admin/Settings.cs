@@ -97,5 +97,15 @@ namespace webTRON_Management_Software.Views.Admin
             this.Hide();
 
         }
+
+        //Click event on change info button
+        private void BtnChangeInfo_Click(object sender, EventArgs e)
+        {
+            //Instantiate change info form
+            var changeInfo = new ChangeInfo(employee);
+            changeInfo.Show();
+            this.Hide();
+
+        }
     }
 }

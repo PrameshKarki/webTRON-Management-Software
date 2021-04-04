@@ -278,6 +278,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnChangeInfo.Size = new System.Drawing.Size(192, 45);
             this.btnChangeInfo.TabIndex = 42;
             this.btnChangeInfo.Text = "Change Info";
+            this.btnChangeInfo.Click += new System.EventHandler(this.BtnChangeInfo_Click);
             // 
             // userPicture
             // 

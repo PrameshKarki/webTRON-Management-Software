@@ -47,6 +47,19 @@ namespace webTRON_Management_Software.Utils
             isSucess = SendEmail();
             return isSucess;
         }
+        //Method to send verification code->Overloaded method
+        public static bool SendVerificationCode(double verificationCode,string userEmail)
+        {
+            //Set default status false
+            bool isSucess = false;
+            emailToAddress = userEmail;
+            subject = "Change Passowrd";
+            body = $"Your verification code:{verificationCode}";
+            //Send Email
+            isSucess = SendEmail();
+            return isSucess;
+        }
+
         //Method to send email
         private static bool SendEmail()
         {
