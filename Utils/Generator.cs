@@ -25,7 +25,7 @@ namespace webTRON_Management_Software.Utils
        static char[][] possibleCombinations = new char[4][] { upperCaseLetters, lowerCaseLetters, possibleNumbers, possibleSpecialCharacters };
 
         //Method that generates random Number in between range
-        private static int getRandomNumber(int min, int max)
+        private static int GetRandomNumber(int min, int max)
         {
             Random r = new Random();    
             int randomNumber = r.Next(min, max);
@@ -33,16 +33,16 @@ namespace webTRON_Management_Software.Utils
         }
            
         //Method that generates random password and returns it
-        public static string generatePassword()
+        public static string GeneratePassword()
         {
             int index;
             string password = "";
             //Here 6 is default password length
             for (index = 0; index < 6; index++)
             {
-                int randomNumber = getRandomNumber(0, possibleCombinations.Length);
+                int randomNumber = GetRandomNumber(0, possibleCombinations.Length);
                 char[] pickedArray = possibleCombinations[randomNumber];
-                randomNumber = getRandomNumber(0, pickedArray.Length);
+                randomNumber = GetRandomNumber(0, pickedArray.Length);
                 string pickedLetters = pickedArray[randomNumber].ToString();
                 password += pickedLetters;
 
@@ -50,7 +50,7 @@ namespace webTRON_Management_Software.Utils
             return password;
         }
         //EmployeeID generator
-        public static string generateEmployeeId()
+        public static string GenerateEmployeeId()
         {
             //SQLConnection
             MySqlConnection conn = new MySqlConnection(connectionString);
@@ -98,7 +98,7 @@ namespace webTRON_Management_Software.Utils
         }
 
         //DoctorId generator
-        public static string generateDoctorId()
+        public static string GenerateDoctorId()
         {
             //SQLConnection
             MySqlConnection conn = new MySqlConnection(connectionString);
@@ -194,58 +194,9 @@ namespace webTRON_Management_Software.Utils
 
         }
 
-        //Generate Management ID
-        public static string generateManagementId()
-        {
-            //SQLConnection
-            MySqlConnection conn = new MySqlConnection(connectionString);
-
-            int initiator = 545454;
-            int counter, countOfManagementEmployee= 0;
-
-            string userID = "";
-
-            try
-            {
-                //SQL Query to fetch number of total user
-                string SQLQuery = "SELECT COUNT(userId) FROM employeeInfo WHERE Role='Management'";
-                //SQL Command
-                MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
-                //Open Connection
-                conn.Open();
-                object returnValue = cmd.ExecuteScalar();
-                if (returnValue != null)
-                {
-                    countOfManagementEmployee = Convert.ToInt32(returnValue);
-                }
-                else
-                {
-                    MessageBox.Show("Error Occured! Please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                //Close Connection
-                conn.Close();
-            }
-            counter = initiator + countOfManagementEmployee;
-            DateTime d = DateTime.Now;
-            int date = (d.Year) % 100;
-            userID = "MNT-" + date + "-" + counter;
-
-
-            return userID;
-
-        }
-
+      
         //Generate AdiminId
-        public static string generateAdminId()
+        public static string GenerateAdminId()
         {
             //SQLConnection
             MySqlConnection conn = new MySqlConnection(connectionString);
@@ -263,6 +214,7 @@ namespace webTRON_Management_Software.Utils
                 MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
                 //Open Connection
                 conn.Open();
+                //Execute query
                 object returnValue = cmd.ExecuteScalar();
                 if (returnValue != null)
                 {
@@ -296,7 +248,7 @@ namespace webTRON_Management_Software.Utils
 
         //generate Accountant ID
 
-        public static string generateAccountantId()
+        public static string GenerateAccountantId()
         {
             //SQLConnection
             MySqlConnection conn = new MySqlConnection(connectionString);
@@ -346,7 +298,7 @@ namespace webTRON_Management_Software.Utils
         }
 
         //Generate Security ID
-        public static string generateIdForSecurity()
+        public static string GenerateIdForSecurityGuard()
         {
             //SQLConnection
             MySqlConnection conn = new MySqlConnection(connectionString);
@@ -396,7 +348,7 @@ namespace webTRON_Management_Software.Utils
         }
 
         //Method to generate verification code
-        public static int generateVerificationCode()
+        public static int GenerateVerificationCode()
         {
             Random r = new Random();
             int number = r.Next(1000, 9999);

@@ -36,7 +36,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.offlineUser = new System.Windows.Forms.Label();
             this.lblOffline = new System.Windows.Forms.Label();
             this.sidebarPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnSIgnOut = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSignOut = new Guna.UI2.WinForms.Guna2Button();
             this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
             this.btnUsers = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
@@ -45,9 +45,9 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnExit = new Guna.UI2.WinForms.Guna2PictureBox();
             this.activePanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.actveForm = new System.Windows.Forms.Label();
             this.activeUserPictureSidebar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.activeUserSidebar = new System.Windows.Forms.Label();
+            this.activeUserName = new System.Windows.Forms.Label();
             this.arrowRed = new Guna.UI2.WinForms.Guna2PictureBox();
             this.arrowGreen = new Guna.UI2.WinForms.Guna2PictureBox();
             this.onlineStatusPicture = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -109,7 +109,7 @@ namespace webTRON_Management_Software.Views.Admin
             // 
             // sidebarPanel
             // 
-            this.sidebarPanel.Controls.Add(this.btnSIgnOut);
+            this.sidebarPanel.Controls.Add(this.btnSignOut);
             this.sidebarPanel.Controls.Add(this.btnSettings);
             this.sidebarPanel.Controls.Add(this.btnUsers);
             this.sidebarPanel.Controls.Add(this.btnDashboard);
@@ -120,25 +120,26 @@ namespace webTRON_Management_Software.Views.Admin
             this.sidebarPanel.Size = new System.Drawing.Size(68, 532);
             this.sidebarPanel.TabIndex = 19;
             // 
-            // btnSIgnOut
+            // btnSignOut
             // 
-            this.btnSIgnOut.Animated = true;
-            this.btnSIgnOut.CheckedState.Parent = this.btnSIgnOut;
-            this.btnSIgnOut.CustomImages.Parent = this.btnSIgnOut;
-            this.btnSIgnOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            this.btnSIgnOut.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSIgnOut.ForeColor = System.Drawing.Color.White;
-            this.btnSIgnOut.HoverState.Parent = this.btnSIgnOut;
-            this.btnSIgnOut.Image = global::webTRON_Management_Software.Properties.Resources.exit_icon;
-            this.btnSIgnOut.ImageOffset = new System.Drawing.Point(10, -10);
-            this.btnSIgnOut.Location = new System.Drawing.Point(0, 468);
-            this.btnSIgnOut.Margin = new System.Windows.Forms.Padding(0);
-            this.btnSIgnOut.Name = "btnSIgnOut";
-            this.btnSIgnOut.ShadowDecoration.Parent = this.btnSIgnOut;
-            this.btnSIgnOut.Size = new System.Drawing.Size(68, 48);
-            this.btnSIgnOut.TabIndex = 24;
-            this.btnSIgnOut.Text = "Sign Out";
-            this.btnSIgnOut.TextOffset = new System.Drawing.Point(-8, 10);
+            this.btnSignOut.Animated = true;
+            this.btnSignOut.CheckedState.Parent = this.btnSignOut;
+            this.btnSignOut.CustomImages.Parent = this.btnSignOut;
+            this.btnSignOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            this.btnSignOut.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignOut.ForeColor = System.Drawing.Color.White;
+            this.btnSignOut.HoverState.Parent = this.btnSignOut;
+            this.btnSignOut.Image = global::webTRON_Management_Software.Properties.Resources.exit_icon;
+            this.btnSignOut.ImageOffset = new System.Drawing.Point(10, -10);
+            this.btnSignOut.Location = new System.Drawing.Point(0, 468);
+            this.btnSignOut.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.ShadowDecoration.Parent = this.btnSignOut;
+            this.btnSignOut.Size = new System.Drawing.Size(68, 48);
+            this.btnSignOut.TabIndex = 24;
+            this.btnSignOut.Text = "Sign Out";
+            this.btnSignOut.TextOffset = new System.Drawing.Point(-8, 10);
+            this.btnSignOut.Click += new System.EventHandler(this.SignOut);
             // 
             // btnSettings
             // 
@@ -159,7 +160,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnSettings.TabIndex = 23;
             this.btnSettings.Text = "Settings";
             this.btnSettings.TextOffset = new System.Drawing.Point(-8, 10);
-            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            this.btnSettings.Click += new System.EventHandler(this.BtnSettings_Click);
             // 
             // btnUsers
             // 
@@ -180,7 +181,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnUsers.TabIndex = 22;
             this.btnUsers.Text = "Users";
             this.btnUsers.TextOffset = new System.Drawing.Point(-8, 10);
-            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
+            this.btnUsers.Click += new System.EventHandler(this.BtnUsers_Click);
             // 
             // btnDashboard
             // 
@@ -221,7 +222,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnMinimize.TabIndex = 22;
             this.btnMinimize.TabStop = false;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            this.btnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
             // 
             // btnExit
             // 
@@ -234,32 +235,32 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnExit.TabIndex = 21;
             this.btnExit.TabStop = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnExit.Click += new System.EventHandler(this.SignOut);
             // 
             // activePanel
             // 
             this.activePanel.BackgroundImage = global::webTRON_Management_Software.Properties.Resources.rectangle_curved_large;
             this.activePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.activePanel.Controls.Add(this.label1);
+            this.activePanel.Controls.Add(this.actveForm);
             this.activePanel.Controls.Add(this.activeUserPictureSidebar);
-            this.activePanel.Controls.Add(this.activeUserSidebar);
-            this.activePanel.Location = new System.Drawing.Point(63, 0);
+            this.activePanel.Controls.Add(this.activeUserName);
+            this.activePanel.Location = new System.Drawing.Point(63, -3);
             this.activePanel.Name = "activePanel";
             this.activePanel.ShadowDecoration.Parent = this.activePanel;
             this.activePanel.Size = new System.Drawing.Size(165, 80);
             this.activePanel.TabIndex = 20;
             // 
-            // label1
+            // actveForm
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(64, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 20);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Dashboard";
+            this.actveForm.AutoSize = true;
+            this.actveForm.BackColor = System.Drawing.Color.Transparent;
+            this.actveForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.actveForm.ForeColor = System.Drawing.Color.White;
+            this.actveForm.Location = new System.Drawing.Point(64, 40);
+            this.actveForm.Name = "actveForm";
+            this.actveForm.Size = new System.Drawing.Size(88, 20);
+            this.actveForm.TabIndex = 21;
+            this.actveForm.Text = "Dashboard";
             // 
             // activeUserPictureSidebar
             // 
@@ -274,17 +275,17 @@ namespace webTRON_Management_Software.Views.Admin
             this.activeUserPictureSidebar.TabIndex = 0;
             this.activeUserPictureSidebar.TabStop = false;
             // 
-            // activeUserSidebar
+            // activeUserName
             // 
-            this.activeUserSidebar.AutoSize = true;
-            this.activeUserSidebar.BackColor = System.Drawing.Color.Transparent;
-            this.activeUserSidebar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.activeUserSidebar.ForeColor = System.Drawing.Color.White;
-            this.activeUserSidebar.Location = new System.Drawing.Point(64, 9);
-            this.activeUserSidebar.Name = "activeUserSidebar";
-            this.activeUserSidebar.Size = new System.Drawing.Size(52, 24);
-            this.activeUserSidebar.TabIndex = 1;
-            this.activeUserSidebar.Text = "John";
+            this.activeUserName.AutoSize = true;
+            this.activeUserName.BackColor = System.Drawing.Color.Transparent;
+            this.activeUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.activeUserName.ForeColor = System.Drawing.Color.White;
+            this.activeUserName.Location = new System.Drawing.Point(64, 9);
+            this.activeUserName.Name = "activeUserName";
+            this.activeUserName.Size = new System.Drawing.Size(52, 24);
+            this.activeUserName.TabIndex = 1;
+            this.activeUserName.Text = "John";
             // 
             // arrowRed
             // 
@@ -377,16 +378,16 @@ namespace webTRON_Management_Software.Views.Admin
         private System.Windows.Forms.Label onlineUser;
         private System.Windows.Forms.Label offlineUser;
         private System.Windows.Forms.Label lblOffline;
-        private System.Windows.Forms.Label activeUserSidebar;
+        private System.Windows.Forms.Label activeUserName;
         private Guna.UI2.WinForms.Guna2CirclePictureBox activeUserPictureSidebar;
         private Guna.UI2.WinForms.Guna2PictureBox arrowGreen;
         private Guna.UI2.WinForms.Guna2PictureBox arrowRed;
         private Guna.UI2.WinForms.Guna2Panel sidebarPanel;
         private Guna.UI2.WinForms.Guna2Panel activePanel;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label actveForm;
         private Guna.UI2.WinForms.Guna2Button btnDashboard;
         private Guna.UI2.WinForms.Guna2Button btnUsers;
-        private Guna.UI2.WinForms.Guna2Button btnSIgnOut;
+        private Guna.UI2.WinForms.Guna2Button btnSignOut;
         private Guna.UI2.WinForms.Guna2Button btnSettings;
         private Guna.UI2.WinForms.Guna2DragControl DragableAdminDashboard;
         private Guna.UI2.WinForms.Guna2PictureBox btnMinimize;

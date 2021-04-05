@@ -111,7 +111,7 @@
             this.lblForgetPassword.Size = new System.Drawing.Size(162, 24);
             this.lblForgetPassword.TabIndex = 13;
             this.lblForgetPassword.Text = "Forget Password?";
-            this.lblForgetPassword.Click += new System.EventHandler(this.lblForgetPassword_Click);
+            this.lblForgetPassword.Click += new System.EventHandler(this.LblForgetPassword_Click);
             // 
             // userIDTextBox
             // 
@@ -126,6 +126,7 @@
             this.userIDTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.userIDTextBox.FocusedState.Parent = this.userIDTextBox;
             this.userIDTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.userIDTextBox.ForeColor = System.Drawing.Color.Black;
             this.userIDTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.userIDTextBox.HoverState.Parent = this.userIDTextBox;
             this.userIDTextBox.IconLeft = global::webTRON_Management_Software.Properties.Resources.smallUserIcon;
@@ -152,6 +153,7 @@
             this.passwordTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.passwordTextBox.FocusedState.Parent = this.passwordTextBox;
             this.passwordTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.passwordTextBox.ForeColor = System.Drawing.Color.Black;
             this.passwordTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.passwordTextBox.HoverState.Parent = this.passwordTextBox;
             this.passwordTextBox.IconLeft = global::webTRON_Management_Software.Properties.Resources.smallPasswordIcon;
@@ -183,7 +185,7 @@
             this.btnLogIn.Size = new System.Drawing.Size(300, 50);
             this.btnLogIn.TabIndex = 2;
             this.btnLogIn.Text = "Log In";
-            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
+            this.btnLogIn.Click += new System.EventHandler(this.BtnLogIn_Click);
             // 
             // userIconPicture
             // 

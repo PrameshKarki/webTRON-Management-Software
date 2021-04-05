@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,12 +9,12 @@ using MySql.Data.MySqlClient;
 
 namespace webTRON_Management_Software.Models
 {
-    class Employee
+   public class Employee
     {
         //Connection String
         private static string connectionString="server=localhost;user id=root;pwd=password;database=webtronmanagement";
         //Properties
-        public string userID { get; set; }
+        public string UserID { get; set; }
         public  string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
@@ -26,7 +27,7 @@ namespace webTRON_Management_Software.Models
         
         //Methods
         //Method to insert Employee data in database 
-        public bool Insert(Employee obj)
+        public static bool Insert(Employee obj)
         {
             //Declaring a default bool variable and initializing false
             bool isSucess = false;
@@ -38,7 +39,7 @@ namespace webTRON_Management_Software.Models
                 string SQLQuery = "INSERT INTO employeeInfo(userID,firstName,lastName,email,address,contactNumber,dateOfBirth,sex,role,status) VALUES(@userID,@firstName,@lastName,@email,@address,@contactNumber,@dateOfBirth,@sex,@role,@status)";
                 //MySql Command
                 MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
-                cmd.Parameters.AddWithValue("@userID", obj.userID);
+                cmd.Parameters.AddWithValue("@userID", obj.UserID);
                 cmd.Parameters.AddWithValue("@firstName", obj.FirstName);
                 cmd.Parameters.AddWithValue("@lastName", obj.LastName);
                 cmd.Parameters.AddWithValue("@email", obj.Email);
@@ -56,6 +57,7 @@ namespace webTRON_Management_Software.Models
                 isSucess = row > 0 ? true : false;
 
             }
+            
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -69,9 +71,111 @@ namespace webTRON_Management_Software.Models
             return isSucess;
            
         }
+        public static bool Update(Employee obj)
+        {
+            //Declaring a default bool variable and initializing false
+            bool isSucess = false;
+            //MySQL Connection
+            MySqlConnection conn = new MySqlConnection(connectionString);
+
+            //String SqlQuery
+            string SQLQuery = "UPDATE employeeInfo SET firstName=@firstName,lastName=@lastName,email=@email,address=@address,contactNumber=@contactNumber,dateOfBirth=@dateOfBirth,sex=@sex WHERE userID= BINARY @userID";
+            try
+            {
+                //MySql Command
+                MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
+                cmd.Parameters.AddWithValue("@userID", obj.UserID);
+                cmd.Parameters.AddWithValue("@firstName", obj.FirstName);
+                cmd.Parameters.AddWithValue("@lastName", obj.LastName);
+                cmd.Parameters.AddWithValue("@email", obj.Email);
+                cmd.Parameters.AddWithValue("@address", obj.Address);
+                cmd.Parameters.AddWithValue("@contactNumber", obj.ContactNumber);
+                cmd.Parameters.AddWithValue("@dateOfBirth", obj.DateOfBirth);
+                cmd.Parameters.AddWithValue("@sex", obj.Sex);
+                //Connection Open
+                conn.Open();
+                //Execute Query
+                //Here ExecuteNonQuery() returns the number of rows affected
+                int row = cmd.ExecuteNonQuery();
+                isSucess = row > 0 ? true : false;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            finally
+            {
+                //Close Connection
+                conn.Close();
+            }
+            return isSucess;
+
+        }
+        //Method to retreive datas from database
+        public static DataTable Fetch()
+        {
+            //Instantiating Data Table
+            DataTable dt = new DataTable();
+            //MySqlConnection
+            MySqlConnection conn = new MySqlConnection(connectionString);
+            //SQL Query
+            string SQLQuery = "SELECT userID AS 'User ID',firstName AS 'First Name',lastName AS 'Last Name',email AS 'Email',address AS 'Address',contactNumber AS 'Contact Number',dateOfBirth AS 'Date Of Birth',sex AS 'Sex',role AS 'Role',status AS 'Status' FROM employeeInfo";
+            try
+            {
+                //MySQLCommand
+                MySqlCommand cmd = new MySqlCommand(SQLQuery,conn);
+                //Open Connection
+                conn.Open();
+                //Load DataTable
+                dt.Load(cmd.ExecuteReader());
+             }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                //Close Connection
+                conn.Close();
+            }
+            return dt;
+
+        }
+        //Method to search data from database
+        public static DataTable Search(string searchString)
+        {
+            //Instantiating Data Table
+            DataTable dt = new DataTable();
+            //MySql Connection
+            MySqlConnection conn = new MySqlConnection(connectionString);
+            //SQL Query
+            string SQLQuery= $"SELECT userID AS 'User ID',firstName AS 'First Name',lastName AS 'Last Name',email AS 'Email',address AS 'Address',contactNumber AS 'Contact Number',dateOfBirth AS 'Date Of Birth',sex AS 'Sex',role AS 'Role',status AS 'Status' FROM employeeInfo" +
+                             $" WHERE userID LIKE '%{searchString}%' OR firstName LIKE '%{searchString}%' OR lastName LIKE '%{searchString}%' OR email LIKE '%{searchString}%' OR address LIKE '%{searchString}%' OR contactNumber LIKE '%{searchString}%' OR dateOfBirth LIKE '%{searchString}%' OR" +
+                             $" sex LIKE '%{searchString}%' OR role LIKE '%{searchString}%' OR status LIKE '%{searchString}%'";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
+                //Open Connection
+                conn.Open();
+                //Load DataTable
+                dt.Load(cmd.ExecuteReader());
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                //Close Connection
+                conn.Close();
+            }
+            return dt;
+        }
 
         //Method to check wheather the email is exist in database or not
-        public bool IsEmailExist(string email)
+        public static bool IsEmailExist(string email)
         {
             //Declaring default bool variable and initiazling it false
             bool isExist = false;
@@ -111,7 +215,7 @@ namespace webTRON_Management_Software.Models
 
         }
         //Method to store verification code in database
-         public bool StoreVerificationCode(string userEmail,double verificationCode)
+         public static bool StoreVerificationCode(string userEmail,double verificationCode)
         {
             //Fetched user ID
             string fetchedUserID = "";
@@ -164,7 +268,7 @@ namespace webTRON_Management_Software.Models
 
         }
         //Method to check valid verification code
-        public bool IsValidVerificationCode(string userEmail,int code)
+        public static bool IsValidVerificationCode(string userEmail,int code)
         {
             //Declare default variable and set it false
             bool isValid = false;
@@ -200,7 +304,7 @@ namespace webTRON_Management_Software.Models
             return isValid;
         }
         //Method to update password from database
-        public bool UpdatePassword(string userEmail,string newPassword)
+        public static bool UpdatePassword(string userEmail,string newPassword)
         {
             //Fetched user ID
             string fetchedUserID = "";
@@ -253,6 +357,123 @@ namespace webTRON_Management_Software.Models
             return true;
 
         }
+        //Method to return total number of online/offline user
+        public static (int,int) GetTotalUserStatus()
+        {
+            //Data Reader Mysql
+            MySqlDataReader reader;
+            //Mysql Connectiion
+            MySqlConnection conn = new MySqlConnection(connectionString);
+            int countOfTotalOfflineUser=0,countOfTotalOnlineUser=0;
+
+            try
+            {
+                //SQL Query
+                string SQLQuery = @"SELECT COUNT(IF(status='online',1,null)) AS countOfOnlineUser ,COUNT(IF(status='offline',1,null)) AS countOfTotalOfflineUser FROM employeeInfo";
+                //MySQL Command
+                MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
+                //Open Connection
+                conn.Open();
+                //Execute Query
+                reader = cmd.ExecuteReader(System.Data.CommandBehavior.SingleRow);//To read single row
+                while (reader.Read())
+                {
+                    countOfTotalOnlineUser = Convert.ToInt32(reader.GetValue(0));
+                    countOfTotalOfflineUser = Convert.ToInt32(reader.GetValue(1));
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                //Close connection
+                conn.Close();
+            }
+            return (countOfTotalOfflineUser, countOfTotalOnlineUser);
+        }
+        //Method that return active employee information
+        public static Employee GetActiveUserDetails(string userID)
+        {
+            //Data Reader
+            MySqlDataReader reader;
+            //Instantiate Employee class object
+            Employee obj = new Employee();
+            //Mysql Connection
+            MySqlConnection conn = new MySqlConnection(connectionString);
+            //SQL Query
+            string SQLQuery = "SELECT * FROM employeeInfo WHERE userID=BINARY @userId";
+            try
+            {
+                //MySqlCommand
+                MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
+                //Pass Parameters
+                cmd.Parameters.AddWithValue("@userId", userID);
+                //Open Connection
+                conn.Open();
+                //Execute Query
+                reader = cmd.ExecuteReader(System.Data.CommandBehavior.SingleRow);
+                //Fetch Data
+                while (reader.Read())
+                {
+                    //Instantiate object attributes
+                    obj.UserID = reader.GetValue(0).ToString();
+                    obj.FirstName = reader.GetValue(1).ToString();
+                    obj.LastName = reader.GetValue(2).ToString();
+                    obj.Email = reader.GetValue(3).ToString();
+                    obj.Address = reader.GetValue(4).ToString();
+                    obj.ContactNumber = reader.GetValue(5).ToString();
+                    obj.DateOfBirth = reader.GetValue(6).ToString();
+                    obj.Sex = reader.GetValue(7).ToString();
+                    obj.Role = reader.GetValue(8).ToString();
+                    obj.Status = reader.GetValue(9).ToString();
+
+                }
+
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                //Close Connection
+                conn.Close();
+            }
+              return obj;
+        }
+        //Method to set status of employee either online or offline
+        public static void SetStatus(string userId,string status)
+        {
+           
+            //MySqlConnection
+            MySqlConnection conn = new MySqlConnection(connectionString);
+            //SqlQuery
+            string SqlQuery = "UPDATE employeeInfo SET status=@status WHERE userId=BINARY @userID";
+            try
+            {
+                //MySqlCommand
+                MySqlCommand cmd = new MySqlCommand(SqlQuery,conn);
+                //Add parameters with value
+                cmd.Parameters.AddWithValue("@userId", userId);
+                cmd.Parameters.AddWithValue("@status", status);
+                //Connection open
+                conn.Open();
+                //Execute Query
+                cmd.ExecuteNonQuery();
+               
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                //Close Connection
+                conn.Close();
+            }
+          
+        }
+
 
     }
 }

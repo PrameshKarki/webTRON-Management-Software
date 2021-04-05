@@ -7,25 +7,70 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using webTRON_Management_Software.Models;
 using webTRON_Management_Software.Views.Admin;
+using webTRON_Management_Software.Views.Landing_Window;
 
 namespace webTRON_Management_Software.Views.Others
 {
     public partial class Dashboard : Form
     {
+        //Instantiate employee class
+        Employee employee = new Employee();
+
         public Dashboard()
         {
+            InitializeComponent();
+        }
+        public Dashboard(Employee emp)
+        {
+            employee = emp;
             InitializeComponent();
         }
 
         private void OtherDashboard_Load(object sender, EventArgs e)
         {
-            CreateAccount obj = new CreateAccount();
+           
         }
 
-        private void label1_Click(object sender, EventArgs e)
+       
+        //Sign Out
+        private void SignOut(object sender, EventArgs e)
         {
+            //WARNING:To check which element has clicked          
+            string elementType = sender.GetType().ToString();
+            var value = MessageBox.Show("Are you sure?", "Sign out", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (value.ToString() == "Yes")
+            {
+                Employee.SetStatus(employee.UserID, "Offline");
+                //It ensures sign out has clicked
+                if (elementType == "Guna.UI2.WinForms.Guna2Button")
+                {
+                    LandingWindow landingWindow = new LandingWindow();
+                    landingWindow.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    Application.Exit();
+                }
 
+
+            }
         }
+        //Click event on minimize button
+        private void BtnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+        //Click event on settings button
+        private void BtnSettings_Click(object sender, EventArgs e)
+        {
+            var settings = new Settings(employee);
+            settings.Show();
+            this.Hide();
+        }
+
+      
     }
 }

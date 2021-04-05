@@ -38,11 +38,6 @@
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
-    <Reference Include="QRCoder, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\QRCoder.1.4.1\lib\net40\QRCoder.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
@@ -55,31 +50,42 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="WindowsBase" />
-    <Reference Include="Zen.Barcode.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b5ae55aa76d2d9de, processorArchitecture=MSIL">
-      <HintPath>packages\Zen.Barcode.Rendering.Framework.3.1.10729.1\lib\Zen.Barcode.Core.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Utils\Printer.cs" />
-    <Compile Include="Utils\QRCodeGenerator.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Accountant\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Accountant\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Accountant\RenewPatient.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Accountant\RenewPatient.Designer.cs">
-      <DependentUpon>RenewPatient.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\Accountant\SearchAndUpdatePatient.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Accountant\SearchAndUpdatePatient.Designer.cs">
       <DependentUpon>SearchAndUpdatePatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\ChangeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\ChangeInfo.Designer.cs">
+      <DependentUpon>ChangeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\Search.Designer.cs">
+      <DependentUpon>Search.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Admin\Settings.cs">
       <SubType>Form</SubType>
@@ -110,6 +116,18 @@
     </Compile>
     <Compile Include="Views\Doctor\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Others\Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Others\Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Utilities\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Utilities\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Utilities\ForgetPassword.cs">
       <SubType>Form</SubType>
@@ -148,18 +166,23 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\Email.cs" />
     <Compile Include="Utils\Generator.cs" />
-    <Compile Include="Zen\Barcode\CodeQrcodeDraw.cs" />
     <EmbeddedResource Include="Views\Accountant\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Accountant\RenewPatient.resx">
-      <DependentUpon>RenewPatient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Accountant\SearchAndUpdatePatient.resx">
       <DependentUpon>SearchAndUpdatePatient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Admin\ChangeInfo.resx">
+      <DependentUpon>ChangeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Admin\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Admin\Search.resx">
+      <DependentUpon>Search.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
@@ -172,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Doctor\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Utilities\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Utilities\ForgetPassword.resx">
       <DependentUpon>ForgetPassword.cs</DependentUpon>
@@ -193,16 +219,10 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -288,13 +308,8 @@
     <None Include="Resources\search_icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\webTRONLogoWithAddress.png" />
+    <None Include="Resources\search_icon_blue.png" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\renew.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rectangularBar.png" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

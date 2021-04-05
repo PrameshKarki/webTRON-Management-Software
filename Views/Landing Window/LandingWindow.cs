@@ -22,34 +22,46 @@ namespace webTRON_Management_Software.Views.Landing_Window
 
         //Instantiating User Class
         User newUser = new User();
+        //Instantiating Employee Class
+        Employee activeUser;
         public LandingWindow()
         {
             InitializeComponent();
         }
 
         //Login Button Click Event
-        private void btnLogIn_Click(object sender, EventArgs e)
+        private void BtnLogIn_Click(object sender, EventArgs e)
         {
-            //Instantiate object properties
-            newUser.userID = userIDTextBox.Text;
-            newUser.password = passwordTextBox.Text;
-
-            //Validating user input
-            if (newUser.userID == "" || newUser.password == "")
+              //Validating user input
+            if (string.IsNullOrEmpty(userIDTextBox.Text) || string.IsNullOrEmpty(passwordTextBox.Text))
             {
                 MessageBox.Show("Fll all the fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             else
             {
+                //Instantiate object properties
+                newUser.userID = userIDTextBox.Text;
+                newUser.password = passwordTextBox.Text;
                 //Check valid user or nont
-                bool isSucess = newUser.CheckUser(newUser);
+                bool isSucess = User.CheckUser(newUser);
                 if (isSucess)
                 {
+                    //Get User Details
+                    activeUser = Employee.GetActiveUserDetails(newUser.userID);
+
+                    //Set Logged in user status Online
+                    Employee.SetStatus(newUser.userID, "Online");
+
                     //check wheather the user login is first time or not into the system
                     bool isFirstTime = newUser.IsFirstTimeLogin(newUser.userID);
                     if (isFirstTime)
                     {
+                        this.Hide();
+                        //Instantiate change password form
+                        Utilities.ChangePassword changePassword = new Utilities.ChangePassword(activeUser);
+                        changePassword.ShowDialog();
+                        //Than store loginInfo in database
                         newUser.StoreLogInInfo(newUser.userID);
 
                     }
@@ -84,11 +96,12 @@ namespace webTRON_Management_Software.Views.Landing_Window
         {
             //Get User Role
             string userRole = newUser.GetUserRole(newUser.userID);
+
             switch (userRole)
             {
                 case "Admin":
                     this.Hide();
-                    var adminDashBoard = new Admin.Dashboard();
+                    var adminDashBoard = new Admin.Dashboard(activeUser);
                     adminDashBoard.Show();
                     break;
                 case "Doctor":
@@ -101,14 +114,9 @@ namespace webTRON_Management_Software.Views.Landing_Window
                     var accountDashboard = new Accountant.Dashboard();
                     accountDashboard.Show();
                     break;
-                case "Management":
+                case "Others":
                     this.Hide();
-                    var managementDashboard = new Management.Dashboard();
-                    managementDashboard.Show();
-                     break;
-                case "Other":
-                    this.Hide();
-                    var otherDashboard = new Others.Dashboard();
+                    var otherDashboard = new Others.Dashboard(activeUser);
                     otherDashboard.Show();
                    break;
 
@@ -116,7 +124,7 @@ namespace webTRON_Management_Software.Views.Landing_Window
 
         }
         //Method to handle click event
-        private void lblForgetPassword_Click(object sender, EventArgs e)
+        private void LblForgetPassword_Click(object sender, EventArgs e)
         {
             //Instantiating forget password form
             this.Hide();

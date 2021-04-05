@@ -8,7 +8,7 @@ using MySql.Data.MySqlClient;
 
 namespace webTRON_Management_Software.Models
 {
-    class User
+    public class User
     {
         //Connection String
         private static string connectionString = "server=localhost;user id=root;pwd=password;database=webtronmanagement";
@@ -52,7 +52,7 @@ namespace webTRON_Management_Software.Models
 
         }
         //Method to check wheather the user is authorized or not
-        public bool CheckUser(User obj)
+        public static bool CheckUser(User obj)
         {
             //Declaring default bool variable and initiazling it false
             bool isExist = false;

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
-            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation4 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation3 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ForgetPassword));
             this.btnMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnClose = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -80,7 +80,7 @@
             this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnMinimize.TabIndex = 1;
             this.btnMinimize.TabStop = false;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            this.btnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
             // 
             // btnClose
             // 
@@ -95,7 +95,7 @@
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnClose.TabIndex = 0;
             this.btnClose.TabStop = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // lblYouCanReset
             // 
@@ -182,7 +182,7 @@
             this.btnSendVerificationCode.Size = new System.Drawing.Size(258, 53);
             this.btnSendVerificationCode.TabIndex = 8;
             this.btnSendVerificationCode.Text = "Send Verification Code";
-            this.btnSendVerificationCode.Click += new System.EventHandler(this.btnSendVerificationCode_Click);
+            this.btnSendVerificationCode.Click += new System.EventHandler(this.BtnSendVerificationCode_Click);
             // 
             // guna2PictureBox5
             // 
@@ -208,7 +208,7 @@
             this.enterVerificationCodePanel.Controls.Add(this.verificationCodeTextBox1);
             this.resetPasswordPanelTransition.SetDecoration(this.enterVerificationCodePanel, Guna.UI2.AnimatorNS.DecorationType.None);
             this.verificationPanelTransition.SetDecoration(this.enterVerificationCodePanel, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.enterVerificationCodePanel.Location = new System.Drawing.Point(421, 45);
+            this.enterVerificationCodePanel.Location = new System.Drawing.Point(426, 45);
             this.enterVerificationCodePanel.Name = "enterVerificationCodePanel";
             this.enterVerificationCodePanel.ShadowDecoration.Parent = this.enterVerificationCodePanel;
             this.enterVerificationCodePanel.Size = new System.Drawing.Size(561, 480);
@@ -224,7 +224,7 @@
             this.resetPasswordPanel.Controls.Add(this.btnReset);
             this.resetPasswordPanelTransition.SetDecoration(this.resetPasswordPanel, Guna.UI2.AnimatorNS.DecorationType.None);
             this.verificationPanelTransition.SetDecoration(this.resetPasswordPanel, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.resetPasswordPanel.Location = new System.Drawing.Point(2, 1);
+            this.resetPasswordPanel.Location = new System.Drawing.Point(3, 3);
             this.resetPasswordPanel.Name = "resetPasswordPanel";
             this.resetPasswordPanel.ShadowDecoration.Parent = this.resetPasswordPanel;
             this.resetPasswordPanel.Size = new System.Drawing.Size(561, 480);
@@ -330,7 +330,7 @@
             this.btnReset.Size = new System.Drawing.Size(175, 53);
             this.btnReset.TabIndex = 15;
             this.btnReset.Text = "Reset";
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            this.btnReset.Click += new System.EventHandler(this.BtnReset_Click);
             // 
             // verificationCodeTextBox2
             // 
@@ -360,7 +360,7 @@
             this.verificationCodeTextBox2.Size = new System.Drawing.Size(38, 38);
             this.verificationCodeTextBox2.TabIndex = 1;
             this.verificationCodeTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.verificationCodeTextBox2.TextChanged += new System.EventHandler(this.verificationCodeTextBox2_TextChanged);
+            this.verificationCodeTextBox2.TextChanged += new System.EventHandler(this.VerificationCodeTextBox2_TextChanged);
             // 
             // verificationCodeTextBox3
             // 
@@ -390,7 +390,7 @@
             this.verificationCodeTextBox3.Size = new System.Drawing.Size(38, 38);
             this.verificationCodeTextBox3.TabIndex = 2;
             this.verificationCodeTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.verificationCodeTextBox3.TextChanged += new System.EventHandler(this.verificationCodeTextBox3_TextChanged);
+            this.verificationCodeTextBox3.TextChanged += new System.EventHandler(this.VerificationCodeTextBox3_TextChanged);
             // 
             // verificationCodeTextBox4
             // 
@@ -420,7 +420,7 @@
             this.verificationCodeTextBox4.Size = new System.Drawing.Size(38, 38);
             this.verificationCodeTextBox4.TabIndex = 3;
             this.verificationCodeTextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.verificationCodeTextBox4.TextChanged += new System.EventHandler(this.verificationCodeTextBox4_TextChanged);
+            this.verificationCodeTextBox4.TextChanged += new System.EventHandler(this.VerificationCodeTextBox4_TextChanged);
             // 
             // btnVerify
             // 
@@ -438,7 +438,7 @@
             this.btnVerify.Size = new System.Drawing.Size(175, 53);
             this.btnVerify.TabIndex = 14;
             this.btnVerify.Text = "Verify";
-            this.btnVerify.Click += new System.EventHandler(this.btnVerify_Click);
+            this.btnVerify.Click += new System.EventHandler(this.BtnVerify_Click);
             // 
             // lblEnterVerificationCode
             // 
@@ -480,28 +480,28 @@
             this.verificationCodeTextBox1.Size = new System.Drawing.Size(38, 38);
             this.verificationCodeTextBox1.TabIndex = 0;
             this.verificationCodeTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.verificationCodeTextBox1.TextChanged += new System.EventHandler(this.verificationCodeTextBox1_TextChanged);
+            this.verificationCodeTextBox1.TextChanged += new System.EventHandler(this.VerificationCodeTextBox1_TextChanged);
             // 
             // verificationPanelTransition
             // 
             this.verificationPanelTransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide;
             this.verificationPanelTransition.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.verificationPanelTransition.DefaultAnimation = animation2;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 0;
+            animation4.Padding = new System.Windows.Forms.Padding(0);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 0F;
+            this.verificationPanelTransition.DefaultAnimation = animation4;
             // 
             // lblForgotPassword
             // 
@@ -535,22 +535,22 @@
             // 
             this.resetPasswordPanelTransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlideAndRotate;
             this.resetPasswordPanelTransition.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(50);
-            animation1.RotateCoeff = 0.3F;
-            animation1.RotateLimit = 0.2F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.resetPasswordPanelTransition.DefaultAnimation = animation1;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(50);
+            animation3.RotateCoeff = 0.3F;
+            animation3.RotateLimit = 0.2F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 0F;
+            this.resetPasswordPanelTransition.DefaultAnimation = animation3;
             // 
             // DragableForgetPasswordForm
             // 

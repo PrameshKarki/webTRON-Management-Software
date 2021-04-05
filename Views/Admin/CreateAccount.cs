@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using webTRON_Management_Software.Models;
 using webTRON_Management_Software.Utils;
+using webTRON_Management_Software.Views.Landing_Window;
 
 namespace webTRON_Management_Software.Views.Admin
 {
@@ -16,6 +17,7 @@ namespace webTRON_Management_Software.Views.Admin
     {
         //Instantiate Employee Class
         Employee obj = new Employee();
+        Employee employee = new Employee();
         //Instantiate USer Class
         User newUser = new User();
       
@@ -24,14 +26,21 @@ namespace webTRON_Management_Software.Views.Admin
         {
             InitializeComponent();
         }
-      
-       
+
+        public CreateAccount(Employee emp)
+        {
+            employee = emp;
+            InitializeComponent();
+        }
+
+
+
         //Submit button click
-        private void btnSubmit_Click(object sender, EventArgs e)
+        private void BtnSubmit_Click(object sender, EventArgs e)
         {
             //Input Validation
 
-            if (string.IsNullOrEmpty(roleComboBox.Text) || string.IsNullOrEmpty(firstNameTxtBox.Text)|| string.IsNullOrEmpty(lastNameTextBox.Text) || (string.IsNullOrEmpty(emailTextBox.Text)) || string.IsNullOrEmpty(addressTextBox.Text)|| string.IsNullOrEmpty(dateOfBirthPicker.Value.ToString()) || string.IsNullOrEmpty(contactNumberTextBox.Text))
+            if (string.IsNullOrEmpty(roleComboBox.Text) || string.IsNullOrEmpty(firstNameTxtBox.Text) || string.IsNullOrEmpty(contactNumberTextBox.Text) || (!isMale.Checked && !isFemale.Checked && !isOthers.Checked))
             {
                 MessageBox.Show("Fill all the fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -48,13 +57,11 @@ namespace webTRON_Management_Software.Views.Admin
                 
                 //UserID
                 if(roleComboBox.Text=="Doctor")
-                     obj.userID = Generator.generateDoctorId();
-                else if (roleComboBox.Text == "Management")
-                    obj.userID = Generator.generateManagementId();
+                     obj.UserID = Generator.GenerateDoctorId();
                 else if (roleComboBox.Text == "Admin")
-                    obj.userID = Generator.generateAdminId();
+                    obj.UserID = Generator.GenerateAdminId();
                 else if (roleComboBox.Text == "Accountant")
-                    obj.userID = Generator.generateAccountantId();
+                    obj.UserID = Generator.GenerateAccountantId();
                 
                 //Fetch Sex
                 if (isMale.Checked)
@@ -71,12 +78,12 @@ namespace webTRON_Management_Software.Views.Admin
                 //Set default user status offline
                 obj.Status = "Offline";
                     //Insert object in database
-                    bool isSucess = obj.Insert(obj);
+                    bool isSucess = Employee.Insert(obj);
 
                     if (isSucess)
                     {
                         //Store user's user ID and password in users table
-                        bool isUserCreated = storeUser();
+                        bool isUserCreated = StoreUser();
                         if (isUserCreated)
                         {
                             bool isSend = Email.SendAccountInfo(obj.Email, newUser.userID,newUser.password);
@@ -84,7 +91,7 @@ namespace webTRON_Management_Software.Views.Admin
                             {
                                 //Show small popup here
                                 MessageBox.Show("New account has been created sucessfully.", "Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                resetFormFields();
+                                ResetFormFields();
 
                             }
                             else
@@ -106,7 +113,7 @@ namespace webTRON_Management_Software.Views.Admin
         
         }
         //Method to reset form input fields
-        private void resetFormFields()
+        private void ResetFormFields()
         {
          
             firstNameTxtBox.Text = "";
@@ -121,41 +128,85 @@ namespace webTRON_Management_Software.Views.Admin
         }
 
         //Method to store user's userID and password in user table when account is sucessfully created
-        private bool storeUser()
+        private bool StoreUser()
         {
            //If account is created sucesfully then store corresponding user's userID and password in (users) table
-            newUser.userID = obj.userID;
-            newUser.password = Generator.generatePassword();
+            newUser.userID = obj.UserID;
+            newUser.password = Generator.GeneratePassword();
             bool isSucess=newUser.Insert(newUser);
             return isSucess;
             
         }
         //Click event on Dashboard button
-        private void btnDashboard_Click(object sender, EventArgs e)
+        private void BtnDashboard_Click(object sender, EventArgs e)
         {
-            var dashboard = new Admin.Dashboard();
+            var dashboard = new Admin.Dashboard(employee);
             dashboard.Show();
             this.Hide();
         }
         //Click event on Settings button
-        private void btnSettings_Click(object sender, EventArgs e)
+        private void BtnSettings_Click(object sender, EventArgs e)
         {
-            var settings = new Admin.Settings();
+            var settings = new Admin.Settings(employee);
             settings.Show();
             this.Hide();
 
         }
 
         //Click event on Minimize button
-        private void btnMinimize_Click(object sender, EventArgs e)
+        private void BtnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
 
         }
-        //Click event on Exit button
-        private void btnExit_Click(object sender, EventArgs e)
+        //Load Event on Create Account Form
+        private void CreateAccount_Load(object sender, EventArgs e)
         {
-            Application.Exit();
+            //Initialize Active User Details
+            InitializeActiverUserDetails();
+
         }
+        //Initialize Active User Details
+        private void InitializeActiverUserDetails()
+        {
+            activeUserName.Text = employee.FirstName;
+
+
+        }
+      
+        //Click event on signout and exit button
+        private void SignOut(object sender, EventArgs e)
+        {
+            //WARNING:To check which element has clicked          
+            string elementType = sender.GetType().ToString();
+            var value = MessageBox.Show("Are you sure?", "Sign out", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (value.ToString() == "Yes")
+            {
+                Employee.SetStatus(employee.UserID, "Offline");
+                //It ensures sign out has clicked
+                if (elementType == "Guna.UI2.WinForms.Guna2Button")
+                {
+                    LandingWindow landingWindow = new LandingWindow();
+                    landingWindow.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    Application.Exit();
+                }
+
+
+            }
+        }
+        //Click event on users button
+        private void BtnUsers_Click(object sender, EventArgs e)
+        {
+                //Instantiating user form
+                var users = new Users(employee);
+                users.Show();
+                this.Hide();
+
+        }
+        
     }
 }
