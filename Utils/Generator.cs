@@ -11,9 +11,9 @@ namespace webTRON_Management_Software.Utils
     class Generator
     {
         //Connection String
-        //ConnectionStringForLaxman: private static string connectionString = "server=localhost;user id=root; password=laxudb;persistsecurityinfo=True;database=webtronmanagement";
+        private static string connectionString = "server=localhost;user id=root; password=laxudb;persistsecurityinfo=True;database=webtronmanagement";
         //ConnectionStringForPramesh
-        private static string connectionString = "server=localhost;user id=root;pwd=password;database=webtronmanagement";
+       // private static string connectionString = "server=localhost;user id=root;pwd=password;database=webtronmanagement";
 
         //Possible Characters
         static char[] upperCaseLetters = new char[] { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
@@ -27,7 +27,7 @@ namespace webTRON_Management_Software.Utils
         //Method that generates random Number in between range
         private static int GetRandomNumber(int min, int max)
         {
-            Random r = new Random();
+            Random r = new Random();    
             int randomNumber = r.Next(min, max);
             return randomNumber;
         }
@@ -158,7 +158,7 @@ namespace webTRON_Management_Software.Utils
             try
             {
                 //SQL Query to fetch number of total user
-                string SQLQuery = "SELECT COUNT(Registration_Number) FROM patientInfo";
+                string SQLQuery = "SELECT COUNT(registrationNumber) FROM patientInfo";
                 //SQL Command
                 MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
                 //Open Connection

@@ -17,9 +17,6 @@ namespace webTRON_Management_Software.Views.Accountant
             InitializeComponent();
         }
 
-        private void Dashboard_Load(object sender, EventArgs e)
-        {
 
-        }
     }
 }
