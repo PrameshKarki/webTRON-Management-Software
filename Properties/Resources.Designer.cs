@@ -10,9 +10,8 @@
 
 namespace webTRON_Management_Software.Properties {
     using System;
-    using System.Drawing;
-
-
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -107,6 +106,16 @@ namespace webTRON_Management_Software.Properties {
         public static System.Drawing.Bitmap circle_red {
             get {
                 object obj = ResourceManager.GetObject("circle_red", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Clear_Sign {
+            get {
+                object obj = ResourceManager.GetObject("Clear_Sign", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -264,6 +273,36 @@ namespace webTRON_Management_Software.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap rectangularBar {
+            get {
+                object obj = ResourceManager.GetObject("rectangularBar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap renew {
+            get {
+                object obj = ResourceManager.GetObject("renew", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Search {
+            get {
+                object obj = ResourceManager.GetObject("Search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap search_icon {
             get {
                 object obj = ResourceManager.GetObject("search_icon", resourceCulture);
@@ -344,13 +383,21 @@ namespace webTRON_Management_Software.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap webTRONLogoWithAddress {
+            get {
+                object obj = ResourceManager.GetObject("webTRONLogoWithAddress", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap webTRONLogoWithSlogan {
             get {
                 object obj = ResourceManager.GetObject("webTRONLogoWithSlogan", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
-        public static Image Clear_Sign { get; internal set; }
     }
 }

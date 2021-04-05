@@ -158,7 +158,7 @@ namespace webTRON_Management_Software.Utils
             try
             {
                 //SQL Query to fetch number of total user
-                string SQLQuery = "SELECT COUNT(Registration_Number) FROM patientInfo";
+                string SQLQuery = "SELECT COUNT(registrationNumber) FROM patientInfo";
                 //SQL Command
                 MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
                 //Open Connection

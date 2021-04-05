@@ -27,6 +27,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateNewPatient));
             this.addressTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblAddress = new System.Windows.Forms.Label();
@@ -49,15 +50,53 @@
             this.btnCreateNewPatient = new Guna.UI2.WinForms.Guna2Button();
             this.lblReferredTo = new System.Windows.Forms.Label();
             this.referredToComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.lblRegistrationId = new System.Windows.Forms.Label();
+            this.LblRegistrationId = new System.Windows.Forms.Label();
             this.lblRegistrationDate = new System.Windows.Forms.Label();
             this.lblRegistrationIdOutput = new System.Windows.Forms.Label();
             this.lblRegistrationDateOutput = new System.Windows.Forms.Label();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.printPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.LblPanelReferredToOutput = new System.Windows.Forms.Label();
+            this.LblPanelSexOutput = new System.Windows.Forms.Label();
+            this.LblPanelAddressOutput = new System.Windows.Forms.Label();
+            this.LblPanelAgeOutput = new System.Windows.Forms.Label();
+            this.LblPanelLNameOutput = new System.Windows.Forms.Label();
+            this.LblPanelFNameOutput = new System.Windows.Forms.Label();
+            this.LblPanelRegistrationDateOutput = new System.Windows.Forms.Label();
+            this.LblPanelRegistrationIdOutput = new System.Windows.Forms.Label();
+            this.LabelReferredTo = new System.Windows.Forms.Label();
+            this.SexOutput = new System.Windows.Forms.Label();
+            this.LabelAddressOutput = new System.Windows.Forms.Label();
+            this.AgeOutput = new System.Windows.Forms.Label();
+            this.FNameOutpuf = new System.Windows.Forms.Label();
+            this.RegistrationDateOutput = new System.Windows.Forms.Label();
+            this.RegistrationNumberOutput = new System.Windows.Forms.Label();
+            this.QRCodePictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.webTRONWithAddressPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.LblPanelReferredTo = new System.Windows.Forms.Label();
+            this.LblPanelAddress = new System.Windows.Forms.Label();
+            this.LblPanelAge = new System.Windows.Forms.Label();
+            this.separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.LblPanelFName = new System.Windows.Forms.Label();
+            this.separator2 = new Guna.UI2.WinForms.Guna2Separator();
+            this.LblPanelRegistrationDate = new System.Windows.Forms.Label();
+            this.LblPanelRegistrationId = new System.Windows.Forms.Label();
+            this.PrintPanelContanerPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            this.printPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QRCodePictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webTRONWithAddressPictureBox)).BeginInit();
+            this.PrintPanelContanerPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // addressTextBox
@@ -90,7 +129,7 @@
             // 
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblAddress.Location = new System.Drawing.Point(130, 250);
+            this.lblAddress.Location = new System.Drawing.Point(130, 251);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(78, 20);
             this.lblAddress.TabIndex = 49;
@@ -126,7 +165,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label5.Location = new System.Drawing.Point(80, 355);
+            this.label5.Location = new System.Drawing.Point(79, 367);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(135, 20);
             this.label5.TabIndex = 48;
@@ -152,7 +191,6 @@
             this.isOthers.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.isOthers.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             this.isOthers.UseVisualStyleBackColor = true;
-            this.isOthers.CheckedChanged += new System.EventHandler(this.isOthers_CheckedChanged);
             // 
             // isFemale
             // 
@@ -262,7 +300,7 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblName.Location = new System.Drawing.Point(151, 204);
+            this.lblName.Location = new System.Drawing.Point(151, 208);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(61, 20);
             this.lblName.TabIndex = 44;
@@ -304,7 +342,6 @@
             this.lblAge.Size = new System.Drawing.Size(48, 20);
             this.lblAge.TabIndex = 51;
             this.lblAge.Text = "Age*:";
-            this.lblAge.Click += new System.EventHandler(this.label1_Click);
             // 
             // guna2PictureBox5
             // 
@@ -320,7 +357,7 @@
             // guna2PictureBox4
             // 
             this.guna2PictureBox4.Image = global::webTRON_Management_Software.Properties.Resources.RectangleCurved;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(-8, -1);
+            this.guna2PictureBox4.Location = new System.Drawing.Point(-4, -4);
             this.guna2PictureBox4.Name = "guna2PictureBox4";
             this.guna2PictureBox4.ShadowDecoration.Parent = this.guna2PictureBox4;
             this.guna2PictureBox4.Size = new System.Drawing.Size(162, 61);
@@ -385,7 +422,7 @@
             // 
             this.lblReferredTo.AutoSize = true;
             this.lblReferredTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblReferredTo.Location = new System.Drawing.Point(108, 396);
+            this.lblReferredTo.Location = new System.Drawing.Point(108, 411);
             this.lblReferredTo.Name = "lblReferredTo";
             this.lblReferredTo.Size = new System.Drawing.Size(104, 20);
             this.lblReferredTo.TabIndex = 56;
@@ -416,14 +453,14 @@
             this.referredToComboBox.StartIndex = 1;
             this.referredToComboBox.TabIndex = 9;
             // 
-            // lblRegistrationId
+            // LblRegistrationId
             // 
-            this.lblRegistrationId.AutoSize = true;
-            this.lblRegistrationId.Location = new System.Drawing.Point(761, 127);
-            this.lblRegistrationId.Name = "lblRegistrationId";
-            this.lblRegistrationId.Size = new System.Drawing.Size(52, 13);
-            this.lblRegistrationId.TabIndex = 58;
-            this.lblRegistrationId.Text = "REG-NO:";
+            this.LblRegistrationId.AutoSize = true;
+            this.LblRegistrationId.Location = new System.Drawing.Point(761, 127);
+            this.LblRegistrationId.Name = "LblRegistrationId";
+            this.LblRegistrationId.Size = new System.Drawing.Size(52, 13);
+            this.LblRegistrationId.TabIndex = 58;
+            this.LblRegistrationId.Text = "REG-NO:";
             // 
             // lblRegistrationDate
             // 
@@ -452,16 +489,349 @@
             this.lblRegistrationDateOutput.TabIndex = 61;
             this.lblRegistrationDateOutput.Text = "REG-DATE:";
             // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.TargetControl = this;
+            // 
+            // printPanel
+            // 
+            this.printPanel.BackColor = System.Drawing.Color.White;
+            this.printPanel.Controls.Add(this.LblPanelReferredToOutput);
+            this.printPanel.Controls.Add(this.LblPanelSexOutput);
+            this.printPanel.Controls.Add(this.LblPanelAddressOutput);
+            this.printPanel.Controls.Add(this.LblPanelAgeOutput);
+            this.printPanel.Controls.Add(this.LblPanelLNameOutput);
+            this.printPanel.Controls.Add(this.LblPanelFNameOutput);
+            this.printPanel.Controls.Add(this.LblPanelRegistrationDateOutput);
+            this.printPanel.Controls.Add(this.LblPanelRegistrationIdOutput);
+            this.printPanel.Controls.Add(this.LabelReferredTo);
+            this.printPanel.Controls.Add(this.SexOutput);
+            this.printPanel.Controls.Add(this.LabelAddressOutput);
+            this.printPanel.Controls.Add(this.AgeOutput);
+            this.printPanel.Controls.Add(this.FNameOutpuf);
+            this.printPanel.Controls.Add(this.RegistrationDateOutput);
+            this.printPanel.Controls.Add(this.RegistrationNumberOutput);
+            this.printPanel.Controls.Add(this.QRCodePictureBox);
+            this.printPanel.Controls.Add(this.guna2Separator1);
+            this.printPanel.Controls.Add(this.guna2PictureBox6);
+            this.printPanel.Controls.Add(this.guna2PictureBox7);
+            this.printPanel.Controls.Add(this.webTRONWithAddressPictureBox);
+            this.printPanel.Controls.Add(this.LblPanelReferredTo);
+            this.printPanel.Controls.Add(this.LblPanelAddress);
+            this.printPanel.Controls.Add(this.LblPanelAge);
+            this.printPanel.Controls.Add(this.separator1);
+            this.printPanel.Controls.Add(this.LblPanelFName);
+            this.printPanel.Controls.Add(this.separator2);
+            this.printPanel.Controls.Add(this.LblPanelRegistrationDate);
+            this.printPanel.Controls.Add(this.LblPanelRegistrationId);
+            this.printPanel.Location = new System.Drawing.Point(3, 60);
+            this.printPanel.Name = "printPanel";
+            this.printPanel.ShadowDecoration.Parent = this.printPanel;
+            this.printPanel.Size = new System.Drawing.Size(535, 334);
+            this.printPanel.TabIndex = 62;
+            this.printPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.printPanel_Paint);
+            // 
+            // LblPanelReferredToOutput
+            // 
+            this.LblPanelReferredToOutput.AutoSize = true;
+            this.LblPanelReferredToOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPanelReferredToOutput.Location = new System.Drawing.Point(144, 311);
+            this.LblPanelReferredToOutput.Name = "LblPanelReferredToOutput";
+            this.LblPanelReferredToOutput.Size = new System.Drawing.Size(22, 15);
+            this.LblPanelReferredToOutput.TabIndex = 33;
+            this.LblPanelReferredToOutput.Text = "---";
+            // 
+            // LblPanelSexOutput
+            // 
+            this.LblPanelSexOutput.AutoSize = true;
+            this.LblPanelSexOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPanelSexOutput.Location = new System.Drawing.Point(144, 261);
+            this.LblPanelSexOutput.Name = "LblPanelSexOutput";
+            this.LblPanelSexOutput.Size = new System.Drawing.Size(22, 15);
+            this.LblPanelSexOutput.TabIndex = 32;
+            this.LblPanelSexOutput.Text = "---";
+            // 
+            // LblPanelAddressOutput
+            // 
+            this.LblPanelAddressOutput.AutoSize = true;
+            this.LblPanelAddressOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPanelAddressOutput.Location = new System.Drawing.Point(123, 285);
+            this.LblPanelAddressOutput.Name = "LblPanelAddressOutput";
+            this.LblPanelAddressOutput.Size = new System.Drawing.Size(22, 15);
+            this.LblPanelAddressOutput.TabIndex = 31;
+            this.LblPanelAddressOutput.Text = "---";
+            // 
+            // LblPanelAgeOutput
+            // 
+            this.LblPanelAgeOutput.AutoSize = true;
+            this.LblPanelAgeOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPanelAgeOutput.Location = new System.Drawing.Point(93, 261);
+            this.LblPanelAgeOutput.Name = "LblPanelAgeOutput";
+            this.LblPanelAgeOutput.Size = new System.Drawing.Size(22, 15);
+            this.LblPanelAgeOutput.TabIndex = 29;
+            this.LblPanelAgeOutput.Text = "---";
+            // 
+            // LblPanelLNameOutput
+            // 
+            this.LblPanelLNameOutput.AutoSize = true;
+            this.LblPanelLNameOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPanelLNameOutput.Location = new System.Drawing.Point(199, 236);
+            this.LblPanelLNameOutput.Name = "LblPanelLNameOutput";
+            this.LblPanelLNameOutput.Size = new System.Drawing.Size(22, 15);
+            this.LblPanelLNameOutput.TabIndex = 28;
+            this.LblPanelLNameOutput.Text = "---";
+            // 
+            // LblPanelFNameOutput
+            // 
+            this.LblPanelFNameOutput.AutoSize = true;
+            this.LblPanelFNameOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPanelFNameOutput.Location = new System.Drawing.Point(117, 239);
+            this.LblPanelFNameOutput.Name = "LblPanelFNameOutput";
+            this.LblPanelFNameOutput.Size = new System.Drawing.Size(22, 15);
+            this.LblPanelFNameOutput.TabIndex = 27;
+            this.LblPanelFNameOutput.Text = "---";
+            // 
+            // LblPanelRegistrationDateOutput
+            // 
+            this.LblPanelRegistrationDateOutput.AutoSize = true;
+            this.LblPanelRegistrationDateOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPanelRegistrationDateOutput.Location = new System.Drawing.Point(182, 213);
+            this.LblPanelRegistrationDateOutput.Name = "LblPanelRegistrationDateOutput";
+            this.LblPanelRegistrationDateOutput.Size = new System.Drawing.Size(22, 15);
+            this.LblPanelRegistrationDateOutput.TabIndex = 26;
+            this.LblPanelRegistrationDateOutput.Text = "---";
+            // 
+            // LblPanelRegistrationIdOutput
+            // 
+            this.LblPanelRegistrationIdOutput.AutoSize = true;
+            this.LblPanelRegistrationIdOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPanelRegistrationIdOutput.Location = new System.Drawing.Point(155, 189);
+            this.LblPanelRegistrationIdOutput.Name = "LblPanelRegistrationIdOutput";
+            this.LblPanelRegistrationIdOutput.Size = new System.Drawing.Size(22, 15);
+            this.LblPanelRegistrationIdOutput.TabIndex = 25;
+            this.LblPanelRegistrationIdOutput.Text = "---";
+            // 
+            // LabelReferredTo
+            // 
+            this.LabelReferredTo.AutoSize = true;
+            this.LabelReferredTo.Location = new System.Drawing.Point(123, 309);
+            this.LabelReferredTo.Name = "LabelReferredTo";
+            this.LabelReferredTo.Size = new System.Drawing.Size(0, 13);
+            this.LabelReferredTo.TabIndex = 20;
+            // 
+            // SexOutput
+            // 
+            this.SexOutput.Location = new System.Drawing.Point(0, 0);
+            this.SexOutput.Name = "SexOutput";
+            this.SexOutput.Size = new System.Drawing.Size(100, 23);
+            this.SexOutput.TabIndex = 21;
+            // 
+            // LabelAddressOutput
+            // 
+            this.LabelAddressOutput.Location = new System.Drawing.Point(0, 0);
+            this.LabelAddressOutput.Name = "LabelAddressOutput";
+            this.LabelAddressOutput.Size = new System.Drawing.Size(100, 23);
+            this.LabelAddressOutput.TabIndex = 22;
+            // 
+            // AgeOutput
+            // 
+            this.AgeOutput.AutoSize = true;
+            this.AgeOutput.Location = new System.Drawing.Point(95, 260);
+            this.AgeOutput.Name = "AgeOutput";
+            this.AgeOutput.Size = new System.Drawing.Size(0, 13);
+            this.AgeOutput.TabIndex = 17;
+            // 
+            // FNameOutpuf
+            // 
+            this.FNameOutpuf.AutoSize = true;
+            this.FNameOutpuf.Location = new System.Drawing.Point(95, 237);
+            this.FNameOutpuf.Name = "FNameOutpuf";
+            this.FNameOutpuf.Size = new System.Drawing.Size(0, 13);
+            this.FNameOutpuf.TabIndex = 16;
+            // 
+            // RegistrationDateOutput
+            // 
+            this.RegistrationDateOutput.Location = new System.Drawing.Point(0, 0);
+            this.RegistrationDateOutput.Name = "RegistrationDateOutput";
+            this.RegistrationDateOutput.Size = new System.Drawing.Size(100, 23);
+            this.RegistrationDateOutput.TabIndex = 23;
+            // 
+            // RegistrationNumberOutput
+            // 
+            this.RegistrationNumberOutput.Location = new System.Drawing.Point(0, 0);
+            this.RegistrationNumberOutput.Name = "RegistrationNumberOutput";
+            this.RegistrationNumberOutput.Size = new System.Drawing.Size(100, 23);
+            this.RegistrationNumberOutput.TabIndex = 24;
+            // 
+            // QRCodePictureBox
+            // 
+            this.QRCodePictureBox.Location = new System.Drawing.Point(320, 201);
+            this.QRCodePictureBox.Name = "QRCodePictureBox";
+            this.QRCodePictureBox.ShadowDecoration.Parent = this.QRCodePictureBox;
+            this.QRCodePictureBox.Size = new System.Drawing.Size(165, 99);
+            this.QRCodePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.QRCodePictureBox.TabIndex = 13;
+            this.QRCodePictureBox.TabStop = false;
+            // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.Location = new System.Drawing.Point(0, 325);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(535, 10);
+            this.guna2Separator1.TabIndex = 12;
+            // 
+            // guna2PictureBox6
+            // 
+            this.guna2PictureBox6.Image = global::webTRON_Management_Software.Properties.Resources.rectangularBar;
+            this.guna2PictureBox6.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox6.Name = "guna2PictureBox6";
+            this.guna2PictureBox6.ShadowDecoration.Parent = this.guna2PictureBox6;
+            this.guna2PictureBox6.Size = new System.Drawing.Size(23, 273);
+            this.guna2PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.guna2PictureBox6.TabIndex = 10;
+            this.guna2PictureBox6.TabStop = false;
+            // 
+            // guna2PictureBox7
+            // 
+            this.guna2PictureBox7.Image = global::webTRON_Management_Software.Properties.Resources.rectangularBar;
+            this.guna2PictureBox7.Location = new System.Drawing.Point(512, 58);
+            this.guna2PictureBox7.Name = "guna2PictureBox7";
+            this.guna2PictureBox7.ShadowDecoration.Parent = this.guna2PictureBox7;
+            this.guna2PictureBox7.Size = new System.Drawing.Size(23, 273);
+            this.guna2PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.guna2PictureBox7.TabIndex = 11;
+            this.guna2PictureBox7.TabStop = false;
+            // 
+            // webTRONWithAddressPictureBox
+            // 
+            this.webTRONWithAddressPictureBox.Image = global::webTRON_Management_Software.Properties.Resources.webTRONLogoWithAddress;
+            this.webTRONWithAddressPictureBox.Location = new System.Drawing.Point(147, 12);
+            this.webTRONWithAddressPictureBox.Name = "webTRONWithAddressPictureBox";
+            this.webTRONWithAddressPictureBox.ShadowDecoration.Parent = this.webTRONWithAddressPictureBox;
+            this.webTRONWithAddressPictureBox.Size = new System.Drawing.Size(235, 147);
+            this.webTRONWithAddressPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.webTRONWithAddressPictureBox.TabIndex = 0;
+            this.webTRONWithAddressPictureBox.TabStop = false;
+            // 
+            // LblPanelReferredTo
+            // 
+            this.LblPanelReferredTo.AutoSize = true;
+            this.LblPanelReferredTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPanelReferredTo.Location = new System.Drawing.Point(50, 309);
+            this.LblPanelReferredTo.Name = "LblPanelReferredTo";
+            this.LblPanelReferredTo.Size = new System.Drawing.Size(89, 17);
+            this.LblPanelReferredTo.TabIndex = 8;
+            this.LblPanelReferredTo.Text = "Referred To:";
+            // 
+            // LblPanelAddress
+            // 
+            this.LblPanelAddress.AutoSize = true;
+            this.LblPanelAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPanelAddress.Location = new System.Drawing.Point(50, 285);
+            this.LblPanelAddress.Name = "LblPanelAddress";
+            this.LblPanelAddress.Size = new System.Drawing.Size(64, 17);
+            this.LblPanelAddress.TabIndex = 7;
+            this.LblPanelAddress.Text = "Address:";
+            // 
+            // LblPanelAge
+            // 
+            this.LblPanelAge.AutoSize = true;
+            this.LblPanelAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPanelAge.Location = new System.Drawing.Point(50, 261);
+            this.LblPanelAge.Name = "LblPanelAge";
+            this.LblPanelAge.Size = new System.Drawing.Size(37, 17);
+            this.LblPanelAge.TabIndex = 6;
+            this.LblPanelAge.Text = "Age:";
+            // 
+            // separator1
+            // 
+            this.separator1.FillColor = System.Drawing.Color.Black;
+            this.separator1.FillThickness = 3;
+            this.separator1.Location = new System.Drawing.Point(24, 54);
+            this.separator1.Name = "separator1";
+            this.separator1.Size = new System.Drawing.Size(115, 13);
+            this.separator1.TabIndex = 1;
+            this.separator1.Visible = false;
+            // 
+            // LblPanelFName
+            // 
+            this.LblPanelFName.AutoSize = true;
+            this.LblPanelFName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPanelFName.Location = new System.Drawing.Point(50, 237);
+            this.LblPanelFName.Name = "LblPanelFName";
+            this.LblPanelFName.Size = new System.Drawing.Size(49, 17);
+            this.LblPanelFName.TabIndex = 5;
+            this.LblPanelFName.Text = "Name:";
+            // 
+            // separator2
+            // 
+            this.separator2.FillColor = System.Drawing.Color.Black;
+            this.separator2.FillThickness = 3;
+            this.separator2.Location = new System.Drawing.Point(397, 54);
+            this.separator2.Name = "separator2";
+            this.separator2.Size = new System.Drawing.Size(115, 13);
+            this.separator2.TabIndex = 2;
+            this.separator2.Visible = false;
+            // 
+            // LblPanelRegistrationDate
+            // 
+            this.LblPanelRegistrationDate.AutoSize = true;
+            this.LblPanelRegistrationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPanelRegistrationDate.Location = new System.Drawing.Point(50, 213);
+            this.LblPanelRegistrationDate.Name = "LblPanelRegistrationDate";
+            this.LblPanelRegistrationDate.Size = new System.Drawing.Size(122, 17);
+            this.LblPanelRegistrationDate.TabIndex = 4;
+            this.LblPanelRegistrationDate.Text = "Registration Date:";
+            // 
+            // LblPanelRegistrationId
+            // 
+            this.LblPanelRegistrationId.AutoSize = true;
+            this.LblPanelRegistrationId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPanelRegistrationId.Location = new System.Drawing.Point(50, 189);
+            this.LblPanelRegistrationId.Name = "LblPanelRegistrationId";
+            this.LblPanelRegistrationId.Size = new System.Drawing.Size(99, 17);
+            this.LblPanelRegistrationId.TabIndex = 3;
+            this.LblPanelRegistrationId.Text = "RegistrationId:";
+            // 
+            // PrintPanelContanerPanel
+            // 
+            this.PrintPanelContanerPanel.BackColor = System.Drawing.Color.White;
+            this.PrintPanelContanerPanel.Controls.Add(this.btnPrint);
+            this.PrintPanelContanerPanel.Controls.Add(this.printPanel);
+            this.PrintPanelContanerPanel.Location = new System.Drawing.Point(447, 107);
+            this.PrintPanelContanerPanel.Name = "PrintPanelContanerPanel";
+            this.PrintPanelContanerPanel.ShadowDecoration.Parent = this.PrintPanelContanerPanel;
+            this.PrintPanelContanerPanel.Size = new System.Drawing.Size(541, 506);
+            this.PrintPanelContanerPanel.TabIndex = 63;
+            this.PrintPanelContanerPanel.Visible = false;
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.CheckedState.Parent = this.btnPrint;
+            this.btnPrint.CustomImages.Parent = this.btnPrint;
+            this.btnPrint.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.btnPrint.ForeColor = System.Drawing.Color.White;
+            this.btnPrint.HoverState.Parent = this.btnPrint;
+            this.btnPrint.Location = new System.Drawing.Point(431, 445);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.ShadowDecoration.Parent = this.btnPrint;
+            this.btnPrint.Size = new System.Drawing.Size(98, 38);
+            this.btnPrint.TabIndex = 63;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
             // CreateNewPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1000, 625);
+            this.Controls.Add(this.PrintPanelContanerPanel);
             this.Controls.Add(this.lblRegistrationDateOutput);
             this.Controls.Add(this.lblRegistrationIdOutput);
             this.Controls.Add(this.lblRegistrationDate);
-            this.Controls.Add(this.lblRegistrationId);
+            this.Controls.Add(this.LblRegistrationId);
             this.Controls.Add(this.referredToComboBox);
             this.Controls.Add(this.lblReferredTo);
             this.Controls.Add(this.btnCreateNewPatient);
@@ -493,6 +863,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            this.printPanel.ResumeLayout(false);
+            this.printPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QRCodePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webTRONWithAddressPictureBox)).EndInit();
+            this.PrintPanelContanerPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -521,9 +898,41 @@
         private Guna.UI2.WinForms.Guna2Button btnCreateNewPatient;
         private System.Windows.Forms.Label lblReferredTo;
         private Guna.UI2.WinForms.Guna2ComboBox referredToComboBox;
-        private System.Windows.Forms.Label lblRegistrationId;
+        private System.Windows.Forms.Label LblRegistrationId;
         private System.Windows.Forms.Label lblRegistrationDate;
         private System.Windows.Forms.Label lblRegistrationIdOutput;
         private System.Windows.Forms.Label lblRegistrationDateOutput;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private Guna.UI2.WinForms.Guna2Panel printPanel;
+        private System.Windows.Forms.Label LblPanelSexOutput;
+        private System.Windows.Forms.Label LblPanelAddressOutput;
+        private System.Windows.Forms.Label LblPanelAgeOutput;
+        private System.Windows.Forms.Label LblPanelLNameOutput;
+        private System.Windows.Forms.Label LblPanelFNameOutput;
+        private System.Windows.Forms.Label LblPanelRegistrationDateOutput;
+        private System.Windows.Forms.Label LblPanelRegistrationIdOutput;
+        private System.Windows.Forms.Label LabelReferredTo;
+        private System.Windows.Forms.Label SexOutput;
+        private System.Windows.Forms.Label LabelAddressOutput;
+        private System.Windows.Forms.Label AgeOutput;
+        private System.Windows.Forms.Label FNameOutpuf;
+        private System.Windows.Forms.Label RegistrationDateOutput;
+        private System.Windows.Forms.Label RegistrationNumberOutput;
+        private Guna.UI2.WinForms.Guna2PictureBox QRCodePictureBox;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox6;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox7;
+        private Guna.UI2.WinForms.Guna2PictureBox webTRONWithAddressPictureBox;
+        private System.Windows.Forms.Label LblPanelReferredTo;
+        private System.Windows.Forms.Label LblPanelAddress;
+        private System.Windows.Forms.Label LblPanelAge;
+        private Guna.UI2.WinForms.Guna2Separator separator1;
+        private System.Windows.Forms.Label LblPanelFName;
+        private Guna.UI2.WinForms.Guna2Separator separator2;
+        private System.Windows.Forms.Label LblPanelRegistrationDate;
+        private System.Windows.Forms.Label LblPanelRegistrationId;
+        private Guna.UI2.WinForms.Guna2Panel PrintPanelContanerPanel;
+        private Guna.UI2.WinForms.Guna2Button btnPrint;
+        private System.Windows.Forms.Label LblPanelReferredToOutput;
     }
 }

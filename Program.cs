@@ -25,7 +25,11 @@ namespace webTRON_Management_Software
             Application.SetCompatibleTextRenderingDefault(false);
 
             //Run main window here
-            Application.Run(new LandingWindow());
+            //Application.Run(new LandingWindow());
+           // Application.Run( new Accountant.SearchAndUpdatePatient());
+          // Application.Run( new Accountant.TicketPrintForm());
+            Application.Run( new Accountant.CreateNewPatient());
+            //Application.Run( new Accountant.RenewPatient());
          
        
           

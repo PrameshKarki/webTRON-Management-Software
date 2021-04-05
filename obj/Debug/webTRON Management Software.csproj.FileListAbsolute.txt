@@ -28,10 +28,6 @@ C:\Users\Lenovo\Desktop\webTRON Management\webTRON-Management-Software\obj\Debug
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\webTRON Management Software.exe.config
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\webTRON Management Software.exe
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\webTRON Management Software.pdb
-D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON Management Software.csprojAssemblyReference.cache
-D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.AdminDashboard.resources
-D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.CreateAccount.resources
-D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Landing_Window.resources
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Properties.Resources.resources
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON Management Software.csproj.GenerateResource.cache
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON Management Software.csproj.CoreCompileInputs.cache
@@ -75,3 +71,32 @@ C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-So
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Management.Dashboard.resources
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Others.Dashboard.resources
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.SearchAndUpdatePatient.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\MySql.Data.dll
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\Google.Protobuf.dll
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\Zstandard.Net.dll
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\BouncyCastle.Crypto.dll
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\Ubiety.Dns.Core.dll
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\Renci.SshNet.dll
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\System.Memory.dll
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\System.Buffers.dll
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\K4os.Compression.LZ4.dll
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\K4os.Hash.xxHash.dll
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\MySql.Data.xml
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON Management Software.exe.config
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.Dashboard.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.SearchAndUpdatePatient.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.Dashboard.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.Settings.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.Users.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.CreateAccount.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.Dashboard.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Utilities.ForgetPassword.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.CreateNewPatient.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Landing_Window.LandingWindow.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Management.Dashboard.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Others.Dashboard.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.RenewPatient.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\QRCoder.dll
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\Zen.Barcode.Core.dll
