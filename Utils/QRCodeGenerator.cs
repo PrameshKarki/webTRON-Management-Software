@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Forms;
 using webTRON_Management_Software.Views.Accountant;
 
 namespace webTRON_Management_Software.Utils
@@ -14,12 +15,7 @@ namespace webTRON_Management_Software.Utils
         {
             string s = refId;
             QRCoder.QRCodeGenerator QG = new QRCoder.QRCodeGenerator();
-             var info = QG.CreateQrCode(refId, QRCoder.QRCodeGenerator.ECCLevel.H);
-            if (info == null)
-            {
-                MessageBox.Show(info.ToString());
-            }
-         
+            var info = QG.CreateQrCode(refId, QRCoder.QRCodeGenerator.ECCLevel.H);         
            var code = new QRCoder.QRCode(info);
             return code;
         }

@@ -682,7 +682,7 @@
             // 
             // guna2PictureBox6
             // 
-            this.guna2PictureBox6.Image = global::webTRON_Management_Software.Properties.Resources.rectangularBar;
+           // this.guna2PictureBox6.Image = global::webTRON_Management_Software.Properties.Resources.rectangularBar;
             this.guna2PictureBox6.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox6.Name = "guna2PictureBox6";
             this.guna2PictureBox6.ShadowDecoration.Parent = this.guna2PictureBox6;
@@ -693,7 +693,7 @@
             // 
             // guna2PictureBox7
             // 
-            this.guna2PictureBox7.Image = global::webTRON_Management_Software.Properties.Resources.rectangularBar;
+          //  this.guna2PictureBox7.Image = global::webTRON_Management_Software.Properties.Resources.rectangularBar;
             this.guna2PictureBox7.Location = new System.Drawing.Point(512, 58);
             this.guna2PictureBox7.Name = "guna2PictureBox7";
             this.guna2PictureBox7.ShadowDecoration.Parent = this.guna2PictureBox7;
@@ -704,7 +704,7 @@
             // 
             // webTRONWithAddressPictureBox
             // 
-            this.webTRONWithAddressPictureBox.Image = global::webTRON_Management_Software.Properties.Resources.webTRONLogoWithAddress;
+          //  this.webTRONWithAddressPictureBox.Image = global::webTRON_Management_Software.Properties.Resources.webTRONLogoWithAddress;
             this.webTRONWithAddressPictureBox.Location = new System.Drawing.Point(147, 12);
             this.webTRONWithAddressPictureBox.Name = "webTRONWithAddressPictureBox";
             this.webTRONWithAddressPictureBox.ShadowDecoration.Parent = this.webTRONWithAddressPictureBox;

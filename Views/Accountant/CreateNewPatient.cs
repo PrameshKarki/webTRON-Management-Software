@@ -23,8 +23,8 @@ namespace webTRON_Management_Software.Views.Accountant
 
         private void CreatePatient_Load(object sender, EventArgs e)
         {
-            string regNumber = Generator.generatePatientId();
-            string regDate = Generator.getRegistrationDate();
+            string regNumber = Generator.GeneratePatientId();
+            string regDate = Generator.GetRegistrationDate();
             lblRegistrationIdOutput.Text = regNumber;
             lblRegistrationDateOutput.Text = regDate;
         }
@@ -82,8 +82,8 @@ namespace webTRON_Management_Software.Views.Accountant
                     MessageBox.Show("Registration Completed!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     PrintPanelContanerPanel.Visible = true;
                     //TO DISPLAY THE NEXT REGISTRATION ID AFTER INSERTING THE INFO OF ONE PATIENT...
-                    string regNumber = Generator.generatePatientId();
-                    string regDate = Generator.getRegistrationDate();
+                    string regNumber = Generator.GeneratePatientId();
+                    string regDate = Generator.GetRegistrationDate();
                     lblRegistrationIdOutput.Text = regNumber;
                     lblRegistrationDateOutput.Text = regDate;
                 }

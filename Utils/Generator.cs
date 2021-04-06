@@ -298,54 +298,7 @@ namespace webTRON_Management_Software.Utils
         }
 
         //Generate Security ID
-        public static string GenerateIdForSecurityGuard()
-        {
-            //SQLConnection
-            MySqlConnection conn = new MySqlConnection(connectionString);
 
-            int initiator = 545454;
-            int counter, countOfTotalSecurities = 0;
-
-            string userID = "";
-
-            try
-            {
-                //SQL Query to fetch number of total user
-                string SQLQuery = "SELECT COUNT(UserID) FROM employeeInfo WHERE Role='Others'";
-                //SQL Command
-                MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
-                //Open Connection
-                conn.Open();
-                object returnValue = cmd.ExecuteScalar();
-                if (returnValue != null)
-                {
-                    countOfTotalSecurities = Convert.ToInt32(returnValue);
-                }
-                else
-                {
-                    MessageBox.Show("Error Occured! Please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                //Close Connection
-                conn.Close();
-            }
-            counter = initiator + countOfTotalSecurities;
-            DateTime d = DateTime.Now;
-            int date = (d.Year) % 100;
-            userID = "SEC-" + date + "-" + counter;
-
-
-            return userID;
-
-        }
 
         //Method to generate verification code
         public static int GenerateVerificationCode()
@@ -356,7 +309,7 @@ namespace webTRON_Management_Software.Utils
         }
 
         //Method to get verification code
-        public static string getRegistrationDate()
+        public static string GetRegistrationDate()
         {
             DateTime dt = DateTime.Now;
             string date = dt.Year + "-" + dt.Month + "-" + dt.Day;

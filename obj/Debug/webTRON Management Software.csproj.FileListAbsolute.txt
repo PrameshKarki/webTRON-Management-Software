@@ -82,3 +82,5 @@ C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-So
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Others.ChangeInfo.resources
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Others.ChangePassword.resources
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON Management Software.csprojAssemblyReference.cache
+C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\bin\Debug\QRCoder.dll
+C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\bin\Debug\Zen.Barcode.Core.dll
