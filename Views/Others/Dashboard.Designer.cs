@@ -31,6 +31,10 @@ namespace webTRON_Management_Software.Views.Others
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DragableDashboard = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.btnMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnExit = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -42,11 +46,18 @@ namespace webTRON_Management_Software.Views.Others
             this.activeUserPictureSidebar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.activeUserName = new System.Windows.Forms.Label();
             this.activePanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnChangePassword = new Guna.UI2.WinForms.Guna2Button();
+            this.btnChangeInfo = new Guna.UI2.WinForms.Guna2Button();
+            this.staffsPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.searchStaffsTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.staffsDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.sidebarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.activeUserPictureSidebar)).BeginInit();
             this.activePanel.SuspendLayout();
+            this.staffsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.staffsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // DragableDashboard
@@ -203,12 +214,165 @@ namespace webTRON_Management_Software.Views.Others
             this.activePanel.Size = new System.Drawing.Size(165, 80);
             this.activePanel.TabIndex = 26;
             // 
+            // btnChangePassword
+            // 
+            this.btnChangePassword.Animated = true;
+            this.btnChangePassword.AutoRoundedCorners = true;
+            this.btnChangePassword.BorderRadius = 21;
+            this.btnChangePassword.CheckedState.Parent = this.btnChangePassword;
+            this.btnChangePassword.CustomImages.Parent = this.btnChangePassword;
+            this.btnChangePassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(131)))), ((int)(((byte)(228)))));
+            this.btnChangePassword.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.btnChangePassword.ForeColor = System.Drawing.Color.White;
+            this.btnChangePassword.HoverState.Parent = this.btnChangePassword;
+            this.btnChangePassword.Location = new System.Drawing.Point(695, 82);
+            this.btnChangePassword.Name = "btnChangePassword";
+            this.btnChangePassword.ShadowDecoration.Parent = this.btnChangePassword;
+            this.btnChangePassword.Size = new System.Drawing.Size(136, 45);
+            this.btnChangePassword.TabIndex = 56;
+            this.btnChangePassword.Text = "Staffs";
+            // 
+            // btnChangeInfo
+            // 
+            this.btnChangeInfo.Animated = true;
+            this.btnChangeInfo.AutoRoundedCorners = true;
+            this.btnChangeInfo.BorderRadius = 21;
+            this.btnChangeInfo.CheckedState.Parent = this.btnChangeInfo;
+            this.btnChangeInfo.CustomImages.Parent = this.btnChangeInfo;
+            this.btnChangeInfo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            this.btnChangeInfo.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.btnChangeInfo.ForeColor = System.Drawing.Color.White;
+            this.btnChangeInfo.HoverState.Parent = this.btnChangeInfo;
+            this.btnChangeInfo.Location = new System.Drawing.Point(852, 82);
+            this.btnChangeInfo.Name = "btnChangeInfo";
+            this.btnChangeInfo.ShadowDecoration.Parent = this.btnChangeInfo;
+            this.btnChangeInfo.Size = new System.Drawing.Size(136, 45);
+            this.btnChangeInfo.TabIndex = 55;
+            this.btnChangeInfo.Text = "Patients";
+            // 
+            // staffsPanel
+            // 
+            this.staffsPanel.Controls.Add(this.searchStaffsTextBox);
+            this.staffsPanel.Controls.Add(this.staffsDataGridView);
+            this.staffsPanel.Location = new System.Drawing.Point(66, 133);
+            this.staffsPanel.Name = "staffsPanel";
+            this.staffsPanel.ShadowDecoration.Parent = this.staffsPanel;
+            this.staffsPanel.Size = new System.Drawing.Size(932, 492);
+            this.staffsPanel.TabIndex = 57;
+            // 
+            // searchStaffsTextBox
+            // 
+            this.searchStaffsTextBox.Animated = true;
+            this.searchStaffsTextBox.AutoRoundedCorners = true;
+            this.searchStaffsTextBox.BorderRadius = 15;
+            this.searchStaffsTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.searchStaffsTextBox.DefaultText = "";
+            this.searchStaffsTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.searchStaffsTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.searchStaffsTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.searchStaffsTextBox.DisabledState.Parent = this.searchStaffsTextBox;
+            this.searchStaffsTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.searchStaffsTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.searchStaffsTextBox.FocusedState.Parent = this.searchStaffsTextBox;
+            this.searchStaffsTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.searchStaffsTextBox.ForeColor = System.Drawing.Color.Black;
+            this.searchStaffsTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.searchStaffsTextBox.HoverState.Parent = this.searchStaffsTextBox;
+            this.searchStaffsTextBox.IconRight = ((System.Drawing.Image)(resources.GetObject("searchStaffsTextBox.IconRight")));
+            this.searchStaffsTextBox.Location = new System.Drawing.Point(615, 24);
+            this.searchStaffsTextBox.Margin = new System.Windows.Forms.Padding(6);
+            this.searchStaffsTextBox.Name = "searchStaffsTextBox";
+            this.searchStaffsTextBox.PasswordChar = '\0';
+            this.searchStaffsTextBox.PlaceholderText = "Search Here";
+            this.searchStaffsTextBox.SelectedText = "";
+            this.searchStaffsTextBox.ShadowDecoration.Parent = this.searchStaffsTextBox;
+            this.searchStaffsTextBox.Size = new System.Drawing.Size(304, 32);
+            this.searchStaffsTextBox.TabIndex = 33;
+            this.searchStaffsTextBox.TextChanged += new System.EventHandler(this.SearchStaffsTextBox_TextChanged);
+            // 
+            // staffsDataGridView
+            // 
+            this.staffsDataGridView.AllowUserToAddRows = false;
+            this.staffsDataGridView.AllowUserToDeleteRows = false;
+            this.staffsDataGridView.AllowUserToResizeColumns = false;
+            this.staffsDataGridView.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.staffsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.staffsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.staffsDataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.staffsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.staffsDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.staffsDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.staffsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.staffsDataGridView.ColumnHeadersHeight = 32;
+            this.staffsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(131)))), ((int)(((byte)(228)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.staffsDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            this.staffsDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.staffsDataGridView.EnableHeadersVisualStyles = false;
+            this.staffsDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.staffsDataGridView.Location = new System.Drawing.Point(0, 65);
+            this.staffsDataGridView.MultiSelect = false;
+            this.staffsDataGridView.Name = "staffsDataGridView";
+            this.staffsDataGridView.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.staffsDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.staffsDataGridView.RowHeadersVisible = false;
+            this.staffsDataGridView.RowTemplate.Height = 28;
+            this.staffsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.staffsDataGridView.Size = new System.Drawing.Size(929, 404);
+            this.staffsDataGridView.TabIndex = 0;
+            this.staffsDataGridView.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
+            this.staffsDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.staffsDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.staffsDataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.staffsDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.staffsDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.staffsDataGridView.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.staffsDataGridView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.staffsDataGridView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            this.staffsDataGridView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.staffsDataGridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.staffsDataGridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.staffsDataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.staffsDataGridView.ThemeStyle.HeaderStyle.Height = 32;
+            this.staffsDataGridView.ThemeStyle.ReadOnly = true;
+            this.staffsDataGridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.staffsDataGridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.staffsDataGridView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.staffsDataGridView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.staffsDataGridView.ThemeStyle.RowsStyle.Height = 28;
+            this.staffsDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.staffsDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1000, 625);
+            this.Controls.Add(this.staffsPanel);
+            this.Controls.Add(this.btnChangePassword);
+            this.Controls.Add(this.btnChangeInfo);
             this.Controls.Add(this.sidebarPanel);
             this.Controls.Add(this.activePanel);
             this.Controls.Add(this.btnMinimize);
@@ -224,6 +388,8 @@ namespace webTRON_Management_Software.Views.Others
             ((System.ComponentModel.ISupportInitialize)(this.activeUserPictureSidebar)).EndInit();
             this.activePanel.ResumeLayout(false);
             this.activePanel.PerformLayout();
+            this.staffsPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.staffsDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,5 +408,10 @@ namespace webTRON_Management_Software.Views.Others
         private System.Windows.Forms.Label actveForm;
         private Guna.UI2.WinForms.Guna2CirclePictureBox activeUserPictureSidebar;
         private System.Windows.Forms.Label activeUserName;
+        private Guna.UI2.WinForms.Guna2Button btnChangePassword;
+        private Guna.UI2.WinForms.Guna2Button btnChangeInfo;
+        private Guna.UI2.WinForms.Guna2Panel staffsPanel;
+        private Guna.UI2.WinForms.Guna2DataGridView staffsDataGridView;
+        private Guna.UI2.WinForms.Guna2TextBox searchStaffsTextBox;
     }
 }

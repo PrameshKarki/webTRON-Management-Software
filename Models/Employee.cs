@@ -71,6 +71,7 @@ namespace webTRON_Management_Software.Models
             return isSucess;
            
         }
+        //Method to update data on database
         public static bool Update(Employee obj)
         {
             //Declaring a default bool variable and initializing false
@@ -143,6 +144,36 @@ namespace webTRON_Management_Software.Models
             return dt;
 
         }
+        //Method to retreive staff datas from database
+        public static DataTable FetchStaffsDetails()
+        {
+            //Instantiating Data Table
+            DataTable dt = new DataTable();
+            //MySqlConnection
+            MySqlConnection conn = new MySqlConnection(connectionString);
+            //SQL Query
+            string SQLQuery = "SELECT firstName AS 'First Name',lastName AS 'Last Name',email AS 'Email',contactNumber AS 'Contact Number',role AS 'Role' FROM employeeInfo";
+            try
+            {
+                //MySQLCommand
+                MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
+                //Open Connection
+                conn.Open();
+                //Load DataTable
+                dt.Load(cmd.ExecuteReader());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                //Close Connection
+                conn.Close();
+            }
+            return dt;
+
+        }
         //Method to search data from database
         public static DataTable Search(string searchString)
         {
@@ -166,6 +197,35 @@ namespace webTRON_Management_Software.Models
             {
                 MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            finally
+            {
+                //Close Connection
+                conn.Close();
+            }
+            return dt;
+        }
+        //Method to search data from database
+        public static DataTable SearchStaffDetails(string searchString)
+        {
+            //Instantiating Data Table
+            DataTable dt = new DataTable();
+            //MySql Connection
+            MySqlConnection conn = new MySqlConnection(connectionString);
+            //SQL Query
+            string SQLQuery =$"SELECT firstName AS 'First Name',lastName AS 'Last Name',email AS 'Email',contactNumber AS 'Contact Number',role AS 'Role' FROM employeeInfo WHERE firstName LIKE '%{searchString}%' OR lastName LIKE '%{searchString}%' OR email LIKE '%{searchString}%' OR contactNumber LIKE '%{searchString}%' OR role LIKE '%{searchString}%'";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
+                //Open Connection
+                conn.Open();
+                //Load DataTable
+                dt.Load(cmd.ExecuteReader());
+            }
+            /*catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            */
             finally
             {
                 //Close Connection

@@ -28,12 +28,38 @@ namespace webTRON_Management_Software.Views.Others
             InitializeComponent();
         }
 
+        //Load event on Dashboard
         private void OtherDashboard_Load(object sender, EventArgs e)
         {
-           
+            //Load Grid View
+            LoadGridView();
+
+            //Change width height of columns,rows of grid view at run time
+            staffsDataGridView.Rows[0].Selected = false;
+            staffsDataGridView.Columns[0].Width = 150;
+            staffsDataGridView.Columns[1].Width = 150;
+            staffsDataGridView.Columns[3].Width = 150;
+            staffsDataGridView.Columns[4].Width = 100;
+
+
+            //Initialize activeUserDetails
+            InitializeActiverUserDetails();
+        }
+        //Load data on grid data table
+        private void LoadGridView()
+        {
+            //Instantiate data table
+            DataTable dt = Employee.FetchStaffsDetails();
+            staffsDataGridView.DataSource = dt;
         }
 
-       
+
+        //Initialize Active User Details
+        private void InitializeActiverUserDetails()
+        {
+            activeUserName.Text = employee.FirstName;
+          }
+
         //Sign Out
         private void SignOut(object sender, EventArgs e)
         {
@@ -71,6 +97,14 @@ namespace webTRON_Management_Software.Views.Others
             this.Hide();
         }
 
-      
+        //Text change event on search box
+        private void SearchStaffsTextBox_TextChanged(object sender, EventArgs e)
+        {
+            string searchString = searchStaffsTextBox.Text.Trim();
+            //Instantiate data table
+            DataTable dt = Employee.SearchStaffDetails(searchString);
+            staffsDataGridView.DataSource = dt;
+
+        }
     }
 }

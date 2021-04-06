@@ -17,7 +17,8 @@ namespace webTRON_Management_Software.Models
         public string password { get; set; }
 
         //Methods
-        public bool Insert(User obj)
+        //Method to insert data in database
+        public static bool Insert(User obj)
         {
             //Declaring a default bool variable and initializing false
             bool isSucess = false;
@@ -26,7 +27,7 @@ namespace webTRON_Management_Software.Models
             try
             {
                 //String SqlQuery
-                string SQLQuery ="INSERT INTO Users(userID,password) VALUES(@userID,AES_ENCRYPT(@password,'webTRON'))";
+                string SQLQuery = "INSERT INTO Users(userID,password) VALUES(@userID,AES_ENCRYPT(@password,'webTRON'))";
                 //MySql Command
                 MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
                 cmd.Parameters.AddWithValue("@userID", obj.userID);
@@ -51,6 +52,43 @@ namespace webTRON_Management_Software.Models
             return isSucess;
 
         }
+        //Method to insert data in database
+        public static bool Delete(string userID)
+        {
+            //Declaring a default bool variable and initializing false
+            bool isSucess = false;
+            //MySQL Connection
+            MySqlConnection conn = new MySqlConnection(connectionString);
+            //String SqlQuery
+            string SQLQuery = "DELETE FROM users WHERE userID=BINARY @userID";
+            try
+            {
+                
+                //MySql Command
+                MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
+                cmd.Parameters.AddWithValue("@userID",userID);
+                //Connection Open
+                conn.Open();
+                //Execute Query
+                //Here ExecuteNonQuery() returns the number of rows affected
+                int row = cmd.ExecuteNonQuery();
+                isSucess = row ==1 ? true : false;
+               
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                //Close Connection
+                conn.Close();
+            }
+            return isSucess;
+
+        }
+
         //Method to check wheather the user is authorized or not
         public static bool CheckUser(User obj)
         {
@@ -79,7 +117,7 @@ namespace webTRON_Management_Software.Models
                     MessageBox.Show("Error Occured!\nPlease try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -92,7 +130,7 @@ namespace webTRON_Management_Software.Models
 
         }
         //Method to store last loggedIn info of User
-        public bool StoreLogInInfo(string userID)
+        public static bool StoreLogInInfo(string userID)
         {
             //Creating variable and initializing it with false
             bool isSucess = false;
@@ -113,7 +151,8 @@ namespace webTRON_Management_Software.Models
                 int row = cmd.ExecuteNonQuery();
                 isSucess = row == 1 ? true : false;
 
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -126,7 +165,7 @@ namespace webTRON_Management_Software.Models
 
         }
         //Method to update last loggedIn info of User
-        public bool UpdateLogInInfo(string userID)
+        public static bool UpdateLogInInfo(string userID)
         {
             //Creating variable and initializing it with false
             bool isSucess = false;
@@ -161,7 +200,7 @@ namespace webTRON_Management_Software.Models
 
         }
         //Method to check wheather the user login is first time or not into the system
-        public bool IsFirstTimeLogin(string userID)
+        public static bool IsFirstTimeLogin(string userID)
         {
             //Declaring default bool variable and initiazling it false
             bool isFirstTime = false;
@@ -172,8 +211,8 @@ namespace webTRON_Management_Software.Models
                 //MySQL Command
                 MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
                 //Creating parameter to add values
-                cmd.Parameters.AddWithValue("@userID",userID);
-               
+                cmd.Parameters.AddWithValue("@userID", userID);
+
                 //Open Connection
                 conn.Open();
                 //ExecuteQuery->In above query it returns either 0 or 1 
@@ -201,7 +240,7 @@ namespace webTRON_Management_Software.Models
 
         }
         //Method to get user role
-        public string GetUserRole(string userID)
+        public static string GetUserRole(string userID)
         {
             string role = "undefined";
             //MySQL Connection
@@ -220,7 +259,7 @@ namespace webTRON_Management_Software.Models
                 object returnValue = cmd.ExecuteScalar();
                 if (returnValue != null)
                 {
-                     role = returnValue.ToString();
+                    role = returnValue.ToString();
                 }
                 else
                 {
@@ -239,5 +278,40 @@ namespace webTRON_Management_Software.Models
             return role;
 
         }
+        //Method to set account status
+        public static void SetAccountStatus(string userID, string status)
+        {
+            
+            //MySql Connection
+            MySqlConnection conn = new MySqlConnection(connectionString);
+            //SqlQuery
+            string SQLQuery = "INSERT INTO accountStatus VALUES(@userID,@status) ON DUPLICATE KEY UPDATE status=@status"; 
+            try
+            {
+                //SQLCommand
+                MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
+                //Add parameters
+                cmd.Parameters.AddWithValue("@userID", userID);
+                cmd.Parameters.AddWithValue("@Status", status);
+                //Open Connection
+                conn.Open();
+                //Execute query
+                cmd.ExecuteNonQuery();
+               
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            finally
+            {
+                //Close Connection
+                conn.Close();
+            }
+          
+
+        }
+
     }
 }

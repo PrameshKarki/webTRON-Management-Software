@@ -145,7 +145,7 @@ namespace webTRON_Management_Software.Utils
 
         }
         //patinetID generator
-        public static string generatePatientId()
+        public static string GeneratePatientId()
         {
             //SQLConnection
             MySqlConnection conn = new MySqlConnection(connectionString);

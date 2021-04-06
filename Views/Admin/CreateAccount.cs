@@ -54,14 +54,16 @@ namespace webTRON_Management_Software.Views.Admin
                 obj.Address = addressTextBox.Text.Trim();
                 obj.DateOfBirth = dateOfBirthPicker.Value.ToString("yyyy-MM-dd");
                 obj.ContactNumber = contactNumberTextBox.Text;
-                
+
                 //UserID
-                if(roleComboBox.Text=="Doctor")
-                     obj.UserID = Generator.GenerateDoctorId();
+                if (roleComboBox.Text == "Doctor")
+                    obj.UserID = Generator.GenerateDoctorId();
                 else if (roleComboBox.Text == "Admin")
                     obj.UserID = Generator.GenerateAdminId();
                 else if (roleComboBox.Text == "Accountant")
                     obj.UserID = Generator.GenerateAccountantId();
+                else if (roleComboBox.Text == "Others")
+                    obj.UserID = Generator.GenerateEmployeeId();
                 
                 //Fetch Sex
                 if (isMale.Checked)
@@ -131,9 +133,12 @@ namespace webTRON_Management_Software.Views.Admin
         private bool StoreUser()
         {
            //If account is created sucesfully then store corresponding user's userID and password in (users) table
+           //Also set account status active in accountStatus table
             newUser.userID = obj.UserID;
             newUser.password = Generator.GeneratePassword();
-            bool isSucess=newUser.Insert(newUser);
+            //Set account status "Active"
+            User.SetAccountStatus(newUser.userID, "Active");
+            bool isSucess=User.Insert(newUser);
             return isSucess;
             
         }

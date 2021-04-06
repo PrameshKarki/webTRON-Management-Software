@@ -76,6 +76,9 @@ C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-So
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.SearchAndUpdatePatient.resources
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.Search.resources
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.ChangePassword.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON Management Software.csprojAssemblyReference.cache
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.ChangeInfo.resources
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Utilities.ChangePassword.resources
+C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Others.Settings.resources
+C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Others.ChangeInfo.resources
+C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Others.ChangePassword.resources
+C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON Management Software.csprojAssemblyReference.cache

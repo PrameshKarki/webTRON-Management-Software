@@ -11,14 +11,14 @@ using webTRON_Management_Software.Models;
 using webTRON_Management_Software.Utils;
 using webTRON_Management_Software.Views.Landing_Window;
 
-namespace webTRON_Management_Software.Views.Admin
+namespace webTRON_Management_Software.Views.Others
 {
     public partial class ChangePassword : Form
     {
         string newPassword = "", confirmPassword = "";
-
-        //Instantiate Employee Class
+        //Instantiate employee class
         Employee employee = new Employee();
+
         public ChangePassword()
         {
             InitializeComponent();
@@ -28,19 +28,39 @@ namespace webTRON_Management_Software.Views.Admin
             employee = emp;
             InitializeComponent();
         }
-
+        //Load event on change password form
         private void ChangePassword_Load(object sender, EventArgs e)
         {
             //Initialize active user details
             InitializeActiverUserDetails();
+
         }
         //Initialize Active User Details
         private void InitializeActiverUserDetails()
         {
             activeUserName.Text = employee.FirstName;
+
+
         }
 
-        //Sign Out User
+        //Click event on dashboard button
+        private void BtnDashboard_Click(object sender, EventArgs e)
+        {
+            //instantiate dashboard form
+            var dashboard = new Dashboard(employee);
+            dashboard.Show();
+            this.Close();
+        }
+        //Click event on Settings button
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            //Instantiate settings form
+            var settings = new Settings(employee);
+            settings.Show();
+            this.Close();
+
+        }
+        //Sign Out
         private void SignOut(object sender, EventArgs e)
         {
             //WARNING:To check which element has clicked          
@@ -64,91 +84,13 @@ namespace webTRON_Management_Software.Views.Admin
 
             }
         }
+
         //Click event on minimize button
         private void BtnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
-        //Click event on dashboard button
-        private void BtnDashboard_Click(object sender, EventArgs e)
-        {
-            var dashboard = new Admin.Dashboard(employee);
-            dashboard.Show();
-            this.Hide();
-        }
-
-        //Click event on users button
-        private void BtnUsers_Click(object sender, EventArgs e)
-        {
-
-            //Instantiating user form
-            var users = new Users(employee);
-            users.Show();
-            this.Hide();
-        }
-
-        //Click event on settings button
-        private void BtnSettings_Click(object sender, EventArgs e)
-        {
-            //Instantiating Settings form
-            var settings = new Settings(employee);
-            settings.Show();
-            this.Hide();
-
-        }
-        //Click event on change password
-        private void BtnChangePassword_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(currentPasswordTextBox.Text) || string.IsNullOrEmpty(newPasswordTextBox.Text) || string.IsNullOrEmpty(confirmPasswordTextBox.Text))
-            {
-                MessageBox.Show("Please fill all the fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                string currentPassword = currentPasswordTextBox.Text;
-
-                //Instantiate User Class
-                User usr = new User();
-                usr.userID = employee.UserID;
-                usr.password = currentPassword;
-
-                //Check current password or not
-                bool isValid = User.CheckUser(usr);
-                if (isValid)
-                {
-                     newPassword = newPasswordTextBox.Text;
-                     confirmPassword = confirmPasswordTextBox.Text;
-                    if (newPassword == confirmPassword)
-                    {
-                        //Send verification code and store code in database
-                        int code = Generator.GenerateVerificationCode();
-                        bool isMailSendSucessfully = Email.SendVerificationCode(code, employee.Email);
-                        bool isCodeStoredSucessfully = Employee.StoreVerificationCode(employee.Email, code);
-                        if (isMailSendSucessfully && isCodeStoredSucessfully)
-                        {
-                            //Show confirmation code panel
-                            verificationCodePanel.Visible = true;
-                        }
-                        else
-                        {
-                            MessageBox.Show("Please try again later.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("Password doesn't match.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Password doesn't match.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-            }
-        }
-        //Click event on verifiy button
+        //Click event on verify button
         private void BtnVerify_Click(object sender, EventArgs e)
         {
             //Check all the text fields are filled or not
@@ -188,16 +130,11 @@ namespace webTRON_Management_Software.Views.Admin
                 }
 
             }
-
-        }
-        //Enter event on verification code panel
-        private void VerificationCodePanel_Enter(object sender, EventArgs e)
-        {
-            verificationCodeTextBox1.Focus();
         }
         //Text change event on verification code text box
         private void VerificationCodeTextBox1_TextChanged(object sender, EventArgs e)
         {
+
             if (verificationCodeTextBox1.Text.Length == 1)
             {
                 verificationCodeTextBox2.Focus();
@@ -211,6 +148,7 @@ namespace webTRON_Management_Software.Views.Admin
             {
                 verificationCodeTextBox3.Focus();
             }
+
         }
 
         private void VerificationCodeTextBox3_TextChanged(object sender, EventArgs e)
@@ -220,6 +158,7 @@ namespace webTRON_Management_Software.Views.Admin
                 verificationCodeTextBox4.Focus();
             }
 
+
         }
 
         private void VerificationCodeTextBox4_TextChanged(object sender, EventArgs e)
@@ -228,6 +167,61 @@ namespace webTRON_Management_Software.Views.Admin
             {
                 btnVerify.Focus();
             }
+
+        }
+
+        //Click event on change password button
+        private void BtnChangePassword_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(currentPasswordTextBox.Text) || string.IsNullOrEmpty(newPasswordTextBox.Text) || string.IsNullOrEmpty(confirmPasswordTextBox.Text))
+            {
+                MessageBox.Show("Please fill all the fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                string currentPassword = currentPasswordTextBox.Text;
+
+                //Instantiate User Class
+                User usr = new User();
+                usr.userID = employee.UserID;
+                usr.password = currentPassword;
+
+                //Check current password or not
+                bool isValid = User.CheckUser(usr);
+                if (isValid)
+                {
+                    newPassword = newPasswordTextBox.Text;
+                    confirmPassword = confirmPasswordTextBox.Text;
+                    if (newPassword == confirmPassword)
+                    {
+                        //Send verification code and store code in database
+                        int code = Generator.GenerateVerificationCode();
+                        bool isMailSendSucessfully = Email.SendVerificationCode(code, employee.Email);
+                        bool isCodeStoredSucessfully = Employee.StoreVerificationCode(employee.Email, code);
+                        if (isMailSendSucessfully && isCodeStoredSucessfully)
+                        {
+                            //Show confirmation code panel
+                            verificationCodePanel.Visible = true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Please try again later.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Password doesn't match.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Password doesn't match.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+
 
         }
     }

@@ -1,5 +1,5 @@
 ﻿
-namespace webTRON_Management_Software.Views.Admin
+namespace webTRON_Management_Software.Views.Others
 {
     partial class ChangePassword
     {
@@ -32,24 +32,23 @@ namespace webTRON_Management_Software.Views.Admin
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChangePassword));
             this.DragableChangePassword = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.btnExit = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
             this.sidebarPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.btnSignOut = new Guna.UI2.WinForms.Guna2Button();
             this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
-            this.btnUsers = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
-            this.activeUserPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.activeForm = new System.Windows.Forms.Label();
-            this.activeUserPicture = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.activePanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.actveForm = new System.Windows.Forms.Label();
+            this.activeUserPictureSidebar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.activeUserName = new System.Windows.Forms.Label();
-            this.btnMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnExit = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.currentPasswordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblCurrentPassword = new System.Windows.Forms.Label();
             this.lblConfirmPassword = new System.Windows.Forms.Label();
             this.confirmPasswordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.newPasswordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblNewPassword = new System.Windows.Forms.Label();
             this.btnChangePassword = new Guna.UI2.WinForms.Guna2Button();
-            this.currentPasswordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblCurrentPassword = new System.Windows.Forms.Label();
             this.verificationCodePanel = new Guna.UI2.WinForms.Guna2Panel();
             this.verificationCodeTextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.verificationCodeTextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -57,30 +56,55 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnVerify = new Guna.UI2.WinForms.Guna2Button();
             this.lblEnterVerificationCode = new System.Windows.Forms.Label();
             this.verificationCodeTextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.sidebarPanel.SuspendLayout();
-            this.activeUserPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
+            this.sidebarPanel.SuspendLayout();
+            this.activePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.activeUserPictureSidebar)).BeginInit();
             this.verificationCodePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // DragableChangePassword
             // 
-            this.DragableChangePassword.TargetControl = this;
+            this.DragableChangePassword.TargetControl = null;
+            // 
+            // btnExit
+            // 
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.Location = new System.Drawing.Point(966, 7);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.ShadowDecoration.Parent = this.btnExit;
+            this.btnExit.Size = new System.Drawing.Size(28, 28);
+            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnExit.TabIndex = 37;
+            this.btnExit.TabStop = false;
+            this.btnExit.Click += new System.EventHandler(this.SignOut);
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
+            this.btnMinimize.Location = new System.Drawing.Point(917, 22);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.ShadowDecoration.Parent = this.btnMinimize;
+            this.btnMinimize.Size = new System.Drawing.Size(21, 4);
+            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnMinimize.TabIndex = 38;
+            this.btnMinimize.TabStop = false;
+            this.btnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
             // 
             // sidebarPanel
             // 
             this.sidebarPanel.Controls.Add(this.btnSignOut);
             this.sidebarPanel.Controls.Add(this.btnSettings);
-            this.sidebarPanel.Controls.Add(this.btnUsers);
             this.sidebarPanel.Controls.Add(this.btnDashboard);
             this.sidebarPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            this.sidebarPanel.Location = new System.Drawing.Point(-1, -2);
+            this.sidebarPanel.Location = new System.Drawing.Point(0, -2);
             this.sidebarPanel.Name = "sidebarPanel";
             this.sidebarPanel.ShadowDecoration.Parent = this.sidebarPanel;
             this.sidebarPanel.Size = new System.Drawing.Size(68, 532);
-            this.sidebarPanel.TabIndex = 32;
+            this.sidebarPanel.TabIndex = 39;
             // 
             // btnSignOut
             // 
@@ -114,7 +138,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnSettings.HoverState.Parent = this.btnSettings;
             this.btnSettings.Image = global::webTRON_Management_Software.Properties.Resources.settings_icon;
             this.btnSettings.ImageOffset = new System.Drawing.Point(10, -12);
-            this.btnSettings.Location = new System.Drawing.Point(0, 272);
+            this.btnSettings.Location = new System.Drawing.Point(0, 185);
             this.btnSettings.Margin = new System.Windows.Forms.Padding(0);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.ShadowDecoration.Parent = this.btnSettings;
@@ -122,28 +146,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnSettings.TabIndex = 23;
             this.btnSettings.Text = "Settings";
             this.btnSettings.TextOffset = new System.Drawing.Point(-8, 10);
-            this.btnSettings.Click += new System.EventHandler(this.BtnSettings_Click);
-            // 
-            // btnUsers
-            // 
-            this.btnUsers.Animated = true;
-            this.btnUsers.CheckedState.Parent = this.btnUsers;
-            this.btnUsers.CustomImages.Parent = this.btnUsers;
-            this.btnUsers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            this.btnUsers.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsers.ForeColor = System.Drawing.Color.White;
-            this.btnUsers.HoverState.Parent = this.btnUsers;
-            this.btnUsers.Image = global::webTRON_Management_Software.Properties.Resources.user_icon;
-            this.btnUsers.ImageOffset = new System.Drawing.Point(6, -12);
-            this.btnUsers.Location = new System.Drawing.Point(0, 195);
-            this.btnUsers.Margin = new System.Windows.Forms.Padding(0);
-            this.btnUsers.Name = "btnUsers";
-            this.btnUsers.ShadowDecoration.Parent = this.btnUsers;
-            this.btnUsers.Size = new System.Drawing.Size(68, 48);
-            this.btnUsers.TabIndex = 22;
-            this.btnUsers.Text = "Users";
-            this.btnUsers.TextOffset = new System.Drawing.Point(-8, 10);
-            this.btnUsers.Click += new System.EventHandler(this.BtnUsers_Click);
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // btnDashboard
             // 
@@ -166,43 +169,43 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnDashboard.TextOffset = new System.Drawing.Point(-6, 10);
             this.btnDashboard.Click += new System.EventHandler(this.BtnDashboard_Click);
             // 
-            // activeUserPanel
+            // activePanel
             // 
-            this.activeUserPanel.BackgroundImage = global::webTRON_Management_Software.Properties.Resources.rectangle_curved_large;
-            this.activeUserPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.activeUserPanel.Controls.Add(this.activeForm);
-            this.activeUserPanel.Controls.Add(this.activeUserPicture);
-            this.activeUserPanel.Controls.Add(this.activeUserName);
-            this.activeUserPanel.Location = new System.Drawing.Point(60, -3);
-            this.activeUserPanel.Name = "activeUserPanel";
-            this.activeUserPanel.ShadowDecoration.Parent = this.activeUserPanel;
-            this.activeUserPanel.Size = new System.Drawing.Size(165, 80);
-            this.activeUserPanel.TabIndex = 31;
+            this.activePanel.BackgroundImage = global::webTRON_Management_Software.Properties.Resources.rectangle_curved_large;
+            this.activePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.activePanel.Controls.Add(this.actveForm);
+            this.activePanel.Controls.Add(this.activeUserPictureSidebar);
+            this.activePanel.Controls.Add(this.activeUserName);
+            this.activePanel.Location = new System.Drawing.Point(66, -1);
+            this.activePanel.Name = "activePanel";
+            this.activePanel.ShadowDecoration.Parent = this.activePanel;
+            this.activePanel.Size = new System.Drawing.Size(165, 80);
+            this.activePanel.TabIndex = 40;
             // 
-            // activeForm
+            // actveForm
             // 
-            this.activeForm.AutoSize = true;
-            this.activeForm.BackColor = System.Drawing.Color.Transparent;
-            this.activeForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.activeForm.ForeColor = System.Drawing.Color.White;
-            this.activeForm.Location = new System.Drawing.Point(62, 44);
-            this.activeForm.Name = "activeForm";
-            this.activeForm.Size = new System.Drawing.Size(68, 20);
-            this.activeForm.TabIndex = 21;
-            this.activeForm.Text = "Settings";
+            this.actveForm.AutoSize = true;
+            this.actveForm.BackColor = System.Drawing.Color.Transparent;
+            this.actveForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.actveForm.ForeColor = System.Drawing.Color.White;
+            this.actveForm.Location = new System.Drawing.Point(64, 40);
+            this.actveForm.Name = "actveForm";
+            this.actveForm.Size = new System.Drawing.Size(68, 20);
+            this.actveForm.TabIndex = 21;
+            this.actveForm.Text = "Settings";
             // 
-            // activeUserPicture
+            // activeUserPictureSidebar
             // 
-            this.activeUserPicture.BackColor = System.Drawing.Color.Transparent;
-            this.activeUserPicture.Image = global::webTRON_Management_Software.Properties.Resources.man_picture;
-            this.activeUserPicture.Location = new System.Drawing.Point(9, 17);
-            this.activeUserPicture.Name = "activeUserPicture";
-            this.activeUserPicture.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.activeUserPicture.ShadowDecoration.Parent = this.activeUserPicture;
-            this.activeUserPicture.Size = new System.Drawing.Size(49, 45);
-            this.activeUserPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.activeUserPicture.TabIndex = 0;
-            this.activeUserPicture.TabStop = false;
+            this.activeUserPictureSidebar.BackColor = System.Drawing.Color.Transparent;
+            this.activeUserPictureSidebar.Image = global::webTRON_Management_Software.Properties.Resources.man_picture;
+            this.activeUserPictureSidebar.Location = new System.Drawing.Point(7, 13);
+            this.activeUserPictureSidebar.Name = "activeUserPictureSidebar";
+            this.activeUserPictureSidebar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.activeUserPictureSidebar.ShadowDecoration.Parent = this.activeUserPictureSidebar;
+            this.activeUserPictureSidebar.Size = new System.Drawing.Size(49, 45);
+            this.activeUserPictureSidebar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.activeUserPictureSidebar.TabIndex = 0;
+            this.activeUserPictureSidebar.TabStop = false;
             // 
             // activeUserName
             // 
@@ -210,46 +213,57 @@ namespace webTRON_Management_Software.Views.Admin
             this.activeUserName.BackColor = System.Drawing.Color.Transparent;
             this.activeUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.activeUserName.ForeColor = System.Drawing.Color.White;
-            this.activeUserName.Location = new System.Drawing.Point(60, 13);
+            this.activeUserName.Location = new System.Drawing.Point(64, 9);
             this.activeUserName.Name = "activeUserName";
             this.activeUserName.Size = new System.Drawing.Size(52, 24);
             this.activeUserName.TabIndex = 1;
             this.activeUserName.Text = "John";
             // 
-            // btnMinimize
+            // currentPasswordTextBox
             // 
-            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
-            this.btnMinimize.Location = new System.Drawing.Point(911, 21);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.ShadowDecoration.Parent = this.btnMinimize;
-            this.btnMinimize.Size = new System.Drawing.Size(21, 4);
-            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnMinimize.TabIndex = 34;
-            this.btnMinimize.TabStop = false;
-            this.btnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
+            this.currentPasswordTextBox.Animated = true;
+            this.currentPasswordTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.currentPasswordTextBox.DefaultText = "";
+            this.currentPasswordTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.currentPasswordTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.currentPasswordTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.currentPasswordTextBox.DisabledState.Parent = this.currentPasswordTextBox;
+            this.currentPasswordTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.currentPasswordTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.currentPasswordTextBox.FocusedState.Parent = this.currentPasswordTextBox;
+            this.currentPasswordTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.currentPasswordTextBox.ForeColor = System.Drawing.Color.Black;
+            this.currentPasswordTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.currentPasswordTextBox.HoverState.Parent = this.currentPasswordTextBox;
+            this.currentPasswordTextBox.Location = new System.Drawing.Point(430, 135);
+            this.currentPasswordTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.currentPasswordTextBox.Name = "currentPasswordTextBox";
+            this.currentPasswordTextBox.PasswordChar = '\0';
+            this.currentPasswordTextBox.PlaceholderText = "Current Password";
+            this.currentPasswordTextBox.SelectedText = "";
+            this.currentPasswordTextBox.ShadowDecoration.Parent = this.currentPasswordTextBox;
+            this.currentPasswordTextBox.Size = new System.Drawing.Size(258, 36);
+            this.currentPasswordTextBox.TabIndex = 42;
+            this.currentPasswordTextBox.UseSystemPasswordChar = true;
             // 
-            // btnExit
+            // lblCurrentPassword
             // 
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(960, 6);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.ShadowDecoration.Parent = this.btnExit;
-            this.btnExit.Size = new System.Drawing.Size(28, 28);
-            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnExit.TabIndex = 33;
-            this.btnExit.TabStop = false;
-            this.btnExit.Click += new System.EventHandler(this.SignOut);
+            this.lblCurrentPassword.AutoSize = true;
+            this.lblCurrentPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.lblCurrentPassword.Location = new System.Drawing.Point(427, 94);
+            this.lblCurrentPassword.Name = "lblCurrentPassword";
+            this.lblCurrentPassword.Size = new System.Drawing.Size(164, 24);
+            this.lblCurrentPassword.TabIndex = 48;
+            this.lblCurrentPassword.Text = "Current Password:";
             // 
             // lblConfirmPassword
             // 
             this.lblConfirmPassword.AutoSize = true;
             this.lblConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.lblConfirmPassword.Location = new System.Drawing.Point(371, 288);
+            this.lblConfirmPassword.Location = new System.Drawing.Point(427, 271);
             this.lblConfirmPassword.Name = "lblConfirmPassword";
             this.lblConfirmPassword.Size = new System.Drawing.Size(167, 24);
-            this.lblConfirmPassword.TabIndex = 39;
+            this.lblConfirmPassword.TabIndex = 47;
             this.lblConfirmPassword.Text = "Confirm Password:";
             // 
             // confirmPasswordTextBox
@@ -268,7 +282,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.confirmPasswordTextBox.ForeColor = System.Drawing.Color.Black;
             this.confirmPasswordTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.confirmPasswordTextBox.HoverState.Parent = this.confirmPasswordTextBox;
-            this.confirmPasswordTextBox.Location = new System.Drawing.Point(376, 326);
+            this.confirmPasswordTextBox.Location = new System.Drawing.Point(432, 309);
             this.confirmPasswordTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.confirmPasswordTextBox.Name = "confirmPasswordTextBox";
             this.confirmPasswordTextBox.PasswordChar = '\0';
@@ -276,7 +290,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.confirmPasswordTextBox.SelectedText = "";
             this.confirmPasswordTextBox.ShadowDecoration.Parent = this.confirmPasswordTextBox;
             this.confirmPasswordTextBox.Size = new System.Drawing.Size(258, 36);
-            this.confirmPasswordTextBox.TabIndex = 2;
+            this.confirmPasswordTextBox.TabIndex = 44;
             this.confirmPasswordTextBox.UseSystemPasswordChar = true;
             // 
             // newPasswordTextBox
@@ -295,7 +309,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.newPasswordTextBox.ForeColor = System.Drawing.Color.Black;
             this.newPasswordTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.newPasswordTextBox.HoverState.Parent = this.newPasswordTextBox;
-            this.newPasswordTextBox.Location = new System.Drawing.Point(375, 243);
+            this.newPasswordTextBox.Location = new System.Drawing.Point(431, 226);
             this.newPasswordTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.newPasswordTextBox.Name = "newPasswordTextBox";
             this.newPasswordTextBox.PasswordChar = '\0';
@@ -303,17 +317,17 @@ namespace webTRON_Management_Software.Views.Admin
             this.newPasswordTextBox.SelectedText = "";
             this.newPasswordTextBox.ShadowDecoration.Parent = this.newPasswordTextBox;
             this.newPasswordTextBox.Size = new System.Drawing.Size(258, 36);
-            this.newPasswordTextBox.TabIndex = 1;
+            this.newPasswordTextBox.TabIndex = 43;
             this.newPasswordTextBox.UseSystemPasswordChar = true;
             // 
             // lblNewPassword
             // 
             this.lblNewPassword.AutoSize = true;
             this.lblNewPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.lblNewPassword.Location = new System.Drawing.Point(372, 202);
+            this.lblNewPassword.Location = new System.Drawing.Point(428, 185);
             this.lblNewPassword.Name = "lblNewPassword";
             this.lblNewPassword.Size = new System.Drawing.Size(141, 24);
-            this.lblNewPassword.TabIndex = 36;
+            this.lblNewPassword.TabIndex = 46;
             this.lblNewPassword.Text = "New Password:";
             // 
             // btnChangePassword
@@ -325,50 +339,13 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnChangePassword.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.btnChangePassword.ForeColor = System.Drawing.Color.White;
             this.btnChangePassword.HoverState.Parent = this.btnChangePassword;
-            this.btnChangePassword.Location = new System.Drawing.Point(376, 401);
+            this.btnChangePassword.Location = new System.Drawing.Point(432, 384);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.ShadowDecoration.Parent = this.btnChangePassword;
             this.btnChangePassword.Size = new System.Drawing.Size(258, 53);
-            this.btnChangePassword.TabIndex = 3;
+            this.btnChangePassword.TabIndex = 45;
             this.btnChangePassword.Text = "Change Password";
             this.btnChangePassword.Click += new System.EventHandler(this.BtnChangePassword_Click);
-            // 
-            // currentPasswordTextBox
-            // 
-            this.currentPasswordTextBox.Animated = true;
-            this.currentPasswordTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.currentPasswordTextBox.DefaultText = "";
-            this.currentPasswordTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.currentPasswordTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.currentPasswordTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.currentPasswordTextBox.DisabledState.Parent = this.currentPasswordTextBox;
-            this.currentPasswordTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.currentPasswordTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.currentPasswordTextBox.FocusedState.Parent = this.currentPasswordTextBox;
-            this.currentPasswordTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.currentPasswordTextBox.ForeColor = System.Drawing.Color.Black;
-            this.currentPasswordTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.currentPasswordTextBox.HoverState.Parent = this.currentPasswordTextBox;
-            this.currentPasswordTextBox.Location = new System.Drawing.Point(374, 152);
-            this.currentPasswordTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.currentPasswordTextBox.Name = "currentPasswordTextBox";
-            this.currentPasswordTextBox.PasswordChar = '\0';
-            this.currentPasswordTextBox.PlaceholderText = "Current Password";
-            this.currentPasswordTextBox.SelectedText = "";
-            this.currentPasswordTextBox.ShadowDecoration.Parent = this.currentPasswordTextBox;
-            this.currentPasswordTextBox.Size = new System.Drawing.Size(258, 36);
-            this.currentPasswordTextBox.TabIndex = 0;
-            this.currentPasswordTextBox.UseSystemPasswordChar = true;
-            // 
-            // lblCurrentPassword
-            // 
-            this.lblCurrentPassword.AutoSize = true;
-            this.lblCurrentPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.lblCurrentPassword.Location = new System.Drawing.Point(371, 111);
-            this.lblCurrentPassword.Name = "lblCurrentPassword";
-            this.lblCurrentPassword.Size = new System.Drawing.Size(164, 24);
-            this.lblCurrentPassword.TabIndex = 41;
-            this.lblCurrentPassword.Text = "Current Password:";
             // 
             // verificationCodePanel
             // 
@@ -378,13 +355,12 @@ namespace webTRON_Management_Software.Views.Admin
             this.verificationCodePanel.Controls.Add(this.btnVerify);
             this.verificationCodePanel.Controls.Add(this.lblEnterVerificationCode);
             this.verificationCodePanel.Controls.Add(this.verificationCodeTextBox1);
-            this.verificationCodePanel.Location = new System.Drawing.Point(231, 41);
+            this.verificationCodePanel.Location = new System.Drawing.Point(278, 34);
             this.verificationCodePanel.Name = "verificationCodePanel";
             this.verificationCodePanel.ShadowDecoration.Parent = this.verificationCodePanel;
             this.verificationCodePanel.Size = new System.Drawing.Size(561, 480);
-            this.verificationCodePanel.TabIndex = 42;
+            this.verificationCodePanel.TabIndex = 49;
             this.verificationCodePanel.Visible = false;
-            this.verificationCodePanel.Enter += new System.EventHandler(this.VerificationCodePanel_Enter);
             // 
             // verificationCodeTextBox2
             // 
@@ -539,21 +515,20 @@ namespace webTRON_Management_Software.Views.Admin
             this.Controls.Add(this.newPasswordTextBox);
             this.Controls.Add(this.lblNewPassword);
             this.Controls.Add(this.btnChangePassword);
-            this.Controls.Add(this.btnMinimize);
-            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.sidebarPanel);
-            this.Controls.Add(this.activeUserPanel);
+            this.Controls.Add(this.activePanel);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnMinimize);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ChangePassword";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChangePassword";
             this.Load += new System.EventHandler(this.ChangePassword_Load);
-            this.sidebarPanel.ResumeLayout(false);
-            this.activeUserPanel.ResumeLayout(false);
-            this.activeUserPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
+            this.sidebarPanel.ResumeLayout(false);
+            this.activePanel.ResumeLayout(false);
+            this.activePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.activeUserPictureSidebar)).EndInit();
             this.verificationCodePanel.ResumeLayout(false);
             this.verificationCodePanel.PerformLayout();
             this.ResumeLayout(false);
@@ -564,17 +539,16 @@ namespace webTRON_Management_Software.Views.Admin
         #endregion
 
         private Guna.UI2.WinForms.Guna2DragControl DragableChangePassword;
+        private Guna.UI2.WinForms.Guna2PictureBox btnExit;
+        private Guna.UI2.WinForms.Guna2PictureBox btnMinimize;
         private Guna.UI2.WinForms.Guna2Panel sidebarPanel;
         private Guna.UI2.WinForms.Guna2Button btnSignOut;
         private Guna.UI2.WinForms.Guna2Button btnSettings;
-        private Guna.UI2.WinForms.Guna2Button btnUsers;
         private Guna.UI2.WinForms.Guna2Button btnDashboard;
-        private Guna.UI2.WinForms.Guna2Panel activeUserPanel;
-        private System.Windows.Forms.Label activeForm;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox activeUserPicture;
+        private Guna.UI2.WinForms.Guna2Panel activePanel;
+        private System.Windows.Forms.Label actveForm;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox activeUserPictureSidebar;
         private System.Windows.Forms.Label activeUserName;
-        private Guna.UI2.WinForms.Guna2PictureBox btnMinimize;
-        private Guna.UI2.WinForms.Guna2PictureBox btnExit;
         private Guna.UI2.WinForms.Guna2TextBox currentPasswordTextBox;
         private System.Windows.Forms.Label lblCurrentPassword;
         private System.Windows.Forms.Label lblConfirmPassword;

@@ -117,6 +117,18 @@
     <Compile Include="Views\Doctor\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Others\ChangeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Others\ChangeInfo.Designer.cs">
+      <DependentUpon>ChangeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Others\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Others\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Others\Settings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +207,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Doctor\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Others\ChangeInfo.resx">
+      <DependentUpon>ChangeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Others\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Others\Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Utilities\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>

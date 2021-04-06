@@ -22,7 +22,7 @@ namespace webTRON_Management_Software.Views.Accountant
 
         private void CreatePatient_Load(object sender, EventArgs e)
         {
-            string regNumber = Generator.generatePatientId();
+            string regNumber = Generator.GeneratePatientId();
             string regDate = Generator.getRegistrationDate();
             lblRegistrationIdOutput.Text = regNumber;
             lblRegistrationDateOutput.Text = regDate;
@@ -59,7 +59,7 @@ namespace webTRON_Management_Software.Views.Accountant
             }
             else
             {
-                ptn.Registration_Number = Generator.generatePatientId();
+                ptn.Registration_Number = Generator.GeneratePatientId();
                 ptn.Registration_Date = Generator.getRegistrationDate();
                 ptn.FirstName = firstNameTxtBox.Text;
                 ptn.LastName = lastNameTextBox.Text;
@@ -98,7 +98,7 @@ namespace webTRON_Management_Software.Views.Accountant
 
 
                     //TO DISPLAY THE NEXT REGISTRATION ID AFTER INSERTING THE INFO OF ONE PATIENT...
-                    string regNumber = Generator.generatePatientId();
+                    string regNumber = Generator.GeneratePatientId();
                     string regDate = Generator.getRegistrationDate();
                     lblRegistrationIdOutput.Text = regNumber;
                     lblRegistrationDateOutput.Text = regDate;

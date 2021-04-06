@@ -242,7 +242,7 @@
             this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnMinimize.TabIndex = 2;
             this.btnMinimize.TabStop = false;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            this.btnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
             // 
             // btnClose
             // 
@@ -255,7 +255,7 @@
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnClose.TabIndex = 1;
             this.btnClose.TabStop = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // topLeftCurvePicture
             // 

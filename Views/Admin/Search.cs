@@ -14,8 +14,12 @@ namespace webTRON_Management_Software.Views.Admin
 {
     public partial class Search : Form
     {
+        private bool selectionChanged;
+
         //Instantiating Employee Class
         Employee employee = new Employee();
+       
+
         public Search()
         {
             InitializeComponent();
@@ -52,8 +56,11 @@ namespace webTRON_Management_Software.Views.Admin
         //Load event on Search form
         private void Search_Load(object sender, EventArgs e)
         {
+            
+            
             LoadGridView();
             //Set Width of columns here
+
             //Initialize activer user details
             InitializeActiverUserDetails();
 
@@ -83,7 +90,7 @@ namespace webTRON_Management_Software.Views.Admin
 
         }
         //Click event on settings icon
-        private void btnSettings_Click(object sender, EventArgs e)
+        private void BtnSettings_Click(object sender, EventArgs e)
         {
             //Instantiating Settings form
             var setting = new Settings(employee);
@@ -91,7 +98,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.Hide();
         }
         //Click event on Minimize button
-        private void btnMinimize_Click(object sender, EventArgs e)
+        private void BtnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
@@ -113,6 +120,63 @@ namespace webTRON_Management_Software.Views.Admin
 
         }
 
+        //CellClick event on DataGridView
+        private void DataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            SetButtonStatus();
 
+            if (!selectionChanged)
+            {
+                DataGridView.ClearSelection();
+                selectionChanged = true;
+            }
+            else
+            {
+                selectionChanged = false;
+            }
+        }
+
+        //Selection change event on DataGriwView
+        private void DataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            selectionChanged = true;
+        }
+        //Set button color
+        private void SetButtonStatus()
+        {
+            if (DataGridView.CurrentCell.RowIndex < 0)
+            {
+                btnDelete.Enabled = false;
+            }
+            else
+            {
+                btnDelete.Enabled=true;
+            }
+        }
+        //Click event on delete button
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {   
+            //Get current row index
+            int index = DataGridView.CurrentCell.RowIndex;
+            string userID = DataGridView.Rows[index].Cells[0].Value.ToString();
+            var returnValue=MessageBox.Show("Are you sure?","Confirmation",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            if (returnValue.ToString() == "Yes")
+            {
+                bool isDeleted = User.Delete(userID);
+                User.SetAccountStatus(userID, "Inactive");
+
+                if (isDeleted)
+                {
+                    MessageBox.Show("Account deleted sucessfully.", "Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Error occured!Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            
+
+           
+        }
     }
 }

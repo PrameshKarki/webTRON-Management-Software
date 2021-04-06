@@ -54,7 +54,7 @@ namespace webTRON_Management_Software.Views.Landing_Window
                     Employee.SetStatus(newUser.userID, "Online");
 
                     //check wheather the user login is first time or not into the system
-                    bool isFirstTime = newUser.IsFirstTimeLogin(newUser.userID);
+                    bool isFirstTime = User.IsFirstTimeLogin(newUser.userID);
                     if (isFirstTime)
                     {
                         this.Hide();
@@ -62,12 +62,12 @@ namespace webTRON_Management_Software.Views.Landing_Window
                         Utilities.ChangePassword changePassword = new Utilities.ChangePassword(activeUser);
                         changePassword.ShowDialog();
                         //Than store loginInfo in database
-                        newUser.StoreLogInInfo(newUser.userID);
+                        User.StoreLogInInfo(newUser.userID);
 
                     }
                     else
                     {
-                        newUser.UpdateLogInInfo(newUser.userID);
+                        User.UpdateLogInInfo(newUser.userID);
 
                     }
                     //Authorize User
@@ -82,12 +82,12 @@ namespace webTRON_Management_Software.Views.Landing_Window
 
         }
         //Minimize button click event
-        private void btnMinimize_Click(object sender, EventArgs e)
+        private void BtnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
         //Close button click event
-        private void btnClose_Click(object sender, EventArgs e)
+        private void BtnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -95,7 +95,7 @@ namespace webTRON_Management_Software.Views.Landing_Window
         private void AuthorizeUser()
         {
             //Get User Role
-            string userRole = newUser.GetUserRole(newUser.userID);
+            string userRole = User.GetUserRole(newUser.userID);
 
             switch (userRole)
             {

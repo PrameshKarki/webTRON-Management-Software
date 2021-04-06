@@ -47,8 +47,6 @@ namespace webTRON_Management_Software.Views.Admin
                 {
                     Application.Exit();
                 }
-
-
             }
         }
         //Initialize Active User Details
@@ -188,5 +186,6 @@ namespace webTRON_Management_Software.Views.Admin
             isFemale.Checked = false;
             isOthers.Checked = false;
         }
+
     }
 }
