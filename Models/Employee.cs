@@ -58,11 +58,11 @@ namespace webTRON_Management_Software.Models
 
             }
             
-            catch(Exception ex)
+             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+         
             finally
             {
                 //Close Connection
@@ -122,7 +122,7 @@ namespace webTRON_Management_Software.Models
             //MySqlConnection
             MySqlConnection conn = new MySqlConnection(connectionString);
             //SQL Query
-            string SQLQuery = "SELECT userID AS 'User ID',firstName AS 'First Name',lastName AS 'Last Name',email AS 'Email',address AS 'Address',contactNumber AS 'Contact Number',dateOfBirth AS 'Date Of Birth',sex AS 'Sex',role AS 'Role',status AS 'Status' FROM employeeInfo";
+            string SQLQuery = "SELECT userID AS 'User ID',firstName AS 'First Name',lastName AS 'Last Name',email AS 'Email',address AS 'Address',contactNumber AS 'Contact Number',dateOfBirth AS 'Date Of Birth',sex AS 'Sex',role AS 'Role',status AS 'Status' FROM employeeInfo WHERE userID NOT IN (SELECT userID from accountStatus WHERE status='Inactive')";
             try
             {
                 //MySQLCommand
@@ -152,7 +152,7 @@ namespace webTRON_Management_Software.Models
             //MySqlConnection
             MySqlConnection conn = new MySqlConnection(connectionString);
             //SQL Query
-            string SQLQuery = "SELECT firstName AS 'First Name',lastName AS 'Last Name',email AS 'Email',contactNumber AS 'Contact Number',role AS 'Role' FROM employeeInfo";
+            string SQLQuery = "SELECT firstName AS 'First Name',lastName AS 'Last Name',email AS 'Email',contactNumber AS 'Contact Number',role AS 'Role' FROM employeeInfo WHERE userID NOT IN(SELECT userID FROM accountStatus WHERE status='Inactive')";
             try
             {
                 //MySQLCommand

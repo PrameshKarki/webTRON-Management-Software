@@ -312,7 +312,7 @@
             this.btnRenew.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.btnRenew.ForeColor = System.Drawing.Color.White;
             this.btnRenew.HoverState.Parent = this.btnRenew;
-            this.btnRenew.Image = global::webTRON_Management_Software.Properties.Resources.renew;
+          //  this.btnRenew.Image = global::webTRON_Management_Software.Properties.Resources.renew;
             this.btnRenew.Location = new System.Drawing.Point(781, 512);
             this.btnRenew.Name = "btnRenew";
             this.btnRenew.ShadowDecoration.Parent = this.btnRenew;

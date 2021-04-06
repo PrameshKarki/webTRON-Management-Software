@@ -14,6 +14,8 @@ namespace webTRON_Management_Software.Views.Admin
 {
     public partial class Search : Form
     {
+        //Change color of button on disabled state
+        Color disabledColor = Color.FromArgb(240, 69, 69);
         private bool selectionChanged;
 
         //Instantiating Employee Class
@@ -56,9 +58,13 @@ namespace webTRON_Management_Software.Views.Admin
         //Load event on Search form
         private void Search_Load(object sender, EventArgs e)
         {
-            
-            
+            //Set color of disabled delete button
+            btnDelete.FillColor = disabledColor;
+
+            DataGridView.ClearSelection();
+            //Load grid view
             LoadGridView();
+
             //Set Width of columns here
 
             //Initialize activer user details
@@ -70,6 +76,7 @@ namespace webTRON_Management_Software.Views.Admin
         {
             DataTable dt = Employee.Fetch();
             DataGridView.DataSource = dt;
+            DataGridView.ClearSelection();
         }
 
         //Text Change Event on Search Text Box
@@ -123,16 +130,23 @@ namespace webTRON_Management_Software.Views.Admin
         //CellClick event on DataGridView
         private void DataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            SetButtonStatus();
-
+          
             if (!selectionChanged)
             {
+                
                 DataGridView.ClearSelection();
                 selectionChanged = true;
+                selectedUserDetailsPanel.Hide();
+                btnDelete.FillColor= disabledColor;
+
             }
             else
             {
+                selectedUserDetailsPanel.Show();
                 selectionChanged = false;
+                //Load Details on label
+                LoadDetails();
+                btnDelete.FillColor =Color.Red;
             }
         }
 
@@ -141,42 +155,55 @@ namespace webTRON_Management_Software.Views.Admin
         {
             selectionChanged = true;
         }
-        //Set button color
-        private void SetButtonStatus()
+      
+         //Load selected user details on label
+         private void LoadDetails()
         {
-            if (DataGridView.CurrentCell.RowIndex < 0)
+            int index;
+            try
             {
-                btnDelete.Enabled = false;
-            }
-            else
+                //Get current row index
+                index = DataGridView.CurrentCell.RowIndex;
+
+            }catch(IndexOutOfRangeException ex)
             {
-                btnDelete.Enabled=true;
+                index = 0;
             }
+            lblUserIdValue.Text = $"{DataGridView.Rows[index].Cells[0].Value}";
+            lblFullNameValue.Text = $"{DataGridView.Rows[index].Cells[1].Value} {DataGridView.Rows[index].Cells[2].Value}";
+            lblRoleValue.Text = $"{DataGridView.Rows[index].Cells[8].Value }";
+            
         }
         //Click event on delete button
         private void BtnDelete_Click(object sender, EventArgs e)
-        {   
-            //Get current row index
-            int index = DataGridView.CurrentCell.RowIndex;
-            string userID = DataGridView.Rows[index].Cells[0].Value.ToString();
-            var returnValue=MessageBox.Show("Are you sure?","Confirmation",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
-            if (returnValue.ToString() == "Yes")
+        {
+            //Delete account if selectedUserDetailsPanel is visible
+            if (selectedUserDetailsPanel.Visible)
             {
-                bool isDeleted = User.Delete(userID);
-                User.SetAccountStatus(userID, "Inactive");
-
-                if (isDeleted)
+              string userID =lblUserIdValue.Text;
+              var returnValue=MessageBox.Show("Are you sure?","Confirmation",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+                if (returnValue.ToString() == "Yes")
                 {
-                    MessageBox.Show("Account deleted sucessfully.", "Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Error occured!Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                    //Delete information from users table
+                    bool isDeleted = User.Delete(userID);
+                    if (isDeleted)
+                    {
+                        //Set account status inactive
+                        User.SetAccountStatus(userID, "Inactive");
+                        MessageBox.Show("Account deleted sucessfully.", "Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadGridView();
+                        //Hide selected user details
+                        selectedUserDetailsPanel.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error occured!Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                } 
             }
-            
 
-           
         }
+
+       
     }
 }

@@ -30,9 +30,9 @@ namespace webTRON_Management_Software.Views.Admin
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Search));
             this.DragableSearch = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.sidebarPanel = new Guna.UI2.WinForms.Guna2Panel();
@@ -49,12 +49,20 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnExit = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
+            this.selectedUserDetailsPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblRoleValue = new System.Windows.Forms.Label();
+            this.lblRole = new System.Windows.Forms.Label();
+            this.lblFullNameValue = new System.Windows.Forms.Label();
+            this.lblFullName = new System.Windows.Forms.Label();
+            this.lblUserIdValue = new System.Windows.Forms.Label();
+            this.lblUserID = new System.Windows.Forms.Label();
             this.sidebarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).BeginInit();
             this.activeUserPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
+            this.selectedUserDetailsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // DragableSearch
@@ -165,42 +173,43 @@ namespace webTRON_Management_Software.Views.Admin
             this.DataGridView.AllowUserToDeleteRows = false;
             this.DataGridView.AllowUserToResizeColumns = false;
             this.DataGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.DataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.DataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.DataGridView.BackgroundColor = System.Drawing.Color.White;
             this.DataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DataGridView.ColumnHeadersHeight = 35;
             this.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridView.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.DataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.DataGridView.EnableHeadersVisualStyles = false;
             this.DataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DataGridView.Location = new System.Drawing.Point(69, 177);
+            this.DataGridView.Location = new System.Drawing.Point(69, 232);
             this.DataGridView.MultiSelect = false;
             this.DataGridView.Name = "DataGridView";
             this.DataGridView.ReadOnly = true;
             this.DataGridView.RowHeadersVisible = false;
+            this.DataGridView.RowHeadersWidth = 51;
             this.DataGridView.RowTemplate.Height = 28;
             this.DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridView.Size = new System.Drawing.Size(929, 436);
+            this.DataGridView.Size = new System.Drawing.Size(929, 363);
             this.DataGridView.TabIndex = 31;
             this.DataGridView.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.DataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -246,7 +255,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.searchTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.searchTextBox.HoverState.Parent = this.searchTextBox;
             this.searchTextBox.IconRight = ((System.Drawing.Image)(resources.GetObject("searchTextBox.IconRight")));
-            this.searchTextBox.Location = new System.Drawing.Point(688, 138);
+            this.searchTextBox.Location = new System.Drawing.Point(694, 191);
             this.searchTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.searchTextBox.Name = "searchTextBox";
             this.searchTextBox.PasswordChar = '\0';
@@ -335,21 +344,105 @@ namespace webTRON_Management_Software.Views.Admin
             // 
             // btnDelete
             // 
+            this.btnDelete.Animated = true;
             this.btnDelete.AutoRoundedCorners = true;
-            this.btnDelete.BorderRadius = 17;
+            this.btnDelete.BorderRadius = 21;
             this.btnDelete.CheckedState.Parent = this.btnDelete;
             this.btnDelete.CustomImages.Parent = this.btnDelete;
             this.btnDelete.FillColor = System.Drawing.Color.Red;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.HoverState.Parent = this.btnDelete;
-            this.btnDelete.Location = new System.Drawing.Point(895, 83);
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
+            this.btnDelete.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnDelete.Location = new System.Drawing.Point(694, 100);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.ShadowDecoration.Parent = this.btnDelete;
-            this.btnDelete.Size = new System.Drawing.Size(93, 37);
+            this.btnDelete.Size = new System.Drawing.Size(136, 45);
             this.btnDelete.TabIndex = 50;
             this.btnDelete.Text = "Delete";
             this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
+            // 
+            // selectedUserDetailsPanel
+            // 
+            this.selectedUserDetailsPanel.Controls.Add(this.lblRoleValue);
+            this.selectedUserDetailsPanel.Controls.Add(this.lblRole);
+            this.selectedUserDetailsPanel.Controls.Add(this.lblFullNameValue);
+            this.selectedUserDetailsPanel.Controls.Add(this.lblFullName);
+            this.selectedUserDetailsPanel.Controls.Add(this.lblUserIdValue);
+            this.selectedUserDetailsPanel.Controls.Add(this.lblUserID);
+            this.selectedUserDetailsPanel.Location = new System.Drawing.Point(231, 39);
+            this.selectedUserDetailsPanel.Name = "selectedUserDetailsPanel";
+            this.selectedUserDetailsPanel.ShadowDecoration.Parent = this.selectedUserDetailsPanel;
+            this.selectedUserDetailsPanel.Size = new System.Drawing.Size(402, 171);
+            this.selectedUserDetailsPanel.TabIndex = 57;
+            this.selectedUserDetailsPanel.Visible = false;
+            // 
+            // lblRoleValue
+            // 
+            this.lblRoleValue.AutoSize = true;
+            this.lblRoleValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.lblRoleValue.ForeColor = System.Drawing.Color.Black;
+            this.lblRoleValue.Location = new System.Drawing.Point(146, 128);
+            this.lblRoleValue.Name = "lblRoleValue";
+            this.lblRoleValue.Size = new System.Drawing.Size(73, 24);
+            this.lblRoleValue.TabIndex = 62;
+            this.lblRoleValue.Text = "{{Role}}";
+            // 
+            // lblRole
+            // 
+            this.lblRole.AutoSize = true;
+            this.lblRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.lblRole.ForeColor = System.Drawing.Color.Black;
+            this.lblRole.Location = new System.Drawing.Point(20, 128);
+            this.lblRole.Name = "lblRole";
+            this.lblRole.Size = new System.Drawing.Size(54, 24);
+            this.lblRole.TabIndex = 61;
+            this.lblRole.Text = "Role:";
+            // 
+            // lblFullNameValue
+            // 
+            this.lblFullNameValue.AutoSize = true;
+            this.lblFullNameValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.lblFullNameValue.ForeColor = System.Drawing.Color.Black;
+            this.lblFullNameValue.Location = new System.Drawing.Point(146, 82);
+            this.lblFullNameValue.Name = "lblFullNameValue";
+            this.lblFullNameValue.Size = new System.Drawing.Size(108, 24);
+            this.lblFullNameValue.TabIndex = 60;
+            this.lblFullNameValue.Text = "{{fullName}}";
+            // 
+            // lblFullName
+            // 
+            this.lblFullName.AutoSize = true;
+            this.lblFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.lblFullName.ForeColor = System.Drawing.Color.Black;
+            this.lblFullName.Location = new System.Drawing.Point(20, 82);
+            this.lblFullName.Name = "lblFullName";
+            this.lblFullName.Size = new System.Drawing.Size(102, 24);
+            this.lblFullName.TabIndex = 59;
+            this.lblFullName.Text = "Full Name:";
+            // 
+            // lblUserIdValue
+            // 
+            this.lblUserIdValue.AutoSize = true;
+            this.lblUserIdValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.lblUserIdValue.ForeColor = System.Drawing.Color.Black;
+            this.lblUserIdValue.Location = new System.Drawing.Point(146, 34);
+            this.lblUserIdValue.Name = "lblUserIdValue";
+            this.lblUserIdValue.Size = new System.Drawing.Size(88, 24);
+            this.lblUserIdValue.TabIndex = 58;
+            this.lblUserIdValue.Text = "{{userID}}";
+            // 
+            // lblUserID
+            // 
+            this.lblUserID.AutoSize = true;
+            this.lblUserID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.lblUserID.ForeColor = System.Drawing.Color.Black;
+            this.lblUserID.Location = new System.Drawing.Point(20, 34);
+            this.lblUserID.Name = "lblUserID";
+            this.lblUserID.Size = new System.Drawing.Size(76, 24);
+            this.lblUserID.TabIndex = 57;
+            this.lblUserID.Text = "User ID:";
             // 
             // Search
             // 
@@ -357,6 +450,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1000, 625);
+            this.Controls.Add(this.selectedUserDetailsPanel);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.searchTextBox);
             this.Controls.Add(this.DataGridView);
@@ -365,7 +459,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.Controls.Add(this.btnMinimize);
             this.Controls.Add(this.btnExit);
             this.Cursor = System.Windows.Forms.Cursors.Default;
-            this.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Search";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -378,6 +472,8 @@ namespace webTRON_Management_Software.Views.Admin
             ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
+            this.selectedUserDetailsPanel.ResumeLayout(false);
+            this.selectedUserDetailsPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -400,5 +496,12 @@ namespace webTRON_Management_Software.Views.Admin
         private Guna.UI2.WinForms.Guna2DataGridView DataGridView;
         private Guna.UI2.WinForms.Guna2TextBox searchTextBox;
         private Guna.UI2.WinForms.Guna2Button btnDelete;
+        private Guna.UI2.WinForms.Guna2Panel selectedUserDetailsPanel;
+        private System.Windows.Forms.Label lblRoleValue;
+        private System.Windows.Forms.Label lblRole;
+        private System.Windows.Forms.Label lblFullNameValue;
+        private System.Windows.Forms.Label lblFullName;
+        private System.Windows.Forms.Label lblUserIdValue;
+        private System.Windows.Forms.Label lblUserID;
     }
 }

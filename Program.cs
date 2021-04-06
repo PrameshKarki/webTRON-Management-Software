@@ -25,7 +25,7 @@ namespace webTRON_Management_Software
             Application.SetCompatibleTextRenderingDefault(false);
 
             //Run main window here
-            Application.Run(new Admin.Search());
+            Application.Run(new LandingWindow());
          
        
           

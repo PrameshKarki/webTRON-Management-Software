@@ -106,5 +106,7 @@ namespace webTRON_Management_Software.Views.Others
             staffsDataGridView.DataSource = dt;
 
         }
+
+       
     }
 }

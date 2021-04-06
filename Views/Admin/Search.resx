@@ -124,6 +124,17 @@
     <value>38</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnDelete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAATFJREFUSEvdleFxwjAMhTNCR2CEjsAI3QA2gQ3KBnQTRugIjMAI6fviJ+pwwcbx
+        9U+/O10cRX62ZBmG/804jlvZRXaTAeO9P/chocMkuczBYeuQwD7pFNk6vB1NphQ1Lg5vxwI1bg5vh8lJ
+        o4zD29HcPy8R7Vmjr10lcEw6ixwd1oeEaNcoF+fCeH17tqCFNrJPLwxX2Vm2cch6JLKTPes0/DuH/iLn
+        u+ybiAKUiJ2H+OMiuX+eiRykWONDRhlgEpHFpnjmi58snbCzxpss30iIfvmZV2B+0+0s8iTubH9kdgf/
+        Hb2/cnvJIK97ZDB1j9+Dq6UTcnDI+eQlOINTGlbPYMpshpwElA57fRfl6CO/RRwcu8pFGJMFN/xRPMDf
+        /7cqETJhE5ExwpSv/ya/zjD8AB9aEMiOZ79JAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="searchTextBox.IconRight" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL

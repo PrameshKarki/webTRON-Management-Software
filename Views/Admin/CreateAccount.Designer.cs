@@ -48,16 +48,16 @@ namespace webTRON_Management_Software.Views.Admin
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblRole = new System.Windows.Forms.Label();
             this.roleComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblInfo = new System.Windows.Forms.Label();
             this.sidebarPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.btnSignOut = new Guna.UI2.WinForms.Guna2Button();
             this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
             this.btnUsers = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
-            this.Dragable = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.DragableCreateAccountForm = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.btnMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnExit = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.webTRONPicture = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.activeForm = new System.Windows.Forms.Label();
             this.activeUserPictureSidebar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -66,7 +66,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.sidebarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webTRONPicture)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.activeUserPictureSidebar)).BeginInit();
             this.SuspendLayout();
@@ -379,15 +379,15 @@ namespace webTRON_Management_Software.Views.Admin
             this.roleComboBox.Size = new System.Drawing.Size(140, 36);
             this.roleComboBox.TabIndex = 0;
             // 
-            // label9
+            // lblInfo
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(64, 81);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(283, 15);
-            this.label9.TabIndex = 35;
-            this.label9.Text = "Enter employee information to create new account ";
+            this.lblInfo.AutoSize = true;
+            this.lblInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfo.Location = new System.Drawing.Point(64, 81);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(283, 15);
+            this.lblInfo.TabIndex = 35;
+            this.lblInfo.Text = "Enter employee information to create new account ";
             // 
             // sidebarPanel
             // 
@@ -486,9 +486,9 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnDashboard.TextOffset = new System.Drawing.Point(-6, 10);
             this.btnDashboard.Click += new System.EventHandler(this.BtnDashboard_Click);
             // 
-            // Dragable
+            // DragableCreateAccountForm
             // 
-            this.Dragable.TargetControl = null;
+            this.DragableCreateAccountForm.TargetControl = this;
             // 
             // btnMinimize
             // 
@@ -516,16 +516,16 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnExit.TabStop = false;
             this.btnExit.Click += new System.EventHandler(this.SignOut);
             // 
-            // guna2PictureBox1
+            // webTRONPicture
             // 
-            this.guna2PictureBox1.Image = global::webTRON_Management_Software.Properties.Resources.webTRONLogoWithSlogan;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(-1, 544);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(173, 69);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 17;
-            this.guna2PictureBox1.TabStop = false;
+            this.webTRONPicture.Image = global::webTRON_Management_Software.Properties.Resources.webTRONLogoWithSlogan;
+            this.webTRONPicture.Location = new System.Drawing.Point(-1, 544);
+            this.webTRONPicture.Name = "webTRONPicture";
+            this.webTRONPicture.ShadowDecoration.Parent = this.webTRONPicture;
+            this.webTRONPicture.Size = new System.Drawing.Size(173, 69);
+            this.webTRONPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.webTRONPicture.TabIndex = 17;
+            this.webTRONPicture.TabStop = false;
             // 
             // guna2Panel2
             // 
@@ -603,7 +603,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.sidebarPanel);
             this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.roleComboBox);
             this.Controls.Add(this.lblRole);
             this.Controls.Add(this.addressTextBox);
@@ -621,7 +621,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.Controls.Add(this.lastNameTextBox);
             this.Controls.Add(this.firstNameTxtBox);
             this.Controls.Add(this.lblName);
-            this.Controls.Add(this.guna2PictureBox1);
+            this.Controls.Add(this.webTRONPicture);
             this.Controls.Add(this.guna2Panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CreateAccount";
@@ -631,7 +631,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.sidebarPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webTRONPicture)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.activeUserPictureSidebar)).EndInit();
@@ -643,7 +643,7 @@ namespace webTRON_Management_Software.Views.Admin
         #endregion
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.Label activeUserName;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox webTRONPicture;
         private System.Windows.Forms.Label lblName;
         private Guna.UI2.WinForms.Guna2TextBox firstNameTxtBox;
         private Guna.UI2.WinForms.Guna2TextBox lastNameTextBox;
@@ -661,7 +661,7 @@ namespace webTRON_Management_Software.Views.Admin
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Label lblRole;
         private Guna.UI2.WinForms.Guna2ComboBox roleComboBox;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblInfo;
         private Guna.UI2.WinForms.Guna2Panel sidebarPanel;
         private Guna.UI2.WinForms.Guna2Button btnSignOut;
         private Guna.UI2.WinForms.Guna2Button btnSettings;
@@ -669,7 +669,7 @@ namespace webTRON_Management_Software.Views.Admin
         private Guna.UI2.WinForms.Guna2Button btnDashboard;
         private System.Windows.Forms.Label activeForm;
         private Guna.UI2.WinForms.Guna2CirclePictureBox activeUserPictureSidebar;
-        private Guna.UI2.WinForms.Guna2DragControl Dragable;
+        private Guna.UI2.WinForms.Guna2DragControl DragableCreateAccountForm;
         private Guna.UI2.WinForms.Guna2PictureBox btnMinimize;
         private Guna.UI2.WinForms.Guna2PictureBox btnExit;
         private Guna.UI2.WinForms.Guna2Button btnSubmit;
