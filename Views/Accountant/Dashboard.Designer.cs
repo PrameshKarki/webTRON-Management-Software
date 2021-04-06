@@ -49,7 +49,6 @@ namespace webTRON_Management_Software.Views.Accountant
             this.Controls.Add(this.label1);
             this.Name = "Dashboard";
             this.Text = "AccountantDashboard";
-            this.Load += new System.EventHandler(this.Dashboard_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
