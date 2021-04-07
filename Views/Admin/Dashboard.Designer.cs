@@ -46,7 +46,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnExit = new Guna.UI2.WinForms.Guna2PictureBox();
             this.activePanel = new Guna.UI2.WinForms.Guna2Panel();
             this.actveForm = new System.Windows.Forms.Label();
-            this.activeUserPictureSidebar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.activeUserPicture = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.activeUserName = new System.Windows.Forms.Label();
             this.arrowRed = new Guna.UI2.WinForms.Guna2PictureBox();
             this.arrowGreen = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -56,7 +56,7 @@ namespace webTRON_Management_Software.Views.Admin
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.activePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.activeUserPictureSidebar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arrowRed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arrowGreen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.onlineStatusPicture)).BeginInit();
@@ -70,7 +70,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.lblOnline.ForeColor = System.Drawing.Color.Green;
             this.lblOnline.Location = new System.Drawing.Point(432, 36);
             this.lblOnline.Name = "lblOnline";
-            this.lblOnline.Size = new System.Drawing.Size(66, 24);
+            this.lblOnline.Size = new System.Drawing.Size(84, 29);
             this.lblOnline.TabIndex = 3;
             this.lblOnline.Text = "Online";
             // 
@@ -81,7 +81,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.onlineUser.ForeColor = System.Drawing.Color.Green;
             this.onlineUser.Location = new System.Drawing.Point(432, 69);
             this.onlineUser.Name = "onlineUser";
-            this.onlineUser.Size = new System.Drawing.Size(24, 25);
+            this.onlineUser.Size = new System.Drawing.Size(29, 31);
             this.onlineUser.TabIndex = 5;
             this.onlineUser.Text = "0";
             // 
@@ -92,7 +92,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.offlineUser.ForeColor = System.Drawing.Color.Red;
             this.offlineUser.Location = new System.Drawing.Point(620, 69);
             this.offlineUser.Name = "offlineUser";
-            this.offlineUser.Size = new System.Drawing.Size(24, 25);
+            this.offlineUser.Size = new System.Drawing.Size(29, 31);
             this.offlineUser.TabIndex = 7;
             this.offlineUser.Text = "0";
             // 
@@ -103,7 +103,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.lblOffline.ForeColor = System.Drawing.Color.Red;
             this.lblOffline.Location = new System.Drawing.Point(611, 36);
             this.lblOffline.Name = "lblOffline";
-            this.lblOffline.Size = new System.Drawing.Size(63, 24);
+            this.lblOffline.Size = new System.Drawing.Size(83, 29);
             this.lblOffline.TabIndex = 6;
             this.lblOffline.Text = "Offline";
             // 
@@ -242,7 +242,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.activePanel.BackgroundImage = global::webTRON_Management_Software.Properties.Resources.rectangle_curved_large;
             this.activePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.activePanel.Controls.Add(this.actveForm);
-            this.activePanel.Controls.Add(this.activeUserPictureSidebar);
+            this.activePanel.Controls.Add(this.activeUserPicture);
             this.activePanel.Controls.Add(this.activeUserName);
             this.activePanel.Location = new System.Drawing.Point(63, -3);
             this.activePanel.Name = "activePanel";
@@ -258,22 +258,22 @@ namespace webTRON_Management_Software.Views.Admin
             this.actveForm.ForeColor = System.Drawing.Color.White;
             this.actveForm.Location = new System.Drawing.Point(64, 40);
             this.actveForm.Name = "actveForm";
-            this.actveForm.Size = new System.Drawing.Size(88, 20);
+            this.actveForm.Size = new System.Drawing.Size(108, 25);
             this.actveForm.TabIndex = 21;
             this.actveForm.Text = "Dashboard";
             // 
-            // activeUserPictureSidebar
+            // activeUserPicture
             // 
-            this.activeUserPictureSidebar.BackColor = System.Drawing.Color.Transparent;
-            this.activeUserPictureSidebar.Image = global::webTRON_Management_Software.Properties.Resources.man_picture;
-            this.activeUserPictureSidebar.Location = new System.Drawing.Point(7, 13);
-            this.activeUserPictureSidebar.Name = "activeUserPictureSidebar";
-            this.activeUserPictureSidebar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.activeUserPictureSidebar.ShadowDecoration.Parent = this.activeUserPictureSidebar;
-            this.activeUserPictureSidebar.Size = new System.Drawing.Size(49, 45);
-            this.activeUserPictureSidebar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.activeUserPictureSidebar.TabIndex = 0;
-            this.activeUserPictureSidebar.TabStop = false;
+            this.activeUserPicture.BackColor = System.Drawing.Color.Transparent;
+            this.activeUserPicture.Image = global::webTRON_Management_Software.Properties.Resources.man_picture;
+            this.activeUserPicture.Location = new System.Drawing.Point(7, 13);
+            this.activeUserPicture.Name = "activeUserPicture";
+            this.activeUserPicture.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.activeUserPicture.ShadowDecoration.Parent = this.activeUserPicture;
+            this.activeUserPicture.Size = new System.Drawing.Size(49, 45);
+            this.activeUserPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.activeUserPicture.TabIndex = 0;
+            this.activeUserPicture.TabStop = false;
             // 
             // activeUserName
             // 
@@ -283,7 +283,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.activeUserName.ForeColor = System.Drawing.Color.White;
             this.activeUserName.Location = new System.Drawing.Point(64, 9);
             this.activeUserName.Name = "activeUserName";
-            this.activeUserName.Size = new System.Drawing.Size(52, 24);
+            this.activeUserName.Size = new System.Drawing.Size(65, 29);
             this.activeUserName.TabIndex = 1;
             this.activeUserName.Text = "John";
             // 
@@ -333,7 +333,7 @@ namespace webTRON_Management_Software.Views.Admin
             // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -361,7 +361,7 @@ namespace webTRON_Management_Software.Views.Admin
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.activePanel.ResumeLayout(false);
             this.activePanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.activeUserPictureSidebar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arrowRed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arrowGreen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.onlineStatusPicture)).EndInit();
@@ -379,7 +379,7 @@ namespace webTRON_Management_Software.Views.Admin
         private System.Windows.Forms.Label offlineUser;
         private System.Windows.Forms.Label lblOffline;
         private System.Windows.Forms.Label activeUserName;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox activeUserPictureSidebar;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox activeUserPicture;
         private Guna.UI2.WinForms.Guna2PictureBox arrowGreen;
         private Guna.UI2.WinForms.Guna2PictureBox arrowRed;
         private Guna.UI2.WinForms.Guna2Panel sidebarPanel;

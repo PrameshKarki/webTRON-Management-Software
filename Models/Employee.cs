@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,13 +10,13 @@ using MySql.Data.MySqlClient;
 
 namespace webTRON_Management_Software.Models
 {
-   public class Employee
+    public class Employee
     {
         //Connection String
-        private static string connectionString="server=localhost;user id=root;pwd=password;database=webtronmanagement";
+        private static string connectionString = "server=localhost;user id=root;pwd=password;database=webtronmanagement";
         //Properties
         public string UserID { get; set; }
-        public  string FirstName { get; set; }
+        public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
         public string ContactNumber { get; set; }
@@ -24,7 +25,8 @@ namespace webTRON_Management_Software.Models
         public string Sex { get; set; }
         public string Role { get; set; }
         public string Status { get; set; }
-        
+        public byte[] img { get; set; }
+
         //Methods
         //Method to insert Employee data in database 
         public static bool Insert(Employee obj)
@@ -57,20 +59,52 @@ namespace webTRON_Management_Software.Models
                 isSucess = row > 0 ? true : false;
 
             }
-            
-             catch(Exception ex)
+
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-         
+
             finally
             {
                 //Close Connection
                 conn.Close();
             }
             return isSucess;
-           
+
         }
+        //Method to insert Employee image in database 
+        public static void InsertImage(string userID, byte[] img)
+        {
+            //MySQL Connection
+            MySqlConnection conn = new MySqlConnection(connectionString);
+            //SQLQuery
+            string SQLQuery = "INSERT INTO userPicture(userID,picture) VALUES(@userID,@img) ON DUPLICATE KEY UPDATE picture=@img";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
+                //Add paramters
+                cmd.Parameters.AddWithValue("@userID", userID);
+                cmd.Parameters.AddWithValue("@img", img);
+                //Connection Open
+                conn.Open();
+                //Execute Query
+                cmd.ExecuteNonQuery();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            finally
+            {
+                //Close Connection
+                conn.Close();
+            }
+
+        }
+       
         //Method to update data on database
         public static bool Update(Employee obj)
         {
@@ -126,13 +160,13 @@ namespace webTRON_Management_Software.Models
             try
             {
                 //MySQLCommand
-                MySqlCommand cmd = new MySqlCommand(SQLQuery,conn);
+                MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
                 //Open Connection
                 conn.Open();
                 //Load DataTable
                 dt.Load(cmd.ExecuteReader());
-             }
-            catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -182,7 +216,7 @@ namespace webTRON_Management_Software.Models
             //MySql Connection
             MySqlConnection conn = new MySqlConnection(connectionString);
             //SQL Query
-            string SQLQuery= $"SELECT userID AS 'User ID',firstName AS 'First Name',lastName AS 'Last Name',email AS 'Email',address AS 'Address',contactNumber AS 'Contact Number',dateOfBirth AS 'Date Of Birth',sex AS 'Sex',role AS 'Role',status AS 'Status' FROM employeeInfo" +
+            string SQLQuery = $"SELECT userID AS 'User ID',firstName AS 'First Name',lastName AS 'Last Name',email AS 'Email',address AS 'Address',contactNumber AS 'Contact Number',dateOfBirth AS 'Date Of Birth',sex AS 'Sex',role AS 'Role',status AS 'Status' FROM employeeInfo" +
                              $" WHERE userID LIKE '%{searchString}%' OR firstName LIKE '%{searchString}%' OR lastName LIKE '%{searchString}%' OR email LIKE '%{searchString}%' OR address LIKE '%{searchString}%' OR contactNumber LIKE '%{searchString}%' OR dateOfBirth LIKE '%{searchString}%' OR" +
                              $" sex LIKE '%{searchString}%' OR role LIKE '%{searchString}%' OR status LIKE '%{searchString}%'";
             try
@@ -193,7 +227,7 @@ namespace webTRON_Management_Software.Models
                 //Load DataTable
                 dt.Load(cmd.ExecuteReader());
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -212,7 +246,7 @@ namespace webTRON_Management_Software.Models
             //MySql Connection
             MySqlConnection conn = new MySqlConnection(connectionString);
             //SQL Query
-            string SQLQuery =$"SELECT firstName AS 'First Name',lastName AS 'Last Name',email AS 'Email',contactNumber AS 'Contact Number',role AS 'Role' FROM employeeInfo WHERE firstName LIKE '%{searchString}%' OR lastName LIKE '%{searchString}%' OR email LIKE '%{searchString}%' OR contactNumber LIKE '%{searchString}%' OR role LIKE '%{searchString}%'";
+            string SQLQuery = $"SELECT firstName AS 'First Name',lastName AS 'Last Name',email AS 'Email',contactNumber AS 'Contact Number',role AS 'Role' FROM employeeInfo WHERE firstName LIKE '%{searchString}%' OR lastName LIKE '%{searchString}%' OR email LIKE '%{searchString}%' OR contactNumber LIKE '%{searchString}%' OR role LIKE '%{searchString}%'";
             try
             {
                 MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
@@ -221,11 +255,11 @@ namespace webTRON_Management_Software.Models
                 //Load DataTable
                 dt.Load(cmd.ExecuteReader());
             }
-            /*catch (Exception ex)
+           catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            */
+            
             finally
             {
                 //Close Connection
@@ -275,11 +309,11 @@ namespace webTRON_Management_Software.Models
 
         }
         //Method to store verification code in database
-         public static bool StoreVerificationCode(string userEmail,double verificationCode)
+        public static bool StoreVerificationCode(string userEmail, double verificationCode)
         {
             //Fetched user ID
             string fetchedUserID = "";
-           
+
             //MySQL Connection
             MySqlConnection conn = new MySqlConnection(connectionString);
             try
@@ -312,13 +346,14 @@ namespace webTRON_Management_Software.Models
                 cmd.Parameters.AddWithValue("@verificationCode", verificationCode);
                 //Execute query
                 cmd.ExecuteNonQuery();
-                
 
-            } catch (Exception ex)
+
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-           
+
             finally
             {
                 //Close Connection
@@ -328,7 +363,7 @@ namespace webTRON_Management_Software.Models
 
         }
         //Method to check valid verification code
-        public static bool IsValidVerificationCode(string userEmail,int code)
+        public static bool IsValidVerificationCode(string userEmail, int code)
         {
             //Declare default variable and set it false
             bool isValid = false;
@@ -339,7 +374,7 @@ namespace webTRON_Management_Software.Models
                 //SQL Query
                 string SQLQuery = "SELECT EXISTS(SELECT userID FROM employeeInfo NATURAL JOIN verificationCodes WHERE email=BINARY @userEmail AND code=@code)";
                 //MySQL Command
-                MySqlCommand cmd = new MySqlCommand(SQLQuery,conn);
+                MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
                 //Pass parameters
                 cmd.Parameters.AddWithValue("@userEmail", userEmail);
                 cmd.Parameters.AddWithValue("@code", code);
@@ -357,14 +392,14 @@ namespace webTRON_Management_Software.Models
                     MessageBox.Show("Error Occured!\nPlease try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return isValid;
         }
         //Method to update password from database
-        public static bool UpdatePassword(string userEmail,string newPassword)
+        public static bool UpdatePassword(string userEmail, string newPassword)
         {
             //Fetched user ID
             string fetchedUserID = "";
@@ -418,13 +453,13 @@ namespace webTRON_Management_Software.Models
 
         }
         //Method to return total number of online/offline user
-        public static (int,int) GetTotalUserStatus()
+        public static (int, int) GetTotalUserStatus()
         {
             //Data Reader Mysql
             MySqlDataReader reader;
             //Mysql Connectiion
             MySqlConnection conn = new MySqlConnection(connectionString);
-            int countOfTotalOfflineUser=0,countOfTotalOnlineUser=0;
+            int countOfTotalOfflineUser = 0, countOfTotalOnlineUser = 0;
 
             try
             {
@@ -442,7 +477,7 @@ namespace webTRON_Management_Software.Models
                     countOfTotalOfflineUser = Convert.ToInt32(reader.GetValue(1));
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -463,7 +498,7 @@ namespace webTRON_Management_Software.Models
             //Mysql Connection
             MySqlConnection conn = new MySqlConnection(connectionString);
             //SQL Query
-            string SQLQuery = "SELECT * FROM employeeInfo WHERE userID=BINARY @userId";
+            string SQLQuery = "SELECT * FROM employeeInfo LEFT JOIN userPicture USING(userID) WHERE userID=BINARY @userId";
             try
             {
                 //MySqlCommand
@@ -488,24 +523,37 @@ namespace webTRON_Management_Software.Models
                     obj.Sex = reader.GetValue(7).ToString();
                     obj.Role = reader.GetValue(8).ToString();
                     obj.Status = reader.GetValue(9).ToString();
+                    if (reader.GetValue(10).ToString()!= "")
+                    {
+                    
+                        obj.img = (byte[])reader.GetValue(10);
+
+                    }
+                    else
+                    {
+                        obj.img =null;
+                    }
 
                 }
 
-            }catch(Exception ex)
+            }
+            /*
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            */
             finally
             {
                 //Close Connection
                 conn.Close();
             }
-              return obj;
+            return obj;
         }
         //Method to set status of employee either online or offline
-        public static void SetStatus(string userId,string status)
+        public static void SetStatus(string userId, string status)
         {
-           
+
             //MySqlConnection
             MySqlConnection conn = new MySqlConnection(connectionString);
             //SqlQuery
@@ -513,7 +561,7 @@ namespace webTRON_Management_Software.Models
             try
             {
                 //MySqlCommand
-                MySqlCommand cmd = new MySqlCommand(SqlQuery,conn);
+                MySqlCommand cmd = new MySqlCommand(SqlQuery, conn);
                 //Add parameters with value
                 cmd.Parameters.AddWithValue("@userId", userId);
                 cmd.Parameters.AddWithValue("@status", status);
@@ -521,8 +569,9 @@ namespace webTRON_Management_Software.Models
                 conn.Open();
                 //Execute Query
                 cmd.ExecuteNonQuery();
-               
-            }catch(Exception ex)
+
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -531,7 +580,7 @@ namespace webTRON_Management_Software.Models
                 //Close Connection
                 conn.Close();
             }
-          
+
         }
 
 

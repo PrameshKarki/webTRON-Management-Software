@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,8 @@ namespace webTRON_Management_Software.Views.Others
     {
         //Instantiate employee class
         Employee employee = new Employee();
+        //Instantiate memorystream
+        MemoryStream ms;
         public Settings()
         {
             InitializeComponent();
@@ -76,6 +79,14 @@ namespace webTRON_Management_Software.Views.Others
             lblEmailValue.Text = employee.Email;
             lblContactNumberValue.Text = employee.ContactNumber;
 
+            if (employee.img != null)
+            {
+                //Change active user picture
+                MemoryStream ms = new MemoryStream(employee.img);
+                activeUserPicture.Image = Image.FromStream(ms);
+                userPicture.Image = Image.FromStream(ms);
+            }
+
         }
         //Click event on changeinfo
         private void BtnChangeInfo_Click(object sender, EventArgs e)
@@ -93,6 +104,49 @@ namespace webTRON_Management_Software.Views.Others
             var changePassword = new ChangePassword(employee);
             changePassword.Show();
             this.Close();
+        }
+
+        //CLick event on change picture button
+        private void BtnChangePicture_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opn = new OpenFileDialog();
+            opn.Filter = "Choose Image(*.jpg; *.png; *.jpeg)|*.jpg; *.png; *.jpeg";
+            if (opn.ShowDialog() == DialogResult.OK)
+            {
+                userPicture.Image = Image.FromFile(opn.FileName);
+                //To change image in array of bytes
+                MemoryStream ms = new MemoryStream();
+                userPicture.Image.Save(ms, userPicture.Image.RawFormat);
+                byte[] img = ms.ToArray();
+                //Maximum
+                if (img.Length > 16777215)
+                {
+                    MessageBox.Show("Image must be less than 16 MB.", "Invalid Size", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+
+                    //Store image in database
+                    Employee.InsertImage(employee.UserID, img);
+
+                    //Update information instantly
+                    UpdateInformation();
+                }
+
+
+            }
+
+        }
+        //Update information instantly
+        private void UpdateInformation()
+        {
+            string userID = employee.UserID;
+            employee = Employee.GetActiveUserDetails(userID);
+            //Change active user picture
+             ms = new MemoryStream(employee.img);
+            activeUserPicture.Image = Image.FromStream(ms);
+           
+
         }
     }
 }

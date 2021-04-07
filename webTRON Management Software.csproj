@@ -177,12 +177,6 @@
     <Compile Include="Views\Landing Window\LandingWindow.designer.cs">
       <DependentUpon>LandingWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Management\Dashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Management\Dashboard.Designer.cs">
-      <DependentUpon>Dashboard.cs</DependentUpon>
-    </Compile>
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Patient.cs" />
     <Compile Include="Models\User.cs" />
@@ -249,9 +243,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Landing Window\LandingWindow.resx">
       <DependentUpon>LandingWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Management\Dashboard.resx">
-      <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Others\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>

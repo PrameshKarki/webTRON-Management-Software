@@ -60,10 +60,9 @@ namespace webTRON_Management_Software.Models
             //MySQL Connection
             MySqlConnection conn = new MySqlConnection(connectionString);
             //String SqlQuery
-            string SQLQuery = "DELETE FROM users WHERE userID=BINARY @userID";
+            string SQLQuery = "DELETE users,lastLoginInfo,verificationCodes FROM users NATURAL JOIN lastlogininfo NATURAL JOIN verificationCodes WHERE userID=BINARY @userID";
             try
             {
-                
                 //MySql Command
                 MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
                 cmd.Parameters.AddWithValue("@userID",userID);

@@ -11,7 +11,6 @@ using webTRON_Management_Software.Models;
 using Accountant=webTRON_Management_Software.Views.Accountant;
 using Admin=webTRON_Management_Software.Views.Admin;
 using Doctor=webTRON_Management_Software.Views.Doctor;
-using Management=webTRON_Management_Software.Views.Management;
 using Others=webTRON_Management_Software.Views.Others;
 using Utilities=webTRON_Management_Software.Views.Utilities;
 
@@ -49,6 +48,7 @@ namespace webTRON_Management_Software.Views.Landing_Window
                 {
                     //Get User Details
                     activeUser = Employee.GetActiveUserDetails(newUser.userID);
+                   
 
                     //Set Logged in user status Online
                     Employee.SetStatus(newUser.userID, "Online");
@@ -96,7 +96,6 @@ namespace webTRON_Management_Software.Views.Landing_Window
         {
             //Get User Role
             string userRole = User.GetUserRole(newUser.userID);
-
             switch (userRole)
             {
                 case "Admin":

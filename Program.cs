@@ -8,7 +8,6 @@ using Doctor=webTRON_Management_Software.Views.Doctor;
 using Admin=webTRON_Management_Software.Views.Admin;
 using webTRON_Management_Software.Views.Landing_Window;
 using Others=webTRON_Management_Software.Views.Others;
-using Management=webTRON_Management_Software.Views.Management;
 using webTRON_Management_Software.Views.Utilities;
 
 namespace webTRON_Management_Software
