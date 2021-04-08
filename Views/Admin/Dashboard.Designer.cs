@@ -40,8 +40,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
             this.btnUsers = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
-            this.DragableAdminDashboard = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.DragableUsersPanel = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.dragableAdminDashboard = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.btnMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnExit = new Guna.UI2.WinForms.Guna2PictureBox();
             this.activePanel = new Guna.UI2.WinForms.Guna2Panel();
@@ -70,7 +69,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.lblOnline.ForeColor = System.Drawing.Color.Green;
             this.lblOnline.Location = new System.Drawing.Point(432, 36);
             this.lblOnline.Name = "lblOnline";
-            this.lblOnline.Size = new System.Drawing.Size(84, 29);
+            this.lblOnline.Size = new System.Drawing.Size(66, 24);
             this.lblOnline.TabIndex = 3;
             this.lblOnline.Text = "Online";
             // 
@@ -81,7 +80,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.onlineUser.ForeColor = System.Drawing.Color.Green;
             this.onlineUser.Location = new System.Drawing.Point(432, 69);
             this.onlineUser.Name = "onlineUser";
-            this.onlineUser.Size = new System.Drawing.Size(29, 31);
+            this.onlineUser.Size = new System.Drawing.Size(24, 25);
             this.onlineUser.TabIndex = 5;
             this.onlineUser.Text = "0";
             // 
@@ -92,7 +91,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.offlineUser.ForeColor = System.Drawing.Color.Red;
             this.offlineUser.Location = new System.Drawing.Point(620, 69);
             this.offlineUser.Name = "offlineUser";
-            this.offlineUser.Size = new System.Drawing.Size(29, 31);
+            this.offlineUser.Size = new System.Drawing.Size(24, 25);
             this.offlineUser.TabIndex = 7;
             this.offlineUser.Text = "0";
             // 
@@ -103,7 +102,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.lblOffline.ForeColor = System.Drawing.Color.Red;
             this.lblOffline.Location = new System.Drawing.Point(611, 36);
             this.lblOffline.Name = "lblOffline";
-            this.lblOffline.Size = new System.Drawing.Size(83, 29);
+            this.lblOffline.Size = new System.Drawing.Size(63, 24);
             this.lblOffline.TabIndex = 6;
             this.lblOffline.Text = "Offline";
             // 
@@ -203,13 +202,9 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextOffset = new System.Drawing.Point(-6, 10);
             // 
-            // DragableAdminDashboard
+            // dragableAdminDashboard
             // 
-            this.DragableAdminDashboard.TargetControl = this;
-            // 
-            // DragableUsersPanel
-            // 
-            this.DragableUsersPanel.TargetControl = null;
+            this.dragableAdminDashboard.TargetControl = this;
             // 
             // btnMinimize
             // 
@@ -258,7 +253,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.actveForm.ForeColor = System.Drawing.Color.White;
             this.actveForm.Location = new System.Drawing.Point(64, 40);
             this.actveForm.Name = "actveForm";
-            this.actveForm.Size = new System.Drawing.Size(108, 25);
+            this.actveForm.Size = new System.Drawing.Size(88, 20);
             this.actveForm.TabIndex = 21;
             this.actveForm.Text = "Dashboard";
             // 
@@ -283,7 +278,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.activeUserName.ForeColor = System.Drawing.Color.White;
             this.activeUserName.Location = new System.Drawing.Point(64, 9);
             this.activeUserName.Name = "activeUserName";
-            this.activeUserName.Size = new System.Drawing.Size(65, 29);
+            this.activeUserName.Size = new System.Drawing.Size(52, 24);
             this.activeUserName.TabIndex = 1;
             this.activeUserName.Text = "John";
             // 
@@ -333,7 +328,7 @@ namespace webTRON_Management_Software.Views.Admin
             // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -389,9 +384,8 @@ namespace webTRON_Management_Software.Views.Admin
         private Guna.UI2.WinForms.Guna2Button btnUsers;
         private Guna.UI2.WinForms.Guna2Button btnSignOut;
         private Guna.UI2.WinForms.Guna2Button btnSettings;
-        private Guna.UI2.WinForms.Guna2DragControl DragableAdminDashboard;
+        private Guna.UI2.WinForms.Guna2DragControl dragableAdminDashboard;
         private Guna.UI2.WinForms.Guna2PictureBox btnMinimize;
         private Guna.UI2.WinForms.Guna2PictureBox btnExit;
-        private Guna.UI2.WinForms.Guna2DragControl DragableUsersPanel;
     }
 }

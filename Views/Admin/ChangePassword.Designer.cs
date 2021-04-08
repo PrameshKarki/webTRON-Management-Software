@@ -30,6 +30,7 @@ namespace webTRON_Management_Software.Views.Admin
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChangePassword));
             this.DragableChangePassword = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.sidebarPanel = new Guna.UI2.WinForms.Guna2Panel();
@@ -57,12 +58,21 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnVerify = new Guna.UI2.WinForms.Guna2Button();
             this.lblEnterVerificationCode = new System.Windows.Forms.Label();
             this.verificationCodeTextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.alertTransition = new Guna.UI2.WinForms.Guna2Transition();
+            this.alertPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.alertText = new System.Windows.Forms.Label();
+            this.alertCloseBtn = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.alertImage = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.alertTimer = new System.Windows.Forms.Timer(this.components);
             this.sidebarPanel.SuspendLayout();
             this.activeUserPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.verificationCodePanel.SuspendLayout();
+            this.alertPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.alertCloseBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alertImage)).BeginInit();
             this.SuspendLayout();
             // 
             // DragableChangePassword
@@ -75,6 +85,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.sidebarPanel.Controls.Add(this.btnSettings);
             this.sidebarPanel.Controls.Add(this.btnUsers);
             this.sidebarPanel.Controls.Add(this.btnDashboard);
+            this.alertTransition.SetDecoration(this.sidebarPanel, Guna.UI2.AnimatorNS.DecorationType.None);
             this.sidebarPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
             this.sidebarPanel.Location = new System.Drawing.Point(-1, -2);
             this.sidebarPanel.Name = "sidebarPanel";
@@ -87,6 +98,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnSignOut.Animated = true;
             this.btnSignOut.CheckedState.Parent = this.btnSignOut;
             this.btnSignOut.CustomImages.Parent = this.btnSignOut;
+            this.alertTransition.SetDecoration(this.btnSignOut, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnSignOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
             this.btnSignOut.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignOut.ForeColor = System.Drawing.Color.White;
@@ -108,6 +120,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnSettings.Animated = true;
             this.btnSettings.CheckedState.Parent = this.btnSettings;
             this.btnSettings.CustomImages.Parent = this.btnSettings;
+            this.alertTransition.SetDecoration(this.btnSettings, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnSettings.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(131)))), ((int)(((byte)(228)))));
             this.btnSettings.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.White;
@@ -129,6 +142,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnUsers.Animated = true;
             this.btnUsers.CheckedState.Parent = this.btnUsers;
             this.btnUsers.CustomImages.Parent = this.btnUsers;
+            this.alertTransition.SetDecoration(this.btnUsers, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnUsers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
             this.btnUsers.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsers.ForeColor = System.Drawing.Color.White;
@@ -150,6 +164,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnDashboard.Animated = true;
             this.btnDashboard.CheckedState.Parent = this.btnDashboard;
             this.btnDashboard.CustomImages.Parent = this.btnDashboard;
+            this.alertTransition.SetDecoration(this.btnDashboard, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnDashboard.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
             this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.White;
@@ -173,6 +188,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.activeUserPanel.Controls.Add(this.activeForm);
             this.activeUserPanel.Controls.Add(this.activeUserPicture);
             this.activeUserPanel.Controls.Add(this.activeUserName);
+            this.alertTransition.SetDecoration(this.activeUserPanel, Guna.UI2.AnimatorNS.DecorationType.None);
             this.activeUserPanel.Location = new System.Drawing.Point(60, -3);
             this.activeUserPanel.Name = "activeUserPanel";
             this.activeUserPanel.ShadowDecoration.Parent = this.activeUserPanel;
@@ -183,6 +199,7 @@ namespace webTRON_Management_Software.Views.Admin
             // 
             this.activeForm.AutoSize = true;
             this.activeForm.BackColor = System.Drawing.Color.Transparent;
+            this.alertTransition.SetDecoration(this.activeForm, Guna.UI2.AnimatorNS.DecorationType.None);
             this.activeForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.activeForm.ForeColor = System.Drawing.Color.White;
             this.activeForm.Location = new System.Drawing.Point(62, 44);
@@ -194,6 +211,7 @@ namespace webTRON_Management_Software.Views.Admin
             // activeUserPicture
             // 
             this.activeUserPicture.BackColor = System.Drawing.Color.Transparent;
+            this.alertTransition.SetDecoration(this.activeUserPicture, Guna.UI2.AnimatorNS.DecorationType.None);
             this.activeUserPicture.Image = global::webTRON_Management_Software.Properties.Resources.man_picture;
             this.activeUserPicture.Location = new System.Drawing.Point(9, 17);
             this.activeUserPicture.Name = "activeUserPicture";
@@ -208,6 +226,7 @@ namespace webTRON_Management_Software.Views.Admin
             // 
             this.activeUserName.AutoSize = true;
             this.activeUserName.BackColor = System.Drawing.Color.Transparent;
+            this.alertTransition.SetDecoration(this.activeUserName, Guna.UI2.AnimatorNS.DecorationType.None);
             this.activeUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.activeUserName.ForeColor = System.Drawing.Color.White;
             this.activeUserName.Location = new System.Drawing.Point(60, 13);
@@ -219,6 +238,7 @@ namespace webTRON_Management_Software.Views.Admin
             // btnMinimize
             // 
             this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.alertTransition.SetDecoration(this.btnMinimize, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
             this.btnMinimize.Location = new System.Drawing.Point(911, 21);
             this.btnMinimize.Name = "btnMinimize";
@@ -232,6 +252,7 @@ namespace webTRON_Management_Software.Views.Admin
             // btnExit
             // 
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.alertTransition.SetDecoration(this.btnExit, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.Location = new System.Drawing.Point(960, 6);
             this.btnExit.Name = "btnExit";
@@ -245,6 +266,7 @@ namespace webTRON_Management_Software.Views.Admin
             // lblConfirmPassword
             // 
             this.lblConfirmPassword.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblConfirmPassword, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.lblConfirmPassword.Location = new System.Drawing.Point(371, 288);
             this.lblConfirmPassword.Name = "lblConfirmPassword";
@@ -256,6 +278,7 @@ namespace webTRON_Management_Software.Views.Admin
             // 
             this.confirmPasswordTextBox.Animated = true;
             this.confirmPasswordTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.alertTransition.SetDecoration(this.confirmPasswordTextBox, Guna.UI2.AnimatorNS.DecorationType.None);
             this.confirmPasswordTextBox.DefaultText = "";
             this.confirmPasswordTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.confirmPasswordTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -283,6 +306,7 @@ namespace webTRON_Management_Software.Views.Admin
             // 
             this.newPasswordTextBox.Animated = true;
             this.newPasswordTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.alertTransition.SetDecoration(this.newPasswordTextBox, Guna.UI2.AnimatorNS.DecorationType.None);
             this.newPasswordTextBox.DefaultText = "";
             this.newPasswordTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.newPasswordTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -309,6 +333,7 @@ namespace webTRON_Management_Software.Views.Admin
             // lblNewPassword
             // 
             this.lblNewPassword.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblNewPassword, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblNewPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.lblNewPassword.Location = new System.Drawing.Point(372, 202);
             this.lblNewPassword.Name = "lblNewPassword";
@@ -321,6 +346,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnChangePassword.Animated = true;
             this.btnChangePassword.CheckedState.Parent = this.btnChangePassword;
             this.btnChangePassword.CustomImages.Parent = this.btnChangePassword;
+            this.alertTransition.SetDecoration(this.btnChangePassword, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnChangePassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
             this.btnChangePassword.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.btnChangePassword.ForeColor = System.Drawing.Color.White;
@@ -337,6 +363,7 @@ namespace webTRON_Management_Software.Views.Admin
             // 
             this.currentPasswordTextBox.Animated = true;
             this.currentPasswordTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.alertTransition.SetDecoration(this.currentPasswordTextBox, Guna.UI2.AnimatorNS.DecorationType.None);
             this.currentPasswordTextBox.DefaultText = "";
             this.currentPasswordTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.currentPasswordTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -363,6 +390,7 @@ namespace webTRON_Management_Software.Views.Admin
             // lblCurrentPassword
             // 
             this.lblCurrentPassword.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblCurrentPassword, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblCurrentPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.lblCurrentPassword.Location = new System.Drawing.Point(371, 111);
             this.lblCurrentPassword.Name = "lblCurrentPassword";
@@ -378,6 +406,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.verificationCodePanel.Controls.Add(this.btnVerify);
             this.verificationCodePanel.Controls.Add(this.lblEnterVerificationCode);
             this.verificationCodePanel.Controls.Add(this.verificationCodeTextBox1);
+            this.alertTransition.SetDecoration(this.verificationCodePanel, Guna.UI2.AnimatorNS.DecorationType.None);
             this.verificationCodePanel.Location = new System.Drawing.Point(231, 41);
             this.verificationCodePanel.Name = "verificationCodePanel";
             this.verificationCodePanel.ShadowDecoration.Parent = this.verificationCodePanel;
@@ -390,6 +419,7 @@ namespace webTRON_Management_Software.Views.Admin
             // 
             this.verificationCodeTextBox2.Animated = true;
             this.verificationCodeTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.alertTransition.SetDecoration(this.verificationCodeTextBox2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.verificationCodeTextBox2.DefaultText = "";
             this.verificationCodeTextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.verificationCodeTextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -418,6 +448,7 @@ namespace webTRON_Management_Software.Views.Admin
             // 
             this.verificationCodeTextBox3.Animated = true;
             this.verificationCodeTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.alertTransition.SetDecoration(this.verificationCodeTextBox3, Guna.UI2.AnimatorNS.DecorationType.None);
             this.verificationCodeTextBox3.DefaultText = "";
             this.verificationCodeTextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.verificationCodeTextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -446,6 +477,7 @@ namespace webTRON_Management_Software.Views.Admin
             // 
             this.verificationCodeTextBox4.Animated = true;
             this.verificationCodeTextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.alertTransition.SetDecoration(this.verificationCodeTextBox4, Guna.UI2.AnimatorNS.DecorationType.None);
             this.verificationCodeTextBox4.DefaultText = "";
             this.verificationCodeTextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.verificationCodeTextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -475,6 +507,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnVerify.Animated = true;
             this.btnVerify.CheckedState.Parent = this.btnVerify;
             this.btnVerify.CustomImages.Parent = this.btnVerify;
+            this.alertTransition.SetDecoration(this.btnVerify, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnVerify.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
             this.btnVerify.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.btnVerify.ForeColor = System.Drawing.Color.White;
@@ -490,6 +523,7 @@ namespace webTRON_Management_Software.Views.Admin
             // lblEnterVerificationCode
             // 
             this.lblEnterVerificationCode.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblEnterVerificationCode, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblEnterVerificationCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.lblEnterVerificationCode.Location = new System.Drawing.Point(160, 145);
             this.lblEnterVerificationCode.Name = "lblEnterVerificationCode";
@@ -501,6 +535,7 @@ namespace webTRON_Management_Software.Views.Admin
             // 
             this.verificationCodeTextBox1.Animated = true;
             this.verificationCodeTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.alertTransition.SetDecoration(this.verificationCodeTextBox1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.verificationCodeTextBox1.DefaultText = "";
             this.verificationCodeTextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.verificationCodeTextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -525,12 +560,94 @@ namespace webTRON_Management_Software.Views.Admin
             this.verificationCodeTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.verificationCodeTextBox1.TextChanged += new System.EventHandler(this.VerificationCodeTextBox1_TextChanged);
             // 
+            // alertTransition
+            // 
+            this.alertTransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Scale;
+            this.alertTransition.Cursor = null;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.alertTransition.DefaultAnimation = animation1;
+            this.alertTransition.MaxAnimationTime = 5000;
+            // 
+            // alertPanel
+            // 
+            this.alertPanel.BackgroundImage = global::webTRON_Management_Software.Properties.Resources.alert_danger_background;
+            this.alertPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.alertPanel.Controls.Add(this.alertText);
+            this.alertPanel.Controls.Add(this.alertCloseBtn);
+            this.alertPanel.Controls.Add(this.alertImage);
+            this.alertTransition.SetDecoration(this.alertPanel, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.alertPanel.Location = new System.Drawing.Point(691, 558);
+            this.alertPanel.Name = "alertPanel";
+            this.alertPanel.ShadowDecoration.Parent = this.alertPanel;
+            this.alertPanel.Size = new System.Drawing.Size(306, 55);
+            this.alertPanel.TabIndex = 43;
+            this.alertPanel.Visible = false;
+            // 
+            // alertText
+            // 
+            this.alertText.AutoSize = true;
+            this.alertTransition.SetDecoration(this.alertText, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.alertText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.alertText.ForeColor = System.Drawing.Color.Red;
+            this.alertText.Location = new System.Drawing.Point(56, 17);
+            this.alertText.Name = "alertText";
+            this.alertText.Size = new System.Drawing.Size(90, 20);
+            this.alertText.TabIndex = 2;
+            this.alertText.Text = "{{alertText}}";
+            // 
+            // alertCloseBtn
+            // 
+            this.alertCloseBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.alertTransition.SetDecoration(this.alertCloseBtn, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.alertCloseBtn.Image = global::webTRON_Management_Software.Properties.Resources.alert_close_icon;
+            this.alertCloseBtn.Location = new System.Drawing.Point(269, 17);
+            this.alertCloseBtn.Name = "alertCloseBtn";
+            this.alertCloseBtn.ShadowDecoration.Parent = this.alertCloseBtn;
+            this.alertCloseBtn.Size = new System.Drawing.Size(20, 20);
+            this.alertCloseBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.alertCloseBtn.TabIndex = 1;
+            this.alertCloseBtn.TabStop = false;
+            this.alertCloseBtn.Click += new System.EventHandler(this.AlertTimer_Tick);
+            // 
+            // alertImage
+            // 
+            this.alertTransition.SetDecoration(this.alertImage, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.alertImage.Image = global::webTRON_Management_Software.Properties.Resources.alert_danger_icon;
+            this.alertImage.Location = new System.Drawing.Point(22, 17);
+            this.alertImage.Name = "alertImage";
+            this.alertImage.ShadowDecoration.Parent = this.alertImage;
+            this.alertImage.Size = new System.Drawing.Size(20, 20);
+            this.alertImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.alertImage.TabIndex = 0;
+            this.alertImage.TabStop = false;
+            // 
+            // alertTimer
+            // 
+            this.alertTimer.Enabled = true;
+            this.alertTimer.Interval = 5000;
+            this.alertTimer.Tick += new System.EventHandler(this.AlertTimer_Tick);
+            // 
             // ChangePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1000, 625);
+            this.Controls.Add(this.alertPanel);
             this.Controls.Add(this.verificationCodePanel);
             this.Controls.Add(this.currentPasswordTextBox);
             this.Controls.Add(this.lblCurrentPassword);
@@ -543,6 +660,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.sidebarPanel);
             this.Controls.Add(this.activeUserPanel);
+            this.alertTransition.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ChangePassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -556,6 +674,10 @@ namespace webTRON_Management_Software.Views.Admin
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.verificationCodePanel.ResumeLayout(false);
             this.verificationCodePanel.PerformLayout();
+            this.alertPanel.ResumeLayout(false);
+            this.alertPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.alertCloseBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alertImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -589,5 +711,11 @@ namespace webTRON_Management_Software.Views.Admin
         private Guna.UI2.WinForms.Guna2Button btnVerify;
         private System.Windows.Forms.Label lblEnterVerificationCode;
         private Guna.UI2.WinForms.Guna2TextBox verificationCodeTextBox1;
+        private Guna.UI2.WinForms.Guna2Panel alertPanel;
+        private System.Windows.Forms.Label alertText;
+        private Guna.UI2.WinForms.Guna2Transition alertTransition;
+        private Guna.UI2.WinForms.Guna2PictureBox alertCloseBtn;
+        private Guna.UI2.WinForms.Guna2PictureBox alertImage;
+        private System.Windows.Forms.Timer alertTimer;
     }
 }

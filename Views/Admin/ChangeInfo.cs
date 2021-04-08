@@ -107,7 +107,6 @@ namespace webTRON_Management_Software.Views.Admin
 
         }
         //Click event on users button
-
         private void BtnUsers_Click(object sender, EventArgs e)
         {
 
@@ -130,7 +129,7 @@ namespace webTRON_Management_Software.Views.Admin
         {
             if(string.IsNullOrEmpty(firstNameTxtBox.Text)||string.IsNullOrEmpty(lastNameTextBox.Text)||string.IsNullOrEmpty(emailTextBox.Text)||string.IsNullOrEmpty(addressTextBox.Text)||string.IsNullOrEmpty(contactNumberTextBox.Text)||(!isMale.Checked && !isFemale.Checked && !isOthers.Checked))
             {
-                MessageBox.Show("Fill all the fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DisplayAlert("Danger", "Fill all the fields.");
             }
             else
             {
@@ -160,7 +159,7 @@ namespace webTRON_Management_Software.Views.Admin
                 bool isInformationUpdatedSucessfully = Employee.Update(obj);
                 if (isInformationUpdatedSucessfully)
                 {
-                    MessageBox.Show("Information updated sucessfully", "Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DisplayAlert("Sucess", "Information updated sucessfully.");
                     //Upadte new information instantly
                     UpdateInformation();
                     //Clear Fields
@@ -169,7 +168,7 @@ namespace webTRON_Management_Software.Views.Admin
                 }
                 else
                 {
-                    MessageBox.Show("Error Occured!Please try again later.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    DisplayAlert("Danger", "Error occured.");
                 }
             }
 
@@ -194,6 +193,29 @@ namespace webTRON_Management_Software.Views.Admin
             isFemale.Checked = false;
             isOthers.Checked = false;
         }
+        //Hide alert
+        private void AlertTimer_Tick(object sender, EventArgs e)
+        {
+            alertTransition.HideSync(alertPanel);
+        }
+        //Show alert
+        private void DisplayAlert(string type, string message)
+        {
+            if (type == "Danger")
+            {
+                alertPanel.BackgroundImage = Properties.Resources.alert_danger_background;
+                alertImage.Image = Properties.Resources.alert_danger_icon;
+                alertText.ForeColor = Color.Red;
 
+            }
+            else if (type == "Sucess")
+            {
+                alertPanel.BackgroundImage = Properties.Resources.alert_sucess_background;
+                alertImage.Image = Properties.Resources.alert_sucess_icon;
+                alertText.ForeColor = Color.Green;
+            }
+            alertText.Text = message;
+            alertTransition.ShowSync(alertPanel);
+        }
     }
 }

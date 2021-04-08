@@ -21,8 +21,8 @@ namespace webTRON_Management_Software.Views.Admin
         Employee employee = new Employee();
         //Instantiate USer Class
         User newUser = new User();
-      
-       
+
+
         public CreateAccount()
         {
             InitializeComponent();
@@ -43,7 +43,7 @@ namespace webTRON_Management_Software.Views.Admin
 
             if (string.IsNullOrEmpty(roleComboBox.Text) || string.IsNullOrEmpty(firstNameTxtBox.Text) || string.IsNullOrEmpty(contactNumberTextBox.Text) || (!isMale.Checked && !isFemale.Checked && !isOthers.Checked))
             {
-                MessageBox.Show("Fill all the fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DisplayAlert("Danger", "Fill all the fields.");
             }
             else
             {
@@ -65,68 +65,70 @@ namespace webTRON_Management_Software.Views.Admin
                     obj.UserID = Generator.GenerateAccountantId();
                 else if (roleComboBox.Text == "Others")
                     obj.UserID = Generator.GenerateEmployeeId();
-                
+
                 //Fetch Sex
                 if (isMale.Checked)
                 {
                     obj.Sex = isMale.Text;
-                }else if (isFemale.Checked)
+                }
+                else if (isFemale.Checked)
                 {
                     obj.Sex = isFemale.Text;
-                }else if (isOthers.Checked)
+                }
+                else if (isOthers.Checked)
                 {
                     obj.Sex = isOthers.Text;
                 }
-           
+
                 //Set default user status offline
                 obj.Status = "Offline";
                 //Set image null
                 obj.img = null;
 
-                    //Insert object in database
-                    bool isSucess = Employee.Insert(obj);
+                //Insert object in database
+                bool isSucess = Employee.Insert(obj);
 
-                    if (isSucess)
+                if (isSucess)
+                {
+                    //Store user's user ID and password in users table
+                    bool isUserCreated = StoreUser();
+                    if (isUserCreated)
                     {
-                        //Store user's user ID and password in users table
-                        bool isUserCreated = StoreUser();
-                        if (isUserCreated)
+                        bool isSend = Email.SendAccountInfo(obj.Email, newUser.userID, newUser.password);
+                        if (isSend)
                         {
-                            bool isSend = Email.SendAccountInfo(obj.Email, newUser.userID,newUser.password);
-                            if (isSend)
-                            {
-                                //Show small popup here
-                                MessageBox.Show("New account has been created sucessfully.", "Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                ResetFormFields();
-
-                            }
-                            else
-                            {
-                                //Show error popup here
-                            }
+                            //Display sucess alert
+                            DisplayAlert("Sucess", "Account created sucessfully.");
+                            ResetFormFields();
 
                         }
                         else
                         {
-                            MessageBox.Show("Error Occured.Please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            //Show error popup here
                         }
+
                     }
                     else
                     {
-                        MessageBox.Show("Error Occured.Please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        DisplayAlert("Danger", "Error occured.");
                     }
+                }
+                else
+                {
+                    DisplayAlert("Danger", "Error occured.");
+                }
             }
-        
+
         }
         //Method to reset form input fields
         private void ResetFormFields()
         {
-         
+
             firstNameTxtBox.Text = "";
             lastNameTextBox.Text = "";
             emailTextBox.Text = "";
             addressTextBox.Text = "";
-            dateOfBirthPicker.Value =new DateTime(2000,1,1) ;
+            dateOfBirthPicker.Value = new DateTime(2000, 1, 1);
             contactNumberTextBox.Text = "";
             isMale.Checked = false;
             isFemale.Checked = false;
@@ -136,15 +138,15 @@ namespace webTRON_Management_Software.Views.Admin
         //Method to store user's userID and password in user table when account is sucessfully created
         private bool StoreUser()
         {
-           //If account is created sucesfully then store corresponding user's userID and password in (users) table
-           //Also set account status active in accountStatus table
+            //If account is created sucesfully then store corresponding user's userID and password in (users) table
+            //Also set account status active in accountStatus table
             newUser.userID = obj.UserID;
             newUser.password = Generator.GeneratePassword();
             //Set account status "Active"
             User.SetAccountStatus(newUser.userID, "Active");
-            bool isSucess=User.Insert(newUser);
+            bool isSucess = User.Insert(newUser);
             return isSucess;
-            
+
         }
         //Click event on Dashboard button
         private void BtnDashboard_Click(object sender, EventArgs e)
@@ -185,10 +187,10 @@ namespace webTRON_Management_Software.Views.Admin
                 MemoryStream ms = new MemoryStream(employee.img);
                 activeUserPicture.Image = Image.FromStream(ms);
             }
-            
+
 
         }
-      
+
         //Click event on signout and exit button
         private void SignOut(object sender, EventArgs e)
         {
@@ -216,12 +218,36 @@ namespace webTRON_Management_Software.Views.Admin
         //Click event on users button
         private void BtnUsers_Click(object sender, EventArgs e)
         {
-                //Instantiating user form
-                var users = new Users(employee);
-                users.Show();
-                this.Hide();
+            //Instantiating user form
+            var users = new Users(employee);
+            users.Show();
+            this.Hide();
 
         }
-        
+
+        //Hide alert
+        private void AlertTimer_Tick(object sender, EventArgs e)
+        {
+            alertTransition.HideSync(alertPanel);
+        }
+        //Show alert
+        private void DisplayAlert(string type, string message)
+        {
+            if (type == "Danger")
+            {
+                alertPanel.BackgroundImage = Properties.Resources.alert_danger_background;
+                alertImage.Image = Properties.Resources.alert_danger_icon;
+                alertText.ForeColor = Color.Red;
+
+            }
+            else if (type == "Sucess")
+            {
+                alertPanel.BackgroundImage = Properties.Resources.alert_sucess_background;
+                alertImage.Image = Properties.Resources.alert_sucess_icon;
+                alertText.ForeColor = Color.Green;
+            }
+            alertText.Text = message;
+            alertTransition.ShowSync(alertPanel);
+        }
     }
 }

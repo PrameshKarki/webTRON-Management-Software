@@ -30,6 +30,7 @@ namespace webTRON_Management_Software.Views.Admin
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
             this.sidebarPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.btnSignOut = new Guna.UI2.WinForms.Guna2Button();
@@ -55,12 +56,21 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnExit = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnChangePicture = new Guna.UI2.WinForms.Guna2Button();
+            this.alertTransition = new Guna.UI2.WinForms.Guna2Transition();
+            this.alertPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.alertText = new System.Windows.Forms.Label();
+            this.alertCloseBtn = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.alertImage = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.alertTimer = new System.Windows.Forms.Timer(this.components);
             this.sidebarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userPicture)).BeginInit();
             this.activeUserPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
+            this.alertPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.alertCloseBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alertImage)).BeginInit();
             this.SuspendLayout();
             // 
             // sidebarPanel
@@ -69,12 +79,12 @@ namespace webTRON_Management_Software.Views.Admin
             this.sidebarPanel.Controls.Add(this.btnSettings);
             this.sidebarPanel.Controls.Add(this.btnUsers);
             this.sidebarPanel.Controls.Add(this.btnDashboard);
+            this.alertTransition.SetDecoration(this.sidebarPanel, Guna.UI2.AnimatorNS.DecorationType.None);
             this.sidebarPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
             this.sidebarPanel.Location = new System.Drawing.Point(0, -1);
-            this.sidebarPanel.Margin = new System.Windows.Forms.Padding(4);
             this.sidebarPanel.Name = "sidebarPanel";
             this.sidebarPanel.ShadowDecoration.Parent = this.sidebarPanel;
-            this.sidebarPanel.Size = new System.Drawing.Size(91, 655);
+            this.sidebarPanel.Size = new System.Drawing.Size(68, 532);
             this.sidebarPanel.TabIndex = 30;
             // 
             // btnSignOut
@@ -82,17 +92,18 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnSignOut.Animated = true;
             this.btnSignOut.CheckedState.Parent = this.btnSignOut;
             this.btnSignOut.CustomImages.Parent = this.btnSignOut;
+            this.alertTransition.SetDecoration(this.btnSignOut, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnSignOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
             this.btnSignOut.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignOut.ForeColor = System.Drawing.Color.White;
             this.btnSignOut.HoverState.Parent = this.btnSignOut;
             this.btnSignOut.Image = global::webTRON_Management_Software.Properties.Resources.exit_icon;
             this.btnSignOut.ImageOffset = new System.Drawing.Point(10, -10);
-            this.btnSignOut.Location = new System.Drawing.Point(0, 576);
+            this.btnSignOut.Location = new System.Drawing.Point(0, 468);
             this.btnSignOut.Margin = new System.Windows.Forms.Padding(0);
             this.btnSignOut.Name = "btnSignOut";
             this.btnSignOut.ShadowDecoration.Parent = this.btnSignOut;
-            this.btnSignOut.Size = new System.Drawing.Size(91, 59);
+            this.btnSignOut.Size = new System.Drawing.Size(68, 48);
             this.btnSignOut.TabIndex = 24;
             this.btnSignOut.Text = "Sign Out";
             this.btnSignOut.TextOffset = new System.Drawing.Point(-8, 10);
@@ -103,17 +114,18 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnSettings.Animated = true;
             this.btnSettings.CheckedState.Parent = this.btnSettings;
             this.btnSettings.CustomImages.Parent = this.btnSettings;
+            this.alertTransition.SetDecoration(this.btnSettings, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnSettings.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(131)))), ((int)(((byte)(228)))));
             this.btnSettings.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.White;
             this.btnSettings.HoverState.Parent = this.btnSettings;
             this.btnSettings.Image = global::webTRON_Management_Software.Properties.Resources.settings_icon;
             this.btnSettings.ImageOffset = new System.Drawing.Point(10, -12);
-            this.btnSettings.Location = new System.Drawing.Point(0, 335);
+            this.btnSettings.Location = new System.Drawing.Point(0, 272);
             this.btnSettings.Margin = new System.Windows.Forms.Padding(0);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.ShadowDecoration.Parent = this.btnSettings;
-            this.btnSettings.Size = new System.Drawing.Size(91, 59);
+            this.btnSettings.Size = new System.Drawing.Size(68, 48);
             this.btnSettings.TabIndex = 23;
             this.btnSettings.Text = "Settings";
             this.btnSettings.TextOffset = new System.Drawing.Point(-8, 10);
@@ -123,17 +135,18 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnUsers.Animated = true;
             this.btnUsers.CheckedState.Parent = this.btnUsers;
             this.btnUsers.CustomImages.Parent = this.btnUsers;
+            this.alertTransition.SetDecoration(this.btnUsers, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnUsers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
             this.btnUsers.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsers.ForeColor = System.Drawing.Color.White;
             this.btnUsers.HoverState.Parent = this.btnUsers;
             this.btnUsers.Image = global::webTRON_Management_Software.Properties.Resources.user_icon;
             this.btnUsers.ImageOffset = new System.Drawing.Point(6, -12);
-            this.btnUsers.Location = new System.Drawing.Point(0, 240);
+            this.btnUsers.Location = new System.Drawing.Point(0, 195);
             this.btnUsers.Margin = new System.Windows.Forms.Padding(0);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.ShadowDecoration.Parent = this.btnUsers;
-            this.btnUsers.Size = new System.Drawing.Size(91, 59);
+            this.btnUsers.Size = new System.Drawing.Size(68, 48);
             this.btnUsers.TabIndex = 22;
             this.btnUsers.Text = "Users";
             this.btnUsers.TextOffset = new System.Drawing.Point(-8, 10);
@@ -144,17 +157,18 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnDashboard.Animated = true;
             this.btnDashboard.CheckedState.Parent = this.btnDashboard;
             this.btnDashboard.CustomImages.Parent = this.btnDashboard;
+            this.alertTransition.SetDecoration(this.btnDashboard, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnDashboard.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
             this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.White;
             this.btnDashboard.HoverState.Parent = this.btnDashboard;
             this.btnDashboard.Image = global::webTRON_Management_Software.Properties.Resources.dashboard_icon;
             this.btnDashboard.ImageOffset = new System.Drawing.Point(15, -12);
-            this.btnDashboard.Location = new System.Drawing.Point(0, 142);
+            this.btnDashboard.Location = new System.Drawing.Point(0, 115);
             this.btnDashboard.Margin = new System.Windows.Forms.Padding(0);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.ShadowDecoration.Parent = this.btnDashboard;
-            this.btnDashboard.Size = new System.Drawing.Size(91, 59);
+            this.btnDashboard.Size = new System.Drawing.Size(68, 48);
             this.btnDashboard.TabIndex = 21;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextOffset = new System.Drawing.Point(-6, 10);
@@ -163,88 +177,88 @@ namespace webTRON_Management_Software.Views.Admin
             // lblUserID
             // 
             this.lblUserID.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblUserID, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblUserID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.lblUserID.Location = new System.Drawing.Point(393, 108);
-            this.lblUserID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUserID.Location = new System.Drawing.Point(295, 88);
             this.lblUserID.Name = "lblUserID";
-            this.lblUserID.Size = new System.Drawing.Size(99, 29);
+            this.lblUserID.Size = new System.Drawing.Size(76, 24);
             this.lblUserID.TabIndex = 34;
             this.lblUserID.Text = "User ID:";
             // 
             // lblUserIdValue
             // 
             this.lblUserIdValue.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblUserIdValue, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblUserIdValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.lblUserIdValue.Location = new System.Drawing.Point(601, 108);
-            this.lblUserIdValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUserIdValue.Location = new System.Drawing.Point(451, 88);
             this.lblUserIdValue.Name = "lblUserIdValue";
-            this.lblUserIdValue.Size = new System.Drawing.Size(119, 29);
+            this.lblUserIdValue.Size = new System.Drawing.Size(88, 24);
             this.lblUserIdValue.TabIndex = 35;
             this.lblUserIdValue.Text = "{{userID}}";
             // 
             // lblFullNameValue
             // 
             this.lblFullNameValue.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblFullNameValue, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblFullNameValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.lblFullNameValue.Location = new System.Drawing.Point(601, 167);
-            this.lblFullNameValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFullNameValue.Location = new System.Drawing.Point(451, 136);
             this.lblFullNameValue.Name = "lblFullNameValue";
-            this.lblFullNameValue.Size = new System.Drawing.Size(145, 29);
+            this.lblFullNameValue.Size = new System.Drawing.Size(108, 24);
             this.lblFullNameValue.TabIndex = 37;
             this.lblFullNameValue.Text = "{{fullName}}";
             // 
             // lblFullName
             // 
             this.lblFullName.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblFullName, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.lblFullName.Location = new System.Drawing.Point(393, 167);
-            this.lblFullName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFullName.Location = new System.Drawing.Point(295, 136);
             this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(130, 29);
+            this.lblFullName.Size = new System.Drawing.Size(102, 24);
             this.lblFullName.TabIndex = 36;
             this.lblFullName.Text = "Full Name:";
             // 
             // lblEmailValue
             // 
             this.lblEmailValue.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblEmailValue, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblEmailValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.lblEmailValue.Location = new System.Drawing.Point(601, 223);
-            this.lblEmailValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEmailValue.Location = new System.Drawing.Point(451, 181);
             this.lblEmailValue.Name = "lblEmailValue";
-            this.lblEmailValue.Size = new System.Drawing.Size(108, 29);
+            this.lblEmailValue.Size = new System.Drawing.Size(79, 24);
             this.lblEmailValue.TabIndex = 39;
             this.lblEmailValue.Text = "{{email}}";
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblEmail, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.lblEmail.Location = new System.Drawing.Point(393, 223);
-            this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEmail.Location = new System.Drawing.Point(295, 181);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(80, 29);
+            this.lblEmail.Size = new System.Drawing.Size(62, 24);
             this.lblEmail.TabIndex = 38;
             this.lblEmail.Text = "Email:";
             // 
             // lblContactNumberValue
             // 
             this.lblContactNumberValue.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblContactNumberValue, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblContactNumberValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.lblContactNumberValue.Location = new System.Drawing.Point(601, 281);
-            this.lblContactNumberValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblContactNumberValue.Location = new System.Drawing.Point(451, 228);
             this.lblContactNumberValue.Name = "lblContactNumberValue";
-            this.lblContactNumberValue.Size = new System.Drawing.Size(212, 29);
+            this.lblContactNumberValue.Size = new System.Drawing.Size(163, 24);
             this.lblContactNumberValue.TabIndex = 41;
             this.lblContactNumberValue.Text = "{{contactNumber}}";
             // 
             // lblContactNumber
             // 
             this.lblContactNumber.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblContactNumber, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblContactNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.lblContactNumber.Location = new System.Drawing.Point(393, 281);
-            this.lblContactNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblContactNumber.Location = new System.Drawing.Point(295, 228);
             this.lblContactNumber.Name = "lblContactNumber";
-            this.lblContactNumber.Size = new System.Drawing.Size(193, 29);
+            this.lblContactNumber.Size = new System.Drawing.Size(152, 24);
             this.lblContactNumber.TabIndex = 40;
             this.lblContactNumber.Text = "Contact Number:";
             // 
@@ -256,18 +270,18 @@ namespace webTRON_Management_Software.Views.Admin
             // 
             this.btnChangePassword.Animated = true;
             this.btnChangePassword.AutoRoundedCorners = true;
-            this.btnChangePassword.BorderRadius = 26;
+            this.btnChangePassword.BorderRadius = 21;
             this.btnChangePassword.CheckedState.Parent = this.btnChangePassword;
             this.btnChangePassword.CustomImages.Parent = this.btnChangePassword;
+            this.alertTransition.SetDecoration(this.btnChangePassword, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnChangePassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
             this.btnChangePassword.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.btnChangePassword.ForeColor = System.Drawing.Color.White;
             this.btnChangePassword.HoverState.Parent = this.btnChangePassword;
-            this.btnChangePassword.Location = new System.Drawing.Point(1013, 464);
-            this.btnChangePassword.Margin = new System.Windows.Forms.Padding(4);
+            this.btnChangePassword.Location = new System.Drawing.Point(760, 377);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.ShadowDecoration.Parent = this.btnChangePassword;
-            this.btnChangePassword.Size = new System.Drawing.Size(256, 55);
+            this.btnChangePassword.Size = new System.Drawing.Size(192, 45);
             this.btnChangePassword.TabIndex = 43;
             this.btnChangePassword.Text = "Change Password";
             this.btnChangePassword.Click += new System.EventHandler(this.BtnChangePassword_Click);
@@ -276,18 +290,18 @@ namespace webTRON_Management_Software.Views.Admin
             // 
             this.btnChangeInfo.Animated = true;
             this.btnChangeInfo.AutoRoundedCorners = true;
-            this.btnChangeInfo.BorderRadius = 26;
+            this.btnChangeInfo.BorderRadius = 21;
             this.btnChangeInfo.CheckedState.Parent = this.btnChangeInfo;
             this.btnChangeInfo.CustomImages.Parent = this.btnChangeInfo;
+            this.alertTransition.SetDecoration(this.btnChangeInfo, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnChangeInfo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
             this.btnChangeInfo.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.btnChangeInfo.ForeColor = System.Drawing.Color.White;
             this.btnChangeInfo.HoverState.Parent = this.btnChangeInfo;
-            this.btnChangeInfo.Location = new System.Drawing.Point(1013, 396);
-            this.btnChangeInfo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnChangeInfo.Location = new System.Drawing.Point(760, 322);
             this.btnChangeInfo.Name = "btnChangeInfo";
             this.btnChangeInfo.ShadowDecoration.Parent = this.btnChangeInfo;
-            this.btnChangeInfo.Size = new System.Drawing.Size(256, 55);
+            this.btnChangeInfo.Size = new System.Drawing.Size(192, 45);
             this.btnChangeInfo.TabIndex = 42;
             this.btnChangeInfo.Text = "Change Info";
             this.btnChangeInfo.Click += new System.EventHandler(this.BtnChangeInfo_Click);
@@ -295,13 +309,13 @@ namespace webTRON_Management_Software.Views.Admin
             // userPicture
             // 
             this.userPicture.BackColor = System.Drawing.Color.Transparent;
+            this.alertTransition.SetDecoration(this.userPicture, Guna.UI2.AnimatorNS.DecorationType.None);
             this.userPicture.Image = global::webTRON_Management_Software.Properties.Resources.man_picture;
-            this.userPicture.Location = new System.Drawing.Point(1013, 95);
-            this.userPicture.Margin = new System.Windows.Forms.Padding(4);
+            this.userPicture.Location = new System.Drawing.Point(760, 77);
             this.userPicture.Name = "userPicture";
             this.userPicture.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.userPicture.ShadowDecoration.Parent = this.userPicture;
-            this.userPicture.Size = new System.Drawing.Size(233, 215);
+            this.userPicture.Size = new System.Drawing.Size(175, 175);
             this.userPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.userPicture.TabIndex = 31;
             this.userPicture.TabStop = false;
@@ -313,36 +327,36 @@ namespace webTRON_Management_Software.Views.Admin
             this.activeUserPanel.Controls.Add(this.activeForm);
             this.activeUserPanel.Controls.Add(this.activeUserPicture);
             this.activeUserPanel.Controls.Add(this.activeUserName);
-            this.activeUserPanel.Location = new System.Drawing.Point(81, -2);
-            this.activeUserPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.alertTransition.SetDecoration(this.activeUserPanel, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.activeUserPanel.Location = new System.Drawing.Point(61, -2);
             this.activeUserPanel.Name = "activeUserPanel";
             this.activeUserPanel.ShadowDecoration.Parent = this.activeUserPanel;
-            this.activeUserPanel.Size = new System.Drawing.Size(220, 98);
+            this.activeUserPanel.Size = new System.Drawing.Size(165, 80);
             this.activeUserPanel.TabIndex = 29;
             // 
             // activeForm
             // 
             this.activeForm.AutoSize = true;
             this.activeForm.BackColor = System.Drawing.Color.Transparent;
+            this.alertTransition.SetDecoration(this.activeForm, Guna.UI2.AnimatorNS.DecorationType.None);
             this.activeForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.activeForm.ForeColor = System.Drawing.Color.White;
-            this.activeForm.Location = new System.Drawing.Point(83, 54);
-            this.activeForm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.activeForm.Location = new System.Drawing.Point(62, 44);
             this.activeForm.Name = "activeForm";
-            this.activeForm.Size = new System.Drawing.Size(83, 25);
+            this.activeForm.Size = new System.Drawing.Size(68, 20);
             this.activeForm.TabIndex = 21;
             this.activeForm.Text = "Settings";
             // 
             // activeUserPicture
             // 
             this.activeUserPicture.BackColor = System.Drawing.Color.Transparent;
+            this.alertTransition.SetDecoration(this.activeUserPicture, Guna.UI2.AnimatorNS.DecorationType.None);
             this.activeUserPicture.Image = global::webTRON_Management_Software.Properties.Resources.man_picture;
-            this.activeUserPicture.Location = new System.Drawing.Point(12, 21);
-            this.activeUserPicture.Margin = new System.Windows.Forms.Padding(4);
+            this.activeUserPicture.Location = new System.Drawing.Point(9, 17);
             this.activeUserPicture.Name = "activeUserPicture";
             this.activeUserPicture.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.activeUserPicture.ShadowDecoration.Parent = this.activeUserPicture;
-            this.activeUserPicture.Size = new System.Drawing.Size(65, 55);
+            this.activeUserPicture.Size = new System.Drawing.Size(49, 45);
             this.activeUserPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.activeUserPicture.TabIndex = 0;
             this.activeUserPicture.TabStop = false;
@@ -351,21 +365,21 @@ namespace webTRON_Management_Software.Views.Admin
             // 
             this.activeUserName.AutoSize = true;
             this.activeUserName.BackColor = System.Drawing.Color.Transparent;
+            this.alertTransition.SetDecoration(this.activeUserName, Guna.UI2.AnimatorNS.DecorationType.None);
             this.activeUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.activeUserName.ForeColor = System.Drawing.Color.White;
-            this.activeUserName.Location = new System.Drawing.Point(80, 16);
-            this.activeUserName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.activeUserName.Location = new System.Drawing.Point(60, 13);
             this.activeUserName.Name = "activeUserName";
-            this.activeUserName.Size = new System.Drawing.Size(65, 29);
+            this.activeUserName.Size = new System.Drawing.Size(52, 24);
             this.activeUserName.TabIndex = 1;
             this.activeUserName.Text = "John";
             // 
             // btnMinimize
             // 
             this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.alertTransition.SetDecoration(this.btnMinimize, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
-            this.btnMinimize.Location = new System.Drawing.Point(1215, 33);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMinimize.Location = new System.Drawing.Point(911, 27);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.ShadowDecoration.Parent = this.btnMinimize;
             this.btnMinimize.Size = new System.Drawing.Size(21, 4);
@@ -377,9 +391,9 @@ namespace webTRON_Management_Software.Views.Admin
             // btnExit
             // 
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.alertTransition.SetDecoration(this.btnExit, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(1280, 15);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExit.Location = new System.Drawing.Point(960, 12);
             this.btnExit.Name = "btnExit";
             this.btnExit.ShadowDecoration.Parent = this.btnExit;
             this.btnExit.Size = new System.Drawing.Size(28, 28);
@@ -392,28 +406,110 @@ namespace webTRON_Management_Software.Views.Admin
             // 
             this.btnChangePicture.Animated = true;
             this.btnChangePicture.AutoRoundedCorners = true;
-            this.btnChangePicture.BorderRadius = 26;
+            this.btnChangePicture.BorderRadius = 21;
             this.btnChangePicture.CheckedState.Parent = this.btnChangePicture;
             this.btnChangePicture.CustomImages.Parent = this.btnChangePicture;
+            this.alertTransition.SetDecoration(this.btnChangePicture, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnChangePicture.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
             this.btnChangePicture.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.btnChangePicture.ForeColor = System.Drawing.Color.White;
             this.btnChangePicture.HoverState.Parent = this.btnChangePicture;
-            this.btnChangePicture.Location = new System.Drawing.Point(1013, 326);
-            this.btnChangePicture.Margin = new System.Windows.Forms.Padding(4);
+            this.btnChangePicture.Location = new System.Drawing.Point(760, 265);
             this.btnChangePicture.Name = "btnChangePicture";
             this.btnChangePicture.ShadowDecoration.Parent = this.btnChangePicture;
-            this.btnChangePicture.Size = new System.Drawing.Size(256, 55);
+            this.btnChangePicture.Size = new System.Drawing.Size(192, 45);
             this.btnChangePicture.TabIndex = 44;
             this.btnChangePicture.Text = "Change Picture";
             this.btnChangePicture.Click += new System.EventHandler(this.BtnChangePicture_Click);
             // 
+            // alertTransition
+            // 
+            this.alertTransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Scale;
+            this.alertTransition.Cursor = null;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.alertTransition.DefaultAnimation = animation1;
+            this.alertTransition.MaxAnimationTime = 5000;
+            // 
+            // alertPanel
+            // 
+            this.alertPanel.BackgroundImage = global::webTRON_Management_Software.Properties.Resources.alert_danger_background;
+            this.alertPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.alertPanel.Controls.Add(this.alertText);
+            this.alertPanel.Controls.Add(this.alertCloseBtn);
+            this.alertPanel.Controls.Add(this.alertImage);
+            this.alertTransition.SetDecoration(this.alertPanel, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.alertPanel.Location = new System.Drawing.Point(691, 558);
+            this.alertPanel.Name = "alertPanel";
+            this.alertPanel.ShadowDecoration.Parent = this.alertPanel;
+            this.alertPanel.Size = new System.Drawing.Size(306, 55);
+            this.alertPanel.TabIndex = 45;
+            this.alertPanel.Visible = false;
+            // 
+            // alertText
+            // 
+            this.alertText.AutoSize = true;
+            this.alertTransition.SetDecoration(this.alertText, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.alertText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.alertText.ForeColor = System.Drawing.Color.Red;
+            this.alertText.Location = new System.Drawing.Point(56, 17);
+            this.alertText.Name = "alertText";
+            this.alertText.Size = new System.Drawing.Size(90, 20);
+            this.alertText.TabIndex = 2;
+            this.alertText.Text = "{{alertText}}";
+            // 
+            // alertCloseBtn
+            // 
+            this.alertCloseBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.alertTransition.SetDecoration(this.alertCloseBtn, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.alertCloseBtn.Image = global::webTRON_Management_Software.Properties.Resources.alert_close_icon;
+            this.alertCloseBtn.Location = new System.Drawing.Point(269, 17);
+            this.alertCloseBtn.Name = "alertCloseBtn";
+            this.alertCloseBtn.ShadowDecoration.Parent = this.alertCloseBtn;
+            this.alertCloseBtn.Size = new System.Drawing.Size(20, 20);
+            this.alertCloseBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.alertCloseBtn.TabIndex = 1;
+            this.alertCloseBtn.TabStop = false;
+            this.alertCloseBtn.Click += new System.EventHandler(this.AlertTimer_Tick);
+            // 
+            // alertImage
+            // 
+            this.alertTransition.SetDecoration(this.alertImage, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.alertImage.Image = global::webTRON_Management_Software.Properties.Resources.alert_danger_icon;
+            this.alertImage.Location = new System.Drawing.Point(22, 17);
+            this.alertImage.Name = "alertImage";
+            this.alertImage.ShadowDecoration.Parent = this.alertImage;
+            this.alertImage.Size = new System.Drawing.Size(20, 20);
+            this.alertImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.alertImage.TabIndex = 0;
+            this.alertImage.TabStop = false;
+            // 
+            // alertTimer
+            // 
+            this.alertTimer.Enabled = true;
+            this.alertTimer.Interval = 5000;
+            this.alertTimer.Tick += new System.EventHandler(this.AlertTimer_Tick);
+            // 
             // Settings
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1333, 769);
+            this.ClientSize = new System.Drawing.Size(1000, 625);
+            this.Controls.Add(this.alertPanel);
             this.Controls.Add(this.btnChangePicture);
             this.Controls.Add(this.btnChangePassword);
             this.Controls.Add(this.btnChangeInfo);
@@ -430,8 +526,8 @@ namespace webTRON_Management_Software.Views.Admin
             this.Controls.Add(this.activeUserPanel);
             this.Controls.Add(this.btnMinimize);
             this.Controls.Add(this.btnExit);
+            this.alertTransition.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Settings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Settings";
@@ -443,6 +539,10 @@ namespace webTRON_Management_Software.Views.Admin
             ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
+            this.alertPanel.ResumeLayout(false);
+            this.alertPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.alertCloseBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alertImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -474,5 +574,11 @@ namespace webTRON_Management_Software.Views.Admin
         private Guna.UI2.WinForms.Guna2Button btnChangePassword;
         private Guna.UI2.WinForms.Guna2Button btnChangeInfo;
         private Guna.UI2.WinForms.Guna2Button btnChangePicture;
+        private Guna.UI2.WinForms.Guna2Transition alertTransition;
+        private Guna.UI2.WinForms.Guna2Panel alertPanel;
+        private System.Windows.Forms.Label alertText;
+        private Guna.UI2.WinForms.Guna2PictureBox alertCloseBtn;
+        private Guna.UI2.WinForms.Guna2PictureBox alertImage;
+        private System.Windows.Forms.Timer alertTimer;
     }
 }

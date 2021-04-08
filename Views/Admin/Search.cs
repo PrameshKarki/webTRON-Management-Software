@@ -195,20 +195,42 @@ namespace webTRON_Management_Software.Views.Admin
                     {
                         //Set account status inactive
                         User.SetAccountStatus(userID, "Inactive");
-                        MessageBox.Show("Account deleted sucessfully.", "Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        DisplayAlert("Sucess", "Account deleted sucessfully.");
                         LoadGridView();
                         //Hide selected user details
                         selectedUserDetailsPanel.Hide();
                     }
                     else
                     {
-                        MessageBox.Show("Error occured!Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        DisplayAlert("Danger", "Error occured.");
                     }
                 } 
             }
 
         }
+        //Hide alert
+        private void AlertTimer_Tick(object sender, EventArgs e)
+        {
+            alertTransition.HideSync(alertPanel);
+        }
+        //Show alert
+        private void DisplayAlert(string type, string message)
+        {
+            if (type == "Danger")
+            {
+                alertPanel.BackgroundImage = Properties.Resources.alert_danger_background;
+                alertImage.Image = Properties.Resources.alert_danger_icon;
+                alertText.ForeColor = Color.Red;
 
-       
+            }
+            else if (type == "Sucess")
+            {
+                alertPanel.BackgroundImage = Properties.Resources.alert_sucess_background;
+                alertImage.Image = Properties.Resources.alert_sucess_icon;
+                alertText.ForeColor = Color.Green;
+            }
+            alertText.Text = message;
+            alertTransition.ShowSync(alertPanel);
+        }
     }
 }

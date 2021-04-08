@@ -103,7 +103,7 @@ namespace webTRON_Management_Software.Views.Others
             //Check all the text fields are filled or not
             if (string.IsNullOrEmpty(verificationCodeTextBox1.Text) || string.IsNullOrEmpty(verificationCodeTextBox2.Text) || string.IsNullOrEmpty(verificationCodeTextBox3.Text) || string.IsNullOrEmpty(verificationCodeTextBox4.Text))
             {
-                MessageBox.Show("Fill all the fields", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                DisplayAlert("Danger", "Fill all the field.");
             }
             else
             {
@@ -116,7 +116,7 @@ namespace webTRON_Management_Software.Views.Others
                     bool isPasswordChangedSucessfully = Employee.UpdatePassword(employee.Email, newPassword);
                     if (isPasswordChangedSucessfully)
                     {
-                        MessageBox.Show("Password changed sucessfully.", "Sucesss", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        DisplayAlert("Sucess", "Password changed sucessfully");
                         //Instantiate settings form
                         Settings settings = new Settings(employee);
                         //Show settings form
@@ -126,14 +126,14 @@ namespace webTRON_Management_Software.Views.Others
                     }
                     else
                     {
-                        MessageBox.Show("Please try again later.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        DisplayAlert("Danger", "Error occured.");
 
                     }
 
                 }
                 else
                 {
-                    MessageBox.Show("Invalid verification code.", "Invalid Code", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    DisplayAlert("Danger", "Invalid verification code.");
                 }
 
             }
@@ -176,13 +176,35 @@ namespace webTRON_Management_Software.Views.Others
             }
 
         }
+          private void AlertTimer_Tick(object sender, EventArgs e)
+        {
+            alertTransition.HideSync(alertPanel);
+        }
+        //Show alert
+        private void DisplayAlert(string type,string message)
+        {
+            if (type == "Danger")
+            {
+                alertPanel.BackgroundImage = Properties.Resources.alert_danger_background;
+                alertImage.Image = Properties.Resources.alert_danger_icon;
+                alertText.ForeColor = Color.Red;
+                
+            }else if (type == "Sucess")
+            {
+                alertPanel.BackgroundImage = Properties.Resources.alert_sucess_background;
+                alertImage.Image = Properties.Resources.alert_sucess_icon;
+                alertText.ForeColor = Color.Green;
+            }
+            alertText.Text = message;
+            alertTransition.ShowSync(alertPanel);
+        }
 
         //Click event on change password button
         private void BtnChangePassword_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(currentPasswordTextBox.Text) || string.IsNullOrEmpty(newPasswordTextBox.Text) || string.IsNullOrEmpty(confirmPasswordTextBox.Text))
             {
-                MessageBox.Show("Please fill all the fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DisplayAlert("Danger", "Fill all the fields.");
             }
             else
             {
@@ -212,19 +234,19 @@ namespace webTRON_Management_Software.Views.Others
                         }
                         else
                         {
-                            MessageBox.Show("Please try again later.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            DisplayAlert("Danger", "Error occured.");
                         }
 
                     }
                     else
                     {
-                        MessageBox.Show("Password doesn't match.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        DisplayAlert("Danger", "Invalid credentials.");
 
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Password doesn't match.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    DisplayAlert("Danger", "Invalid credentials.");
                 }
 
             }

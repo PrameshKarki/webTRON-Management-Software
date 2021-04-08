@@ -191,7 +191,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnSearchUser.ForeColor = System.Drawing.Color.White;
             this.btnSearchUser.HoverState.Parent = this.btnSearchUser;
             this.btnSearchUser.Image = global::webTRON_Management_Software.Properties.Resources.search_icon;
-            this.btnSearchUser.Location = new System.Drawing.Point(536, 170);
+            this.btnSearchUser.Location = new System.Drawing.Point(541, 197);
             this.btnSearchUser.Name = "btnSearchUser";
             this.btnSearchUser.ShadowDecoration.Parent = this.btnSearchUser;
             this.btnSearchUser.Size = new System.Drawing.Size(192, 45);
@@ -211,7 +211,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnAddNewAccount.ForeColor = System.Drawing.Color.White;
             this.btnAddNewAccount.HoverState.Parent = this.btnAddNewAccount;
             this.btnAddNewAccount.Image = global::webTRON_Management_Software.Properties.Resources.PlusSign;
-            this.btnAddNewAccount.Location = new System.Drawing.Point(306, 170);
+            this.btnAddNewAccount.Location = new System.Drawing.Point(311, 197);
             this.btnAddNewAccount.Name = "btnAddNewAccount";
             this.btnAddNewAccount.ShadowDecoration.Parent = this.btnAddNewAccount;
             this.btnAddNewAccount.Size = new System.Drawing.Size(192, 45);

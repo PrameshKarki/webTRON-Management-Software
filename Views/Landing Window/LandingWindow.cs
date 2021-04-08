@@ -34,7 +34,7 @@ namespace webTRON_Management_Software.Views.Landing_Window
               //Validating user input
             if (string.IsNullOrEmpty(userIDTextBox.Text) || string.IsNullOrEmpty(passwordTextBox.Text))
             {
-                MessageBox.Show("Fll all the fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DisplayAlert("Danger", "Fill all the fields.");
 
             }
             else
@@ -76,7 +76,8 @@ namespace webTRON_Management_Software.Views.Landing_Window
                 }
                 else
                 {
-                    MessageBox.Show("Invalid Username or Password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //Display alert here
+                    DisplayAlert("Danger", "Invalid credentials.");
                 }
             }
 
@@ -129,6 +130,29 @@ namespace webTRON_Management_Software.Views.Landing_Window
             this.Hide();
             var forgetPassword = new Utilities.ForgetPassword();
             forgetPassword.Show();
+        }
+        //Hide alert
+        private void AlertTimer_Tick(object sender, EventArgs e)
+        {
+            alertTransition.HideSync(alertPanel);
+        }
+        //Show alert
+        private void DisplayAlert(string type,string message)
+        {
+            if (type == "Danger")
+            {
+                alertPanel.BackgroundImage = Properties.Resources.alert_danger_background;
+                alertImage.Image = Properties.Resources.alert_danger_icon;
+                alertText.ForeColor = Color.Red;
+                
+            }else if (type == "Sucess")
+            {
+                alertPanel.BackgroundImage = Properties.Resources.alert_sucess_background;
+                alertImage.Image = Properties.Resources.alert_sucess_icon;
+                alertText.ForeColor = Color.Green;
+            }
+            alertText.Text = message;
+            alertTransition.ShowSync(alertPanel);
         }
     }
 }

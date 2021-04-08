@@ -344,6 +344,20 @@
   <ItemGroup>
     <None Include="Resources\search_icon_blue.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\alert_sucess_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alert_danger_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alert_danger_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alert_close_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alert_sucess_icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
