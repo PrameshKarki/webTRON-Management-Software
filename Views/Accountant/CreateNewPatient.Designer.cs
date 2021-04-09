@@ -28,6 +28,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateNewPatient));
             this.addressTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblAddress = new System.Windows.Forms.Label();
@@ -44,7 +45,6 @@
             this.lblAge = new System.Windows.Forms.Label();
             this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnCreateNewPatient = new Guna.UI2.WinForms.Guna2Button();
@@ -54,7 +54,6 @@
             this.lblRegistrationDate = new System.Windows.Forms.Label();
             this.lblRegistrationIdOutput = new System.Windows.Forms.Label();
             this.lblRegistrationDateOutput = new System.Windows.Forms.Label();
-            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.printPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.LblPanelReferredToOutput = new System.Windows.Forms.Label();
             this.LblPanelSexOutput = new System.Windows.Forms.Label();
@@ -72,7 +71,6 @@
             this.RegistrationDateOutput = new System.Windows.Forms.Label();
             this.RegistrationNumberOutput = new System.Windows.Forms.Label();
             this.QRCodePictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.webTRONWithAddressPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -84,11 +82,13 @@
             this.separator2 = new Guna.UI2.WinForms.Guna2Separator();
             this.LblPanelRegistrationDate = new System.Windows.Forms.Label();
             this.LblPanelRegistrationId = new System.Windows.Forms.Label();
+            this.separator3 = new Guna.UI2.WinForms.Guna2Separator();
             this.PrintPanelContanerPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.printPanel.SuspendLayout();
@@ -103,6 +103,7 @@
             // 
             this.addressTextBox.Animated = true;
             this.addressTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2Transition1.SetDecoration(this.addressTextBox, Guna.UI2.AnimatorNS.DecorationType.None);
             this.addressTextBox.DefaultText = "";
             this.addressTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.addressTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -128,6 +129,7 @@
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.lblAddress, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblAddress.Location = new System.Drawing.Point(130, 251);
             this.lblAddress.Name = "lblAddress";
@@ -139,6 +141,7 @@
             // 
             this.contactNumberTextBox.Animated = true;
             this.contactNumberTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2Transition1.SetDecoration(this.contactNumberTextBox, Guna.UI2.AnimatorNS.DecorationType.None);
             this.contactNumberTextBox.DefaultText = "";
             this.contactNumberTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.contactNumberTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -164,6 +167,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.label5, Guna.UI2.AnimatorNS.DecorationType.None);
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label5.Location = new System.Drawing.Point(79, 367);
             this.label5.Name = "label5";
@@ -180,6 +184,7 @@
             this.isOthers.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
             this.isOthers.CheckedState.InnerColor = System.Drawing.Color.White;
             this.isOthers.CheckedState.InnerOffset = -4;
+            this.guna2Transition1.SetDecoration(this.isOthers, Guna.UI2.AnimatorNS.DecorationType.None);
             this.isOthers.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.isOthers.Location = new System.Drawing.Point(430, 277);
             this.isOthers.Name = "isOthers";
@@ -201,6 +206,7 @@
             this.isFemale.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
             this.isFemale.CheckedState.InnerColor = System.Drawing.Color.White;
             this.isFemale.CheckedState.InnerOffset = -4;
+            this.guna2Transition1.SetDecoration(this.isFemale, Guna.UI2.AnimatorNS.DecorationType.None);
             this.isFemale.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.isFemale.Location = new System.Drawing.Point(336, 279);
             this.isFemale.Name = "isFemale";
@@ -222,6 +228,7 @@
             this.isMale.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
             this.isMale.CheckedState.InnerColor = System.Drawing.Color.White;
             this.isMale.CheckedState.InnerOffset = -4;
+            this.guna2Transition1.SetDecoration(this.isMale, Guna.UI2.AnimatorNS.DecorationType.None);
             this.isMale.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.isMale.Location = new System.Drawing.Point(254, 280);
             this.isMale.Name = "isMale";
@@ -237,6 +244,7 @@
             // lblSex
             // 
             this.lblSex.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.lblSex, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblSex.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblSex.Location = new System.Drawing.Point(162, 285);
             this.lblSex.Name = "lblSex";
@@ -248,6 +256,7 @@
             // 
             this.lastNameTextBox.Animated = true;
             this.lastNameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2Transition1.SetDecoration(this.lastNameTextBox, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lastNameTextBox.DefaultText = "";
             this.lastNameTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.lastNameTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -274,6 +283,7 @@
             // 
             this.firstNameTxtBox.Animated = true;
             this.firstNameTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2Transition1.SetDecoration(this.firstNameTxtBox, Guna.UI2.AnimatorNS.DecorationType.None);
             this.firstNameTxtBox.DefaultText = "";
             this.firstNameTxtBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.firstNameTxtBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -299,6 +309,7 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.lblName, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblName.Location = new System.Drawing.Point(151, 208);
             this.lblName.Name = "lblName";
@@ -310,6 +321,7 @@
             // 
             this.ageTextBox.Animated = true;
             this.ageTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2Transition1.SetDecoration(this.ageTextBox, Guna.UI2.AnimatorNS.DecorationType.None);
             this.ageTextBox.DefaultText = "";
             this.ageTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.ageTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -336,6 +348,7 @@
             // lblAge
             // 
             this.lblAge.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.lblAge, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblAge.Location = new System.Drawing.Point(160, 325);
             this.lblAge.Name = "lblAge";
@@ -345,6 +358,7 @@
             // 
             // guna2PictureBox5
             // 
+            this.guna2Transition1.SetDecoration(this.guna2PictureBox5, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2PictureBox5.Image = global::webTRON_Management_Software.Properties.Resources.webTRONLogoWithSlogan;
             this.guna2PictureBox5.Location = new System.Drawing.Point(27, 518);
             this.guna2PictureBox5.Name = "guna2PictureBox5";
@@ -356,6 +370,7 @@
             // 
             // guna2PictureBox4
             // 
+            this.guna2Transition1.SetDecoration(this.guna2PictureBox4, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2PictureBox4.Image = global::webTRON_Management_Software.Properties.Resources.RectangleCurved;
             this.guna2PictureBox4.Location = new System.Drawing.Point(-4, -4);
             this.guna2PictureBox4.Name = "guna2PictureBox4";
@@ -365,20 +380,10 @@
             this.guna2PictureBox4.TabIndex = 53;
             this.guna2PictureBox4.TabStop = false;
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = global::webTRON_Management_Software.Properties.Resources.NewPatientCard;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(866, 68);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(122, 33);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.guna2PictureBox1.TabIndex = 52;
-            this.guna2PictureBox1.TabStop = false;
-            // 
             // guna2PictureBox3
             // 
             this.guna2PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Transition1.SetDecoration(this.guna2PictureBox3, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
             this.guna2PictureBox3.Location = new System.Drawing.Point(911, 27);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
@@ -392,6 +397,7 @@
             // guna2PictureBox2
             // 
             this.guna2PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Transition1.SetDecoration(this.guna2PictureBox2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
             this.guna2PictureBox2.Location = new System.Drawing.Point(960, 12);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
@@ -406,6 +412,7 @@
             // 
             this.btnCreateNewPatient.CheckedState.Parent = this.btnCreateNewPatient;
             this.btnCreateNewPatient.CustomImages.Parent = this.btnCreateNewPatient;
+            this.guna2Transition1.SetDecoration(this.btnCreateNewPatient, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnCreateNewPatient.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
             this.btnCreateNewPatient.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.btnCreateNewPatient.ForeColor = System.Drawing.Color.White;
@@ -421,6 +428,7 @@
             // lblReferredTo
             // 
             this.lblReferredTo.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.lblReferredTo, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblReferredTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblReferredTo.Location = new System.Drawing.Point(108, 411);
             this.lblReferredTo.Name = "lblReferredTo";
@@ -431,6 +439,7 @@
             // referredToComboBox
             // 
             this.referredToComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Transition1.SetDecoration(this.referredToComboBox, Guna.UI2.AnimatorNS.DecorationType.None);
             this.referredToComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.referredToComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.referredToComboBox.FocusedColor = System.Drawing.Color.Empty;
@@ -456,6 +465,7 @@
             // LblRegistrationId
             // 
             this.LblRegistrationId.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.LblRegistrationId, Guna.UI2.AnimatorNS.DecorationType.None);
             this.LblRegistrationId.Location = new System.Drawing.Point(761, 127);
             this.LblRegistrationId.Name = "LblRegistrationId";
             this.LblRegistrationId.Size = new System.Drawing.Size(52, 13);
@@ -465,6 +475,7 @@
             // lblRegistrationDate
             // 
             this.lblRegistrationDate.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.lblRegistrationDate, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblRegistrationDate.Location = new System.Drawing.Point(748, 151);
             this.lblRegistrationDate.Name = "lblRegistrationDate";
             this.lblRegistrationDate.Size = new System.Drawing.Size(65, 13);
@@ -474,6 +485,7 @@
             // lblRegistrationIdOutput
             // 
             this.lblRegistrationIdOutput.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.lblRegistrationIdOutput, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblRegistrationIdOutput.Location = new System.Drawing.Point(819, 127);
             this.lblRegistrationIdOutput.Name = "lblRegistrationIdOutput";
             this.lblRegistrationIdOutput.Size = new System.Drawing.Size(52, 13);
@@ -483,15 +495,12 @@
             // lblRegistrationDateOutput
             // 
             this.lblRegistrationDateOutput.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.lblRegistrationDateOutput, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblRegistrationDateOutput.Location = new System.Drawing.Point(819, 151);
             this.lblRegistrationDateOutput.Name = "lblRegistrationDateOutput";
             this.lblRegistrationDateOutput.Size = new System.Drawing.Size(65, 13);
             this.lblRegistrationDateOutput.TabIndex = 61;
             this.lblRegistrationDateOutput.Text = "REG-DATE:";
-            // 
-            // guna2DragControl1
-            // 
-            this.guna2DragControl1.TargetControl = this;
             // 
             // printPanel
             // 
@@ -512,7 +521,6 @@
             this.printPanel.Controls.Add(this.RegistrationDateOutput);
             this.printPanel.Controls.Add(this.RegistrationNumberOutput);
             this.printPanel.Controls.Add(this.QRCodePictureBox);
-            this.printPanel.Controls.Add(this.guna2Separator1);
             this.printPanel.Controls.Add(this.guna2PictureBox6);
             this.printPanel.Controls.Add(this.guna2PictureBox7);
             this.printPanel.Controls.Add(this.webTRONWithAddressPictureBox);
@@ -524,16 +532,19 @@
             this.printPanel.Controls.Add(this.separator2);
             this.printPanel.Controls.Add(this.LblPanelRegistrationDate);
             this.printPanel.Controls.Add(this.LblPanelRegistrationId);
-            this.printPanel.Location = new System.Drawing.Point(3, 60);
+            this.printPanel.Controls.Add(this.separator3);
+            this.guna2Transition1.SetDecoration(this.printPanel, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.printPanel.Location = new System.Drawing.Point(3, 3);
             this.printPanel.Name = "printPanel";
             this.printPanel.ShadowDecoration.Parent = this.printPanel;
-            this.printPanel.Size = new System.Drawing.Size(535, 334);
+            this.printPanel.Size = new System.Drawing.Size(535, 343);
             this.printPanel.TabIndex = 62;
             this.printPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.printPanel_Paint);
             // 
             // LblPanelReferredToOutput
             // 
             this.LblPanelReferredToOutput.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.LblPanelReferredToOutput, Guna.UI2.AnimatorNS.DecorationType.None);
             this.LblPanelReferredToOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPanelReferredToOutput.Location = new System.Drawing.Point(144, 311);
             this.LblPanelReferredToOutput.Name = "LblPanelReferredToOutput";
@@ -544,6 +555,7 @@
             // LblPanelSexOutput
             // 
             this.LblPanelSexOutput.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.LblPanelSexOutput, Guna.UI2.AnimatorNS.DecorationType.None);
             this.LblPanelSexOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPanelSexOutput.Location = new System.Drawing.Point(144, 261);
             this.LblPanelSexOutput.Name = "LblPanelSexOutput";
@@ -554,6 +566,7 @@
             // LblPanelAddressOutput
             // 
             this.LblPanelAddressOutput.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.LblPanelAddressOutput, Guna.UI2.AnimatorNS.DecorationType.None);
             this.LblPanelAddressOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPanelAddressOutput.Location = new System.Drawing.Point(123, 285);
             this.LblPanelAddressOutput.Name = "LblPanelAddressOutput";
@@ -564,6 +577,7 @@
             // LblPanelAgeOutput
             // 
             this.LblPanelAgeOutput.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.LblPanelAgeOutput, Guna.UI2.AnimatorNS.DecorationType.None);
             this.LblPanelAgeOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPanelAgeOutput.Location = new System.Drawing.Point(93, 261);
             this.LblPanelAgeOutput.Name = "LblPanelAgeOutput";
@@ -574,6 +588,7 @@
             // LblPanelLNameOutput
             // 
             this.LblPanelLNameOutput.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.LblPanelLNameOutput, Guna.UI2.AnimatorNS.DecorationType.None);
             this.LblPanelLNameOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPanelLNameOutput.Location = new System.Drawing.Point(199, 236);
             this.LblPanelLNameOutput.Name = "LblPanelLNameOutput";
@@ -584,6 +599,7 @@
             // LblPanelFNameOutput
             // 
             this.LblPanelFNameOutput.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.LblPanelFNameOutput, Guna.UI2.AnimatorNS.DecorationType.None);
             this.LblPanelFNameOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPanelFNameOutput.Location = new System.Drawing.Point(117, 239);
             this.LblPanelFNameOutput.Name = "LblPanelFNameOutput";
@@ -594,6 +610,7 @@
             // LblPanelRegistrationDateOutput
             // 
             this.LblPanelRegistrationDateOutput.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.LblPanelRegistrationDateOutput, Guna.UI2.AnimatorNS.DecorationType.None);
             this.LblPanelRegistrationDateOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPanelRegistrationDateOutput.Location = new System.Drawing.Point(182, 213);
             this.LblPanelRegistrationDateOutput.Name = "LblPanelRegistrationDateOutput";
@@ -604,6 +621,7 @@
             // LblPanelRegistrationIdOutput
             // 
             this.LblPanelRegistrationIdOutput.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.LblPanelRegistrationIdOutput, Guna.UI2.AnimatorNS.DecorationType.None);
             this.LblPanelRegistrationIdOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPanelRegistrationIdOutput.Location = new System.Drawing.Point(155, 189);
             this.LblPanelRegistrationIdOutput.Name = "LblPanelRegistrationIdOutput";
@@ -614,6 +632,7 @@
             // LabelReferredTo
             // 
             this.LabelReferredTo.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.LabelReferredTo, Guna.UI2.AnimatorNS.DecorationType.None);
             this.LabelReferredTo.Location = new System.Drawing.Point(123, 309);
             this.LabelReferredTo.Name = "LabelReferredTo";
             this.LabelReferredTo.Size = new System.Drawing.Size(0, 13);
@@ -621,6 +640,7 @@
             // 
             // SexOutput
             // 
+            this.guna2Transition1.SetDecoration(this.SexOutput, Guna.UI2.AnimatorNS.DecorationType.None);
             this.SexOutput.Location = new System.Drawing.Point(0, 0);
             this.SexOutput.Name = "SexOutput";
             this.SexOutput.Size = new System.Drawing.Size(100, 23);
@@ -628,6 +648,7 @@
             // 
             // LabelAddressOutput
             // 
+            this.guna2Transition1.SetDecoration(this.LabelAddressOutput, Guna.UI2.AnimatorNS.DecorationType.None);
             this.LabelAddressOutput.Location = new System.Drawing.Point(0, 0);
             this.LabelAddressOutput.Name = "LabelAddressOutput";
             this.LabelAddressOutput.Size = new System.Drawing.Size(100, 23);
@@ -636,6 +657,7 @@
             // AgeOutput
             // 
             this.AgeOutput.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.AgeOutput, Guna.UI2.AnimatorNS.DecorationType.None);
             this.AgeOutput.Location = new System.Drawing.Point(95, 260);
             this.AgeOutput.Name = "AgeOutput";
             this.AgeOutput.Size = new System.Drawing.Size(0, 13);
@@ -644,6 +666,7 @@
             // FNameOutpuf
             // 
             this.FNameOutpuf.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.FNameOutpuf, Guna.UI2.AnimatorNS.DecorationType.None);
             this.FNameOutpuf.Location = new System.Drawing.Point(95, 237);
             this.FNameOutpuf.Name = "FNameOutpuf";
             this.FNameOutpuf.Size = new System.Drawing.Size(0, 13);
@@ -651,6 +674,7 @@
             // 
             // RegistrationDateOutput
             // 
+            this.guna2Transition1.SetDecoration(this.RegistrationDateOutput, Guna.UI2.AnimatorNS.DecorationType.None);
             this.RegistrationDateOutput.Location = new System.Drawing.Point(0, 0);
             this.RegistrationDateOutput.Name = "RegistrationDateOutput";
             this.RegistrationDateOutput.Size = new System.Drawing.Size(100, 23);
@@ -658,6 +682,7 @@
             // 
             // RegistrationNumberOutput
             // 
+            this.guna2Transition1.SetDecoration(this.RegistrationNumberOutput, Guna.UI2.AnimatorNS.DecorationType.None);
             this.RegistrationNumberOutput.Location = new System.Drawing.Point(0, 0);
             this.RegistrationNumberOutput.Name = "RegistrationNumberOutput";
             this.RegistrationNumberOutput.Size = new System.Drawing.Size(100, 23);
@@ -665,6 +690,7 @@
             // 
             // QRCodePictureBox
             // 
+            this.guna2Transition1.SetDecoration(this.QRCodePictureBox, Guna.UI2.AnimatorNS.DecorationType.None);
             this.QRCodePictureBox.Location = new System.Drawing.Point(320, 201);
             this.QRCodePictureBox.Name = "QRCodePictureBox";
             this.QRCodePictureBox.ShadowDecoration.Parent = this.QRCodePictureBox;
@@ -673,17 +699,11 @@
             this.QRCodePictureBox.TabIndex = 13;
             this.QRCodePictureBox.TabStop = false;
             // 
-            // guna2Separator1
-            // 
-            this.guna2Separator1.Location = new System.Drawing.Point(0, 325);
-            this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(535, 10);
-            this.guna2Separator1.TabIndex = 12;
-            // 
             // guna2PictureBox6
             // 
-           // this.guna2PictureBox6.Image = global::webTRON_Management_Software.Properties.Resources.rectangularBar;
-            this.guna2PictureBox6.Location = new System.Drawing.Point(0, 0);
+            this.guna2Transition1.SetDecoration(this.guna2PictureBox6, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2PictureBox6.Image = global::webTRON_Management_Software.Properties.Resources.rectangularBar;
+            this.guna2PictureBox6.Location = new System.Drawing.Point(0, 24);
             this.guna2PictureBox6.Name = "guna2PictureBox6";
             this.guna2PictureBox6.ShadowDecoration.Parent = this.guna2PictureBox6;
             this.guna2PictureBox6.Size = new System.Drawing.Size(23, 273);
@@ -693,8 +713,9 @@
             // 
             // guna2PictureBox7
             // 
-          //  this.guna2PictureBox7.Image = global::webTRON_Management_Software.Properties.Resources.rectangularBar;
-            this.guna2PictureBox7.Location = new System.Drawing.Point(512, 58);
+            this.guna2Transition1.SetDecoration(this.guna2PictureBox7, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2PictureBox7.Image = global::webTRON_Management_Software.Properties.Resources.rectangularBar;
+            this.guna2PictureBox7.Location = new System.Drawing.Point(512, 54);
             this.guna2PictureBox7.Name = "guna2PictureBox7";
             this.guna2PictureBox7.ShadowDecoration.Parent = this.guna2PictureBox7;
             this.guna2PictureBox7.Size = new System.Drawing.Size(23, 273);
@@ -704,7 +725,8 @@
             // 
             // webTRONWithAddressPictureBox
             // 
-          //  this.webTRONWithAddressPictureBox.Image = global::webTRON_Management_Software.Properties.Resources.webTRONLogoWithAddress;
+            this.guna2Transition1.SetDecoration(this.webTRONWithAddressPictureBox, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.webTRONWithAddressPictureBox.Image = global::webTRON_Management_Software.Properties.Resources.webTRONLogoWithAddress;
             this.webTRONWithAddressPictureBox.Location = new System.Drawing.Point(147, 12);
             this.webTRONWithAddressPictureBox.Name = "webTRONWithAddressPictureBox";
             this.webTRONWithAddressPictureBox.ShadowDecoration.Parent = this.webTRONWithAddressPictureBox;
@@ -716,6 +738,7 @@
             // LblPanelReferredTo
             // 
             this.LblPanelReferredTo.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.LblPanelReferredTo, Guna.UI2.AnimatorNS.DecorationType.None);
             this.LblPanelReferredTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPanelReferredTo.Location = new System.Drawing.Point(50, 309);
             this.LblPanelReferredTo.Name = "LblPanelReferredTo";
@@ -726,6 +749,7 @@
             // LblPanelAddress
             // 
             this.LblPanelAddress.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.LblPanelAddress, Guna.UI2.AnimatorNS.DecorationType.None);
             this.LblPanelAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPanelAddress.Location = new System.Drawing.Point(50, 285);
             this.LblPanelAddress.Name = "LblPanelAddress";
@@ -736,6 +760,7 @@
             // LblPanelAge
             // 
             this.LblPanelAge.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.LblPanelAge, Guna.UI2.AnimatorNS.DecorationType.None);
             this.LblPanelAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPanelAge.Location = new System.Drawing.Point(50, 261);
             this.LblPanelAge.Name = "LblPanelAge";
@@ -745,6 +770,7 @@
             // 
             // separator1
             // 
+            this.guna2Transition1.SetDecoration(this.separator1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.separator1.FillColor = System.Drawing.Color.Black;
             this.separator1.FillThickness = 3;
             this.separator1.Location = new System.Drawing.Point(24, 54);
@@ -756,6 +782,7 @@
             // LblPanelFName
             // 
             this.LblPanelFName.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.LblPanelFName, Guna.UI2.AnimatorNS.DecorationType.None);
             this.LblPanelFName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPanelFName.Location = new System.Drawing.Point(50, 237);
             this.LblPanelFName.Name = "LblPanelFName";
@@ -765,6 +792,7 @@
             // 
             // separator2
             // 
+            this.guna2Transition1.SetDecoration(this.separator2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.separator2.FillColor = System.Drawing.Color.Black;
             this.separator2.FillThickness = 3;
             this.separator2.Location = new System.Drawing.Point(397, 54);
@@ -776,6 +804,7 @@
             // LblPanelRegistrationDate
             // 
             this.LblPanelRegistrationDate.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.LblPanelRegistrationDate, Guna.UI2.AnimatorNS.DecorationType.None);
             this.LblPanelRegistrationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPanelRegistrationDate.Location = new System.Drawing.Point(50, 213);
             this.LblPanelRegistrationDate.Name = "LblPanelRegistrationDate";
@@ -786,6 +815,7 @@
             // LblPanelRegistrationId
             // 
             this.LblPanelRegistrationId.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.LblPanelRegistrationId, Guna.UI2.AnimatorNS.DecorationType.None);
             this.LblPanelRegistrationId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPanelRegistrationId.Location = new System.Drawing.Point(50, 189);
             this.LblPanelRegistrationId.Name = "LblPanelRegistrationId";
@@ -793,11 +823,22 @@
             this.LblPanelRegistrationId.TabIndex = 3;
             this.LblPanelRegistrationId.Text = "RegistrationId:";
             // 
+            // separator3
+            // 
+            this.guna2Transition1.SetDecoration(this.separator3, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.separator3.FillStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.separator3.FillThickness = 3;
+            this.separator3.Location = new System.Drawing.Point(0, 330);
+            this.separator3.Name = "separator3";
+            this.separator3.Size = new System.Drawing.Size(535, 10);
+            this.separator3.TabIndex = 12;
+            // 
             // PrintPanelContanerPanel
             // 
             this.PrintPanelContanerPanel.BackColor = System.Drawing.Color.White;
             this.PrintPanelContanerPanel.Controls.Add(this.btnPrint);
             this.PrintPanelContanerPanel.Controls.Add(this.printPanel);
+            this.guna2Transition1.SetDecoration(this.PrintPanelContanerPanel, Guna.UI2.AnimatorNS.DecorationType.None);
             this.PrintPanelContanerPanel.Location = new System.Drawing.Point(447, 107);
             this.PrintPanelContanerPanel.Name = "PrintPanelContanerPanel";
             this.PrintPanelContanerPanel.ShadowDecoration.Parent = this.PrintPanelContanerPanel;
@@ -809,6 +850,7 @@
             // 
             this.btnPrint.CheckedState.Parent = this.btnPrint;
             this.btnPrint.CustomImages.Parent = this.btnPrint;
+            this.guna2Transition1.SetDecoration(this.btnPrint, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnPrint.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
             this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.btnPrint.ForeColor = System.Drawing.Color.White;
@@ -820,6 +862,30 @@
             this.btnPrint.TabIndex = 63;
             this.btnPrint.Text = "Print";
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // guna2Transition1
+            // 
+            this.guna2Transition1.Cursor = null;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation1;
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.TargetControl = this;
             // 
             // CreateNewPatient
             // 
@@ -837,7 +903,6 @@
             this.Controls.Add(this.btnCreateNewPatient);
             this.Controls.Add(this.guna2PictureBox5);
             this.Controls.Add(this.guna2PictureBox4);
-            this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.ageTextBox);
             this.Controls.Add(this.lblAge);
             this.Controls.Add(this.addressTextBox);
@@ -853,6 +918,7 @@
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.guna2PictureBox3);
             this.Controls.Add(this.guna2PictureBox2);
+            this.guna2Transition1.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CreateNewPatient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -860,7 +926,6 @@
             this.Load += new System.EventHandler(this.CreatePatient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.printPanel.ResumeLayout(false);
@@ -892,7 +957,6 @@
         private System.Windows.Forms.Label lblName;
         private Guna.UI2.WinForms.Guna2TextBox ageTextBox;
         private System.Windows.Forms.Label lblAge;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
         private Guna.UI2.WinForms.Guna2Button btnCreateNewPatient;
@@ -902,7 +966,6 @@
         private System.Windows.Forms.Label lblRegistrationDate;
         private System.Windows.Forms.Label lblRegistrationIdOutput;
         private System.Windows.Forms.Label lblRegistrationDateOutput;
-        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2Panel printPanel;
         private System.Windows.Forms.Label LblPanelSexOutput;
         private System.Windows.Forms.Label LblPanelAddressOutput;
@@ -919,7 +982,7 @@
         private System.Windows.Forms.Label RegistrationDateOutput;
         private System.Windows.Forms.Label RegistrationNumberOutput;
         private Guna.UI2.WinForms.Guna2PictureBox QRCodePictureBox;
-        private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
+        private Guna.UI2.WinForms.Guna2Separator separator3;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox6;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox7;
         private Guna.UI2.WinForms.Guna2PictureBox webTRONWithAddressPictureBox;
@@ -934,5 +997,7 @@
         private Guna.UI2.WinForms.Guna2Panel PrintPanelContanerPanel;
         private Guna.UI2.WinForms.Guna2Button btnPrint;
         private System.Windows.Forms.Label LblPanelReferredToOutput;
+        private Guna.UI2.WinForms.Guna2Transition guna2Transition1;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

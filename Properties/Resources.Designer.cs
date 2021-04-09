@@ -273,6 +273,26 @@ namespace webTRON_Management_Software.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap rectangularBar {
+            get {
+                object obj = ResourceManager.GetObject("rectangularBar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap renew {
+            get {
+                object obj = ResourceManager.GetObject("renew", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Search {
             get {
                 object obj = ResourceManager.GetObject("Search", resourceCulture);
@@ -376,6 +396,16 @@ namespace webTRON_Management_Software.Properties {
         public static System.Drawing.Bitmap webTronLogo {
             get {
                 object obj = ResourceManager.GetObject("webTronLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap webTRONLogoWithAddress {
+            get {
+                object obj = ResourceManager.GetObject("webTRONLogoWithAddress", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -33,7 +33,7 @@ namespace webTRON_Management_Software.Views.Accountant
 
         private void guna2PictureBox2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            System.Windows.Forms.Application.Exit();
         }
 
         private void guna2PictureBox3_Click(object sender, EventArgs e)

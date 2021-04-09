@@ -11,9 +11,9 @@ namespace webTRON_Management_Software.Utils
     class Generator
     {
         //Connection String
-       // private static string connectionString = "server=localhost;user id=root; password=laxudb;persistsecurityinfo=True;database=webtronmanagement";
+       private static string connectionString = "server=localhost;user id=root; password=laxudb;persistsecurityinfo=True;database=webtronmanagement";
         //ConnectionStringForPramesh
-        private static string connectionString = "server=localhost;user id=root;pwd=password;database=webtronmanagement";
+       // private static string connectionString = "server=localhost;user id=root;pwd=password;database=webtronmanagement";
 
         //Possible Characters
         static char[] upperCaseLetters = new char[] { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
