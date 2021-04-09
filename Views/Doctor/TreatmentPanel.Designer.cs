@@ -43,6 +43,7 @@
             this.patientSerialNumberTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblPtn = new System.Windows.Forms.Label();
             this.historyPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.prescription1TextField = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnPrescribe = new Guna.UI2.WinForms.Guna2Button();
             this.newTopic1TextField = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnAddTopic = new Guna.UI2.WinForms.Guna2Button();
@@ -65,7 +66,6 @@
             this.lblLastNameOutput = new System.Windows.Forms.Label();
             this.dragOnTreatmentPanel = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.btnMedicine = new Guna.UI2.WinForms.Guna2Button();
-            this.prescription1TextField = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.activePanel.SuspendLayout();
@@ -258,6 +258,30 @@
             this.historyPanel.ShadowDecoration.Parent = this.historyPanel;
             this.historyPanel.Size = new System.Drawing.Size(1002, 441);
             this.historyPanel.TabIndex = 73;
+            // 
+            // prescription1TextField
+            // 
+            this.prescription1TextField.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.prescription1TextField.DefaultText = "";
+            this.prescription1TextField.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.prescription1TextField.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.prescription1TextField.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.prescription1TextField.DisabledState.Parent = this.prescription1TextField;
+            this.prescription1TextField.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.prescription1TextField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.prescription1TextField.FocusedState.Parent = this.prescription1TextField;
+            this.prescription1TextField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
+            this.prescription1TextField.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.prescription1TextField.HoverState.Parent = this.prescription1TextField;
+            this.prescription1TextField.Location = new System.Drawing.Point(225, 7);
+            this.prescription1TextField.Multiline = true;
+            this.prescription1TextField.Name = "prescription1TextField";
+            this.prescription1TextField.PasswordChar = '\0';
+            this.prescription1TextField.PlaceholderText = "";
+            this.prescription1TextField.SelectedText = "";
+            this.prescription1TextField.ShadowDecoration.Parent = this.prescription1TextField;
+            this.prescription1TextField.Size = new System.Drawing.Size(761, 108);
+            this.prescription1TextField.TabIndex = 0;
             // 
             // btnPrescribe
             // 
@@ -508,31 +532,6 @@
             this.btnMedicine.Size = new System.Drawing.Size(86, 18);
             this.btnMedicine.TabIndex = 92;
             this.btnMedicine.Text = "Medicine";
-            // 
-            // prescription1TextField
-            // 
-            this.prescription1TextField.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.prescription1TextField.DefaultText = "asdfjk";
-            this.prescription1TextField.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.prescription1TextField.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.prescription1TextField.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.prescription1TextField.DisabledState.Parent = this.prescription1TextField;
-            this.prescription1TextField.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.prescription1TextField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.prescription1TextField.FocusedState.Parent = this.prescription1TextField;
-            this.prescription1TextField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
-            this.prescription1TextField.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.prescription1TextField.HoverState.Parent = this.prescription1TextField;
-            this.prescription1TextField.Location = new System.Drawing.Point(225, 7);
-            this.prescription1TextField.Multiline = true;
-            this.prescription1TextField.Name = "prescription1TextField";
-            this.prescription1TextField.PasswordChar = '\0';
-            this.prescription1TextField.PlaceholderText = "";
-            this.prescription1TextField.SelectedText = "";
-            this.prescription1TextField.SelectionStart = 6;
-            this.prescription1TextField.ShadowDecoration.Parent = this.prescription1TextField;
-            this.prescription1TextField.Size = new System.Drawing.Size(761, 108);
-            this.prescription1TextField.TabIndex = 0;
             // 
             // TreatmentPanel
             // 
