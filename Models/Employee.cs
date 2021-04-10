@@ -13,7 +13,9 @@ namespace webTRON_Management_Software.Models
     public class Employee
     {
         //Connection String
-        private static string connectionString = "server=localhost;user id=root;pwd=password;database=webtronmanagement";
+        //  private static string connectionString = "server=localhost;user id=root;pwd=password;database=webtronmanagement";
+        private static string connectionString = "server=localhost;user id=root; password=laxudb;persistsecurityinfo=True;database=webtronmanagement";
+
         //Properties
         public string UserID { get; set; }
         public string FirstName { get; set; }
@@ -22,7 +24,7 @@ namespace webTRON_Management_Software.Models
         public string ContactNumber { get; set; }
         public string Address { get; set; }
         public string DateOfBirth { get; set; }
-        public string Sex { get; set; }
+        public string Gender { get; set; }
         public string Role { get; set; }
         public string Status { get; set; }
         public byte[] img { get; set; }
@@ -48,7 +50,7 @@ namespace webTRON_Management_Software.Models
                 cmd.Parameters.AddWithValue("@address", obj.Address);
                 cmd.Parameters.AddWithValue("@contactNumber", obj.ContactNumber);
                 cmd.Parameters.AddWithValue("@dateOfBirth", obj.DateOfBirth);
-                cmd.Parameters.AddWithValue("@sex", obj.Sex);
+                cmd.Parameters.AddWithValue("@sex", obj.Gender);
                 cmd.Parameters.AddWithValue("@role", obj.Role);
                 cmd.Parameters.AddWithValue("@status", obj.Status);
                 //Connection Open
@@ -126,7 +128,7 @@ namespace webTRON_Management_Software.Models
                 cmd.Parameters.AddWithValue("@address", obj.Address);
                 cmd.Parameters.AddWithValue("@contactNumber", obj.ContactNumber);
                 cmd.Parameters.AddWithValue("@dateOfBirth", obj.DateOfBirth);
-                cmd.Parameters.AddWithValue("@sex", obj.Sex);
+                cmd.Parameters.AddWithValue("@sex", obj.Gender);
                 //Connection Open
                 conn.Open();
                 //Execute Query
@@ -520,7 +522,7 @@ namespace webTRON_Management_Software.Models
                     obj.Address = reader.GetValue(4).ToString();
                     obj.ContactNumber = reader.GetValue(5).ToString();
                     obj.DateOfBirth = reader.GetValue(6).ToString();
-                    obj.Sex = reader.GetValue(7).ToString();
+                    obj.Gender = reader.GetValue(7).ToString();
                     obj.Role = reader.GetValue(8).ToString();
                     obj.Status = reader.GetValue(9).ToString();
                     if (reader.GetValue(10).ToString()!= "")

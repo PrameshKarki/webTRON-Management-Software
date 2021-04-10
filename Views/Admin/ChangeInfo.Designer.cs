@@ -53,7 +53,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.isOthers = new Guna.UI2.WinForms.Guna2RadioButton();
             this.isFemale = new Guna.UI2.WinForms.Guna2RadioButton();
             this.isMale = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.lblSex = new System.Windows.Forms.Label();
+            this.lblGender = new System.Windows.Forms.Label();
             this.dateOfBirthPicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.lblDateOfBirth = new System.Windows.Forms.Label();
             this.emailTextBox = new Guna.UI2.WinForms.Guna2TextBox();
@@ -441,16 +441,16 @@ namespace webTRON_Management_Software.Views.Admin
             this.isMale.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             this.isMale.UseVisualStyleBackColor = true;
             // 
-            // lblSex
+            // lblGender
             // 
-            this.lblSex.AutoSize = true;
-            this.alertTransition.SetDecoration(this.lblSex, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lblSex.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.lblSex.Location = new System.Drawing.Point(225, 408);
-            this.lblSex.Name = "lblSex";
-            this.lblSex.Size = new System.Drawing.Size(55, 24);
-            this.lblSex.TabIndex = 53;
-            this.lblSex.Text = "Sex*:";
+            this.lblGender.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblGender, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.lblGender.Location = new System.Drawing.Point(225, 408);
+            this.lblGender.Name = "lblGender";
+            this.lblGender.Size = new System.Drawing.Size(86, 24);
+            this.lblGender.TabIndex = 53;
+            this.lblGender.Text = "Gender*:";
             // 
             // dateOfBirthPicker
             // 
@@ -718,7 +718,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.Controls.Add(this.isOthers);
             this.Controls.Add(this.isFemale);
             this.Controls.Add(this.isMale);
-            this.Controls.Add(this.lblSex);
+            this.Controls.Add(this.lblGender);
             this.Controls.Add(this.dateOfBirthPicker);
             this.Controls.Add(this.lblDateOfBirth);
             this.Controls.Add(this.emailTextBox);
@@ -777,7 +777,7 @@ namespace webTRON_Management_Software.Views.Admin
         private Guna.UI2.WinForms.Guna2RadioButton isOthers;
         private Guna.UI2.WinForms.Guna2RadioButton isFemale;
         private Guna.UI2.WinForms.Guna2RadioButton isMale;
-        private System.Windows.Forms.Label lblSex;
+        private System.Windows.Forms.Label lblGender;
         private Guna.UI2.WinForms.Guna2DateTimePicker dateOfBirthPicker;
         private System.Windows.Forms.Label lblDateOfBirth;
         private Guna.UI2.WinForms.Guna2TextBox emailTextBox;
