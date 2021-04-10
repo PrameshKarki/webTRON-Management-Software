@@ -69,15 +69,15 @@ namespace webTRON_Management_Software.Views.Admin
                 //Fetch Sex
                 if (isMale.Checked)
                 {
-                    obj.Sex = isMale.Text;
+                    obj.Gender = isMale.Text;
                 }
                 else if (isFemale.Checked)
                 {
-                    obj.Sex = isFemale.Text;
+                    obj.Gender = isFemale.Text;
                 }
                 else if (isOthers.Checked)
                 {
-                    obj.Sex = isOthers.Text;
+                    obj.Gender = isOthers.Text;
                 }
 
                 //Set default user status offline

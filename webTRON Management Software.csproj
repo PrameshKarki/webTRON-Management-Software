@@ -56,12 +56,9 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
-    <Reference Include="Zen.Barcode.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b5ae55aa76d2d9de, processorArchitecture=MSIL">
-      <HintPath>packages\Zen.Barcode.Rendering.Framework.3.1.10729.1\lib\Zen.Barcode.Core.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Prescription.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -134,6 +131,12 @@
     </Compile>
     <Compile Include="Views\Doctor\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Doctor\TreatmentWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Doctor\TreatmentWindow.Designer.cs">
+      <DependentUpon>TreatmentWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Others\ChangeInfo.cs">
       <SubType>Form</SubType>
@@ -222,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Doctor\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Doctor\TreatmentWindow.resx">
+      <DependentUpon>TreatmentWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Others\ChangeInfo.resx">
       <DependentUpon>ChangeInfo.cs</DependentUpon>

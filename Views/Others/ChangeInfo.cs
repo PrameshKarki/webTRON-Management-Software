@@ -48,15 +48,15 @@ namespace webTRON_Management_Software.Views.Others
                 //Fetch Sex
                 if (isMale.Checked)
                 {
-                    obj.Sex = isMale.Text;
+                    obj.Gender = isMale.Text;
                 }
                 else if (isFemale.Checked)
                 {
-                    obj.Sex = isFemale.Text;
+                    obj.Gender = isFemale.Text;
                 }
                 else if (isOthers.Checked)
                 {
-                    obj.Sex = isOthers.Text;
+                    obj.Gender = isOthers.Text;
                 }
                 //Update information
                 bool isInformationUpdatedSucessfully = Employee.Update(obj);
@@ -143,11 +143,11 @@ namespace webTRON_Management_Software.Views.Others
             addressTextBox.Text = employee.Address;
             dateOfBirthPicker.Value = dateOfBirth;
             contactNumberTextBox.Text = employee.ContactNumber;
-            if (employee.Sex == "Male")
+            if (employee.Gender == "Male")
             {
                 isMale.Checked = true;
             }
-            else if (employee.Sex == "Female")
+            else if (employee.Gender == "Female")
             {
                 isFemale.Checked = true;
 
