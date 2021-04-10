@@ -162,7 +162,7 @@ namespace webTRON_Management_Software.Views.Others
             this.addressTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.addressTextBox.HoverState.Parent = this.addressTextBox;
             this.addressTextBox.Location = new System.Drawing.Point(416, 289);
-            this.addressTextBox.Margin = new System.Windows.Forms.Padding(5);
+            this.addressTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.PasswordChar = '\0';
             this.addressTextBox.PlaceholderText = "Address";
@@ -200,7 +200,7 @@ namespace webTRON_Management_Software.Views.Others
             this.contactNumberTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.contactNumberTextBox.HoverState.Parent = this.contactNumberTextBox;
             this.contactNumberTextBox.Location = new System.Drawing.Point(416, 430);
-            this.contactNumberTextBox.Margin = new System.Windows.Forms.Padding(5);
+            this.contactNumberTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.contactNumberTextBox.Name = "contactNumberTextBox";
             this.contactNumberTextBox.PasswordChar = '\0';
             this.contactNumberTextBox.PlaceholderText = "Contact Number";
@@ -348,7 +348,7 @@ namespace webTRON_Management_Software.Views.Others
             this.emailTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.emailTextBox.HoverState.Parent = this.emailTextBox;
             this.emailTextBox.Location = new System.Drawing.Point(416, 237);
-            this.emailTextBox.Margin = new System.Windows.Forms.Padding(5);
+            this.emailTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.PasswordChar = '\0';
             this.emailTextBox.PlaceholderText = "Email Address";
