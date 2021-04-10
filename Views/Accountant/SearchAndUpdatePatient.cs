@@ -22,25 +22,25 @@ namespace webTRON_Management_Software.Views.Accountant
             InitializeComponent();
         }
 
-        private void btnClear_Click(object sender, EventArgs e)
+        private void BtnClear_Click(object sender, EventArgs e)
         {
             //clear all fields
             Clear();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void BtnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void btnMinimize_Click(object sender, EventArgs e)
+        private void BtnMinimize_Click(object sender, EventArgs e)
         {
 
             this.WindowState = FormWindowState.Minimized;
         }
 
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void BtnUpdate_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(firstNameTextBox.Text) || string.IsNullOrEmpty(lastNameTextBox.Text) || string.IsNullOrEmpty(addressTextBox.Text) || string.IsNullOrEmpty(ageTextBox.Text) || string.IsNullOrEmpty(contactNumberTextBox.Text))
             {
@@ -48,16 +48,16 @@ namespace webTRON_Management_Software.Views.Accountant
             }
             else
             {
-                ObjUpdate.Registration_Number = lblRegistrationNumberOutput.Text;
-                ObjUpdate.Registration_Date = lblRegistrationDateOutput.Text;
-                ObjUpdate.FirstName = firstNameTextBox.Text;
-                ObjUpdate.LastName = lastNameTextBox.Text;
-                ObjUpdate.Address = addressTextBox.Text;
-                ObjUpdate.ReferredTo = lblReferredToOutput.Text;
-                ObjUpdate.Age = ageTextBox.Text;
-                ObjUpdate.ContactNumber = contactNumberTextBox.Text;
-                ObjUpdate.Status = lblStatusOutput.Text;
-                ObjUpdate.Sex = lblSexOutput.Text;
+                ObjUpdate.patientID = lblPatientIDOutput.Text;
+                ObjUpdate.registrationDate = lblRegistrationDateOutput.Text;
+                ObjUpdate.firstName = firstNameTextBox.Text;
+                ObjUpdate.lastName = lastNameTextBox.Text;
+                ObjUpdate.address = addressTextBox.Text;
+                ObjUpdate.referredTo = lblReferredToOutput.Text;
+                ObjUpdate.age = Convert.ToInt32(ageTextBox.Text);
+                ObjUpdate.contactNumber = contactNumberTextBox.Text;
+                ObjUpdate.status = lblStatusOutput.Text;
+                ObjUpdate.gender = lblSexOutput.Text;
                 bool isSuccess = Patient.Update(ObjUpdate);
                 if (isSuccess)
                 {
@@ -108,7 +108,7 @@ namespace webTRON_Management_Software.Views.Accountant
             contactNumberTextBox.Text = "";
             lblReferredToOutput.Text = "----------";
             lblRegistrationDateOutput.Text = "------------";
-            lblRegistrationNumberOutput.Text = "------------";
+            lblPatientIDOutput.Text = "------------";
             firstNameTextBox.Focus();
         }
 
@@ -120,7 +120,7 @@ namespace webTRON_Management_Software.Views.Accountant
 
         private void DataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            lblRegistrationNumberOutput.Text = DataGridView.SelectedRows[0].Cells[0].Value.ToString();
+            lblPatientIDOutput.Text = DataGridView.SelectedRows[0].Cells[0].Value.ToString();
             lblRegistrationDateOutput.Text = DataGridView.SelectedRows[0].Cells[1].Value.ToString();
             firstNameTextBox.Text = DataGridView.SelectedRows[0].Cells[2].Value.ToString();
             lastNameTextBox.Text = DataGridView.SelectedRows[0].Cells[3].Value.ToString();
@@ -132,19 +132,18 @@ namespace webTRON_Management_Software.Views.Accountant
             addressTextBox.Text = DataGridView.SelectedRows[0].Cells[9].Value.ToString();
         }
 
-        private void searchTextBox_TextChanged(object sender, EventArgs e)
+        private void SearchTextBox_TextChanged(object sender, EventArgs e)
         {
             Patient patient = new Patient();
-            patient.Registration_Number = searchTextBox.Text;
-            patient.Registration_Date = searchTextBox.Text;
-            patient.FirstName = searchTextBox.Text;
-            patient.LastName = searchTextBox.Text;
-            patient.ContactNumber = searchTextBox.Text;
-            patient.Sex = searchTextBox.Text;
-            patient.ReferredTo = searchTextBox.Text;
-            patient.Status = searchTextBox.Text;
-            patient.Age = searchTextBox.Text;
-            patient.Address = searchTextBox.Text;
+            patient.patientID = searchTextBox.Text;
+            patient.registrationDate = searchTextBox.Text;
+            patient.firstName = searchTextBox.Text;
+            patient.lastName = searchTextBox.Text;
+            patient.contactNumber = searchTextBox.Text;
+            patient.gender = searchTextBox.Text;
+            patient.referredTo = searchTextBox.Text;
+            patient.status = searchTextBox.Text;
+            patient.address = searchTextBox.Text;
 
             DataTable dt = Patient.SearchFromTable(patient);  // inserts the data table returned from MySqlDataAdapter sda to the DataTable dt;
             DataGridView.Rows.Clear(); // clear the values in the gridview;

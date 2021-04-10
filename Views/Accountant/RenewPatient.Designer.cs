@@ -252,7 +252,7 @@
             this.patientSerialNumberTextBox.ShadowDecoration.Parent = this.patientSerialNumberTextBox;
             this.patientSerialNumberTextBox.Size = new System.Drawing.Size(106, 36);
             this.patientSerialNumberTextBox.TabIndex = 1;
-            this.patientSerialNumberTextBox.TextChanged += new System.EventHandler(this.patientSerialNumberTextBox_TextChanged);
+            this.patientSerialNumberTextBox.TextChanged += new System.EventHandler(this.PatientSerialNumberTextBox_TextChanged);
             // 
             // lblRegistrationId
             // 
@@ -319,7 +319,7 @@
             this.btnRenew.Size = new System.Drawing.Size(180, 45);
             this.btnRenew.TabIndex = 66;
             this.btnRenew.Text = "Renew";
-            this.btnRenew.Click += new System.EventHandler(this.btnRenew_Click);
+            this.btnRenew.Click += new System.EventHandler(this.BtnRenew_Click);
             // 
             // guna2PictureBox1
             // 
@@ -343,7 +343,7 @@
             this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnMinimize.TabIndex = 54;
             this.btnMinimize.TabStop = false;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            this.btnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
             // 
             // btnExit
             // 
@@ -356,7 +356,7 @@
             this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnExit.TabIndex = 53;
             this.btnExit.TabStop = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // RenewPatient
             // 

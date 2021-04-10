@@ -28,7 +28,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateNewPatient));
             this.addressTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblAddress = new System.Windows.Forms.Label();
@@ -41,12 +41,12 @@
             this.lastNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.firstNameTxtBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblName = new System.Windows.Forms.Label();
-            this.ageTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.genderTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblAge = new System.Windows.Forms.Label();
             this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnExit = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnCreateNewPatient = new Guna.UI2.WinForms.Guna2Button();
             this.lblReferredTo = new System.Windows.Forms.Label();
             this.referredToComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -89,8 +89,8 @@
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.printPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QRCodePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
@@ -319,31 +319,31 @@
             // 
             // ageTextBox
             // 
-            this.ageTextBox.Animated = true;
-            this.ageTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2Transition1.SetDecoration(this.ageTextBox, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.ageTextBox.DefaultText = "";
-            this.ageTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.ageTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.ageTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.ageTextBox.DisabledState.Parent = this.ageTextBox;
-            this.ageTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.ageTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ageTextBox.FocusedState.Parent = this.ageTextBox;
-            this.ageTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.ageTextBox.ForeColor = System.Drawing.Color.Black;
-            this.ageTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ageTextBox.HoverState.Parent = this.ageTextBox;
-            this.ageTextBox.Location = new System.Drawing.Point(252, 313);
-            this.ageTextBox.Margin = new System.Windows.Forms.Padding(5);
-            this.ageTextBox.Name = "ageTextBox";
-            this.ageTextBox.PasswordChar = '\0';
-            this.ageTextBox.PlaceholderText = "Age";
-            this.ageTextBox.SelectedText = "";
-            this.ageTextBox.ShadowDecoration.Parent = this.ageTextBox;
-            this.ageTextBox.Size = new System.Drawing.Size(239, 32);
-            this.ageTextBox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.ageTextBox.TabIndex = 7;
+            this.genderTextBox.Animated = true;
+            this.genderTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2Transition1.SetDecoration(this.genderTextBox, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.genderTextBox.DefaultText = "";
+            this.genderTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.genderTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.genderTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.genderTextBox.DisabledState.Parent = this.genderTextBox;
+            this.genderTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.genderTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.genderTextBox.FocusedState.Parent = this.genderTextBox;
+            this.genderTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.genderTextBox.ForeColor = System.Drawing.Color.Black;
+            this.genderTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.genderTextBox.HoverState.Parent = this.genderTextBox;
+            this.genderTextBox.Location = new System.Drawing.Point(252, 313);
+            this.genderTextBox.Margin = new System.Windows.Forms.Padding(5);
+            this.genderTextBox.Name = "ageTextBox";
+            this.genderTextBox.PasswordChar = '\0';
+            this.genderTextBox.PlaceholderText = "Age";
+            this.genderTextBox.SelectedText = "";
+            this.genderTextBox.ShadowDecoration.Parent = this.genderTextBox;
+            this.genderTextBox.Size = new System.Drawing.Size(239, 32);
+            this.genderTextBox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.genderTextBox.TabIndex = 7;
             // 
             // lblAge
             // 
@@ -380,33 +380,33 @@
             this.guna2PictureBox4.TabIndex = 53;
             this.guna2PictureBox4.TabStop = false;
             // 
-            // guna2PictureBox3
+            // btnMinimize
             // 
-            this.guna2PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Transition1.SetDecoration(this.guna2PictureBox3, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
-            this.guna2PictureBox3.Location = new System.Drawing.Point(911, 27);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
-            this.guna2PictureBox3.Size = new System.Drawing.Size(21, 4);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.guna2PictureBox3.TabIndex = 4;
-            this.guna2PictureBox3.TabStop = false;
-            this.guna2PictureBox3.Click += new System.EventHandler(this.guna2PictureBox3_Click);
+            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Transition1.SetDecoration(this.btnMinimize, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
+            this.btnMinimize.Location = new System.Drawing.Point(911, 27);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.ShadowDecoration.Parent = this.btnMinimize;
+            this.btnMinimize.Size = new System.Drawing.Size(21, 4);
+            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnMinimize.TabIndex = 4;
+            this.btnMinimize.TabStop = false;
+            this.btnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
             // 
-            // guna2PictureBox2
+            // btnExit
             // 
-            this.guna2PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Transition1.SetDecoration(this.guna2PictureBox2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
-            this.guna2PictureBox2.Location = new System.Drawing.Point(960, 12);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
-            this.guna2PictureBox2.Size = new System.Drawing.Size(28, 28);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.guna2PictureBox2.TabIndex = 3;
-            this.guna2PictureBox2.TabStop = false;
-            this.guna2PictureBox2.Click += new System.EventHandler(this.guna2PictureBox2_Click);
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Transition1.SetDecoration(this.btnExit, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.Location = new System.Drawing.Point(960, 12);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.ShadowDecoration.Parent = this.btnExit;
+            this.btnExit.Size = new System.Drawing.Size(28, 28);
+            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnExit.TabIndex = 3;
+            this.btnExit.TabStop = false;
+            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // btnCreateNewPatient
             // 
@@ -423,7 +423,7 @@
             this.btnCreateNewPatient.Size = new System.Drawing.Size(180, 45);
             this.btnCreateNewPatient.TabIndex = 10;
             this.btnCreateNewPatient.Text = "Create And Print";
-            this.btnCreateNewPatient.Click += new System.EventHandler(this.btnCreateNewPatient_Click);
+            this.btnCreateNewPatient.Click += new System.EventHandler(this.BtnCreateNewPatient_Click);
             // 
             // lblReferredTo
             // 
@@ -539,7 +539,7 @@
             this.printPanel.ShadowDecoration.Parent = this.printPanel;
             this.printPanel.Size = new System.Drawing.Size(535, 343);
             this.printPanel.TabIndex = 62;
-            this.printPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.printPanel_Paint);
+            this.printPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.PrintPanel_Paint);
             // 
             // LblPanelReferredToOutput
             // 
@@ -861,27 +861,27 @@
             this.btnPrint.Size = new System.Drawing.Size(98, 38);
             this.btnPrint.TabIndex = 63;
             this.btnPrint.Text = "Print";
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            this.btnPrint.Click += new System.EventHandler(this.BtnPrint_Click);
             // 
             // guna2Transition1
             // 
             this.guna2Transition1.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.guna2Transition1.DefaultAnimation = animation1;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation2;
             // 
             // guna2DragControl1
             // 
@@ -903,7 +903,7 @@
             this.Controls.Add(this.btnCreateNewPatient);
             this.Controls.Add(this.guna2PictureBox5);
             this.Controls.Add(this.guna2PictureBox4);
-            this.Controls.Add(this.ageTextBox);
+            this.Controls.Add(this.genderTextBox);
             this.Controls.Add(this.lblAge);
             this.Controls.Add(this.addressTextBox);
             this.Controls.Add(this.lblAddress);
@@ -916,8 +916,8 @@
             this.Controls.Add(this.lastNameTextBox);
             this.Controls.Add(this.firstNameTxtBox);
             this.Controls.Add(this.lblName);
-            this.Controls.Add(this.guna2PictureBox3);
-            this.Controls.Add(this.guna2PictureBox2);
+            this.Controls.Add(this.btnMinimize);
+            this.Controls.Add(this.btnExit);
             this.guna2Transition1.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CreateNewPatient";
@@ -926,8 +926,8 @@
             this.Load += new System.EventHandler(this.CreatePatient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.printPanel.ResumeLayout(false);
             this.printPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QRCodePictureBox)).EndInit();
@@ -942,8 +942,8 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2PictureBox btnMinimize;
+        private Guna.UI2.WinForms.Guna2PictureBox btnExit;
         private Guna.UI2.WinForms.Guna2TextBox addressTextBox;
         private System.Windows.Forms.Label lblAddress;
         private Guna.UI2.WinForms.Guna2TextBox contactNumberTextBox;
@@ -955,7 +955,7 @@
         private Guna.UI2.WinForms.Guna2TextBox lastNameTextBox;
         private Guna.UI2.WinForms.Guna2TextBox firstNameTxtBox;
         private System.Windows.Forms.Label lblName;
-        private Guna.UI2.WinForms.Guna2TextBox ageTextBox;
+        private Guna.UI2.WinForms.Guna2TextBox genderTextBox;
         private System.Windows.Forms.Label lblAge;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;

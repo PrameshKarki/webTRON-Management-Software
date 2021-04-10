@@ -18,12 +18,12 @@ namespace webTRON_Management_Software.Views.Accountant
             InitializeComponent();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void BtnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void btnMinimize_Click(object sender, EventArgs e)
+        private void BtnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
@@ -61,20 +61,12 @@ namespace webTRON_Management_Software.Views.Accountant
 
         }
 
-        private void patientSerialNumberTextBox_TextChanged(object sender, EventArgs e)
+        private void PatientSerialNumberTextBox_TextChanged(object sender, EventArgs e)
         {
             string idToSearch = roleTextBox.Text+"-"+yearComboBox.Text+"-"+patientSerialNumberTextBox.Text;
             Patient patient = new Patient();
-            patient.Registration_Number = idToSearch;
-            patient.Registration_Date = idToSearch;
-            patient.FirstName = idToSearch;
-            patient.LastName = idToSearch;
-            patient.ContactNumber = idToSearch;
-            patient.Sex = idToSearch;
-            patient.ReferredTo = idToSearch;
-            patient.Status = idToSearch;
-            patient.Age = idToSearch;
-            patient.Address = idToSearch;
+            patient.patientID = idToSearch;
+;
 
             DataTable dt = Patient.SeachAndGetTopRowFromTable(patient);  // inserts the data table returned from MySqlDataAdapter sda to the DataTable dt;
             DataGridView.Rows.Clear(); // clear the values in the gridview;
@@ -95,7 +87,7 @@ namespace webTRON_Management_Software.Views.Accountant
 
         }
 
-        private void btnRenew_Click(object sender, EventArgs e)
+        private void BtnRenew_Click(object sender, EventArgs e)
         {
             bool isSuccess;
             string idToSearch = roleTextBox.Text + "-" + yearComboBox.Text + "-" + patientSerialNumberTextBox.Text;

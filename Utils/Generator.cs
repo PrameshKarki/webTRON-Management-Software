@@ -87,7 +87,7 @@ namespace webTRON_Management_Software.Utils
             finally
             {
                 //Close Connection
-                conn.Close();
+                 conn.Close();
             }
             counter = initiator + countOfTotalUsers;
             DateTime d = DateTime.Now;
