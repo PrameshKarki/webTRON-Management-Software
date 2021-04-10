@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using webTRON_Management_Software.Models;
+using webTRON_Management_Software.Utils;
 using Accountant=webTRON_Management_Software.Views.Accountant;
 using Admin=webTRON_Management_Software.Views.Admin;
 using Doctor=webTRON_Management_Software.Views.Doctor;
@@ -154,5 +155,7 @@ namespace webTRON_Management_Software.Views.Landing_Window
             alertText.Text = message;
             alertTransition.ShowSync(alertPanel);
         }
+
+      
     }
 }

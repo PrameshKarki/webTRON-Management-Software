@@ -35,12 +35,12 @@ namespace webTRON_Management_Software.Utils
         //Method that generates random password and returns it
         public static string GeneratePassword()
         {
-            int index;
+            int index,randomNumber;
             string password = "";
             //Here 6 is default password length
             for (index = 0; index < 6; index++)
             {
-                int randomNumber = GetRandomNumber(0, possibleCombinations.Length);
+                randomNumber = GetRandomNumber(0, possibleCombinations.Length);
                 char[] pickedArray = possibleCombinations[randomNumber];
                 randomNumber = GetRandomNumber(0, pickedArray.Length);
                 string pickedLetters = pickedArray[randomNumber].ToString();

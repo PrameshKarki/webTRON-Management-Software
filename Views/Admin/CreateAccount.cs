@@ -104,7 +104,7 @@ namespace webTRON_Management_Software.Views.Admin
                         }
                         else
                         {
-                            //Show error popup here
+                            DisplayAlert("Danger", "Error occured.");
                         }
 
                     }
