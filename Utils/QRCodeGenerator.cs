@@ -15,8 +15,8 @@ namespace webTRON_Management_Software.Utils
         {
             string s = refId;
             QRCoder.QRCodeGenerator QG = new QRCoder.QRCodeGenerator();
-            var info = QG.CreateQrCode(refId, QRCoder.QRCodeGenerator.ECCLevel.H);         
-           var code = new QRCoder.QRCode(info);
+            var info = QG.CreateQrCode(refId, QRCoder.QRCodeGenerator.ECCLevel.H);
+            var code = new QRCoder.QRCode(info);
             return code;
         }
     }

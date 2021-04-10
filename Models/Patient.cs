@@ -15,16 +15,16 @@ namespace webTRON_Management_Software.Models
         private static string connectionString = "server=localhost;user id=root; password=laxudb;persistsecurityinfo=True;database=webtronmanagement";
         // private static string connectionString = "server=localhost;user id=root;pwd=password;database=webtronmanagement";
         //instance variables of the class Patient
-        public string Registration_Number { get; set; }
-        public string Registration_Date { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Address { get; set; }
-        public string ReferredTo { get; set; }
-        public string Sex { get; set; }
-        public string Age { get; set; }
-        public string ContactNumber { get; set; }
-        public string Status { get; set; }
+        public string patientID { get; set; }
+        public string registrationDate { get; set; }
+        public string firstName { get; set; }
+        public string lastName { get; set; }
+        public string address { get; set; }
+        public string referredTo { get; set; }
+        public string gender { get; set; }
+        public int age { get; set; }
+        public string contactNumber { get; set; }
+        public string status { get; set; }
 
 
         // method to insert the datas to the database 
@@ -34,24 +34,25 @@ namespace webTRON_Management_Software.Models
             conn.Open();
             MySqlCommand command = new MySqlCommand();
             command.Connection = conn;
-            command.CommandText = "insert into patientinfo values(@prmRegistrationNumber,@prmRegiatratioDate,@prmFirstName, @prmLastName, @prmContact,@prmSex,@prmReferredTo,@prmStatus,@prmAge,@prmAddress)";
-            command.Parameters.AddWithValue("prmRegistrationNumber", ptn.Registration_Number);
-            command.Parameters.AddWithValue("prmRegiatratioDate", ptn.Registration_Date);
-            command.Parameters.AddWithValue("prmFirstName", ptn.FirstName);
-            command.Parameters.AddWithValue("prmLastName", ptn.LastName);
-            command.Parameters.AddWithValue("prmContact", ptn.ContactNumber);
-            command.Parameters.AddWithValue("prmSex", ptn.Sex);
-            command.Parameters.AddWithValue("prmReferredTo", ptn.ReferredTo);
-            command.Parameters.AddWithValue("prmStatus", ptn.Status);
-            command.Parameters.AddWithValue("prmAge", ptn.Age);
-            command.Parameters.AddWithValue("prmAddress", ptn.Address);
+            command.CommandText = "INSERT INTO patientInfo (@prmPatientID,@prmRegiatratioDate,@prmFirstName, @prmLastName,@prmGender,@prmAge, @prmContactNumber,@prmAddress,@prmStatus,@prmReferredTo)";
+            command.Parameters.AddWithValue("prmRegistrationNumber", ptn.patientID);
+            command.Parameters.AddWithValue("prmRegiatratioDate", ptn.registrationDate);
+            command.Parameters.AddWithValue("prmFirstName", ptn.firstName);
+            command.Parameters.AddWithValue("prmLastName", ptn.lastName);
+            command.Parameters.AddWithValue("prmContactNumber", ptn.contactNumber);
+            command.Parameters.AddWithValue("prmGender", ptn.gender);
+            command.Parameters.AddWithValue("prmReferredTo", ptn.referredTo);
+            command.Parameters.AddWithValue("prmStatus", ptn.status);
+            command.Parameters.AddWithValue("prmAge", ptn.age);
+            command.Parameters.AddWithValue("prmAddress", ptn.address);
+
             try
             {
                 command.ExecuteNonQuery();
             }
-           catch (Exception)
+            catch (Exception)
             {
-               return false;
+                return false;
             }
             finally
             {
@@ -71,13 +72,13 @@ namespace webTRON_Management_Software.Models
                 conn.Open();
                 MySqlCommand command = new MySqlCommand();
                 command.Connection = conn;
-                command.CommandText = "update patientInfo set firstName=@prmFirstName,lastName=@prmLastName, contact= @prmContact,age=@prmAge,address=@prmAddress WHERE registrationNumber=@parmRegistrationNumber";
-                command.Parameters.AddWithValue("prmFirstName", ObjUpdate.FirstName);
-                command.Parameters.AddWithValue("prmLastName", ObjUpdate.LastName);
-                command.Parameters.AddWithValue("parmRegistrationNumber", ObjUpdate.Registration_Number);
-                command.Parameters.AddWithValue("prmContact", ObjUpdate.ContactNumber);
-                command.Parameters.AddWithValue("prmAge", ObjUpdate.Age);
-                command.Parameters.AddWithValue("prmAddress", ObjUpdate.Address);
+                command.CommandText = "UPDATE patientInfo SET firstName=@prmFirstName,lastName=@prmLastName, contact= @prmContact,age=@prmAge,address=@prmAddress WHERE registrationNumber=@parmRegistrationNumber";
+                command.Parameters.AddWithValue("prmFirstName", ObjUpdate.firstName);
+                command.Parameters.AddWithValue("prmLastName", ObjUpdate.lastName);
+                command.Parameters.AddWithValue("parmRegistrationNumber", ObjUpdate.patientID);
+                command.Parameters.AddWithValue("prmContact", ObjUpdate.contactNumber);
+                command.Parameters.AddWithValue("prmAge", ObjUpdate.age);
+                command.Parameters.AddWithValue("prmAddress", ObjUpdate.address);
                 command.ExecuteNonQuery();
 
             }
@@ -97,7 +98,7 @@ namespace webTRON_Management_Software.Models
         public static DataTable GetTableData()
         {
             MySqlConnection conn = new MySqlConnection(connectionString);
-            MySqlDataAdapter sda = new MySqlDataAdapter("select * from Patientinfo", conn);
+            MySqlDataAdapter sda = new MySqlDataAdapter("SELECT * FROM patientInfo", conn);
             DataTable dt = new DataTable();
             sda.Fill(dt);  // inserts the data table returned from MySqlDataAdapter  sda to the DataTable dt;
             return dt;
@@ -112,18 +113,18 @@ namespace webTRON_Management_Software.Models
         {
             MySqlConnection conn = new MySqlConnection(connectionString);
             conn.Open();
-             MySqlDataAdapter ad=new MySqlDataAdapter( @"select * from patientinfo where ( registrationNumber like '%" + obj.Registration_Number +
-                "%') or (registrationDate like '%" + obj.Registration_Date +
-                "%') or (firstName like '%" + obj.FirstName +
-                "%')or (lastName like '%" + obj.LastName +
-                "%')or (contact like '%" + obj.ContactNumber +
-                "%') or (sex like '%" + obj.Sex+
-                "%') or (referredTo like '%" + obj.ReferredTo +
-                "%')or (status like '%" + obj.Status +
-                "%')or (age like '%" + obj.Age +
-                "%')or (address like '%" + obj.Address +
-                "%')",conn);
-          
+            MySqlDataAdapter ad = new MySqlDataAdapter(@"SELECT * FROM patientinfo WHERE ( registrationNumber LIKE '%" + obj.patientID +
+               "%') OR (registrationDate like '%" + obj.registrationDate +
+               "%') OR (firstName like '%" + obj.firstName +
+               "%') OR (lastName like '%" + obj.lastName +
+               "%') OR (contact like '%" + obj.contactNumber +
+               "%') OR (sex like '%" + obj.gender +
+               "%') OR (referredTo like '%" + obj.referredTo +
+               "%') OR (status like '%" + obj.status +
+               "%') OR (age like '%" + obj.age +
+               "%') OR (address like '%" + obj.address +
+               "%')", conn);
+
             DataTable dt = new DataTable();
             ad.Fill(dt);
             return dt;
@@ -133,51 +134,28 @@ namespace webTRON_Management_Software.Models
         {
             MySqlConnection conn = new MySqlConnection(connectionString);
             conn.Open();
-            MySqlDataAdapter ad = new MySqlDataAdapter(@"select * from patientinfo where ( registrationNumber like '%" + obj.Registration_Number +
-               "%') or (registrationDate like '%" + obj.Registration_Date +
-               "%') or (firstName like '%" + obj.FirstName +
-               "%')or (lastName like '%" + obj.LastName +
-               "%')or (contact like '%" + obj.ContactNumber +
-               "%') or (sex like '%" + obj.Sex +
-               "%') or (referredTo like '%" + obj.ReferredTo +
-               "%')or (status like '%" + obj.Status +
-               "%')or (age like '%" + obj.Age +
-               "%')or (address like '%" + obj.Address +
-               "%') limit 1", conn);
-
+            MySqlDataAdapter ad = new MySqlDataAdapter(@"SELECT * from patientinfo WHERE registrationNumber LIKE '%" + obj.patientID + "%' LIMIT 1", conn);
             DataTable dt = new DataTable();
             ad.Fill(dt);
             return dt;
         }
-        public static bool Renew(String regNumber) {
+        public static bool Renew(String regNumber)
+        {
             try
             {
                 MySqlConnection conn = new MySqlConnection(connectionString);
-                MessageBox.Show("--1");
                 conn.Open();
-                MessageBox.Show("--2");
 
                 MySqlCommand command = new MySqlCommand();
-                MessageBox.Show("--3");
 
                 command.Connection = conn;
-                MessageBox.Show("--4");
-
-                command.CommandText = "update patientinfo set status=@prmStatus where registrationNumber=@prmRegistrationNumber";
-                MessageBox.Show("--5");
-
+                command.CommandText = "UPDATE patientinfo SET status=@prmStatus WHERE registrationNumber=@prmRegistrationNumber";
                 command.Parameters.AddWithValue("prmRegistrationNumber", regNumber);
                 command.Parameters.AddWithValue("prmStatus", "in");
-                MessageBox.Show("--6");
-
                 command.ExecuteNonQuery();
-                MessageBox.Show("--7");
-
                 conn.Close();
-                MessageBox.Show("--8");
-
             }
-            catch (Exception e) 
+            catch (Exception e)
             {
                 MessageBox.Show(e.Message);
                 return false;
@@ -187,5 +165,5 @@ namespace webTRON_Management_Software.Models
 
         }
     }
-   
+
 }

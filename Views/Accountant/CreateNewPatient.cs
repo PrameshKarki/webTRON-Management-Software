@@ -31,12 +31,12 @@ namespace webTRON_Management_Software.Views.Accountant
 
 
 
-        private void guna2PictureBox2_Click(object sender, EventArgs e)
+        private void BtnExit_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
         }
 
-        private void guna2PictureBox3_Click(object sender, EventArgs e)
+        private void BtnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
 
@@ -44,36 +44,36 @@ namespace webTRON_Management_Software.Views.Accountant
 
  
 
-        private void btnCreateNewPatient_Click(object sender, EventArgs e)
+        private void BtnCreateNewPatient_Click(object sender, EventArgs e)
         {
 
             // check if all the fields are Filled or not.
-            if (string.IsNullOrEmpty(firstNameTxtBox.Text) || string.IsNullOrEmpty(lastNameTextBox.Text) || string.IsNullOrEmpty(addressTextBox.Text) || string.IsNullOrEmpty(ageTextBox.Text) || string.IsNullOrEmpty(contactNumberTextBox.Text) || (isMale.Checked == false & isFemale.Checked == false & isOthers.Checked == false))
+            if (string.IsNullOrEmpty(firstNameTxtBox.Text) || string.IsNullOrEmpty(lastNameTextBox.Text) || string.IsNullOrEmpty(addressTextBox.Text) || string.IsNullOrEmpty(genderTextBox.Text) || string.IsNullOrEmpty(contactNumberTextBox.Text) || (isMale.Checked == false & isFemale.Checked == false & isOthers.Checked == false))
             {
                 MessageBox.Show("Complete Information Should be Supplied.", "Warning!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
                 Patient ptn = new Patient();
-                ptn.Registration_Number = lblRegistrationIdOutput.Text;
-                ptn.Registration_Date = lblRegistrationDateOutput.Text;
-                ptn.FirstName = firstNameTxtBox.Text;
-                ptn.LastName = lastNameTextBox.Text;
-                ptn.Address = addressTextBox.Text;
-                ptn.ReferredTo = referredToComboBox.Text;
-                ptn.Age = ageTextBox.Text;
-                ptn.ContactNumber = contactNumberTextBox.Text;
-                ptn.Status = "in";
+                ptn.patientID = lblRegistrationIdOutput.Text;
+                ptn.registrationDate = lblRegistrationDateOutput.Text;
+                ptn.firstName = firstNameTxtBox.Text;
+                ptn.lastName = lastNameTextBox.Text;
+                ptn.address = addressTextBox.Text;
+                ptn.referredTo = referredToComboBox.Text;
+                ptn.gender = genderTextBox.Text;
+                ptn.contactNumber = contactNumberTextBox.Text;
+                ptn.status = "in";
               
                 if (isMale.Checked)
-                    ptn.Sex = isMale.Text;
+                    ptn.gender = isMale.Text;
                     
                 
                 else if (isFemale.Checked)
-                    ptn.Sex = isFemale.Text;
+                    ptn.gender = isFemale.Text;
                     
                 else if (isOthers.Checked)
-                    ptn.Sex = isOthers.Text;
+                    ptn.gender = isOthers.Text;
                     
 
                 bool isSuccess = Patient.Insert(ptn);
@@ -99,7 +99,7 @@ namespace webTRON_Management_Software.Views.Accountant
 
         }
 
-        private void btnPrint_Click(object sender, EventArgs e)
+        private void BtnPrint_Click(object sender, EventArgs e)
         {
             //to print the Ticket
             Printer printer = new Printer(printPanel.Width,printPanel.Height,printPanel);
@@ -110,13 +110,13 @@ namespace webTRON_Management_Software.Views.Accountant
         }
 
 
-        private void printPanel_Paint(object sender, PaintEventArgs e)
+        private void PrintPanel_Paint(object sender, PaintEventArgs e)
         {
             LblPanelRegistrationIdOutput.Text = lblRegistrationIdOutput.Text;
             LblPanelRegistrationDateOutput.Text = lblRegistrationDateOutput.Text;
             LblPanelFNameOutput.Text = firstNameTxtBox.Text;
             LblPanelLNameOutput.Text = lastNameTextBox.Text;
-            LblPanelAgeOutput.Text = ageTextBox.Text;
+            LblPanelAgeOutput.Text = genderTextBox.Text;
           
             if (isMale.Checked)
                 LblPanelSexOutput.Text = "M";
@@ -141,7 +141,7 @@ namespace webTRON_Management_Software.Views.Accountant
             isFemale.Checked = false;
             isMale.Checked = false;
             isOthers.Checked = false;
-            ageTextBox.Text = "";
+            genderTextBox.Text = "";
             contactNumberTextBox.Text = "";
             referredToComboBox.SelectedIndex = -1;
             firstNameTxtBox.Focus();
