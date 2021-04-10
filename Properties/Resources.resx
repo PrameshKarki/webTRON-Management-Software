@@ -196,6 +196,9 @@
   <data name="topLeftCircles" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\topLeftCircles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="RectangleCurved" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RectangleCurved.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="webTronLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\webTronLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -211,9 +214,6 @@
   <data name="dashboard_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dashboard_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PlusSign1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PlusSign.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -223,8 +223,11 @@
   <data name="rectangle_curved_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rectangle_curved_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RectangleCurved" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RectangleCurved.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="alert_sucess_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alert_sucess_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PlusSign1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlusSign.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="rectangularBar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rectangularBar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,7 +241,7 @@
   <data name="smallPasswordIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\smallPasswordIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="alert_sucess_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\alert_sucess_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="alert_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alert_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

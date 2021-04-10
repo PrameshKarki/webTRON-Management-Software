@@ -93,6 +93,16 @@ namespace webTRON_Management_Software.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap alert_icon {
+            get {
+                object obj = ResourceManager.GetObject("alert_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap alert_sucess_background {
             get {
                 object obj = ResourceManager.GetObject("alert_sucess_background", resourceCulture);
