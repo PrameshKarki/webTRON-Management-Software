@@ -24,7 +24,7 @@ namespace webTRON_Management_Software
             Application.SetCompatibleTextRenderingDefault(false);
 
             //Run main window here
-            Application.Run(new Doctor.TreatmentWindow());
+            Application.Run(new Doctor.MedicineForm());
          
        
           

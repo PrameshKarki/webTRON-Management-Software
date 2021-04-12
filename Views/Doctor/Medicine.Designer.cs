@@ -1,7 +1,7 @@
 ﻿
 namespace webTRON_Management_Software.Views.Doctor
 {
-    partial class Medicine
+    partial class MedicineForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,8 @@ namespace webTRON_Management_Software.Views.Doctor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Medicine));
+            Guna.UI2.AnimatorNS.Animation animation3 = new Guna.UI2.AnimatorNS.Animation();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MedicineForm));
             this.lblRegistrationId = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblRegisteredDate = new System.Windows.Forms.Label();
@@ -59,37 +60,6 @@ namespace webTRON_Management_Software.Views.Doctor
             this.btnMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnExit = new Guna.UI2.WinForms.Guna2PictureBox();
             this.runningMedicinePanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblRunningMedicine = new System.Windows.Forms.Label();
-            this.lblMedicineName1 = new System.Windows.Forms.Label();
-            this.medicineNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblStartDate1 = new System.Windows.Forms.Label();
-            this.lblStartDateValue1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.lblEndDay1 = new System.Windows.Forms.Label();
-            this.lblEndDayTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblRemarksTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblRemarks1 = new System.Windows.Forms.Label();
-            this.btnAddRunningMedicine = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.prescribedMedicinePanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnAddPrescribedMedicine = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.prescribedMedicineRemarksTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.prescribedMedicineRemarks = new System.Windows.Forms.Label();
-            this.prescribedMedicineEndDayTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblPrescribedMedicineEndDay = new System.Windows.Forms.Label();
-            this.prescribedMedicineStartDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.lblPrescribedMedicineStartDate = new System.Windows.Forms.Label();
-            this.prescribedMedicineTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblPrescribedMedicineName = new System.Windows.Forms.Label();
-            this.lblPrescribedMedicine = new System.Windows.Forms.Label();
-            this.previouslyTakenMedicinePanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblPreviouslyTakenMedicineRemarks = new System.Windows.Forms.Label();
-            this.lblPreviouslyTakenMedicineEndDay = new System.Windows.Forms.Label();
-            this.lblPreviouslyTakenMedicineStartDate = new System.Windows.Forms.Label();
-            this.lblPreviouslyTakenMedicineName = new System.Windows.Forms.Label();
-            this.lblPreviouslyTakenMedicine = new System.Windows.Forms.Label();
-            this.lblPreviouslyTakenMedicineNameValue = new System.Windows.Forms.Label();
-            this.lblPreviouslyTakenMedicineStartDateValue = new System.Windows.Forms.Label();
-            this.lblPreviouslyTakenMedicineEndDayValue = new System.Windows.Forms.Label();
-            this.lblPreviouslyTakenMedicineRemarksValue = new System.Windows.Forms.Label();
             this.lblRemarksValue = new System.Windows.Forms.Label();
             this.lblEndDayValue = new System.Windows.Forms.Label();
             this.lblStartDateValue = new System.Windows.Forms.Label();
@@ -98,7 +68,44 @@ namespace webTRON_Management_Software.Views.Doctor
             this.lblEndDay = new System.Windows.Forms.Label();
             this.lblStartDate = new System.Windows.Forms.Label();
             this.lblMedicineName = new System.Windows.Forms.Label();
+            this.btnAddRunningMedicine = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.remarksTextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblRemarks1 = new System.Windows.Forms.Label();
+            this.endDayTextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblEndDay1 = new System.Windows.Forms.Label();
+            this.startDatePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.lblStartDate1 = new System.Windows.Forms.Label();
+            this.medicineNameTextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblMedicineName1 = new System.Windows.Forms.Label();
+            this.lblRunningMedicine = new System.Windows.Forms.Label();
+            this.prescribedMedicinePanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnAddPrescribedMedicine = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.prescribedMedicineRemarksTextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.prescribedMedicineRemarks1 = new System.Windows.Forms.Label();
+            this.prescribedMedicineEndDayTextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblPrescribedMedicineEndDay1 = new System.Windows.Forms.Label();
+            this.prescribedMedicineStartDate1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.lblPrescribedMedicineStartDate1 = new System.Windows.Forms.Label();
+            this.prescribedMedicineTextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblPrescribedMedicineName1 = new System.Windows.Forms.Label();
+            this.previouslyTakenMedicinePanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblPreviouslyTakenMedicineRemarksValue = new System.Windows.Forms.Label();
+            this.lblPreviouslyTakenMedicineEndDayValue = new System.Windows.Forms.Label();
+            this.lblPreviouslyTakenMedicineStartDateValue = new System.Windows.Forms.Label();
+            this.lblPreviouslyTakenMedicineNameValue = new System.Windows.Forms.Label();
+            this.lblPreviouslyTakenMedicineRemarks = new System.Windows.Forms.Label();
+            this.lblPreviouslyTakenMedicineEndDay = new System.Windows.Forms.Label();
+            this.lblPreviouslyTakenMedicineStartDate = new System.Windows.Forms.Label();
+            this.lblPreviouslyTakenMedicineName = new System.Windows.Forms.Label();
+            this.lblPreviouslyTakenMedicine = new System.Windows.Forms.Label();
             this.DragableMedicineForm = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.alertTimer = new System.Windows.Forms.Timer(this.components);
+            this.alertTransition = new Guna.UI2.WinForms.Guna2Transition();
+            this.alertPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.alertText = new System.Windows.Forms.Label();
+            this.alertCloseBtn = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.alertImage = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.lblPrescribedMedicine = new System.Windows.Forms.Label();
             this.activePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
@@ -106,11 +113,15 @@ namespace webTRON_Management_Software.Views.Doctor
             this.runningMedicinePanel.SuspendLayout();
             this.prescribedMedicinePanel.SuspendLayout();
             this.previouslyTakenMedicinePanel.SuspendLayout();
+            this.alertPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.alertCloseBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alertImage)).BeginInit();
             this.SuspendLayout();
             // 
             // lblRegistrationId
             // 
             this.lblRegistrationId.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblRegistrationId, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblRegistrationId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblRegistrationId.Location = new System.Drawing.Point(454, 21);
             this.lblRegistrationId.Name = "lblRegistrationId";
@@ -121,6 +132,7 @@ namespace webTRON_Management_Software.Views.Doctor
             // lblName
             // 
             this.lblName.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblName, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.Location = new System.Drawing.Point(240, 90);
             this.lblName.Name = "lblName";
@@ -131,6 +143,7 @@ namespace webTRON_Management_Software.Views.Doctor
             // lblRegisteredDate
             // 
             this.lblRegisteredDate.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblRegisteredDate, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblRegisteredDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegisteredDate.Location = new System.Drawing.Point(174, 62);
             this.lblRegisteredDate.Name = "lblRegisteredDate";
@@ -141,6 +154,7 @@ namespace webTRON_Management_Software.Views.Doctor
             // lblContact
             // 
             this.lblContact.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblContact, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContact.Location = new System.Drawing.Point(429, 92);
             this.lblContact.Name = "lblContact";
@@ -151,6 +165,7 @@ namespace webTRON_Management_Software.Views.Doctor
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblAddress, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddress.Location = new System.Drawing.Point(425, 64);
             this.lblAddress.Name = "lblAddress";
@@ -161,6 +176,7 @@ namespace webTRON_Management_Software.Views.Doctor
             // label1
             // 
             this.label1.AutoSize = true;
+            this.alertTransition.SetDecoration(this.label1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label1.Location = new System.Drawing.Point(544, 20);
             this.label1.Name = "label1";
@@ -171,6 +187,7 @@ namespace webTRON_Management_Software.Views.Doctor
             // lblReferredTo
             // 
             this.lblReferredTo.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblReferredTo, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblReferredTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblReferredTo.Location = new System.Drawing.Point(761, 73);
             this.lblReferredTo.Name = "lblReferredTo";
@@ -181,6 +198,7 @@ namespace webTRON_Management_Software.Views.Doctor
             // lblAge
             // 
             this.lblAge.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblAge, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAge.Location = new System.Drawing.Point(624, 62);
             this.lblAge.Name = "lblAge";
@@ -191,6 +209,7 @@ namespace webTRON_Management_Software.Views.Doctor
             // lblGender
             // 
             this.lblGender.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblGender, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGender.Location = new System.Drawing.Point(604, 94);
             this.lblGender.Name = "lblGender";
@@ -201,6 +220,7 @@ namespace webTRON_Management_Software.Views.Doctor
             // lblRegisteredDateValue
             // 
             this.lblRegisteredDateValue.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblRegisteredDateValue, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblRegisteredDateValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegisteredDateValue.Location = new System.Drawing.Point(287, 62);
             this.lblRegisteredDateValue.Name = "lblRegisteredDateValue";
@@ -211,6 +231,7 @@ namespace webTRON_Management_Software.Views.Doctor
             // lblNameValue
             // 
             this.lblNameValue.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblNameValue, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblNameValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNameValue.Location = new System.Drawing.Point(287, 89);
             this.lblNameValue.Name = "lblNameValue";
@@ -221,6 +242,7 @@ namespace webTRON_Management_Software.Views.Doctor
             // lblAddressValue
             // 
             this.lblAddressValue.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblAddressValue, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblAddressValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddressValue.Location = new System.Drawing.Point(495, 64);
             this.lblAddressValue.Name = "lblAddressValue";
@@ -231,6 +253,7 @@ namespace webTRON_Management_Software.Views.Doctor
             // lblContactValue
             // 
             this.lblContactValue.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblContactValue, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblContactValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContactValue.Location = new System.Drawing.Point(497, 92);
             this.lblContactValue.Name = "lblContactValue";
@@ -241,6 +264,7 @@ namespace webTRON_Management_Software.Views.Doctor
             // lblAgeValue
             // 
             this.lblAgeValue.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblAgeValue, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblAgeValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAgeValue.Location = new System.Drawing.Point(667, 60);
             this.lblAgeValue.Name = "lblAgeValue";
@@ -251,6 +275,7 @@ namespace webTRON_Management_Software.Views.Doctor
             // lblGenderValue
             // 
             this.lblGenderValue.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblGenderValue, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblGenderValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGenderValue.Location = new System.Drawing.Point(665, 92);
             this.lblGenderValue.Name = "lblGenderValue";
@@ -261,6 +286,7 @@ namespace webTRON_Management_Software.Views.Doctor
             // lblReferredToValue
             // 
             this.lblReferredToValue.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblReferredToValue, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblReferredToValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblReferredToValue.Location = new System.Drawing.Point(853, 73);
             this.lblReferredToValue.Name = "lblReferredToValue";
@@ -272,6 +298,7 @@ namespace webTRON_Management_Software.Views.Doctor
             // 
             this.btnMedicine.CheckedState.Parent = this.btnMedicine;
             this.btnMedicine.CustomImages.Parent = this.btnMedicine;
+            this.alertTransition.SetDecoration(this.btnMedicine, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnMedicine.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(131)))), ((int)(((byte)(228)))));
             this.btnMedicine.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnMedicine.ForeColor = System.Drawing.Color.White;
@@ -287,6 +314,7 @@ namespace webTRON_Management_Software.Views.Doctor
             // 
             this.btnOthers.CheckedState.Parent = this.btnOthers;
             this.btnOthers.CustomImages.Parent = this.btnOthers;
+            this.alertTransition.SetDecoration(this.btnOthers, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnOthers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
             this.btnOthers.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnOthers.ForeColor = System.Drawing.Color.White;
@@ -302,6 +330,7 @@ namespace webTRON_Management_Software.Views.Doctor
             // 
             this.btnTests.CheckedState.Parent = this.btnTests;
             this.btnTests.CustomImages.Parent = this.btnTests;
+            this.alertTransition.SetDecoration(this.btnTests, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnTests.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
             this.btnTests.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnTests.ForeColor = System.Drawing.Color.White;
@@ -317,6 +346,7 @@ namespace webTRON_Management_Software.Views.Doctor
             // 
             this.btnPrescription.CheckedState.Parent = this.btnPrescription;
             this.btnPrescription.CustomImages.Parent = this.btnPrescription;
+            this.alertTransition.SetDecoration(this.btnPrescription, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnPrescription.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
             this.btnPrescription.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnPrescription.ForeColor = System.Drawing.Color.White;
@@ -333,6 +363,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.btnNext.Animated = true;
             this.btnNext.CheckedState.Parent = this.btnNext;
             this.btnNext.CustomImages.Parent = this.btnNext;
+            this.alertTransition.SetDecoration(this.btnNext, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnNext.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
             this.btnNext.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.btnNext.ForeColor = System.Drawing.Color.White;
@@ -346,6 +377,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.btnNext.TabIndex = 97;
             this.btnNext.Text = "Next";
             this.btnNext.TextOffset = new System.Drawing.Point(-1, 0);
+            this.btnNext.Click += new System.EventHandler(this.BtnNext_Click);
             // 
             // activePanel
             // 
@@ -354,6 +386,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.activePanel.Controls.Add(this.activeForm);
             this.activePanel.Controls.Add(this.activeUserPicture);
             this.activePanel.Controls.Add(this.activeUserName);
+            this.alertTransition.SetDecoration(this.activePanel, Guna.UI2.AnimatorNS.DecorationType.None);
             this.activePanel.Location = new System.Drawing.Point(0, -1);
             this.activePanel.Name = "activePanel";
             this.activePanel.ShadowDecoration.Parent = this.activePanel;
@@ -364,6 +397,7 @@ namespace webTRON_Management_Software.Views.Doctor
             // 
             this.activeForm.AutoSize = true;
             this.activeForm.BackColor = System.Drawing.Color.Transparent;
+            this.alertTransition.SetDecoration(this.activeForm, Guna.UI2.AnimatorNS.DecorationType.None);
             this.activeForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.activeForm.ForeColor = System.Drawing.Color.White;
             this.activeForm.Location = new System.Drawing.Point(64, 40);
@@ -375,6 +409,7 @@ namespace webTRON_Management_Software.Views.Doctor
             // activeUserPicture
             // 
             this.activeUserPicture.BackColor = System.Drawing.Color.Transparent;
+            this.alertTransition.SetDecoration(this.activeUserPicture, Guna.UI2.AnimatorNS.DecorationType.None);
             this.activeUserPicture.Image = global::webTRON_Management_Software.Properties.Resources.man_picture;
             this.activeUserPicture.Location = new System.Drawing.Point(0, 15);
             this.activeUserPicture.Name = "activeUserPicture";
@@ -389,6 +424,7 @@ namespace webTRON_Management_Software.Views.Doctor
             // 
             this.activeUserName.AutoSize = true;
             this.activeUserName.BackColor = System.Drawing.Color.Transparent;
+            this.alertTransition.SetDecoration(this.activeUserName, Guna.UI2.AnimatorNS.DecorationType.None);
             this.activeUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.activeUserName.ForeColor = System.Drawing.Color.White;
             this.activeUserName.Location = new System.Drawing.Point(64, 9);
@@ -400,6 +436,7 @@ namespace webTRON_Management_Software.Views.Doctor
             // btnMinimize
             // 
             this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.alertTransition.SetDecoration(this.btnMinimize, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
             this.btnMinimize.Location = new System.Drawing.Point(914, 27);
             this.btnMinimize.Name = "btnMinimize";
@@ -412,6 +449,7 @@ namespace webTRON_Management_Software.Views.Doctor
             // btnExit
             // 
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.alertTransition.SetDecoration(this.btnExit, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.Location = new System.Drawing.Point(963, 12);
             this.btnExit.Name = "btnExit";
@@ -420,9 +458,11 @@ namespace webTRON_Management_Software.Views.Doctor
             this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnExit.TabIndex = 29;
             this.btnExit.TabStop = false;
+            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // runningMedicinePanel
             // 
+            this.runningMedicinePanel.AutoScroll = true;
             this.runningMedicinePanel.Controls.Add(this.lblRemarksValue);
             this.runningMedicinePanel.Controls.Add(this.lblEndDayValue);
             this.runningMedicinePanel.Controls.Add(this.lblStartDateValue);
@@ -432,174 +472,121 @@ namespace webTRON_Management_Software.Views.Doctor
             this.runningMedicinePanel.Controls.Add(this.lblStartDate);
             this.runningMedicinePanel.Controls.Add(this.lblMedicineName);
             this.runningMedicinePanel.Controls.Add(this.btnAddRunningMedicine);
-            this.runningMedicinePanel.Controls.Add(this.lblRemarksTextBox);
+            this.runningMedicinePanel.Controls.Add(this.remarksTextBox1);
             this.runningMedicinePanel.Controls.Add(this.lblRemarks1);
-            this.runningMedicinePanel.Controls.Add(this.lblEndDayTextBox);
+            this.runningMedicinePanel.Controls.Add(this.endDayTextBox1);
             this.runningMedicinePanel.Controls.Add(this.lblEndDay1);
-            this.runningMedicinePanel.Controls.Add(this.lblStartDateValue1);
+            this.runningMedicinePanel.Controls.Add(this.startDatePicker1);
             this.runningMedicinePanel.Controls.Add(this.lblStartDate1);
-            this.runningMedicinePanel.Controls.Add(this.medicineNameTextBox);
+            this.runningMedicinePanel.Controls.Add(this.medicineNameTextBox1);
             this.runningMedicinePanel.Controls.Add(this.lblMedicineName1);
-            this.runningMedicinePanel.Controls.Add(this.lblRunningMedicine);
-            this.runningMedicinePanel.Location = new System.Drawing.Point(0, 187);
+            this.alertTransition.SetDecoration(this.runningMedicinePanel, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.runningMedicinePanel.Location = new System.Drawing.Point(0, 164);
             this.runningMedicinePanel.Name = "runningMedicinePanel";
             this.runningMedicinePanel.ShadowDecoration.Parent = this.runningMedicinePanel;
-            this.runningMedicinePanel.Size = new System.Drawing.Size(999, 145);
+            this.runningMedicinePanel.Size = new System.Drawing.Size(999, 124);
             this.runningMedicinePanel.TabIndex = 98;
             // 
-            // lblRunningMedicine
+            // lblRemarksValue
             // 
-            this.lblRunningMedicine.AutoSize = true;
-            this.lblRunningMedicine.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblRunningMedicine.Location = new System.Drawing.Point(8, 9);
-            this.lblRunningMedicine.Name = "lblRunningMedicine";
-            this.lblRunningMedicine.Size = new System.Drawing.Size(140, 20);
-            this.lblRunningMedicine.TabIndex = 0;
-            this.lblRunningMedicine.Text = "Running Medicine:";
+            this.lblRemarksValue.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblRemarksValue, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblRemarksValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRemarksValue.Location = new System.Drawing.Point(747, 19);
+            this.lblRemarksValue.Name = "lblRemarksValue";
+            this.lblRemarksValue.Size = new System.Drawing.Size(79, 17);
+            this.lblRemarksValue.TabIndex = 110;
+            this.lblRemarksValue.Text = "{{remarks}}";
             // 
-            // lblMedicineName1
+            // lblEndDayValue
             // 
-            this.lblMedicineName1.AutoSize = true;
-            this.lblMedicineName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMedicineName1.Location = new System.Drawing.Point(23, 85);
-            this.lblMedicineName1.Name = "lblMedicineName1";
-            this.lblMedicineName1.Size = new System.Drawing.Size(109, 17);
-            this.lblMedicineName1.TabIndex = 78;
-            this.lblMedicineName1.Text = "Medicine Name:";
+            this.lblEndDayValue.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblEndDayValue, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblEndDayValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEndDayValue.Location = new System.Drawing.Point(602, 18);
+            this.lblEndDayValue.Name = "lblEndDayValue";
+            this.lblEndDayValue.Size = new System.Drawing.Size(77, 17);
+            this.lblEndDayValue.TabIndex = 109;
+            this.lblEndDayValue.Text = "{{endDay}}";
             // 
-            // medicineNameTextBox
+            // lblStartDateValue
             // 
-            this.medicineNameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.medicineNameTextBox.DefaultText = "";
-            this.medicineNameTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.medicineNameTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.medicineNameTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.medicineNameTextBox.DisabledState.Parent = this.medicineNameTextBox;
-            this.medicineNameTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.medicineNameTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.medicineNameTextBox.FocusedState.Parent = this.medicineNameTextBox;
-            this.medicineNameTextBox.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.medicineNameTextBox.ForeColor = System.Drawing.Color.Black;
-            this.medicineNameTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.medicineNameTextBox.HoverState.Parent = this.medicineNameTextBox;
-            this.medicineNameTextBox.Location = new System.Drawing.Point(134, 82);
-            this.medicineNameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.medicineNameTextBox.Name = "medicineNameTextBox";
-            this.medicineNameTextBox.PasswordChar = '\0';
-            this.medicineNameTextBox.PlaceholderText = "Medicine Name";
-            this.medicineNameTextBox.SelectedText = "";
-            this.medicineNameTextBox.ShadowDecoration.Parent = this.medicineNameTextBox;
-            this.medicineNameTextBox.Size = new System.Drawing.Size(177, 30);
-            this.medicineNameTextBox.TabIndex = 79;
+            this.lblStartDateValue.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblStartDateValue, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblStartDateValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStartDateValue.Location = new System.Drawing.Point(404, 18);
+            this.lblStartDateValue.Name = "lblStartDateValue";
+            this.lblStartDateValue.Size = new System.Drawing.Size(86, 17);
+            this.lblStartDateValue.TabIndex = 108;
+            this.lblStartDateValue.Text = "{{startDate}}";
             // 
-            // lblStartDate1
+            // lblMedicineNameValue
             // 
-            this.lblStartDate1.AutoSize = true;
-            this.lblStartDate1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStartDate1.Location = new System.Drawing.Point(323, 89);
-            this.lblStartDate1.Name = "lblStartDate1";
-            this.lblStartDate1.Size = new System.Drawing.Size(76, 17);
-            this.lblStartDate1.TabIndex = 80;
-            this.lblStartDate1.Text = "Start Date:";
+            this.lblMedicineNameValue.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblMedicineNameValue, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblMedicineNameValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMedicineNameValue.Location = new System.Drawing.Point(137, 13);
+            this.lblMedicineNameValue.Name = "lblMedicineNameValue";
+            this.lblMedicineNameValue.Size = new System.Drawing.Size(121, 17);
+            this.lblMedicineNameValue.TabIndex = 107;
+            this.lblMedicineNameValue.Text = "{{medicineName}}";
             // 
-            // lblStartDateValue1
+            // lblRemarks
             // 
-            this.lblStartDateValue1.CheckedState.Parent = this.lblStartDateValue1;
-            this.lblStartDateValue1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            this.lblStartDateValue1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblStartDateValue1.ForeColor = System.Drawing.Color.White;
-            this.lblStartDateValue1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.lblStartDateValue1.HoverState.Parent = this.lblStartDateValue1;
-            this.lblStartDateValue1.Location = new System.Drawing.Point(402, 83);
-            this.lblStartDateValue1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.lblStartDateValue1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.lblStartDateValue1.Name = "lblStartDateValue1";
-            this.lblStartDateValue1.ShadowDecoration.Parent = this.lblStartDateValue1;
-            this.lblStartDateValue1.Size = new System.Drawing.Size(129, 30);
-            this.lblStartDateValue1.TabIndex = 81;
-            this.lblStartDateValue1.Value = new System.DateTime(2021, 4, 10, 19, 44, 56, 202);
+            this.lblRemarks.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblRemarks, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblRemarks.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRemarks.Location = new System.Drawing.Point(679, 19);
+            this.lblRemarks.Name = "lblRemarks";
+            this.lblRemarks.Size = new System.Drawing.Size(68, 17);
+            this.lblRemarks.TabIndex = 106;
+            this.lblRemarks.Text = "Remarks:";
             // 
-            // lblEndDay1
+            // lblEndDay
             // 
-            this.lblEndDay1.AutoSize = true;
-            this.lblEndDay1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEndDay1.Location = new System.Drawing.Point(543, 90);
-            this.lblEndDay1.Name = "lblEndDay1";
-            this.lblEndDay1.Size = new System.Drawing.Size(66, 17);
-            this.lblEndDay1.TabIndex = 82;
-            this.lblEndDay1.Text = "End Day:";
+            this.lblEndDay.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblEndDay, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblEndDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEndDay.Location = new System.Drawing.Point(539, 18);
+            this.lblEndDay.Name = "lblEndDay";
+            this.lblEndDay.Size = new System.Drawing.Size(66, 17);
+            this.lblEndDay.TabIndex = 105;
+            this.lblEndDay.Text = "End Day:";
             // 
-            // lblEndDayTextBox
+            // lblStartDate
             // 
-            this.lblEndDayTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.lblEndDayTextBox.DefaultText = "";
-            this.lblEndDayTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.lblEndDayTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.lblEndDayTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.lblEndDayTextBox.DisabledState.Parent = this.lblEndDayTextBox;
-            this.lblEndDayTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.lblEndDayTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.lblEndDayTextBox.FocusedState.Parent = this.lblEndDayTextBox;
-            this.lblEndDayTextBox.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblEndDayTextBox.ForeColor = System.Drawing.Color.Black;
-            this.lblEndDayTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.lblEndDayTextBox.HoverState.Parent = this.lblEndDayTextBox;
-            this.lblEndDayTextBox.Location = new System.Drawing.Point(613, 84);
-            this.lblEndDayTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.lblEndDayTextBox.Name = "lblEndDayTextBox";
-            this.lblEndDayTextBox.PasswordChar = '\0';
-            this.lblEndDayTextBox.PlaceholderText = "Day";
-            this.lblEndDayTextBox.SelectedText = "";
-            this.lblEndDayTextBox.ShadowDecoration.Parent = this.lblEndDayTextBox;
-            this.lblEndDayTextBox.Size = new System.Drawing.Size(52, 30);
-            this.lblEndDayTextBox.TabIndex = 83;
+            this.lblStartDate.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblStartDate, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStartDate.Location = new System.Drawing.Point(322, 17);
+            this.lblStartDate.Name = "lblStartDate";
+            this.lblStartDate.Size = new System.Drawing.Size(76, 17);
+            this.lblStartDate.TabIndex = 104;
+            this.lblStartDate.Text = "Start Date:";
             // 
-            // lblRemarksTextBox
+            // lblMedicineName
             // 
-            this.lblRemarksTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.lblRemarksTextBox.DefaultText = "";
-            this.lblRemarksTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.lblRemarksTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.lblRemarksTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.lblRemarksTextBox.DisabledState.Parent = this.lblRemarksTextBox;
-            this.lblRemarksTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.lblRemarksTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.lblRemarksTextBox.FocusedState.Parent = this.lblRemarksTextBox;
-            this.lblRemarksTextBox.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblRemarksTextBox.ForeColor = System.Drawing.Color.Black;
-            this.lblRemarksTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.lblRemarksTextBox.HoverState.Parent = this.lblRemarksTextBox;
-            this.lblRemarksTextBox.Location = new System.Drawing.Point(748, 85);
-            this.lblRemarksTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.lblRemarksTextBox.Name = "lblRemarksTextBox";
-            this.lblRemarksTextBox.PasswordChar = '\0';
-            this.lblRemarksTextBox.PlaceholderText = "Remarks";
-            this.lblRemarksTextBox.SelectedText = "";
-            this.lblRemarksTextBox.ShadowDecoration.Parent = this.lblRemarksTextBox;
-            this.lblRemarksTextBox.Size = new System.Drawing.Size(196, 30);
-            this.lblRemarksTextBox.TabIndex = 85;
-            // 
-            // lblRemarks1
-            // 
-            this.lblRemarks1.AutoSize = true;
-            this.lblRemarks1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRemarks1.Location = new System.Drawing.Point(675, 91);
-            this.lblRemarks1.Name = "lblRemarks1";
-            this.lblRemarks1.Size = new System.Drawing.Size(68, 17);
-            this.lblRemarks1.TabIndex = 84;
-            this.lblRemarks1.Text = "Remarks:";
+            this.lblMedicineName.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblMedicineName, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblMedicineName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMedicineName.Location = new System.Drawing.Point(22, 13);
+            this.lblMedicineName.Name = "lblMedicineName";
+            this.lblMedicineName.Size = new System.Drawing.Size(109, 17);
+            this.lblMedicineName.TabIndex = 103;
+            this.lblMedicineName.Text = "Medicine Name:";
             // 
             // btnAddRunningMedicine
             // 
             this.btnAddRunningMedicine.CheckedState.Parent = this.btnAddRunningMedicine;
             this.btnAddRunningMedicine.CustomImages.Parent = this.btnAddRunningMedicine;
+            this.alertTransition.SetDecoration(this.btnAddRunningMedicine, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnAddRunningMedicine.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
             this.btnAddRunningMedicine.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnAddRunningMedicine.ForeColor = System.Drawing.Color.White;
             this.btnAddRunningMedicine.HoverState.Parent = this.btnAddRunningMedicine;
             this.btnAddRunningMedicine.Image = global::webTRON_Management_Software.Properties.Resources.PlusSign;
             this.btnAddRunningMedicine.ImageOffset = new System.Drawing.Point(1, 0);
-            this.btnAddRunningMedicine.Location = new System.Drawing.Point(951, 82);
+            this.btnAddRunningMedicine.Location = new System.Drawing.Point(951, 49);
             this.btnAddRunningMedicine.Name = "btnAddRunningMedicine";
             this.btnAddRunningMedicine.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnAddRunningMedicine.ShadowDecoration.Parent = this.btnAddRunningMedicine;
@@ -607,182 +594,334 @@ namespace webTRON_Management_Software.Views.Doctor
             this.btnAddRunningMedicine.TabIndex = 86;
             this.btnAddRunningMedicine.Click += new System.EventHandler(this.BtnAddRunningMedicine_Click);
             // 
+            // remarksTextBox1
+            // 
+            this.remarksTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.alertTransition.SetDecoration(this.remarksTextBox1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.remarksTextBox1.DefaultText = "";
+            this.remarksTextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.remarksTextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.remarksTextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.remarksTextBox1.DisabledState.Parent = this.remarksTextBox1;
+            this.remarksTextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.remarksTextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.remarksTextBox1.FocusedState.Parent = this.remarksTextBox1;
+            this.remarksTextBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.remarksTextBox1.ForeColor = System.Drawing.Color.Black;
+            this.remarksTextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.remarksTextBox1.HoverState.Parent = this.remarksTextBox1;
+            this.remarksTextBox1.Location = new System.Drawing.Point(748, 52);
+            this.remarksTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.remarksTextBox1.Name = "remarksTextBox1";
+            this.remarksTextBox1.PasswordChar = '\0';
+            this.remarksTextBox1.PlaceholderText = "Remarks";
+            this.remarksTextBox1.SelectedText = "";
+            this.remarksTextBox1.ShadowDecoration.Parent = this.remarksTextBox1;
+            this.remarksTextBox1.Size = new System.Drawing.Size(196, 30);
+            this.remarksTextBox1.TabIndex = 85;
+            // 
+            // lblRemarks1
+            // 
+            this.lblRemarks1.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblRemarks1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblRemarks1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRemarks1.Location = new System.Drawing.Point(675, 58);
+            this.lblRemarks1.Name = "lblRemarks1";
+            this.lblRemarks1.Size = new System.Drawing.Size(68, 17);
+            this.lblRemarks1.TabIndex = 84;
+            this.lblRemarks1.Text = "Remarks:";
+            // 
+            // endDayTextBox1
+            // 
+            this.endDayTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.alertTransition.SetDecoration(this.endDayTextBox1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.endDayTextBox1.DefaultText = "";
+            this.endDayTextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.endDayTextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.endDayTextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.endDayTextBox1.DisabledState.Parent = this.endDayTextBox1;
+            this.endDayTextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.endDayTextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.endDayTextBox1.FocusedState.Parent = this.endDayTextBox1;
+            this.endDayTextBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.endDayTextBox1.ForeColor = System.Drawing.Color.Black;
+            this.endDayTextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.endDayTextBox1.HoverState.Parent = this.endDayTextBox1;
+            this.endDayTextBox1.Location = new System.Drawing.Point(613, 51);
+            this.endDayTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.endDayTextBox1.Name = "endDayTextBox1";
+            this.endDayTextBox1.PasswordChar = '\0';
+            this.endDayTextBox1.PlaceholderText = "Day";
+            this.endDayTextBox1.SelectedText = "";
+            this.endDayTextBox1.ShadowDecoration.Parent = this.endDayTextBox1;
+            this.endDayTextBox1.Size = new System.Drawing.Size(52, 30);
+            this.endDayTextBox1.TabIndex = 83;
+            // 
+            // lblEndDay1
+            // 
+            this.lblEndDay1.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblEndDay1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblEndDay1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEndDay1.Location = new System.Drawing.Point(543, 57);
+            this.lblEndDay1.Name = "lblEndDay1";
+            this.lblEndDay1.Size = new System.Drawing.Size(66, 17);
+            this.lblEndDay1.TabIndex = 82;
+            this.lblEndDay1.Text = "End Day:";
+            // 
+            // startDatePicker1
+            // 
+            this.startDatePicker1.CheckedState.Parent = this.startDatePicker1;
+            this.alertTransition.SetDecoration(this.startDatePicker1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.startDatePicker1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            this.startDatePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.startDatePicker1.ForeColor = System.Drawing.Color.White;
+            this.startDatePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.startDatePicker1.HoverState.Parent = this.startDatePicker1;
+            this.startDatePicker1.Location = new System.Drawing.Point(402, 50);
+            this.startDatePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.startDatePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.startDatePicker1.Name = "startDatePicker1";
+            this.startDatePicker1.ShadowDecoration.Parent = this.startDatePicker1;
+            this.startDatePicker1.Size = new System.Drawing.Size(129, 30);
+            this.startDatePicker1.TabIndex = 81;
+            this.startDatePicker1.Value = new System.DateTime(2021, 4, 10, 19, 44, 56, 202);
+            // 
+            // lblStartDate1
+            // 
+            this.lblStartDate1.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblStartDate1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblStartDate1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStartDate1.Location = new System.Drawing.Point(323, 56);
+            this.lblStartDate1.Name = "lblStartDate1";
+            this.lblStartDate1.Size = new System.Drawing.Size(76, 17);
+            this.lblStartDate1.TabIndex = 80;
+            this.lblStartDate1.Text = "Start Date:";
+            // 
+            // medicineNameTextBox1
+            // 
+            this.medicineNameTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.alertTransition.SetDecoration(this.medicineNameTextBox1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.medicineNameTextBox1.DefaultText = "";
+            this.medicineNameTextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.medicineNameTextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.medicineNameTextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.medicineNameTextBox1.DisabledState.Parent = this.medicineNameTextBox1;
+            this.medicineNameTextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.medicineNameTextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.medicineNameTextBox1.FocusedState.Parent = this.medicineNameTextBox1;
+            this.medicineNameTextBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.medicineNameTextBox1.ForeColor = System.Drawing.Color.Black;
+            this.medicineNameTextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.medicineNameTextBox1.HoverState.Parent = this.medicineNameTextBox1;
+            this.medicineNameTextBox1.Location = new System.Drawing.Point(134, 49);
+            this.medicineNameTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.medicineNameTextBox1.Name = "medicineNameTextBox1";
+            this.medicineNameTextBox1.PasswordChar = '\0';
+            this.medicineNameTextBox1.PlaceholderText = "Medicine Name";
+            this.medicineNameTextBox1.SelectedText = "";
+            this.medicineNameTextBox1.ShadowDecoration.Parent = this.medicineNameTextBox1;
+            this.medicineNameTextBox1.Size = new System.Drawing.Size(177, 30);
+            this.medicineNameTextBox1.TabIndex = 79;
+            // 
+            // lblMedicineName1
+            // 
+            this.lblMedicineName1.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblMedicineName1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblMedicineName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMedicineName1.Location = new System.Drawing.Point(23, 52);
+            this.lblMedicineName1.Name = "lblMedicineName1";
+            this.lblMedicineName1.Size = new System.Drawing.Size(109, 17);
+            this.lblMedicineName1.TabIndex = 78;
+            this.lblMedicineName1.Text = "Medicine Name:";
+            // 
+            // lblRunningMedicine
+            // 
+            this.lblRunningMedicine.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblRunningMedicine, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblRunningMedicine.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblRunningMedicine.Location = new System.Drawing.Point(12, 138);
+            this.lblRunningMedicine.Name = "lblRunningMedicine";
+            this.lblRunningMedicine.Size = new System.Drawing.Size(140, 20);
+            this.lblRunningMedicine.TabIndex = 0;
+            this.lblRunningMedicine.Text = "Running Medicine:";
+            // 
             // prescribedMedicinePanel
             // 
+            this.prescribedMedicinePanel.AutoScroll = true;
             this.prescribedMedicinePanel.Controls.Add(this.btnAddPrescribedMedicine);
-            this.prescribedMedicinePanel.Controls.Add(this.prescribedMedicineRemarksTextBox);
-            this.prescribedMedicinePanel.Controls.Add(this.prescribedMedicineRemarks);
-            this.prescribedMedicinePanel.Controls.Add(this.prescribedMedicineEndDayTextBox);
-            this.prescribedMedicinePanel.Controls.Add(this.lblPrescribedMedicineEndDay);
-            this.prescribedMedicinePanel.Controls.Add(this.prescribedMedicineStartDate);
-            this.prescribedMedicinePanel.Controls.Add(this.lblPrescribedMedicineStartDate);
-            this.prescribedMedicinePanel.Controls.Add(this.prescribedMedicineTextBox);
-            this.prescribedMedicinePanel.Controls.Add(this.lblPrescribedMedicineName);
-            this.prescribedMedicinePanel.Controls.Add(this.lblPrescribedMedicine);
-            this.prescribedMedicinePanel.Location = new System.Drawing.Point(0, 334);
+            this.prescribedMedicinePanel.Controls.Add(this.prescribedMedicineRemarksTextBox1);
+            this.prescribedMedicinePanel.Controls.Add(this.prescribedMedicineRemarks1);
+            this.prescribedMedicinePanel.Controls.Add(this.prescribedMedicineEndDayTextBox1);
+            this.prescribedMedicinePanel.Controls.Add(this.lblPrescribedMedicineEndDay1);
+            this.prescribedMedicinePanel.Controls.Add(this.prescribedMedicineStartDate1);
+            this.prescribedMedicinePanel.Controls.Add(this.lblPrescribedMedicineStartDate1);
+            this.prescribedMedicinePanel.Controls.Add(this.prescribedMedicineTextBox1);
+            this.prescribedMedicinePanel.Controls.Add(this.lblPrescribedMedicineName1);
+            this.alertTransition.SetDecoration(this.prescribedMedicinePanel, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.prescribedMedicinePanel.Location = new System.Drawing.Point(0, 318);
             this.prescribedMedicinePanel.Name = "prescribedMedicinePanel";
             this.prescribedMedicinePanel.ShadowDecoration.Parent = this.prescribedMedicinePanel;
-            this.prescribedMedicinePanel.Size = new System.Drawing.Size(999, 109);
+            this.prescribedMedicinePanel.Size = new System.Drawing.Size(999, 104);
             this.prescribedMedicinePanel.TabIndex = 99;
             // 
             // btnAddPrescribedMedicine
             // 
             this.btnAddPrescribedMedicine.CheckedState.Parent = this.btnAddPrescribedMedicine;
             this.btnAddPrescribedMedicine.CustomImages.Parent = this.btnAddPrescribedMedicine;
+            this.alertTransition.SetDecoration(this.btnAddPrescribedMedicine, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnAddPrescribedMedicine.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
             this.btnAddPrescribedMedicine.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnAddPrescribedMedicine.ForeColor = System.Drawing.Color.White;
             this.btnAddPrescribedMedicine.HoverState.Parent = this.btnAddPrescribedMedicine;
             this.btnAddPrescribedMedicine.Image = global::webTRON_Management_Software.Properties.Resources.PlusSign;
             this.btnAddPrescribedMedicine.ImageOffset = new System.Drawing.Point(1, 0);
-            this.btnAddPrescribedMedicine.Location = new System.Drawing.Point(951, 42);
+            this.btnAddPrescribedMedicine.Location = new System.Drawing.Point(951, 13);
             this.btnAddPrescribedMedicine.Name = "btnAddPrescribedMedicine";
             this.btnAddPrescribedMedicine.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnAddPrescribedMedicine.ShadowDecoration.Parent = this.btnAddPrescribedMedicine;
             this.btnAddPrescribedMedicine.Size = new System.Drawing.Size(30, 30);
             this.btnAddPrescribedMedicine.TabIndex = 86;
+            this.btnAddPrescribedMedicine.Click += new System.EventHandler(this.BtnAddPrescribedMedicine_Click);
             // 
-            // prescribedMedicineRemarksTextBox
+            // prescribedMedicineRemarksTextBox1
             // 
-            this.prescribedMedicineRemarksTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.prescribedMedicineRemarksTextBox.DefaultText = "";
-            this.prescribedMedicineRemarksTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.prescribedMedicineRemarksTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.prescribedMedicineRemarksTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.prescribedMedicineRemarksTextBox.DisabledState.Parent = this.prescribedMedicineRemarksTextBox;
-            this.prescribedMedicineRemarksTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.prescribedMedicineRemarksTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.prescribedMedicineRemarksTextBox.FocusedState.Parent = this.prescribedMedicineRemarksTextBox;
-            this.prescribedMedicineRemarksTextBox.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.prescribedMedicineRemarksTextBox.ForeColor = System.Drawing.Color.Black;
-            this.prescribedMedicineRemarksTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.prescribedMedicineRemarksTextBox.HoverState.Parent = this.prescribedMedicineRemarksTextBox;
-            this.prescribedMedicineRemarksTextBox.Location = new System.Drawing.Point(748, 45);
-            this.prescribedMedicineRemarksTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.prescribedMedicineRemarksTextBox.Name = "prescribedMedicineRemarksTextBox";
-            this.prescribedMedicineRemarksTextBox.PasswordChar = '\0';
-            this.prescribedMedicineRemarksTextBox.PlaceholderText = "Remarks";
-            this.prescribedMedicineRemarksTextBox.SelectedText = "";
-            this.prescribedMedicineRemarksTextBox.ShadowDecoration.Parent = this.prescribedMedicineRemarksTextBox;
-            this.prescribedMedicineRemarksTextBox.Size = new System.Drawing.Size(196, 30);
-            this.prescribedMedicineRemarksTextBox.TabIndex = 85;
+            this.prescribedMedicineRemarksTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.alertTransition.SetDecoration(this.prescribedMedicineRemarksTextBox1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.prescribedMedicineRemarksTextBox1.DefaultText = "";
+            this.prescribedMedicineRemarksTextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.prescribedMedicineRemarksTextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.prescribedMedicineRemarksTextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.prescribedMedicineRemarksTextBox1.DisabledState.Parent = this.prescribedMedicineRemarksTextBox1;
+            this.prescribedMedicineRemarksTextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.prescribedMedicineRemarksTextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.prescribedMedicineRemarksTextBox1.FocusedState.Parent = this.prescribedMedicineRemarksTextBox1;
+            this.prescribedMedicineRemarksTextBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.prescribedMedicineRemarksTextBox1.ForeColor = System.Drawing.Color.Black;
+            this.prescribedMedicineRemarksTextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.prescribedMedicineRemarksTextBox1.HoverState.Parent = this.prescribedMedicineRemarksTextBox1;
+            this.prescribedMedicineRemarksTextBox1.Location = new System.Drawing.Point(748, 16);
+            this.prescribedMedicineRemarksTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.prescribedMedicineRemarksTextBox1.Name = "prescribedMedicineRemarksTextBox1";
+            this.prescribedMedicineRemarksTextBox1.PasswordChar = '\0';
+            this.prescribedMedicineRemarksTextBox1.PlaceholderText = "Remarks";
+            this.prescribedMedicineRemarksTextBox1.SelectedText = "";
+            this.prescribedMedicineRemarksTextBox1.ShadowDecoration.Parent = this.prescribedMedicineRemarksTextBox1;
+            this.prescribedMedicineRemarksTextBox1.Size = new System.Drawing.Size(196, 30);
+            this.prescribedMedicineRemarksTextBox1.TabIndex = 85;
             // 
-            // prescribedMedicineRemarks
+            // prescribedMedicineRemarks1
             // 
-            this.prescribedMedicineRemarks.AutoSize = true;
-            this.prescribedMedicineRemarks.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prescribedMedicineRemarks.Location = new System.Drawing.Point(675, 51);
-            this.prescribedMedicineRemarks.Name = "prescribedMedicineRemarks";
-            this.prescribedMedicineRemarks.Size = new System.Drawing.Size(68, 17);
-            this.prescribedMedicineRemarks.TabIndex = 84;
-            this.prescribedMedicineRemarks.Text = "Remarks:";
+            this.prescribedMedicineRemarks1.AutoSize = true;
+            this.alertTransition.SetDecoration(this.prescribedMedicineRemarks1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.prescribedMedicineRemarks1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prescribedMedicineRemarks1.Location = new System.Drawing.Point(675, 22);
+            this.prescribedMedicineRemarks1.Name = "prescribedMedicineRemarks1";
+            this.prescribedMedicineRemarks1.Size = new System.Drawing.Size(68, 17);
+            this.prescribedMedicineRemarks1.TabIndex = 84;
+            this.prescribedMedicineRemarks1.Text = "Remarks:";
             // 
-            // prescribedMedicineEndDayTextBox
+            // prescribedMedicineEndDayTextBox1
             // 
-            this.prescribedMedicineEndDayTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.prescribedMedicineEndDayTextBox.DefaultText = "";
-            this.prescribedMedicineEndDayTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.prescribedMedicineEndDayTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.prescribedMedicineEndDayTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.prescribedMedicineEndDayTextBox.DisabledState.Parent = this.prescribedMedicineEndDayTextBox;
-            this.prescribedMedicineEndDayTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.prescribedMedicineEndDayTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.prescribedMedicineEndDayTextBox.FocusedState.Parent = this.prescribedMedicineEndDayTextBox;
-            this.prescribedMedicineEndDayTextBox.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.prescribedMedicineEndDayTextBox.ForeColor = System.Drawing.Color.Black;
-            this.prescribedMedicineEndDayTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.prescribedMedicineEndDayTextBox.HoverState.Parent = this.prescribedMedicineEndDayTextBox;
-            this.prescribedMedicineEndDayTextBox.Location = new System.Drawing.Point(613, 44);
-            this.prescribedMedicineEndDayTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.prescribedMedicineEndDayTextBox.Name = "prescribedMedicineEndDayTextBox";
-            this.prescribedMedicineEndDayTextBox.PasswordChar = '\0';
-            this.prescribedMedicineEndDayTextBox.PlaceholderText = "Day";
-            this.prescribedMedicineEndDayTextBox.SelectedText = "";
-            this.prescribedMedicineEndDayTextBox.ShadowDecoration.Parent = this.prescribedMedicineEndDayTextBox;
-            this.prescribedMedicineEndDayTextBox.Size = new System.Drawing.Size(52, 30);
-            this.prescribedMedicineEndDayTextBox.TabIndex = 83;
+            this.prescribedMedicineEndDayTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.alertTransition.SetDecoration(this.prescribedMedicineEndDayTextBox1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.prescribedMedicineEndDayTextBox1.DefaultText = "";
+            this.prescribedMedicineEndDayTextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.prescribedMedicineEndDayTextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.prescribedMedicineEndDayTextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.prescribedMedicineEndDayTextBox1.DisabledState.Parent = this.prescribedMedicineEndDayTextBox1;
+            this.prescribedMedicineEndDayTextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.prescribedMedicineEndDayTextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.prescribedMedicineEndDayTextBox1.FocusedState.Parent = this.prescribedMedicineEndDayTextBox1;
+            this.prescribedMedicineEndDayTextBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.prescribedMedicineEndDayTextBox1.ForeColor = System.Drawing.Color.Black;
+            this.prescribedMedicineEndDayTextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.prescribedMedicineEndDayTextBox1.HoverState.Parent = this.prescribedMedicineEndDayTextBox1;
+            this.prescribedMedicineEndDayTextBox1.Location = new System.Drawing.Point(613, 15);
+            this.prescribedMedicineEndDayTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.prescribedMedicineEndDayTextBox1.Name = "prescribedMedicineEndDayTextBox1";
+            this.prescribedMedicineEndDayTextBox1.PasswordChar = '\0';
+            this.prescribedMedicineEndDayTextBox1.PlaceholderText = "Day";
+            this.prescribedMedicineEndDayTextBox1.SelectedText = "";
+            this.prescribedMedicineEndDayTextBox1.ShadowDecoration.Parent = this.prescribedMedicineEndDayTextBox1;
+            this.prescribedMedicineEndDayTextBox1.Size = new System.Drawing.Size(52, 30);
+            this.prescribedMedicineEndDayTextBox1.TabIndex = 83;
             // 
-            // lblPrescribedMedicineEndDay
+            // lblPrescribedMedicineEndDay1
             // 
-            this.lblPrescribedMedicineEndDay.AutoSize = true;
-            this.lblPrescribedMedicineEndDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrescribedMedicineEndDay.Location = new System.Drawing.Point(543, 50);
-            this.lblPrescribedMedicineEndDay.Name = "lblPrescribedMedicineEndDay";
-            this.lblPrescribedMedicineEndDay.Size = new System.Drawing.Size(66, 17);
-            this.lblPrescribedMedicineEndDay.TabIndex = 82;
-            this.lblPrescribedMedicineEndDay.Text = "End Day:";
+            this.lblPrescribedMedicineEndDay1.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblPrescribedMedicineEndDay1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblPrescribedMedicineEndDay1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrescribedMedicineEndDay1.Location = new System.Drawing.Point(543, 21);
+            this.lblPrescribedMedicineEndDay1.Name = "lblPrescribedMedicineEndDay1";
+            this.lblPrescribedMedicineEndDay1.Size = new System.Drawing.Size(66, 17);
+            this.lblPrescribedMedicineEndDay1.TabIndex = 82;
+            this.lblPrescribedMedicineEndDay1.Text = "End Day:";
             // 
-            // prescribedMedicineStartDate
+            // prescribedMedicineStartDate1
             // 
-            this.prescribedMedicineStartDate.CheckedState.Parent = this.prescribedMedicineStartDate;
-            this.prescribedMedicineStartDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            this.prescribedMedicineStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.prescribedMedicineStartDate.ForeColor = System.Drawing.Color.White;
-            this.prescribedMedicineStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.prescribedMedicineStartDate.HoverState.Parent = this.prescribedMedicineStartDate;
-            this.prescribedMedicineStartDate.Location = new System.Drawing.Point(402, 43);
-            this.prescribedMedicineStartDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.prescribedMedicineStartDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.prescribedMedicineStartDate.Name = "prescribedMedicineStartDate";
-            this.prescribedMedicineStartDate.ShadowDecoration.Parent = this.prescribedMedicineStartDate;
-            this.prescribedMedicineStartDate.Size = new System.Drawing.Size(129, 30);
-            this.prescribedMedicineStartDate.TabIndex = 81;
-            this.prescribedMedicineStartDate.Value = new System.DateTime(2021, 4, 10, 19, 44, 56, 202);
+            this.prescribedMedicineStartDate1.CheckedState.Parent = this.prescribedMedicineStartDate1;
+            this.alertTransition.SetDecoration(this.prescribedMedicineStartDate1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.prescribedMedicineStartDate1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            this.prescribedMedicineStartDate1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.prescribedMedicineStartDate1.ForeColor = System.Drawing.Color.White;
+            this.prescribedMedicineStartDate1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.prescribedMedicineStartDate1.HoverState.Parent = this.prescribedMedicineStartDate1;
+            this.prescribedMedicineStartDate1.Location = new System.Drawing.Point(402, 14);
+            this.prescribedMedicineStartDate1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.prescribedMedicineStartDate1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.prescribedMedicineStartDate1.Name = "prescribedMedicineStartDate1";
+            this.prescribedMedicineStartDate1.ShadowDecoration.Parent = this.prescribedMedicineStartDate1;
+            this.prescribedMedicineStartDate1.Size = new System.Drawing.Size(129, 30);
+            this.prescribedMedicineStartDate1.TabIndex = 81;
+            this.prescribedMedicineStartDate1.Value = new System.DateTime(2021, 4, 10, 19, 44, 56, 202);
             // 
-            // lblPrescribedMedicineStartDate
+            // lblPrescribedMedicineStartDate1
             // 
-            this.lblPrescribedMedicineStartDate.AutoSize = true;
-            this.lblPrescribedMedicineStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrescribedMedicineStartDate.Location = new System.Drawing.Point(323, 49);
-            this.lblPrescribedMedicineStartDate.Name = "lblPrescribedMedicineStartDate";
-            this.lblPrescribedMedicineStartDate.Size = new System.Drawing.Size(76, 17);
-            this.lblPrescribedMedicineStartDate.TabIndex = 80;
-            this.lblPrescribedMedicineStartDate.Text = "Start Date:";
+            this.lblPrescribedMedicineStartDate1.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblPrescribedMedicineStartDate1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblPrescribedMedicineStartDate1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrescribedMedicineStartDate1.Location = new System.Drawing.Point(323, 20);
+            this.lblPrescribedMedicineStartDate1.Name = "lblPrescribedMedicineStartDate1";
+            this.lblPrescribedMedicineStartDate1.Size = new System.Drawing.Size(76, 17);
+            this.lblPrescribedMedicineStartDate1.TabIndex = 80;
+            this.lblPrescribedMedicineStartDate1.Text = "Start Date:";
             // 
-            // prescribedMedicineTextBox
+            // prescribedMedicineTextBox1
             // 
-            this.prescribedMedicineTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.prescribedMedicineTextBox.DefaultText = "";
-            this.prescribedMedicineTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.prescribedMedicineTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.prescribedMedicineTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.prescribedMedicineTextBox.DisabledState.Parent = this.prescribedMedicineTextBox;
-            this.prescribedMedicineTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.prescribedMedicineTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.prescribedMedicineTextBox.FocusedState.Parent = this.prescribedMedicineTextBox;
-            this.prescribedMedicineTextBox.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.prescribedMedicineTextBox.ForeColor = System.Drawing.Color.Black;
-            this.prescribedMedicineTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.prescribedMedicineTextBox.HoverState.Parent = this.prescribedMedicineTextBox;
-            this.prescribedMedicineTextBox.Location = new System.Drawing.Point(134, 42);
-            this.prescribedMedicineTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.prescribedMedicineTextBox.Name = "prescribedMedicineTextBox";
-            this.prescribedMedicineTextBox.PasswordChar = '\0';
-            this.prescribedMedicineTextBox.PlaceholderText = "Medicine Name";
-            this.prescribedMedicineTextBox.SelectedText = "";
-            this.prescribedMedicineTextBox.ShadowDecoration.Parent = this.prescribedMedicineTextBox;
-            this.prescribedMedicineTextBox.Size = new System.Drawing.Size(177, 30);
-            this.prescribedMedicineTextBox.TabIndex = 79;
+            this.prescribedMedicineTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.alertTransition.SetDecoration(this.prescribedMedicineTextBox1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.prescribedMedicineTextBox1.DefaultText = "";
+            this.prescribedMedicineTextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.prescribedMedicineTextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.prescribedMedicineTextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.prescribedMedicineTextBox1.DisabledState.Parent = this.prescribedMedicineTextBox1;
+            this.prescribedMedicineTextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.prescribedMedicineTextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.prescribedMedicineTextBox1.FocusedState.Parent = this.prescribedMedicineTextBox1;
+            this.prescribedMedicineTextBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.prescribedMedicineTextBox1.ForeColor = System.Drawing.Color.Black;
+            this.prescribedMedicineTextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.prescribedMedicineTextBox1.HoverState.Parent = this.prescribedMedicineTextBox1;
+            this.prescribedMedicineTextBox1.Location = new System.Drawing.Point(134, 13);
+            this.prescribedMedicineTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.prescribedMedicineTextBox1.Name = "prescribedMedicineTextBox1";
+            this.prescribedMedicineTextBox1.PasswordChar = '\0';
+            this.prescribedMedicineTextBox1.PlaceholderText = "Medicine Name";
+            this.prescribedMedicineTextBox1.SelectedText = "";
+            this.prescribedMedicineTextBox1.ShadowDecoration.Parent = this.prescribedMedicineTextBox1;
+            this.prescribedMedicineTextBox1.Size = new System.Drawing.Size(177, 30);
+            this.prescribedMedicineTextBox1.TabIndex = 79;
             // 
-            // lblPrescribedMedicineName
+            // lblPrescribedMedicineName1
             // 
-            this.lblPrescribedMedicineName.AutoSize = true;
-            this.lblPrescribedMedicineName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrescribedMedicineName.Location = new System.Drawing.Point(23, 45);
-            this.lblPrescribedMedicineName.Name = "lblPrescribedMedicineName";
-            this.lblPrescribedMedicineName.Size = new System.Drawing.Size(109, 17);
-            this.lblPrescribedMedicineName.TabIndex = 78;
-            this.lblPrescribedMedicineName.Text = "Medicine Name:";
-            // 
-            // lblPrescribedMedicine
-            // 
-            this.lblPrescribedMedicine.AutoSize = true;
-            this.lblPrescribedMedicine.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblPrescribedMedicine.Location = new System.Drawing.Point(8, 9);
-            this.lblPrescribedMedicine.Name = "lblPrescribedMedicine";
-            this.lblPrescribedMedicine.Size = new System.Drawing.Size(155, 20);
-            this.lblPrescribedMedicine.TabIndex = 0;
-            this.lblPrescribedMedicine.Text = "Prescribed Medicine:";
+            this.lblPrescribedMedicineName1.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblPrescribedMedicineName1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblPrescribedMedicineName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrescribedMedicineName1.Location = new System.Drawing.Point(23, 16);
+            this.lblPrescribedMedicineName1.Name = "lblPrescribedMedicineName1";
+            this.lblPrescribedMedicineName1.Size = new System.Drawing.Size(109, 17);
+            this.lblPrescribedMedicineName1.TabIndex = 78;
+            this.lblPrescribedMedicineName1.Text = "Medicine Name:";
             // 
             // previouslyTakenMedicinePanel
             // 
@@ -794,18 +933,63 @@ namespace webTRON_Management_Software.Views.Doctor
             this.previouslyTakenMedicinePanel.Controls.Add(this.lblPreviouslyTakenMedicineEndDay);
             this.previouslyTakenMedicinePanel.Controls.Add(this.lblPreviouslyTakenMedicineStartDate);
             this.previouslyTakenMedicinePanel.Controls.Add(this.lblPreviouslyTakenMedicineName);
-            this.previouslyTakenMedicinePanel.Controls.Add(this.lblPreviouslyTakenMedicine);
-            this.previouslyTakenMedicinePanel.Location = new System.Drawing.Point(0, 443);
+            this.alertTransition.SetDecoration(this.previouslyTakenMedicinePanel, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.previouslyTakenMedicinePanel.Location = new System.Drawing.Point(0, 456);
             this.previouslyTakenMedicinePanel.Name = "previouslyTakenMedicinePanel";
             this.previouslyTakenMedicinePanel.ShadowDecoration.Parent = this.previouslyTakenMedicinePanel;
-            this.previouslyTakenMedicinePanel.Size = new System.Drawing.Size(999, 109);
+            this.previouslyTakenMedicinePanel.Size = new System.Drawing.Size(999, 96);
             this.previouslyTakenMedicinePanel.TabIndex = 100;
+            // 
+            // lblPreviouslyTakenMedicineRemarksValue
+            // 
+            this.lblPreviouslyTakenMedicineRemarksValue.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblPreviouslyTakenMedicineRemarksValue, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblPreviouslyTakenMedicineRemarksValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPreviouslyTakenMedicineRemarksValue.Location = new System.Drawing.Point(749, 17);
+            this.lblPreviouslyTakenMedicineRemarksValue.Name = "lblPreviouslyTakenMedicineRemarksValue";
+            this.lblPreviouslyTakenMedicineRemarksValue.Size = new System.Drawing.Size(79, 17);
+            this.lblPreviouslyTakenMedicineRemarksValue.TabIndex = 102;
+            this.lblPreviouslyTakenMedicineRemarksValue.Text = "{{remarks}}";
+            // 
+            // lblPreviouslyTakenMedicineEndDayValue
+            // 
+            this.lblPreviouslyTakenMedicineEndDayValue.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblPreviouslyTakenMedicineEndDayValue, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblPreviouslyTakenMedicineEndDayValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPreviouslyTakenMedicineEndDayValue.Location = new System.Drawing.Point(603, 16);
+            this.lblPreviouslyTakenMedicineEndDayValue.Name = "lblPreviouslyTakenMedicineEndDayValue";
+            this.lblPreviouslyTakenMedicineEndDayValue.Size = new System.Drawing.Size(77, 17);
+            this.lblPreviouslyTakenMedicineEndDayValue.TabIndex = 101;
+            this.lblPreviouslyTakenMedicineEndDayValue.Text = "{{endDay}}";
+            // 
+            // lblPreviouslyTakenMedicineStartDateValue
+            // 
+            this.lblPreviouslyTakenMedicineStartDateValue.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblPreviouslyTakenMedicineStartDateValue, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblPreviouslyTakenMedicineStartDateValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPreviouslyTakenMedicineStartDateValue.Location = new System.Drawing.Point(405, 16);
+            this.lblPreviouslyTakenMedicineStartDateValue.Name = "lblPreviouslyTakenMedicineStartDateValue";
+            this.lblPreviouslyTakenMedicineStartDateValue.Size = new System.Drawing.Size(86, 17);
+            this.lblPreviouslyTakenMedicineStartDateValue.TabIndex = 86;
+            this.lblPreviouslyTakenMedicineStartDateValue.Text = "{{startDate}}";
+            // 
+            // lblPreviouslyTakenMedicineNameValue
+            // 
+            this.lblPreviouslyTakenMedicineNameValue.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblPreviouslyTakenMedicineNameValue, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblPreviouslyTakenMedicineNameValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPreviouslyTakenMedicineNameValue.Location = new System.Drawing.Point(138, 11);
+            this.lblPreviouslyTakenMedicineNameValue.Name = "lblPreviouslyTakenMedicineNameValue";
+            this.lblPreviouslyTakenMedicineNameValue.Size = new System.Drawing.Size(121, 17);
+            this.lblPreviouslyTakenMedicineNameValue.TabIndex = 85;
+            this.lblPreviouslyTakenMedicineNameValue.Text = "{{medicineName}}";
             // 
             // lblPreviouslyTakenMedicineRemarks
             // 
             this.lblPreviouslyTakenMedicineRemarks.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblPreviouslyTakenMedicineRemarks, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblPreviouslyTakenMedicineRemarks.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPreviouslyTakenMedicineRemarks.Location = new System.Drawing.Point(682, 51);
+            this.lblPreviouslyTakenMedicineRemarks.Location = new System.Drawing.Point(682, 17);
             this.lblPreviouslyTakenMedicineRemarks.Name = "lblPreviouslyTakenMedicineRemarks";
             this.lblPreviouslyTakenMedicineRemarks.Size = new System.Drawing.Size(68, 17);
             this.lblPreviouslyTakenMedicineRemarks.TabIndex = 84;
@@ -814,8 +998,9 @@ namespace webTRON_Management_Software.Views.Doctor
             // lblPreviouslyTakenMedicineEndDay
             // 
             this.lblPreviouslyTakenMedicineEndDay.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblPreviouslyTakenMedicineEndDay, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblPreviouslyTakenMedicineEndDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPreviouslyTakenMedicineEndDay.Location = new System.Drawing.Point(540, 50);
+            this.lblPreviouslyTakenMedicineEndDay.Location = new System.Drawing.Point(540, 16);
             this.lblPreviouslyTakenMedicineEndDay.Name = "lblPreviouslyTakenMedicineEndDay";
             this.lblPreviouslyTakenMedicineEndDay.Size = new System.Drawing.Size(66, 17);
             this.lblPreviouslyTakenMedicineEndDay.TabIndex = 82;
@@ -824,8 +1009,9 @@ namespace webTRON_Management_Software.Views.Doctor
             // lblPreviouslyTakenMedicineStartDate
             // 
             this.lblPreviouslyTakenMedicineStartDate.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblPreviouslyTakenMedicineStartDate, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblPreviouslyTakenMedicineStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPreviouslyTakenMedicineStartDate.Location = new System.Drawing.Point(323, 49);
+            this.lblPreviouslyTakenMedicineStartDate.Location = new System.Drawing.Point(323, 15);
             this.lblPreviouslyTakenMedicineStartDate.Name = "lblPreviouslyTakenMedicineStartDate";
             this.lblPreviouslyTakenMedicineStartDate.Size = new System.Drawing.Size(76, 17);
             this.lblPreviouslyTakenMedicineStartDate.TabIndex = 80;
@@ -834,8 +1020,9 @@ namespace webTRON_Management_Software.Views.Doctor
             // lblPreviouslyTakenMedicineName
             // 
             this.lblPreviouslyTakenMedicineName.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblPreviouslyTakenMedicineName, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblPreviouslyTakenMedicineName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPreviouslyTakenMedicineName.Location = new System.Drawing.Point(23, 45);
+            this.lblPreviouslyTakenMedicineName.Location = new System.Drawing.Point(23, 11);
             this.lblPreviouslyTakenMedicineName.Name = "lblPreviouslyTakenMedicineName";
             this.lblPreviouslyTakenMedicineName.Size = new System.Drawing.Size(109, 17);
             this.lblPreviouslyTakenMedicineName.TabIndex = 78;
@@ -844,149 +1031,124 @@ namespace webTRON_Management_Software.Views.Doctor
             // lblPreviouslyTakenMedicine
             // 
             this.lblPreviouslyTakenMedicine.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblPreviouslyTakenMedicine, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblPreviouslyTakenMedicine.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblPreviouslyTakenMedicine.Location = new System.Drawing.Point(8, 9);
+            this.lblPreviouslyTakenMedicine.Location = new System.Drawing.Point(12, 433);
             this.lblPreviouslyTakenMedicine.Name = "lblPreviouslyTakenMedicine";
             this.lblPreviouslyTakenMedicine.Size = new System.Drawing.Size(198, 20);
             this.lblPreviouslyTakenMedicine.TabIndex = 0;
             this.lblPreviouslyTakenMedicine.Text = "Previously Taken Medicine:";
             // 
-            // lblPreviouslyTakenMedicineNameValue
-            // 
-            this.lblPreviouslyTakenMedicineNameValue.AutoSize = true;
-            this.lblPreviouslyTakenMedicineNameValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPreviouslyTakenMedicineNameValue.Location = new System.Drawing.Point(138, 45);
-            this.lblPreviouslyTakenMedicineNameValue.Name = "lblPreviouslyTakenMedicineNameValue";
-            this.lblPreviouslyTakenMedicineNameValue.Size = new System.Drawing.Size(121, 17);
-            this.lblPreviouslyTakenMedicineNameValue.TabIndex = 85;
-            this.lblPreviouslyTakenMedicineNameValue.Text = "{{medicineName}}";
-            // 
-            // lblPreviouslyTakenMedicineStartDateValue
-            // 
-            this.lblPreviouslyTakenMedicineStartDateValue.AutoSize = true;
-            this.lblPreviouslyTakenMedicineStartDateValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPreviouslyTakenMedicineStartDateValue.Location = new System.Drawing.Point(405, 50);
-            this.lblPreviouslyTakenMedicineStartDateValue.Name = "lblPreviouslyTakenMedicineStartDateValue";
-            this.lblPreviouslyTakenMedicineStartDateValue.Size = new System.Drawing.Size(86, 17);
-            this.lblPreviouslyTakenMedicineStartDateValue.TabIndex = 86;
-            this.lblPreviouslyTakenMedicineStartDateValue.Text = "{{startDate}}";
-            // 
-            // lblPreviouslyTakenMedicineEndDayValue
-            // 
-            this.lblPreviouslyTakenMedicineEndDayValue.AutoSize = true;
-            this.lblPreviouslyTakenMedicineEndDayValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPreviouslyTakenMedicineEndDayValue.Location = new System.Drawing.Point(603, 50);
-            this.lblPreviouslyTakenMedicineEndDayValue.Name = "lblPreviouslyTakenMedicineEndDayValue";
-            this.lblPreviouslyTakenMedicineEndDayValue.Size = new System.Drawing.Size(77, 17);
-            this.lblPreviouslyTakenMedicineEndDayValue.TabIndex = 101;
-            this.lblPreviouslyTakenMedicineEndDayValue.Text = "{{endDay}}";
-            // 
-            // lblPreviouslyTakenMedicineRemarksValue
-            // 
-            this.lblPreviouslyTakenMedicineRemarksValue.AutoSize = true;
-            this.lblPreviouslyTakenMedicineRemarksValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPreviouslyTakenMedicineRemarksValue.Location = new System.Drawing.Point(749, 51);
-            this.lblPreviouslyTakenMedicineRemarksValue.Name = "lblPreviouslyTakenMedicineRemarksValue";
-            this.lblPreviouslyTakenMedicineRemarksValue.Size = new System.Drawing.Size(79, 17);
-            this.lblPreviouslyTakenMedicineRemarksValue.TabIndex = 102;
-            this.lblPreviouslyTakenMedicineRemarksValue.Text = "{{remarks}}";
-            // 
-            // lblRemarksValue
-            // 
-            this.lblRemarksValue.AutoSize = true;
-            this.lblRemarksValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRemarksValue.Location = new System.Drawing.Point(747, 46);
-            this.lblRemarksValue.Name = "lblRemarksValue";
-            this.lblRemarksValue.Size = new System.Drawing.Size(79, 17);
-            this.lblRemarksValue.TabIndex = 110;
-            this.lblRemarksValue.Text = "{{remarks}}";
-            // 
-            // lblEndDayValue
-            // 
-            this.lblEndDayValue.AutoSize = true;
-            this.lblEndDayValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEndDayValue.Location = new System.Drawing.Point(602, 45);
-            this.lblEndDayValue.Name = "lblEndDayValue";
-            this.lblEndDayValue.Size = new System.Drawing.Size(77, 17);
-            this.lblEndDayValue.TabIndex = 109;
-            this.lblEndDayValue.Text = "{{endDay}}";
-            // 
-            // lblStartDateValue
-            // 
-            this.lblStartDateValue.AutoSize = true;
-            this.lblStartDateValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStartDateValue.Location = new System.Drawing.Point(404, 45);
-            this.lblStartDateValue.Name = "lblStartDateValue";
-            this.lblStartDateValue.Size = new System.Drawing.Size(86, 17);
-            this.lblStartDateValue.TabIndex = 108;
-            this.lblStartDateValue.Text = "{{startDate}}";
-            // 
-            // lblMedicineNameValue
-            // 
-            this.lblMedicineNameValue.AutoSize = true;
-            this.lblMedicineNameValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMedicineNameValue.Location = new System.Drawing.Point(137, 40);
-            this.lblMedicineNameValue.Name = "lblMedicineNameValue";
-            this.lblMedicineNameValue.Size = new System.Drawing.Size(121, 17);
-            this.lblMedicineNameValue.TabIndex = 107;
-            this.lblMedicineNameValue.Text = "{{medicineName}}";
-            // 
-            // lblRemarks
-            // 
-            this.lblRemarks.AutoSize = true;
-            this.lblRemarks.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRemarks.Location = new System.Drawing.Point(679, 46);
-            this.lblRemarks.Name = "lblRemarks";
-            this.lblRemarks.Size = new System.Drawing.Size(68, 17);
-            this.lblRemarks.TabIndex = 106;
-            this.lblRemarks.Text = "Remarks:";
-            // 
-            // lblEndDay
-            // 
-            this.lblEndDay.AutoSize = true;
-            this.lblEndDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEndDay.Location = new System.Drawing.Point(539, 45);
-            this.lblEndDay.Name = "lblEndDay";
-            this.lblEndDay.Size = new System.Drawing.Size(66, 17);
-            this.lblEndDay.TabIndex = 105;
-            this.lblEndDay.Text = "End Day:";
-            // 
-            // lblStartDate
-            // 
-            this.lblStartDate.AutoSize = true;
-            this.lblStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStartDate.Location = new System.Drawing.Point(322, 44);
-            this.lblStartDate.Name = "lblStartDate";
-            this.lblStartDate.Size = new System.Drawing.Size(76, 17);
-            this.lblStartDate.TabIndex = 104;
-            this.lblStartDate.Text = "Start Date:";
-            // 
-            // lblMedicineName
-            // 
-            this.lblMedicineName.AutoSize = true;
-            this.lblMedicineName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMedicineName.Location = new System.Drawing.Point(22, 40);
-            this.lblMedicineName.Name = "lblMedicineName";
-            this.lblMedicineName.Size = new System.Drawing.Size(109, 17);
-            this.lblMedicineName.TabIndex = 103;
-            this.lblMedicineName.Text = "Medicine Name:";
-            // 
             // DragableMedicineForm
             // 
             this.DragableMedicineForm.TargetControl = this;
             // 
-            // Medicine
+            // alertTimer
+            // 
+            this.alertTimer.Enabled = true;
+            this.alertTimer.Interval = 5000;
+            this.alertTimer.Tick += new System.EventHandler(this.AlertTimer_Tick);
+            // 
+            // alertTransition
+            // 
+            this.alertTransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Scale;
+            this.alertTransition.Cursor = null;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(0);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 0F;
+            this.alertTransition.DefaultAnimation = animation3;
+            // 
+            // alertPanel
+            // 
+            this.alertPanel.BackgroundImage = global::webTRON_Management_Software.Properties.Resources.alert_danger_background;
+            this.alertPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.alertPanel.Controls.Add(this.alertText);
+            this.alertPanel.Controls.Add(this.alertCloseBtn);
+            this.alertPanel.Controls.Add(this.alertImage);
+            this.alertTransition.SetDecoration(this.alertPanel, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.alertPanel.Location = new System.Drawing.Point(5, 568);
+            this.alertPanel.Name = "alertPanel";
+            this.alertPanel.ShadowDecoration.Parent = this.alertPanel;
+            this.alertPanel.Size = new System.Drawing.Size(306, 55);
+            this.alertPanel.TabIndex = 101;
+            this.alertPanel.Visible = false;
+            // 
+            // alertText
+            // 
+            this.alertText.AutoSize = true;
+            this.alertTransition.SetDecoration(this.alertText, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.alertText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.alertText.ForeColor = System.Drawing.Color.Red;
+            this.alertText.Location = new System.Drawing.Point(56, 17);
+            this.alertText.Name = "alertText";
+            this.alertText.Size = new System.Drawing.Size(90, 20);
+            this.alertText.TabIndex = 2;
+            this.alertText.Text = "{{alertText}}";
+            // 
+            // alertCloseBtn
+            // 
+            this.alertCloseBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.alertTransition.SetDecoration(this.alertCloseBtn, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.alertCloseBtn.Image = global::webTRON_Management_Software.Properties.Resources.alert_close_icon;
+            this.alertCloseBtn.Location = new System.Drawing.Point(269, 17);
+            this.alertCloseBtn.Name = "alertCloseBtn";
+            this.alertCloseBtn.ShadowDecoration.Parent = this.alertCloseBtn;
+            this.alertCloseBtn.Size = new System.Drawing.Size(20, 20);
+            this.alertCloseBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.alertCloseBtn.TabIndex = 1;
+            this.alertCloseBtn.TabStop = false;
+            this.alertCloseBtn.Click += new System.EventHandler(this.AlertTimer_Tick);
+            // 
+            // alertImage
+            // 
+            this.alertTransition.SetDecoration(this.alertImage, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.alertImage.Image = global::webTRON_Management_Software.Properties.Resources.alert_danger_icon;
+            this.alertImage.Location = new System.Drawing.Point(22, 17);
+            this.alertImage.Name = "alertImage";
+            this.alertImage.ShadowDecoration.Parent = this.alertImage;
+            this.alertImage.Size = new System.Drawing.Size(20, 20);
+            this.alertImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.alertImage.TabIndex = 0;
+            this.alertImage.TabStop = false;
+            // 
+            // lblPrescribedMedicine
+            // 
+            this.lblPrescribedMedicine.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblPrescribedMedicine, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblPrescribedMedicine.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblPrescribedMedicine.Location = new System.Drawing.Point(12, 295);
+            this.lblPrescribedMedicine.Name = "lblPrescribedMedicine";
+            this.lblPrescribedMedicine.Size = new System.Drawing.Size(155, 20);
+            this.lblPrescribedMedicine.TabIndex = 102;
+            this.lblPrescribedMedicine.Text = "Prescribed Medicine:";
+            // 
+            // MedicineForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1000, 625);
+            this.Controls.Add(this.lblPrescribedMedicine);
+            this.Controls.Add(this.alertPanel);
             this.Controls.Add(this.previouslyTakenMedicinePanel);
             this.Controls.Add(this.prescribedMedicinePanel);
             this.Controls.Add(this.runningMedicinePanel);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnMedicine);
             this.Controls.Add(this.btnOthers);
+            this.Controls.Add(this.lblPreviouslyTakenMedicine);
             this.Controls.Add(this.btnTests);
             this.Controls.Add(this.btnPrescription);
             this.Controls.Add(this.lblReferredToValue);
@@ -997,6 +1159,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.Controls.Add(this.lblNameValue);
             this.Controls.Add(this.lblRegisteredDateValue);
             this.Controls.Add(this.lblGender);
+            this.Controls.Add(this.lblRunningMedicine);
             this.Controls.Add(this.lblReferredTo);
             this.Controls.Add(this.lblAge);
             this.Controls.Add(this.label1);
@@ -1008,8 +1171,9 @@ namespace webTRON_Management_Software.Views.Doctor
             this.Controls.Add(this.activePanel);
             this.Controls.Add(this.btnMinimize);
             this.Controls.Add(this.btnExit);
+            this.alertTransition.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Medicine";
+            this.Name = "MedicineForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Medicine";
             this.activePanel.ResumeLayout(false);
@@ -1023,6 +1187,10 @@ namespace webTRON_Management_Software.Views.Doctor
             this.prescribedMedicinePanel.PerformLayout();
             this.previouslyTakenMedicinePanel.ResumeLayout(false);
             this.previouslyTakenMedicinePanel.PerformLayout();
+            this.alertPanel.ResumeLayout(false);
+            this.alertPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.alertCloseBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alertImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1067,26 +1235,25 @@ namespace webTRON_Management_Software.Views.Doctor
         private System.Windows.Forms.Label lblStartDate;
         private System.Windows.Forms.Label lblMedicineName;
         private Guna.UI2.WinForms.Guna2CircleButton btnAddRunningMedicine;
-        private Guna.UI2.WinForms.Guna2TextBox lblRemarksTextBox;
+        private Guna.UI2.WinForms.Guna2TextBox remarksTextBox1;
         private System.Windows.Forms.Label lblRemarks1;
-        private Guna.UI2.WinForms.Guna2TextBox lblEndDayTextBox;
+        private Guna.UI2.WinForms.Guna2TextBox endDayTextBox1;
         private System.Windows.Forms.Label lblEndDay1;
-        private Guna.UI2.WinForms.Guna2DateTimePicker lblStartDateValue1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker startDatePicker1;
         private System.Windows.Forms.Label lblStartDate1;
-        private Guna.UI2.WinForms.Guna2TextBox medicineNameTextBox;
+        private Guna.UI2.WinForms.Guna2TextBox medicineNameTextBox1;
         private System.Windows.Forms.Label lblMedicineName1;
         private System.Windows.Forms.Label lblRunningMedicine;
         private Guna.UI2.WinForms.Guna2Panel prescribedMedicinePanel;
         private Guna.UI2.WinForms.Guna2CircleButton btnAddPrescribedMedicine;
-        private Guna.UI2.WinForms.Guna2TextBox prescribedMedicineRemarksTextBox;
-        private System.Windows.Forms.Label prescribedMedicineRemarks;
-        private Guna.UI2.WinForms.Guna2TextBox prescribedMedicineEndDayTextBox;
-        private System.Windows.Forms.Label lblPrescribedMedicineEndDay;
-        private Guna.UI2.WinForms.Guna2DateTimePicker prescribedMedicineStartDate;
-        private System.Windows.Forms.Label lblPrescribedMedicineStartDate;
-        private Guna.UI2.WinForms.Guna2TextBox prescribedMedicineTextBox;
-        private System.Windows.Forms.Label lblPrescribedMedicineName;
-        private System.Windows.Forms.Label lblPrescribedMedicine;
+        private Guna.UI2.WinForms.Guna2TextBox prescribedMedicineRemarksTextBox1;
+        private System.Windows.Forms.Label prescribedMedicineRemarks1;
+        private Guna.UI2.WinForms.Guna2TextBox prescribedMedicineEndDayTextBox1;
+        private System.Windows.Forms.Label lblPrescribedMedicineEndDay1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker prescribedMedicineStartDate1;
+        private System.Windows.Forms.Label lblPrescribedMedicineStartDate1;
+        private Guna.UI2.WinForms.Guna2TextBox prescribedMedicineTextBox1;
+        private System.Windows.Forms.Label lblPrescribedMedicineName1;
         private Guna.UI2.WinForms.Guna2Panel previouslyTakenMedicinePanel;
         private System.Windows.Forms.Label lblPreviouslyTakenMedicineRemarksValue;
         private System.Windows.Forms.Label lblPreviouslyTakenMedicineEndDayValue;
@@ -1098,5 +1265,12 @@ namespace webTRON_Management_Software.Views.Doctor
         private System.Windows.Forms.Label lblPreviouslyTakenMedicineName;
         private System.Windows.Forms.Label lblPreviouslyTakenMedicine;
         private Guna.UI2.WinForms.Guna2DragControl DragableMedicineForm;
+        private Guna.UI2.WinForms.Guna2Transition alertTransition;
+        private Guna.UI2.WinForms.Guna2Panel alertPanel;
+        private System.Windows.Forms.Label alertText;
+        private Guna.UI2.WinForms.Guna2PictureBox alertCloseBtn;
+        private Guna.UI2.WinForms.Guna2PictureBox alertImage;
+        private System.Windows.Forms.Timer alertTimer;
+        private System.Windows.Forms.Label lblPrescribedMedicine;
     }
 }

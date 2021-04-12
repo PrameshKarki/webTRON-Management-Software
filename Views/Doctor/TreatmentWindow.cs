@@ -54,11 +54,17 @@ namespace webTRON_Management_Software.Views.Doctor
                 
                 //to create textfield on the history panel
                 Guna.UI2.WinForms.Guna2TextBox textBox = new Guna2TextBox();
+
                 textBox.Name = "newTopic" + numberOfTextFields + "TextField";
+
                 textBox.PlaceholderText = "New Topic";
+
                 textBox.Location = new Point(4, yTextFieldPoint);
+                
                 textBox.Size = new Size(149, 33);
+
                 this.prescriptionPanel.Controls.Add(textBox);
+
                 textBox.Focus();
                 //initialize to textBox array
                 textBoxArray[numberOfTextFields - 1] = textBox;
