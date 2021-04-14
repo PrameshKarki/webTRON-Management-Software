@@ -273,6 +273,16 @@ namespace webTRON_Management_Software.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap prescribe_icon {
+            get {
+                object obj = ResourceManager.GetObject("prescribe_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap rectangle_curved {
             get {
                 object obj = ResourceManager.GetObject("rectangle_curved", resourceCulture);

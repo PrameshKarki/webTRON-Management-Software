@@ -19,6 +19,10 @@ namespace webTRON_Management_Software.Views.Doctor
 
         //Instantiate list of medicine object
         List<Medicine> medicineList = new List<Medicine>();
+
+        //Instantiate list of guna2TextBox
+        List<Guna2TextBox[]> listOfRunningMedicine = new List<Guna2TextBox[]>();
+        List<Guna2TextBox[]> listOfPrescribedMedicine = new List<Guna2TextBox[]>();
         public MedicineForm()
         {
             InitializeComponent();
@@ -28,7 +32,7 @@ namespace webTRON_Management_Software.Views.Doctor
         private void BtnAddRunningMedicine_Click(object sender, EventArgs e)
         {
             //Validate input here
-            if (string.IsNullOrEmpty(medicineNameTextBox1.Text) || string.IsNullOrEmpty(endDayTextBox1.Text))
+            if (string.IsNullOrEmpty(listOfRunningMedicine[noOfRunningMedicine-1][0].Text) || string.IsNullOrEmpty(listOfRunningMedicine[noOfRunningMedicine - 1][1].Text))
             {
                 DisplayAlert("Danger", "Fill required fields.");
             }
@@ -56,22 +60,22 @@ namespace webTRON_Management_Software.Views.Doctor
 
                 //Set properties of label1
                 lbl1.Text = "Medicine Name:";
-                lbl1.Location = new Point(23, yCoOrdidate);
+                lbl1.Location = new Point(6, yCoOrdidate);
                 lbl1.Font = new Font("Microsoft Sans Serif", 10);
 
                 //Set properties of label2
                 lbl2.Text = "Start Date:";
-                lbl2.Location = new Point(323, yCoOrdidate);
+                lbl2.Location = new Point(306, yCoOrdidate);
                 lbl2.Font = new Font("Microsoft Sans Serif", 10);
 
                 //Set properties of label3
                 lbl3.Text = "End Day:";
-                lbl3.Location = new Point(543, yCoOrdidate);
+                lbl3.Location = new Point(526, yCoOrdidate);
                 lbl3.Font = new Font("Microsoft Sans Serif", 10);
 
                 //Set properties of label4
                 lbl4.Text = "Remarks:";
-                lbl4.Location = new Point(675, yCoOrdidate);
+                lbl4.Location = new Point(658, yCoOrdidate);
                 lbl4.Font = new Font("Microsoft Sans Serif", 10);
 
                 //Set properties of text box1
@@ -79,7 +83,7 @@ namespace webTRON_Management_Software.Views.Doctor
                 txtBox1.Name = $"medicineNameTextBox{noOfRunningMedicine}";
                 txtBox1.PlaceholderText = "Medicine Name";
                 txtBox1.Font = new Font("Segoe UI", 10);
-                txtBox1.Size = new Size(177, 30);
+                txtBox1.Size = new Size(117, 30);
                 txtBox1.Location = new Point(134, yCoOrdidate);
                 txtBox1.ForeColor = Color.Black;
 
@@ -88,7 +92,7 @@ namespace webTRON_Management_Software.Views.Doctor
                 txtBox2.PlaceholderText = "End Day";
                 txtBox2.Font = new Font("Segoe UI", 10);
                 txtBox2.Size = new Size(52, 30);
-                txtBox2.Location = new Point(613, yCoOrdidate);
+                txtBox2.Location = new Point(596, yCoOrdidate);
                 txtBox2.ForeColor = Color.Black;
 
 
@@ -97,7 +101,7 @@ namespace webTRON_Management_Software.Views.Doctor
                 txtBox3.PlaceholderText = "Remarks";
                 txtBox3.Font = new Font("Segoe UI", 10);
                 txtBox3.Size = new Size(196, 30);
-                txtBox3.Location = new Point(748, yCoOrdidate);
+                txtBox3.Location = new Point(730, yCoOrdidate);
                 txtBox3.ForeColor = Color.Black;
 
 
@@ -106,11 +110,11 @@ namespace webTRON_Management_Software.Views.Doctor
                 datePicker.FillColor = Color.FromArgb(23, 107, 207);
                 lbl2.Font = new Font("Microsoft Sans Serif", 10);
                 datePicker.Size = new Size(129, 30);
-                datePicker.Location = new Point(402, yCoOrdidate);
+                datePicker.Location = new Point(385, yCoOrdidate);
                 datePicker.ForeColor = Color.White;
 
                 //Set properties of add btn
-                btnAddRunningMedicine.Location = new Point(951, yCoOrdidate);
+                btnAddRunningMedicine.Location = new Point(934, yCoOrdidate);
 
                 //Add controls in panel
                 this.runningMedicinePanel.Controls.Add(txtBox1);
@@ -125,6 +129,10 @@ namespace webTRON_Management_Software.Views.Doctor
                 this.runningMedicinePanel.Controls.Add(txtBox3);
                 //date Picker
                 this.runningMedicinePanel.Controls.Add(datePicker);
+
+                //Add newly created text boxes to the list
+                Guna2TextBox[] txtBox = new Guna2TextBox[] {txtBox1 ,txtBox2};
+                listOfRunningMedicine.Add(txtBox);
 
 
             }
@@ -165,7 +173,7 @@ namespace webTRON_Management_Software.Views.Doctor
         private void BtnAddPrescribedMedicine_Click(object sender, EventArgs e)
         {
             //Validate input here
-            if (string.IsNullOrEmpty(prescribedMedicineTextBox1.Text) || string.IsNullOrEmpty(prescribedMedicineEndDayTextBox1.Text))
+            if (string.IsNullOrEmpty(listOfPrescribedMedicine[noOfPrescribedMedicine - 1][0].Text) || string.IsNullOrEmpty(listOfPrescribedMedicine[noOfPrescribedMedicine - 1][1].Text))
             {
                 DisplayAlert("Danger", "Fill required fields.");
             }
@@ -193,22 +201,22 @@ namespace webTRON_Management_Software.Views.Doctor
 
                 //Set properties of label1
                 lbl1.Text = "Medicine Name:";
-                lbl1.Location = new Point(23, yCoOrdidate);
+                lbl1.Location = new Point(9, yCoOrdidate);
                 lbl1.Font = new Font("Microsoft Sans Serif", 10);
 
                 //Set properties of label2
                 lbl2.Text = "Start Date:";
-                lbl2.Location = new Point(323, yCoOrdidate);
+                lbl2.Location = new Point(309, yCoOrdidate);
                 lbl2.Font = new Font("Microsoft Sans Serif", 10);
 
                 //Set properties of label3
                 lbl3.Text = "End Day:";
-                lbl3.Location = new Point(543, yCoOrdidate);
+                lbl3.Location = new Point(529, yCoOrdidate);
                 lbl3.Font = new Font("Microsoft Sans Serif", 10);
 
                 //Set properties of label4
                 lbl4.Text = "Remarks:";
-                lbl4.Location = new Point(675, yCoOrdidate);
+                lbl4.Location = new Point(661, yCoOrdidate);
                 lbl4.Font = new Font("Microsoft Sans Serif", 10);
 
                 //Set properties of text box1
@@ -217,7 +225,7 @@ namespace webTRON_Management_Software.Views.Doctor
                 txtBox1.PlaceholderText = "Medicine Name";
                 txtBox1.Font = new Font("Segoe UI", 10);
                 txtBox1.Size = new Size(177, 30);
-                txtBox1.Location = new Point(134, yCoOrdidate);
+                txtBox1.Location = new Point(120, yCoOrdidate);
                 txtBox1.ForeColor = Color.Black;
 
                 //Set properties of text box2
@@ -225,7 +233,7 @@ namespace webTRON_Management_Software.Views.Doctor
                 txtBox2.PlaceholderText = "End Day";
                 txtBox2.Font = new Font("Segoe UI", 10);
                 txtBox2.Size = new Size(52, 30);
-                txtBox2.Location = new Point(613, yCoOrdidate);
+                txtBox2.Location = new Point(599, yCoOrdidate);
                 txtBox2.ForeColor = Color.Black;
 
 
@@ -234,7 +242,7 @@ namespace webTRON_Management_Software.Views.Doctor
                 txtBox3.PlaceholderText = "Remarks";
                 txtBox3.Font = new Font("Segoe UI", 10);
                 txtBox3.Size = new Size(196, 30);
-                txtBox3.Location = new Point(748, yCoOrdidate);
+                txtBox3.Location = new Point(734, yCoOrdidate);
                 txtBox3.ForeColor = Color.Black;
 
 
@@ -243,11 +251,11 @@ namespace webTRON_Management_Software.Views.Doctor
                 datePicker.FillColor = Color.FromArgb(23, 107, 207);
                 lbl2.Font = new Font("Microsoft Sans Serif", 10);
                 datePicker.Size = new Size(129, 30);
-                datePicker.Location = new Point(402, yCoOrdidate);
+                datePicker.Location = new Point(388, yCoOrdidate);
                 datePicker.ForeColor = Color.White;
 
                 //Set properties of add btn
-                btnAddPrescribedMedicine.Location = new Point(951, yCoOrdidate);
+                btnAddPrescribedMedicine.Location = new Point(937, yCoOrdidate);
 
                 //Add controls in panel
                 this.prescribedMedicinePanel.Controls.Add(txtBox1);
@@ -262,6 +270,10 @@ namespace webTRON_Management_Software.Views.Doctor
                 this.prescribedMedicinePanel.Controls.Add(txtBox3);
                 //date Picker
                 this.prescribedMedicinePanel.Controls.Add(datePicker);
+
+                //Add newly created text boxes to the list
+                Guna2TextBox[] txtBox = new Guna2TextBox[] { txtBox1, txtBox2 };
+                listOfPrescribedMedicine.Add(txtBox);
 
 
             }
@@ -303,7 +315,24 @@ namespace webTRON_Management_Software.Views.Doctor
                 }
                 count++;
             }
-            MessageBox.Show(medicineList.Count.ToString());
+            
+
+        }
+
+
+        //Load event on medicine form
+        private void MedicineForm_Load(object sender, EventArgs e)
+        {
+            Guna2TextBox[] txtBox = new Guna2TextBox[] { medicineNameTextBox1, endDayTextBox1 };
+            listOfRunningMedicine.Add(txtBox);
+            txtBox = new Guna2TextBox[] { prescribedMedicineTextBox1, prescribedMedicineEndDayTextBox1 };
+            listOfPrescribedMedicine.Add(txtBox);
+        }
+
+        //Click event on minimize button
+        private void BtnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

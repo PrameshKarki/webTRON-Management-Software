@@ -109,11 +109,17 @@
     <Compile Include="Views\Admin\Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Admin\TestsForm.cs">
+    <Compile Include="Views\Doctor\Others.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Admin\TestsForm.Designer.cs">
-      <DependentUpon>TestsForm.cs</DependentUpon>
+    <Compile Include="Views\Doctor\Others.Designer.cs">
+      <DependentUpon>Others.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Doctor\Tests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Doctor\Tests.Designer.cs">
+      <DependentUpon>Tests.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Admin\Users.cs">
       <SubType>Form</SubType>
@@ -230,8 +236,11 @@
     <EmbeddedResource Include="Views\Admin\Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Admin\TestsForm.resx">
-      <DependentUpon>TestsForm.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Doctor\Others.resx">
+      <DependentUpon>Others.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Doctor\Tests.resx">
+      <DependentUpon>Tests.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\Users.resx">
       <DependentUpon>Users.cs</DependentUpon>
@@ -386,6 +395,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\alert_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prescribe_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
