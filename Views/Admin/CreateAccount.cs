@@ -173,6 +173,7 @@ namespace webTRON_Management_Software.Views.Admin
         //Load Event on Create Account Form
         private void CreateAccount_Load(object sender, EventArgs e)
         {
+
             //Initialize Active User Details
             InitializeActiverUserDetails();
 

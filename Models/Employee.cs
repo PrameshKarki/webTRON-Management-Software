@@ -13,8 +13,8 @@ namespace webTRON_Management_Software.Models
     public class Employee
     {
         //Connection String
-        //  private static string connectionString = "server=localhost;user id=root;pwd=password;database=webtronmanagement";
-        private static string connectionString = "server=localhost;user id=root; password=laxudb;persistsecurityinfo=True;database=webtronmanagement";
+         private static string connectionString = "server=localhost;user id=root;pwd=password;database=webtronmanagement";
+        //private static string connectionString = "server=localhost;user id=root; password=laxudb;persistsecurityinfo=True;database=webtronmanagement";
 
         //Properties
         public string UserID { get; set; }
@@ -158,7 +158,7 @@ namespace webTRON_Management_Software.Models
             //MySqlConnection
             MySqlConnection conn = new MySqlConnection(connectionString);
             //SQL Query
-            string SQLQuery = "SELECT userID AS 'User ID',firstName AS 'First Name',lastName AS 'Last Name',email AS 'Email',address AS 'Address',contactNumber AS 'Contact Number',dateOfBirth AS 'Date Of Birth',sex AS 'Sex',role AS 'Role',status AS 'Status' FROM employeeInfo WHERE userID NOT IN (SELECT userID from accountStatus WHERE status='Inactive')";
+            string SQLQuery = "SELECT userID AS 'User ID',firstName AS 'First Name',lastName AS 'Last Name',email AS 'Email',address AS 'Address',contactNumber AS 'Contact Number',dateOfBirth AS 'Date Of Birth',sex AS 'Sex',role AS 'Role',status AS 'Status' FROM activeEmployees";
             try
             {
                 //MySQLCommand
@@ -188,7 +188,7 @@ namespace webTRON_Management_Software.Models
             //MySqlConnection
             MySqlConnection conn = new MySqlConnection(connectionString);
             //SQL Query
-            string SQLQuery = "SELECT firstName AS 'First Name',lastName AS 'Last Name',email AS 'Email',contactNumber AS 'Contact Number',role AS 'Role' FROM employeeInfo WHERE userID NOT IN(SELECT userID FROM accountStatus WHERE status='Inactive')";
+            string SQLQuery = "SELECT firstName AS 'First Name',lastName AS 'Last Name',email AS 'Email',contactNumber AS 'Contact Number',role AS 'Role' FROM activeEmployees";
             try
             {
                 //MySQLCommand
@@ -213,12 +213,14 @@ namespace webTRON_Management_Software.Models
         //Method to search data from database
         public static DataTable Search(string searchString)
         {
+            //WARNINGS:Query wrong here
+
             //Instantiating Data Table
             DataTable dt = new DataTable();
             //MySql Connection
             MySqlConnection conn = new MySqlConnection(connectionString);
             //SQL Query
-            string SQLQuery = $"SELECT userID AS 'User ID',firstName AS 'First Name',lastName AS 'Last Name',email AS 'Email',address AS 'Address',contactNumber AS 'Contact Number',dateOfBirth AS 'Date Of Birth',sex AS 'Sex',role AS 'Role',status AS 'Status' FROM employeeInfo" +
+            string SQLQuery = $"SELECT userID AS 'User ID',firstName AS 'First Name',lastName AS 'Last Name',email AS 'Email',address AS 'Address',contactNumber AS 'Contact Number',dateOfBirth AS 'Date Of Birth',sex AS 'Sex',role AS 'Role',status AS 'Status' FROM activeEmployees" +
                              $" WHERE userID LIKE '%{searchString}%' OR firstName LIKE '%{searchString}%' OR lastName LIKE '%{searchString}%' OR email LIKE '%{searchString}%' OR address LIKE '%{searchString}%' OR contactNumber LIKE '%{searchString}%' OR dateOfBirth LIKE '%{searchString}%' OR" +
                              $" sex LIKE '%{searchString}%' OR role LIKE '%{searchString}%' OR status LIKE '%{searchString}%'";
             try

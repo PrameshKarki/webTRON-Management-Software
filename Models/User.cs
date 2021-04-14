@@ -11,8 +11,8 @@ namespace webTRON_Management_Software.Models
     public class User
     {
         //Connection String
-        // private static string connectionString = "server=localhost;user id=root;pwd=password;database=webtronmanagement";
-        private static string connectionString = "server=localhost;user id=root; password=laxudb;persistsecurityinfo=True;database=webtronmanagement";
+         private static string connectionString = "server=localhost;user id=root;pwd=password;database=webtronmanagement";
+        //private static string connectionString = "server=localhost;user id=root; password=laxudb;persistsecurityinfo=True;database=webtronmanagement";
 
         //Properties
         public string userID { get; set; }
@@ -61,8 +61,8 @@ namespace webTRON_Management_Software.Models
             bool isSucess = false;
             //MySQL Connection
             MySqlConnection conn = new MySqlConnection(connectionString);
-            //String SqlQuery
-            string SQLQuery = "DELETE users,lastLoginInfo,verificationCodes FROM users NATURAL JOIN lastlogininfo NATURAL JOIN verificationCodes WHERE userID=BINARY @userID";
+            //SQL Query
+            string SQLQuery = "DELETE FROM users WHERE userID=BINARY @userID";
             try
             {
                 //MySql Command
@@ -72,15 +72,23 @@ namespace webTRON_Management_Software.Models
                 conn.Open();
                 //Execute Query
                 //Here ExecuteNonQuery() returns the number of rows affected
-                int row = cmd.ExecuteNonQuery();
-                isSucess = row ==1 ? true : false;
-               
+                cmd.ExecuteNonQuery();
 
+                SQLQuery = "DELETE FROM lastLogInInfo WHERE userID=BINARY @userID";
+                cmd = new MySqlCommand(SQLQuery, conn);
+                cmd.Parameters.AddWithValue("@userID", userID);
+                cmd.ExecuteNonQuery();
+                
+                SQLQuery = "DELETE FROM verificationCodes WHERE userID=BINARY @userID";
+                cmd = new MySqlCommand(SQLQuery, conn);
+                cmd.Parameters.AddWithValue("@userID", userID);
+                cmd.ExecuteNonQuery();
+                isSucess = true;
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //catch (Exception ex)
+            //{
+             //   MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
             finally
             {
                 //Close Connection

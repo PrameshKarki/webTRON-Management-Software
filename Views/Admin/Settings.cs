@@ -38,6 +38,7 @@ namespace webTRON_Management_Software.Views.Admin
         //Click event on dashboard icon
         private void BtnDashboard_Click(object sender, EventArgs e)
         {
+        
             var dashboard = new Admin.Dashboard(employee);
             dashboard.Show();
             this.Hide();
@@ -54,6 +55,7 @@ namespace webTRON_Management_Software.Views.Admin
         //Load event on settings icon
         private void Settings_Load(object sender, EventArgs e)
         {
+           
             //Initialize active user details
             InitializeActiverUserDetails();
         }

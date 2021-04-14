@@ -30,7 +30,7 @@ namespace webTRON_Management_Software.Views.Admin
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation4 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
             this.sidebarPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.btnSignOut = new Guna.UI2.WinForms.Guna2Button();
@@ -45,7 +45,6 @@ namespace webTRON_Management_Software.Views.Admin
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblContactNumberValue = new System.Windows.Forms.Label();
             this.lblContactNumber = new System.Windows.Forms.Label();
-            this.DragableSettings = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.btnChangePassword = new Guna.UI2.WinForms.Guna2Button();
             this.btnChangeInfo = new Guna.UI2.WinForms.Guna2Button();
             this.userPicture = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -62,6 +61,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.alertCloseBtn = new Guna.UI2.WinForms.Guna2PictureBox();
             this.alertImage = new Guna.UI2.WinForms.Guna2PictureBox();
             this.alertTimer = new System.Windows.Forms.Timer(this.components);
+            this.DragableSettings = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.sidebarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userPicture)).BeginInit();
             this.activeUserPanel.SuspendLayout();
@@ -262,10 +262,6 @@ namespace webTRON_Management_Software.Views.Admin
             this.lblContactNumber.TabIndex = 40;
             this.lblContactNumber.Text = "Contact Number:";
             // 
-            // DragableSettings
-            // 
-            this.DragableSettings.TargetControl = this;
-            // 
             // btnChangePassword
             // 
             this.btnChangePassword.Animated = true;
@@ -426,22 +422,22 @@ namespace webTRON_Management_Software.Views.Admin
             // 
             this.alertTransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Scale;
             this.alertTransition.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.alertTransition.DefaultAnimation = animation1;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 0;
+            animation4.Padding = new System.Windows.Forms.Padding(0);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 0F;
+            this.alertTransition.DefaultAnimation = animation4;
             this.alertTransition.MaxAnimationTime = 5000;
             // 
             // alertPanel
@@ -502,6 +498,10 @@ namespace webTRON_Management_Software.Views.Admin
             this.alertTimer.Enabled = true;
             this.alertTimer.Interval = 5000;
             this.alertTimer.Tick += new System.EventHandler(this.AlertTimer_Tick);
+            // 
+            // DragableSettings
+            // 
+            this.DragableSettings.TargetControl = this;
             // 
             // Settings
             // 
@@ -570,7 +570,6 @@ namespace webTRON_Management_Software.Views.Admin
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblContactNumberValue;
         private System.Windows.Forms.Label lblContactNumber;
-        private Guna.UI2.WinForms.Guna2DragControl DragableSettings;
         private Guna.UI2.WinForms.Guna2Button btnChangePassword;
         private Guna.UI2.WinForms.Guna2Button btnChangeInfo;
         private Guna.UI2.WinForms.Guna2Button btnChangePicture;
@@ -580,5 +579,6 @@ namespace webTRON_Management_Software.Views.Admin
         private Guna.UI2.WinForms.Guna2PictureBox alertCloseBtn;
         private Guna.UI2.WinForms.Guna2PictureBox alertImage;
         private System.Windows.Forms.Timer alertTimer;
+        private Guna.UI2.WinForms.Guna2DragControl DragableSettings;
     }
 }
