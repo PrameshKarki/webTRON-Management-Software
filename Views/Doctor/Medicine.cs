@@ -9,20 +9,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using webTRON_Management_Software.Models;
+using webTRON_Management_Software.Utils;
 
 namespace webTRON_Management_Software.Views.Doctor
 {
     public partial class MedicineForm : Form
     {
         int noOfRunningMedicine=1;
-        int noOfPrescribedMedicine = 1;
+        int noOfPrescribedMedicine = 1; 
 
         //Instantiate list of medicine object
         List<Medicine> medicineList = new List<Medicine>();
 
-        //Instantiate list of guna2TextBox
-        List<Guna2TextBox[]> listOfRunningMedicine = new List<Guna2TextBox[]>();
-        List<Guna2TextBox[]> listOfPrescribedMedicine = new List<Guna2TextBox[]>();
+        //Instantiate list of row
+        List<MedicineRow> listOfRunningMedicine = new List<MedicineRow>();
+        List<MedicineRow> listOfPrescribedMedicine = new List<MedicineRow>();
         public MedicineForm()
         {
             InitializeComponent();
@@ -31,8 +32,7 @@ namespace webTRON_Management_Software.Views.Doctor
         //Click event on add button of running medicine panel
         private void BtnAddRunningMedicine_Click(object sender, EventArgs e)
         {
-            //Validate input here
-            if (string.IsNullOrEmpty(listOfRunningMedicine[noOfRunningMedicine-1][0].Text) || string.IsNullOrEmpty(listOfRunningMedicine[noOfRunningMedicine - 1][1].Text))
+            if (string.IsNullOrEmpty(listOfRunningMedicine[noOfRunningMedicine-1].MedicineName.Text) || string.IsNullOrEmpty(listOfRunningMedicine[noOfRunningMedicine - 1].EndDay.Text))
             {
                 DisplayAlert("Danger", "Fill required fields.");
             }
@@ -42,7 +42,8 @@ namespace webTRON_Management_Software.Views.Doctor
                 noOfRunningMedicine++;
 
                 //Initialize y co-ordinate 
-                int yCoOrdidate =49 + 40 * (noOfRunningMedicine - 1);
+                int yCoOrdidate =110 + 40 * (noOfRunningMedicine - 1);
+                
                 //Instantiate new text box(We need 3 text box so)
                 Guna2TextBox txtBox1 = new Guna2TextBox();
                 Guna2TextBox txtBox2 = new Guna2TextBox();
@@ -83,8 +84,8 @@ namespace webTRON_Management_Software.Views.Doctor
                 txtBox1.Name = $"medicineNameTextBox{noOfRunningMedicine}";
                 txtBox1.PlaceholderText = "Medicine Name";
                 txtBox1.Font = new Font("Segoe UI", 10);
-                txtBox1.Size = new Size(117, 30);
-                txtBox1.Location = new Point(134, yCoOrdidate);
+                txtBox1.Size = new Size(177, 30);
+                txtBox1.Location = new Point(117, yCoOrdidate);
                 txtBox1.ForeColor = Color.Black;
 
                 //Set properties of text box2
@@ -108,7 +109,6 @@ namespace webTRON_Management_Software.Views.Doctor
                 //Set properties of date picker
                 datePicker.Name = $"startDatePicker{noOfRunningMedicine}";
                 datePicker.FillColor = Color.FromArgb(23, 107, 207);
-                lbl2.Font = new Font("Microsoft Sans Serif", 10);
                 datePicker.Size = new Size(129, 30);
                 datePicker.Location = new Point(385, yCoOrdidate);
                 datePicker.ForeColor = Color.White;
@@ -118,7 +118,7 @@ namespace webTRON_Management_Software.Views.Doctor
 
                 //Add controls in panel
                 this.runningMedicinePanel.Controls.Add(txtBox1);
-               //Labels
+                //Labels
                 this.runningMedicinePanel.Controls.Add(lbl1);
                 this.runningMedicinePanel.Controls.Add(lbl2);
                 this.runningMedicinePanel.Controls.Add(lbl3);
@@ -130,50 +130,26 @@ namespace webTRON_Management_Software.Views.Doctor
                 //date Picker
                 this.runningMedicinePanel.Controls.Add(datePicker);
 
+
                 //Add newly created text boxes to the list
-                Guna2TextBox[] txtBox = new Guna2TextBox[] {txtBox1 ,txtBox2};
-                listOfRunningMedicine.Add(txtBox);
-
-
+                
+                //Instantiate new Row
+                MedicineRow row = new MedicineRow();
+                row.MedicineName = txtBox1;
+                row.StartDate = datePicker;
+                row.EndDay = txtBox2; ;
+                row.Remarks = txtBox3;
+                listOfRunningMedicine.Add(row);
             }
 
-        }
-        //Hide alert
-        private void AlertTimer_Tick(object sender, EventArgs e)
-        {
-            alertTransition.HideSync(alertPanel);
-        }
-        //Display alert
-        private void DisplayAlert(string type, string message)
-        {
-            if (type == "Danger")
-            {
-                alertPanel.BackgroundImage = Properties.Resources.alert_danger_background;
-                alertImage.Image = Properties.Resources.alert_danger_icon;
-                alertText.ForeColor = Color.Red;
-
-            }
-            else if (type == "Sucess")
-            {
-                alertPanel.BackgroundImage = Properties.Resources.alert_sucess_background;
-                alertImage.Image = Properties.Resources.alert_sucess_icon;
-                alertText.ForeColor = Color.Green;
-            }
-            alertText.Text = message;
-            alertTransition.ShowSync(alertPanel);
-        }
-
-        //Click event on exit button
-        private void BtnExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
 
         //CLick event on btnAddPrescribedMedicine
         private void BtnAddPrescribedMedicine_Click(object sender, EventArgs e)
         {
+            
             //Validate input here
-            if (string.IsNullOrEmpty(listOfPrescribedMedicine[noOfPrescribedMedicine - 1][0].Text) || string.IsNullOrEmpty(listOfPrescribedMedicine[noOfPrescribedMedicine - 1][1].Text))
+            if (string.IsNullOrEmpty(listOfPrescribedMedicine[noOfPrescribedMedicine - 1].MedicineName.Text) || string.IsNullOrEmpty(listOfPrescribedMedicine[noOfPrescribedMedicine - 1].EndDay.Text))
             {
                 DisplayAlert("Danger", "Fill required fields.");
             }
@@ -184,6 +160,7 @@ namespace webTRON_Management_Software.Views.Doctor
 
                 //Initialize y co-ordinate 
                 int yCoOrdidate =13 + 40 * (noOfPrescribedMedicine - 1);
+                
                 //Instantiate new text box(We need 3 text box so)
                 Guna2TextBox txtBox1 = new Guna2TextBox();
                 Guna2TextBox txtBox2 = new Guna2TextBox();
@@ -253,6 +230,7 @@ namespace webTRON_Management_Software.Views.Doctor
                 datePicker.Size = new Size(129, 30);
                 datePicker.Location = new Point(388, yCoOrdidate);
                 datePicker.ForeColor = Color.White;
+                datePicker.Enabled = false;
 
                 //Set properties of add btn
                 btnAddPrescribedMedicine.Location = new Point(937, yCoOrdidate);
@@ -271,62 +249,97 @@ namespace webTRON_Management_Software.Views.Doctor
                 //date Picker
                 this.prescribedMedicinePanel.Controls.Add(datePicker);
 
-                //Add newly created text boxes to the list
-                Guna2TextBox[] txtBox = new Guna2TextBox[] { txtBox1, txtBox2 };
-                listOfPrescribedMedicine.Add(txtBox);
+                //Instantiate medicine row
+                MedicineRow row = new MedicineRow();
+                row.MedicineName = txtBox1;
+                row.StartDate = datePicker;
+                row.EndDay = txtBox2;
+                row.Remarks = txtBox3;
+                listOfPrescribedMedicine.Add(row);
 
 
             }
 
         }
-
         //Click event on Next Button
         private void BtnNext_Click(object sender, EventArgs e)
         {
+            //Get patient id
+            string patientID = lblPatientIDValue.Text;
             //Initialize count
             int count = 1;
-            //Instantiate Medicine 
-            Medicine medicine = new Medicine();
-        
             while (count <= noOfRunningMedicine)
             {
-                if(!string.IsNullOrEmpty(medicineNameTextBox1.Text) || !string.IsNullOrEmpty(endDayTextBox1.Text))
+                //Instantiate Medicines 
+                Medicine medicine = new Medicine();
+                if (!string.IsNullOrEmpty(listOfRunningMedicine[count-1].MedicineName.Text) || !string.IsNullOrEmpty(listOfRunningMedicine[noOfRunningMedicine - 1].EndDay.Text))
                 {
-                    medicine.Name = medicineNameTextBox1.Text;
-                    medicine.StartDate = startDatePicker1.Value.ToString("yyyy-MM-dd");
-                    medicine.EndDay = Convert.ToInt32(endDayTextBox1.Text);
-                    medicine.Remarks = remarksTextBox1.Text;
+                    medicine.Name = listOfRunningMedicine[count - 1].MedicineName.Text;
+                    medicine.StartDate = listOfRunningMedicine[count - 1].StartDate.Value;
+                    medicine.EndDay = Convert.ToInt32(listOfRunningMedicine[count - 1].EndDay.Text);
+                    medicine.Remarks =listOfRunningMedicine[count-1].Remarks.Text;
                     medicineList.Add(medicine);
                 }
                 count++;
                 
             }
-            //Reinitialize count to 1
-            count = 1;
-            while(count <= noOfPrescribedMedicine)
+             //Reinitialize count to 1
+             count = 1;
+             while(count <= noOfPrescribedMedicine)
+             {
+                //Instantiate Medicines 
+                Medicine medicine = new Medicine();
+                if (!string.IsNullOrEmpty(listOfPrescribedMedicine[count - 1].MedicineName.Text) || !string.IsNullOrEmpty(listOfPrescribedMedicine[count - 1].EndDay.Text))
+                 {
+                     medicine.Name = listOfPrescribedMedicine[count-1].MedicineName.Text;
+                     medicine.StartDate=listOfPrescribedMedicine[count-1].StartDate.Value;
+                     medicine.EndDay = Convert.ToInt32(listOfPrescribedMedicine[count-1].EndDay.Text);
+                     medicine.Remarks =listOfPrescribedMedicine[count-1].Remarks.Text;
+                     medicineList.Add(medicine);
+                 }
+                 count++;
+             }
+
+            //Insert data into database
+            bool isSucess = Medicine.Insert(patientID, medicineList);
+            if (isSucess)
             {
-                if(!string.IsNullOrEmpty(prescribedMedicineTextBox1.Text) || !string.IsNullOrEmpty(prescribedMedicineEndDayTextBox1.Text))
-                {
-                    medicine.Name = prescribedMedicineTextBox1.Text;
-                    medicine.StartDate = prescribedMedicineStartDate1.Value.ToString("yyyy-MM-dd");
-                    medicine.EndDay = Convert.ToInt32(prescribedMedicineEndDayTextBox1.Text);
-                    medicine.Remarks = prescribedMedicineRemarksTextBox1.Text;
-                    medicineList.Add(medicine);
-                }
-                count++;
+                DisplayAlert("Sucess", "Data stored sucessfully.");
+            }
+            else
+            {
+                DisplayAlert("Danger", "Error Occured");
             }
             
+           
 
         }
-
 
         //Load event on medicine form
         private void MedicineForm_Load(object sender, EventArgs e)
         {
-            Guna2TextBox[] txtBox = new Guna2TextBox[] { medicineNameTextBox1, endDayTextBox1 };
-            listOfRunningMedicine.Add(txtBox);
-            txtBox = new Guna2TextBox[] { prescribedMedicineTextBox1, prescribedMedicineEndDayTextBox1 };
-            listOfPrescribedMedicine.Add(txtBox);
+            //Initialize active patient details
+            InitializeActiverPatientDetails();
+
+            //Instantiate new row
+            MedicineRow row = new MedicineRow();
+            row.MedicineName = medicineNameTextBox1;
+            row.StartDate = startDatePicker1;
+            row.EndDay = endDayTextBox1;
+            row.Remarks = remarksTextBox1;
+            listOfRunningMedicine.Add(row);
+
+            //Instantiate another row
+            MedicineRow anotherRow = new MedicineRow();
+            anotherRow.MedicineName = prescribedMedicineTextBox1;
+            anotherRow.StartDate = prescribedMedicineStartDate1;
+            anotherRow.EndDay = prescribedMedicineEndDayTextBox1;
+            anotherRow.Remarks = prescribedMedicineRemarksTextBox1;
+            listOfPrescribedMedicine.Add(anotherRow);
+
+            //Load grid view
+            LoadGridView();
+
         }
 
         //Click event on minimize button
@@ -334,5 +347,53 @@ namespace webTRON_Management_Software.Views.Doctor
         {
             this.WindowState = FormWindowState.Minimized;
         }
+        //Initialize active patient details
+       private void InitializeActiverPatientDetails()
+        {
+            lblPatientIDValue.Text = "PTN-21-000000";
+        }
+        //Hide alert
+        private void AlertTimer_Tick(object sender, EventArgs e)
+        {
+            alertTransition.HideSync(alertPanel);
+        }
+        //Display alert
+        private void DisplayAlert(string type, string message)
+        {
+            if (type == "Danger")
+            {
+                alertPanel.BackgroundImage = Properties.Resources.alert_danger_background;
+                alertImage.Image = Properties.Resources.alert_danger_icon;
+                alertText.ForeColor = Color.Red;
+
+            }
+            else if (type == "Sucess")
+            {
+                alertPanel.BackgroundImage = Properties.Resources.alert_sucess_background;
+                alertImage.Image = Properties.Resources.alert_sucess_icon;
+                alertText.ForeColor = Color.Green;
+            }
+            alertText.Text = message;
+            alertTransition.ShowSync(alertPanel);
+        }
+
+        //Click event on exit button
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        //Load Grid View
+        private void LoadGridView()
+        {
+            string patientID = lblPatientIDValue.Text;
+            DataTable dt =Medicine.FetchPreviouslyTakenMedicines(patientID);
+            previouslyTakenMedicineGridView.DataSource = dt;
+            previouslyTakenMedicineGridView.ClearSelection();
+
+            DataTable dataTable = Medicine.FetchRunningMedicines(patientID);
+            runningMedicinesGridView.DataSource =dataTable;
+            runningMedicinesGridView.ClearSelection();
+        }
+       
     }
 }

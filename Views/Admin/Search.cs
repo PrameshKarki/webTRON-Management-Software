@@ -232,5 +232,7 @@ namespace webTRON_Management_Software.Views.Admin
             alertText.Text = message;
             alertTransition.ShowSync(alertPanel);
         }
+
+        
     }
 }

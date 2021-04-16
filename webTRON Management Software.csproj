@@ -65,6 +65,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Utils\MedicineRow.cs" />
     <Compile Include="Utils\Printer.cs" />
     <Compile Include="Utils\QRCodeGenerator.cs" />
     <Compile Include="Views\Accountant\Dashboard.cs">

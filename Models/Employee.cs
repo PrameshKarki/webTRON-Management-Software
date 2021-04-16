@@ -541,12 +541,10 @@ namespace webTRON_Management_Software.Models
                 }
 
             }
-            /*
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            */
             finally
             {
                 //Close Connection
