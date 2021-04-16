@@ -21,7 +21,7 @@ namespace webTRON_Management_Software.Views.Doctor
         private void BtnAddRunningMedicine_Click(object sender, EventArgs e)
         {
             //Validate input here
-            if()
+            //if()
 
         }
     }

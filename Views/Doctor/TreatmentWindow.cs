@@ -16,15 +16,28 @@ namespace webTRON_Management_Software.Views.Doctor
     public partial class TreatmentWindow : Form
     {
         int numberOfTextFields = 1;
+        int numberOfOldPrescriptionPanel = 1;
         //to get patientID from 
-        string patientID="";
-        Guna.UI2.WinForms.Guna2TextBox[] textBoxArray = new Guna2TextBox[5];
-        // textBoxArray[0]=   Guna.UI2.WinForms;
-        Guna.UI2.WinForms.Guna2TextBox[] prescriptionTextBoxArray = new Guna2TextBox[5];
-        Guna.UI2.WinForms.Guna2Panel[] prescriptionPanelArray = new Guna2Panel[5];
+        string patientID = "";
+
+        //array of text boxes
+        Guna2TextBox[] textBoxArray = new Guna2TextBox[5];
+        string textBoxName;
+
+
+
+        //prescription text Array
+        Guna2TextBox[] prescriptionTextBoxArray = new Guna2TextBox[5];
+        // prescriptionTextBoxArray[0]=newTopic1TextField;
+
+        //array of old prescription panels
+        Guna.UI2.WinForms.Guna2Panel[] arrayOfOldPrescriptionPanel = new Guna2Panel[5];
+
+
         public TreatmentWindow()
         {
             InitializeComponent();
+
         }
 
         private void BtnExit_Click(object sender, EventArgs e)
@@ -40,92 +53,152 @@ namespace webTRON_Management_Software.Views.Doctor
 
         private void BtnAddTopic_Click(object sender, EventArgs e)
         {
-
-            if (numberOfTextFields != 5)
+            if (textBoxArray[numberOfTextFields - 1].Text != "")
             {
-                numberOfTextFields++;
 
-                int yBtnPoint = 82 + 45 * (numberOfTextFields - 1);
-                int yTextFieldPoint = 37 + 45 * (numberOfTextFields - 1);
-
-                //to change the position of the Add Topic Button
-                btnAddTopic.Location = new Point(4, yBtnPoint);
-
-                
-                //to create textfield on the history panel
-                Guna.UI2.WinForms.Guna2TextBox textBox = new Guna2TextBox();
-                textBox.Name = "newTopic" + numberOfTextFields + "TextField";
-                textBox.PlaceholderText = "New Topic";
-                textBox.Location = new Point(4, yTextFieldPoint);
-                textBox.Size = new Size(149, 33);
-                this.prescriptionPanel.Controls.Add(textBox);
-                textBox.Focus();
-                //initialize to textBox array
-                textBoxArray[numberOfTextFields - 1] = textBox;
-
-                
-
-
-                /*
-                // to add the prescription Panel;
-                Guna.UI2.WinForms.Guna2Panel prescriptionPanel = new Guna2Panel();
-                prescriptionPanel.Name = "prescription" + numberOfTextFields + "Panel";
-                prescriptionPanel.Location = new Point(228, 37);
-                prescriptionPanel.Size = new Size(755, 336);
-                prescriptionPanel.BringToFront();
-                MessageBox.Show(prescriptionPanel.Visible.ToString());
-                this.historyPanel.Controls.Add(prescriptionPanel);
-                //to initialize prescription Panel array
-                prescriptionPanelArray[numberOfTextFields - 1] = prescriptionPanel;
-                */
-                /*
-                // for textfield inside prescription textfields
-                Guna.UI2.WinForms.Guna2TextBox prescriptionTextBox = new Guna2TextBox();
-                prescriptionTextBox.Name = "prescription" + numberOfTextFields + "TextBox";
-                prescriptionTextBox.Location = new Point(225, 120 * (numberOfTextFields - 1));
-                prescriptionTextBox.Size = new Size(761, 108);
-                prescriptionTextBox.Text = "Hey! Give him your Prescription.";
-                prescriptionTextBox.BringToFront();
-                prescriptionTextBox.Focus();
-                // MessageBox.Show(prescriptionPanelArray[numberOfTextFields - 1].Enabled.ToString());
-                this.historyPanel.Controls.Add(prescriptionTextBox);
-                //initialize prescriptionTextBoxarray
-                prescriptionTextBoxArray[numberOfTextFields - 1] = prescriptionTextBox;
-                prescriptionTextBox.Text = numberOfTextFields.ToString();
-                */
-
-
-
-                if (numberOfTextFields == 5)
+                if (numberOfTextFields != 5)
                 {
-                    btnAddTopic.Enabled = false;
+                    numberOfTextFields++;
+
+                    int yBtnPoint = 82 + 45 * (numberOfTextFields - 1);
+                    int yTextFieldPoint = 37 + 45 * (numberOfTextFields - 1);
+
+                    //to change the position of the Add Topic Button
+                    btnAddTopic.Location = new Point(4, yBtnPoint);
+
+
+                    //to create textfield on the history panel
+                    Guna2TextBox textBox = new Guna2TextBox();
+                    textBoxName = "newTopic" + numberOfTextFields + "TextField";
+                    textBox.Name = textBoxName;
+
+
+                    textBox.PlaceholderText = "New Topic";
+
+                    textBox.Location = new Point(4, yTextFieldPoint);
+
+                    textBox.Size = new Size(149, 33);
+
+                    this.prescriptionPanel.Controls.Add(textBox);
+
+                    textBox.Focus();
+
+
+
+
+
+                    if (numberOfTextFields == 5)
+                    {
+                        btnAddTopic.Enabled = false;
+                    }
                 }
             }
         }
 
         private void PrescriptionPanel_Paint(object sender, PaintEventArgs e)
         {
-            DataTable dt = new DataTable();
-            dt = Prescription.GetPatientPrescriptionHistory(patientID);
-          
-            if (dt.Rows!=null)
-            {
-               
-                //display table data 
-            }
-            else
-            {
-                prescriptionHistory1TextField.Enabled = false;
-                prescriptionHistory1TextField.Visible = false;
 
-                todaysPrescriptionPanel.Location = new Point(3, 34);
-                lblTodaysDateOutput.Text = Generator.GetRegistrationDate();
-            }
+
+            lblTodaysDateOutput.Text = Generator.GetRegistrationDate();
         }
+
+
 
         private void PatientSerialNumberTextBox_TextChanged(object sender, EventArgs e)
         {
             patientID = lblPtn.Text + "-" + yearComboBox + "-" + patientSerialNumberTextBox.Text;
+        }
+
+        //when we type topic on topic textbox it changes to the text field also
+        private void NewTopic1TextField_TextChanged(object sender, EventArgs e)
+        {
+            lblTodaysPrescriptionTitleOutput.Text = ": " + newTopic1TextField.Text;
+        }
+
+        int i = 0;
+        private void BtnViewHistory_Click(object sender, EventArgs e)
+        {
+            DataTable dt = Prescription.GetPatientPrescriptionHistory(patientID);
+             if (dt.Rows.Count > 0)
+            {
+             foreach (DataRow dr in dt.Rows)
+           
+            {
+
+                int panelYCoordinate = 194 * numberOfOldPrescriptionPanel;
+                numberOfOldPrescriptionPanel++;
+                MessageBox.Show(panelYCoordinate.ToString());
+                //create old prescription panel 
+                Guna2Panel pnl = new Guna2Panel();
+                arrayOfOldPrescriptionPanel[i] = pnl;
+                pnl.Location = new Point(0, panelYCoordinate);
+                pnl.Size = new Size(804, 194);
+                pnl.Name = "oldPrescriptionPanel" + numberOfOldPrescriptionPanel;
+                pnl.BringToFront();
+                pnl.Visible = true;
+
+                //create 
+                Guna2TextBox tb = new Guna2TextBox();
+                tb.Name = "oldPrescriptionTextField" + numberOfOldPrescriptionPanel;
+                // tb.Text = i[3].ToString();
+                tb.Text = "lalalalala";
+                tb.Location = new Point(12, 20);
+                tb.Size = new Size(789, 153);
+                tb.Multiline = true;
+                tb.Visible = true;
+
+                Label lb1 = new Label();
+                lb1.Name = "lblprescriptionDateOutput" + numberOfOldPrescriptionPanel;
+                //  lb1.Text = i[1].ToString();
+                lb1.Text = "sdfsssssssssssss";
+                lb1.Location = new Point(10, 2);
+                lb1.Visible = true;
+                lb1.Size = new Size(97, 15);
+
+
+
+                Label lb2 = new Label();
+                lb2.Name = "lblPrescriptionTitleOutput" + numberOfOldPrescriptionPanel;
+                //lb2.Text = i[2].ToString();
+                lb2.Text = "aaaaaaaaaa";
+                lb2.Location = new Point(119, 2);
+                lb2.Size = new Size(119, 2);
+                
+
+
+                Label lb3 = new Label();
+                lb3.Name = "lblPrescribedBy" + numberOfOldPrescriptionPanel;
+                lb3.Text = "Prescribed By:";
+                lb3.Location = new Point(556, 173);
+                lb3.Size = new Size(84, 15);
+
+
+                Label lb4 = new Label();
+                lb4.Name = "lblPrescribedDoctorNameOutput";
+                lb4.Text = "vvvvvvvvvv";
+                lb4.Location = new Point(651, 173);
+                lb4.Size = new Size(135, 15);
+
+                //add to the panel
+                this.prescriptionDisplayPanel.Controls.Add(arrayOfOldPrescriptionPanel[i]);
+                this.arrayOfOldPrescriptionPanel[i].Controls.Add(tb);
+                this.arrayOfOldPrescriptionPanel[i].Controls.Add(lb1);
+                this.arrayOfOldPrescriptionPanel[i].Controls.Add(lb2);
+                this.arrayOfOldPrescriptionPanel[i].Controls.Add(lb3);
+                this.arrayOfOldPrescriptionPanel[i].Controls.Add(lb4);
+                MessageBox.Show("added to their respective place!" );
+                i++;
+            
+
+
+            }
+            MessageBox.Show("inside if");
+             }
+             else
+            {
+               MessageBox.Show("inside else");
+
+             }
         }
     }
 }

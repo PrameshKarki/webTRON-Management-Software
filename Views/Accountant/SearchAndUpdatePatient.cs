@@ -16,7 +16,7 @@ namespace webTRON_Management_Software.Views.Accountant
     {
         Patient ObjUpdate = new Patient();
         // private static string connectionString = "server=localhost;user id=root;pwd=password;database=webtronmanagement";
-        private static string connectionString = "server=localhost;user id=root;pwd=laxudb;database=webtronmanagement";
+       // private static string connectionString = "server=localhost;user id=root;pwd=laxudb;database=webtronmanagement";
         public SearchAndUpdatePatient()
         {
             InitializeComponent();
@@ -79,9 +79,11 @@ namespace webTRON_Management_Software.Views.Accountant
         {
             DataGridView.Rows.Clear();
             DataTable dt = Patient.GetTableData();
-            foreach (DataRow item in dt.Rows) // from DataTable dt we have to read and Insert them in Gridview. DataRow is the datatype. item is name given to them which are rows of dt;
+            // from DataTable dt we have to read and Insert them in Gridview. DataRow is the datatype. item is name given to them which are rows of dt;
+            foreach (DataRow item in dt.Rows) 
             {
-                int n = DataGridView.Rows.Add(); // adds a row in the DataGridView and returns the index of the added row;
+                // adds a row in the DataGridView and returns the index of the added row;
+                int n = DataGridView.Rows.Add();
                 DataGridView.Rows[n].Cells[0].Value = item[0].ToString();
                 DataGridView.Rows[n].Cells[1].Value = item[1].ToString();
                 DataGridView.Rows[n].Cells[2].Value = item[2].ToString();
@@ -145,11 +147,15 @@ namespace webTRON_Management_Software.Views.Accountant
             patient.status = searchTextBox.Text;
             patient.address = searchTextBox.Text;
 
-            DataTable dt = Patient.SearchFromTable(patient);  // inserts the data table returned from MySqlDataAdapter sda to the DataTable dt;
-            DataGridView.Rows.Clear(); // clear the values in the gridview;
-            foreach (DataRow item in dt.Rows) // from DataTable dt we have to read and Insert them in Gridview. DataRow is the datatype. item is name given to them which are rows of dt;
+            // inserts the data table returned from MySqlDataAdapter sda to the DataTable dt;
+            DataTable dt = Patient.SearchFromTable(patient);
+            // clear the values in the gridview;
+            DataGridView.Rows.Clear();
+            // from DataTable dt we have to read and Insert them in Gridview. DataRow is the datatype. item is name given to them which are rows of dt;
+            foreach (DataRow item in dt.Rows) 
             {
-                int n = DataGridView.Rows.Add(); // adds a row in the DataGridView and returns the index of the added row;
+                // adds a row in the DataGridView and returns the index of the added row;
+                int n = DataGridView.Rows.Add(); 
                 DataGridView.Rows[n].Cells[0].Value = item[0].ToString();
                 DataGridView.Rows[n].Cells[1].Value = item[1].ToString();
                 DataGridView.Rows[n].Cells[2].Value = item[2].ToString();
