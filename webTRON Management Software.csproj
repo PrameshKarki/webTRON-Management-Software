@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Models\Medicine.cs" />
     <Compile Include="Models\Prescription.cs" />
+    <Compile Include="Models\Test.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -157,6 +158,30 @@
     </Compile>
     <Compile Include="Views\Doctor\TreatmentWindow.Designer.cs">
       <DependentUpon>TreatmentWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lab Assistant\ChangeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Lab Assistant\ChangeInfo.Designer.cs">
+      <DependentUpon>ChangeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lab Assistant\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Lab Assistant\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lab Assistant\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Lab Assistant\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lab Assistant\Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Lab Assistant\Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Others\ChangeInfo.cs">
       <SubType>Form</SubType>
@@ -257,6 +282,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Doctor\TreatmentWindow.resx">
       <DependentUpon>TreatmentWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Lab Assistant\ChangeInfo.resx">
+      <DependentUpon>ChangeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Lab Assistant\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Lab Assistant\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Lab Assistant\Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Others\ChangeInfo.resx">
       <DependentUpon>ChangeInfo.cs</DependentUpon>

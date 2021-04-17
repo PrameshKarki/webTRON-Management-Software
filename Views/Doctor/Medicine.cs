@@ -264,6 +264,7 @@ namespace webTRON_Management_Software.Views.Doctor
         //Click event on Next Button
         private void BtnNext_Click(object sender, EventArgs e)
         {
+            bool isSucess;
             //Get patient id
             string patientID = lblPatientIDValue.Text;
             //Initialize count
@@ -300,18 +301,27 @@ namespace webTRON_Management_Software.Views.Doctor
                  count++;
              }
 
-            //Insert data into database
-            bool isSucess = Medicine.Insert(patientID, medicineList);
+            if (medicineList.Count > 0)
+            {
+                //Insert data into database
+                isSucess = Medicine.Insert(patientID, medicineList);
+            }
+            else
+            {
+                //Switch to tests form if there is no any medicine exists in the medicine list
+                isSucess = true;
+            }
             if (isSucess)
             {
-                DisplayAlert("Sucess", "Data stored sucessfully.");
+                //Switch to tests form
+                var test = new Tests();
+                test.Show();
+                this.Hide();
             }
             else
             {
                 DisplayAlert("Danger", "Error Occured");
             }
-            
-           
 
         }
 
@@ -394,6 +404,7 @@ namespace webTRON_Management_Software.Views.Doctor
             runningMedicinesGridView.DataSource =dataTable;
             runningMedicinesGridView.ClearSelection();
         }
-       
+
+      
     }
 }

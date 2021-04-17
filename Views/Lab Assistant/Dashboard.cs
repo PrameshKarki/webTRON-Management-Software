@@ -9,16 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using webTRON_Management_Software.Models;
-using webTRON_Management_Software.Views.Admin;
 using webTRON_Management_Software.Views.Landing_Window;
 
-namespace webTRON_Management_Software.Views.Others
+namespace webTRON_Management_Software.Views.Lab_Assistant
 {
     public partial class Dashboard : Form
     {
         //Instantiate employee class
         Employee employee = new Employee();
-
         public Dashboard()
         {
             InitializeComponent();
@@ -28,45 +26,6 @@ namespace webTRON_Management_Software.Views.Others
             employee = emp;
             InitializeComponent();
         }
-
-        //Load event on Dashboard
-        private void OtherDashboard_Load(object sender, EventArgs e)
-        {
-            //Load Grid View
-            LoadGridView();
-
-            //Change width height of columns,rows of grid view at run time
-            staffsDataGridView.Rows[0].Selected = false;
-            staffsDataGridView.Columns[0].Width = 150;
-            staffsDataGridView.Columns[1].Width = 150;
-            staffsDataGridView.Columns[3].Width = 150;
-            staffsDataGridView.Columns[4].Width = 100;
-
-
-            //Initialize activeUserDetails
-            InitializeActiverUserDetails();
-        }
-        //Load data on grid data table
-        private void LoadGridView()
-        {
-            //Instantiate data table
-            DataTable dt = Employee.FetchStaffsDetails();
-            staffsDataGridView.DataSource = dt;
-        }
-
-
-        //Initialize Active User Details
-        private void InitializeActiverUserDetails()
-        {
-            activeUserName.Text = employee.FirstName;
-            if (employee.img != null)
-            {
-                //Change active user picture
-                MemoryStream ms = new MemoryStream(employee.img);
-                activeUserPicture.Image = Image.FromStream(ms);
-            }
-        }
-
         //Sign Out
         private void SignOut(object sender, EventArgs e)
         {
@@ -91,11 +50,29 @@ namespace webTRON_Management_Software.Views.Others
 
             }
         }
+        //Load event on dashboard
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+            //Initialize activeUserDetails
+            InitializeActiverUserDetails();
+        }
+        //Initialize Active User Details
+        private void InitializeActiverUserDetails()
+        {
+            activeUserName.Text = employee.FirstName;
+            if (employee.img != null)
+            {
+                //Change active user picture
+                MemoryStream ms = new MemoryStream(employee.img);
+                activeUserPicture.Image = Image.FromStream(ms);
+            }
+        }
         //Click event on minimize button
         private void BtnMinimize_Click(object sender, EventArgs e)
         {
-           
+            this.WindowState = FormWindowState.Minimized;
         }
+
         //Click event on settings button
         private void BtnSettings_Click(object sender, EventArgs e)
         {
@@ -103,17 +80,5 @@ namespace webTRON_Management_Software.Views.Others
             settings.Show();
             this.Hide();
         }
-
-        //Text change event on search box
-        private void SearchStaffsTextBox_TextChanged(object sender, EventArgs e)
-        {
-            string searchString = searchStaffsTextBox.Text.Trim();
-            //Instantiate data table
-            DataTable dt = Employee.SearchStaffDetails(searchString);
-            staffsDataGridView.DataSource = dt;
-
-        }
-
-       
     }
 }

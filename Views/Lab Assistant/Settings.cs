@@ -11,14 +11,16 @@ using System.Windows.Forms;
 using webTRON_Management_Software.Models;
 using webTRON_Management_Software.Views.Landing_Window;
 
-namespace webTRON_Management_Software.Views.Others
+namespace webTRON_Management_Software.Views.Lab_Assistant
 {
+
     public partial class Settings : Form
     {
         //Instantiate employee class
         Employee employee = new Employee();
         //Instantiate memorystream
         MemoryStream ms;
+       
         public Settings()
         {
             InitializeComponent();
@@ -27,6 +29,14 @@ namespace webTRON_Management_Software.Views.Others
         {
             employee = emp;
             InitializeComponent();
+        }
+        //Click event on changeinfo
+        private void BtnChangeInfo_Click(object sender, EventArgs e)
+        {
+            //Instantiate change info form
+            var changeInfo = new ChangeInfo(employee);
+            changeInfo.Show();
+            this.Close();
         }
 
         //Sign out
@@ -50,9 +60,9 @@ namespace webTRON_Management_Software.Views.Others
                     Application.Exit();
                 }
 
-
             }
         }
+
         //Click event on dashboard button
         private void BtnDashboard_Click(object sender, EventArgs e)
         {
@@ -62,8 +72,8 @@ namespace webTRON_Management_Software.Views.Others
             this.Close();
 
         }
-
-        //Load event on settings form
+        
+        //Load event on Settings form
         private void Settings_Load(object sender, EventArgs e)
         {
             //Initialize active user details
@@ -88,15 +98,6 @@ namespace webTRON_Management_Software.Views.Others
             }
 
         }
-        //Click event on changeinfo
-        private void BtnChangeInfo_Click(object sender, EventArgs e)
-        {
-            //Instantiate change info form
-            var changeInfo = new ChangeInfo(employee);
-            changeInfo.Show();
-            this.Close();
-        }
-
         //Click event on change password
         private void BtnChangePassword_Click(object sender, EventArgs e)
         {
@@ -143,11 +144,11 @@ namespace webTRON_Management_Software.Views.Others
             string userID = employee.UserID;
             employee = Employee.GetActiveUserDetails(userID);
             //Change active user picture
-             ms = new MemoryStream(employee.img);
+            ms = new MemoryStream(employee.img);
             activeUserPicture.Image = Image.FromStream(ms);
-           
 
         }
+
         //Hide alert
         private void AlertTimer_Tick(object sender, EventArgs e)
         {
@@ -172,7 +173,6 @@ namespace webTRON_Management_Software.Views.Others
             alertText.Text = message;
             alertTransition.ShowSync(alertPanel);
         }
-
         //Click event on minimize button
         private void BtnMinimize_Click(object sender, EventArgs e)
         {

@@ -144,6 +144,54 @@ namespace webTRON_Management_Software.Utils
             return userID;
 
         }
+        //Lab Assistant ID Generator
+        public static string GenerateLabAssistantId()
+        {
+            //SQLConnection
+            MySqlConnection conn = new MySqlConnection(connectionString);
+
+            int initiator = 777777;
+            int counter, countOfLabAssistant = 0;
+
+            string userID = "";
+            //SQL Query to fetch number of total number of Lab Assistant
+            string SQLQuery = "SELECT COUNT(userID) FROM employeeInfo WHERE Role='Lab Assistant'";
+            try
+            {
+                //SQL Command
+                MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
+                //Open Connection
+                conn.Open();
+                //Execute Query
+                object returnValue = cmd.ExecuteScalar();
+
+                if (returnValue != null)
+                {
+                    countOfLabAssistant = Convert.ToInt32(returnValue);
+                }
+                else
+                {
+                    MessageBox.Show("Error Occured! Please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                //Close Connection
+                conn.Close();
+            }
+            counter = initiator + countOfLabAssistant;
+            DateTime d = DateTime.Now;
+            int date = (d.Year) % 100;
+            userID += "LAB-" + date + "-" + counter;
+            return userID;
+
+        }
         //patinetID generator
         public static string GeneratePatientId()
         {

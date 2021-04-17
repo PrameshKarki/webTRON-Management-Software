@@ -8,6 +8,7 @@ using Doctor=webTRON_Management_Software.Views.Doctor;
 using Admin=webTRON_Management_Software.Views.Admin;
 using webTRON_Management_Software.Views.Landing_Window;
 using Others=webTRON_Management_Software.Views.Others;
+using LabAssistant = webTRON_Management_Software.Views.Lab_Assistant;
 using webTRON_Management_Software.Views.Utilities;
 
 namespace webTRON_Management_Software
@@ -24,7 +25,7 @@ namespace webTRON_Management_Software
             Application.SetCompatibleTextRenderingDefault(false);
 
             //Run main window here
-            Application.Run(new Doctor.MedicineForm());
+            Application.Run(new LabAssistant.Dashboard());
         }
     }
 }

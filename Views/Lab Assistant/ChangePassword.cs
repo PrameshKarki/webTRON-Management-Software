@@ -12,7 +12,7 @@ using webTRON_Management_Software.Models;
 using webTRON_Management_Software.Utils;
 using webTRON_Management_Software.Views.Landing_Window;
 
-namespace webTRON_Management_Software.Views.Others
+namespace webTRON_Management_Software.Views.Lab_Assistant
 {
     public partial class ChangePassword : Form
     {
@@ -36,19 +36,6 @@ namespace webTRON_Management_Software.Views.Others
             InitializeActiverUserDetails();
 
         }
-        //Initialize Active User Details
-        private void InitializeActiverUserDetails()
-        {
-            activeUserName.Text = employee.FirstName;
-            if (employee.img != null)
-            {
-                //Change active user picture
-                MemoryStream ms = new MemoryStream(employee.img);
-                activeUserPicture.Image = Image.FromStream(ms);
-            }
-
-
-        }
 
         //Click event on dashboard button
         private void BtnDashboard_Click(object sender, EventArgs e)
@@ -58,6 +45,7 @@ namespace webTRON_Management_Software.Views.Others
             dashboard.Show();
             this.Close();
         }
+
         //Click event on Settings button
         private void BtnSettings_Click(object sender, EventArgs e)
         {
@@ -97,6 +85,7 @@ namespace webTRON_Management_Software.Views.Others
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
         //Click event on verify button
         private void BtnVerify_Click(object sender, EventArgs e)
         {
@@ -138,6 +127,7 @@ namespace webTRON_Management_Software.Views.Others
 
             }
         }
+
         //Text change event on verification code text box
         private void VerificationCodeTextBox1_TextChanged(object sender, EventArgs e)
         {
@@ -167,7 +157,6 @@ namespace webTRON_Management_Software.Views.Others
 
 
         }
-
         private void VerificationCodeTextBox4_TextChanged(object sender, EventArgs e)
         {
             if (verificationCodeTextBox4.Text.Length == 1)
@@ -176,22 +165,22 @@ namespace webTRON_Management_Software.Views.Others
             }
 
         }
-
         //Hide Alert
-          private void AlertTimer_Tick(object sender, EventArgs e)
+        private void AlertTimer_Tick(object sender, EventArgs e)
         {
             alertTransition.HideSync(alertPanel);
         }
         //Show alert
-        private void DisplayAlert(string type,string message)
+        private void DisplayAlert(string type, string message)
         {
             if (type == "Danger")
             {
                 alertPanel.BackgroundImage = Properties.Resources.alert_danger_background;
                 alertImage.Image = Properties.Resources.alert_danger_icon;
                 alertText.ForeColor = Color.Red;
-                
-            }else if (type == "Sucess")
+
+            }
+            else if (type == "Sucess")
             {
                 alertPanel.BackgroundImage = Properties.Resources.alert_sucess_background;
                 alertImage.Image = Properties.Resources.alert_sucess_icon;
@@ -251,6 +240,20 @@ namespace webTRON_Management_Software.Views.Others
                     DisplayAlert("Danger", "Invalid credentials.");
                 }
 
+            }
+
+
+        }
+
+        //Initialize Active User Details
+        private void InitializeActiverUserDetails()
+        {
+            activeUserName.Text = employee.FirstName;
+            if (employee.img != null)
+            {
+                //Change active user picture
+                MemoryStream ms = new MemoryStream(employee.img);
+                activeUserPicture.Image = Image.FromStream(ms);
             }
 
 

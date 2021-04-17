@@ -30,6 +30,9 @@ namespace webTRON_Management_Software.Views.Doctor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tests));
             this.usgCheckBox = new Guna.UI2.WinForms.Guna2CheckBox();
@@ -64,6 +67,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.lblRegistrationId = new System.Windows.Forms.Label();
             this.lblTestResults = new System.Windows.Forms.Label();
             this.testResultsPanel = new System.Windows.Forms.Panel();
+            this.testsResultDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.alertTransition = new Guna.UI2.WinForms.Guna2Transition();
             this.alertPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.alertText = new System.Windows.Forms.Label();
@@ -79,6 +83,8 @@ namespace webTRON_Management_Software.Views.Doctor
             this.alertTimer = new System.Windows.Forms.Timer(this.components);
             this.dragableTestForm = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.prescribedTestPanel.SuspendLayout();
+            this.testResultsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.testsResultDataGridView)).BeginInit();
             this.alertPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.alertCloseBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alertImage)).BeginInit();
@@ -536,11 +542,81 @@ namespace webTRON_Management_Software.Views.Doctor
             // 
             // testResultsPanel
             // 
+            this.testResultsPanel.Controls.Add(this.testsResultDataGridView);
             this.alertTransition.SetDecoration(this.testResultsPanel, Guna.UI2.AnimatorNS.DecorationType.None);
             this.testResultsPanel.Location = new System.Drawing.Point(19, 354);
             this.testResultsPanel.Name = "testResultsPanel";
             this.testResultsPanel.Size = new System.Drawing.Size(957, 213);
             this.testResultsPanel.TabIndex = 149;
+            // 
+            // testsResultDataGridView
+            // 
+            this.testsResultDataGridView.AllowUserToAddRows = false;
+            this.testsResultDataGridView.AllowUserToDeleteRows = false;
+            this.testsResultDataGridView.AllowUserToResizeColumns = false;
+            this.testsResultDataGridView.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.testsResultDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.testsResultDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.testsResultDataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.testsResultDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.testsResultDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.testsResultDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.testsResultDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.testsResultDataGridView.ColumnHeadersHeight = 30;
+            this.testsResultDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.alertTransition.SetDecoration(this.testsResultDataGridView, Guna.UI2.AnimatorNS.DecorationType.None);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.testsResultDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            this.testsResultDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.testsResultDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.testsResultDataGridView.EnableHeadersVisualStyles = false;
+            this.testsResultDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.testsResultDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.testsResultDataGridView.MultiSelect = false;
+            this.testsResultDataGridView.Name = "testsResultDataGridView";
+            this.testsResultDataGridView.ReadOnly = true;
+            this.testsResultDataGridView.RowHeadersVisible = false;
+            this.testsResultDataGridView.RowHeadersWidth = 51;
+            this.testsResultDataGridView.RowTemplate.Height = 28;
+            this.testsResultDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.testsResultDataGridView.Size = new System.Drawing.Size(957, 213);
+            this.testsResultDataGridView.TabIndex = 33;
+            this.testsResultDataGridView.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
+            this.testsResultDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.testsResultDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.testsResultDataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.testsResultDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.testsResultDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.testsResultDataGridView.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.testsResultDataGridView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.testsResultDataGridView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            this.testsResultDataGridView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.testsResultDataGridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.testsResultDataGridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.testsResultDataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.testsResultDataGridView.ThemeStyle.HeaderStyle.Height = 30;
+            this.testsResultDataGridView.ThemeStyle.ReadOnly = true;
+            this.testsResultDataGridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.testsResultDataGridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.testsResultDataGridView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.testsResultDataGridView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.testsResultDataGridView.ThemeStyle.RowsStyle.Height = 28;
+            this.testsResultDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.testsResultDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
             // alertTransition
             // 
@@ -635,6 +711,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.btnNext.TabIndex = 148;
             this.btnNext.Text = "Next";
             this.btnNext.TextOffset = new System.Drawing.Point(-1, 0);
+            this.btnNext.Click += new System.EventHandler(this.BtnNext_Click);
             // 
             // activePanel
             // 
@@ -768,8 +845,11 @@ namespace webTRON_Management_Software.Views.Doctor
             this.Name = "Tests";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tests";
+            this.Load += new System.EventHandler(this.Tests_Load);
             this.prescribedTestPanel.ResumeLayout(false);
             this.prescribedTestPanel.PerformLayout();
+            this.testResultsPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.testsResultDataGridView)).EndInit();
             this.alertPanel.ResumeLayout(false);
             this.alertPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.alertCloseBtn)).EndInit();
@@ -832,5 +912,6 @@ namespace webTRON_Management_Software.Views.Doctor
         private Guna.UI2.WinForms.Guna2PictureBox alertImage;
         private System.Windows.Forms.Timer alertTimer;
         private Guna.UI2.WinForms.Guna2DragControl dragableTestForm;
+        private Guna.UI2.WinForms.Guna2DataGridView testsResultDataGridView;
     }
 }

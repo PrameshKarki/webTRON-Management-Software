@@ -209,7 +209,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.dateOfBirthPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateOfBirthPicker.HoverState.Parent = this.dateOfBirthPicker;
             this.dateOfBirthPicker.Location = new System.Drawing.Point(593, 375);
-            this.dateOfBirthPicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateOfBirthPicker.Margin = new System.Windows.Forms.Padding(4);
             this.dateOfBirthPicker.MaxDate = new System.DateTime(2021, 3, 30, 0, 0, 0, 0);
             this.dateOfBirthPicker.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dateOfBirthPicker.Name = "dateOfBirthPicker";
@@ -242,7 +242,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.alertTransition.SetDecoration(this.isMale, Guna.UI2.AnimatorNS.DecorationType.None);
             this.isMale.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.isMale.Location = new System.Drawing.Point(593, 442);
-            this.isMale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.isMale.Margin = new System.Windows.Forms.Padding(4);
             this.isMale.Name = "isMale";
             this.isMale.Size = new System.Drawing.Size(76, 32);
             this.isMale.TabIndex = 6;
@@ -266,7 +266,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.alertTransition.SetDecoration(this.isFemale, Guna.UI2.AnimatorNS.DecorationType.None);
             this.isFemale.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.isFemale.Location = new System.Drawing.Point(684, 442);
-            this.isFemale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.isFemale.Margin = new System.Windows.Forms.Padding(4);
             this.isFemale.Name = "isFemale";
             this.isFemale.Size = new System.Drawing.Size(95, 32);
             this.isFemale.TabIndex = 7;
@@ -290,7 +290,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.alertTransition.SetDecoration(this.isOthers, Guna.UI2.AnimatorNS.DecorationType.None);
             this.isOthers.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.isOthers.Location = new System.Drawing.Point(812, 439);
-            this.isOthers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.isOthers.Margin = new System.Windows.Forms.Padding(4);
             this.isOthers.Name = "isOthers";
             this.isOthers.Size = new System.Drawing.Size(91, 32);
             this.isOthers.TabIndex = 8;
@@ -409,10 +409,11 @@ namespace webTRON_Management_Software.Views.Admin
             "Admin",
             "Doctor",
             "Accountant",
-            "Others"});
+            "Others",
+            "Lab Assistant"});
             this.roleComboBox.ItemsAppearance.Parent = this.roleComboBox;
             this.roleComboBox.Location = new System.Drawing.Point(596, 127);
-            this.roleComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.roleComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.roleComboBox.Name = "roleComboBox";
             this.roleComboBox.ShadowDecoration.Parent = this.roleComboBox;
             this.roleComboBox.Size = new System.Drawing.Size(185, 36);
@@ -439,7 +440,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.alertTransition.SetDecoration(this.sidebarPanel, Guna.UI2.AnimatorNS.DecorationType.None);
             this.sidebarPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
             this.sidebarPanel.Location = new System.Drawing.Point(-1, 0);
-            this.sidebarPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sidebarPanel.Margin = new System.Windows.Forms.Padding(4);
             this.sidebarPanel.Name = "sidebarPanel";
             this.sidebarPanel.ShadowDecoration.Parent = this.sidebarPanel;
             this.sidebarPanel.Size = new System.Drawing.Size(91, 655);
@@ -543,7 +544,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.alertTransition.SetDecoration(this.btnMinimize, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
             this.btnMinimize.Location = new System.Drawing.Point(1215, 25);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.ShadowDecoration.Parent = this.btnMinimize;
             this.btnMinimize.Size = new System.Drawing.Size(21, 4);
@@ -558,7 +559,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.alertTransition.SetDecoration(this.btnExit, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.Location = new System.Drawing.Point(1280, 6);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
             this.btnExit.ShadowDecoration.Parent = this.btnExit;
             this.btnExit.Size = new System.Drawing.Size(28, 28);
@@ -572,7 +573,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.alertTransition.SetDecoration(this.webTRONPicture, Guna.UI2.AnimatorNS.DecorationType.None);
             this.webTRONPicture.Image = global::webTRON_Management_Software.Properties.Resources.webTRONLogoWithSlogan;
             this.webTRONPicture.Location = new System.Drawing.Point(-1, 670);
-            this.webTRONPicture.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.webTRONPicture.Margin = new System.Windows.Forms.Padding(4);
             this.webTRONPicture.Name = "webTRONPicture";
             this.webTRONPicture.ShadowDecoration.Parent = this.webTRONPicture;
             this.webTRONPicture.Size = new System.Drawing.Size(231, 85);
@@ -589,7 +590,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.guna2Panel2.Controls.Add(this.activeUserName);
             this.alertTransition.SetDecoration(this.guna2Panel2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2Panel2.Location = new System.Drawing.Point(80, -1);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
             this.guna2Panel2.Size = new System.Drawing.Size(229, 98);
@@ -615,7 +616,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.alertTransition.SetDecoration(this.activeUserPicture, Guna.UI2.AnimatorNS.DecorationType.None);
             this.activeUserPicture.Image = global::webTRON_Management_Software.Properties.Resources.man_picture;
             this.activeUserPicture.Location = new System.Drawing.Point(5, 21);
-            this.activeUserPicture.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.activeUserPicture.Margin = new System.Windows.Forms.Padding(4);
             this.activeUserPicture.Name = "activeUserPicture";
             this.activeUserPicture.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.activeUserPicture.ShadowDecoration.Parent = this.activeUserPicture;
@@ -648,7 +649,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
             this.btnSubmit.HoverState.Parent = this.btnSubmit;
             this.btnSubmit.Location = new System.Drawing.Point(977, 622);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(4);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.ShadowDecoration.Parent = this.btnSubmit;
             this.btnSubmit.Size = new System.Drawing.Size(240, 55);
@@ -687,7 +688,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.alertPanel.Controls.Add(this.alertImage);
             this.alertTransition.SetDecoration(this.alertPanel, Guna.UI2.AnimatorNS.DecorationType.None);
             this.alertPanel.Location = new System.Drawing.Point(919, 688);
-            this.alertPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.alertPanel.Margin = new System.Windows.Forms.Padding(4);
             this.alertPanel.Name = "alertPanel";
             this.alertPanel.ShadowDecoration.Parent = this.alertPanel;
             this.alertPanel.Size = new System.Drawing.Size(408, 68);
@@ -713,7 +714,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.alertTransition.SetDecoration(this.alertCloseBtn, Guna.UI2.AnimatorNS.DecorationType.None);
             this.alertCloseBtn.Image = global::webTRON_Management_Software.Properties.Resources.alert_close_icon;
             this.alertCloseBtn.Location = new System.Drawing.Point(359, 21);
-            this.alertCloseBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.alertCloseBtn.Margin = new System.Windows.Forms.Padding(4);
             this.alertCloseBtn.Name = "alertCloseBtn";
             this.alertCloseBtn.ShadowDecoration.Parent = this.alertCloseBtn;
             this.alertCloseBtn.Size = new System.Drawing.Size(27, 25);
@@ -727,7 +728,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.alertTransition.SetDecoration(this.alertImage, Guna.UI2.AnimatorNS.DecorationType.None);
             this.alertImage.Image = global::webTRON_Management_Software.Properties.Resources.alert_danger_icon;
             this.alertImage.Location = new System.Drawing.Point(29, 21);
-            this.alertImage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.alertImage.Margin = new System.Windows.Forms.Padding(4);
             this.alertImage.Name = "alertImage";
             this.alertImage.ShadowDecoration.Parent = this.alertImage;
             this.alertImage.Size = new System.Drawing.Size(27, 25);
@@ -774,7 +775,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.Controls.Add(this.guna2Panel2);
             this.alertTransition.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CreateAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreateAccount";

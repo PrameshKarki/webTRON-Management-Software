@@ -65,6 +65,9 @@ namespace webTRON_Management_Software.Views.Admin
                     obj.UserID = Generator.GenerateAccountantId();
                 else if (roleComboBox.Text == "Others")
                     obj.UserID = Generator.GenerateEmployeeId();
+                else if (roleComboBox.Text == "Lab Assistant")
+                    obj.UserID = Generator.GenerateLabAssistantId();
+
 
                 //Fetch Sex
                 if (isMale.Checked)
