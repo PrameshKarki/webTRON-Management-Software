@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FluentValidation.Results;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using webTRON_Management_Software.Models;
 using webTRON_Management_Software.Utils;
+using webTRON_Management_Software.Utils.Validators;
 using webTRON_Management_Software.Views.Landing_Window;
 
 namespace webTRON_Management_Software.Views.Utilities
@@ -42,46 +44,65 @@ namespace webTRON_Management_Software.Views.Utilities
             //Check if textbox is empty or null
             if(string.IsNullOrEmpty(recoveryEmailTextBox.Text))
             {
-                MessageBox.Show("Insert valid email.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                recoveryEmailTextBox.BorderColor = Color.Red;
+
             }
             else
             {
-                 enteredEmail = recoveryEmailTextBox.Text;
-                //Check email is exist in database or not
-                if (Employee.IsEmailExist(enteredEmail))
+                enteredEmail = recoveryEmailTextBox.Text;
+
+                //Validate Email
+                UserEmail email = new UserEmail();
+                email.value = enteredEmail;
+
+                EmailValidator emailValidator = new EmailValidator();
+
+                ValidationResult result = emailValidator.Validate(email);
+                var resultString = result.ToString("-");
+                var message = resultString.Split('-');
+                
+                if (result.IsValid)
                 {
-                    //Send Verification code and store this in database
-                    int generatedVerificationCode = Generator.GenerateVerificationCode();
-                    bool isMailSendSucessfully = Email.SendVerificationCode(enteredEmail, generatedVerificationCode);
-                    if (isMailSendSucessfully)
+                    //Check email is exist in database or not
+                    if (Employee.IsEmailExist(enteredEmail))
                     {
-                        bool isCodeStoredSucessfully=Employee.StoreVerificationCode(enteredEmail, generatedVerificationCode);
-                        if (isCodeStoredSucessfully)
+                        //Send Verification code and store this in database
+                        int generatedVerificationCode = Generator.GenerateVerificationCode();
+                        bool isMailSendSucessfully = Email.SendVerificationCode(enteredEmail, generatedVerificationCode);
+                        if (isMailSendSucessfully)
                         {
-                            //Show enterVerificationCodePanel
-                            verificationPanelTransition.ShowSync(enterVerificationCodePanel);
+                            bool isCodeStoredSucessfully = Employee.StoreVerificationCode(enteredEmail, generatedVerificationCode);
+                            if (isCodeStoredSucessfully)
+                            {
+                                //Show enterVerificationCodePanel
+                                verificationPanelTransition.ShowSync(enterVerificationCodePanel);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Internal Server Error.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+
                         }
                         else
                         {
-                            MessageBox.Show("Please try again.","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Internal Server Error.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
-                      
+
                     }
                     else
                     {
-                        MessageBox.Show("Please try again.","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        recoveryEmailTextBox.BorderColor = Color.Red;
+
                     }
-                   
+
                 }
                 else
                 {
-                    MessageBox.Show("Match not found!", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    recoveryEmailTextBox.BorderColor = Color.Red;
                 }
 
             }
     
-            
-
         }
         //Click event on verify button click
         private void BtnVerify_Click(object sender, EventArgs e)

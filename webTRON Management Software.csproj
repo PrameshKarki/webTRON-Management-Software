@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FluentValidation, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>packages\FluentValidation.10.3.3\lib\netstandard2.0\FluentValidation.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2">
       <HintPath>..\..\..\Downloads\New folder\PcWonderland.com_Guna_UI_Framework_Ultimate_2\Guna UI Framework Ultimate v2.0.0.1 Lib-Master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
     </Reference>
@@ -64,6 +67,7 @@
     <Compile Include="Models\Medicine.cs" />
     <Compile Include="Models\Prescription.cs" />
     <Compile Include="Models\Test.cs" />
+    <Compile Include="Models\UserEmail.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -72,6 +76,7 @@
     <Compile Include="Utils\MedicineRow.cs" />
     <Compile Include="Utils\Printer.cs" />
     <Compile Include="Utils\QRCodeGenerator.cs" />
+    <Compile Include="Utils\Validators\EmailValidator.cs" />
     <Compile Include="Views\Accountant\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
