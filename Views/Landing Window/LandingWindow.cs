@@ -35,7 +35,8 @@ namespace webTRON_Management_Software.Views.Landing_Window
               //Validating user input
             if (string.IsNullOrEmpty(userIDTextBox.Text) || string.IsNullOrEmpty(passwordTextBox.Text))
             {
-                DisplayAlert("Danger", "Fill all the fields.");
+                userIDTextBox.BorderColor = Color.Red;
+                passwordTextBox.BorderColor = Color.Red;
 
             }
             else
@@ -77,8 +78,9 @@ namespace webTRON_Management_Software.Views.Landing_Window
                 }
                 else
                 {
-                    //Display alert here
-                    DisplayAlert("Danger", "Invalid credentials.");
+                    //Validation response
+                    userIDTextBox.BorderColor = Color.Red;
+                    passwordTextBox.BorderColor = Color.Red;
                 }
             }
 
@@ -132,30 +134,23 @@ namespace webTRON_Management_Software.Views.Landing_Window
             var forgetPassword = new Utilities.ForgetPassword();
             forgetPassword.Show();
         }
-        //Hide alert
-        private void AlertTimer_Tick(object sender, EventArgs e)
+
+
+        private void passwordTextBox_Leave(object sender, EventArgs e)
         {
-            alertTransition.HideSync(alertPanel);
-        }
-        //Show alert
-        private void DisplayAlert(string type,string message)
-        {
-            if (type == "Danger")
+            if (passwordTextBox.Text.Length!=0 && passwordTextBox.BorderColor == Color.Red)
             {
-                alertPanel.BackgroundImage = Properties.Resources.alert_danger_background;
-                alertImage.Image = Properties.Resources.alert_danger_icon;
-                alertText.ForeColor = Color.Red;
-                
-            }else if (type == "Sucess")
-            {
-                alertPanel.BackgroundImage = Properties.Resources.alert_sucess_background;
-                alertImage.Image = Properties.Resources.alert_sucess_icon;
-                alertText.ForeColor = Color.Green;
+                passwordTextBox.BorderColor = Color.FromArgb(213, 218, 223);
             }
-            alertText.Text = message;
-            alertTransition.ShowSync(alertPanel);
+
         }
 
-      
+        private void userIDTextBox_Leave(object sender, EventArgs e)
+        {
+            if (userIDTextBox.Text.Length !=0 && userIDTextBox.BorderColor == Color.Red)
+            {
+                userIDTextBox.BorderColor = Color.FromArgb(213, 218, 223);
+            }
+        }
     }
 }

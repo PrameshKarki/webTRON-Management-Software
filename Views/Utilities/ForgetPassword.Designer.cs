@@ -42,6 +42,11 @@
             this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.enterVerificationCodePanel = new Guna.UI2.WinForms.Guna2Panel();
             this.resetPasswordPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblPasswordMustInclude = new System.Windows.Forms.Label();
             this.lblConfirmPassword = new System.Windows.Forms.Label();
             this.confirmPasswordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.newPasswordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
@@ -208,7 +213,7 @@
             this.enterVerificationCodePanel.Controls.Add(this.verificationCodeTextBox1);
             this.resetPasswordPanelTransition.SetDecoration(this.enterVerificationCodePanel, Guna.UI2.AnimatorNS.DecorationType.None);
             this.verificationPanelTransition.SetDecoration(this.enterVerificationCodePanel, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.enterVerificationCodePanel.Location = new System.Drawing.Point(426, 381);
+            this.enterVerificationCodePanel.Location = new System.Drawing.Point(392, 38);
             this.enterVerificationCodePanel.Name = "enterVerificationCodePanel";
             this.enterVerificationCodePanel.ShadowDecoration.Parent = this.enterVerificationCodePanel;
             this.enterVerificationCodePanel.Size = new System.Drawing.Size(561, 480);
@@ -217,6 +222,11 @@
             // 
             // resetPasswordPanel
             // 
+            this.resetPasswordPanel.Controls.Add(this.label5);
+            this.resetPasswordPanel.Controls.Add(this.label4);
+            this.resetPasswordPanel.Controls.Add(this.label3);
+            this.resetPasswordPanel.Controls.Add(this.label2);
+            this.resetPasswordPanel.Controls.Add(this.lblPasswordMustInclude);
             this.resetPasswordPanel.Controls.Add(this.lblConfirmPassword);
             this.resetPasswordPanel.Controls.Add(this.confirmPasswordTextBox);
             this.resetPasswordPanel.Controls.Add(this.newPasswordTextBox);
@@ -224,12 +234,72 @@
             this.resetPasswordPanel.Controls.Add(this.btnReset);
             this.resetPasswordPanelTransition.SetDecoration(this.resetPasswordPanel, Guna.UI2.AnimatorNS.DecorationType.None);
             this.verificationPanelTransition.SetDecoration(this.resetPasswordPanel, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.resetPasswordPanel.Location = new System.Drawing.Point(3, 14);
+            this.resetPasswordPanel.Location = new System.Drawing.Point(3, 3);
             this.resetPasswordPanel.Name = "resetPasswordPanel";
             this.resetPasswordPanel.ShadowDecoration.Parent = this.resetPasswordPanel;
             this.resetPasswordPanel.Size = new System.Drawing.Size(561, 480);
             this.resetPasswordPanel.TabIndex = 15;
             this.resetPasswordPanel.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.verificationPanelTransition.SetDecoration(this.label5, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.resetPasswordPanelTransition.SetDecoration(this.label5, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label5.Location = new System.Drawing.Point(139, 360);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(138, 17);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "At least 8 characters";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.verificationPanelTransition.SetDecoration(this.label4, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.resetPasswordPanelTransition.SetDecoration(this.label4, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label4.Location = new System.Drawing.Point(139, 383);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(218, 17);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "At least one uppercase character";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.verificationPanelTransition.SetDecoration(this.label3, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.resetPasswordPanelTransition.SetDecoration(this.label3, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label3.Location = new System.Drawing.Point(139, 405);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(214, 17);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "At least one lowercase character";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.verificationPanelTransition.SetDecoration(this.label2, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.resetPasswordPanelTransition.SetDecoration(this.label2, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label2.Location = new System.Drawing.Point(140, 428);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(195, 17);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "At least one special character";
+            // 
+            // lblPasswordMustInclude
+            // 
+            this.lblPasswordMustInclude.AutoSize = true;
+            this.verificationPanelTransition.SetDecoration(this.lblPasswordMustInclude, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.resetPasswordPanelTransition.SetDecoration(this.lblPasswordMustInclude, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblPasswordMustInclude.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold);
+            this.lblPasswordMustInclude.Location = new System.Drawing.Point(137, 334);
+            this.lblPasswordMustInclude.Name = "lblPasswordMustInclude";
+            this.lblPasswordMustInclude.Size = new System.Drawing.Size(178, 17);
+            this.lblPasswordMustInclude.TabIndex = 18;
+            this.lblPasswordMustInclude.Text = "Password Must Include:";
             // 
             // lblConfirmPassword
             // 
@@ -237,7 +307,7 @@
             this.verificationPanelTransition.SetDecoration(this.lblConfirmPassword, Guna.UI2.AnimatorNS.DecorationType.None);
             this.resetPasswordPanelTransition.SetDecoration(this.lblConfirmPassword, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.lblConfirmPassword.Location = new System.Drawing.Point(141, 200);
+            this.lblConfirmPassword.Location = new System.Drawing.Point(145, 143);
             this.lblConfirmPassword.Name = "lblConfirmPassword";
             this.lblConfirmPassword.Size = new System.Drawing.Size(167, 24);
             this.lblConfirmPassword.TabIndex = 17;
@@ -261,7 +331,7 @@
             this.confirmPasswordTextBox.ForeColor = System.Drawing.Color.Black;
             this.confirmPasswordTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.confirmPasswordTextBox.HoverState.Parent = this.confirmPasswordTextBox;
-            this.confirmPasswordTextBox.Location = new System.Drawing.Point(146, 238);
+            this.confirmPasswordTextBox.Location = new System.Drawing.Point(146, 184);
             this.confirmPasswordTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.confirmPasswordTextBox.Name = "confirmPasswordTextBox";
             this.confirmPasswordTextBox.PasswordChar = '\0';
@@ -271,6 +341,7 @@
             this.confirmPasswordTextBox.Size = new System.Drawing.Size(258, 36);
             this.confirmPasswordTextBox.TabIndex = 16;
             this.confirmPasswordTextBox.UseSystemPasswordChar = true;
+            this.confirmPasswordTextBox.Leave += new System.EventHandler(this.confirmPasswordTextBox_Leave);
             // 
             // newPasswordTextBox
             // 
@@ -290,7 +361,7 @@
             this.newPasswordTextBox.ForeColor = System.Drawing.Color.Black;
             this.newPasswordTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.newPasswordTextBox.HoverState.Parent = this.newPasswordTextBox;
-            this.newPasswordTextBox.Location = new System.Drawing.Point(144, 146);
+            this.newPasswordTextBox.Location = new System.Drawing.Point(144, 92);
             this.newPasswordTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.newPasswordTextBox.Name = "newPasswordTextBox";
             this.newPasswordTextBox.PasswordChar = '\0';
@@ -300,6 +371,7 @@
             this.newPasswordTextBox.Size = new System.Drawing.Size(258, 36);
             this.newPasswordTextBox.TabIndex = 15;
             this.newPasswordTextBox.UseSystemPasswordChar = true;
+            this.newPasswordTextBox.Leave += new System.EventHandler(this.newPasswordTextBox_Leave);
             // 
             // lblEnterNewPassword
             // 
@@ -307,7 +379,7 @@
             this.verificationPanelTransition.SetDecoration(this.lblEnterNewPassword, Guna.UI2.AnimatorNS.DecorationType.None);
             this.resetPasswordPanelTransition.SetDecoration(this.lblEnterNewPassword, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblEnterNewPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.lblEnterNewPassword.Location = new System.Drawing.Point(141, 105);
+            this.lblEnterNewPassword.Location = new System.Drawing.Point(141, 51);
             this.lblEnterNewPassword.Name = "lblEnterNewPassword";
             this.lblEnterNewPassword.Size = new System.Drawing.Size(191, 24);
             this.lblEnterNewPassword.TabIndex = 15;
@@ -324,7 +396,7 @@
             this.btnReset.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.btnReset.ForeColor = System.Drawing.Color.White;
             this.btnReset.HoverState.Parent = this.btnReset;
-            this.btnReset.Location = new System.Drawing.Point(192, 313);
+            this.btnReset.Location = new System.Drawing.Point(192, 259);
             this.btnReset.Name = "btnReset";
             this.btnReset.ShadowDecoration.Parent = this.btnReset;
             this.btnReset.Size = new System.Drawing.Size(175, 53);
@@ -432,7 +504,7 @@
             this.btnVerify.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.btnVerify.ForeColor = System.Drawing.Color.White;
             this.btnVerify.HoverState.Parent = this.btnVerify;
-            this.btnVerify.Location = new System.Drawing.Point(175, 288);
+            this.btnVerify.Location = new System.Drawing.Point(181, 288);
             this.btnVerify.Name = "btnVerify";
             this.btnVerify.ShadowDecoration.Parent = this.btnVerify;
             this.btnVerify.Size = new System.Drawing.Size(175, 53);
@@ -618,5 +690,10 @@
         private Guna.UI2.WinForms.Guna2TextBox verificationCodeTextBox3;
         private Guna.UI2.WinForms.Guna2TextBox verificationCodeTextBox4;
         private Guna.UI2.WinForms.Guna2DragControl DragableForgetPasswordForm;
+        private System.Windows.Forms.Label lblPasswordMustInclude;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }

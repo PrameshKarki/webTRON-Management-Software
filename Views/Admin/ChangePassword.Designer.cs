@@ -30,7 +30,7 @@ namespace webTRON_Management_Software.Views.Admin
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation8 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChangePassword));
             this.DragableChangePassword = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.sidebarPanel = new Guna.UI2.WinForms.Guna2Panel();
@@ -64,6 +64,11 @@ namespace webTRON_Management_Software.Views.Admin
             this.alertCloseBtn = new Guna.UI2.WinForms.Guna2PictureBox();
             this.alertImage = new Guna.UI2.WinForms.Guna2PictureBox();
             this.alertTimer = new System.Windows.Forms.Timer(this.components);
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblPasswordMustInclude = new System.Windows.Forms.Label();
             this.sidebarPanel.SuspendLayout();
             this.activeUserPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).BeginInit();
@@ -301,6 +306,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.confirmPasswordTextBox.Size = new System.Drawing.Size(258, 36);
             this.confirmPasswordTextBox.TabIndex = 2;
             this.confirmPasswordTextBox.UseSystemPasswordChar = true;
+            this.confirmPasswordTextBox.Leave += new System.EventHandler(this.confirmPasswordTextBox_Leave);
             // 
             // newPasswordTextBox
             // 
@@ -329,6 +335,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.newPasswordTextBox.Size = new System.Drawing.Size(258, 36);
             this.newPasswordTextBox.TabIndex = 1;
             this.newPasswordTextBox.UseSystemPasswordChar = true;
+            this.newPasswordTextBox.Leave += new System.EventHandler(this.newPasswordTextBox_Leave);
             // 
             // lblNewPassword
             // 
@@ -386,6 +393,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.currentPasswordTextBox.Size = new System.Drawing.Size(258, 36);
             this.currentPasswordTextBox.TabIndex = 0;
             this.currentPasswordTextBox.UseSystemPasswordChar = true;
+            this.currentPasswordTextBox.Leave += new System.EventHandler(this.currentPasswordTextBox_Leave);
             // 
             // lblCurrentPassword
             // 
@@ -407,10 +415,10 @@ namespace webTRON_Management_Software.Views.Admin
             this.verificationCodePanel.Controls.Add(this.lblEnterVerificationCode);
             this.verificationCodePanel.Controls.Add(this.verificationCodeTextBox1);
             this.alertTransition.SetDecoration(this.verificationCodePanel, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.verificationCodePanel.Location = new System.Drawing.Point(231, 41);
+            this.verificationCodePanel.Location = new System.Drawing.Point(290, 50);
             this.verificationCodePanel.Name = "verificationCodePanel";
             this.verificationCodePanel.ShadowDecoration.Parent = this.verificationCodePanel;
-            this.verificationCodePanel.Size = new System.Drawing.Size(561, 480);
+            this.verificationCodePanel.Size = new System.Drawing.Size(616, 480);
             this.verificationCodePanel.TabIndex = 42;
             this.verificationCodePanel.Visible = false;
             this.verificationCodePanel.Enter += new System.EventHandler(this.VerificationCodePanel_Enter);
@@ -432,7 +440,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.verificationCodeTextBox2.ForeColor = System.Drawing.Color.Black;
             this.verificationCodeTextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.verificationCodeTextBox2.HoverState.Parent = this.verificationCodeTextBox2;
-            this.verificationCodeTextBox2.Location = new System.Drawing.Point(220, 189);
+            this.verificationCodeTextBox2.Location = new System.Drawing.Point(279, 192);
             this.verificationCodeTextBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.verificationCodeTextBox2.Name = "verificationCodeTextBox2";
             this.verificationCodeTextBox2.PasswordChar = '\0';
@@ -461,7 +469,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.verificationCodeTextBox3.ForeColor = System.Drawing.Color.Black;
             this.verificationCodeTextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.verificationCodeTextBox3.HoverState.Parent = this.verificationCodeTextBox3;
-            this.verificationCodeTextBox3.Location = new System.Drawing.Point(278, 189);
+            this.verificationCodeTextBox3.Location = new System.Drawing.Point(337, 192);
             this.verificationCodeTextBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.verificationCodeTextBox3.Name = "verificationCodeTextBox3";
             this.verificationCodeTextBox3.PasswordChar = '\0';
@@ -490,7 +498,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.verificationCodeTextBox4.ForeColor = System.Drawing.Color.Black;
             this.verificationCodeTextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.verificationCodeTextBox4.HoverState.Parent = this.verificationCodeTextBox4;
-            this.verificationCodeTextBox4.Location = new System.Drawing.Point(329, 189);
+            this.verificationCodeTextBox4.Location = new System.Drawing.Point(388, 192);
             this.verificationCodeTextBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.verificationCodeTextBox4.Name = "verificationCodeTextBox4";
             this.verificationCodeTextBox4.PasswordChar = '\0';
@@ -512,7 +520,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnVerify.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.btnVerify.ForeColor = System.Drawing.Color.White;
             this.btnVerify.HoverState.Parent = this.btnVerify;
-            this.btnVerify.Location = new System.Drawing.Point(165, 288);
+            this.btnVerify.Location = new System.Drawing.Point(224, 291);
             this.btnVerify.Name = "btnVerify";
             this.btnVerify.ShadowDecoration.Parent = this.btnVerify;
             this.btnVerify.Size = new System.Drawing.Size(203, 53);
@@ -525,7 +533,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.lblEnterVerificationCode.AutoSize = true;
             this.alertTransition.SetDecoration(this.lblEnterVerificationCode, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblEnterVerificationCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.lblEnterVerificationCode.Location = new System.Drawing.Point(160, 145);
+            this.lblEnterVerificationCode.Location = new System.Drawing.Point(219, 148);
             this.lblEnterVerificationCode.Name = "lblEnterVerificationCode";
             this.lblEnterVerificationCode.Size = new System.Drawing.Size(208, 24);
             this.lblEnterVerificationCode.TabIndex = 13;
@@ -548,7 +556,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.verificationCodeTextBox1.ForeColor = System.Drawing.Color.Black;
             this.verificationCodeTextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.verificationCodeTextBox1.HoverState.Parent = this.verificationCodeTextBox1;
-            this.verificationCodeTextBox1.Location = new System.Drawing.Point(165, 189);
+            this.verificationCodeTextBox1.Location = new System.Drawing.Point(224, 192);
             this.verificationCodeTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.verificationCodeTextBox1.Name = "verificationCodeTextBox1";
             this.verificationCodeTextBox1.PasswordChar = '\0';
@@ -564,22 +572,22 @@ namespace webTRON_Management_Software.Views.Admin
             // 
             this.alertTransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Scale;
             this.alertTransition.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.alertTransition.DefaultAnimation = animation1;
+            animation8.AnimateOnlyDifferences = true;
+            animation8.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.BlindCoeff")));
+            animation8.LeafCoeff = 0F;
+            animation8.MaxTime = 1F;
+            animation8.MinTime = 0F;
+            animation8.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.MosaicCoeff")));
+            animation8.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation8.MosaicShift")));
+            animation8.MosaicSize = 0;
+            animation8.Padding = new System.Windows.Forms.Padding(0);
+            animation8.RotateCoeff = 0F;
+            animation8.RotateLimit = 0F;
+            animation8.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.ScaleCoeff")));
+            animation8.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.SlideCoeff")));
+            animation8.TimeCoeff = 0F;
+            animation8.TransparencyCoeff = 0F;
+            this.alertTransition.DefaultAnimation = animation8;
             this.alertTransition.MaxAnimationTime = 5000;
             // 
             // alertPanel
@@ -641,14 +649,74 @@ namespace webTRON_Management_Software.Views.Admin
             this.alertTimer.Interval = 5000;
             this.alertTimer.Tick += new System.EventHandler(this.AlertTimer_Tick);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.alertTransition.SetDecoration(this.label5, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label5.Location = new System.Drawing.Point(688, 144);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(138, 17);
+            this.label5.TabIndex = 48;
+            this.label5.Text = "At least 8 characters";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.alertTransition.SetDecoration(this.label4, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label4.Location = new System.Drawing.Point(688, 167);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(218, 17);
+            this.label4.TabIndex = 47;
+            this.label4.Text = "At least one uppercase character";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.alertTransition.SetDecoration(this.label3, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label3.Location = new System.Drawing.Point(688, 189);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(214, 17);
+            this.label3.TabIndex = 46;
+            this.label3.Text = "At least one lowercase character";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.alertTransition.SetDecoration(this.label2, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label2.Location = new System.Drawing.Point(689, 212);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(195, 17);
+            this.label2.TabIndex = 45;
+            this.label2.Text = "At least one special character";
+            // 
+            // lblPasswordMustInclude
+            // 
+            this.lblPasswordMustInclude.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblPasswordMustInclude, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblPasswordMustInclude.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold);
+            this.lblPasswordMustInclude.Location = new System.Drawing.Point(686, 118);
+            this.lblPasswordMustInclude.Name = "lblPasswordMustInclude";
+            this.lblPasswordMustInclude.Size = new System.Drawing.Size(178, 17);
+            this.lblPasswordMustInclude.TabIndex = 44;
+            this.lblPasswordMustInclude.Text = "Password Must Include:";
+            // 
             // ChangePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1000, 625);
-            this.Controls.Add(this.alertPanel);
             this.Controls.Add(this.verificationCodePanel);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblPasswordMustInclude);
+            this.Controls.Add(this.alertPanel);
             this.Controls.Add(this.currentPasswordTextBox);
             this.Controls.Add(this.lblCurrentPassword);
             this.Controls.Add(this.lblConfirmPassword);
@@ -717,5 +785,10 @@ namespace webTRON_Management_Software.Views.Admin
         private Guna.UI2.WinForms.Guna2PictureBox alertCloseBtn;
         private Guna.UI2.WinForms.Guna2PictureBox alertImage;
         private System.Windows.Forms.Timer alertTimer;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPasswordMustInclude;
     }
 }

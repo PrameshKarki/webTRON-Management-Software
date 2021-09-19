@@ -60,9 +60,6 @@ namespace webTRON_Management_Software.Views.Utilities
                     if (isPasswordChangedSucessfully)
                     {
                         MessageBox.Show("Password changed sucessfully.", "Sucesss", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        /*
-                        
-                        */
 
                         //Hide current form
                         this.Hide();

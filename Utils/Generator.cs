@@ -27,7 +27,7 @@ namespace webTRON_Management_Software.Utils
         //Method that generates random password and returns it
         public static string GeneratePassword()
         {
-            var pwd = new Password(includeLowercase: true, includeUppercase: true, includeNumeric: true, includeSpecial: true, passwordLength:6);
+            var pwd = new Password(includeLowercase: true, includeUppercase: true, includeNumeric: true, includeSpecial: true, passwordLength:8);
             return pwd.Next();
         }
         //EmployeeID generator
