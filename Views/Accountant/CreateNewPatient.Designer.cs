@@ -28,7 +28,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateNewPatient));
             this.addressTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblAddress = new System.Windows.Forms.Label();
@@ -43,9 +43,6 @@
             this.lblName = new System.Windows.Forms.Label();
             this.genderTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblAge = new System.Windows.Forms.Label();
-            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnExit = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnCreateNewPatient = new Guna.UI2.WinForms.Guna2Button();
             this.lblReferredTo = new System.Windows.Forms.Label();
             this.referredToComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -69,10 +66,6 @@
             this.FNameOutpuf = new System.Windows.Forms.Label();
             this.RegistrationDateOutput = new System.Windows.Forms.Label();
             this.RegistrationNumberOutput = new System.Windows.Forms.Label();
-            this.QRCodePictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.webTRONWithAddressPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.LblPanelReferredTo = new System.Windows.Forms.Label();
             this.LblPanelAddress = new System.Windows.Forms.Label();
             this.LblPanelAge = new System.Windows.Forms.Label();
@@ -90,17 +83,24 @@
             this.actveForm = new System.Windows.Forms.Label();
             this.activeUserPicture = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.activeUserName = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
+            this.QRCodePictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.webTRONWithAddressPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnExit = new Guna.UI2.WinForms.Guna2PictureBox();
             this.printPanel.SuspendLayout();
+            this.PrintPanelContanerPanel.SuspendLayout();
+            this.activePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.QRCodePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.webTRONWithAddressPictureBox)).BeginInit();
-            this.PrintPanelContanerPanel.SuspendLayout();
-            this.activePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.SuspendLayout();
             // 
             // addressTextBox
@@ -360,46 +360,6 @@
             this.lblAge.TabIndex = 51;
             this.lblAge.Text = "Age*:";
             // 
-            // guna2PictureBox5
-            // 
-            this.guna2Transition1.SetDecoration(this.guna2PictureBox5, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2PictureBox5.Image = global::webTRON_Management_Software.Properties.Resources.webTRONLogoWithSlogan;
-            this.guna2PictureBox5.Location = new System.Drawing.Point(27, 518);
-            this.guna2PictureBox5.Name = "guna2PictureBox5";
-            this.guna2PictureBox5.ShadowDecoration.Parent = this.guna2PictureBox5;
-            this.guna2PictureBox5.Size = new System.Drawing.Size(187, 72);
-            this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.guna2PictureBox5.TabIndex = 54;
-            this.guna2PictureBox5.TabStop = false;
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Transition1.SetDecoration(this.btnMinimize, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
-            this.btnMinimize.Location = new System.Drawing.Point(911, 27);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.ShadowDecoration.Parent = this.btnMinimize;
-            this.btnMinimize.Size = new System.Drawing.Size(21, 4);
-            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnMinimize.TabIndex = 4;
-            this.btnMinimize.TabStop = false;
-            this.btnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Transition1.SetDecoration(this.btnExit, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(960, 12);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.ShadowDecoration.Parent = this.btnExit;
-            this.btnExit.Size = new System.Drawing.Size(28, 28);
-            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnExit.TabIndex = 3;
-            this.btnExit.TabStop = false;
-            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
-            // 
             // btnCreateNewPatient
             // 
             this.btnCreateNewPatient.CheckedState.Parent = this.btnCreateNewPatient;
@@ -526,7 +486,7 @@
             this.printPanel.Controls.Add(this.LblPanelRegistrationId);
             this.printPanel.Controls.Add(this.separator3);
             this.guna2Transition1.SetDecoration(this.printPanel, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.printPanel.Location = new System.Drawing.Point(3, 3);
+            this.printPanel.Location = new System.Drawing.Point(6, 3);
             this.printPanel.Name = "printPanel";
             this.printPanel.ShadowDecoration.Parent = this.printPanel;
             this.printPanel.Size = new System.Drawing.Size(535, 343);
@@ -680,53 +640,6 @@
             this.RegistrationNumberOutput.Size = new System.Drawing.Size(100, 23);
             this.RegistrationNumberOutput.TabIndex = 24;
             // 
-            // QRCodePictureBox
-            // 
-            this.guna2Transition1.SetDecoration(this.QRCodePictureBox, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.QRCodePictureBox.Location = new System.Drawing.Point(320, 201);
-            this.QRCodePictureBox.Name = "QRCodePictureBox";
-            this.QRCodePictureBox.ShadowDecoration.Parent = this.QRCodePictureBox;
-            this.QRCodePictureBox.Size = new System.Drawing.Size(165, 99);
-            this.QRCodePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.QRCodePictureBox.TabIndex = 13;
-            this.QRCodePictureBox.TabStop = false;
-            // 
-            // guna2PictureBox6
-            // 
-            this.guna2Transition1.SetDecoration(this.guna2PictureBox6, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2PictureBox6.Image = global::webTRON_Management_Software.Properties.Resources.rectangularBar;
-            this.guna2PictureBox6.Location = new System.Drawing.Point(0, 24);
-            this.guna2PictureBox6.Name = "guna2PictureBox6";
-            this.guna2PictureBox6.ShadowDecoration.Parent = this.guna2PictureBox6;
-            this.guna2PictureBox6.Size = new System.Drawing.Size(23, 273);
-            this.guna2PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.guna2PictureBox6.TabIndex = 10;
-            this.guna2PictureBox6.TabStop = false;
-            // 
-            // guna2PictureBox7
-            // 
-            this.guna2Transition1.SetDecoration(this.guna2PictureBox7, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2PictureBox7.Image = global::webTRON_Management_Software.Properties.Resources.rectangularBar;
-            this.guna2PictureBox7.Location = new System.Drawing.Point(512, 54);
-            this.guna2PictureBox7.Name = "guna2PictureBox7";
-            this.guna2PictureBox7.ShadowDecoration.Parent = this.guna2PictureBox7;
-            this.guna2PictureBox7.Size = new System.Drawing.Size(23, 273);
-            this.guna2PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.guna2PictureBox7.TabIndex = 11;
-            this.guna2PictureBox7.TabStop = false;
-            // 
-            // webTRONWithAddressPictureBox
-            // 
-            this.guna2Transition1.SetDecoration(this.webTRONWithAddressPictureBox, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.webTRONWithAddressPictureBox.Image = global::webTRON_Management_Software.Properties.Resources.webTRONLogoWithAddress;
-            this.webTRONWithAddressPictureBox.Location = new System.Drawing.Point(147, 12);
-            this.webTRONWithAddressPictureBox.Name = "webTRONWithAddressPictureBox";
-            this.webTRONWithAddressPictureBox.ShadowDecoration.Parent = this.webTRONWithAddressPictureBox;
-            this.webTRONWithAddressPictureBox.Size = new System.Drawing.Size(235, 147);
-            this.webTRONWithAddressPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.webTRONWithAddressPictureBox.TabIndex = 0;
-            this.webTRONWithAddressPictureBox.TabStop = false;
-            // 
             // LblPanelReferredTo
             // 
             this.LblPanelReferredTo.AutoSize = true;
@@ -831,12 +744,13 @@
             this.PrintPanelContanerPanel.Controls.Add(this.btnPrint);
             this.PrintPanelContanerPanel.Controls.Add(this.printPanel);
             this.guna2Transition1.SetDecoration(this.PrintPanelContanerPanel, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.PrintPanelContanerPanel.Location = new System.Drawing.Point(447, 107);
+            this.PrintPanelContanerPanel.Location = new System.Drawing.Point(430, 84);
             this.PrintPanelContanerPanel.Name = "PrintPanelContanerPanel";
             this.PrintPanelContanerPanel.ShadowDecoration.Parent = this.PrintPanelContanerPanel;
             this.PrintPanelContanerPanel.Size = new System.Drawing.Size(541, 506);
             this.PrintPanelContanerPanel.TabIndex = 63;
             this.PrintPanelContanerPanel.Visible = false;
+            this.PrintPanelContanerPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.PrintPanelContanerPanel_Paint);
             // 
             // btnPrint
             // 
@@ -858,22 +772,22 @@
             // guna2Transition1
             // 
             this.guna2Transition1.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.guna2Transition1.DefaultAnimation = animation2;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation1;
             // 
             // guna2DragControl1
             // 
@@ -933,6 +847,93 @@
             this.activeUserName.TabIndex = 1;
             this.activeUserName.Text = "John";
             // 
+            // QRCodePictureBox
+            // 
+            this.guna2Transition1.SetDecoration(this.QRCodePictureBox, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.QRCodePictureBox.Location = new System.Drawing.Point(320, 201);
+            this.QRCodePictureBox.Name = "QRCodePictureBox";
+            this.QRCodePictureBox.ShadowDecoration.Parent = this.QRCodePictureBox;
+            this.QRCodePictureBox.Size = new System.Drawing.Size(165, 99);
+            this.QRCodePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.QRCodePictureBox.TabIndex = 13;
+            this.QRCodePictureBox.TabStop = false;
+            // 
+            // guna2PictureBox6
+            // 
+            this.guna2Transition1.SetDecoration(this.guna2PictureBox6, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2PictureBox6.Image = global::webTRON_Management_Software.Properties.Resources.rectangularBar;
+            this.guna2PictureBox6.Location = new System.Drawing.Point(0, 24);
+            this.guna2PictureBox6.Name = "guna2PictureBox6";
+            this.guna2PictureBox6.ShadowDecoration.Parent = this.guna2PictureBox6;
+            this.guna2PictureBox6.Size = new System.Drawing.Size(23, 273);
+            this.guna2PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.guna2PictureBox6.TabIndex = 10;
+            this.guna2PictureBox6.TabStop = false;
+            // 
+            // guna2PictureBox7
+            // 
+            this.guna2Transition1.SetDecoration(this.guna2PictureBox7, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2PictureBox7.Image = global::webTRON_Management_Software.Properties.Resources.rectangularBar;
+            this.guna2PictureBox7.Location = new System.Drawing.Point(512, 54);
+            this.guna2PictureBox7.Name = "guna2PictureBox7";
+            this.guna2PictureBox7.ShadowDecoration.Parent = this.guna2PictureBox7;
+            this.guna2PictureBox7.Size = new System.Drawing.Size(23, 273);
+            this.guna2PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.guna2PictureBox7.TabIndex = 11;
+            this.guna2PictureBox7.TabStop = false;
+            // 
+            // webTRONWithAddressPictureBox
+            // 
+            this.guna2Transition1.SetDecoration(this.webTRONWithAddressPictureBox, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.webTRONWithAddressPictureBox.Image = global::webTRON_Management_Software.Properties.Resources.webTRONLogoWithAddress;
+            this.webTRONWithAddressPictureBox.Location = new System.Drawing.Point(147, 12);
+            this.webTRONWithAddressPictureBox.Name = "webTRONWithAddressPictureBox";
+            this.webTRONWithAddressPictureBox.ShadowDecoration.Parent = this.webTRONWithAddressPictureBox;
+            this.webTRONWithAddressPictureBox.Size = new System.Drawing.Size(235, 147);
+            this.webTRONWithAddressPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.webTRONWithAddressPictureBox.TabIndex = 0;
+            this.webTRONWithAddressPictureBox.TabStop = false;
+            // 
+            // guna2PictureBox5
+            // 
+            this.guna2Transition1.SetDecoration(this.guna2PictureBox5, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2PictureBox5.Image = global::webTRON_Management_Software.Properties.Resources.webTRONLogoWithSlogan;
+            this.guna2PictureBox5.Location = new System.Drawing.Point(27, 518);
+            this.guna2PictureBox5.Name = "guna2PictureBox5";
+            this.guna2PictureBox5.ShadowDecoration.Parent = this.guna2PictureBox5;
+            this.guna2PictureBox5.Size = new System.Drawing.Size(187, 72);
+            this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.guna2PictureBox5.TabIndex = 54;
+            this.guna2PictureBox5.TabStop = false;
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Transition1.SetDecoration(this.btnMinimize, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
+            this.btnMinimize.Location = new System.Drawing.Point(911, 27);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.ShadowDecoration.Parent = this.btnMinimize;
+            this.btnMinimize.Size = new System.Drawing.Size(21, 4);
+            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnMinimize.TabIndex = 4;
+            this.btnMinimize.TabStop = false;
+            this.btnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Transition1.SetDecoration(this.btnExit, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.Location = new System.Drawing.Point(960, 12);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.ShadowDecoration.Parent = this.btnExit;
+            this.btnExit.Size = new System.Drawing.Size(28, 28);
+            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnExit.TabIndex = 3;
+            this.btnExit.TabStop = false;
+            this.btnExit.Click += new System.EventHandler(this.SignOut);
+            // 
             // CreateNewPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -970,19 +971,19 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreateNewPatient";
             this.Load += new System.EventHandler(this.CreatePatient_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.printPanel.ResumeLayout(false);
             this.printPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.QRCodePictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.webTRONWithAddressPictureBox)).EndInit();
             this.PrintPanelContanerPanel.ResumeLayout(false);
             this.activePanel.ResumeLayout(false);
             this.activePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QRCodePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webTRONWithAddressPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

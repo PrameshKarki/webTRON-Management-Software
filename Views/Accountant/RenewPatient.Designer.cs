@@ -34,20 +34,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RenewPatient));
             this.DataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.registrationNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.registrationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contactNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.referredTo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.age = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dragableOnRenewPatient = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.roleTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.patientSerialNumberTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblRegistrationId = new System.Windows.Forms.Label();
+            this.lblPatientID = new System.Windows.Forms.Label();
             this.yearComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lblMinus1 = new System.Windows.Forms.Label();
             this.lblMinus2 = new System.Windows.Forms.Label();
@@ -59,6 +49,16 @@
             this.actveForm = new System.Windows.Forms.Label();
             this.activeUserPicture = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.activeUserName = new System.Windows.Forms.Label();
+            this.registrationNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.registrationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.age = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contactNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.referredTo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
@@ -73,7 +73,7 @@
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             this.DataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.DataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DataGridView.BackgroundColor = System.Drawing.Color.Aqua;
+            this.DataGridView.BackgroundColor = System.Drawing.Color.White;
             this.DataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -91,12 +91,12 @@
             this.registrationDate,
             this.firstName,
             this.lastName,
-            this.contactNumber,
             this.sex,
-            this.referredTo,
-            this.status,
             this.age,
-            this.address});
+            this.contactNumber,
+            this.address,
+            this.status,
+            this.referredTo});
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -122,7 +122,7 @@
             this.DataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.DataGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.DataGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.DataGridView.ThemeStyle.BackColor = System.Drawing.Color.Aqua;
+            this.DataGridView.ThemeStyle.BackColor = System.Drawing.Color.White;
             this.DataGridView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.DataGridView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -138,69 +138,6 @@
             this.DataGridView.ThemeStyle.RowsStyle.Height = 22;
             this.DataGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // registrationNumber
-            // 
-            this.registrationNumber.FillWeight = 140F;
-            this.registrationNumber.HeaderText = "Registration Number";
-            this.registrationNumber.Name = "registrationNumber";
-            this.registrationNumber.ReadOnly = true;
-            // 
-            // registrationDate
-            // 
-            this.registrationDate.HeaderText = "Registration Date";
-            this.registrationDate.Name = "registrationDate";
-            this.registrationDate.ReadOnly = true;
-            // 
-            // firstName
-            // 
-            this.firstName.FillWeight = 150F;
-            this.firstName.HeaderText = "First Name";
-            this.firstName.Name = "firstName";
-            this.firstName.ReadOnly = true;
-            // 
-            // lastName
-            // 
-            this.lastName.FillWeight = 140F;
-            this.lastName.HeaderText = "Last Name";
-            this.lastName.Name = "lastName";
-            this.lastName.ReadOnly = true;
-            // 
-            // contactNumber
-            // 
-            this.contactNumber.HeaderText = "Contact Number";
-            this.contactNumber.Name = "contactNumber";
-            this.contactNumber.ReadOnly = true;
-            // 
-            // sex
-            // 
-            this.sex.HeaderText = "Sex";
-            this.sex.Name = "sex";
-            this.sex.ReadOnly = true;
-            // 
-            // referredTo
-            // 
-            this.referredTo.HeaderText = "Referred To";
-            this.referredTo.Name = "referredTo";
-            this.referredTo.ReadOnly = true;
-            // 
-            // status
-            // 
-            this.status.HeaderText = "Status";
-            this.status.Name = "status";
-            this.status.ReadOnly = true;
-            // 
-            // age
-            // 
-            this.age.HeaderText = "Age";
-            this.age.Name = "age";
-            this.age.ReadOnly = true;
-            // 
-            // address
-            // 
-            this.address.HeaderText = "Address";
-            this.address.Name = "address";
-            this.address.ReadOnly = true;
             // 
             // dragableOnRenewPatient
             // 
@@ -258,15 +195,15 @@
             this.patientSerialNumberTextBox.TabIndex = 1;
             this.patientSerialNumberTextBox.TextChanged += new System.EventHandler(this.PatientSerialNumberTextBox_TextChanged);
             // 
-            // lblRegistrationId
+            // lblPatientID
             // 
-            this.lblRegistrationId.AutoSize = true;
-            this.lblRegistrationId.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegistrationId.Location = new System.Drawing.Point(126, 130);
-            this.lblRegistrationId.Name = "lblRegistrationId";
-            this.lblRegistrationId.Size = new System.Drawing.Size(162, 26);
-            this.lblRegistrationId.TabIndex = 62;
-            this.lblRegistrationId.Text = "Registration ID:";
+            this.lblPatientID.AutoSize = true;
+            this.lblPatientID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPatientID.Location = new System.Drawing.Point(204, 124);
+            this.lblPatientID.Name = "lblPatientID";
+            this.lblPatientID.Size = new System.Drawing.Size(114, 26);
+            this.lblPatientID.TabIndex = 62;
+            this.lblPatientID.Text = "Patient ID:";
             // 
             // yearComboBox
             // 
@@ -317,7 +254,7 @@
             this.btnRenew.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.btnRenew.ForeColor = System.Drawing.Color.White;
             this.btnRenew.HoverState.Parent = this.btnRenew;
-            this.btnRenew.Location = new System.Drawing.Point(781, 512);
+            this.btnRenew.Location = new System.Drawing.Point(781, 537);
             this.btnRenew.Name = "btnRenew";
             this.btnRenew.ShadowDecoration.Parent = this.btnRenew;
             this.btnRenew.Size = new System.Drawing.Size(180, 45);
@@ -349,7 +286,7 @@
             this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnExit.TabIndex = 53;
             this.btnExit.TabStop = false;
-            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            this.btnExit.Click += new System.EventHandler(this.SignOut);
             // 
             // activePanel
             // 
@@ -401,6 +338,69 @@
             this.activeUserName.TabIndex = 1;
             this.activeUserName.Text = "John";
             // 
+            // registrationNumber
+            // 
+            this.registrationNumber.FillWeight = 140F;
+            this.registrationNumber.HeaderText = "Patient ID";
+            this.registrationNumber.Name = "registrationNumber";
+            this.registrationNumber.ReadOnly = true;
+            // 
+            // registrationDate
+            // 
+            this.registrationDate.HeaderText = "Registration Date";
+            this.registrationDate.Name = "registrationDate";
+            this.registrationDate.ReadOnly = true;
+            // 
+            // firstName
+            // 
+            this.firstName.FillWeight = 150F;
+            this.firstName.HeaderText = "First Name";
+            this.firstName.Name = "firstName";
+            this.firstName.ReadOnly = true;
+            // 
+            // lastName
+            // 
+            this.lastName.FillWeight = 140F;
+            this.lastName.HeaderText = "Last Name";
+            this.lastName.Name = "lastName";
+            this.lastName.ReadOnly = true;
+            // 
+            // sex
+            // 
+            this.sex.HeaderText = "Gender";
+            this.sex.Name = "sex";
+            this.sex.ReadOnly = true;
+            // 
+            // age
+            // 
+            this.age.HeaderText = "Age";
+            this.age.Name = "age";
+            this.age.ReadOnly = true;
+            // 
+            // contactNumber
+            // 
+            this.contactNumber.HeaderText = "Contact Number";
+            this.contactNumber.Name = "contactNumber";
+            this.contactNumber.ReadOnly = true;
+            // 
+            // address
+            // 
+            this.address.HeaderText = "Address";
+            this.address.Name = "address";
+            this.address.ReadOnly = true;
+            // 
+            // status
+            // 
+            this.status.HeaderText = "Status";
+            this.status.Name = "status";
+            this.status.ReadOnly = true;
+            // 
+            // referredTo
+            // 
+            this.referredTo.HeaderText = "Referred To";
+            this.referredTo.Name = "referredTo";
+            this.referredTo.ReadOnly = true;
+            // 
             // RenewPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -412,7 +412,7 @@
             this.Controls.Add(this.lblMinus2);
             this.Controls.Add(this.lblMinus1);
             this.Controls.Add(this.yearComboBox);
-            this.Controls.Add(this.lblRegistrationId);
+            this.Controls.Add(this.lblPatientID);
             this.Controls.Add(this.patientSerialNumberTextBox);
             this.Controls.Add(this.roleTextBox);
             this.Controls.Add(this.DataGridView);
@@ -440,27 +440,27 @@
         private Guna.UI2.WinForms.Guna2PictureBox btnExit;
         private Guna.UI2.WinForms.Guna2DataGridView DataGridView;
         private Guna.UI2.WinForms.Guna2DragControl dragableOnRenewPatient;
-        private System.Windows.Forms.Label lblRegistrationId;
+        private System.Windows.Forms.Label lblPatientID;
         private Guna.UI2.WinForms.Guna2TextBox patientSerialNumberTextBox;
         private Guna.UI2.WinForms.Guna2TextBox roleTextBox;
         private Guna.UI2.WinForms.Guna2ComboBox yearComboBox;
         private System.Windows.Forms.Label lblMinus2;
         private System.Windows.Forms.Label lblMinus1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn registrationNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn registrationDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn firstName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn contactNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sex;
-        private System.Windows.Forms.DataGridViewTextBoxColumn referredTo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn status;
-        private System.Windows.Forms.DataGridViewTextBoxColumn age;
-        private System.Windows.Forms.DataGridViewTextBoxColumn address;
         private Guna.UI2.WinForms.Guna2Button btnRenew;
         private System.Windows.Forms.Timer timer1;
         private Guna.UI2.WinForms.Guna2Panel activePanel;
         private System.Windows.Forms.Label actveForm;
         private Guna.UI2.WinForms.Guna2CirclePictureBox activeUserPicture;
         private System.Windows.Forms.Label activeUserName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn registrationNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn registrationDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sex;
+        private System.Windows.Forms.DataGridViewTextBoxColumn age;
+        private System.Windows.Forms.DataGridViewTextBoxColumn contactNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn referredTo;
     }
 }

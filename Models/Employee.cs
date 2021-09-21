@@ -213,7 +213,6 @@ namespace webTRON_Management_Software.Models
         //Method to search data from database
         public static DataTable Search(string searchString)
         {
-            //WARNINGS:Query wrong here
 
             //Instantiating Data Table
             DataTable dt = new DataTable();

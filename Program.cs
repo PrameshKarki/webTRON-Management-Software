@@ -26,6 +26,7 @@ namespace webTRON_Management_Software
 
             //Run main window here
             Application.Run(new LandingWindow());
+          
        
         }
     }

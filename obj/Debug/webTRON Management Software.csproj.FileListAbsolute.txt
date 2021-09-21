@@ -152,3 +152,6 @@ C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON Man
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\bin\Debug\FluentValidation.dll
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\bin\Debug\PasswordGenerator.dll
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\bin\Debug\FluentValidation.xml
+C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.ChangeInfo.resources
+C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.ChangePassword.resources
+C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.Settings.resources

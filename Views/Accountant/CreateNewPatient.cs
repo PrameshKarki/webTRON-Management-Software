@@ -4,20 +4,27 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using webTRON_Management_Software.Models;
 using webTRON_Management_Software.Utils;
+using webTRON_Management_Software.Views.Landing_Window;
 
 namespace webTRON_Management_Software.Views.Accountant
 {
     public partial class CreateNewPatient : Form
     {
-      
+        Employee employee = new Employee();
         public CreateNewPatient()
         {
+            InitializeComponent();
+        }
+        public CreateNewPatient(Employee emp)
+        {
+            employee = emp;
             InitializeComponent();
         }
 
@@ -27,6 +34,21 @@ namespace webTRON_Management_Software.Views.Accountant
             string regDate = Generator.GetRegistrationDate();
             lblRegistrationIdOutput.Text = regNumber;
             lblRegistrationDateOutput.Text = regDate;
+
+            //Initialize activeUserDetails
+            InitializeActiverUserDetails();
+        }
+
+        //Initialize Active User Details
+        private void InitializeActiverUserDetails()
+        {
+            activeUserName.Text = employee.FirstName;
+            if (employee.img != null)
+            {
+                //Change active user picture
+                MemoryStream ms = new MemoryStream(employee.img);
+                activeUserPicture.Image = Image.FromStream(ms);
+            }
         }
 
 
@@ -79,7 +101,6 @@ namespace webTRON_Management_Software.Views.Accountant
                 bool isSuccess = Patient.Insert(ptn);
                 if (isSuccess)
                 {
-                    MessageBox.Show("Registration Completed!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     PrintPanelContanerPanel.Visible = true;
                     //TO DISPLAY THE NEXT REGISTRATION ID AFTER INSERTING THE INFO OF ONE PATIENT...
                     string regNumber = Generator.GeneratePatientId();
@@ -147,5 +168,33 @@ namespace webTRON_Management_Software.Views.Accountant
             firstNameTxtBox.Focus();
         }
 
+        private void SignOut(object sender, EventArgs e)
+        {
+            //WARNING:To check which element has clicked          
+            string elementType = sender.GetType().ToString();
+            var value = MessageBox.Show("Are you sure?", "Sign out", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (value.ToString() == "Yes")
+            {
+                Employee.SetStatus(employee.UserID, "Offline");
+                //It ensures sign out has clicked
+                if (elementType == "Guna.UI2.WinForms.Guna2Button")
+                {
+                    LandingWindow landingWindow = new LandingWindow();
+                    landingWindow.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    Application.Exit();
+                }
+
+
+            }
+        }
+
+        private void PrintPanelContanerPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

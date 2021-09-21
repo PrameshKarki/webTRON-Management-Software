@@ -36,26 +36,26 @@ namespace webTRON_Management_Software.Views.Admin
             this.offlineUser = new System.Windows.Forms.Label();
             this.lblOffline = new System.Windows.Forms.Label();
             this.sidebarPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.dragableAdminDashboard = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.offlineStatusPicture = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.onlineStatusPicture = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnExit = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnSignOut = new Guna.UI2.WinForms.Guna2Button();
             this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
             this.btnUsers = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
+            this.dragableAdminDashboard = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.onlineStatusPicture = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.offlineStatusPicture = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnExit = new Guna.UI2.WinForms.Guna2PictureBox();
             this.activePanel = new Guna.UI2.WinForms.Guna2Panel();
             this.actveForm = new System.Windows.Forms.Label();
             this.activeUserPicture = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.activeUserName = new System.Windows.Forms.Label();
             this.sidebarPanel.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.onlineStatusPicture)).BeginInit();
             this.guna2ShadowPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.offlineStatusPicture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.onlineStatusPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.activePanel.SuspendLayout();
@@ -118,84 +118,6 @@ namespace webTRON_Management_Software.Views.Admin
             this.sidebarPanel.ShadowDecoration.Parent = this.sidebarPanel;
             this.sidebarPanel.Size = new System.Drawing.Size(68, 532);
             this.sidebarPanel.TabIndex = 19;
-            // 
-            // dragableAdminDashboard
-            // 
-            this.dragableAdminDashboard.TargetControl = this;
-            // 
-            // guna2ShadowPanel1
-            // 
-            this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel1.Controls.Add(this.onlineStatusPicture);
-            this.guna2ShadowPanel1.Controls.Add(this.lblOnline);
-            this.guna2ShadowPanel1.Controls.Add(this.onlineUser);
-            this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
-            this.guna2ShadowPanel1.Location = new System.Drawing.Point(240, 114);
-            this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
-            this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(238, 151);
-            this.guna2ShadowPanel1.TabIndex = 23;
-            // 
-            // guna2ShadowPanel2
-            // 
-            this.guna2ShadowPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel2.Controls.Add(this.offlineUser);
-            this.guna2ShadowPanel2.Controls.Add(this.lblOffline);
-            this.guna2ShadowPanel2.Controls.Add(this.offlineStatusPicture);
-            this.guna2ShadowPanel2.FillColor = System.Drawing.Color.White;
-            this.guna2ShadowPanel2.Location = new System.Drawing.Point(545, 114);
-            this.guna2ShadowPanel2.Name = "guna2ShadowPanel2";
-            this.guna2ShadowPanel2.ShadowColor = System.Drawing.Color.Black;
-            this.guna2ShadowPanel2.Size = new System.Drawing.Size(260, 151);
-            this.guna2ShadowPanel2.TabIndex = 24;
-            // 
-            // offlineStatusPicture
-            // 
-            this.offlineStatusPicture.Image = global::webTRON_Management_Software.Properties.Resources.circle_red;
-            this.offlineStatusPicture.Location = new System.Drawing.Point(64, 56);
-            this.offlineStatusPicture.Name = "offlineStatusPicture";
-            this.offlineStatusPicture.ShadowDecoration.Parent = this.offlineStatusPicture;
-            this.offlineStatusPicture.Size = new System.Drawing.Size(30, 30);
-            this.offlineStatusPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.offlineStatusPicture.TabIndex = 2;
-            this.offlineStatusPicture.TabStop = false;
-            // 
-            // onlineStatusPicture
-            // 
-            this.onlineStatusPicture.Image = global::webTRON_Management_Software.Properties.Resources.circle_green;
-            this.onlineStatusPicture.Location = new System.Drawing.Point(57, 56);
-            this.onlineStatusPicture.Name = "onlineStatusPicture";
-            this.onlineStatusPicture.ShadowDecoration.Parent = this.onlineStatusPicture;
-            this.onlineStatusPicture.Size = new System.Drawing.Size(30, 30);
-            this.onlineStatusPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.onlineStatusPicture.TabIndex = 1;
-            this.onlineStatusPicture.TabStop = false;
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
-            this.btnMinimize.Location = new System.Drawing.Point(911, 20);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.ShadowDecoration.Parent = this.btnMinimize;
-            this.btnMinimize.Size = new System.Drawing.Size(21, 4);
-            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnMinimize.TabIndex = 22;
-            this.btnMinimize.TabStop = false;
-            this.btnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(960, 5);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.ShadowDecoration.Parent = this.btnExit;
-            this.btnExit.Size = new System.Drawing.Size(28, 28);
-            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnExit.TabIndex = 21;
-            this.btnExit.TabStop = false;
-            this.btnExit.Click += new System.EventHandler(this.SignOut);
             // 
             // btnSignOut
             // 
@@ -280,6 +202,84 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextOffset = new System.Drawing.Point(-6, 10);
             // 
+            // dragableAdminDashboard
+            // 
+            this.dragableAdminDashboard.TargetControl = this;
+            // 
+            // guna2ShadowPanel1
+            // 
+            this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel1.Controls.Add(this.onlineStatusPicture);
+            this.guna2ShadowPanel1.Controls.Add(this.lblOnline);
+            this.guna2ShadowPanel1.Controls.Add(this.onlineUser);
+            this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
+            this.guna2ShadowPanel1.Location = new System.Drawing.Point(240, 114);
+            this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
+            this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(238, 151);
+            this.guna2ShadowPanel1.TabIndex = 23;
+            // 
+            // onlineStatusPicture
+            // 
+            this.onlineStatusPicture.Image = global::webTRON_Management_Software.Properties.Resources.circle_green;
+            this.onlineStatusPicture.Location = new System.Drawing.Point(57, 56);
+            this.onlineStatusPicture.Name = "onlineStatusPicture";
+            this.onlineStatusPicture.ShadowDecoration.Parent = this.onlineStatusPicture;
+            this.onlineStatusPicture.Size = new System.Drawing.Size(30, 30);
+            this.onlineStatusPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.onlineStatusPicture.TabIndex = 1;
+            this.onlineStatusPicture.TabStop = false;
+            // 
+            // guna2ShadowPanel2
+            // 
+            this.guna2ShadowPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel2.Controls.Add(this.offlineUser);
+            this.guna2ShadowPanel2.Controls.Add(this.lblOffline);
+            this.guna2ShadowPanel2.Controls.Add(this.offlineStatusPicture);
+            this.guna2ShadowPanel2.FillColor = System.Drawing.Color.White;
+            this.guna2ShadowPanel2.Location = new System.Drawing.Point(545, 114);
+            this.guna2ShadowPanel2.Name = "guna2ShadowPanel2";
+            this.guna2ShadowPanel2.ShadowColor = System.Drawing.Color.Black;
+            this.guna2ShadowPanel2.Size = new System.Drawing.Size(260, 151);
+            this.guna2ShadowPanel2.TabIndex = 24;
+            // 
+            // offlineStatusPicture
+            // 
+            this.offlineStatusPicture.Image = global::webTRON_Management_Software.Properties.Resources.circle_red;
+            this.offlineStatusPicture.Location = new System.Drawing.Point(64, 56);
+            this.offlineStatusPicture.Name = "offlineStatusPicture";
+            this.offlineStatusPicture.ShadowDecoration.Parent = this.offlineStatusPicture;
+            this.offlineStatusPicture.Size = new System.Drawing.Size(30, 30);
+            this.offlineStatusPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.offlineStatusPicture.TabIndex = 2;
+            this.offlineStatusPicture.TabStop = false;
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
+            this.btnMinimize.Location = new System.Drawing.Point(911, 20);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.ShadowDecoration.Parent = this.btnMinimize;
+            this.btnMinimize.Size = new System.Drawing.Size(21, 4);
+            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnMinimize.TabIndex = 22;
+            this.btnMinimize.TabStop = false;
+            this.btnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.Location = new System.Drawing.Point(960, 5);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.ShadowDecoration.Parent = this.btnExit;
+            this.btnExit.Size = new System.Drawing.Size(28, 28);
+            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnExit.TabIndex = 21;
+            this.btnExit.TabStop = false;
+            this.btnExit.Click += new System.EventHandler(this.SignOut);
+            // 
             // activePanel
             // 
             this.activePanel.BackgroundImage = global::webTRON_Management_Software.Properties.Resources.rectangle_curved_large;
@@ -309,7 +309,7 @@ namespace webTRON_Management_Software.Views.Admin
             // 
             this.activeUserPicture.BackColor = System.Drawing.Color.Transparent;
             this.activeUserPicture.Image = global::webTRON_Management_Software.Properties.Resources.avatar;
-            this.activeUserPicture.Location = new System.Drawing.Point(7, 13);
+            this.activeUserPicture.Location = new System.Drawing.Point(0, 5);
             this.activeUserPicture.Name = "activeUserPicture";
             this.activeUserPicture.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.activeUserPicture.ShadowDecoration.Parent = this.activeUserPicture;
@@ -317,6 +317,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.activeUserPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.activeUserPicture.TabIndex = 0;
             this.activeUserPicture.TabStop = false;
+            this.activeUserPicture.Click += new System.EventHandler(this.activeUserPicture_Click);
             // 
             // activeUserName
             // 
@@ -352,10 +353,10 @@ namespace webTRON_Management_Software.Views.Admin
             this.sidebarPanel.ResumeLayout(false);
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.guna2ShadowPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.onlineStatusPicture)).EndInit();
             this.guna2ShadowPanel2.ResumeLayout(false);
             this.guna2ShadowPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.offlineStatusPicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.onlineStatusPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.activePanel.ResumeLayout(false);

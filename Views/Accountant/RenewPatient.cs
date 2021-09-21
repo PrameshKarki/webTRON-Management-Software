@@ -3,26 +3,31 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using webTRON_Management_Software.Models;
+using webTRON_Management_Software.Views.Landing_Window;
 
 namespace webTRON_Management_Software.Views.Accountant
 {
     public partial class RenewPatient : Form
     {
+        Employee employee = new Employee();
         public RenewPatient()
         {
             InitializeComponent();
         }
-
-        private void BtnExit_Click(object sender, EventArgs e)
+        public RenewPatient(Employee emp)
         {
-            Application.Exit();
+            employee = emp;
+            InitializeComponent();
+
         }
 
+        
         private void BtnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -59,6 +64,21 @@ namespace webTRON_Management_Software.Views.Accountant
                 yearComboBox.Items.Add(yearArray[i]);
             yearComboBox.StartIndex = 0;
 
+            //Initialize active user details
+            InitializeActiverUserDetails();
+
+        }
+
+        //Initialize Active User Details
+        private void InitializeActiverUserDetails()
+        {
+            activeUserName.Text = employee.FirstName;
+            if (employee.img != null)
+            {
+                //Change active user picture
+                MemoryStream ms = new MemoryStream(employee.img);
+                activeUserPicture.Image = Image.FromStream(ms);
+            }
         }
 
         private void PatientSerialNumberTextBox_TextChanged(object sender, EventArgs e)
@@ -101,5 +121,29 @@ namespace webTRON_Management_Software.Views.Accountant
 
             }
         }
+        //Method to signout
+        private void SignOut(object sender, EventArgs e)
+        {
+            //WARNING:To check which element has clicked          
+            string elementType = sender.GetType().ToString();
+            var value = MessageBox.Show("Are you sure?", "Sign out", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (value.ToString() == "Yes")
+            {
+                Employee.SetStatus(employee.UserID, "Offline");
+                //It ensures sign out has clicked
+                if (elementType == "Guna.UI2.WinForms.Guna2Button")
+                {
+                    LandingWindow landingWindow = new LandingWindow();
+                    landingWindow.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    Application.Exit();
+                }
+            }
+        }
+
+       
     }
 }

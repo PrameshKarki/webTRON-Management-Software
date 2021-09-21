@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using webTRON_Management_Software.Models;
 using webTRON_Management_Software.Views.Landing_Window;
 
-namespace webTRON_Management_Software.Views.Admin
+namespace webTRON_Management_Software.Views.Accountant
 {
     public partial class Settings : Form
     {
@@ -27,35 +27,26 @@ namespace webTRON_Management_Software.Views.Admin
         {
             employee = emp;
             InitializeComponent();
+
         }
 
-        //Click event on minimize button
+        //CLick event on minimize button
         private void BtnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
 
+        }
         //Click event on dashboard icon
         private void BtnDashboard_Click(object sender, EventArgs e)
         {
-        
-            var dashboard = new Admin.Dashboard(employee);
+            var dashboard = new Dashboard(employee);
             dashboard.Show();
             this.Hide();
-
         }
-        //Click event on Users icon
-        private void BtnUsers_Click(object sender, EventArgs e)
-        {
-            var users = new Admin.Users(employee);
-            users.Show();
-            this.Hide();
 
-        }
-        //Load event on settings form
+        //Load event on Settings Form
         private void Settings_Load(object sender, EventArgs e)
         {
-           
             //Initialize active user details
             InitializeActiverUserDetails();
         }
@@ -78,7 +69,7 @@ namespace webTRON_Management_Software.Views.Admin
 
 
         }
-        //Click event on signout and exit button
+
         private void SignOut(object sender, EventArgs e)
         {
             //WARNING:To check which element has clicked          
@@ -102,16 +93,7 @@ namespace webTRON_Management_Software.Views.Admin
 
             }
         }
-        //Click event on change password button
-        private void BtnChangePassword_Click(object sender, EventArgs e)
-        {
-            var changePassword = new ChangePassword(employee);
-            changePassword.Show();
-            this.Hide();
-
-        }
-
-        //Click event on change info button
+        //CLick event in Change Info
         private void BtnChangeInfo_Click(object sender, EventArgs e)
         {
             //Instantiate change info form
@@ -121,20 +103,28 @@ namespace webTRON_Management_Software.Views.Admin
 
         }
 
-        //Click event on change picture
+        //Click Event on Change Password
+        private void BtnChangePassword_Click(object sender, EventArgs e)
+        {
+            var changePassword = new ChangePassword(employee);
+            changePassword.Show();
+            this.Hide();
+
+        }
+
         private void BtnChangePicture_Click(object sender, EventArgs e)
         {
             OpenFileDialog opn = new OpenFileDialog();
             opn.Filter = "Choose Image(*.jpg; *.png; *.jpeg)|*.jpg; *.png; *.jpeg";
             if (opn.ShowDialog() == DialogResult.OK)
             {
-                userPicture.Image= Image.FromFile(opn.FileName);
+                userPicture.Image = Image.FromFile(opn.FileName);
                 //To change image in array of bytes
                 MemoryStream ms = new MemoryStream();
                 userPicture.Image.Save(ms, userPicture.Image.RawFormat);
                 byte[] img = ms.ToArray();
                 //Maximum
-               if(img.Length> 16777215)
+                if (img.Length > 16777215)
                 {
                     DisplayAlert("Danger", "Image size exceeded 16MB.");
                 }
@@ -149,7 +139,7 @@ namespace webTRON_Management_Software.Views.Admin
                     //Show alert
                     DisplayAlert("Sucess", "Image changed sucessfully.");
                 }
-               
+
 
             }
         }
@@ -164,11 +154,12 @@ namespace webTRON_Management_Software.Views.Admin
 
 
         }
-        //Hide alert
+
         private void AlertTimer_Tick(object sender, EventArgs e)
         {
             alertTransition.HideSync(alertPanel);
         }
+
         //Show alert
         private void DisplayAlert(string type, string message)
         {

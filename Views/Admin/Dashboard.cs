@@ -102,5 +102,9 @@ namespace webTRON_Management_Software.Views.Admin
             }
         }
 
+        private void activeUserPicture_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

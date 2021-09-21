@@ -7,13 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using webTRON_Management_Software.Models;
 
 namespace webTRON_Management_Software.Views.Doctor
 {
     public partial class Dashboard : Form
     {
+        Employee employee = new Employee();
         public Dashboard()
         {
+            InitializeComponent();
+        }
+        public Dashboard(Employee emp)
+        {
+            employee = emp;
             InitializeComponent();
         }
 

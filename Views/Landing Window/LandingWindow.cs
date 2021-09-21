@@ -109,12 +109,12 @@ namespace webTRON_Management_Software.Views.Landing_Window
                     break;
                 case "Doctor":
                     this.Hide();
-                    var doctorDashboard = new Doctor.Dashboard();
+                    var doctorDashboard = new Doctor.Dashboard(activeUser);
                     doctorDashboard.Show();
                     break;
                 case "Accountant":
                     this.Hide();
-                    var accountDashboard = new Accountant.Dashboard();
+                    var accountDashboard = new Accountant.Dashboard(activeUser);
                     accountDashboard.Show();
                     break;
                 case "Others":
