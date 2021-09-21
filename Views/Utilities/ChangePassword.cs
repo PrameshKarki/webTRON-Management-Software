@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FluentValidation.Results;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using webTRON_Management_Software.Models;
 using webTRON_Management_Software.Utils;
+using webTRON_Management_Software.Utils.Validators;
 
 namespace webTRON_Management_Software.Views.Utilities
 {
@@ -46,7 +48,10 @@ namespace webTRON_Management_Software.Views.Utilities
             //Check all the text fields are filled or not
             if (string.IsNullOrEmpty(verificationCodeTextBox1.Text) || string.IsNullOrEmpty(verificationCodeTextBox2.Text) || string.IsNullOrEmpty(verificationCodeTextBox3.Text) || string.IsNullOrEmpty(verificationCodeTextBox4.Text))
             {
-                MessageBox.Show("Fill all the fields", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                verificationCodeTextBox1.BorderColor = Color.Red;
+                verificationCodeTextBox2.BorderColor = Color.Red;
+                verificationCodeTextBox3.BorderColor = Color.Red;
+                verificationCodeTextBox4.BorderColor = Color.Red;
             }
             else
             {
@@ -66,14 +71,17 @@ namespace webTRON_Management_Software.Views.Utilities
                     }
                     else
                     {
-                        MessageBox.Show("Please try again later.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Internal Server Error.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     }
 
                 }
                 else
                 {
-                    MessageBox.Show("Invalid verification code.", "Invalid Code", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    verificationCodeTextBox1.BorderColor = Color.Red;
+                    verificationCodeTextBox2.BorderColor = Color.Red;
+                    verificationCodeTextBox3.BorderColor = Color.Red;
+                    verificationCodeTextBox4.BorderColor = Color.Red;
                 }
 
             }
@@ -115,14 +123,49 @@ namespace webTRON_Management_Software.Views.Utilities
 
         }
 
-       
+        private void currentPasswordTextBox_Leave(object sender, EventArgs e)
+        {
+            if (currentPasswordTextBox.Text.Length != 0 && currentPasswordTextBox.BorderColor == Color.Red)
+            {
+                currentPasswordTextBox.BorderColor = Color.FromArgb(213, 218, 223);
+            }
+        }
+
+        private void newPasswordTextBox_Leave(object sender, EventArgs e)
+        {
+            if (newPasswordTextBox.Text.Length != 0 && newPasswordTextBox.BorderColor == Color.Red)
+            {
+                newPasswordTextBox.BorderColor = Color.FromArgb(213, 218, 223);
+            }
+        }
+
+        private void confirmPasswordTextBox_Leave(object sender, EventArgs e)
+        {
+            if (confirmPasswordTextBox.Text.Length != 0 && confirmPasswordTextBox.BorderColor == Color.Red)
+            {
+                confirmPasswordTextBox.BorderColor = Color.FromArgb(213, 218, 223);
+            }
+        }
+
+
 
         //Click event on change password
         private void BtnChangePassword_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(currentPasswordTextBox.Text) || string.IsNullOrEmpty(newPasswordTextBox.Text) || string.IsNullOrEmpty(confirmPasswordTextBox.Text))
+            if (string.IsNullOrEmpty(currentPasswordTextBox.Text))
             {
-                MessageBox.Show("Please fill all the fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                currentPasswordTextBox.BorderColor = Color.Red;
+
+            }
+            if (string.IsNullOrEmpty(newPasswordTextBox.Text))
+            {
+                newPasswordTextBox.BackColor = Color.Red;
+
+            }
+            if (string.IsNullOrEmpty(confirmPasswordTextBox.Text))
+            {
+                confirmPasswordTextBox.BackColor = Color.Red;
+
             }
             else
             {
@@ -141,30 +184,50 @@ namespace webTRON_Management_Software.Views.Utilities
                     confirmPassword = confirmPasswordTextBox.Text;
                     if (newPassword == confirmPassword)
                     {
-                        //Send verification code and store code in database
-                        int code = Generator.GenerateVerificationCode();
-                        bool isMailSendSucessfully = Email.SendVerificationCode(code, employee.Email);
-                        bool isCodeStoredSucessfully = Employee.StoreVerificationCode(employee.Email, code);
-                        if (isMailSendSucessfully && isCodeStoredSucessfully)
+                        //Validate Password 
+                        Password password = new Password();
+                        password.value = newPassword;
+
+                        PasswordValidator validator = new PasswordValidator();
+                        ValidationResult result = validator.Validate(password);
+
+                        if (result.IsValid)
                         {
-                            //Show confirmation code panel
-                            verificationCodePanel.Visible = true;
+                            //Send verification code and store code in database
+                            int code = Generator.GenerateVerificationCode();
+                            bool isMailSendSucessfully = Email.SendVerificationCode(code, employee.Email);
+                            bool isCodeStoredSucessfully = Employee.StoreVerificationCode(employee.Email, code);
+                            if (isMailSendSucessfully && isCodeStoredSucessfully)
+                            {
+                                //Show confirmation code panel
+                                verificationCodePanel.Visible = true;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Internal Server Error.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+
                         }
                         else
                         {
-                            MessageBox.Show("Please try again later.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            newPasswordTextBox.BorderColor = Color.Red;
+                            confirmPasswordTextBox.BorderColor = Color.Red;
+
                         }
+
+                       
 
                     }
                     else
                     {
-                        MessageBox.Show("Password doesn't match.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                        confirmPasswordTextBox.BorderColor = Color.Red;
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Password doesn't match.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    currentPasswordTextBox.BorderColor = Color.Red;
+                    newPasswordTextBox.Text = "";
+                    confirmPasswordTextBox.Text = "";
                 }
 
             }

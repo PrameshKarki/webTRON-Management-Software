@@ -30,7 +30,7 @@ namespace webTRON_Management_Software.Views.Admin
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation8 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChangePassword));
             this.DragableChangePassword = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.sidebarPanel = new Guna.UI2.WinForms.Guna2Panel();
@@ -63,12 +63,12 @@ namespace webTRON_Management_Software.Views.Admin
             this.alertText = new System.Windows.Forms.Label();
             this.alertCloseBtn = new Guna.UI2.WinForms.Guna2PictureBox();
             this.alertImage = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.alertTimer = new System.Windows.Forms.Timer(this.components);
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblPasswordMustInclude = new System.Windows.Forms.Label();
+            this.alertTimer = new System.Windows.Forms.Timer(this.components);
             this.sidebarPanel.SuspendLayout();
             this.activeUserPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).BeginInit();
@@ -273,7 +273,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.lblConfirmPassword.AutoSize = true;
             this.alertTransition.SetDecoration(this.lblConfirmPassword, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.lblConfirmPassword.Location = new System.Drawing.Point(371, 288);
+            this.lblConfirmPassword.Location = new System.Drawing.Point(350, 288);
             this.lblConfirmPassword.Name = "lblConfirmPassword";
             this.lblConfirmPassword.Size = new System.Drawing.Size(167, 24);
             this.lblConfirmPassword.TabIndex = 39;
@@ -296,7 +296,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.confirmPasswordTextBox.ForeColor = System.Drawing.Color.Black;
             this.confirmPasswordTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.confirmPasswordTextBox.HoverState.Parent = this.confirmPasswordTextBox;
-            this.confirmPasswordTextBox.Location = new System.Drawing.Point(376, 326);
+            this.confirmPasswordTextBox.Location = new System.Drawing.Point(355, 326);
             this.confirmPasswordTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.confirmPasswordTextBox.Name = "confirmPasswordTextBox";
             this.confirmPasswordTextBox.PasswordChar = '\0';
@@ -325,7 +325,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.newPasswordTextBox.ForeColor = System.Drawing.Color.Black;
             this.newPasswordTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.newPasswordTextBox.HoverState.Parent = this.newPasswordTextBox;
-            this.newPasswordTextBox.Location = new System.Drawing.Point(375, 243);
+            this.newPasswordTextBox.Location = new System.Drawing.Point(354, 243);
             this.newPasswordTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.newPasswordTextBox.Name = "newPasswordTextBox";
             this.newPasswordTextBox.PasswordChar = '\0';
@@ -342,7 +342,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.lblNewPassword.AutoSize = true;
             this.alertTransition.SetDecoration(this.lblNewPassword, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblNewPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.lblNewPassword.Location = new System.Drawing.Point(372, 202);
+            this.lblNewPassword.Location = new System.Drawing.Point(351, 202);
             this.lblNewPassword.Name = "lblNewPassword";
             this.lblNewPassword.Size = new System.Drawing.Size(141, 24);
             this.lblNewPassword.TabIndex = 36;
@@ -358,7 +358,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnChangePassword.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.btnChangePassword.ForeColor = System.Drawing.Color.White;
             this.btnChangePassword.HoverState.Parent = this.btnChangePassword;
-            this.btnChangePassword.Location = new System.Drawing.Point(376, 401);
+            this.btnChangePassword.Location = new System.Drawing.Point(355, 401);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.ShadowDecoration.Parent = this.btnChangePassword;
             this.btnChangePassword.Size = new System.Drawing.Size(258, 53);
@@ -383,7 +383,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.currentPasswordTextBox.ForeColor = System.Drawing.Color.Black;
             this.currentPasswordTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.currentPasswordTextBox.HoverState.Parent = this.currentPasswordTextBox;
-            this.currentPasswordTextBox.Location = new System.Drawing.Point(374, 152);
+            this.currentPasswordTextBox.Location = new System.Drawing.Point(353, 152);
             this.currentPasswordTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.currentPasswordTextBox.Name = "currentPasswordTextBox";
             this.currentPasswordTextBox.PasswordChar = '\0';
@@ -400,7 +400,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.lblCurrentPassword.AutoSize = true;
             this.alertTransition.SetDecoration(this.lblCurrentPassword, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblCurrentPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.lblCurrentPassword.Location = new System.Drawing.Point(371, 111);
+            this.lblCurrentPassword.Location = new System.Drawing.Point(350, 111);
             this.lblCurrentPassword.Name = "lblCurrentPassword";
             this.lblCurrentPassword.Size = new System.Drawing.Size(164, 24);
             this.lblCurrentPassword.TabIndex = 41;
@@ -415,7 +415,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.verificationCodePanel.Controls.Add(this.lblEnterVerificationCode);
             this.verificationCodePanel.Controls.Add(this.verificationCodeTextBox1);
             this.alertTransition.SetDecoration(this.verificationCodePanel, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.verificationCodePanel.Location = new System.Drawing.Point(290, 50);
+            this.verificationCodePanel.Location = new System.Drawing.Point(290, 41);
             this.verificationCodePanel.Name = "verificationCodePanel";
             this.verificationCodePanel.ShadowDecoration.Parent = this.verificationCodePanel;
             this.verificationCodePanel.Size = new System.Drawing.Size(616, 480);
@@ -572,22 +572,22 @@ namespace webTRON_Management_Software.Views.Admin
             // 
             this.alertTransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Scale;
             this.alertTransition.Cursor = null;
-            animation8.AnimateOnlyDifferences = true;
-            animation8.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.BlindCoeff")));
-            animation8.LeafCoeff = 0F;
-            animation8.MaxTime = 1F;
-            animation8.MinTime = 0F;
-            animation8.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.MosaicCoeff")));
-            animation8.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation8.MosaicShift")));
-            animation8.MosaicSize = 0;
-            animation8.Padding = new System.Windows.Forms.Padding(0);
-            animation8.RotateCoeff = 0F;
-            animation8.RotateLimit = 0F;
-            animation8.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.ScaleCoeff")));
-            animation8.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.SlideCoeff")));
-            animation8.TimeCoeff = 0F;
-            animation8.TransparencyCoeff = 0F;
-            this.alertTransition.DefaultAnimation = animation8;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.alertTransition.DefaultAnimation = animation2;
             this.alertTransition.MaxAnimationTime = 5000;
             // 
             // alertPanel
@@ -643,12 +643,6 @@ namespace webTRON_Management_Software.Views.Admin
             this.alertImage.TabIndex = 0;
             this.alertImage.TabStop = false;
             // 
-            // alertTimer
-            // 
-            this.alertTimer.Enabled = true;
-            this.alertTimer.Interval = 5000;
-            this.alertTimer.Tick += new System.EventHandler(this.AlertTimer_Tick);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -703,6 +697,12 @@ namespace webTRON_Management_Software.Views.Admin
             this.lblPasswordMustInclude.Size = new System.Drawing.Size(178, 17);
             this.lblPasswordMustInclude.TabIndex = 44;
             this.lblPasswordMustInclude.Text = "Password Must Include:";
+            // 
+            // alertTimer
+            // 
+            this.alertTimer.Enabled = true;
+            this.alertTimer.Interval = 5000;
+            this.alertTimer.Tick += new System.EventHandler(this.AlertTimer_Tick);
             // 
             // ChangePassword
             // 

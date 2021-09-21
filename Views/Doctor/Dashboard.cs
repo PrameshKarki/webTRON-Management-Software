@@ -17,11 +17,6 @@ namespace webTRON_Management_Software.Views.Doctor
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void BtnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -31,5 +26,7 @@ namespace webTRON_Management_Software.Views.Doctor
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+       
     }
 }

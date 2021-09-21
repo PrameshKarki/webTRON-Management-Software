@@ -124,6 +124,7 @@ namespace webTRON_Management_Software.Views.Utilities
             this.currentPasswordTextBox.Size = new System.Drawing.Size(258, 36);
             this.currentPasswordTextBox.TabIndex = 42;
             this.currentPasswordTextBox.UseSystemPasswordChar = true;
+            this.currentPasswordTextBox.Leave += new System.EventHandler(this.currentPasswordTextBox_Leave);
             // 
             // lblCurrentPassword
             // 
@@ -171,6 +172,7 @@ namespace webTRON_Management_Software.Views.Utilities
             this.confirmPasswordTextBox.Size = new System.Drawing.Size(258, 36);
             this.confirmPasswordTextBox.TabIndex = 44;
             this.confirmPasswordTextBox.UseSystemPasswordChar = true;
+            this.confirmPasswordTextBox.Leave += new System.EventHandler(this.confirmPasswordTextBox_Leave);
             // 
             // newPasswordTextBox
             // 
@@ -198,6 +200,7 @@ namespace webTRON_Management_Software.Views.Utilities
             this.newPasswordTextBox.Size = new System.Drawing.Size(258, 36);
             this.newPasswordTextBox.TabIndex = 43;
             this.newPasswordTextBox.UseSystemPasswordChar = true;
+            this.newPasswordTextBox.Leave += new System.EventHandler(this.newPasswordTextBox_Leave);
             // 
             // lblNewPassword
             // 
@@ -260,7 +263,7 @@ namespace webTRON_Management_Software.Views.Utilities
             this.verificationCodePanel.Controls.Add(this.btnVerify);
             this.verificationCodePanel.Controls.Add(this.lblEnterVerificationCode);
             this.verificationCodePanel.Controls.Add(this.verificationCodeTextBox1);
-            this.verificationCodePanel.Location = new System.Drawing.Point(414, 39);
+            this.verificationCodePanel.Location = new System.Drawing.Point(399, 44);
             this.verificationCodePanel.Name = "verificationCodePanel";
             this.verificationCodePanel.ShadowDecoration.Parent = this.verificationCodePanel;
             this.verificationCodePanel.Size = new System.Drawing.Size(561, 480);

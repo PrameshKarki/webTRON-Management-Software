@@ -40,7 +40,7 @@ namespace webTRON_Management_Software.Models
             try
             {
                 //String SqlQuery
-                string SQLQuery = "INSERT INTO employeeInfo(userID,firstName,lastName,email,address,contactNumber,dateOfBirth,sex,role,status) VALUES(@userID,@firstName,@lastName,@email,@address,@contactNumber,@dateOfBirth,@sex,@role,@status)";
+                string SQLQuery = "INSERT INTO employeeInfo(userID,firstName,lastName,email,address,contactNumber,dateOfBirth,gender,role,status) VALUES(@userID,@firstName,@lastName,@email,@address,@contactNumber,@dateOfBirth,@gender,@role,@status)";
                 //MySql Command
                 MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
                 cmd.Parameters.AddWithValue("@userID", obj.UserID);
@@ -50,7 +50,7 @@ namespace webTRON_Management_Software.Models
                 cmd.Parameters.AddWithValue("@address", obj.Address);
                 cmd.Parameters.AddWithValue("@contactNumber", obj.ContactNumber);
                 cmd.Parameters.AddWithValue("@dateOfBirth", obj.DateOfBirth);
-                cmd.Parameters.AddWithValue("@sex", obj.Gender);
+                cmd.Parameters.AddWithValue("@gender", obj.Gender);
                 cmd.Parameters.AddWithValue("@role", obj.Role);
                 cmd.Parameters.AddWithValue("@status", obj.Status);
                 //Connection Open
@@ -116,7 +116,7 @@ namespace webTRON_Management_Software.Models
             MySqlConnection conn = new MySqlConnection(connectionString);
 
             //String SqlQuery
-            string SQLQuery = "UPDATE employeeInfo SET firstName=@firstName,lastName=@lastName,email=@email,address=@address,contactNumber=@contactNumber,dateOfBirth=@dateOfBirth,sex=@sex WHERE userID= BINARY @userID";
+            string SQLQuery = "UPDATE employeeInfo SET firstName=@firstName,lastName=@lastName,email=@email,address=@address,contactNumber=@contactNumber,dateOfBirth=@dateOfBirth,gender=@gender WHERE userID= BINARY @userID";
             try
             {
                 //MySql Command
@@ -128,7 +128,7 @@ namespace webTRON_Management_Software.Models
                 cmd.Parameters.AddWithValue("@address", obj.Address);
                 cmd.Parameters.AddWithValue("@contactNumber", obj.ContactNumber);
                 cmd.Parameters.AddWithValue("@dateOfBirth", obj.DateOfBirth);
-                cmd.Parameters.AddWithValue("@sex", obj.Gender);
+                cmd.Parameters.AddWithValue("@gender", obj.Gender);
                 //Connection Open
                 conn.Open();
                 //Execute Query
@@ -158,7 +158,7 @@ namespace webTRON_Management_Software.Models
             //MySqlConnection
             MySqlConnection conn = new MySqlConnection(connectionString);
             //SQL Query
-            string SQLQuery = "SELECT userID AS 'User ID',firstName AS 'First Name',lastName AS 'Last Name',email AS 'Email',address AS 'Address',contactNumber AS 'Contact Number',dateOfBirth AS 'Date Of Birth',sex AS 'Sex',role AS 'Role',status AS 'Status' FROM activeEmployees";
+            string SQLQuery = "SELECT userID AS 'User ID',firstName AS 'First Name',lastName AS 'Last Name',email AS 'Email',address AS 'Address',contactNumber AS 'Contact Number',dateOfBirth AS 'Date Of Birth',gender AS 'Gender',role AS 'Role',status AS 'Status' FROM activeEmployees";
             try
             {
                 //MySQLCommand
@@ -220,9 +220,9 @@ namespace webTRON_Management_Software.Models
             //MySql Connection
             MySqlConnection conn = new MySqlConnection(connectionString);
             //SQL Query
-            string SQLQuery = $"SELECT userID AS 'User ID',firstName AS 'First Name',lastName AS 'Last Name',email AS 'Email',address AS 'Address',contactNumber AS 'Contact Number',dateOfBirth AS 'Date Of Birth',sex AS 'Sex',role AS 'Role',status AS 'Status' FROM activeEmployees" +
+            string SQLQuery = $"SELECT userID AS 'User ID',firstName AS 'First Name',lastName AS 'Last Name',email AS 'Email',address AS 'Address',contactNumber AS 'Contact Number',dateOfBirth AS 'Date Of Birth',gender AS 'Gender',role AS 'Role',status AS 'Status' FROM activeEmployees" +
                              $" WHERE userID LIKE '%{searchString}%' OR firstName LIKE '%{searchString}%' OR lastName LIKE '%{searchString}%' OR email LIKE '%{searchString}%' OR address LIKE '%{searchString}%' OR contactNumber LIKE '%{searchString}%' OR dateOfBirth LIKE '%{searchString}%' OR" +
-                             $" sex LIKE '%{searchString}%' OR role LIKE '%{searchString}%' OR status LIKE '%{searchString}%'";
+                             $" gender LIKE '%{searchString}%' OR role LIKE '%{searchString}%' OR status LIKE '%{searchString}%'";
             try
             {
                 MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
