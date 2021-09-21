@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FluentValidation.Results;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using webTRON_Management_Software.Models;
 using webTRON_Management_Software.Utils;
+using webTRON_Management_Software.Utils.Validators;
 using webTRON_Management_Software.Views.Landing_Window;
 
 namespace webTRON_Management_Software.Views.Others
@@ -103,7 +105,10 @@ namespace webTRON_Management_Software.Views.Others
             //Check all the text fields are filled or not
             if (string.IsNullOrEmpty(verificationCodeTextBox1.Text) || string.IsNullOrEmpty(verificationCodeTextBox2.Text) || string.IsNullOrEmpty(verificationCodeTextBox3.Text) || string.IsNullOrEmpty(verificationCodeTextBox4.Text))
             {
-                DisplayAlert("Danger", "Fill all the field.");
+                verificationCodeTextBox1.BorderColor = Color.Red;
+                verificationCodeTextBox2.BorderColor = Color.Red;
+                verificationCodeTextBox3.BorderColor = Color.Red;
+                verificationCodeTextBox4.BorderColor = Color.Red;
             }
             else
             {
@@ -116,7 +121,7 @@ namespace webTRON_Management_Software.Views.Others
                     bool isPasswordChangedSucessfully = Employee.UpdatePassword(employee.Email, newPassword);
                     if (isPasswordChangedSucessfully)
                     {
-                        DisplayAlert("Sucess", "Password changed sucessfully");
+                        DisplayAlert("Sucess", "Password changed sucessfully.");
                         //Instantiate settings form
                         Settings settings = new Settings(employee);
                         //Show settings form
@@ -126,14 +131,17 @@ namespace webTRON_Management_Software.Views.Others
                     }
                     else
                     {
-                        DisplayAlert("Danger", "Error occured.");
+                        DisplayAlert("Danger", "Internal Server Error.");
 
                     }
 
                 }
                 else
                 {
-                    DisplayAlert("Danger", "Invalid verification code.");
+                    verificationCodeTextBox1.BorderColor = Color.Red;
+                    verificationCodeTextBox2.BorderColor = Color.Red;
+                    verificationCodeTextBox3.BorderColor = Color.Red;
+                    verificationCodeTextBox4.BorderColor = Color.Red;
                 }
 
             }
@@ -204,9 +212,20 @@ namespace webTRON_Management_Software.Views.Others
         //Click event on change password button
         private void BtnChangePassword_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(currentPasswordTextBox.Text) || string.IsNullOrEmpty(newPasswordTextBox.Text) || string.IsNullOrEmpty(confirmPasswordTextBox.Text))
+            if (string.IsNullOrEmpty(currentPasswordTextBox.Text))
             {
-                DisplayAlert("Danger", "Fill all the fields.");
+                currentPasswordTextBox.BorderColor = Color.Red;
+
+            }
+            if (string.IsNullOrEmpty(newPasswordTextBox.Text))
+            {
+                newPasswordTextBox.BackColor = Color.Red;
+
+            }
+            if (string.IsNullOrEmpty(confirmPasswordTextBox.Text))
+            {
+                confirmPasswordTextBox.BackColor = Color.Red;
+
             }
             else
             {
@@ -225,30 +244,50 @@ namespace webTRON_Management_Software.Views.Others
                     confirmPassword = confirmPasswordTextBox.Text;
                     if (newPassword == confirmPassword)
                     {
-                        //Send verification code and store code in database
-                        int code = Generator.GenerateVerificationCode();
-                        bool isMailSendSucessfully = Email.SendVerificationCode(code, employee.Email);
-                        bool isCodeStoredSucessfully = Employee.StoreVerificationCode(employee.Email, code);
-                        if (isMailSendSucessfully && isCodeStoredSucessfully)
+                        //Validate Password 
+                        Password password = new Password();
+                        password.value = newPassword;
+
+                        PasswordValidator validator = new PasswordValidator();
+                        ValidationResult result = validator.Validate(password);
+
+                        if (result.IsValid)
                         {
-                            //Show confirmation code panel
-                            verificationCodePanel.Visible = true;
+                            //Send verification code and store code in database
+                            int code = Generator.GenerateVerificationCode();
+                            bool isMailSendSucessfully = Email.SendVerificationCode(code, employee.Email);
+                            bool isCodeStoredSucessfully = Employee.StoreVerificationCode(employee.Email, code);
+                            if (isMailSendSucessfully && isCodeStoredSucessfully)
+                            {
+                                //Show confirmation code panel
+                                verificationCodePanel.Visible = true;
+                            }
+                            else
+                            {
+                                DisplayAlert("Danger", "Internal Server Error.");
+                            }
+
+
                         }
                         else
                         {
-                            DisplayAlert("Danger", "Error occured.");
+                            newPasswordTextBox.BorderColor = Color.Red;
+                            confirmPasswordTextBox.BorderColor = Color.Red;
                         }
+
 
                     }
                     else
                     {
-                        DisplayAlert("Danger", "Invalid credentials.");
+                        confirmPasswordTextBox.BorderColor = Color.Red;
 
                     }
                 }
                 else
                 {
-                    DisplayAlert("Danger", "Invalid credentials.");
+                    currentPasswordTextBox.BorderColor = Color.Red;
+                    newPasswordTextBox.Text = "";
+                    confirmPasswordTextBox.Text = "";
                 }
 
             }

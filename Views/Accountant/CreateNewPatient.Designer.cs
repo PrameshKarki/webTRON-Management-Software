@@ -44,7 +44,6 @@
             this.genderTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblAge = new System.Windows.Forms.Label();
             this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnExit = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnCreateNewPatient = new Guna.UI2.WinForms.Guna2Button();
@@ -87,8 +86,11 @@
             this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.activePanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.actveForm = new System.Windows.Forms.Label();
+            this.activeUserPicture = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.activeUserName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.printPanel.SuspendLayout();
@@ -97,6 +99,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.webTRONWithAddressPictureBox)).BeginInit();
             this.PrintPanelContanerPanel.SuspendLayout();
+            this.activePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // addressTextBox
@@ -317,7 +321,7 @@
             this.lblName.TabIndex = 44;
             this.lblName.Text = "Name*:";
             // 
-            // ageTextBox
+            // genderTextBox
             // 
             this.genderTextBox.Animated = true;
             this.genderTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -336,7 +340,7 @@
             this.genderTextBox.HoverState.Parent = this.genderTextBox;
             this.genderTextBox.Location = new System.Drawing.Point(252, 313);
             this.genderTextBox.Margin = new System.Windows.Forms.Padding(5);
-            this.genderTextBox.Name = "ageTextBox";
+            this.genderTextBox.Name = "genderTextBox";
             this.genderTextBox.PasswordChar = '\0';
             this.genderTextBox.PlaceholderText = "Age";
             this.genderTextBox.SelectedText = "";
@@ -367,18 +371,6 @@
             this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.guna2PictureBox5.TabIndex = 54;
             this.guna2PictureBox5.TabStop = false;
-            // 
-            // guna2PictureBox4
-            // 
-            this.guna2Transition1.SetDecoration(this.guna2PictureBox4, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2PictureBox4.Image = global::webTRON_Management_Software.Properties.Resources.RectangleCurved;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(-4, -4);
-            this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.ShadowDecoration.Parent = this.guna2PictureBox4;
-            this.guna2PictureBox4.Size = new System.Drawing.Size(162, 61);
-            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.guna2PictureBox4.TabIndex = 53;
-            this.guna2PictureBox4.TabStop = false;
             // 
             // btnMinimize
             // 
@@ -887,12 +879,67 @@
             // 
             this.guna2DragControl1.TargetControl = this;
             // 
+            // activePanel
+            // 
+            this.activePanel.BackgroundImage = global::webTRON_Management_Software.Properties.Resources.rectangle_curved_large;
+            this.activePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.activePanel.Controls.Add(this.actveForm);
+            this.activePanel.Controls.Add(this.activeUserPicture);
+            this.activePanel.Controls.Add(this.activeUserName);
+            this.guna2Transition1.SetDecoration(this.activePanel, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.activePanel.Location = new System.Drawing.Point(0, 0);
+            this.activePanel.Name = "activePanel";
+            this.activePanel.ShadowDecoration.Parent = this.activePanel;
+            this.activePanel.Size = new System.Drawing.Size(165, 80);
+            this.activePanel.TabIndex = 64;
+            // 
+            // actveForm
+            // 
+            this.actveForm.AutoSize = true;
+            this.actveForm.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Transition1.SetDecoration(this.actveForm, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.actveForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.actveForm.ForeColor = System.Drawing.Color.White;
+            this.actveForm.Location = new System.Drawing.Point(62, 40);
+            this.actveForm.Name = "actveForm";
+            this.actveForm.Size = new System.Drawing.Size(94, 20);
+            this.actveForm.TabIndex = 21;
+            this.actveForm.Text = "New Patient";
+            // 
+            // activeUserPicture
+            // 
+            this.activeUserPicture.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Transition1.SetDecoration(this.activeUserPicture, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.activeUserPicture.Image = global::webTRON_Management_Software.Properties.Resources.avatar;
+            this.activeUserPicture.Location = new System.Drawing.Point(7, 13);
+            this.activeUserPicture.Name = "activeUserPicture";
+            this.activeUserPicture.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.activeUserPicture.ShadowDecoration.Parent = this.activeUserPicture;
+            this.activeUserPicture.Size = new System.Drawing.Size(49, 45);
+            this.activeUserPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.activeUserPicture.TabIndex = 0;
+            this.activeUserPicture.TabStop = false;
+            // 
+            // activeUserName
+            // 
+            this.activeUserName.AutoSize = true;
+            this.activeUserName.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Transition1.SetDecoration(this.activeUserName, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.activeUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.activeUserName.ForeColor = System.Drawing.Color.White;
+            this.activeUserName.Location = new System.Drawing.Point(60, 9);
+            this.activeUserName.Name = "activeUserName";
+            this.activeUserName.Size = new System.Drawing.Size(52, 24);
+            this.activeUserName.TabIndex = 1;
+            this.activeUserName.Text = "John";
+            // 
             // CreateNewPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1000, 625);
+            this.Controls.Add(this.activePanel);
             this.Controls.Add(this.PrintPanelContanerPanel);
             this.Controls.Add(this.lblRegistrationDateOutput);
             this.Controls.Add(this.lblRegistrationIdOutput);
@@ -902,7 +949,6 @@
             this.Controls.Add(this.lblReferredTo);
             this.Controls.Add(this.btnCreateNewPatient);
             this.Controls.Add(this.guna2PictureBox5);
-            this.Controls.Add(this.guna2PictureBox4);
             this.Controls.Add(this.genderTextBox);
             this.Controls.Add(this.lblAge);
             this.Controls.Add(this.addressTextBox);
@@ -925,7 +971,6 @@
             this.Text = "CreateNewPatient";
             this.Load += new System.EventHandler(this.CreatePatient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.printPanel.ResumeLayout(false);
@@ -935,6 +980,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.webTRONWithAddressPictureBox)).EndInit();
             this.PrintPanelContanerPanel.ResumeLayout(false);
+            this.activePanel.ResumeLayout(false);
+            this.activePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -957,7 +1005,6 @@
         private System.Windows.Forms.Label lblName;
         private Guna.UI2.WinForms.Guna2TextBox genderTextBox;
         private System.Windows.Forms.Label lblAge;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
         private Guna.UI2.WinForms.Guna2Button btnCreateNewPatient;
         private System.Windows.Forms.Label lblReferredTo;
@@ -999,5 +1046,9 @@
         private System.Windows.Forms.Label LblPanelReferredToOutput;
         private Guna.UI2.WinForms.Guna2Transition guna2Transition1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private Guna.UI2.WinForms.Guna2Panel activePanel;
+        private System.Windows.Forms.Label actveForm;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox activeUserPicture;
+        private System.Windows.Forms.Label activeUserName;
     }
 }

@@ -363,7 +363,7 @@ namespace webTRON_Management_Software.Views.Lab_Assistant
             // 
             this.userPicture.BackColor = System.Drawing.Color.Transparent;
             this.alertTransition.SetDecoration(this.userPicture, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.userPicture.Image = global::webTRON_Management_Software.Properties.Resources.man_picture;
+            this.userPicture.Image = global::webTRON_Management_Software.Properties.Resources.avatar;
             this.userPicture.Location = new System.Drawing.Point(773, 78);
             this.userPicture.Name = "userPicture";
             this.userPicture.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -404,7 +404,7 @@ namespace webTRON_Management_Software.Views.Lab_Assistant
             // 
             this.activeUserPicture.BackColor = System.Drawing.Color.Transparent;
             this.alertTransition.SetDecoration(this.activeUserPicture, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.activeUserPicture.Image = global::webTRON_Management_Software.Properties.Resources.man_picture;
+            this.activeUserPicture.Image = global::webTRON_Management_Software.Properties.Resources.avatar;
             this.activeUserPicture.Location = new System.Drawing.Point(7, 13);
             this.activeUserPicture.Name = "activeUserPicture";
             this.activeUserPicture.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
