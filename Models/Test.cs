@@ -12,8 +12,8 @@ namespace webTRON_Management_Software.Models
     class Test
     {
         //Connection String
-        private static string connectionString = "server=localhost;user id=root;pwd=password;database=webtronmanagement";
-
+        // private static string connectionString = "server=localhost;user id=root;pwd=password;database=webtronmanagement";
+        private static string connectionString = "server=localhost;user id=root;pwd=laxudb;database=webtronmanagement";
 
         //Methods
 

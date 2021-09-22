@@ -18,8 +18,8 @@ namespace webTRON_Management_Software.Models
 
 
         //connection string
-        private static string connectionString = "server=localhost;user id=root; password=laxudb;persistsecurityinfo=True;database=webtronmanagement";
-        // private static string connectionString = "server=localhost;user id=root;pwd=password;database=webtronmanagement";
+        //private static string connectionString = "server=localhost;user id=root; password=laxudb;persistsecurityinfo=True;database=webtronmanagement";
+        private static string connectionString = "server=localhost;user id=root;pwd=laxudb;database=webtronmanagement";
         //instance variables of the class Patient
 
         public static DataTable GetPatientPrescriptionHistory(string ID)

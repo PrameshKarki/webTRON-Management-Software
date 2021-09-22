@@ -13,18 +13,18 @@ using webTRON_Management_Software.Utils;
 
 namespace webTRON_Management_Software.Views.Doctor
 {
-    public partial class MedicineForm : Form
+    public partial class Medicine : Form
     {
         int noOfRunningMedicine=1;
         int noOfPrescribedMedicine = 1; 
 
         //Instantiate list of medicine object
-        List<Medicine> medicineList = new List<Medicine>();
+        List<Models.Medicine> medicineList = new List<Models.Medicine>();
 
         //Instantiate list of row
         List<MedicineRow> listOfRunningMedicine = new List<MedicineRow>();
         List<MedicineRow> listOfPrescribedMedicine = new List<MedicineRow>();
-        public MedicineForm()
+        public Medicine()
         {
             InitializeComponent();
         }
@@ -117,7 +117,7 @@ namespace webTRON_Management_Software.Views.Doctor
                 btnAddRunningMedicine.Location = new Point(934, yCoOrdidate);
 
                 //Add controls in panel
-                this.runningMedicinePanel.Controls.Add(txtBox1);
+                //this.runningMedicinePanel.Controls.Add(txtBox1);
                 //Labels
                 this.runningMedicinePanel.Controls.Add(lbl1);
                 this.runningMedicinePanel.Controls.Add(lbl2);
@@ -272,7 +272,7 @@ namespace webTRON_Management_Software.Views.Doctor
             while (count <= noOfRunningMedicine)
             {
                 //Instantiate Medicines 
-                Medicine medicine = new Medicine();
+                Models.Medicine medicine = new Models.Medicine();
                 if (!string.IsNullOrEmpty(listOfRunningMedicine[count-1].MedicineName.Text) || !string.IsNullOrEmpty(listOfRunningMedicine[noOfRunningMedicine - 1].EndDay.Text))
                 {
                     medicine.Name = listOfRunningMedicine[count - 1].MedicineName.Text;
@@ -289,7 +289,7 @@ namespace webTRON_Management_Software.Views.Doctor
              while(count <= noOfPrescribedMedicine)
              {
                 //Instantiate Medicines 
-                Medicine medicine = new Medicine();
+                Models.Medicine medicine = new Models.Medicine();
                 if (!string.IsNullOrEmpty(listOfPrescribedMedicine[count - 1].MedicineName.Text) || !string.IsNullOrEmpty(listOfPrescribedMedicine[count - 1].EndDay.Text))
                  {
                      medicine.Name = listOfPrescribedMedicine[count-1].MedicineName.Text;
@@ -304,7 +304,7 @@ namespace webTRON_Management_Software.Views.Doctor
             if (medicineList.Count > 0)
             {
                 //Insert data into database
-                isSucess = Medicine.Insert(patientID, medicineList);
+                isSucess = Models.Medicine.Insert(patientID, medicineList);
             }
             else
             {
@@ -396,11 +396,11 @@ namespace webTRON_Management_Software.Views.Doctor
         private void LoadGridView()
         {
             string patientID = lblPatientIDValue.Text;
-            DataTable dt =Medicine.FetchPreviouslyTakenMedicines(patientID);
+            DataTable dt = Models.Medicine.FetchPreviouslyTakenMedicines(patientID);
             previouslyTakenMedicineGridView.DataSource = dt;
             previouslyTakenMedicineGridView.ClearSelection();
 
-            DataTable dataTable = Medicine.FetchRunningMedicines(patientID);
+            DataTable dataTable = Models.Medicine.FetchRunningMedicines(patientID);
             runningMedicinesGridView.DataSource =dataTable;
             runningMedicinesGridView.ClearSelection();
         }

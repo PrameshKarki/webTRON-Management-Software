@@ -74,6 +74,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Utils\History.cs" />
+    <Compile Include="Utils\Medicine.cs">
+      <CustomToolNamespace>/d</CustomToolNamespace>
+    </Compile>
     <Compile Include="Utils\MedicineRow.cs" />
     <Compile Include="Utils\Printer.cs" />
     <Compile Include="Utils\QRCodeGenerator.cs" />
@@ -266,12 +270,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\Email.cs" />
     <Compile Include="Utils\Generator.cs" />
-    <EmbeddedResource Include="Views\Accountant\ChangeInfo.resx">
-      <DependentUpon>ChangeInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Accountant\ChangePassword.resx">
-      <DependentUpon>ChangePassword.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="Utils\InsertModerator.cs" />
     <EmbeddedResource Include="Views\Accountant\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
