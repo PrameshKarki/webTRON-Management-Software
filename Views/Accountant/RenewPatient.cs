@@ -144,6 +144,12 @@ namespace webTRON_Management_Software.Views.Accountant
             }
         }
 
-       
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            var dashboard = new Dashboard(employee);
+            dashboard.Show();
+            this.Hide();
+
+        }
     }
 }

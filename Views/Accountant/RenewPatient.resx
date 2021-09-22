@@ -151,6 +151,15 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnBack.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAAJhJREFUOE/NklENgCAURYlgBCMYwShGsIE20gZGMAIRjKD3Mt4PojyBD8925nBv
+        R1BNhBZabzESO/21iDDGdTb/jRGJpeTcBgf4+lBtMHSCUbRH7iB3t0CJPs5ro4Jq/mu0gTuUea5vhNEU
+        jMj8zBsxJKoJkh4yeMDoLnPg78To6FYV4NdncHWrCvA1ad+7GgZpNaoHcVxjL3YQUFHcQOjVAAAAAElF
+        TkSuQmCC
+</value>
+  </data>
   <data name="btnMinimize.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABUAAAAECAYAAABhnXSoAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL

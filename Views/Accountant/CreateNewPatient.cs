@@ -192,8 +192,12 @@ namespace webTRON_Management_Software.Views.Accountant
             }
         }
 
-        private void PrintPanelContanerPanel_Paint(object sender, PaintEventArgs e)
+        //CLick event on Back Button
+        private void BtnBack_Click(object sender, EventArgs e)
         {
+            var dashboard = new Dashboard(employee);
+            dashboard.Show();
+            this.Hide();
 
         }
     }
