@@ -57,7 +57,7 @@
             this.lblTodaysPrescriptionTitleOutput = new System.Windows.Forms.Label();
             this.lblTodaysDateOutput = new System.Windows.Forms.Label();
             this.newPrescriptionTextField = new Guna.UI2.WinForms.Guna2TextBox();
-            this.newTopic1TextField = new Guna.UI2.WinForms.Guna2TextBox();
+            this.history_textbox_1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnAddTopic = new Guna.UI2.WinForms.Guna2Button();
             this.lblRegistrationDate = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
@@ -93,7 +93,8 @@
             // 
             this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
-            this.btnMinimize.Location = new System.Drawing.Point(911, 27);
+            this.btnMinimize.Location = new System.Drawing.Point(1215, 33);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.ShadowDecoration.Parent = this.btnMinimize;
             this.btnMinimize.Size = new System.Drawing.Size(21, 4);
@@ -106,7 +107,8 @@
             // 
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(960, 12);
+            this.btnExit.Location = new System.Drawing.Point(1280, 15);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
             this.btnExit.ShadowDecoration.Parent = this.btnExit;
             this.btnExit.Size = new System.Drawing.Size(28, 28);
@@ -123,9 +125,10 @@
             this.activePanel.Controls.Add(this.activeUserPicture);
             this.activePanel.Controls.Add(this.activeUserName);
             this.activePanel.Location = new System.Drawing.Point(-1, 0);
+            this.activePanel.Margin = new System.Windows.Forms.Padding(4);
             this.activePanel.Name = "activePanel";
             this.activePanel.ShadowDecoration.Parent = this.activePanel;
-            this.activePanel.Size = new System.Drawing.Size(165, 80);
+            this.activePanel.Size = new System.Drawing.Size(220, 98);
             this.activePanel.TabIndex = 28;
             // 
             // activeForm
@@ -134,9 +137,10 @@
             this.activeForm.BackColor = System.Drawing.Color.Transparent;
             this.activeForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.activeForm.ForeColor = System.Drawing.Color.White;
-            this.activeForm.Location = new System.Drawing.Point(64, 40);
+            this.activeForm.Location = new System.Drawing.Point(85, 49);
+            this.activeForm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.activeForm.Name = "activeForm";
-            this.activeForm.Size = new System.Drawing.Size(88, 20);
+            this.activeForm.Size = new System.Drawing.Size(108, 25);
             this.activeForm.TabIndex = 21;
             this.activeForm.Text = "Dashboard";
             // 
@@ -144,11 +148,12 @@
             // 
             this.activeUserPicture.BackColor = System.Drawing.Color.Transparent;
             this.activeUserPicture.Image = global::webTRON_Management_Software.Properties.Resources.avatar;
-            this.activeUserPicture.Location = new System.Drawing.Point(0, 15);
+            this.activeUserPicture.Location = new System.Drawing.Point(0, 18);
+            this.activeUserPicture.Margin = new System.Windows.Forms.Padding(4);
             this.activeUserPicture.Name = "activeUserPicture";
             this.activeUserPicture.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.activeUserPicture.ShadowDecoration.Parent = this.activeUserPicture;
-            this.activeUserPicture.Size = new System.Drawing.Size(49, 45);
+            this.activeUserPicture.Size = new System.Drawing.Size(65, 55);
             this.activeUserPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.activeUserPicture.TabIndex = 0;
             this.activeUserPicture.TabStop = false;
@@ -159,9 +164,10 @@
             this.activeUserName.BackColor = System.Drawing.Color.Transparent;
             this.activeUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.activeUserName.ForeColor = System.Drawing.Color.White;
-            this.activeUserName.Location = new System.Drawing.Point(64, 9);
+            this.activeUserName.Location = new System.Drawing.Point(85, 11);
+            this.activeUserName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.activeUserName.Name = "activeUserName";
-            this.activeUserName.Size = new System.Drawing.Size(52, 24);
+            this.activeUserName.Size = new System.Drawing.Size(65, 29);
             this.activeUserName.TabIndex = 1;
             this.activeUserName.Text = "John";
             // 
@@ -169,9 +175,10 @@
             // 
             this.lblMinus2.AutoSize = true;
             this.lblMinus2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMinus2.Location = new System.Drawing.Point(530, 19);
+            this.lblMinus2.Location = new System.Drawing.Point(707, 23);
+            this.lblMinus2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMinus2.Name = "lblMinus2";
-            this.lblMinus2.Size = new System.Drawing.Size(19, 26);
+            this.lblMinus2.Size = new System.Drawing.Size(23, 31);
             this.lblMinus2.TabIndex = 71;
             this.lblMinus2.Text = "-";
             // 
@@ -179,9 +186,10 @@
             // 
             this.lblMinus1.AutoSize = true;
             this.lblMinus1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMinus1.Location = new System.Drawing.Point(401, 19);
+            this.lblMinus1.Location = new System.Drawing.Point(535, 23);
+            this.lblMinus1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMinus1.Name = "lblMinus1";
-            this.lblMinus1.Size = new System.Drawing.Size(19, 26);
+            this.lblMinus1.Size = new System.Drawing.Size(23, 31);
             this.lblMinus1.TabIndex = 70;
             this.lblMinus1.Text = "-";
             // 
@@ -210,10 +218,11 @@
             "13",
             "12"});
             this.yearComboBox.ItemsAppearance.Parent = this.yearComboBox;
-            this.yearComboBox.Location = new System.Drawing.Point(439, 15);
+            this.yearComboBox.Location = new System.Drawing.Point(585, 18);
+            this.yearComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.yearComboBox.Name = "yearComboBox";
             this.yearComboBox.ShadowDecoration.Parent = this.yearComboBox;
-            this.yearComboBox.Size = new System.Drawing.Size(60, 36);
+            this.yearComboBox.Size = new System.Drawing.Size(79, 36);
             this.yearComboBox.TabIndex = 69;
             this.yearComboBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -221,9 +230,10 @@
             // 
             this.lblRegistrationId.AutoSize = true;
             this.lblRegistrationId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegistrationId.Location = new System.Drawing.Point(235, 28);
+            this.lblRegistrationId.Location = new System.Drawing.Point(313, 34);
+            this.lblRegistrationId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRegistrationId.Name = "lblRegistrationId";
-            this.lblRegistrationId.Size = new System.Drawing.Size(105, 17);
+            this.lblRegistrationId.Size = new System.Drawing.Size(126, 20);
             this.lblRegistrationId.TabIndex = 68;
             this.lblRegistrationId.Text = "Registration ID:";
             // 
@@ -241,14 +251,14 @@
             this.patientSerialNumberTextBox.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.patientSerialNumberTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.patientSerialNumberTextBox.HoverState.Parent = this.patientSerialNumberTextBox;
-            this.patientSerialNumberTextBox.Location = new System.Drawing.Point(581, 15);
-            this.patientSerialNumberTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.patientSerialNumberTextBox.Location = new System.Drawing.Point(775, 18);
+            this.patientSerialNumberTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.patientSerialNumberTextBox.Name = "patientSerialNumberTextBox";
             this.patientSerialNumberTextBox.PasswordChar = '\0';
             this.patientSerialNumberTextBox.PlaceholderText = "";
             this.patientSerialNumberTextBox.SelectedText = "";
             this.patientSerialNumberTextBox.ShadowDecoration.Parent = this.patientSerialNumberTextBox;
-            this.patientSerialNumberTextBox.Size = new System.Drawing.Size(94, 30);
+            this.patientSerialNumberTextBox.Size = new System.Drawing.Size(125, 37);
             this.patientSerialNumberTextBox.TabIndex = 66;
             this.patientSerialNumberTextBox.TextChanged += new System.EventHandler(this.PatientSerialNumberTextBox_TextChanged);
             // 
@@ -256,9 +266,10 @@
             // 
             this.lblPtn.AutoSize = true;
             this.lblPtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPtn.Location = new System.Drawing.Point(345, 25);
+            this.lblPtn.Location = new System.Drawing.Point(460, 31);
+            this.lblPtn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPtn.Name = "lblPtn";
-            this.lblPtn.Size = new System.Drawing.Size(39, 20);
+            this.lblPtn.Size = new System.Drawing.Size(52, 25);
             this.lblPtn.TabIndex = 72;
             this.lblPtn.Text = "PTN";
             // 
@@ -268,12 +279,13 @@
             this.prescriptionPanel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.prescriptionPanel.Controls.Add(this.btnNext);
             this.prescriptionPanel.Controls.Add(this.prescriptionDisplayPanel);
-            this.prescriptionPanel.Controls.Add(this.newTopic1TextField);
+            this.prescriptionPanel.Controls.Add(this.history_textbox_1);
             this.prescriptionPanel.Controls.Add(this.btnAddTopic);
-            this.prescriptionPanel.Location = new System.Drawing.Point(-1, 160);
+            this.prescriptionPanel.Location = new System.Drawing.Point(-1, 197);
+            this.prescriptionPanel.Margin = new System.Windows.Forms.Padding(4);
             this.prescriptionPanel.Name = "prescriptionPanel";
             this.prescriptionPanel.ShadowDecoration.Parent = this.prescriptionPanel;
-            this.prescriptionPanel.Size = new System.Drawing.Size(1002, 453);
+            this.prescriptionPanel.Size = new System.Drawing.Size(1336, 558);
             this.prescriptionPanel.TabIndex = 73;
             this.prescriptionPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.PrescriptionPanel_Paint);
             // 
@@ -285,10 +297,11 @@
             this.btnNext.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.btnNext.ForeColor = System.Drawing.Color.White;
             this.btnNext.HoverState.Parent = this.btnNext;
-            this.btnNext.Location = new System.Drawing.Point(870, 408);
+            this.btnNext.Location = new System.Drawing.Point(1160, 502);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnNext.Name = "btnNext";
             this.btnNext.ShadowDecoration.Parent = this.btnNext;
-            this.btnNext.Size = new System.Drawing.Size(116, 42);
+            this.btnNext.Size = new System.Drawing.Size(155, 52);
             this.btnNext.TabIndex = 91;
             this.btnNext.Text = "NEXT";
             // 
@@ -298,10 +311,11 @@
             this.prescriptionDisplayPanel.AutoScroll = true;
             this.prescriptionDisplayPanel.Controls.Add(this.oldPrescriptionPanel);
             this.prescriptionDisplayPanel.Controls.Add(this.todaysPrescriptionPanel);
-            this.prescriptionDisplayPanel.Location = new System.Drawing.Point(168, 8);
+            this.prescriptionDisplayPanel.Location = new System.Drawing.Point(224, 10);
+            this.prescriptionDisplayPanel.Margin = new System.Windows.Forms.Padding(4);
             this.prescriptionDisplayPanel.Name = "prescriptionDisplayPanel";
             this.prescriptionDisplayPanel.ShadowDecoration.Parent = this.prescriptionDisplayPanel;
-            this.prescriptionDisplayPanel.Size = new System.Drawing.Size(831, 394);
+            this.prescriptionDisplayPanel.Size = new System.Drawing.Size(1108, 485);
             this.prescriptionDisplayPanel.TabIndex = 92;
             // 
             // oldPrescriptionPanel
@@ -312,10 +326,11 @@
             this.oldPrescriptionPanel.Controls.Add(this.lblPrescribedBy);
             this.oldPrescriptionPanel.Controls.Add(this.lblPrescriptionTitleOutput);
             this.oldPrescriptionPanel.Controls.Add(this.lblPrescribedDoctorNameOutput);
-            this.oldPrescriptionPanel.Location = new System.Drawing.Point(0, 195);
+            this.oldPrescriptionPanel.Location = new System.Drawing.Point(0, 240);
+            this.oldPrescriptionPanel.Margin = new System.Windows.Forms.Padding(4);
             this.oldPrescriptionPanel.Name = "oldPrescriptionPanel";
             this.oldPrescriptionPanel.ShadowDecoration.Parent = this.oldPrescriptionPanel;
-            this.oldPrescriptionPanel.Size = new System.Drawing.Size(804, 194);
+            this.oldPrescriptionPanel.Size = new System.Drawing.Size(1072, 239);
             this.oldPrescriptionPanel.TabIndex = 6;
             this.oldPrescriptionPanel.Visible = false;
             // 
@@ -324,9 +339,10 @@
             this.lblprescriptionDateOutput.AutoSize = true;
             this.lblprescriptionDateOutput.BackColor = System.Drawing.Color.Transparent;
             this.lblprescriptionDateOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblprescriptionDateOutput.Location = new System.Drawing.Point(10, 2);
+            this.lblprescriptionDateOutput.Location = new System.Drawing.Point(13, 2);
+            this.lblprescriptionDateOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblprescriptionDateOutput.Name = "lblprescriptionDateOutput";
-            this.lblprescriptionDateOutput.Size = new System.Drawing.Size(97, 15);
+            this.lblprescriptionDateOutput.Size = new System.Drawing.Size(116, 18);
             this.lblprescriptionDateOutput.TabIndex = 6;
             this.lblprescriptionDateOutput.Text = "prescriptionDate";
             // 
@@ -347,7 +363,8 @@
             this.prescriptionHistory1TextField.FocusedState.Parent = this.prescriptionHistory1TextField;
             this.prescriptionHistory1TextField.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.prescriptionHistory1TextField.HoverState.Parent = this.prescriptionHistory1TextField;
-            this.prescriptionHistory1TextField.Location = new System.Drawing.Point(12, 20);
+            this.prescriptionHistory1TextField.Location = new System.Drawing.Point(16, 25);
+            this.prescriptionHistory1TextField.Margin = new System.Windows.Forms.Padding(5);
             this.prescriptionHistory1TextField.Multiline = true;
             this.prescriptionHistory1TextField.Name = "prescriptionHistory1TextField";
             this.prescriptionHistory1TextField.PasswordChar = '\0';
@@ -355,7 +372,7 @@
             this.prescriptionHistory1TextField.ReadOnly = true;
             this.prescriptionHistory1TextField.SelectedText = "";
             this.prescriptionHistory1TextField.ShadowDecoration.Parent = this.prescriptionHistory1TextField;
-            this.prescriptionHistory1TextField.Size = new System.Drawing.Size(789, 153);
+            this.prescriptionHistory1TextField.Size = new System.Drawing.Size(1052, 188);
             this.prescriptionHistory1TextField.TabIndex = 1;
             // 
             // lblPrescribedBy
@@ -363,9 +380,10 @@
             this.lblPrescribedBy.AutoSize = true;
             this.lblPrescribedBy.BackColor = System.Drawing.Color.Transparent;
             this.lblPrescribedBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrescribedBy.Location = new System.Drawing.Point(556, 173);
+            this.lblPrescribedBy.Location = new System.Drawing.Point(741, 213);
+            this.lblPrescribedBy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrescribedBy.Name = "lblPrescribedBy";
-            this.lblPrescribedBy.Size = new System.Drawing.Size(84, 15);
+            this.lblPrescribedBy.Size = new System.Drawing.Size(102, 18);
             this.lblPrescribedBy.TabIndex = 4;
             this.lblPrescribedBy.Text = "prescribed By:";
             // 
@@ -374,9 +392,10 @@
             this.lblPrescriptionTitleOutput.AutoSize = true;
             this.lblPrescriptionTitleOutput.BackColor = System.Drawing.Color.Transparent;
             this.lblPrescriptionTitleOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrescriptionTitleOutput.Location = new System.Drawing.Point(119, 2);
+            this.lblPrescriptionTitleOutput.Location = new System.Drawing.Point(159, 2);
+            this.lblPrescriptionTitleOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrescriptionTitleOutput.Name = "lblPrescriptionTitleOutput";
-            this.lblPrescriptionTitleOutput.Size = new System.Drawing.Size(94, 15);
+            this.lblPrescriptionTitleOutput.Size = new System.Drawing.Size(112, 18);
             this.lblPrescriptionTitleOutput.TabIndex = 3;
             this.lblPrescriptionTitleOutput.Text = "prescriptionTitle";
             // 
@@ -385,9 +404,10 @@
             this.lblPrescribedDoctorNameOutput.AutoSize = true;
             this.lblPrescribedDoctorNameOutput.BackColor = System.Drawing.Color.Transparent;
             this.lblPrescribedDoctorNameOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrescribedDoctorNameOutput.Location = new System.Drawing.Point(651, 173);
+            this.lblPrescribedDoctorNameOutput.Location = new System.Drawing.Point(868, 213);
+            this.lblPrescribedDoctorNameOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrescribedDoctorNameOutput.Name = "lblPrescribedDoctorNameOutput";
-            this.lblPrescribedDoctorNameOutput.Size = new System.Drawing.Size(135, 15);
+            this.lblPrescribedDoctorNameOutput.Size = new System.Drawing.Size(163, 18);
             this.lblPrescribedDoctorNameOutput.TabIndex = 5;
             this.lblPrescribedDoctorNameOutput.Text = "prescribedDoctorName";
             // 
@@ -400,9 +420,10 @@
             this.todaysPrescriptionPanel.Controls.Add(this.newPrescriptionTextField);
             this.todaysPrescriptionPanel.FillColor = System.Drawing.Color.WhiteSmoke;
             this.todaysPrescriptionPanel.Location = new System.Drawing.Point(0, 0);
+            this.todaysPrescriptionPanel.Margin = new System.Windows.Forms.Padding(4);
             this.todaysPrescriptionPanel.Name = "todaysPrescriptionPanel";
             this.todaysPrescriptionPanel.ShadowDecoration.Parent = this.todaysPrescriptionPanel;
-            this.todaysPrescriptionPanel.Size = new System.Drawing.Size(804, 194);
+            this.todaysPrescriptionPanel.Size = new System.Drawing.Size(1072, 239);
             this.todaysPrescriptionPanel.TabIndex = 7;
             // 
             // lblTodayPrescribedDoctorNameOutput
@@ -410,9 +431,10 @@
             this.lblTodayPrescribedDoctorNameOutput.AutoSize = true;
             this.lblTodayPrescribedDoctorNameOutput.BackColor = System.Drawing.Color.Transparent;
             this.lblTodayPrescribedDoctorNameOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTodayPrescribedDoctorNameOutput.Location = new System.Drawing.Point(652, 169);
+            this.lblTodayPrescribedDoctorNameOutput.Location = new System.Drawing.Point(869, 208);
+            this.lblTodayPrescribedDoctorNameOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTodayPrescribedDoctorNameOutput.Name = "lblTodayPrescribedDoctorNameOutput";
-            this.lblTodayPrescribedDoctorNameOutput.Size = new System.Drawing.Size(135, 15);
+            this.lblTodayPrescribedDoctorNameOutput.Size = new System.Drawing.Size(163, 18);
             this.lblTodayPrescribedDoctorNameOutput.TabIndex = 7;
             this.lblTodayPrescribedDoctorNameOutput.Text = "prescribedDoctorName";
             // 
@@ -421,9 +443,10 @@
             this.lblTodayPrescribedBy.AutoSize = true;
             this.lblTodayPrescribedBy.BackColor = System.Drawing.Color.Transparent;
             this.lblTodayPrescribedBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTodayPrescribedBy.Location = new System.Drawing.Point(553, 169);
+            this.lblTodayPrescribedBy.Location = new System.Drawing.Point(737, 208);
+            this.lblTodayPrescribedBy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTodayPrescribedBy.Name = "lblTodayPrescribedBy";
-            this.lblTodayPrescribedBy.Size = new System.Drawing.Size(84, 15);
+            this.lblTodayPrescribedBy.Size = new System.Drawing.Size(102, 18);
             this.lblTodayPrescribedBy.TabIndex = 7;
             this.lblTodayPrescribedBy.Text = "prescribed By:";
             // 
@@ -432,9 +455,10 @@
             this.lblTodaysPrescriptionTitleOutput.AutoSize = true;
             this.lblTodaysPrescriptionTitleOutput.BackColor = System.Drawing.Color.Transparent;
             this.lblTodaysPrescriptionTitleOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTodaysPrescriptionTitleOutput.Location = new System.Drawing.Point(75, 0);
+            this.lblTodaysPrescriptionTitleOutput.Location = new System.Drawing.Point(100, 0);
+            this.lblTodaysPrescriptionTitleOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTodaysPrescriptionTitleOutput.Name = "lblTodaysPrescriptionTitleOutput";
-            this.lblTodaysPrescriptionTitleOutput.Size = new System.Drawing.Size(48, 17);
+            this.lblTodaysPrescriptionTitleOutput.Size = new System.Drawing.Size(55, 20);
             this.lblTodaysPrescriptionTitleOutput.TabIndex = 8;
             this.lblTodaysPrescriptionTitleOutput.Text = ": ____";
             // 
@@ -443,9 +467,10 @@
             this.lblTodaysDateOutput.AutoSize = true;
             this.lblTodaysDateOutput.BackColor = System.Drawing.Color.Transparent;
             this.lblTodaysDateOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTodaysDateOutput.Location = new System.Drawing.Point(9, 2);
+            this.lblTodaysDateOutput.Location = new System.Drawing.Point(12, 2);
+            this.lblTodaysDateOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTodaysDateOutput.Name = "lblTodaysDateOutput";
-            this.lblTodaysDateOutput.Size = new System.Drawing.Size(71, 15);
+            this.lblTodaysDateOutput.Size = new System.Drawing.Size(88, 18);
             this.lblTodaysDateOutput.TabIndex = 7;
             this.lblTodaysDateOutput.Text = "yyyy-mm-dd";
             // 
@@ -466,40 +491,42 @@
             this.newPrescriptionTextField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.newPrescriptionTextField.HoverState.BorderColor = System.Drawing.Color.White;
             this.newPrescriptionTextField.HoverState.Parent = this.newPrescriptionTextField;
-            this.newPrescriptionTextField.Location = new System.Drawing.Point(3, 18);
+            this.newPrescriptionTextField.Location = new System.Drawing.Point(4, 22);
+            this.newPrescriptionTextField.Margin = new System.Windows.Forms.Padding(5);
             this.newPrescriptionTextField.Multiline = true;
             this.newPrescriptionTextField.Name = "newPrescriptionTextField";
             this.newPrescriptionTextField.PasswordChar = '\0';
             this.newPrescriptionTextField.PlaceholderText = "";
             this.newPrescriptionTextField.SelectedText = "";
             this.newPrescriptionTextField.ShadowDecoration.Parent = this.newPrescriptionTextField;
-            this.newPrescriptionTextField.Size = new System.Drawing.Size(798, 150);
+            this.newPrescriptionTextField.Size = new System.Drawing.Size(1064, 185);
             this.newPrescriptionTextField.TabIndex = 0;
+            this.newPrescriptionTextField.TextChanged += new System.EventHandler(this.newPrescriptionTextField_TextChanged);
             // 
-            // newTopic1TextField
+            // history_textbox_1
             // 
-            this.newTopic1TextField.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.newTopic1TextField.DefaultText = "";
-            this.newTopic1TextField.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.newTopic1TextField.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.newTopic1TextField.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.newTopic1TextField.DisabledState.Parent = this.newTopic1TextField;
-            this.newTopic1TextField.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.newTopic1TextField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.newTopic1TextField.FocusedState.Parent = this.newTopic1TextField;
-            this.newTopic1TextField.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.newTopic1TextField.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.newTopic1TextField.HoverState.Parent = this.newTopic1TextField;
-            this.newTopic1TextField.Location = new System.Drawing.Point(4, 37);
-            this.newTopic1TextField.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.newTopic1TextField.Name = "newTopic1TextField";
-            this.newTopic1TextField.PasswordChar = '\0';
-            this.newTopic1TextField.PlaceholderText = "New Topic";
-            this.newTopic1TextField.SelectedText = "";
-            this.newTopic1TextField.ShadowDecoration.Parent = this.newTopic1TextField;
-            this.newTopic1TextField.Size = new System.Drawing.Size(149, 29);
-            this.newTopic1TextField.TabIndex = 1;
-            this.newTopic1TextField.TextChanged += new System.EventHandler(this.NewTopic1TextField_TextChanged);
+            this.history_textbox_1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.history_textbox_1.DefaultText = "";
+            this.history_textbox_1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.history_textbox_1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.history_textbox_1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.history_textbox_1.DisabledState.Parent = this.history_textbox_1;
+            this.history_textbox_1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.history_textbox_1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.history_textbox_1.FocusedState.Parent = this.history_textbox_1;
+            this.history_textbox_1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.history_textbox_1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.history_textbox_1.HoverState.Parent = this.history_textbox_1;
+            this.history_textbox_1.Location = new System.Drawing.Point(5, 46);
+            this.history_textbox_1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.history_textbox_1.Name = "history_textbox_1";
+            this.history_textbox_1.PasswordChar = '\0';
+            this.history_textbox_1.PlaceholderText = "New Topic";
+            this.history_textbox_1.SelectedText = "";
+            this.history_textbox_1.ShadowDecoration.Parent = this.history_textbox_1;
+            this.history_textbox_1.Size = new System.Drawing.Size(199, 36);
+            this.history_textbox_1.TabIndex = 1;
+            this.history_textbox_1.TextChanged += new System.EventHandler(this.NewTopic1TextField_TextChanged);
             // 
             // btnAddTopic
             // 
@@ -510,10 +537,11 @@
             this.btnAddTopic.ForeColor = System.Drawing.Color.White;
             this.btnAddTopic.HoverState.Parent = this.btnAddTopic;
             this.btnAddTopic.Image = global::webTRON_Management_Software.Properties.Resources.PlusSign;
-            this.btnAddTopic.Location = new System.Drawing.Point(4, 82);
+            this.btnAddTopic.Location = new System.Drawing.Point(5, 101);
+            this.btnAddTopic.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddTopic.Name = "btnAddTopic";
             this.btnAddTopic.ShadowDecoration.Parent = this.btnAddTopic;
-            this.btnAddTopic.Size = new System.Drawing.Size(149, 33);
+            this.btnAddTopic.Size = new System.Drawing.Size(199, 41);
             this.btnAddTopic.TabIndex = 0;
             this.btnAddTopic.Text = "Add Topic";
             this.btnAddTopic.Click += new System.EventHandler(this.BtnAddTopic_Click);
@@ -522,9 +550,10 @@
             // 
             this.lblRegistrationDate.AutoSize = true;
             this.lblRegistrationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegistrationDate.Location = new System.Drawing.Point(165, 76);
+            this.lblRegistrationDate.Location = new System.Drawing.Point(220, 94);
+            this.lblRegistrationDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRegistrationDate.Name = "lblRegistrationDate";
-            this.lblRegistrationDate.Size = new System.Drawing.Size(115, 17);
+            this.lblRegistrationDate.Size = new System.Drawing.Size(136, 20);
             this.lblRegistrationDate.TabIndex = 74;
             this.lblRegistrationDate.Text = "Registered Date:";
             // 
@@ -532,9 +561,10 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(234, 104);
+            this.lblName.Location = new System.Drawing.Point(312, 128);
+            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(49, 17);
+            this.lblName.Size = new System.Drawing.Size(58, 20);
             this.lblName.TabIndex = 75;
             this.lblName.Text = "Name:";
             // 
@@ -542,9 +572,10 @@
             // 
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.Location = new System.Drawing.Point(466, 74);
+            this.lblAddress.Location = new System.Drawing.Point(621, 91);
+            this.lblAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(64, 17);
+            this.lblAddress.Size = new System.Drawing.Size(76, 20);
             this.lblAddress.TabIndex = 76;
             this.lblAddress.Text = "Address:";
             // 
@@ -552,9 +583,10 @@
             // 
             this.lblContact.AutoSize = true;
             this.lblContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContact.Location = new System.Drawing.Point(470, 102);
+            this.lblContact.Location = new System.Drawing.Point(627, 126);
+            this.lblContact.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContact.Name = "lblContact";
-            this.lblContact.Size = new System.Drawing.Size(60, 17);
+            this.lblContact.Size = new System.Drawing.Size(72, 20);
             this.lblContact.TabIndex = 77;
             this.lblContact.Text = "Contact:";
             // 
@@ -562,9 +594,10 @@
             // 
             this.lblAge.AutoSize = true;
             this.lblAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAge.Location = new System.Drawing.Point(740, 74);
+            this.lblAge.Location = new System.Drawing.Point(987, 91);
+            this.lblAge.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(37, 17);
+            this.lblAge.Size = new System.Drawing.Size(43, 20);
             this.lblAge.TabIndex = 78;
             this.lblAge.Text = "Age:";
             // 
@@ -572,9 +605,10 @@
             // 
             this.lblReferredTo.AutoSize = true;
             this.lblReferredTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReferredTo.Location = new System.Drawing.Point(688, 102);
+            this.lblReferredTo.Location = new System.Drawing.Point(917, 126);
+            this.lblReferredTo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblReferredTo.Name = "lblReferredTo";
-            this.lblReferredTo.Size = new System.Drawing.Size(89, 17);
+            this.lblReferredTo.Size = new System.Drawing.Size(103, 20);
             this.lblReferredTo.TabIndex = 79;
             this.lblReferredTo.Text = "Referred To:";
             // 
@@ -586,10 +620,11 @@
             this.btnHistory.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnHistory.ForeColor = System.Drawing.Color.White;
             this.btnHistory.HoverState.Parent = this.btnHistory;
-            this.btnHistory.Location = new System.Drawing.Point(623, 136);
+            this.btnHistory.Location = new System.Drawing.Point(831, 167);
+            this.btnHistory.Margin = new System.Windows.Forms.Padding(4);
             this.btnHistory.Name = "btnHistory";
             this.btnHistory.ShadowDecoration.Parent = this.btnHistory;
-            this.btnHistory.Size = new System.Drawing.Size(86, 18);
+            this.btnHistory.Size = new System.Drawing.Size(115, 22);
             this.btnHistory.TabIndex = 80;
             this.btnHistory.Text = "History";
             // 
@@ -601,10 +636,11 @@
             this.btnTests.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnTests.ForeColor = System.Drawing.Color.White;
             this.btnTests.HoverState.Parent = this.btnTests;
-            this.btnTests.Location = new System.Drawing.Point(807, 136);
+            this.btnTests.Location = new System.Drawing.Point(1076, 167);
+            this.btnTests.Margin = new System.Windows.Forms.Padding(4);
             this.btnTests.Name = "btnTests";
             this.btnTests.ShadowDecoration.Parent = this.btnTests;
-            this.btnTests.Size = new System.Drawing.Size(86, 18);
+            this.btnTests.Size = new System.Drawing.Size(115, 22);
             this.btnTests.TabIndex = 81;
             this.btnTests.Text = "Tests";
             // 
@@ -616,10 +652,11 @@
             this.btnOthers.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnOthers.ForeColor = System.Drawing.Color.White;
             this.btnOthers.HoverState.Parent = this.btnOthers;
-            this.btnOthers.Location = new System.Drawing.Point(899, 136);
+            this.btnOthers.Location = new System.Drawing.Point(1199, 167);
+            this.btnOthers.Margin = new System.Windows.Forms.Padding(4);
             this.btnOthers.Name = "btnOthers";
             this.btnOthers.ShadowDecoration.Parent = this.btnOthers;
-            this.btnOthers.Size = new System.Drawing.Size(86, 18);
+            this.btnOthers.Size = new System.Drawing.Size(115, 22);
             this.btnOthers.TabIndex = 82;
             this.btnOthers.Text = "Others";
             // 
@@ -627,9 +664,10 @@
             // 
             this.registrationDateOutput.AutoSize = true;
             this.registrationDateOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registrationDateOutput.Location = new System.Drawing.Point(290, 76);
+            this.registrationDateOutput.Location = new System.Drawing.Point(387, 94);
+            this.registrationDateOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.registrationDateOutput.Name = "registrationDateOutput";
-            this.registrationDateOutput.Size = new System.Drawing.Size(109, 17);
+            this.registrationDateOutput.Size = new System.Drawing.Size(129, 20);
             this.registrationDateOutput.TabIndex = 83;
             this.registrationDateOutput.Text = "registrationDate";
             // 
@@ -637,9 +675,10 @@
             // 
             this.lblFirstNameOutput.AutoSize = true;
             this.lblFirstNameOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFirstNameOutput.Location = new System.Drawing.Point(289, 106);
+            this.lblFirstNameOutput.Location = new System.Drawing.Point(385, 130);
+            this.lblFirstNameOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFirstNameOutput.Name = "lblFirstNameOutput";
-            this.lblFirstNameOutput.Size = new System.Drawing.Size(70, 17);
+            this.lblFirstNameOutput.Size = new System.Drawing.Size(84, 20);
             this.lblFirstNameOutput.TabIndex = 84;
             this.lblFirstNameOutput.Text = "Firstname";
             // 
@@ -647,9 +686,10 @@
             // 
             this.lblAddressOutput.AutoSize = true;
             this.lblAddressOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddressOutput.Location = new System.Drawing.Point(537, 74);
+            this.lblAddressOutput.Location = new System.Drawing.Point(716, 91);
+            this.lblAddressOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAddressOutput.Name = "lblAddressOutput";
-            this.lblAddressOutput.Size = new System.Drawing.Size(102, 17);
+            this.lblAddressOutput.Size = new System.Drawing.Size(119, 20);
             this.lblAddressOutput.TabIndex = 85;
             this.lblAddressOutput.Text = "addressOutput";
             // 
@@ -657,9 +697,10 @@
             // 
             this.lblContactOutput.AutoSize = true;
             this.lblContactOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContactOutput.Location = new System.Drawing.Point(539, 102);
+            this.lblContactOutput.Location = new System.Drawing.Point(719, 126);
+            this.lblContactOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContactOutput.Name = "lblContactOutput";
-            this.lblContactOutput.Size = new System.Drawing.Size(97, 17);
+            this.lblContactOutput.Size = new System.Drawing.Size(114, 20);
             this.lblContactOutput.TabIndex = 86;
             this.lblContactOutput.Text = "contactOutput";
             // 
@@ -667,9 +708,10 @@
             // 
             this.lblAgeOutput.AutoSize = true;
             this.lblAgeOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAgeOutput.Location = new System.Drawing.Point(784, 74);
+            this.lblAgeOutput.Location = new System.Drawing.Point(1045, 91);
+            this.lblAgeOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgeOutput.Name = "lblAgeOutput";
-            this.lblAgeOutput.Size = new System.Drawing.Size(75, 17);
+            this.lblAgeOutput.Size = new System.Drawing.Size(86, 20);
             this.lblAgeOutput.TabIndex = 87;
             this.lblAgeOutput.Text = "ageOutput";
             // 
@@ -677,9 +719,10 @@
             // 
             this.lblReferredToOutput.AutoSize = true;
             this.lblReferredToOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReferredToOutput.Location = new System.Drawing.Point(787, 102);
+            this.lblReferredToOutput.Location = new System.Drawing.Point(1049, 126);
+            this.lblReferredToOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblReferredToOutput.Name = "lblReferredToOutput";
-            this.lblReferredToOutput.Size = new System.Drawing.Size(119, 17);
+            this.lblReferredToOutput.Size = new System.Drawing.Size(137, 20);
             this.lblReferredToOutput.TabIndex = 88;
             this.lblReferredToOutput.Text = "referredToOutput";
             // 
@@ -687,9 +730,10 @@
             // 
             this.lblGenderOutput.AutoSize = true;
             this.lblGenderOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGenderOutput.Location = new System.Drawing.Point(875, 74);
+            this.lblGenderOutput.Location = new System.Drawing.Point(1167, 91);
+            this.lblGenderOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGenderOutput.Name = "lblGenderOutput";
-            this.lblGenderOutput.Size = new System.Drawing.Size(96, 17);
+            this.lblGenderOutput.Size = new System.Drawing.Size(110, 20);
             this.lblGenderOutput.TabIndex = 89;
             this.lblGenderOutput.Text = "genderOutput";
             // 
@@ -697,9 +741,10 @@
             // 
             this.lblLastNameOutput.AutoSize = true;
             this.lblLastNameOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastNameOutput.Location = new System.Drawing.Point(382, 104);
+            this.lblLastNameOutput.Location = new System.Drawing.Point(509, 128);
+            this.lblLastNameOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLastNameOutput.Name = "lblLastNameOutput";
-            this.lblLastNameOutput.Size = new System.Drawing.Size(70, 17);
+            this.lblLastNameOutput.Size = new System.Drawing.Size(83, 20);
             this.lblLastNameOutput.TabIndex = 90;
             this.lblLastNameOutput.Text = "Lastname";
             // 
@@ -715,10 +760,11 @@
             this.btnMedicine.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnMedicine.ForeColor = System.Drawing.Color.White;
             this.btnMedicine.HoverState.Parent = this.btnMedicine;
-            this.btnMedicine.Location = new System.Drawing.Point(715, 136);
+            this.btnMedicine.Location = new System.Drawing.Point(953, 167);
+            this.btnMedicine.Margin = new System.Windows.Forms.Padding(4);
             this.btnMedicine.Name = "btnMedicine";
             this.btnMedicine.ShadowDecoration.Parent = this.btnMedicine;
-            this.btnMedicine.Size = new System.Drawing.Size(86, 18);
+            this.btnMedicine.Size = new System.Drawing.Size(115, 22);
             this.btnMedicine.TabIndex = 92;
             this.btnMedicine.Text = "Medicine";
             // 
@@ -730,21 +776,22 @@
             this.btnViewHistory.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.btnViewHistory.ForeColor = System.Drawing.Color.White;
             this.btnViewHistory.HoverState.Parent = this.btnViewHistory;
-            this.btnViewHistory.Location = new System.Drawing.Point(715, 15);
+            this.btnViewHistory.Location = new System.Drawing.Point(953, 18);
+            this.btnViewHistory.Margin = new System.Windows.Forms.Padding(4);
             this.btnViewHistory.Name = "btnViewHistory";
             this.btnViewHistory.ShadowDecoration.Parent = this.btnViewHistory;
-            this.btnViewHistory.Size = new System.Drawing.Size(144, 30);
+            this.btnViewHistory.Size = new System.Drawing.Size(192, 37);
             this.btnViewHistory.TabIndex = 93;
             this.btnViewHistory.Text = "View History";
             this.btnViewHistory.Click += new System.EventHandler(this.BtnViewHistory_Click);
             // 
             // TreatmentWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1000, 625);
+            this.ClientSize = new System.Drawing.Size(1333, 769);
             this.Controls.Add(this.btnViewHistory);
             this.Controls.Add(this.btnMedicine);
             this.Controls.Add(this.lblLastNameOutput);
@@ -775,8 +822,10 @@
             this.Controls.Add(this.btnMinimize);
             this.Controls.Add(this.btnExit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TreatmentWindow";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.TreatmentWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.activePanel.ResumeLayout(false);
@@ -825,7 +874,7 @@
         private System.Windows.Forms.Label lblReferredToOutput;
         private System.Windows.Forms.Label lblGenderOutput;
         private System.Windows.Forms.Label lblLastNameOutput;
-        private Guna.UI2.WinForms.Guna2TextBox newTopic1TextField;
+        private Guna.UI2.WinForms.Guna2TextBox history_textbox_1;
         private Guna.UI2.WinForms.Guna2Button btnAddTopic;
         private Guna.UI2.WinForms.Guna2DragControl dragOnTreatmentPanel;
         private Guna.UI2.WinForms.Guna2Button btnMedicine;

@@ -15,7 +15,7 @@ namespace webTRON_Management_Software.Views.Doctor
 {
     public partial class TreatmentWindow : Form
     {
-        int numberOfTextFields = 1;
+        int numberOfTextBoxes = 1;
         int numberOfOldPrescriptionPanel = 1;
         //to get patientID from 
         string patientID = "";
@@ -23,8 +23,10 @@ namespace webTRON_Management_Software.Views.Doctor
         //array of text boxes
         Guna2TextBox[] textBoxArray = new Guna2TextBox[5];
         string textBoxName;
+        // textboxArray[0]=newTopic1TextField;
 
-
+        //declare insertModerator
+        InsertModerator IM;
 
         //prescription text Array
         Guna2TextBox[] prescriptionTextBoxArray = new Guna2TextBox[5];
@@ -33,10 +35,18 @@ namespace webTRON_Management_Software.Views.Doctor
         //array of old prescription panels
         Guna.UI2.WinForms.Guna2Panel[] arrayOfOldPrescriptionPanel = new Guna2Panel[5];
 
+        //instanciate last textboxes name and value
+        public static string txtBoxName { get; set; }
+        public static string textBoxValue { get; set; }
+
 
         public TreatmentWindow()
         {
             InitializeComponent();
+            for (int i = 0; i < 5; i++)
+            {
+                textBoxArray[i] = new Guna2TextBox();
+            }
 
         }
 
@@ -53,46 +63,40 @@ namespace webTRON_Management_Software.Views.Doctor
 
         private void BtnAddTopic_Click(object sender, EventArgs e)
         {
-            if (textBoxArray[numberOfTextFields - 1].Text != "")
+            bool ans = IM.hasValue(TreatmentWindow.txtBoxName, numberOfTextBoxes);
+            //MessageBox.Show("The result is, "+ans);
+            if (IM.hasValue(TreatmentWindow.txtBoxName,numberOfTextBoxes) && numberOfTextBoxes<=5)
+            { 
+            numberOfTextBoxes++;
+            int yBtnPoint = 82 + 45 * (numberOfTextBoxes - 1);
+            int yTextFieldPoint = 37 + 45 * (numberOfTextBoxes - 1);
+
+            //to change the position of the Add Topic Button
+            btnAddTopic.Location = new Point(4, yBtnPoint);
+
+
+            //to create textfield on the history panel
+            Guna2TextBox textBox = new Guna2TextBox();
+            textBoxName = "history_textBox" + "_" + numberOfTextBoxes;
+            textBox.Name = textBoxName;
+                textBox.TextChanged += NewTopic1TextField_TextChanged;
+               // textBox.TextChanged += new System.Windows.Input.TextChanged(NewTopic1TextField_TextChanged);
+                //this.textBox.TextChanged += new System.EventHandler(this.NewTopic1TextField_TextChanged);
+                textBox.PlaceholderText = "New Topic";
+
+            textBox.Location = new Point(4, yTextFieldPoint);
+
+            textBox.Size = new Size(149, 33);
+
+            this.prescriptionPanel.Controls.Add(textBox);
+
+            textBox.Focus();
+            if (numberOfTextBoxes == 5)
             {
-
-                if (numberOfTextFields != 5)
-                {
-                    numberOfTextFields++;
-
-                    int yBtnPoint = 82 + 45 * (numberOfTextFields - 1);
-                    int yTextFieldPoint = 37 + 45 * (numberOfTextFields - 1);
-
-                    //to change the position of the Add Topic Button
-                    btnAddTopic.Location = new Point(4, yBtnPoint);
-
-
-                    //to create textfield on the history panel
-                    Guna2TextBox textBox = new Guna2TextBox();
-                    textBoxName = "newTopic" + numberOfTextFields + "TextField";
-                    textBox.Name = textBoxName;
-
-
-                    textBox.PlaceholderText = "New Topic";
-
-                    textBox.Location = new Point(4, yTextFieldPoint);
-
-                    textBox.Size = new Size(149, 33);
-
-                    this.prescriptionPanel.Controls.Add(textBox);
-
-                    textBox.Focus();
-
-
-
-
-
-                    if (numberOfTextFields == 5)
-                    {
-                        btnAddTopic.Enabled = false;
-                    }
-                }
+                btnAddTopic.Enabled = false;
             }
+         }
+
         }
 
         private void PrescriptionPanel_Paint(object sender, PaintEventArgs e)
@@ -108,11 +112,14 @@ namespace webTRON_Management_Software.Views.Doctor
         {
             patientID = lblPtn.Text + "-" + yearComboBox + "-" + patientSerialNumberTextBox.Text;
         }
-
         //when we type topic on topic textbox it changes to the text field also
         private void NewTopic1TextField_TextChanged(object sender, EventArgs e)
         {
-            lblTodaysPrescriptionTitleOutput.Text = ": " + newTopic1TextField.Text;
+            lblTodaysPrescriptionTitleOutput.Text = ": " + history_textbox_1.Text;
+            //MessageBox.Show(((Guna2TextBox)sender).Text);
+            TreatmentWindow.txtBoxName = ((Guna2TextBox)sender).Name;
+            TreatmentWindow.textBoxValue = ((Guna2TextBox)sender).Text;
+            IM.add(TreatmentWindow.txtBoxName,TreatmentWindow.textBoxValue);
         }
 
         int i = 0;
@@ -122,7 +129,6 @@ namespace webTRON_Management_Software.Views.Doctor
              if (dt.Rows.Count > 0)
             {
              foreach (DataRow dr in dt.Rows)
-           
             {
 
                 int panelYCoordinate = 194 * numberOfOldPrescriptionPanel;
@@ -188,9 +194,7 @@ namespace webTRON_Management_Software.Views.Doctor
                 this.arrayOfOldPrescriptionPanel[i].Controls.Add(lb4);
                 MessageBox.Show("added to their respective place!" );
                 i++;
-            
-
-
+           
             }
             MessageBox.Show("inside if");
              }
@@ -200,5 +204,12 @@ namespace webTRON_Management_Software.Views.Doctor
 
              }
         }
+
+        private void newPrescriptionTextField_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TreatmentWindow_Load(object sender, EventArgs e) => IM = new InsertModerator();
     }
 }

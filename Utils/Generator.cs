@@ -12,10 +12,9 @@ namespace webTRON_Management_Software.Utils
     class Generator
     {
         //Connection String
-        //private static string connectionString = "server=localhost;user id=root; password=laxudb;persistsecurityinfo=True;database=webtronmanagement";
-        //ConnectionStringForPramesh
-         private static string connectionString = "server=localhost;user id=root;pwd=password;database=webtronmanagement";
-       
+      //private static string connectionString = "server=localhost;user id=root;pwd=password;database=webtronmanagement";
+        private static string connectionString = "server=localhost;user id=root;pwd=laxudb;database=webtronmanagement;persistsecurityinfo=True";
+
         //Method that generates random Number in between range
         private static int GetRandomNumber(int min, int max)
         {
