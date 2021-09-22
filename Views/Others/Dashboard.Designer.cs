@@ -36,59 +36,33 @@ namespace webTRON_Management_Software.Views.Others
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DragableDashboard = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.btnMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnExit = new Guna.UI2.WinForms.Guna2PictureBox();
             this.sidebarPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.btnSignOut = new Guna.UI2.WinForms.Guna2Button();
             this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
+            this.btnStaffs = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPatients = new Guna.UI2.WinForms.Guna2Button();
+            this.activePanel = new Guna.UI2.WinForms.Guna2Panel();
             this.actveForm = new System.Windows.Forms.Label();
             this.activeUserPicture = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.activeUserName = new System.Windows.Forms.Label();
-            this.activePanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnChangePassword = new Guna.UI2.WinForms.Guna2Button();
-            this.btnChangeInfo = new Guna.UI2.WinForms.Guna2Button();
-            this.staffsPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.searchStaffsTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.staffsDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.btnMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnExit = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.conatainerPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.textBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.gridView = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.sidebarPanel.SuspendLayout();
+            this.activePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
-            this.sidebarPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).BeginInit();
-            this.activePanel.SuspendLayout();
-            this.staffsPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.staffsDataGridView)).BeginInit();
+            this.conatainerPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             this.SuspendLayout();
             // 
             // DragableDashboard
             // 
             this.DragableDashboard.TargetControl = this;
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
-            this.btnMinimize.Location = new System.Drawing.Point(911, 27);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.ShadowDecoration.Parent = this.btnMinimize;
-            this.btnMinimize.Size = new System.Drawing.Size(21, 4);
-            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnMinimize.TabIndex = 24;
-            this.btnMinimize.TabStop = false;
-            this.btnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(960, 12);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.ShadowDecoration.Parent = this.btnExit;
-            this.btnExit.Size = new System.Drawing.Size(28, 28);
-            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnExit.TabIndex = 23;
-            this.btnExit.TabStop = false;
-            this.btnExit.Click += new System.EventHandler(this.SignOut);
             // 
             // sidebarPanel
             // 
@@ -164,6 +138,57 @@ namespace webTRON_Management_Software.Views.Others
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextOffset = new System.Drawing.Point(-6, 10);
             // 
+            // btnStaffs
+            // 
+            this.btnStaffs.Animated = true;
+            this.btnStaffs.AutoRoundedCorners = true;
+            this.btnStaffs.BorderRadius = 21;
+            this.btnStaffs.CheckedState.Parent = this.btnStaffs;
+            this.btnStaffs.CustomImages.Parent = this.btnStaffs;
+            this.btnStaffs.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(131)))), ((int)(((byte)(228)))));
+            this.btnStaffs.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.btnStaffs.ForeColor = System.Drawing.Color.White;
+            this.btnStaffs.HoverState.Parent = this.btnStaffs;
+            this.btnStaffs.Location = new System.Drawing.Point(695, 82);
+            this.btnStaffs.Name = "btnStaffs";
+            this.btnStaffs.ShadowDecoration.Parent = this.btnStaffs;
+            this.btnStaffs.Size = new System.Drawing.Size(136, 45);
+            this.btnStaffs.TabIndex = 56;
+            this.btnStaffs.Text = "Staffs";
+            this.btnStaffs.Click += new System.EventHandler(this.BtnStaffs_Click);
+            // 
+            // btnPatients
+            // 
+            this.btnPatients.Animated = true;
+            this.btnPatients.AutoRoundedCorners = true;
+            this.btnPatients.BorderRadius = 21;
+            this.btnPatients.CheckedState.Parent = this.btnPatients;
+            this.btnPatients.CustomImages.Parent = this.btnPatients;
+            this.btnPatients.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            this.btnPatients.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.btnPatients.ForeColor = System.Drawing.Color.White;
+            this.btnPatients.HoverState.Parent = this.btnPatients;
+            this.btnPatients.Location = new System.Drawing.Point(852, 82);
+            this.btnPatients.Name = "btnPatients";
+            this.btnPatients.ShadowDecoration.Parent = this.btnPatients;
+            this.btnPatients.Size = new System.Drawing.Size(136, 45);
+            this.btnPatients.TabIndex = 55;
+            this.btnPatients.Text = "Patients";
+            this.btnPatients.Click += new System.EventHandler(this.BtnPatients_Click);
+            // 
+            // activePanel
+            // 
+            this.activePanel.BackgroundImage = global::webTRON_Management_Software.Properties.Resources.rectangle_curved_large;
+            this.activePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.activePanel.Controls.Add(this.actveForm);
+            this.activePanel.Controls.Add(this.activeUserPicture);
+            this.activePanel.Controls.Add(this.activeUserName);
+            this.activePanel.Location = new System.Drawing.Point(66, -1);
+            this.activePanel.Name = "activePanel";
+            this.activePanel.ShadowDecoration.Parent = this.activePanel;
+            this.activePanel.Size = new System.Drawing.Size(165, 80);
+            this.activePanel.TabIndex = 26;
+            // 
             // actveForm
             // 
             this.actveForm.AutoSize = true;
@@ -201,108 +226,86 @@ namespace webTRON_Management_Software.Views.Others
             this.activeUserName.TabIndex = 1;
             this.activeUserName.Text = "John";
             // 
-            // activePanel
+            // btnMinimize
             // 
-            this.activePanel.BackgroundImage = global::webTRON_Management_Software.Properties.Resources.rectangle_curved_large;
-            this.activePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.activePanel.Controls.Add(this.actveForm);
-            this.activePanel.Controls.Add(this.activeUserPicture);
-            this.activePanel.Controls.Add(this.activeUserName);
-            this.activePanel.Location = new System.Drawing.Point(66, -1);
-            this.activePanel.Name = "activePanel";
-            this.activePanel.ShadowDecoration.Parent = this.activePanel;
-            this.activePanel.Size = new System.Drawing.Size(165, 80);
-            this.activePanel.TabIndex = 26;
+            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
+            this.btnMinimize.Location = new System.Drawing.Point(911, 27);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.ShadowDecoration.Parent = this.btnMinimize;
+            this.btnMinimize.Size = new System.Drawing.Size(21, 4);
+            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnMinimize.TabIndex = 24;
+            this.btnMinimize.TabStop = false;
+            this.btnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
             // 
-            // btnChangePassword
+            // btnExit
             // 
-            this.btnChangePassword.Animated = true;
-            this.btnChangePassword.AutoRoundedCorners = true;
-            this.btnChangePassword.BorderRadius = 21;
-            this.btnChangePassword.CheckedState.Parent = this.btnChangePassword;
-            this.btnChangePassword.CustomImages.Parent = this.btnChangePassword;
-            this.btnChangePassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(131)))), ((int)(((byte)(228)))));
-            this.btnChangePassword.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.btnChangePassword.ForeColor = System.Drawing.Color.White;
-            this.btnChangePassword.HoverState.Parent = this.btnChangePassword;
-            this.btnChangePassword.Location = new System.Drawing.Point(695, 82);
-            this.btnChangePassword.Name = "btnChangePassword";
-            this.btnChangePassword.ShadowDecoration.Parent = this.btnChangePassword;
-            this.btnChangePassword.Size = new System.Drawing.Size(136, 45);
-            this.btnChangePassword.TabIndex = 56;
-            this.btnChangePassword.Text = "Staffs";
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.Location = new System.Drawing.Point(960, 12);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.ShadowDecoration.Parent = this.btnExit;
+            this.btnExit.Size = new System.Drawing.Size(28, 28);
+            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnExit.TabIndex = 23;
+            this.btnExit.TabStop = false;
+            this.btnExit.Click += new System.EventHandler(this.SignOut);
             // 
-            // btnChangeInfo
+            // conatainerPanel
             // 
-            this.btnChangeInfo.Animated = true;
-            this.btnChangeInfo.AutoRoundedCorners = true;
-            this.btnChangeInfo.BorderRadius = 21;
-            this.btnChangeInfo.CheckedState.Parent = this.btnChangeInfo;
-            this.btnChangeInfo.CustomImages.Parent = this.btnChangeInfo;
-            this.btnChangeInfo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            this.btnChangeInfo.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.btnChangeInfo.ForeColor = System.Drawing.Color.White;
-            this.btnChangeInfo.HoverState.Parent = this.btnChangeInfo;
-            this.btnChangeInfo.Location = new System.Drawing.Point(852, 82);
-            this.btnChangeInfo.Name = "btnChangeInfo";
-            this.btnChangeInfo.ShadowDecoration.Parent = this.btnChangeInfo;
-            this.btnChangeInfo.Size = new System.Drawing.Size(136, 45);
-            this.btnChangeInfo.TabIndex = 55;
-            this.btnChangeInfo.Text = "Patients";
+            this.conatainerPanel.BackColor = System.Drawing.Color.White;
+            this.conatainerPanel.Controls.Add(this.textBox);
+            this.conatainerPanel.Controls.Add(this.gridView);
+            this.conatainerPanel.Location = new System.Drawing.Point(66, 137);
+            this.conatainerPanel.Name = "conatainerPanel";
+            this.conatainerPanel.ShadowDecoration.Parent = this.conatainerPanel;
+            this.conatainerPanel.Size = new System.Drawing.Size(934, 486);
+            this.conatainerPanel.TabIndex = 59;
             // 
-            // staffsPanel
+            // textBox
             // 
-            this.staffsPanel.Controls.Add(this.searchStaffsTextBox);
-            this.staffsPanel.Controls.Add(this.staffsDataGridView);
-            this.staffsPanel.Location = new System.Drawing.Point(66, 133);
-            this.staffsPanel.Name = "staffsPanel";
-            this.staffsPanel.ShadowDecoration.Parent = this.staffsPanel;
-            this.staffsPanel.Size = new System.Drawing.Size(932, 492);
-            this.staffsPanel.TabIndex = 57;
+            this.textBox.Animated = true;
+            this.textBox.AutoRoundedCorners = true;
+            this.textBox.BorderRadius = 15;
+            this.textBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox.DefaultText = "";
+            this.textBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBox.DisabledState.Parent = this.textBox;
+            this.textBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBox.FocusedState.Parent = this.textBox;
+            this.textBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textBox.ForeColor = System.Drawing.Color.Black;
+            this.textBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBox.HoverState.Parent = this.textBox;
+            this.textBox.IconRight = ((System.Drawing.Image)(resources.GetObject("textBox.IconRight")));
+            this.textBox.Location = new System.Drawing.Point(615, 24);
+            this.textBox.Margin = new System.Windows.Forms.Padding(6);
+            this.textBox.Name = "textBox";
+            this.textBox.PasswordChar = '\0';
+            this.textBox.PlaceholderText = "Search Here";
+            this.textBox.SelectedText = "";
+            this.textBox.ShadowDecoration.Parent = this.textBox;
+            this.textBox.Size = new System.Drawing.Size(304, 32);
+            this.textBox.TabIndex = 33;
+            this.textBox.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
-            // searchStaffsTextBox
+            // gridView
             // 
-            this.searchStaffsTextBox.Animated = true;
-            this.searchStaffsTextBox.AutoRoundedCorners = true;
-            this.searchStaffsTextBox.BorderRadius = 15;
-            this.searchStaffsTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.searchStaffsTextBox.DefaultText = "";
-            this.searchStaffsTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.searchStaffsTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.searchStaffsTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.searchStaffsTextBox.DisabledState.Parent = this.searchStaffsTextBox;
-            this.searchStaffsTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.searchStaffsTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.searchStaffsTextBox.FocusedState.Parent = this.searchStaffsTextBox;
-            this.searchStaffsTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.searchStaffsTextBox.ForeColor = System.Drawing.Color.Black;
-            this.searchStaffsTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.searchStaffsTextBox.HoverState.Parent = this.searchStaffsTextBox;
-            this.searchStaffsTextBox.IconRight = ((System.Drawing.Image)(resources.GetObject("searchStaffsTextBox.IconRight")));
-            this.searchStaffsTextBox.Location = new System.Drawing.Point(615, 24);
-            this.searchStaffsTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.searchStaffsTextBox.Name = "searchStaffsTextBox";
-            this.searchStaffsTextBox.PasswordChar = '\0';
-            this.searchStaffsTextBox.PlaceholderText = "Search Here";
-            this.searchStaffsTextBox.SelectedText = "";
-            this.searchStaffsTextBox.ShadowDecoration.Parent = this.searchStaffsTextBox;
-            this.searchStaffsTextBox.Size = new System.Drawing.Size(304, 32);
-            this.searchStaffsTextBox.TabIndex = 33;
-            this.searchStaffsTextBox.TextChanged += new System.EventHandler(this.SearchStaffsTextBox_TextChanged);
-            // 
-            // staffsDataGridView
-            // 
-            this.staffsDataGridView.AllowUserToAddRows = false;
-            this.staffsDataGridView.AllowUserToDeleteRows = false;
-            this.staffsDataGridView.AllowUserToResizeColumns = false;
-            this.staffsDataGridView.AllowUserToResizeRows = false;
+            this.gridView.AllowUserToAddRows = false;
+            this.gridView.AllowUserToDeleteRows = false;
+            this.gridView.AllowUserToResizeColumns = false;
+            this.gridView.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.staffsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.staffsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.staffsDataGridView.BackgroundColor = System.Drawing.Color.White;
-            this.staffsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.staffsDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.staffsDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.gridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridView.BackgroundColor = System.Drawing.Color.White;
+            this.gridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.gridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14F);
@@ -310,9 +313,9 @@ namespace webTRON_Management_Software.Views.Others
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.staffsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.staffsDataGridView.ColumnHeadersHeight = 32;
-            this.staffsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.gridView.ColumnHeadersHeight = 32;
+            this.gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F);
@@ -320,14 +323,14 @@ namespace webTRON_Management_Software.Views.Others
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.staffsDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
-            this.staffsDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.staffsDataGridView.EnableHeadersVisualStyles = false;
-            this.staffsDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.staffsDataGridView.Location = new System.Drawing.Point(0, 65);
-            this.staffsDataGridView.MultiSelect = false;
-            this.staffsDataGridView.Name = "staffsDataGridView";
-            this.staffsDataGridView.ReadOnly = true;
+            this.gridView.DefaultCellStyle = dataGridViewCellStyle3;
+            this.gridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.gridView.EnableHeadersVisualStyles = false;
+            this.gridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gridView.Location = new System.Drawing.Point(3, 65);
+            this.gridView.MultiSelect = false;
+            this.gridView.Name = "gridView";
+            this.gridView.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -335,35 +338,35 @@ namespace webTRON_Management_Software.Views.Others
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.staffsDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.staffsDataGridView.RowHeadersVisible = false;
-            this.staffsDataGridView.RowHeadersWidth = 51;
-            this.staffsDataGridView.RowTemplate.Height = 28;
-            this.staffsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.staffsDataGridView.Size = new System.Drawing.Size(929, 404);
-            this.staffsDataGridView.TabIndex = 0;
-            this.staffsDataGridView.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
-            this.staffsDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.staffsDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.staffsDataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.staffsDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.staffsDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.staffsDataGridView.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.staffsDataGridView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.staffsDataGridView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            this.staffsDataGridView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.staffsDataGridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.staffsDataGridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.staffsDataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.staffsDataGridView.ThemeStyle.HeaderStyle.Height = 32;
-            this.staffsDataGridView.ThemeStyle.ReadOnly = true;
-            this.staffsDataGridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.staffsDataGridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.staffsDataGridView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.staffsDataGridView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.staffsDataGridView.ThemeStyle.RowsStyle.Height = 28;
-            this.staffsDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.staffsDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.gridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.gridView.RowHeadersVisible = false;
+            this.gridView.RowHeadersWidth = 51;
+            this.gridView.RowTemplate.Height = 28;
+            this.gridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridView.Size = new System.Drawing.Size(929, 404);
+            this.gridView.TabIndex = 0;
+            this.gridView.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
+            this.gridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.gridView.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.gridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.gridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.gridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.gridView.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.gridView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gridView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            this.gridView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.gridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.gridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.gridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.gridView.ThemeStyle.HeaderStyle.Height = 32;
+            this.gridView.ThemeStyle.ReadOnly = true;
+            this.gridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.gridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.gridView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.gridView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.gridView.ThemeStyle.RowsStyle.Height = 28;
+            this.gridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
             // Dashboard
             // 
@@ -371,9 +374,9 @@ namespace webTRON_Management_Software.Views.Others
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1000, 625);
-            this.Controls.Add(this.staffsPanel);
-            this.Controls.Add(this.btnChangePassword);
-            this.Controls.Add(this.btnChangeInfo);
+            this.Controls.Add(this.conatainerPanel);
+            this.Controls.Add(this.btnStaffs);
+            this.Controls.Add(this.btnPatients);
             this.Controls.Add(this.sidebarPanel);
             this.Controls.Add(this.activePanel);
             this.Controls.Add(this.btnMinimize);
@@ -383,14 +386,14 @@ namespace webTRON_Management_Software.Views.Others
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OtherDashboard";
             this.Load += new System.EventHandler(this.OtherDashboard_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.sidebarPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).EndInit();
             this.activePanel.ResumeLayout(false);
             this.activePanel.PerformLayout();
-            this.staffsPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.staffsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
+            this.conatainerPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -409,10 +412,10 @@ namespace webTRON_Management_Software.Views.Others
         private System.Windows.Forms.Label actveForm;
         private Guna.UI2.WinForms.Guna2CirclePictureBox activeUserPicture;
         private System.Windows.Forms.Label activeUserName;
-        private Guna.UI2.WinForms.Guna2Button btnChangePassword;
-        private Guna.UI2.WinForms.Guna2Button btnChangeInfo;
-        private Guna.UI2.WinForms.Guna2Panel staffsPanel;
-        private Guna.UI2.WinForms.Guna2DataGridView staffsDataGridView;
-        private Guna.UI2.WinForms.Guna2TextBox searchStaffsTextBox;
+        private Guna.UI2.WinForms.Guna2Button btnStaffs;
+        private Guna.UI2.WinForms.Guna2Button btnPatients;
+        private Guna.UI2.WinForms.Guna2Panel conatainerPanel;
+        private Guna.UI2.WinForms.Guna2TextBox textBox;
+        private Guna.UI2.WinForms.Guna2DataGridView gridView;
     }
 }

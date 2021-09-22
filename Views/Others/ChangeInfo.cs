@@ -118,11 +118,6 @@ namespace webTRON_Management_Software.Views.Others
             }
         }
 
-        //Click event on minimize button
-        private void btnMinimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
         //Load event on change info form
         private void ChangeInfo_Load(object sender, EventArgs e)
         {
@@ -207,6 +202,11 @@ namespace webTRON_Management_Software.Views.Others
             }
             alertText.Text = message;
             alertTransition.ShowSync(alertPanel);
+        }
+
+        private void BtnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

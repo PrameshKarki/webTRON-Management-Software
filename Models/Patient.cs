@@ -167,6 +167,65 @@ namespace webTRON_Management_Software.Models
             return true;
 
         }
+        //Method to retreive Patient datas from database
+        public static DataTable FetchPatientsDetails()
+        {
+            //Instantiating Data Table
+            DataTable dt = new DataTable();
+            //MySqlConnection
+            MySqlConnection conn = new MySqlConnection(connectionString);
+            //SQL Query
+            string SQLQuery = "SELECT patientID AS 'Patient ID',firstName AS 'First Name',lastName AS 'Last Name',address as 'Address',contactNumber AS 'Contact Number',registrationDate as 'Registration Date' FROM patientInfo";
+            try
+            {
+                //MySQLCommand
+                MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
+                //Open Connection
+                conn.Open();
+                //Load DataTable
+                dt.Load(cmd.ExecuteReader());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                //Close Connection
+                conn.Close();
+            }
+            return dt;
+
+        }
+        //Method to search data from database
+        public static DataTable SearchPatientDetails(string searchString)
+        {
+            //Instantiating Data Table
+            DataTable dt = new DataTable();
+            //MySql Connection
+            MySqlConnection conn = new MySqlConnection(connectionString);
+            //SQL Query
+            string SQLQuery = $"SELECT patientID as 'Patient ID',firstName AS 'First Name',lastName AS 'Last Name',address as 'Address',contactNumber AS 'Contact Number',registrationDate as 'Registration Date' FROM patientInfo WHERE patientID LIKE '%{searchString}' OR firstName LIKE '%{searchString}%' OR lastName LIKE '%{searchString}%' OR address LIKE '%{searchString}%' OR contactNumber LIKE '%{searchString}%' OR registrationDate LIKE '%{searchString}%'";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
+                //Open Connection
+                conn.Open();
+                //Load DataTable
+                dt.Load(cmd.ExecuteReader());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            finally
+            {
+                //Close Connection
+                conn.Close();
+            }
+            return dt;
+        }
     }
 
 }

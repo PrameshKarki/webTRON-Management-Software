@@ -14,11 +14,14 @@ using webTRON_Management_Software.Views.Landing_Window;
 
 namespace webTRON_Management_Software.Views.Others
 {
+   
     public partial class Dashboard : Form
     {
         //Instantiate employee class
         Employee employee = new Employee();
 
+        bool isStaffsDataVisible = true;
+        DataTable dt;
         public Dashboard()
         {
             InitializeComponent();
@@ -35,25 +38,29 @@ namespace webTRON_Management_Software.Views.Others
             //Load Grid View
             LoadGridView();
 
-            //Change width height of columns,rows of grid view at run time
-            staffsDataGridView.Rows[0].Selected = false;
-            staffsDataGridView.Columns[0].Width = 150;
-            staffsDataGridView.Columns[1].Width = 150;
-            staffsDataGridView.Columns[3].Width = 150;
-            staffsDataGridView.Columns[4].Width = 100;
-
+            FormatGridView();
 
             //Initialize activeUserDetails
             InitializeActiverUserDetails();
         }
+        //Format Column
+        private void FormatGridView()
+        {
+            //Change width height of columns,rows of grid view at run time
+            gridView.Rows[0].Selected = false;
+            gridView.Columns[0].Width = 150;
+            gridView.Columns[1].Width = 150;
+            gridView.Columns[3].Width = 150;
+            gridView.Columns[4].Width = 100;
+        }
+
         //Load data on grid data table
         private void LoadGridView()
         {
             //Instantiate data table
-            DataTable dt = Employee.FetchStaffsDetails();
-            staffsDataGridView.DataSource = dt;
+            dt = Employee.FetchStaffsDetails();
+            gridView.DataSource = dt;
         }
-
 
         //Initialize Active User Details
         private void InitializeActiverUserDetails()
@@ -94,7 +101,8 @@ namespace webTRON_Management_Software.Views.Others
         //Click event on minimize button
         private void BtnMinimize_Click(object sender, EventArgs e)
         {
-           
+            this.WindowState = FormWindowState.Minimized;
+
         }
         //Click event on settings button
         private void BtnSettings_Click(object sender, EventArgs e)
@@ -103,17 +111,56 @@ namespace webTRON_Management_Software.Views.Others
             settings.Show();
             this.Hide();
         }
-
-        //Text change event on search box
-        private void SearchStaffsTextBox_TextChanged(object sender, EventArgs e)
+    
+        private void BtnPatients_Click(object sender, EventArgs e)
         {
-            string searchString = searchStaffsTextBox.Text.Trim();
-            //Instantiate data table
-            DataTable dt = Employee.SearchStaffDetails(searchString);
-            staffsDataGridView.DataSource = dt;
+            if (isStaffsDataVisible)
+            {
+                textBox.Text = "";
+                isStaffsDataVisible = false;
+                btnPatients.FillColor = Color.FromArgb(49, 131, 228);
+                btnStaffs.FillColor = Color.FromArgb(23, 107, 207);
 
+                //Re-Instantiate data table
+                dt = Patient.FetchPatientsDetails();
+                gridView.DataSource = dt;
+
+                FormatGridView();
+
+            }
+            
         }
 
-       
+        private void BtnStaffs_Click(object sender, EventArgs e)
+        {
+            if (!isStaffsDataVisible)
+            {
+                isStaffsDataVisible = true;
+                textBox.Text = "";
+                btnStaffs.FillColor = Color.FromArgb(49, 131, 228);
+                btnPatients.FillColor = Color.FromArgb(23, 107, 207);
+
+                //Re-Instantiate data table
+                dt = Employee.FetchStaffsDetails();
+                gridView.DataSource = dt;
+
+
+                FormatGridView();
+            }
+        }
+
+        private void TextBox_TextChanged(object sender, EventArgs e)
+        {
+            string searchString = textBox.Text.Trim();
+            if (isStaffsDataVisible)
+            {
+                dt = Employee.SearchStaffDetails(searchString);
+            }
+            else
+            {
+                dt = Patient.SearchPatientDetails(searchString);
+            }
+                gridView.DataSource = dt;
+        }
     }
 }

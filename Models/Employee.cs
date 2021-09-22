@@ -210,6 +210,7 @@ namespace webTRON_Management_Software.Models
             return dt;
 
         }
+      
         //Method to search data from database
         public static DataTable Search(string searchString)
         {
