@@ -85,7 +85,7 @@ namespace webTRON_Management_Software.Models
                 cmd.ExecuteNonQuery();
                 isSucess = true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 isSucess = false;
             }
@@ -126,7 +126,7 @@ namespace webTRON_Management_Software.Models
                     isExist = false;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 isExist = false;
             }
@@ -161,7 +161,7 @@ namespace webTRON_Management_Software.Models
                 isSucess = row == 1 ? true : false;
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 isSucess = false;
             }
@@ -196,7 +196,7 @@ namespace webTRON_Management_Software.Models
                 isSucess = row == 1 ? true : false;
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 isSucess = false;
             }

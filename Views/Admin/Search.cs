@@ -170,7 +170,7 @@ namespace webTRON_Management_Software.Views.Admin
                 //Get current row index
                 index = DataGridView.CurrentCell.RowIndex;
 
-            }catch(IndexOutOfRangeException ex)
+            }catch(IndexOutOfRangeException)
             {
                 index = 0;
             }

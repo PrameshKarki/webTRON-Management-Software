@@ -300,7 +300,7 @@ namespace webTRON_Management_Software.Models
                     MessageBox.Show("Internal Server Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 isExist = false;
             }
@@ -353,7 +353,7 @@ namespace webTRON_Management_Software.Models
 
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -396,7 +396,7 @@ namespace webTRON_Management_Software.Models
                     isValid = false;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 isValid = false;
             }

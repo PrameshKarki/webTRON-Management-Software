@@ -50,7 +50,7 @@ namespace webTRON_Management_Software.Models
             conn.Open();
             command.ExecuteNonQuery();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -82,7 +82,7 @@ namespace webTRON_Management_Software.Models
                 command.ExecuteNonQuery();
 
             }
-            catch (Exception e)
+            catch (Exception)
             {
                
                 return false;

@@ -48,7 +48,7 @@ namespace webTRON_Management_Software.Models
 
                 isSucess = true;
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 isSucess = false;
             }

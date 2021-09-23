@@ -55,7 +55,7 @@ namespace webTRON_Management_Software.Models
                 //Execute Query
                 cmd.ExecuteNonQuery();
                 isSucess = true;
-            }catch(Exception ex)
+            }catch(Exception)
             {
                 isSucess = false;
             }
