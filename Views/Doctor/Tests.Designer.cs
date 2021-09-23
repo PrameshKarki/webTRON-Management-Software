@@ -69,6 +69,8 @@ namespace webTRON_Management_Software.Views.Doctor
             this.testResultsPanel = new System.Windows.Forms.Panel();
             this.testsResultDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.alertTransition = new Guna.UI2.WinForms.Guna2Transition();
+            this.alertTimer = new System.Windows.Forms.Timer(this.components);
+            this.dragableTestForm = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.alertPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.alertText = new System.Windows.Forms.Label();
             this.alertCloseBtn = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -80,8 +82,6 @@ namespace webTRON_Management_Software.Views.Doctor
             this.activeUserName = new System.Windows.Forms.Label();
             this.btnMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnExit = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.alertTimer = new System.Windows.Forms.Timer(this.components);
-            this.dragableTestForm = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.prescribedTestPanel.SuspendLayout();
             this.testResultsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.testsResultDataGridView)).BeginInit();
@@ -639,6 +639,16 @@ namespace webTRON_Management_Software.Views.Doctor
             animation1.TransparencyCoeff = 0F;
             this.alertTransition.DefaultAnimation = animation1;
             // 
+            // alertTimer
+            // 
+            this.alertTimer.Enabled = true;
+            this.alertTimer.Interval = 5000;
+            this.alertTimer.Tick += new System.EventHandler(this.AlertTimer_Tick);
+            // 
+            // dragableTestForm
+            // 
+            this.dragableTestForm.TargetControl = this;
+            // 
             // alertPanel
             // 
             this.alertPanel.BackgroundImage = global::webTRON_Management_Software.Properties.Resources.alert_danger_background;
@@ -795,16 +805,6 @@ namespace webTRON_Management_Software.Views.Doctor
             this.btnExit.TabStop = false;
             this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
-            // alertTimer
-            // 
-            this.alertTimer.Enabled = true;
-            this.alertTimer.Interval = 5000;
-            this.alertTimer.Tick += new System.EventHandler(this.AlertTimer_Tick);
-            // 
-            // dragableTestForm
-            // 
-            this.dragableTestForm.TargetControl = this;
-            // 
             // Tests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -843,7 +843,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.alertTransition.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Tests";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Tests";
             this.Load += new System.EventHandler(this.Tests_Load);
             this.prescribedTestPanel.ResumeLayout(false);

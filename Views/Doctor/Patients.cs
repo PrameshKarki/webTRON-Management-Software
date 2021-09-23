@@ -13,37 +13,25 @@ using webTRON_Management_Software.Views.Landing_Window;
 
 namespace webTRON_Management_Software.Views.Doctor
 {
-    public partial class Dashboard : Form
+    public partial class Patients : Form
     {
         Employee employee = new Employee();
-        public Dashboard()
+        public Patients()
         {
             InitializeComponent();
         }
-        public Dashboard(Employee emp)
+        public Patients(Employee emp)
         {
             employee = emp;
             InitializeComponent();
         }
-
-        private void BtnExit_Click(object sender, EventArgs e)
+        private void BtnDashboard_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-        }
-
-        private void BtnMinimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void BtnPatients_Click(object sender, EventArgs e)
-        {
-            var patients = new Patients(employee);
-            patients.Show();
+            var dashboard = new Dashboard(employee);
+            dashboard.Show();
             this.Hide();
         }
 
-       
         private void BtnSettings_Click(object sender, EventArgs e)
         {
             var settings = new Settings(employee);
@@ -51,7 +39,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.Hide();
         }
 
-        private void LogOut(object sender, EventArgs e)
+        private void SignOut(object sender, EventArgs e)
         {
             //WARNING:To check which element has clicked          
             string elementType = sender.GetType().ToString();
@@ -75,9 +63,15 @@ namespace webTRON_Management_Software.Views.Doctor
             }
         }
 
-        private void Dashboard_Load(object sender, EventArgs e)
+        private void BtnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Patients_Load(object sender, EventArgs e)
         {
             InitializeActiverUserDetails();
+
         }
         //Initialize Active User Details
         private void InitializeActiverUserDetails()

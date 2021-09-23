@@ -1,7 +1,7 @@
 ﻿
 namespace webTRON_Management_Software.Views.Doctor
 {
-    partial class Dashboard
+    partial class Patients
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,7 @@ namespace webTRON_Management_Software.Views.Doctor
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Patients));
             this.sidebarPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.btnSignOut = new Guna.UI2.WinForms.Guna2Button();
             this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
@@ -40,13 +39,12 @@ namespace webTRON_Management_Software.Views.Doctor
             this.actveForm = new System.Windows.Forms.Label();
             this.activeUserPicture = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.activeUserName = new System.Windows.Forms.Label();
-            this.BtnMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnExit = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.dragOnDashboard = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.sidebarPanel.SuspendLayout();
             this.activePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnMinimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +59,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.sidebarPanel.Name = "sidebarPanel";
             this.sidebarPanel.ShadowDecoration.Parent = this.sidebarPanel;
             this.sidebarPanel.Size = new System.Drawing.Size(68, 532);
-            this.sidebarPanel.TabIndex = 21;
+            this.sidebarPanel.TabIndex = 23;
             // 
             // btnSignOut
             // 
@@ -82,7 +80,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.btnSignOut.TabIndex = 24;
             this.btnSignOut.Text = "Sign Out";
             this.btnSignOut.TextOffset = new System.Drawing.Point(-8, 10);
-            this.btnSignOut.Click += new System.EventHandler(this.LogOut);
+            this.btnSignOut.Click += new System.EventHandler(this.SignOut);
             // 
             // btnSettings
             // 
@@ -110,7 +108,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.btnPatients.Animated = true;
             this.btnPatients.CheckedState.Parent = this.btnPatients;
             this.btnPatients.CustomImages.Parent = this.btnPatients;
-            this.btnPatients.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            this.btnPatients.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(131)))), ((int)(((byte)(228)))));
             this.btnPatients.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPatients.ForeColor = System.Drawing.Color.White;
             this.btnPatients.HoverState.Parent = this.btnPatients;
@@ -124,14 +122,13 @@ namespace webTRON_Management_Software.Views.Doctor
             this.btnPatients.TabIndex = 22;
             this.btnPatients.Text = "Patients";
             this.btnPatients.TextOffset = new System.Drawing.Point(-8, 10);
-            this.btnPatients.Click += new System.EventHandler(this.BtnPatients_Click);
             // 
             // btnDashboard
             // 
             this.btnDashboard.Animated = true;
             this.btnDashboard.CheckedState.Parent = this.btnDashboard;
             this.btnDashboard.CustomImages.Parent = this.btnDashboard;
-            this.btnDashboard.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(131)))), ((int)(((byte)(228)))));
+            this.btnDashboard.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
             this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.White;
             this.btnDashboard.HoverState.Parent = this.btnDashboard;
@@ -145,6 +142,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.btnDashboard.TabIndex = 21;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextOffset = new System.Drawing.Point(-6, 10);
+            this.btnDashboard.Click += new System.EventHandler(this.BtnDashboard_Click);
             // 
             // activePanel
             // 
@@ -157,7 +155,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.activePanel.Name = "activePanel";
             this.activePanel.ShadowDecoration.Parent = this.activePanel;
             this.activePanel.Size = new System.Drawing.Size(165, 80);
-            this.activePanel.TabIndex = 22;
+            this.activePanel.TabIndex = 24;
             // 
             // actveForm
             // 
@@ -196,56 +194,52 @@ namespace webTRON_Management_Software.Views.Doctor
             this.activeUserName.TabIndex = 1;
             this.activeUserName.Text = "John";
             // 
-            // BtnMinimize
+            // btnMinimize
             // 
-            this.BtnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("BtnMinimize.Image")));
-            this.BtnMinimize.Location = new System.Drawing.Point(911, 22);
-            this.BtnMinimize.Name = "BtnMinimize";
-            this.BtnMinimize.ShadowDecoration.Parent = this.BtnMinimize;
-            this.BtnMinimize.Size = new System.Drawing.Size(21, 4);
-            this.BtnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.BtnMinimize.TabIndex = 24;
-            this.BtnMinimize.TabStop = false;
-            this.BtnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
+            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
+            this.btnMinimize.Location = new System.Drawing.Point(911, 23);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.ShadowDecoration.Parent = this.btnMinimize;
+            this.btnMinimize.Size = new System.Drawing.Size(21, 4);
+            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnMinimize.TabIndex = 26;
+            this.btnMinimize.TabStop = false;
+            this.btnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
             // 
             // btnExit
             // 
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(960, 7);
+            this.btnExit.Location = new System.Drawing.Point(960, 8);
             this.btnExit.Name = "btnExit";
             this.btnExit.ShadowDecoration.Parent = this.btnExit;
             this.btnExit.Size = new System.Drawing.Size(28, 28);
             this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnExit.TabIndex = 23;
+            this.btnExit.TabIndex = 25;
             this.btnExit.TabStop = false;
-            this.btnExit.Click += new System.EventHandler(this.LogOut);
+            this.btnExit.Click += new System.EventHandler(this.SignOut);
             // 
-            // dragOnDashboard
-            // 
-            this.dragOnDashboard.TargetControl = this;
-            // 
-            // Dashboard
+            // Patients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1000, 625);
-            this.Controls.Add(this.BtnMinimize);
-            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnMinimize);
             this.Controls.Add(this.sidebarPanel);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.activePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Dashboard";
+            this.Name = "Patients";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "DoctorDashboard";
-            this.Load += new System.EventHandler(this.Dashboard_Load);
+            this.Text = "Patients";
+            this.Load += new System.EventHandler(this.Patients_Load);
             this.sidebarPanel.ResumeLayout(false);
             this.activePanel.ResumeLayout(false);
             this.activePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnMinimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -263,8 +257,7 @@ namespace webTRON_Management_Software.Views.Doctor
         private System.Windows.Forms.Label actveForm;
         private Guna.UI2.WinForms.Guna2CirclePictureBox activeUserPicture;
         private System.Windows.Forms.Label activeUserName;
-        private Guna.UI2.WinForms.Guna2PictureBox BtnMinimize;
+        private Guna.UI2.WinForms.Guna2PictureBox btnMinimize;
         private Guna.UI2.WinForms.Guna2PictureBox btnExit;
-        private Guna.UI2.WinForms.Guna2DragControl dragOnDashboard;
     }
 }
