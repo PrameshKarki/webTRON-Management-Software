@@ -57,7 +57,7 @@ namespace webTRON_Management_Software.Models
                 isSucess = true;
             }catch(Exception ex)
             {
-              MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                isSucess = false;
             }
             finally
             {

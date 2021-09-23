@@ -84,7 +84,7 @@ namespace webTRON_Management_Software.Models
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message);
+               
                 return false;
             }
             finally
@@ -160,7 +160,7 @@ namespace webTRON_Management_Software.Models
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message);
+               
                 return false;
             }
 

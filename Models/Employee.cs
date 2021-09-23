@@ -62,9 +62,9 @@ namespace webTRON_Management_Software.Models
 
             }
 
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                isSucess = false;
             }
 
             finally
@@ -137,9 +137,9 @@ namespace webTRON_Management_Software.Models
                 isSucess = row > 0 ? true : false;
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                isSucess = false;
             }
 
             finally
@@ -297,12 +297,12 @@ namespace webTRON_Management_Software.Models
                 }
                 else
                 {
-                    MessageBox.Show("Error Occured!\nPlease try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Internal Server Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                isExist = false;
             }
             finally
             {
@@ -355,7 +355,7 @@ namespace webTRON_Management_Software.Models
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
 
             finally
@@ -393,12 +393,12 @@ namespace webTRON_Management_Software.Models
                 }
                 else
                 {
-                    MessageBox.Show("Error Occured!\nPlease try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    isValid = false;
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                isValid = false;
             }
             return isValid;
         }
@@ -433,7 +433,7 @@ namespace webTRON_Management_Software.Models
                 }
                 else
                 {
-                    MessageBox.Show("Please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
                 }
                 cmd = new MySqlCommand(SQLQuerySecond, conn);
                 cmd.Parameters.AddWithValue("@userID", fetchedUserID);
@@ -442,9 +442,9 @@ namespace webTRON_Management_Software.Models
                 cmd.ExecuteNonQuery();
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
 
             finally
