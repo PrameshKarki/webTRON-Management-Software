@@ -115,21 +115,21 @@ namespace webTRON_Management_Software.Views.Accountant
                 int row = Patient.Renew(patientID);
                 if (row > 0)
                 {
-                    MessageBox.Show("Successfully Renewed.", "Sucess.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DisplayAlert("Sucess", "Successfully Renewed.");
                 }
                 else if (row == 0)
                 {
-                    MessageBox.Show("Provide valid patient details.");
+                    DisplayAlert("Danger", "Provide Valid Patient Details.");
                 }
                 else if (row == -1)
                 {
-                    MessageBox.Show("Internal Server Error.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                    DisplayAlert("Danger", "Internal Server Error.");
                 }
             }
-            catch (ArgumentOutOfRangeException)
+           
+            catch (Exception)
             {
-                MessageBox.Show("Provide valid patient details");
+                DisplayAlert("Danger", "Provide Valid Patient Details.");
             }
            
            
@@ -163,6 +163,30 @@ namespace webTRON_Management_Software.Views.Accountant
             dashboard.Show();
             this.Hide();
 
+        }
+
+        private void AlertTimer_Tick(object sender, EventArgs e)
+        {
+            alertTransition.HideSync(alertPanel);
+        }
+        //Display alert
+        private void DisplayAlert(string type, string message)
+        {
+            if (type == "Danger")
+            {
+                alertPanel.BackgroundImage = Properties.Resources.alert_danger_background;
+                alertImage.Image = Properties.Resources.alert_danger_icon;
+                alertText.ForeColor = Color.Red;
+
+            }
+            else if (type == "Sucess")
+            {
+                alertPanel.BackgroundImage = Properties.Resources.alert_sucess_background;
+                alertImage.Image = Properties.Resources.alert_sucess_icon;
+                alertText.ForeColor = Color.Green;
+            }
+            alertText.Text = message;
+            alertTransition.ShowSync(alertPanel);
         }
     }
 }
