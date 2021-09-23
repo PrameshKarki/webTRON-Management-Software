@@ -281,7 +281,7 @@ namespace webTRON_Management_Software.Views.Accountant
             this.Controls.Add(this.btnExit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Dashboard";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AccountantDashboard";
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.sidebarPanel.ResumeLayout(false);

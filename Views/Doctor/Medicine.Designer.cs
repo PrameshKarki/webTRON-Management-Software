@@ -60,6 +60,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.btnPrescription = new Guna.UI2.WinForms.Guna2Button();
             this.runningMedicinePanel = new Guna.UI2.WinForms.Guna2Panel();
             this.runningMedicinesGridView = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.btnAddRunningMedicine = new Guna.UI2.WinForms.Guna2CircleButton();
             this.remarksTextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblRemarks1 = new System.Windows.Forms.Label();
             this.endDayTextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -70,6 +71,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.lblMedicineName1 = new System.Windows.Forms.Label();
             this.lblRunningMedicine = new System.Windows.Forms.Label();
             this.prescribedMedicinePanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnAddPrescribedMedicine = new Guna.UI2.WinForms.Guna2CircleButton();
             this.prescribedMedicineRemarksTextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.prescribedMedicineRemarks1 = new System.Windows.Forms.Label();
             this.prescribedMedicineEndDayTextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -89,8 +91,6 @@ namespace webTRON_Management_Software.Views.Doctor
             this.alertText = new System.Windows.Forms.Label();
             this.alertCloseBtn = new Guna.UI2.WinForms.Guna2PictureBox();
             this.alertImage = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnAddPrescribedMedicine = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.btnAddRunningMedicine = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnNext = new Guna.UI2.WinForms.Guna2Button();
             this.activePanel = new Guna.UI2.WinForms.Guna2Panel();
             this.activeForm = new System.Windows.Forms.Label();
@@ -440,6 +440,25 @@ namespace webTRON_Management_Software.Views.Doctor
             this.runningMedicinesGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.runningMedicinesGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
+            // btnAddRunningMedicine
+            // 
+            this.btnAddRunningMedicine.CheckedState.Parent = this.btnAddRunningMedicine;
+            this.btnAddRunningMedicine.CustomImages.Parent = this.btnAddRunningMedicine;
+            this.alertTransition.SetDecoration(this.btnAddRunningMedicine, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnAddRunningMedicine.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            this.btnAddRunningMedicine.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddRunningMedicine.ForeColor = System.Drawing.Color.White;
+            this.btnAddRunningMedicine.HoverState.Parent = this.btnAddRunningMedicine;
+            this.btnAddRunningMedicine.Image = global::webTRON_Management_Software.Properties.Resources.PlusSign;
+            this.btnAddRunningMedicine.ImageOffset = new System.Drawing.Point(1, 0);
+            this.btnAddRunningMedicine.Location = new System.Drawing.Point(934, 107);
+            this.btnAddRunningMedicine.Name = "btnAddRunningMedicine";
+            this.btnAddRunningMedicine.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnAddRunningMedicine.ShadowDecoration.Parent = this.btnAddRunningMedicine;
+            this.btnAddRunningMedicine.Size = new System.Drawing.Size(30, 30);
+            this.btnAddRunningMedicine.TabIndex = 86;
+            this.btnAddRunningMedicine.Click += new System.EventHandler(this.BtnAddRunningMedicine_Click);
+            // 
             // remarksTextBox1
             // 
             this.remarksTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -609,6 +628,25 @@ namespace webTRON_Management_Software.Views.Doctor
             this.prescribedMedicinePanel.ShadowDecoration.Parent = this.prescribedMedicinePanel;
             this.prescribedMedicinePanel.Size = new System.Drawing.Size(999, 104);
             this.prescribedMedicinePanel.TabIndex = 99;
+            // 
+            // btnAddPrescribedMedicine
+            // 
+            this.btnAddPrescribedMedicine.CheckedState.Parent = this.btnAddPrescribedMedicine;
+            this.btnAddPrescribedMedicine.CustomImages.Parent = this.btnAddPrescribedMedicine;
+            this.alertTransition.SetDecoration(this.btnAddPrescribedMedicine, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnAddPrescribedMedicine.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            this.btnAddPrescribedMedicine.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddPrescribedMedicine.ForeColor = System.Drawing.Color.White;
+            this.btnAddPrescribedMedicine.HoverState.Parent = this.btnAddPrescribedMedicine;
+            this.btnAddPrescribedMedicine.Image = global::webTRON_Management_Software.Properties.Resources.PlusSign;
+            this.btnAddPrescribedMedicine.ImageOffset = new System.Drawing.Point(1, 0);
+            this.btnAddPrescribedMedicine.Location = new System.Drawing.Point(937, 13);
+            this.btnAddPrescribedMedicine.Name = "btnAddPrescribedMedicine";
+            this.btnAddPrescribedMedicine.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnAddPrescribedMedicine.ShadowDecoration.Parent = this.btnAddPrescribedMedicine;
+            this.btnAddPrescribedMedicine.Size = new System.Drawing.Size(30, 30);
+            this.btnAddPrescribedMedicine.TabIndex = 86;
+            this.btnAddPrescribedMedicine.Click += new System.EventHandler(this.BtnAddPrescribedMedicine_Click);
             // 
             // prescribedMedicineRemarksTextBox1
             // 
@@ -937,44 +975,6 @@ namespace webTRON_Management_Software.Views.Doctor
             this.alertImage.TabIndex = 0;
             this.alertImage.TabStop = false;
             // 
-            // btnAddPrescribedMedicine
-            // 
-            this.btnAddPrescribedMedicine.CheckedState.Parent = this.btnAddPrescribedMedicine;
-            this.btnAddPrescribedMedicine.CustomImages.Parent = this.btnAddPrescribedMedicine;
-            this.alertTransition.SetDecoration(this.btnAddPrescribedMedicine, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnAddPrescribedMedicine.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            this.btnAddPrescribedMedicine.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAddPrescribedMedicine.ForeColor = System.Drawing.Color.White;
-            this.btnAddPrescribedMedicine.HoverState.Parent = this.btnAddPrescribedMedicine;
-            this.btnAddPrescribedMedicine.Image = global::webTRON_Management_Software.Properties.Resources.PlusSign;
-            this.btnAddPrescribedMedicine.ImageOffset = new System.Drawing.Point(1, 0);
-            this.btnAddPrescribedMedicine.Location = new System.Drawing.Point(937, 13);
-            this.btnAddPrescribedMedicine.Name = "btnAddPrescribedMedicine";
-            this.btnAddPrescribedMedicine.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnAddPrescribedMedicine.ShadowDecoration.Parent = this.btnAddPrescribedMedicine;
-            this.btnAddPrescribedMedicine.Size = new System.Drawing.Size(30, 30);
-            this.btnAddPrescribedMedicine.TabIndex = 86;
-            this.btnAddPrescribedMedicine.Click += new System.EventHandler(this.BtnAddPrescribedMedicine_Click);
-            // 
-            // btnAddRunningMedicine
-            // 
-            this.btnAddRunningMedicine.CheckedState.Parent = this.btnAddRunningMedicine;
-            this.btnAddRunningMedicine.CustomImages.Parent = this.btnAddRunningMedicine;
-            this.alertTransition.SetDecoration(this.btnAddRunningMedicine, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnAddRunningMedicine.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            this.btnAddRunningMedicine.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAddRunningMedicine.ForeColor = System.Drawing.Color.White;
-            this.btnAddRunningMedicine.HoverState.Parent = this.btnAddRunningMedicine;
-            this.btnAddRunningMedicine.Image = global::webTRON_Management_Software.Properties.Resources.PlusSign;
-            this.btnAddRunningMedicine.ImageOffset = new System.Drawing.Point(1, 0);
-            this.btnAddRunningMedicine.Location = new System.Drawing.Point(934, 107);
-            this.btnAddRunningMedicine.Name = "btnAddRunningMedicine";
-            this.btnAddRunningMedicine.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnAddRunningMedicine.ShadowDecoration.Parent = this.btnAddRunningMedicine;
-            this.btnAddRunningMedicine.Size = new System.Drawing.Size(30, 30);
-            this.btnAddRunningMedicine.TabIndex = 86;
-            this.btnAddRunningMedicine.Click += new System.EventHandler(this.BtnAddRunningMedicine_Click);
-            // 
             // btnNext
             // 
             this.btnNext.Animated = true;
@@ -1118,7 +1118,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.alertTransition.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MedicineForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Medicine";
             this.Load += new System.EventHandler(this.MedicineForm_Load);
             this.runningMedicinePanel.ResumeLayout(false);

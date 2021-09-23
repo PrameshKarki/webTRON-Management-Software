@@ -238,7 +238,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.Controls.Add(this.activePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Dashboard";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DoctorDashboard";
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.sidebarPanel.ResumeLayout(false);

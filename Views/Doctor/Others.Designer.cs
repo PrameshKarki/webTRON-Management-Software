@@ -56,7 +56,6 @@ namespace webTRON_Management_Software.Views.Doctor
             this.lblRegistrationId = new System.Windows.Forms.Label();
             this.lblSummary = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.alertTimer = new System.Windows.Forms.Timer(this.components);
             this.btnPrescribe = new Guna.UI2.WinForms.Guna2Button();
             this.activePanel = new Guna.UI2.WinForms.Guna2Panel();
             this.activeForm = new System.Windows.Forms.Label();
@@ -68,6 +67,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.alertText = new System.Windows.Forms.Label();
             this.alertCloseBtn = new Guna.UI2.WinForms.Guna2PictureBox();
             this.alertImage = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.alertTimer = new System.Windows.Forms.Timer(this.components);
             this.activePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
@@ -362,12 +362,6 @@ namespace webTRON_Management_Software.Views.Doctor
             this.guna2Panel1.Size = new System.Drawing.Size(976, 356);
             this.guna2Panel1.TabIndex = 169;
             // 
-            // alertTimer
-            // 
-            this.alertTimer.Enabled = true;
-            this.alertTimer.Interval = 5000;
-            this.alertTimer.Tick += new System.EventHandler(this.AlertTimer_Tick);
-            // 
             // btnPrescribe
             // 
             this.btnPrescribe.Animated = true;
@@ -523,6 +517,12 @@ namespace webTRON_Management_Software.Views.Doctor
             this.alertImage.TabIndex = 0;
             this.alertImage.TabStop = false;
             // 
+            // alertTimer
+            // 
+            this.alertTimer.Enabled = true;
+            this.alertTimer.Interval = 5000;
+            this.alertTimer.Tick += new System.EventHandler(this.AlertTimer_Tick);
+            // 
             // Others
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -559,7 +559,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.alertTransition.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Others";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Others";
             this.Load += new System.EventHandler(this.Others_Load);
             this.activePanel.ResumeLayout(false);

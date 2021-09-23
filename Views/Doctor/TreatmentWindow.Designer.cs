@@ -52,6 +52,7 @@
             this.lblTodaysDateOutput = new System.Windows.Forms.Label();
             this.newPrescriptionTextField = new Guna.UI2.WinForms.Guna2TextBox();
             this.newTopic1TextField = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnAddTopic = new Guna.UI2.WinForms.Guna2Button();
             this.lblRegistrationDate = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
@@ -72,7 +73,6 @@
             this.dragOnTreatmentPanel = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.btnMedicine = new Guna.UI2.WinForms.Guna2Button();
             this.btnViewHistory = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAddTopic = new Guna.UI2.WinForms.Guna2Button();
             this.activePanel = new Guna.UI2.WinForms.Guna2Panel();
             this.activeForm = new System.Windows.Forms.Label();
             this.activeUserPicture = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -425,6 +425,23 @@
             this.newTopic1TextField.TabIndex = 1;
             this.newTopic1TextField.TextChanged += new System.EventHandler(this.NewTopic1TextField_TextChanged);
             // 
+            // btnAddTopic
+            // 
+            this.btnAddTopic.CheckedState.Parent = this.btnAddTopic;
+            this.btnAddTopic.CustomImages.Parent = this.btnAddTopic;
+            this.btnAddTopic.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            this.btnAddTopic.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnAddTopic.ForeColor = System.Drawing.Color.White;
+            this.btnAddTopic.HoverState.Parent = this.btnAddTopic;
+            this.btnAddTopic.Image = global::webTRON_Management_Software.Properties.Resources.PlusSign;
+            this.btnAddTopic.Location = new System.Drawing.Point(4, 82);
+            this.btnAddTopic.Name = "btnAddTopic";
+            this.btnAddTopic.ShadowDecoration.Parent = this.btnAddTopic;
+            this.btnAddTopic.Size = new System.Drawing.Size(149, 33);
+            this.btnAddTopic.TabIndex = 0;
+            this.btnAddTopic.Text = "Add Topic";
+            this.btnAddTopic.Click += new System.EventHandler(this.BtnAddTopic_Click);
+            // 
             // lblRegistrationDate
             // 
             this.lblRegistrationDate.AutoSize = true;
@@ -645,23 +662,6 @@
             this.btnViewHistory.Text = "View History";
             this.btnViewHistory.Click += new System.EventHandler(this.BtnViewHistory_Click);
             // 
-            // btnAddTopic
-            // 
-            this.btnAddTopic.CheckedState.Parent = this.btnAddTopic;
-            this.btnAddTopic.CustomImages.Parent = this.btnAddTopic;
-            this.btnAddTopic.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            this.btnAddTopic.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnAddTopic.ForeColor = System.Drawing.Color.White;
-            this.btnAddTopic.HoverState.Parent = this.btnAddTopic;
-            this.btnAddTopic.Image = global::webTRON_Management_Software.Properties.Resources.PlusSign;
-            this.btnAddTopic.Location = new System.Drawing.Point(4, 82);
-            this.btnAddTopic.Name = "btnAddTopic";
-            this.btnAddTopic.ShadowDecoration.Parent = this.btnAddTopic;
-            this.btnAddTopic.Size = new System.Drawing.Size(149, 33);
-            this.btnAddTopic.TabIndex = 0;
-            this.btnAddTopic.Text = "Add Topic";
-            this.btnAddTopic.Click += new System.EventHandler(this.BtnAddTopic_Click);
-            // 
             // activePanel
             // 
             this.activePanel.BackgroundImage = global::webTRON_Management_Software.Properties.Resources.rectangle_curved_large;
@@ -776,7 +776,7 @@
             this.Controls.Add(this.btnExit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TreatmentWindow";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.prescriptionPanel.ResumeLayout(false);
             this.prescriptionDisplayPanel.ResumeLayout(false);

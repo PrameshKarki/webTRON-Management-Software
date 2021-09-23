@@ -232,7 +232,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.Controls.Add(this.activePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Patients";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Patients";
             this.Load += new System.EventHandler(this.Patients_Load);
             this.sidebarPanel.ResumeLayout(false);
