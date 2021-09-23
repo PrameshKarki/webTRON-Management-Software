@@ -109,17 +109,30 @@ namespace webTRON_Management_Software.Views.Accountant
 
         private void BtnRenew_Click(object sender, EventArgs e)
         {
-            bool isSuccess;
-            string idToSearch = roleTextBox.Text + "-" + yearComboBox.Text + "-" + patientSerialNumberTextBox.Text;
-            if (isSuccess = Patient.Renew(idToSearch))
+            try
             {
-                MessageBox.Show("Successfully Renewed.", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else 
-            {
-                MessageBox.Show("Error", "Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                string patientID = DataGridView.Rows[0].Cells[0].Value.ToString();
+                int row = Patient.Renew(patientID);
+                if (row > 0)
+                {
+                    MessageBox.Show("Successfully Renewed.", "Sucess.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (row == 0)
+                {
+                    MessageBox.Show("Provide valid patient details.");
+                }
+                else if (row == -1)
+                {
+                    MessageBox.Show("Internal Server Error.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+                }
             }
+            catch (ArgumentOutOfRangeException)
+            {
+                MessageBox.Show("Provide valid patient details");
+            }
+           
+           
         }
         //Method to signout
         private void SignOut(object sender, EventArgs e)

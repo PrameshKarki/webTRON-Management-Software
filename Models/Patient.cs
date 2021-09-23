@@ -143,29 +143,28 @@ namespace webTRON_Management_Software.Models
             ad.Fill(dt);
             return dt;
         }
-        public static bool Renew(String patientID)
+        public static int Renew(String patientID)
         {
+            MySqlConnection conn = new MySqlConnection(connectionString);
+            conn.Open();
             try
             {
-                MySqlConnection conn = new MySqlConnection(connectionString);
-                conn.Open();
-
                 MySqlCommand command = new MySqlCommand();
                 command.Connection = conn;
                 command.CommandText = "UPDATE patientinfo SET status=@prmStatus WHERE patientID=@prmPatientID";
                 command.Parameters.AddWithValue("prmPatientID", patientID);
                 command.Parameters.AddWithValue("prmStatus", "IN");
-                command.ExecuteNonQuery();
+                int row = command.ExecuteNonQuery();
+                return row;
+            }
+            catch (Exception)
+            {
+                return -1;
+            }
+            finally
+            {
                 conn.Close();
             }
-            catch (Exception e)
-            {
-               
-                return false;
-            }
-
-            return true;
-
         }
         //Method to retreive Patient datas from database
         public static DataTable FetchPatientsDetails()

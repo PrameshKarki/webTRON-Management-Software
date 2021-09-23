@@ -25,7 +25,8 @@ namespace webTRON_Management_Software
             Application.SetCompatibleTextRenderingDefault(false);
 
             //Run main window here
-            Application.Run(new LandingWindow());
+            Application.Run(new Accountant.RenewPatient());
+           
         }
     }
 }
