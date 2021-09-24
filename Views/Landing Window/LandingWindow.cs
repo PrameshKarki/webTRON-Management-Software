@@ -152,5 +152,20 @@ namespace webTRON_Management_Software.Views.Landing_Window
                 userIDTextBox.BorderColor = Color.FromArgb(213, 218, 223);
             }
         }
+
+        private void UserIDTextBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue != 13) return;
+            this.ActiveControl = null;
+            BtnLogIn_Click(null,null);
+
+        }
+
+        private void PasswordTextBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue != 13) return;
+            this.ActiveControl = null;
+            BtnLogIn_Click(null, null);
+        }
     }
 }
