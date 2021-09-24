@@ -1,6 +1,8 @@
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\webTRON Management Software.exe.config
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\webTRON Management Software.exe
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\webTRON Management Software.pdb
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\FluentValidation.dll
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\PasswordGenerator.dll
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\QRCoder.dll
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\Google.Protobuf.dll
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\Zstandard.Net.dll
@@ -13,19 +15,31 @@ D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\System.Buffers.
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\K4os.Compression.LZ4.dll
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\K4os.Hash.xxHash.dll
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\FluentValidation.xml
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\MySql.Data.xml
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON Management Software.exe.config
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.ChangeInfo.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.ChangePassword.resources
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.Dashboard.resources
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.RenewPatient.resources
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.SearchAndUpdatePatient.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.Settings.resources
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.ChangeInfo.resources
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.ChangePassword.resources
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.Dashboard.resources
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.Search.resources
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.Settings.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.Others.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.Tests.resources
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.Users.resources
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.CreateAccount.resources
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.Dashboard.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.Medicine.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.TreatmentWindow.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Lab_Assistant.ChangeInfo.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Lab_Assistant.ChangePassword.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Lab_Assistant.Dashboard.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Lab_Assistant.Settings.resources
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Others.ChangeInfo.resources
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Others.ChangePassword.resources
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Others.Settings.resources
@@ -40,6 +54,7 @@ D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON Managem
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON Management Software.csproj.CopyComplete
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON Management Software.exe
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON Management Software.pdb
+<<<<<<< HEAD
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.TreatmentWindow.resources
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\bin\Debug\webTRON Management Software.exe.config
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\bin\Debug\webTRON Management Software.exe
@@ -174,3 +189,7 @@ C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-So
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.Patients.resources
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.Settings.resources
 >>>>>>> 74ec9ceaf559e42c8d94df378c2304f901272ced
+=======
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON Management Software.csproj.AssemblyReference.cache
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Others.Form1.resources
+>>>>>>> integration

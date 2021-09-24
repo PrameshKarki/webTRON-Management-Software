@@ -36,6 +36,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.WindowState = FormWindowState.Minimized;
         }
 
+<<<<<<< HEAD
         private void BtnPatients_Click(object sender, EventArgs e)
         {
             var patients = new Patients(employee);
@@ -91,5 +92,13 @@ namespace webTRON_Management_Software.Views.Doctor
             }
 
         }
+=======
+        private void btnTreatmentWindow_Click(object sender, EventArgs e)
+        {
+            TreatmentWindow treatmentWindow = new TreatmentWindow(employee);
+            treatmentWindow.Show();
+            this.Hide();
+        }
+>>>>>>> integration
     }
 }

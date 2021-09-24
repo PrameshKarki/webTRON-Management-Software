@@ -7,14 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using webTRON_Management_Software.Models;
 
 namespace webTRON_Management_Software.Views.Doctor
 {
     public partial class Others : Form
     {
+        Employee employee =new Employee();
         public Others()
         {
             InitializeComponent();
+        }
+
+        public Others(Employee emp)
+        {
+            InitializeComponent();
+            employee = emp;
         }
         //Hide alert
         private void AlertTimer_Tick(object sender, EventArgs e)
@@ -53,9 +61,13 @@ namespace webTRON_Management_Software.Views.Doctor
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void Others_Load(object sender, EventArgs e)
-        {
+       
 
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Tests tests = new Tests(employee); ;
+            tests.Show();
+            this.Hide();
         }
     }
 }

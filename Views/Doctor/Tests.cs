@@ -14,6 +14,7 @@ namespace webTRON_Management_Software.Views.Doctor
 {
     public partial class Tests : Form
     {
+        Employee employee = new Employee();
         string patientID;
         //List of test
         List<Guna2CheckBox> testsList = new List<Guna2CheckBox>();
@@ -23,6 +24,11 @@ namespace webTRON_Management_Software.Views.Doctor
         public Tests()
         {
             InitializeComponent();
+        }
+        public Tests(Employee emp)
+        {
+            InitializeComponent();
+            employee = emp;
         }
         //Hide alert
         private void AlertTimer_Tick(object sender, EventArgs e)
@@ -94,6 +100,10 @@ namespace webTRON_Management_Software.Views.Doctor
         //Click event on next button
         private void BtnNext_Click(object sender, EventArgs e)
         {
+            Others others = new Others(employee);
+            others.Show();
+            this.Hide();
+            /*
             bool isSucess;
             //Set patient ID
             patientID = lblPatientIDValue.Text;
@@ -121,7 +131,7 @@ namespace webTRON_Management_Software.Views.Doctor
             {
                 DisplayAlert("Danger", "Error occured.");
             }
-            
+            */
             
         }
         //Load Grid View
@@ -135,6 +145,27 @@ namespace webTRON_Management_Software.Views.Doctor
 
         }
 
+        private void btnPrescription_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void btnMedicine_Click(object sender, EventArgs e)
+        {
         
+        }
+
+        private void btnOthers_Click(object sender, EventArgs e)
+        {
+        
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Medicine medicine = new Medicine(employee);
+            medicine.Show();
+            this.Hide();
+
+        }
     }
 }
