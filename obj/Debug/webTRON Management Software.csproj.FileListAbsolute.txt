@@ -154,6 +154,7 @@ C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-So
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.ChangeInfo.resources
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.ChangePassword.resources
 C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.Settings.resources
+<<<<<<< HEAD
 =======
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\FluentValidation.dll
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\PasswordGenerator.dll
@@ -167,3 +168,9 @@ D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Managem
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Lab_Assistant.Settings.resources
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.Medicine.resources
 >>>>>>> merge_branch
+=======
+C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.ChangeInfo.resources
+C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.ChangePassword.resources
+C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.Patients.resources
+C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.Settings.resources
+>>>>>>> 74ec9ceaf559e42c8d94df378c2304f901272ced

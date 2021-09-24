@@ -1,7 +1,7 @@
 ﻿
-namespace webTRON_Management_Software.Views.Accountant
+namespace webTRON_Management_Software.Views.Doctor
 {
-    partial class Dashboard
+    partial class Patients
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +29,11 @@ namespace webTRON_Management_Software.Views.Accountant
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Patients));
             this.sidebarPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.btnSignOut = new Guna.UI2.WinForms.Guna2Button();
             this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPatients = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             this.activePanel = new Guna.UI2.WinForms.Guna2Panel();
             this.actveForm = new System.Windows.Forms.Label();
@@ -41,10 +41,6 @@ namespace webTRON_Management_Software.Views.Accountant
             this.activeUserName = new System.Windows.Forms.Label();
             this.btnMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnExit = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnSearchPatient = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCreatePatient = new Guna.UI2.WinForms.Guna2Button();
-            this.btnRenewPatient = new Guna.UI2.WinForms.Guna2Button();
-            this.dragableAccountantDashboard = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.sidebarPanel.SuspendLayout();
             this.activePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).BeginInit();
@@ -56,13 +52,14 @@ namespace webTRON_Management_Software.Views.Accountant
             // 
             this.sidebarPanel.Controls.Add(this.btnSignOut);
             this.sidebarPanel.Controls.Add(this.btnSettings);
+            this.sidebarPanel.Controls.Add(this.btnPatients);
             this.sidebarPanel.Controls.Add(this.btnDashboard);
             this.sidebarPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            this.sidebarPanel.Location = new System.Drawing.Point(-1, -1);
+            this.sidebarPanel.Location = new System.Drawing.Point(0, 0);
             this.sidebarPanel.Name = "sidebarPanel";
             this.sidebarPanel.ShadowDecoration.Parent = this.sidebarPanel;
             this.sidebarPanel.Size = new System.Drawing.Size(68, 532);
-            this.sidebarPanel.TabIndex = 33;
+            this.sidebarPanel.TabIndex = 23;
             // 
             // btnSignOut
             // 
@@ -96,7 +93,7 @@ namespace webTRON_Management_Software.Views.Accountant
             this.btnSettings.HoverState.Parent = this.btnSettings;
             this.btnSettings.Image = global::webTRON_Management_Software.Properties.Resources.settings_icon;
             this.btnSettings.ImageOffset = new System.Drawing.Point(10, -12);
-            this.btnSettings.Location = new System.Drawing.Point(0, 189);
+            this.btnSettings.Location = new System.Drawing.Point(0, 272);
             this.btnSettings.Margin = new System.Windows.Forms.Padding(0);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.ShadowDecoration.Parent = this.btnSettings;
@@ -106,12 +103,32 @@ namespace webTRON_Management_Software.Views.Accountant
             this.btnSettings.TextOffset = new System.Drawing.Point(-8, 10);
             this.btnSettings.Click += new System.EventHandler(this.BtnSettings_Click);
             // 
+            // btnPatients
+            // 
+            this.btnPatients.Animated = true;
+            this.btnPatients.CheckedState.Parent = this.btnPatients;
+            this.btnPatients.CustomImages.Parent = this.btnPatients;
+            this.btnPatients.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(131)))), ((int)(((byte)(228)))));
+            this.btnPatients.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPatients.ForeColor = System.Drawing.Color.White;
+            this.btnPatients.HoverState.Parent = this.btnPatients;
+            this.btnPatients.Image = global::webTRON_Management_Software.Properties.Resources.user_icon;
+            this.btnPatients.ImageOffset = new System.Drawing.Point(10, -12);
+            this.btnPatients.Location = new System.Drawing.Point(0, 195);
+            this.btnPatients.Margin = new System.Windows.Forms.Padding(0);
+            this.btnPatients.Name = "btnPatients";
+            this.btnPatients.ShadowDecoration.Parent = this.btnPatients;
+            this.btnPatients.Size = new System.Drawing.Size(68, 48);
+            this.btnPatients.TabIndex = 22;
+            this.btnPatients.Text = "Patients";
+            this.btnPatients.TextOffset = new System.Drawing.Point(-8, 10);
+            // 
             // btnDashboard
             // 
             this.btnDashboard.Animated = true;
             this.btnDashboard.CheckedState.Parent = this.btnDashboard;
             this.btnDashboard.CustomImages.Parent = this.btnDashboard;
-            this.btnDashboard.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(131)))), ((int)(((byte)(228)))));
+            this.btnDashboard.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
             this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.White;
             this.btnDashboard.HoverState.Parent = this.btnDashboard;
@@ -125,6 +142,7 @@ namespace webTRON_Management_Software.Views.Accountant
             this.btnDashboard.TabIndex = 21;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextOffset = new System.Drawing.Point(-6, 10);
+            this.btnDashboard.Click += new System.EventHandler(this.BtnDashboard_Click);
             // 
             // activePanel
             // 
@@ -133,11 +151,11 @@ namespace webTRON_Management_Software.Views.Accountant
             this.activePanel.Controls.Add(this.actveForm);
             this.activePanel.Controls.Add(this.activeUserPicture);
             this.activePanel.Controls.Add(this.activeUserName);
-            this.activePanel.Location = new System.Drawing.Point(65, 0);
+            this.activePanel.Location = new System.Drawing.Point(63, -1);
             this.activePanel.Name = "activePanel";
             this.activePanel.ShadowDecoration.Parent = this.activePanel;
             this.activePanel.Size = new System.Drawing.Size(165, 80);
-            this.activePanel.TabIndex = 34;
+            this.activePanel.TabIndex = 24;
             // 
             // actveForm
             // 
@@ -180,12 +198,12 @@ namespace webTRON_Management_Software.Views.Accountant
             // 
             this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
-            this.btnMinimize.Location = new System.Drawing.Point(910, 28);
+            this.btnMinimize.Location = new System.Drawing.Point(911, 23);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.ShadowDecoration.Parent = this.btnMinimize;
             this.btnMinimize.Size = new System.Drawing.Size(21, 4);
             this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnMinimize.TabIndex = 32;
+            this.btnMinimize.TabIndex = 26;
             this.btnMinimize.TabStop = false;
             this.btnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
             // 
@@ -193,97 +211,30 @@ namespace webTRON_Management_Software.Views.Accountant
             // 
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(959, 13);
+            this.btnExit.Location = new System.Drawing.Point(960, 8);
             this.btnExit.Name = "btnExit";
             this.btnExit.ShadowDecoration.Parent = this.btnExit;
             this.btnExit.Size = new System.Drawing.Size(28, 28);
             this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnExit.TabIndex = 31;
+            this.btnExit.TabIndex = 25;
             this.btnExit.TabStop = false;
             this.btnExit.Click += new System.EventHandler(this.SignOut);
             // 
-            // btnSearchPatient
-            // 
-            this.btnSearchPatient.Animated = true;
-            this.btnSearchPatient.AutoRoundedCorners = true;
-            this.btnSearchPatient.BorderRadius = 21;
-            this.btnSearchPatient.CheckedState.Parent = this.btnSearchPatient;
-            this.btnSearchPatient.CustomImages.Parent = this.btnSearchPatient;
-            this.btnSearchPatient.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            this.btnSearchPatient.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.btnSearchPatient.ForeColor = System.Drawing.Color.White;
-            this.btnSearchPatient.HoverState.Parent = this.btnSearchPatient;
-            this.btnSearchPatient.Image = global::webTRON_Management_Software.Properties.Resources.search_icon;
-            this.btnSearchPatient.Location = new System.Drawing.Point(667, 170);
-            this.btnSearchPatient.Name = "btnSearchPatient";
-            this.btnSearchPatient.ShadowDecoration.Parent = this.btnSearchPatient;
-            this.btnSearchPatient.Size = new System.Drawing.Size(192, 45);
-            this.btnSearchPatient.TabIndex = 36;
-            this.btnSearchPatient.Text = "Search Patient";
-            this.btnSearchPatient.Click += new System.EventHandler(this.BtnSearchPatient_Click);
-            // 
-            // btnCreatePatient
-            // 
-            this.btnCreatePatient.Animated = true;
-            this.btnCreatePatient.AutoRoundedCorners = true;
-            this.btnCreatePatient.BorderRadius = 21;
-            this.btnCreatePatient.CheckedState.Parent = this.btnCreatePatient;
-            this.btnCreatePatient.CustomImages.Parent = this.btnCreatePatient;
-            this.btnCreatePatient.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            this.btnCreatePatient.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.btnCreatePatient.ForeColor = System.Drawing.Color.White;
-            this.btnCreatePatient.HoverState.Parent = this.btnCreatePatient;
-            this.btnCreatePatient.Image = global::webTRON_Management_Software.Properties.Resources.PlusSign;
-            this.btnCreatePatient.Location = new System.Drawing.Point(235, 170);
-            this.btnCreatePatient.Name = "btnCreatePatient";
-            this.btnCreatePatient.ShadowDecoration.Parent = this.btnCreatePatient;
-            this.btnCreatePatient.Size = new System.Drawing.Size(192, 45);
-            this.btnCreatePatient.TabIndex = 35;
-            this.btnCreatePatient.Text = "Create Patient";
-            this.btnCreatePatient.Click += new System.EventHandler(this.BtnCreatePatient_Click);
-            // 
-            // btnRenewPatient
-            // 
-            this.btnRenewPatient.Animated = true;
-            this.btnRenewPatient.AutoRoundedCorners = true;
-            this.btnRenewPatient.BorderRadius = 21;
-            this.btnRenewPatient.CheckedState.Parent = this.btnRenewPatient;
-            this.btnRenewPatient.CustomImages.Parent = this.btnRenewPatient;
-            this.btnRenewPatient.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            this.btnRenewPatient.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.btnRenewPatient.ForeColor = System.Drawing.Color.White;
-            this.btnRenewPatient.HoverState.Parent = this.btnRenewPatient;
-            this.btnRenewPatient.Image = global::webTRON_Management_Software.Properties.Resources.search_icon;
-            this.btnRenewPatient.Location = new System.Drawing.Point(453, 170);
-            this.btnRenewPatient.Name = "btnRenewPatient";
-            this.btnRenewPatient.ShadowDecoration.Parent = this.btnRenewPatient;
-            this.btnRenewPatient.Size = new System.Drawing.Size(192, 45);
-            this.btnRenewPatient.TabIndex = 37;
-            this.btnRenewPatient.Text = "Renew Patient";
-            this.btnRenewPatient.Click += new System.EventHandler(this.BtnRenewPatient_Click);
-            // 
-            // dragableAccountantDashboard
-            // 
-            this.dragableAccountantDashboard.TargetControl = this;
-            // 
-            // Dashboard
+            // Patients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1000, 625);
-            this.Controls.Add(this.btnRenewPatient);
-            this.Controls.Add(this.btnSearchPatient);
-            this.Controls.Add(this.btnCreatePatient);
-            this.Controls.Add(this.sidebarPanel);
-            this.Controls.Add(this.activePanel);
             this.Controls.Add(this.btnMinimize);
+            this.Controls.Add(this.sidebarPanel);
             this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.activePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Dashboard";
+            this.Name = "Patients";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AccountantDashboard";
-            this.Load += new System.EventHandler(this.Dashboard_Load);
+            this.Text = "Patients";
+            this.Load += new System.EventHandler(this.Patients_Load);
             this.sidebarPanel.ResumeLayout(false);
             this.activePanel.ResumeLayout(false);
             this.activePanel.PerformLayout();
@@ -300,6 +251,7 @@ namespace webTRON_Management_Software.Views.Accountant
         private Guna.UI2.WinForms.Guna2Panel sidebarPanel;
         private Guna.UI2.WinForms.Guna2Button btnSignOut;
         private Guna.UI2.WinForms.Guna2Button btnSettings;
+        private Guna.UI2.WinForms.Guna2Button btnPatients;
         private Guna.UI2.WinForms.Guna2Button btnDashboard;
         private Guna.UI2.WinForms.Guna2Panel activePanel;
         private System.Windows.Forms.Label actveForm;
@@ -307,9 +259,5 @@ namespace webTRON_Management_Software.Views.Accountant
         private System.Windows.Forms.Label activeUserName;
         private Guna.UI2.WinForms.Guna2PictureBox btnMinimize;
         private Guna.UI2.WinForms.Guna2PictureBox btnExit;
-        private Guna.UI2.WinForms.Guna2Button btnSearchPatient;
-        private Guna.UI2.WinForms.Guna2Button btnCreatePatient;
-        private Guna.UI2.WinForms.Guna2Button btnRenewPatient;
-        private Guna.UI2.WinForms.Guna2DragControl dragableAccountantDashboard;
     }
 }

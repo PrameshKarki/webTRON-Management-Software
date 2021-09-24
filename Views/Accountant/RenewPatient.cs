@@ -109,17 +109,30 @@ namespace webTRON_Management_Software.Views.Accountant
 
         private void BtnRenew_Click(object sender, EventArgs e)
         {
-            bool isSuccess;
-            string idToSearch = roleTextBox.Text + "-" + yearComboBox.Text + "-" + patientSerialNumberTextBox.Text;
-            if (isSuccess = Patient.Renew(idToSearch))
+            try
             {
-                MessageBox.Show("Successfully Renewed.", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string patientID = DataGridView.Rows[0].Cells[0].Value.ToString();
+                int row = Patient.Renew(patientID);
+                if (row > 0)
+                {
+                    DisplayAlert("Sucess", "Successfully Renewed.");
+                }
+                else if (row == 0)
+                {
+                    DisplayAlert("Danger", "Provide Valid Patient Details.");
+                }
+                else if (row == -1)
+                {
+                    DisplayAlert("Danger", "Internal Server Error.");
+                }
             }
-            else 
+           
+            catch (Exception)
             {
-                MessageBox.Show("Error", "Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                DisplayAlert("Danger", "Provide Valid Patient Details.");
             }
+           
+           
         }
         //Method to signout
         private void SignOut(object sender, EventArgs e)
@@ -150,6 +163,30 @@ namespace webTRON_Management_Software.Views.Accountant
             dashboard.Show();
             this.Hide();
 
+        }
+
+        private void AlertTimer_Tick(object sender, EventArgs e)
+        {
+            alertTransition.HideSync(alertPanel);
+        }
+        //Display alert
+        private void DisplayAlert(string type, string message)
+        {
+            if (type == "Danger")
+            {
+                alertPanel.BackgroundImage = Properties.Resources.alert_danger_background;
+                alertImage.Image = Properties.Resources.alert_danger_icon;
+                alertText.ForeColor = Color.Red;
+
+            }
+            else if (type == "Sucess")
+            {
+                alertPanel.BackgroundImage = Properties.Resources.alert_sucess_background;
+                alertImage.Image = Properties.Resources.alert_sucess_icon;
+                alertText.ForeColor = Color.Green;
+            }
+            alertText.Text = message;
+            alertTransition.ShowSync(alertPanel);
         }
     }
 }

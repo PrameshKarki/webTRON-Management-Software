@@ -14,14 +14,15 @@ using webTRON_Management_Software.Utils;
 using webTRON_Management_Software.Utils.Validators;
 using webTRON_Management_Software.Views.Landing_Window;
 
-namespace webTRON_Management_Software.Views.Admin
+namespace webTRON_Management_Software.Views.Doctor
 {
     public partial class ChangePassword : Form
     {
-        string newPassword = "", confirmPassword = "";
-
         //Instantiate Employee Class
         Employee employee = new Employee();
+
+        string newPassword = "", confirmPassword = "";
+
         public ChangePassword()
         {
             InitializeComponent();
@@ -32,25 +33,13 @@ namespace webTRON_Management_Software.Views.Admin
             InitializeComponent();
         }
 
+        //Load event on Form
         private void ChangePassword_Load(object sender, EventArgs e)
         {
             //Initialize active user details
             InitializeActiverUserDetails();
         }
-        //Initialize Active User Details
-        private void InitializeActiverUserDetails()
-        {
-            activeUserName.Text = employee.FirstName;
-            if (employee.img != null)
-            {
-                //Change active user picture
-                MemoryStream ms = new MemoryStream(employee.img);
-                activeUserPicture.Image = Image.FromStream(ms);
-            }
-           
-        }
 
-        //Sign Out User
         private void SignOut(object sender, EventArgs e)
         {
             //WARNING:To check which element has clicked          
@@ -74,12 +63,14 @@ namespace webTRON_Management_Software.Views.Admin
 
             }
         }
-        //Click event on minimize button
+
+
+        //Click event on Minimize button
         private void BtnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
-        //Click event on dashboard button
+
         private void BtnDashboard_Click(object sender, EventArgs e)
         {
             var dashboard = new Admin.Dashboard(employee);
@@ -87,32 +78,28 @@ namespace webTRON_Management_Software.Views.Admin
             this.Hide();
         }
 
-        //Click event on users button
-        private void BtnUsers_Click(object sender, EventArgs e)
-        {
-
-            //Instantiating user form
-            var users = new Users(employee);
-            users.Show();
-            this.Hide();
-        }
-
-        //Click event on settings button
         private void BtnSettings_Click(object sender, EventArgs e)
         {
             //Instantiating Settings form
             var settings = new Settings(employee);
             settings.Show();
             this.Hide();
-
         }
-        //Click event on change password
+
+        private void BtnPatients_Click(object sender, EventArgs e)
+        {
+            //Instantiating Settings form
+            var patients = new Patients(employee);
+            patients.Show();
+            this.Hide();
+        }
+
         private void BtnChangePassword_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(currentPasswordTextBox.Text))
             {
                 currentPasswordTextBox.BorderColor = Color.Red;
-               
+
             }
             if (string.IsNullOrEmpty(newPasswordTextBox.Text))
             {
@@ -137,8 +124,8 @@ namespace webTRON_Management_Software.Views.Admin
                 bool isValid = User.CheckUser(usr);
                 if (isValid)
                 {
-                     newPassword = newPasswordTextBox.Text;
-                     confirmPassword = confirmPasswordTextBox.Text;
+                    newPassword = newPasswordTextBox.Text;
+                    confirmPassword = confirmPasswordTextBox.Text;
                     if (newPassword == confirmPassword)
                     {
                         //Validate Password 
@@ -186,7 +173,7 @@ namespace webTRON_Management_Software.Views.Admin
 
             }
         }
-        //Click event on verifiy button
+
         private void BtnVerify_Click(object sender, EventArgs e)
         {
             //Check all the text fields are filled or not
@@ -233,19 +220,28 @@ namespace webTRON_Management_Software.Views.Admin
                 }
 
             }
-
         }
-        //Enter event on verification code panel
+
         private void VerificationCodePanel_Enter(object sender, EventArgs e)
         {
+
             verificationCodeTextBox1.Focus();
         }
-        //Text change event on verification code text box
-        private void VerificationCodeTextBox1_TextChanged(object sender, EventArgs e)
+
+        private void VerificationCodeTextBox4_TextChanged(object sender, EventArgs e)
         {
-            if (verificationCodeTextBox1.Text.Length == 1)
+            if (verificationCodeTextBox4.Text.Length == 1)
             {
-                verificationCodeTextBox2.Focus();
+                btnVerify.Focus();
+            }
+
+        }
+
+        private void VerificationCodeTextBox3_TextChanged(object sender, EventArgs e)
+        {
+            if (verificationCodeTextBox3.Text.Length == 1)
+            {
+                verificationCodeTextBox4.Focus();
             }
 
         }
@@ -258,25 +254,14 @@ namespace webTRON_Management_Software.Views.Admin
             }
         }
 
-        private void VerificationCodeTextBox3_TextChanged(object sender, EventArgs e)
+        private void VerificationCodeTextBox1_TextChanged(object sender, EventArgs e)
         {
-            if (verificationCodeTextBox3.Text.Length == 1)
+            if (verificationCodeTextBox1.Text.Length == 1)
             {
-                verificationCodeTextBox4.Focus();
+                verificationCodeTextBox2.Focus();
             }
-
         }
 
-
-        private void VerificationCodeTextBox4_TextChanged(object sender, EventArgs e)
-        {
-            if (verificationCodeTextBox4.Text.Length == 1)
-            {
-                btnVerify.Focus();
-            }
-
-        }
-        //Hide alert
         private void AlertTimer_Tick(object sender, EventArgs e)
         {
             alertTransition.HideSync(alertPanel);
@@ -284,7 +269,7 @@ namespace webTRON_Management_Software.Views.Admin
 
         private void currentPasswordTextBox_Leave(object sender, EventArgs e)
         {
-            if(currentPasswordTextBox.Text.Length!=0 && currentPasswordTextBox.BorderColor == Color.Red)
+            if (currentPasswordTextBox.Text.Length != 0 && currentPasswordTextBox.BorderColor == Color.Red)
             {
                 currentPasswordTextBox.BorderColor = Color.FromArgb(213, 218, 223);
             }
@@ -296,7 +281,6 @@ namespace webTRON_Management_Software.Views.Admin
             {
                 newPasswordTextBox.BorderColor = Color.FromArgb(213, 218, 223);
             }
-
         }
 
         private void confirmPasswordTextBox_Leave(object sender, EventArgs e)
@@ -305,10 +289,7 @@ namespace webTRON_Management_Software.Views.Admin
             {
                 confirmPasswordTextBox.BorderColor = Color.FromArgb(213, 218, 223);
             }
-
         }
-
-        
 
         //Show alert
         private void DisplayAlert(string type, string message)
@@ -328,6 +309,20 @@ namespace webTRON_Management_Software.Views.Admin
             }
             alertText.Text = message;
             alertTransition.ShowSync(alertPanel);
+        }
+
+
+        //Initialize Active User Details
+        private void InitializeActiverUserDetails()
+        {
+            activeUserName.Text = employee.FirstName;
+            if (employee.img != null)
+            {
+                //Change active user picture
+                MemoryStream ms = new MemoryStream(employee.img);
+                activeUserPicture.Image = Image.FromStream(ms);
+            }
+
         }
     }
 }

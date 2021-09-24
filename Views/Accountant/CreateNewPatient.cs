@@ -72,7 +72,7 @@ namespace webTRON_Management_Software.Views.Accountant
             // check if all the fields are Filled or not.
             if (string.IsNullOrEmpty(firstNameTxtBox.Text) || string.IsNullOrEmpty(lastNameTextBox.Text) || string.IsNullOrEmpty(addressTextBox.Text) || string.IsNullOrEmpty(genderTextBox.Text) || string.IsNullOrEmpty(contactNumberTextBox.Text) || (isMale.Checked == false & isFemale.Checked == false & isOthers.Checked == false))
             {
-                MessageBox.Show("Complete Information Should be Supplied.", "Warning!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                DisplayAlert("Danger", "Fill all the fields.");
             }
             else
             {
@@ -110,7 +110,7 @@ namespace webTRON_Management_Software.Views.Accountant
                 }
                 else
                 {
-                    MessageBox.Show("Error!!!", "failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    DisplayAlert("Danger", "Internal Server Error");
                 }
 
 
@@ -199,6 +199,31 @@ namespace webTRON_Management_Software.Views.Accountant
             dashboard.Show();
             this.Hide();
 
+        }
+
+        //Hide alert
+        private void AlertTimer_Tick(object sender, EventArgs e)
+        {
+            alertTransition.HideSync(alertPanel);
+        }
+        //Display alert
+        private void DisplayAlert(string type, string message)
+        {
+            if (type == "Danger")
+            {
+                alertPanel.BackgroundImage = Properties.Resources.alert_danger_background;
+                alertImage.Image = Properties.Resources.alert_danger_icon;
+                alertText.ForeColor = Color.Red;
+
+            }
+            else if (type == "Sucess")
+            {
+                alertPanel.BackgroundImage = Properties.Resources.alert_sucess_background;
+                alertImage.Image = Properties.Resources.alert_sucess_icon;
+                alertText.ForeColor = Color.Green;
+            }
+            alertText.Text = message;
+            alertTransition.ShowSync(alertPanel);
         }
     }
 }

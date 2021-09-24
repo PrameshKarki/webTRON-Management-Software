@@ -30,12 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TreatmentWindow));
-            this.btnMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnExit = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.activePanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.activeForm = new System.Windows.Forms.Label();
-            this.activeUserPicture = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.activeUserName = new System.Windows.Forms.Label();
             this.lblMinus2 = new System.Windows.Forms.Label();
             this.lblMinus1 = new System.Windows.Forms.Label();
             this.yearComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -79,16 +73,23 @@
             this.dragOnTreatmentPanel = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.btnMedicine = new Guna.UI2.WinForms.Guna2Button();
             this.btnViewHistory = new Guna.UI2.WinForms.Guna2Button();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
-            this.activePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).BeginInit();
+            this.activePanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.activeForm = new System.Windows.Forms.Label();
+            this.activeUserPicture = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.activeUserName = new System.Windows.Forms.Label();
+            this.btnMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnExit = new Guna.UI2.WinForms.Guna2PictureBox();
             this.prescriptionPanel.SuspendLayout();
             this.prescriptionDisplayPanel.SuspendLayout();
             this.oldPrescriptionPanel.SuspendLayout();
             this.todaysPrescriptionPanel.SuspendLayout();
+            this.activePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.SuspendLayout();
             // 
+<<<<<<< HEAD
             // btnMinimize
             // 
             this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -171,6 +172,8 @@
             this.activeUserName.TabIndex = 1;
             this.activeUserName.Text = "John";
             // 
+=======
+>>>>>>> 74ec9ceaf559e42c8d94df378c2304f901272ced
             // lblMinus2
             // 
             this.lblMinus2.AutoSize = true;
@@ -785,6 +788,82 @@
             this.btnViewHistory.Text = "View History";
             this.btnViewHistory.Click += new System.EventHandler(this.BtnViewHistory_Click);
             // 
+            // activePanel
+            // 
+            this.activePanel.BackgroundImage = global::webTRON_Management_Software.Properties.Resources.rectangle_curved_large;
+            this.activePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.activePanel.Controls.Add(this.activeForm);
+            this.activePanel.Controls.Add(this.activeUserPicture);
+            this.activePanel.Controls.Add(this.activeUserName);
+            this.activePanel.Location = new System.Drawing.Point(-1, 0);
+            this.activePanel.Name = "activePanel";
+            this.activePanel.ShadowDecoration.Parent = this.activePanel;
+            this.activePanel.Size = new System.Drawing.Size(165, 80);
+            this.activePanel.TabIndex = 28;
+            // 
+            // activeForm
+            // 
+            this.activeForm.AutoSize = true;
+            this.activeForm.BackColor = System.Drawing.Color.Transparent;
+            this.activeForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.activeForm.ForeColor = System.Drawing.Color.White;
+            this.activeForm.Location = new System.Drawing.Point(64, 40);
+            this.activeForm.Name = "activeForm";
+            this.activeForm.Size = new System.Drawing.Size(88, 20);
+            this.activeForm.TabIndex = 21;
+            this.activeForm.Text = "Dashboard";
+            // 
+            // activeUserPicture
+            // 
+            this.activeUserPicture.BackColor = System.Drawing.Color.Transparent;
+            this.activeUserPicture.Image = global::webTRON_Management_Software.Properties.Resources.avatar;
+            this.activeUserPicture.Location = new System.Drawing.Point(0, 15);
+            this.activeUserPicture.Name = "activeUserPicture";
+            this.activeUserPicture.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.activeUserPicture.ShadowDecoration.Parent = this.activeUserPicture;
+            this.activeUserPicture.Size = new System.Drawing.Size(49, 45);
+            this.activeUserPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.activeUserPicture.TabIndex = 0;
+            this.activeUserPicture.TabStop = false;
+            // 
+            // activeUserName
+            // 
+            this.activeUserName.AutoSize = true;
+            this.activeUserName.BackColor = System.Drawing.Color.Transparent;
+            this.activeUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.activeUserName.ForeColor = System.Drawing.Color.White;
+            this.activeUserName.Location = new System.Drawing.Point(64, 9);
+            this.activeUserName.Name = "activeUserName";
+            this.activeUserName.Size = new System.Drawing.Size(52, 24);
+            this.activeUserName.TabIndex = 1;
+            this.activeUserName.Text = "John";
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
+            this.btnMinimize.Location = new System.Drawing.Point(911, 27);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.ShadowDecoration.Parent = this.btnMinimize;
+            this.btnMinimize.Size = new System.Drawing.Size(21, 4);
+            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnMinimize.TabIndex = 26;
+            this.btnMinimize.TabStop = false;
+            this.btnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.Location = new System.Drawing.Point(960, 12);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.ShadowDecoration.Parent = this.btnExit;
+            this.btnExit.Size = new System.Drawing.Size(28, 28);
+            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnExit.TabIndex = 25;
+            this.btnExit.TabStop = false;
+            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            // 
             // TreatmentWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -824,19 +903,28 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TreatmentWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+<<<<<<< HEAD
             this.Load += new System.EventHandler(this.TreatmentWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.activePanel.ResumeLayout(false);
             this.activePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).EndInit();
+=======
+>>>>>>> 74ec9ceaf559e42c8d94df378c2304f901272ced
             this.prescriptionPanel.ResumeLayout(false);
             this.prescriptionDisplayPanel.ResumeLayout(false);
             this.oldPrescriptionPanel.ResumeLayout(false);
             this.oldPrescriptionPanel.PerformLayout();
             this.todaysPrescriptionPanel.ResumeLayout(false);
             this.todaysPrescriptionPanel.PerformLayout();
+            this.activePanel.ResumeLayout(false);
+            this.activePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

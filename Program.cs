@@ -25,11 +25,16 @@ namespace webTRON_Management_Software
             //Application.SetCompatibleTextRenderingDefault(false);
 
             //Run main window here
+<<<<<<< HEAD
             // Application.Run(new LandingWindow());
             //Application.Run(new Doctor.Medicine());
             //Application.Run(new Admin.CreateAccount());
             Application.Run(new Doctor.TreatmentWindow());
             
+=======
+            Application.Run(new LandingWindow());
+           
+>>>>>>> 74ec9ceaf559e42c8d94df378c2304f901272ced
         }
     }
 }

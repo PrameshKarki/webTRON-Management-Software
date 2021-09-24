@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RenewPatient));
             this.DataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.registrationNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,12 +61,21 @@
             this.activeUserPicture = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.activeUserName = new System.Windows.Forms.Label();
             this.btnBack = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.alertTransition = new Guna.UI2.WinForms.Guna2Transition();
+            this.alertTimer = new System.Windows.Forms.Timer(this.components);
+            this.alertPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.alertText = new System.Windows.Forms.Label();
+            this.alertCloseBtn = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.alertImage = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.activePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
+            this.alertPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.alertCloseBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alertImage)).BeginInit();
             this.SuspendLayout();
             // 
             // DataGridView
@@ -99,6 +109,7 @@
             this.address,
             this.status,
             this.referredTo});
+            this.alertTransition.SetDecoration(this.DataGridView, Guna.UI2.AnimatorNS.DecorationType.None);
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -211,6 +222,7 @@
             // roleTextBox
             // 
             this.roleTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.alertTransition.SetDecoration(this.roleTextBox, Guna.UI2.AnimatorNS.DecorationType.None);
             this.roleTextBox.DefaultText = "PTN";
             this.roleTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.roleTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -238,6 +250,7 @@
             // patientSerialNumberTextBox
             // 
             this.patientSerialNumberTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.alertTransition.SetDecoration(this.patientSerialNumberTextBox, Guna.UI2.AnimatorNS.DecorationType.None);
             this.patientSerialNumberTextBox.DefaultText = "";
             this.patientSerialNumberTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.patientSerialNumberTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -263,6 +276,7 @@
             // lblPatientID
             // 
             this.lblPatientID.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblPatientID, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblPatientID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPatientID.Location = new System.Drawing.Point(204, 124);
             this.lblPatientID.Name = "lblPatientID";
@@ -273,6 +287,7 @@
             // yearComboBox
             // 
             this.yearComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.alertTransition.SetDecoration(this.yearComboBox, Guna.UI2.AnimatorNS.DecorationType.None);
             this.yearComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.yearComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.yearComboBox.FocusedColor = System.Drawing.Color.Empty;
@@ -294,6 +309,7 @@
             // lblMinus1
             // 
             this.lblMinus1.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblMinus1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblMinus1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMinus1.Location = new System.Drawing.Point(442, 124);
             this.lblMinus1.Name = "lblMinus1";
@@ -304,6 +320,7 @@
             // lblMinus2
             // 
             this.lblMinus2.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblMinus2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblMinus2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMinus2.Location = new System.Drawing.Point(588, 124);
             this.lblMinus2.Name = "lblMinus2";
@@ -315,11 +332,12 @@
             // 
             this.btnRenew.CheckedState.Parent = this.btnRenew;
             this.btnRenew.CustomImages.Parent = this.btnRenew;
+            this.alertTransition.SetDecoration(this.btnRenew, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnRenew.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
             this.btnRenew.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.btnRenew.ForeColor = System.Drawing.Color.White;
             this.btnRenew.HoverState.Parent = this.btnRenew;
-            this.btnRenew.Location = new System.Drawing.Point(781, 537);
+            this.btnRenew.Location = new System.Drawing.Point(792, 509);
             this.btnRenew.Name = "btnRenew";
             this.btnRenew.ShadowDecoration.Parent = this.btnRenew;
             this.btnRenew.Size = new System.Drawing.Size(180, 45);
@@ -330,8 +348,9 @@
             // btnMinimize
             // 
             this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.alertTransition.SetDecoration(this.btnMinimize, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
-            this.btnMinimize.Location = new System.Drawing.Point(895, 27);
+            this.btnMinimize.Location = new System.Drawing.Point(911, 27);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.ShadowDecoration.Parent = this.btnMinimize;
             this.btnMinimize.Size = new System.Drawing.Size(21, 4);
@@ -343,8 +362,9 @@
             // btnExit
             // 
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.alertTransition.SetDecoration(this.btnExit, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(944, 12);
+            this.btnExit.Location = new System.Drawing.Point(960, 12);
             this.btnExit.Name = "btnExit";
             this.btnExit.ShadowDecoration.Parent = this.btnExit;
             this.btnExit.Size = new System.Drawing.Size(28, 28);
@@ -360,6 +380,7 @@
             this.activePanel.Controls.Add(this.actveForm);
             this.activePanel.Controls.Add(this.activeUserPicture);
             this.activePanel.Controls.Add(this.activeUserName);
+            this.alertTransition.SetDecoration(this.activePanel, Guna.UI2.AnimatorNS.DecorationType.None);
             this.activePanel.Location = new System.Drawing.Point(-1, 0);
             this.activePanel.Name = "activePanel";
             this.activePanel.ShadowDecoration.Parent = this.activePanel;
@@ -370,6 +391,7 @@
             // 
             this.actveForm.AutoSize = true;
             this.actveForm.BackColor = System.Drawing.Color.Transparent;
+            this.alertTransition.SetDecoration(this.actveForm, Guna.UI2.AnimatorNS.DecorationType.None);
             this.actveForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.actveForm.ForeColor = System.Drawing.Color.White;
             this.actveForm.Location = new System.Drawing.Point(51, 38);
@@ -381,6 +403,7 @@
             // activeUserPicture
             // 
             this.activeUserPicture.BackColor = System.Drawing.Color.Transparent;
+            this.alertTransition.SetDecoration(this.activeUserPicture, Guna.UI2.AnimatorNS.DecorationType.None);
             this.activeUserPicture.Image = global::webTRON_Management_Software.Properties.Resources.avatar;
             this.activeUserPicture.Location = new System.Drawing.Point(4, 13);
             this.activeUserPicture.Name = "activeUserPicture";
@@ -395,6 +418,7 @@
             // 
             this.activeUserName.AutoSize = true;
             this.activeUserName.BackColor = System.Drawing.Color.Transparent;
+            this.alertTransition.SetDecoration(this.activeUserName, Guna.UI2.AnimatorNS.DecorationType.None);
             this.activeUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.activeUserName.ForeColor = System.Drawing.Color.White;
             this.activeUserName.Location = new System.Drawing.Point(56, 9);
@@ -406,8 +430,9 @@
             // btnBack
             // 
             this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.alertTransition.SetDecoration(this.btnBack, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
-            this.btnBack.Location = new System.Drawing.Point(846, 18);
+            this.btnBack.Location = new System.Drawing.Point(862, 18);
             this.btnBack.Name = "btnBack";
             this.btnBack.ShadowDecoration.Parent = this.btnBack;
             this.btnBack.Size = new System.Drawing.Size(20, 18);
@@ -416,12 +441,92 @@
             this.btnBack.TabStop = false;
             this.btnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
+            // alertTransition
+            // 
+            this.alertTransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Scale;
+            this.alertTransition.Cursor = null;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.alertTransition.DefaultAnimation = animation1;
+            // 
+            // alertTimer
+            // 
+            this.alertTimer.Enabled = true;
+            this.alertTimer.Interval = 5000;
+            this.alertTimer.Tick += new System.EventHandler(this.AlertTimer_Tick);
+            // 
+            // alertPanel
+            // 
+            this.alertPanel.BackgroundImage = global::webTRON_Management_Software.Properties.Resources.alert_danger_background;
+            this.alertPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.alertPanel.Controls.Add(this.alertText);
+            this.alertPanel.Controls.Add(this.alertCloseBtn);
+            this.alertPanel.Controls.Add(this.alertImage);
+            this.alertTransition.SetDecoration(this.alertPanel, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.alertPanel.Location = new System.Drawing.Point(700, 573);
+            this.alertPanel.Name = "alertPanel";
+            this.alertPanel.ShadowDecoration.Parent = this.alertPanel;
+            this.alertPanel.Size = new System.Drawing.Size(306, 55);
+            this.alertPanel.TabIndex = 88;
+            this.alertPanel.Visible = false;
+            // 
+            // alertText
+            // 
+            this.alertText.AutoSize = true;
+            this.alertTransition.SetDecoration(this.alertText, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.alertText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.alertText.ForeColor = System.Drawing.Color.Red;
+            this.alertText.Location = new System.Drawing.Point(56, 17);
+            this.alertText.Name = "alertText";
+            this.alertText.Size = new System.Drawing.Size(90, 20);
+            this.alertText.TabIndex = 2;
+            this.alertText.Text = "{{alertText}}";
+            // 
+            // alertCloseBtn
+            // 
+            this.alertCloseBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.alertTransition.SetDecoration(this.alertCloseBtn, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.alertCloseBtn.Image = global::webTRON_Management_Software.Properties.Resources.alert_close_icon;
+            this.alertCloseBtn.Location = new System.Drawing.Point(269, 17);
+            this.alertCloseBtn.Name = "alertCloseBtn";
+            this.alertCloseBtn.ShadowDecoration.Parent = this.alertCloseBtn;
+            this.alertCloseBtn.Size = new System.Drawing.Size(20, 20);
+            this.alertCloseBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.alertCloseBtn.TabIndex = 1;
+            this.alertCloseBtn.TabStop = false;
+            // 
+            // alertImage
+            // 
+            this.alertTransition.SetDecoration(this.alertImage, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.alertImage.Image = global::webTRON_Management_Software.Properties.Resources.alert_danger_icon;
+            this.alertImage.Location = new System.Drawing.Point(22, 17);
+            this.alertImage.Name = "alertImage";
+            this.alertImage.ShadowDecoration.Parent = this.alertImage;
+            this.alertImage.Size = new System.Drawing.Size(20, 20);
+            this.alertImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.alertImage.TabIndex = 0;
+            this.alertImage.TabStop = false;
+            // 
             // RenewPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1000, 625);
+            this.Controls.Add(this.alertPanel);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.activePanel);
             this.Controls.Add(this.btnRenew);
@@ -434,6 +539,7 @@
             this.Controls.Add(this.DataGridView);
             this.Controls.Add(this.btnMinimize);
             this.Controls.Add(this.btnExit);
+            this.alertTransition.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RenewPatient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -446,6 +552,10 @@
             this.activePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
+            this.alertPanel.ResumeLayout(false);
+            this.alertPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.alertCloseBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alertImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -480,5 +590,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
         private System.Windows.Forms.DataGridViewTextBoxColumn referredTo;
         private Guna.UI2.WinForms.Guna2PictureBox btnBack;
+        private Guna.UI2.WinForms.Guna2Transition alertTransition;
+        private System.Windows.Forms.Timer alertTimer;
+        private Guna.UI2.WinForms.Guna2Panel alertPanel;
+        private System.Windows.Forms.Label alertText;
+        private Guna.UI2.WinForms.Guna2PictureBox alertCloseBtn;
+        private Guna.UI2.WinForms.Guna2PictureBox alertImage;
     }
 }

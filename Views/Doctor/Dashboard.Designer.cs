@@ -34,7 +34,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.sidebarPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.btnSignOut = new Guna.UI2.WinForms.Guna2Button();
             this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
-            this.btnUsers = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPatients = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             this.activePanel = new Guna.UI2.WinForms.Guna2Panel();
             this.actveForm = new System.Windows.Forms.Label();
@@ -54,7 +54,7 @@ namespace webTRON_Management_Software.Views.Doctor
             // 
             this.sidebarPanel.Controls.Add(this.btnSignOut);
             this.sidebarPanel.Controls.Add(this.btnSettings);
-            this.sidebarPanel.Controls.Add(this.btnUsers);
+            this.sidebarPanel.Controls.Add(this.btnPatients);
             this.sidebarPanel.Controls.Add(this.btnDashboard);
             this.sidebarPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
             this.sidebarPanel.Location = new System.Drawing.Point(0, 0);
@@ -82,6 +82,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.btnSignOut.TabIndex = 24;
             this.btnSignOut.Text = "Sign Out";
             this.btnSignOut.TextOffset = new System.Drawing.Point(-8, 10);
+            this.btnSignOut.Click += new System.EventHandler(this.LogOut);
             // 
             // btnSettings
             // 
@@ -102,26 +103,28 @@ namespace webTRON_Management_Software.Views.Doctor
             this.btnSettings.TabIndex = 23;
             this.btnSettings.Text = "Settings";
             this.btnSettings.TextOffset = new System.Drawing.Point(-8, 10);
+            this.btnSettings.Click += new System.EventHandler(this.BtnSettings_Click);
             // 
-            // btnUsers
+            // btnPatients
             // 
-            this.btnUsers.Animated = true;
-            this.btnUsers.CheckedState.Parent = this.btnUsers;
-            this.btnUsers.CustomImages.Parent = this.btnUsers;
-            this.btnUsers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            this.btnUsers.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsers.ForeColor = System.Drawing.Color.White;
-            this.btnUsers.HoverState.Parent = this.btnUsers;
-            this.btnUsers.Image = global::webTRON_Management_Software.Properties.Resources.user_icon;
-            this.btnUsers.ImageOffset = new System.Drawing.Point(10, -12);
-            this.btnUsers.Location = new System.Drawing.Point(0, 195);
-            this.btnUsers.Margin = new System.Windows.Forms.Padding(0);
-            this.btnUsers.Name = "btnUsers";
-            this.btnUsers.ShadowDecoration.Parent = this.btnUsers;
-            this.btnUsers.Size = new System.Drawing.Size(68, 48);
-            this.btnUsers.TabIndex = 22;
-            this.btnUsers.Text = "Patient";
-            this.btnUsers.TextOffset = new System.Drawing.Point(-8, 10);
+            this.btnPatients.Animated = true;
+            this.btnPatients.CheckedState.Parent = this.btnPatients;
+            this.btnPatients.CustomImages.Parent = this.btnPatients;
+            this.btnPatients.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            this.btnPatients.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPatients.ForeColor = System.Drawing.Color.White;
+            this.btnPatients.HoverState.Parent = this.btnPatients;
+            this.btnPatients.Image = global::webTRON_Management_Software.Properties.Resources.user_icon;
+            this.btnPatients.ImageOffset = new System.Drawing.Point(10, -12);
+            this.btnPatients.Location = new System.Drawing.Point(0, 195);
+            this.btnPatients.Margin = new System.Windows.Forms.Padding(0);
+            this.btnPatients.Name = "btnPatients";
+            this.btnPatients.ShadowDecoration.Parent = this.btnPatients;
+            this.btnPatients.Size = new System.Drawing.Size(68, 48);
+            this.btnPatients.TabIndex = 22;
+            this.btnPatients.Text = "Patients";
+            this.btnPatients.TextOffset = new System.Drawing.Point(-8, 10);
+            this.btnPatients.Click += new System.EventHandler(this.BtnPatients_Click);
             // 
             // btnDashboard
             // 
@@ -217,7 +220,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnExit.TabIndex = 23;
             this.btnExit.TabStop = false;
-            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            this.btnExit.Click += new System.EventHandler(this.LogOut);
             // 
             // dragOnDashboard
             // 
@@ -235,7 +238,9 @@ namespace webTRON_Management_Software.Views.Doctor
             this.Controls.Add(this.activePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Dashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DoctorDashboard";
+            this.Load += new System.EventHandler(this.Dashboard_Load);
             this.sidebarPanel.ResumeLayout(false);
             this.activePanel.ResumeLayout(false);
             this.activePanel.PerformLayout();
@@ -252,7 +257,7 @@ namespace webTRON_Management_Software.Views.Doctor
         private Guna.UI2.WinForms.Guna2Panel sidebarPanel;
         private Guna.UI2.WinForms.Guna2Button btnSignOut;
         private Guna.UI2.WinForms.Guna2Button btnSettings;
-        private Guna.UI2.WinForms.Guna2Button btnUsers;
+        private Guna.UI2.WinForms.Guna2Button btnPatients;
         private Guna.UI2.WinForms.Guna2Button btnDashboard;
         private Guna.UI2.WinForms.Guna2Panel activePanel;
         private System.Windows.Forms.Label actveForm;

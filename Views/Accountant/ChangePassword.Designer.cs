@@ -706,7 +706,7 @@ namespace webTRON_Management_Software.Views.Accountant
             this.alertTransition.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ChangePassword";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChangePassword";
             this.Load += new System.EventHandler(this.ChangePassword_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();

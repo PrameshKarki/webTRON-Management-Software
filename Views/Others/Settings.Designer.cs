@@ -248,7 +248,7 @@ namespace webTRON_Management_Software.Views.Others
             this.btnChangePassword.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.btnChangePassword.ForeColor = System.Drawing.Color.White;
             this.btnChangePassword.HoverState.Parent = this.btnChangePassword;
-            this.btnChangePassword.Location = new System.Drawing.Point(773, 405);
+            this.btnChangePassword.Location = new System.Drawing.Point(760, 404);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.ShadowDecoration.Parent = this.btnChangePassword;
             this.btnChangePassword.Size = new System.Drawing.Size(192, 45);
@@ -268,7 +268,7 @@ namespace webTRON_Management_Software.Views.Others
             this.btnChangeInfo.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.btnChangeInfo.ForeColor = System.Drawing.Color.White;
             this.btnChangeInfo.HoverState.Parent = this.btnChangeInfo;
-            this.btnChangeInfo.Location = new System.Drawing.Point(773, 340);
+            this.btnChangeInfo.Location = new System.Drawing.Point(760, 339);
             this.btnChangeInfo.Name = "btnChangeInfo";
             this.btnChangeInfo.ShadowDecoration.Parent = this.btnChangeInfo;
             this.btnChangeInfo.Size = new System.Drawing.Size(192, 45);
@@ -281,7 +281,7 @@ namespace webTRON_Management_Software.Views.Others
             this.lblContactNumberValue.AutoSize = true;
             this.alertTransition.SetDecoration(this.lblContactNumberValue, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblContactNumberValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.lblContactNumberValue.Location = new System.Drawing.Point(464, 231);
+            this.lblContactNumberValue.Location = new System.Drawing.Point(451, 230);
             this.lblContactNumberValue.Name = "lblContactNumberValue";
             this.lblContactNumberValue.Size = new System.Drawing.Size(163, 24);
             this.lblContactNumberValue.TabIndex = 52;
@@ -292,7 +292,7 @@ namespace webTRON_Management_Software.Views.Others
             this.lblContactNumber.AutoSize = true;
             this.alertTransition.SetDecoration(this.lblContactNumber, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblContactNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.lblContactNumber.Location = new System.Drawing.Point(308, 231);
+            this.lblContactNumber.Location = new System.Drawing.Point(295, 230);
             this.lblContactNumber.Name = "lblContactNumber";
             this.lblContactNumber.Size = new System.Drawing.Size(152, 24);
             this.lblContactNumber.TabIndex = 51;
@@ -303,7 +303,7 @@ namespace webTRON_Management_Software.Views.Others
             this.lblEmailValue.AutoSize = true;
             this.alertTransition.SetDecoration(this.lblEmailValue, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblEmailValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.lblEmailValue.Location = new System.Drawing.Point(464, 184);
+            this.lblEmailValue.Location = new System.Drawing.Point(451, 183);
             this.lblEmailValue.Name = "lblEmailValue";
             this.lblEmailValue.Size = new System.Drawing.Size(79, 24);
             this.lblEmailValue.TabIndex = 50;
@@ -314,7 +314,7 @@ namespace webTRON_Management_Software.Views.Others
             this.lblEmail.AutoSize = true;
             this.alertTransition.SetDecoration(this.lblEmail, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.lblEmail.Location = new System.Drawing.Point(308, 184);
+            this.lblEmail.Location = new System.Drawing.Point(295, 183);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(62, 24);
             this.lblEmail.TabIndex = 49;
@@ -325,7 +325,7 @@ namespace webTRON_Management_Software.Views.Others
             this.lblFullNameValue.AutoSize = true;
             this.alertTransition.SetDecoration(this.lblFullNameValue, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblFullNameValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.lblFullNameValue.Location = new System.Drawing.Point(464, 139);
+            this.lblFullNameValue.Location = new System.Drawing.Point(451, 138);
             this.lblFullNameValue.Name = "lblFullNameValue";
             this.lblFullNameValue.Size = new System.Drawing.Size(108, 24);
             this.lblFullNameValue.TabIndex = 48;
@@ -336,7 +336,7 @@ namespace webTRON_Management_Software.Views.Others
             this.lblFullName.AutoSize = true;
             this.alertTransition.SetDecoration(this.lblFullName, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.lblFullName.Location = new System.Drawing.Point(308, 139);
+            this.lblFullName.Location = new System.Drawing.Point(295, 138);
             this.lblFullName.Name = "lblFullName";
             this.lblFullName.Size = new System.Drawing.Size(102, 24);
             this.lblFullName.TabIndex = 47;
@@ -347,7 +347,7 @@ namespace webTRON_Management_Software.Views.Others
             this.lblUserIdValue.AutoSize = true;
             this.alertTransition.SetDecoration(this.lblUserIdValue, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblUserIdValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.lblUserIdValue.Location = new System.Drawing.Point(464, 91);
+            this.lblUserIdValue.Location = new System.Drawing.Point(451, 90);
             this.lblUserIdValue.Name = "lblUserIdValue";
             this.lblUserIdValue.Size = new System.Drawing.Size(88, 24);
             this.lblUserIdValue.TabIndex = 46;
@@ -358,7 +358,7 @@ namespace webTRON_Management_Software.Views.Others
             this.lblUserID.AutoSize = true;
             this.alertTransition.SetDecoration(this.lblUserID, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblUserID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.lblUserID.Location = new System.Drawing.Point(308, 91);
+            this.lblUserID.Location = new System.Drawing.Point(295, 90);
             this.lblUserID.Name = "lblUserID";
             this.lblUserID.Size = new System.Drawing.Size(76, 24);
             this.lblUserID.TabIndex = 45;
@@ -369,7 +369,7 @@ namespace webTRON_Management_Software.Views.Others
             this.userPicture.BackColor = System.Drawing.Color.Transparent;
             this.alertTransition.SetDecoration(this.userPicture, Guna.UI2.AnimatorNS.DecorationType.None);
             this.userPicture.Image = global::webTRON_Management_Software.Properties.Resources.avatar;
-            this.userPicture.Location = new System.Drawing.Point(773, 80);
+            this.userPicture.Location = new System.Drawing.Point(760, 79);
             this.userPicture.Name = "userPicture";
             this.userPicture.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.userPicture.ShadowDecoration.Parent = this.userPicture;
@@ -390,7 +390,7 @@ namespace webTRON_Management_Software.Views.Others
             this.btnChangePicture.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.btnChangePicture.ForeColor = System.Drawing.Color.White;
             this.btnChangePicture.HoverState.Parent = this.btnChangePicture;
-            this.btnChangePicture.Location = new System.Drawing.Point(773, 272);
+            this.btnChangePicture.Location = new System.Drawing.Point(760, 271);
             this.btnChangePicture.Name = "btnChangePicture";
             this.btnChangePicture.ShadowDecoration.Parent = this.btnChangePicture;
             this.btnChangePicture.Size = new System.Drawing.Size(192, 45);
