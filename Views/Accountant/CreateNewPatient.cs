@@ -99,6 +99,7 @@ namespace webTRON_Management_Software.Views.Accountant
                     
 
                 bool isSuccess = Patient.Insert(ptn);
+                MessageBox.Show("message is: "+isSuccess);
                 if (isSuccess)
                 {
                     PrintPanelContanerPanel.Visible = true;

@@ -9,7 +9,7 @@ using MySql.Data.MySqlClient;
 
 namespace webTRON_Management_Software.Models
 {
-    class Patient
+    public class Patient
     {
         //connection string
         //private static string connectionString = "server=localhost;user id=root; password=laxudb;persistsecurityinfo=True;database=webtronmanagement";
@@ -45,13 +45,14 @@ namespace webTRON_Management_Software.Models
             command.Parameters.AddWithValue("prmStatus", ptn.status);
             command.Parameters.AddWithValue("prmAge", ptn.age);
             command.Parameters.AddWithValue("prmAddress", ptn.address);
-
-            try { 
+            //prmPatientID,prmRegistrationDate
+            try {  
             conn.Open();
             command.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
+                MessageBox.Show("The error message is: " + ex.Message);
                 return false;
             }
             finally
@@ -206,6 +207,33 @@ namespace webTRON_Management_Software.Models
             MySqlConnection conn = new MySqlConnection(connectionString);
             //SQL Query
             string SQLQuery = $"SELECT patientID as 'Patient ID',firstName AS 'First Name',lastName AS 'Last Name',address as 'Address',contactNumber AS 'Contact Number',registrationDate as 'Registration Date' FROM patientInfo WHERE patientID LIKE '%{searchString}' OR firstName LIKE '%{searchString}%' OR lastName LIKE '%{searchString}%' OR address LIKE '%{searchString}%' OR contactNumber LIKE '%{searchString}%' OR registrationDate LIKE '%{searchString}%'";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
+                //Open Connection
+                conn.Open();
+                //Load DataTable
+                dt.Load(cmd.ExecuteReader());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            finally
+            {
+                //Close Connection
+                conn.Close();
+            }
+            return dt;
+        }
+        public static DataTable SearchPatientID(String patientID)
+        {
+            DataTable dt = new DataTable();
+            //MySql Connection
+            MySqlConnection conn = new MySqlConnection(connectionString);
+            //SQL Query
+            string SQLQuery = $"SELECT * FROM patientinfo WHERE patientID='{patientID}'";
             try
             {
                 MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);

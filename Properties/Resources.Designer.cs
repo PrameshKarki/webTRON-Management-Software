@@ -203,6 +203,16 @@ namespace webTRON_Management_Software.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap close_window1 {
+            get {
+                object obj = ResourceManager.GetObject("close_window1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap dashboard_icon {
             get {
                 object obj = ResourceManager.GetObject("dashboard_icon", resourceCulture);
@@ -216,6 +226,16 @@ namespace webTRON_Management_Software.Properties {
         public static System.Drawing.Bitmap exit_icon {
             get {
                 object obj = ResourceManager.GetObject("exit_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap healthicons_water_treatment {
+            get {
+                object obj = ResourceManager.GetObject("healthicons_water-treatment", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
