@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Views",
+    "\\Views\\Others"
   ],
-  "SelectedNode": "\\webTRON Management Software.csproj",
+  "SelectedNode": "\\Views\\Others\\ChangeInfo.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -91,5 +91,12 @@ namespace webTRON_Management_Software.Views.Doctor
             }
 
         }
+
+        private void btnTreatmentWindow_Click(object sender, EventArgs e)
+        {
+            TreatmentWindow treatmentWindow = new TreatmentWindow(employee);
+            treatmentWindow.Show();
+            this.Hide();
+        }
     }
 }

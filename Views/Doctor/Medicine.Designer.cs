@@ -1,7 +1,7 @@
 ﻿
 namespace webTRON_Management_Software.Views.Doctor
 {
-    partial class MedicineForm
+    partial class Medicine
     {
         /// <summary>
         /// Required designer variable.
@@ -30,34 +30,15 @@ namespace webTRON_Management_Software.Views.Doctor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MedicineForm));
-            this.lblRegistrationId = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblRegisteredDate = new System.Windows.Forms.Label();
-            this.lblContact = new System.Windows.Forms.Label();
-            this.lblAddress = new System.Windows.Forms.Label();
-            this.lblPatientIDValue = new System.Windows.Forms.Label();
-            this.lblReferredTo = new System.Windows.Forms.Label();
-            this.lblAge = new System.Windows.Forms.Label();
-            this.lblGender = new System.Windows.Forms.Label();
-            this.lblRegisteredDateValue = new System.Windows.Forms.Label();
-            this.lblNameValue = new System.Windows.Forms.Label();
-            this.lblAddressValue = new System.Windows.Forms.Label();
-            this.lblContactValue = new System.Windows.Forms.Label();
-            this.lblAgeValue = new System.Windows.Forms.Label();
-            this.lblGenderValue = new System.Windows.Forms.Label();
-            this.lblReferredToValue = new System.Windows.Forms.Label();
-            this.btnMedicine = new Guna.UI2.WinForms.Guna2Button();
-            this.btnOthers = new Guna.UI2.WinForms.Guna2Button();
-            this.btnTests = new Guna.UI2.WinForms.Guna2Button();
-            this.btnPrescription = new Guna.UI2.WinForms.Guna2Button();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Medicine));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.lblPatientIDOutput = new System.Windows.Forms.Label();
             this.runningMedicinePanel = new Guna.UI2.WinForms.Guna2Panel();
             this.runningMedicinesGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btnAddRunningMedicine = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -80,8 +61,6 @@ namespace webTRON_Management_Software.Views.Doctor
             this.lblPrescribedMedicineStartDate1 = new System.Windows.Forms.Label();
             this.prescribedMedicineTextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblPrescribedMedicineName1 = new System.Windows.Forms.Label();
-            this.previouslyTakenMedicinePanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.previouslyTakenMedicineGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.lblPreviouslyTakenMedicine = new System.Windows.Forms.Label();
             this.DragableMedicineForm = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.alertTimer = new System.Windows.Forms.Timer(this.components);
@@ -98,11 +77,27 @@ namespace webTRON_Management_Software.Views.Doctor
             this.activeUserName = new System.Windows.Forms.Label();
             this.btnMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnExit = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnBack = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.lblLastNameOutput = new System.Windows.Forms.Label();
+            this.lblGenderOutput = new System.Windows.Forms.Label();
+            this.lblReferredToOutput = new System.Windows.Forms.Label();
+            this.lblAgeOutput = new System.Windows.Forms.Label();
+            this.lblContactOutput = new System.Windows.Forms.Label();
+            this.lblAddressOutput = new System.Windows.Forms.Label();
+            this.lblFirstNameOutput = new System.Windows.Forms.Label();
+            this.lblRegistrationDateOutput = new System.Windows.Forms.Label();
+            this.lblReferredTo = new System.Windows.Forms.Label();
+            this.lblAge = new System.Windows.Forms.Label();
+            this.lblContact = new System.Windows.Forms.Label();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblRegistrationDate = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.previouslyTakenMedicineGridView = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
             this.runningMedicinePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.runningMedicinesGridView)).BeginInit();
             this.prescribedMedicinePanel.SuspendLayout();
-            this.previouslyTakenMedicinePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.previouslyTakenMedicineGridView)).BeginInit();
             this.alertPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.alertCloseBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alertImage)).BeginInit();
@@ -110,247 +105,21 @@ namespace webTRON_Management_Software.Views.Doctor
             ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.previouslyTakenMedicineGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblRegistrationId
+            // lblPatientIDOutput
             // 
-            this.lblRegistrationId.AutoSize = true;
-            this.alertTransition.SetDecoration(this.lblRegistrationId, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lblRegistrationId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblRegistrationId.Location = new System.Drawing.Point(454, 21);
-            this.lblRegistrationId.Name = "lblRegistrationId";
-            this.lblRegistrationId.Size = new System.Drawing.Size(84, 20);
-            this.lblRegistrationId.TabIndex = 69;
-            this.lblRegistrationId.Text = "Patient ID:";
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.alertTransition.SetDecoration(this.lblName, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(240, 90);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(49, 17);
-            this.lblName.TabIndex = 77;
-            this.lblName.Text = "Name:";
-            // 
-            // lblRegisteredDate
-            // 
-            this.lblRegisteredDate.AutoSize = true;
-            this.alertTransition.SetDecoration(this.lblRegisteredDate, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lblRegisteredDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegisteredDate.Location = new System.Drawing.Point(174, 62);
-            this.lblRegisteredDate.Name = "lblRegisteredDate";
-            this.lblRegisteredDate.Size = new System.Drawing.Size(115, 17);
-            this.lblRegisteredDate.TabIndex = 76;
-            this.lblRegisteredDate.Text = "Registered Date:";
-            // 
-            // lblContact
-            // 
-            this.lblContact.AutoSize = true;
-            this.alertTransition.SetDecoration(this.lblContact, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lblContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContact.Location = new System.Drawing.Point(429, 92);
-            this.lblContact.Name = "lblContact";
-            this.lblContact.Size = new System.Drawing.Size(60, 17);
-            this.lblContact.TabIndex = 79;
-            this.lblContact.Text = "Contact:";
-            // 
-            // lblAddress
-            // 
-            this.lblAddress.AutoSize = true;
-            this.alertTransition.SetDecoration(this.lblAddress, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.Location = new System.Drawing.Point(425, 64);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(64, 17);
-            this.lblAddress.TabIndex = 78;
-            this.lblAddress.Text = "Address:";
-            // 
-            // lblPatientIDValue
-            // 
-            this.lblPatientIDValue.AutoSize = true;
-            this.alertTransition.SetDecoration(this.lblPatientIDValue, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lblPatientIDValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblPatientIDValue.Location = new System.Drawing.Point(544, 20);
-            this.lblPatientIDValue.Name = "lblPatientIDValue";
-            this.lblPatientIDValue.Size = new System.Drawing.Size(95, 20);
-            this.lblPatientIDValue.TabIndex = 80;
-            this.lblPatientIDValue.Text = "{{patientID}}";
-            // 
-            // lblReferredTo
-            // 
-            this.lblReferredTo.AutoSize = true;
-            this.alertTransition.SetDecoration(this.lblReferredTo, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lblReferredTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblReferredTo.Location = new System.Drawing.Point(761, 73);
-            this.lblReferredTo.Name = "lblReferredTo";
-            this.lblReferredTo.Size = new System.Drawing.Size(98, 20);
-            this.lblReferredTo.TabIndex = 82;
-            this.lblReferredTo.Text = "Referred To:";
-            // 
-            // lblAge
-            // 
-            this.lblAge.AutoSize = true;
-            this.alertTransition.SetDecoration(this.lblAge, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lblAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAge.Location = new System.Drawing.Point(624, 62);
-            this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(37, 17);
-            this.lblAge.TabIndex = 81;
-            this.lblAge.Text = "Age:";
-            // 
-            // lblGender
-            // 
-            this.lblGender.AutoSize = true;
-            this.alertTransition.SetDecoration(this.lblGender, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lblGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGender.Location = new System.Drawing.Point(604, 94);
-            this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(60, 17);
-            this.lblGender.TabIndex = 83;
-            this.lblGender.Text = "Gender:";
-            // 
-            // lblRegisteredDateValue
-            // 
-            this.lblRegisteredDateValue.AutoSize = true;
-            this.alertTransition.SetDecoration(this.lblRegisteredDateValue, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lblRegisteredDateValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegisteredDateValue.Location = new System.Drawing.Point(287, 62);
-            this.lblRegisteredDateValue.Name = "lblRegisteredDateValue";
-            this.lblRegisteredDateValue.Size = new System.Drawing.Size(122, 17);
-            this.lblRegisteredDateValue.TabIndex = 84;
-            this.lblRegisteredDateValue.Text = "{{registeredDate}}";
-            // 
-            // lblNameValue
-            // 
-            this.lblNameValue.AutoSize = true;
-            this.alertTransition.SetDecoration(this.lblNameValue, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lblNameValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameValue.Location = new System.Drawing.Point(287, 89);
-            this.lblNameValue.Name = "lblNameValue";
-            this.lblNameValue.Size = new System.Drawing.Size(63, 17);
-            this.lblNameValue.TabIndex = 85;
-            this.lblNameValue.Text = "{{name}}";
-            // 
-            // lblAddressValue
-            // 
-            this.lblAddressValue.AutoSize = true;
-            this.alertTransition.SetDecoration(this.lblAddressValue, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lblAddressValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddressValue.Location = new System.Drawing.Point(495, 64);
-            this.lblAddressValue.Name = "lblAddressValue";
-            this.lblAddressValue.Size = new System.Drawing.Size(79, 17);
-            this.lblAddressValue.TabIndex = 86;
-            this.lblAddressValue.Text = "{{address}}";
-            // 
-            // lblContactValue
-            // 
-            this.lblContactValue.AutoSize = true;
-            this.alertTransition.SetDecoration(this.lblContactValue, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lblContactValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContactValue.Location = new System.Drawing.Point(497, 92);
-            this.lblContactValue.Name = "lblContactValue";
-            this.lblContactValue.Size = new System.Drawing.Size(74, 17);
-            this.lblContactValue.TabIndex = 87;
-            this.lblContactValue.Text = "{{contact}}";
-            // 
-            // lblAgeValue
-            // 
-            this.lblAgeValue.AutoSize = true;
-            this.alertTransition.SetDecoration(this.lblAgeValue, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lblAgeValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAgeValue.Location = new System.Drawing.Point(667, 60);
-            this.lblAgeValue.Name = "lblAgeValue";
-            this.lblAgeValue.Size = new System.Drawing.Size(52, 17);
-            this.lblAgeValue.TabIndex = 88;
-            this.lblAgeValue.Text = "{{age}}";
-            // 
-            // lblGenderValue
-            // 
-            this.lblGenderValue.AutoSize = true;
-            this.alertTransition.SetDecoration(this.lblGenderValue, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lblGenderValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGenderValue.Location = new System.Drawing.Point(665, 92);
-            this.lblGenderValue.Name = "lblGenderValue";
-            this.lblGenderValue.Size = new System.Drawing.Size(73, 17);
-            this.lblGenderValue.TabIndex = 89;
-            this.lblGenderValue.Text = "{{gender}}";
-            // 
-            // lblReferredToValue
-            // 
-            this.lblReferredToValue.AutoSize = true;
-            this.alertTransition.SetDecoration(this.lblReferredToValue, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lblReferredToValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblReferredToValue.Location = new System.Drawing.Point(853, 73);
-            this.lblReferredToValue.Name = "lblReferredToValue";
-            this.lblReferredToValue.Size = new System.Drawing.Size(103, 20);
-            this.lblReferredToValue.TabIndex = 90;
-            this.lblReferredToValue.Text = "{{referredTo}}";
-            // 
-            // btnMedicine
-            // 
-            this.btnMedicine.CheckedState.Parent = this.btnMedicine;
-            this.btnMedicine.CustomImages.Parent = this.btnMedicine;
-            this.alertTransition.SetDecoration(this.btnMedicine, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnMedicine.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(131)))), ((int)(((byte)(228)))));
-            this.btnMedicine.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnMedicine.ForeColor = System.Drawing.Color.White;
-            this.btnMedicine.HoverState.Parent = this.btnMedicine;
-            this.btnMedicine.Location = new System.Drawing.Point(708, 138);
-            this.btnMedicine.Name = "btnMedicine";
-            this.btnMedicine.ShadowDecoration.Parent = this.btnMedicine;
-            this.btnMedicine.Size = new System.Drawing.Size(86, 26);
-            this.btnMedicine.TabIndex = 96;
-            this.btnMedicine.Text = "Medicine";
-            // 
-            // btnOthers
-            // 
-            this.btnOthers.CheckedState.Parent = this.btnOthers;
-            this.btnOthers.CustomImages.Parent = this.btnOthers;
-            this.alertTransition.SetDecoration(this.btnOthers, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnOthers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            this.btnOthers.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnOthers.ForeColor = System.Drawing.Color.White;
-            this.btnOthers.HoverState.Parent = this.btnOthers;
-            this.btnOthers.Location = new System.Drawing.Point(892, 138);
-            this.btnOthers.Name = "btnOthers";
-            this.btnOthers.ShadowDecoration.Parent = this.btnOthers;
-            this.btnOthers.Size = new System.Drawing.Size(86, 26);
-            this.btnOthers.TabIndex = 95;
-            this.btnOthers.Text = "Others";
-            // 
-            // btnTests
-            // 
-            this.btnTests.CheckedState.Parent = this.btnTests;
-            this.btnTests.CustomImages.Parent = this.btnTests;
-            this.alertTransition.SetDecoration(this.btnTests, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnTests.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            this.btnTests.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnTests.ForeColor = System.Drawing.Color.White;
-            this.btnTests.HoverState.Parent = this.btnTests;
-            this.btnTests.Location = new System.Drawing.Point(800, 138);
-            this.btnTests.Name = "btnTests";
-            this.btnTests.ShadowDecoration.Parent = this.btnTests;
-            this.btnTests.Size = new System.Drawing.Size(86, 26);
-            this.btnTests.TabIndex = 94;
-            this.btnTests.Text = "Tests";
-            // 
-            // btnPrescription
-            // 
-            this.btnPrescription.CheckedState.Parent = this.btnPrescription;
-            this.btnPrescription.CustomImages.Parent = this.btnPrescription;
-            this.alertTransition.SetDecoration(this.btnPrescription, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnPrescription.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            this.btnPrescription.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnPrescription.ForeColor = System.Drawing.Color.White;
-            this.btnPrescription.HoverState.Parent = this.btnPrescription;
-            this.btnPrescription.Location = new System.Drawing.Point(616, 138);
-            this.btnPrescription.Name = "btnPrescription";
-            this.btnPrescription.ShadowDecoration.Parent = this.btnPrescription;
-            this.btnPrescription.Size = new System.Drawing.Size(86, 26);
-            this.btnPrescription.TabIndex = 93;
-            this.btnPrescription.Text = "Prescription";
+            this.lblPatientIDOutput.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblPatientIDOutput, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblPatientIDOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblPatientIDOutput.Location = new System.Drawing.Point(400, 43);
+            this.lblPatientIDOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPatientIDOutput.Name = "lblPatientIDOutput";
+            this.lblPatientIDOutput.Size = new System.Drawing.Size(127, 26);
+            this.lblPatientIDOutput.TabIndex = 80;
+            this.lblPatientIDOutput.Text = "{{patientID}}";
             // 
             // runningMedicinePanel
             // 
@@ -366,10 +135,11 @@ namespace webTRON_Management_Software.Views.Doctor
             this.runningMedicinePanel.Controls.Add(this.medicineNameTextBox1);
             this.runningMedicinePanel.Controls.Add(this.lblMedicineName1);
             this.alertTransition.SetDecoration(this.runningMedicinePanel, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.runningMedicinePanel.Location = new System.Drawing.Point(0, 161);
+            this.runningMedicinePanel.Location = new System.Drawing.Point(0, 198);
+            this.runningMedicinePanel.Margin = new System.Windows.Forms.Padding(4);
             this.runningMedicinePanel.Name = "runningMedicinePanel";
             this.runningMedicinePanel.ShadowDecoration.Parent = this.runningMedicinePanel;
-            this.runningMedicinePanel.Size = new System.Drawing.Size(988, 156);
+            this.runningMedicinePanel.Size = new System.Drawing.Size(1317, 192);
             this.runningMedicinePanel.TabIndex = 98;
             // 
             // runningMedicinesGridView
@@ -378,36 +148,37 @@ namespace webTRON_Management_Software.Views.Doctor
             this.runningMedicinesGridView.AllowUserToDeleteRows = false;
             this.runningMedicinesGridView.AllowUserToResizeColumns = false;
             this.runningMedicinesGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.runningMedicinesGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.runningMedicinesGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.runningMedicinesGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.runningMedicinesGridView.BackgroundColor = System.Drawing.Color.White;
             this.runningMedicinesGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.runningMedicinesGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.runningMedicinesGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.runningMedicinesGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.runningMedicinesGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.runningMedicinesGridView.ColumnHeadersHeight = 30;
             this.runningMedicinesGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.alertTransition.SetDecoration(this.runningMedicinesGridView, Guna.UI2.AnimatorNS.DecorationType.None);
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.runningMedicinesGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.runningMedicinesGridView.DefaultCellStyle = dataGridViewCellStyle9;
             this.runningMedicinesGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.runningMedicinesGridView.EnableHeadersVisualStyles = false;
             this.runningMedicinesGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.runningMedicinesGridView.Location = new System.Drawing.Point(0, 0);
+            this.runningMedicinesGridView.Location = new System.Drawing.Point(7, 4);
+            this.runningMedicinesGridView.Margin = new System.Windows.Forms.Padding(4);
             this.runningMedicinesGridView.MultiSelect = false;
             this.runningMedicinesGridView.Name = "runningMedicinesGridView";
             this.runningMedicinesGridView.ReadOnly = true;
@@ -415,7 +186,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.runningMedicinesGridView.RowHeadersWidth = 51;
             this.runningMedicinesGridView.RowTemplate.Height = 28;
             this.runningMedicinesGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.runningMedicinesGridView.Size = new System.Drawing.Size(956, 100);
+            this.runningMedicinesGridView.Size = new System.Drawing.Size(1304, 138);
             this.runningMedicinesGridView.TabIndex = 87;
             this.runningMedicinesGridView.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.runningMedicinesGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -451,11 +222,12 @@ namespace webTRON_Management_Software.Views.Doctor
             this.btnAddRunningMedicine.HoverState.Parent = this.btnAddRunningMedicine;
             this.btnAddRunningMedicine.Image = global::webTRON_Management_Software.Properties.Resources.PlusSign;
             this.btnAddRunningMedicine.ImageOffset = new System.Drawing.Point(1, 0);
-            this.btnAddRunningMedicine.Location = new System.Drawing.Point(934, 107);
+            this.btnAddRunningMedicine.Location = new System.Drawing.Point(1245, 151);
+            this.btnAddRunningMedicine.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddRunningMedicine.Name = "btnAddRunningMedicine";
             this.btnAddRunningMedicine.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnAddRunningMedicine.ShadowDecoration.Parent = this.btnAddRunningMedicine;
-            this.btnAddRunningMedicine.Size = new System.Drawing.Size(30, 30);
+            this.btnAddRunningMedicine.Size = new System.Drawing.Size(40, 37);
             this.btnAddRunningMedicine.TabIndex = 86;
             this.btnAddRunningMedicine.Click += new System.EventHandler(this.BtnAddRunningMedicine_Click);
             // 
@@ -475,14 +247,14 @@ namespace webTRON_Management_Software.Views.Doctor
             this.remarksTextBox1.ForeColor = System.Drawing.Color.Black;
             this.remarksTextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.remarksTextBox1.HoverState.Parent = this.remarksTextBox1;
-            this.remarksTextBox1.Location = new System.Drawing.Point(730, 110);
-            this.remarksTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.remarksTextBox1.Location = new System.Drawing.Point(973, 154);
+            this.remarksTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.remarksTextBox1.Name = "remarksTextBox1";
             this.remarksTextBox1.PasswordChar = '\0';
             this.remarksTextBox1.PlaceholderText = "Remarks";
             this.remarksTextBox1.SelectedText = "";
             this.remarksTextBox1.ShadowDecoration.Parent = this.remarksTextBox1;
-            this.remarksTextBox1.Size = new System.Drawing.Size(196, 30);
+            this.remarksTextBox1.Size = new System.Drawing.Size(261, 37);
             this.remarksTextBox1.TabIndex = 85;
             // 
             // lblRemarks1
@@ -490,9 +262,10 @@ namespace webTRON_Management_Software.Views.Doctor
             this.lblRemarks1.AutoSize = true;
             this.alertTransition.SetDecoration(this.lblRemarks1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblRemarks1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRemarks1.Location = new System.Drawing.Point(658, 116);
+            this.lblRemarks1.Location = new System.Drawing.Point(877, 162);
+            this.lblRemarks1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRemarks1.Name = "lblRemarks1";
-            this.lblRemarks1.Size = new System.Drawing.Size(68, 17);
+            this.lblRemarks1.Size = new System.Drawing.Size(81, 20);
             this.lblRemarks1.TabIndex = 84;
             this.lblRemarks1.Text = "Remarks:";
             // 
@@ -512,14 +285,14 @@ namespace webTRON_Management_Software.Views.Doctor
             this.endDayTextBox1.ForeColor = System.Drawing.Color.Black;
             this.endDayTextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.endDayTextBox1.HoverState.Parent = this.endDayTextBox1;
-            this.endDayTextBox1.Location = new System.Drawing.Point(596, 109);
-            this.endDayTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.endDayTextBox1.Location = new System.Drawing.Point(795, 153);
+            this.endDayTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.endDayTextBox1.Name = "endDayTextBox1";
             this.endDayTextBox1.PasswordChar = '\0';
             this.endDayTextBox1.PlaceholderText = "Day";
             this.endDayTextBox1.SelectedText = "";
             this.endDayTextBox1.ShadowDecoration.Parent = this.endDayTextBox1;
-            this.endDayTextBox1.Size = new System.Drawing.Size(52, 30);
+            this.endDayTextBox1.Size = new System.Drawing.Size(69, 37);
             this.endDayTextBox1.TabIndex = 83;
             // 
             // lblEndDay1
@@ -527,9 +300,10 @@ namespace webTRON_Management_Software.Views.Doctor
             this.lblEndDay1.AutoSize = true;
             this.alertTransition.SetDecoration(this.lblEndDay1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblEndDay1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEndDay1.Location = new System.Drawing.Point(526, 115);
+            this.lblEndDay1.Location = new System.Drawing.Point(701, 161);
+            this.lblEndDay1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEndDay1.Name = "lblEndDay1";
-            this.lblEndDay1.Size = new System.Drawing.Size(66, 17);
+            this.lblEndDay1.Size = new System.Drawing.Size(78, 20);
             this.lblEndDay1.TabIndex = 82;
             this.lblEndDay1.Text = "End Day:";
             // 
@@ -542,23 +316,25 @@ namespace webTRON_Management_Software.Views.Doctor
             this.startDatePicker1.ForeColor = System.Drawing.Color.White;
             this.startDatePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.startDatePicker1.HoverState.Parent = this.startDatePicker1;
-            this.startDatePicker1.Location = new System.Drawing.Point(385, 108);
+            this.startDatePicker1.Location = new System.Drawing.Point(513, 152);
+            this.startDatePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.startDatePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.startDatePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.startDatePicker1.Name = "startDatePicker1";
             this.startDatePicker1.ShadowDecoration.Parent = this.startDatePicker1;
-            this.startDatePicker1.Size = new System.Drawing.Size(129, 30);
+            this.startDatePicker1.Size = new System.Drawing.Size(172, 37);
             this.startDatePicker1.TabIndex = 81;
-            this.startDatePicker1.Value = new System.DateTime(2021, 4, 16, 0, 0, 0, 0);
+            this.startDatePicker1.Value = new System.DateTime(2021, 9, 24, 0, 0, 0, 0);
             // 
             // lblStartDate1
             // 
             this.lblStartDate1.AutoSize = true;
             this.alertTransition.SetDecoration(this.lblStartDate1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblStartDate1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStartDate1.Location = new System.Drawing.Point(306, 114);
+            this.lblStartDate1.Location = new System.Drawing.Point(408, 159);
+            this.lblStartDate1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStartDate1.Name = "lblStartDate1";
-            this.lblStartDate1.Size = new System.Drawing.Size(76, 17);
+            this.lblStartDate1.Size = new System.Drawing.Size(91, 20);
             this.lblStartDate1.TabIndex = 80;
             this.lblStartDate1.Text = "Start Date:";
             // 
@@ -578,14 +354,14 @@ namespace webTRON_Management_Software.Views.Doctor
             this.medicineNameTextBox1.ForeColor = System.Drawing.Color.Black;
             this.medicineNameTextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.medicineNameTextBox1.HoverState.Parent = this.medicineNameTextBox1;
-            this.medicineNameTextBox1.Location = new System.Drawing.Point(117, 107);
-            this.medicineNameTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.medicineNameTextBox1.Location = new System.Drawing.Point(156, 151);
+            this.medicineNameTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.medicineNameTextBox1.Name = "medicineNameTextBox1";
             this.medicineNameTextBox1.PasswordChar = '\0';
             this.medicineNameTextBox1.PlaceholderText = "Medicine Name";
             this.medicineNameTextBox1.SelectedText = "";
             this.medicineNameTextBox1.ShadowDecoration.Parent = this.medicineNameTextBox1;
-            this.medicineNameTextBox1.Size = new System.Drawing.Size(177, 30);
+            this.medicineNameTextBox1.Size = new System.Drawing.Size(236, 37);
             this.medicineNameTextBox1.TabIndex = 79;
             // 
             // lblMedicineName1
@@ -593,9 +369,10 @@ namespace webTRON_Management_Software.Views.Doctor
             this.lblMedicineName1.AutoSize = true;
             this.alertTransition.SetDecoration(this.lblMedicineName1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblMedicineName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMedicineName1.Location = new System.Drawing.Point(6, 110);
+            this.lblMedicineName1.Location = new System.Drawing.Point(8, 154);
+            this.lblMedicineName1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMedicineName1.Name = "lblMedicineName1";
-            this.lblMedicineName1.Size = new System.Drawing.Size(109, 17);
+            this.lblMedicineName1.Size = new System.Drawing.Size(130, 20);
             this.lblMedicineName1.TabIndex = 78;
             this.lblMedicineName1.Text = "Medicine Name:";
             // 
@@ -604,9 +381,10 @@ namespace webTRON_Management_Software.Views.Doctor
             this.lblRunningMedicine.AutoSize = true;
             this.alertTransition.SetDecoration(this.lblRunningMedicine, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblRunningMedicine.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblRunningMedicine.Location = new System.Drawing.Point(12, 138);
+            this.lblRunningMedicine.Location = new System.Drawing.Point(16, 170);
+            this.lblRunningMedicine.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRunningMedicine.Name = "lblRunningMedicine";
-            this.lblRunningMedicine.Size = new System.Drawing.Size(140, 20);
+            this.lblRunningMedicine.Size = new System.Drawing.Size(174, 25);
             this.lblRunningMedicine.TabIndex = 0;
             this.lblRunningMedicine.Text = "Running Medicine:";
             // 
@@ -623,10 +401,11 @@ namespace webTRON_Management_Software.Views.Doctor
             this.prescribedMedicinePanel.Controls.Add(this.prescribedMedicineTextBox1);
             this.prescribedMedicinePanel.Controls.Add(this.lblPrescribedMedicineName1);
             this.alertTransition.SetDecoration(this.prescribedMedicinePanel, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.prescribedMedicinePanel.Location = new System.Drawing.Point(0, 349);
+            this.prescribedMedicinePanel.Location = new System.Drawing.Point(0, 423);
+            this.prescribedMedicinePanel.Margin = new System.Windows.Forms.Padding(4);
             this.prescribedMedicinePanel.Name = "prescribedMedicinePanel";
             this.prescribedMedicinePanel.ShadowDecoration.Parent = this.prescribedMedicinePanel;
-            this.prescribedMedicinePanel.Size = new System.Drawing.Size(999, 104);
+            this.prescribedMedicinePanel.Size = new System.Drawing.Size(1332, 63);
             this.prescribedMedicinePanel.TabIndex = 99;
             // 
             // btnAddPrescribedMedicine
@@ -640,11 +419,12 @@ namespace webTRON_Management_Software.Views.Doctor
             this.btnAddPrescribedMedicine.HoverState.Parent = this.btnAddPrescribedMedicine;
             this.btnAddPrescribedMedicine.Image = global::webTRON_Management_Software.Properties.Resources.PlusSign;
             this.btnAddPrescribedMedicine.ImageOffset = new System.Drawing.Point(1, 0);
-            this.btnAddPrescribedMedicine.Location = new System.Drawing.Point(937, 13);
+            this.btnAddPrescribedMedicine.Location = new System.Drawing.Point(1249, 16);
+            this.btnAddPrescribedMedicine.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddPrescribedMedicine.Name = "btnAddPrescribedMedicine";
             this.btnAddPrescribedMedicine.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnAddPrescribedMedicine.ShadowDecoration.Parent = this.btnAddPrescribedMedicine;
-            this.btnAddPrescribedMedicine.Size = new System.Drawing.Size(30, 30);
+            this.btnAddPrescribedMedicine.Size = new System.Drawing.Size(40, 37);
             this.btnAddPrescribedMedicine.TabIndex = 86;
             this.btnAddPrescribedMedicine.Click += new System.EventHandler(this.BtnAddPrescribedMedicine_Click);
             // 
@@ -664,14 +444,14 @@ namespace webTRON_Management_Software.Views.Doctor
             this.prescribedMedicineRemarksTextBox1.ForeColor = System.Drawing.Color.Black;
             this.prescribedMedicineRemarksTextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.prescribedMedicineRemarksTextBox1.HoverState.Parent = this.prescribedMedicineRemarksTextBox1;
-            this.prescribedMedicineRemarksTextBox1.Location = new System.Drawing.Point(734, 16);
-            this.prescribedMedicineRemarksTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.prescribedMedicineRemarksTextBox1.Location = new System.Drawing.Point(979, 20);
+            this.prescribedMedicineRemarksTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.prescribedMedicineRemarksTextBox1.Name = "prescribedMedicineRemarksTextBox1";
             this.prescribedMedicineRemarksTextBox1.PasswordChar = '\0';
             this.prescribedMedicineRemarksTextBox1.PlaceholderText = "Remarks";
             this.prescribedMedicineRemarksTextBox1.SelectedText = "";
             this.prescribedMedicineRemarksTextBox1.ShadowDecoration.Parent = this.prescribedMedicineRemarksTextBox1;
-            this.prescribedMedicineRemarksTextBox1.Size = new System.Drawing.Size(196, 30);
+            this.prescribedMedicineRemarksTextBox1.Size = new System.Drawing.Size(261, 37);
             this.prescribedMedicineRemarksTextBox1.TabIndex = 85;
             // 
             // prescribedMedicineRemarks1
@@ -679,9 +459,10 @@ namespace webTRON_Management_Software.Views.Doctor
             this.prescribedMedicineRemarks1.AutoSize = true;
             this.alertTransition.SetDecoration(this.prescribedMedicineRemarks1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.prescribedMedicineRemarks1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prescribedMedicineRemarks1.Location = new System.Drawing.Point(661, 22);
+            this.prescribedMedicineRemarks1.Location = new System.Drawing.Point(881, 27);
+            this.prescribedMedicineRemarks1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.prescribedMedicineRemarks1.Name = "prescribedMedicineRemarks1";
-            this.prescribedMedicineRemarks1.Size = new System.Drawing.Size(68, 17);
+            this.prescribedMedicineRemarks1.Size = new System.Drawing.Size(81, 20);
             this.prescribedMedicineRemarks1.TabIndex = 84;
             this.prescribedMedicineRemarks1.Text = "Remarks:";
             // 
@@ -701,14 +482,14 @@ namespace webTRON_Management_Software.Views.Doctor
             this.prescribedMedicineEndDayTextBox1.ForeColor = System.Drawing.Color.Black;
             this.prescribedMedicineEndDayTextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.prescribedMedicineEndDayTextBox1.HoverState.Parent = this.prescribedMedicineEndDayTextBox1;
-            this.prescribedMedicineEndDayTextBox1.Location = new System.Drawing.Point(599, 15);
-            this.prescribedMedicineEndDayTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.prescribedMedicineEndDayTextBox1.Location = new System.Drawing.Point(799, 18);
+            this.prescribedMedicineEndDayTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.prescribedMedicineEndDayTextBox1.Name = "prescribedMedicineEndDayTextBox1";
             this.prescribedMedicineEndDayTextBox1.PasswordChar = '\0';
             this.prescribedMedicineEndDayTextBox1.PlaceholderText = "Day";
             this.prescribedMedicineEndDayTextBox1.SelectedText = "";
             this.prescribedMedicineEndDayTextBox1.ShadowDecoration.Parent = this.prescribedMedicineEndDayTextBox1;
-            this.prescribedMedicineEndDayTextBox1.Size = new System.Drawing.Size(52, 30);
+            this.prescribedMedicineEndDayTextBox1.Size = new System.Drawing.Size(69, 37);
             this.prescribedMedicineEndDayTextBox1.TabIndex = 83;
             // 
             // lblPrescribedMedicineEndDay1
@@ -716,9 +497,10 @@ namespace webTRON_Management_Software.Views.Doctor
             this.lblPrescribedMedicineEndDay1.AutoSize = true;
             this.alertTransition.SetDecoration(this.lblPrescribedMedicineEndDay1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblPrescribedMedicineEndDay1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrescribedMedicineEndDay1.Location = new System.Drawing.Point(529, 21);
+            this.lblPrescribedMedicineEndDay1.Location = new System.Drawing.Point(705, 26);
+            this.lblPrescribedMedicineEndDay1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrescribedMedicineEndDay1.Name = "lblPrescribedMedicineEndDay1";
-            this.lblPrescribedMedicineEndDay1.Size = new System.Drawing.Size(66, 17);
+            this.lblPrescribedMedicineEndDay1.Size = new System.Drawing.Size(78, 20);
             this.lblPrescribedMedicineEndDay1.TabIndex = 82;
             this.lblPrescribedMedicineEndDay1.Text = "End Day:";
             // 
@@ -733,12 +515,13 @@ namespace webTRON_Management_Software.Views.Doctor
             this.prescribedMedicineStartDate1.ForeColor = System.Drawing.Color.White;
             this.prescribedMedicineStartDate1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.prescribedMedicineStartDate1.HoverState.Parent = this.prescribedMedicineStartDate1;
-            this.prescribedMedicineStartDate1.Location = new System.Drawing.Point(388, 14);
+            this.prescribedMedicineStartDate1.Location = new System.Drawing.Point(517, 17);
+            this.prescribedMedicineStartDate1.Margin = new System.Windows.Forms.Padding(4);
             this.prescribedMedicineStartDate1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.prescribedMedicineStartDate1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.prescribedMedicineStartDate1.Name = "prescribedMedicineStartDate1";
             this.prescribedMedicineStartDate1.ShadowDecoration.Parent = this.prescribedMedicineStartDate1;
-            this.prescribedMedicineStartDate1.Size = new System.Drawing.Size(129, 30);
+            this.prescribedMedicineStartDate1.Size = new System.Drawing.Size(172, 37);
             this.prescribedMedicineStartDate1.TabIndex = 81;
             this.prescribedMedicineStartDate1.Value = new System.DateTime(2021, 4, 16, 0, 0, 0, 0);
             // 
@@ -747,9 +530,10 @@ namespace webTRON_Management_Software.Views.Doctor
             this.lblPrescribedMedicineStartDate1.AutoSize = true;
             this.alertTransition.SetDecoration(this.lblPrescribedMedicineStartDate1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblPrescribedMedicineStartDate1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrescribedMedicineStartDate1.Location = new System.Drawing.Point(309, 20);
+            this.lblPrescribedMedicineStartDate1.Location = new System.Drawing.Point(412, 25);
+            this.lblPrescribedMedicineStartDate1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrescribedMedicineStartDate1.Name = "lblPrescribedMedicineStartDate1";
-            this.lblPrescribedMedicineStartDate1.Size = new System.Drawing.Size(76, 17);
+            this.lblPrescribedMedicineStartDate1.Size = new System.Drawing.Size(91, 20);
             this.lblPrescribedMedicineStartDate1.TabIndex = 80;
             this.lblPrescribedMedicineStartDate1.Text = "Start Date:";
             // 
@@ -769,14 +553,14 @@ namespace webTRON_Management_Software.Views.Doctor
             this.prescribedMedicineTextBox1.ForeColor = System.Drawing.Color.Black;
             this.prescribedMedicineTextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.prescribedMedicineTextBox1.HoverState.Parent = this.prescribedMedicineTextBox1;
-            this.prescribedMedicineTextBox1.Location = new System.Drawing.Point(120, 13);
-            this.prescribedMedicineTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.prescribedMedicineTextBox1.Location = new System.Drawing.Point(160, 16);
+            this.prescribedMedicineTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.prescribedMedicineTextBox1.Name = "prescribedMedicineTextBox1";
             this.prescribedMedicineTextBox1.PasswordChar = '\0';
             this.prescribedMedicineTextBox1.PlaceholderText = "Medicine Name";
             this.prescribedMedicineTextBox1.SelectedText = "";
             this.prescribedMedicineTextBox1.ShadowDecoration.Parent = this.prescribedMedicineTextBox1;
-            this.prescribedMedicineTextBox1.Size = new System.Drawing.Size(177, 30);
+            this.prescribedMedicineTextBox1.Size = new System.Drawing.Size(236, 37);
             this.prescribedMedicineTextBox1.TabIndex = 79;
             // 
             // lblPrescribedMedicineName1
@@ -784,21 +568,429 @@ namespace webTRON_Management_Software.Views.Doctor
             this.lblPrescribedMedicineName1.AutoSize = true;
             this.alertTransition.SetDecoration(this.lblPrescribedMedicineName1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblPrescribedMedicineName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrescribedMedicineName1.Location = new System.Drawing.Point(9, 16);
+            this.lblPrescribedMedicineName1.Location = new System.Drawing.Point(12, 20);
+            this.lblPrescribedMedicineName1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrescribedMedicineName1.Name = "lblPrescribedMedicineName1";
-            this.lblPrescribedMedicineName1.Size = new System.Drawing.Size(109, 17);
+            this.lblPrescribedMedicineName1.Size = new System.Drawing.Size(130, 20);
             this.lblPrescribedMedicineName1.TabIndex = 78;
             this.lblPrescribedMedicineName1.Text = "Medicine Name:";
             // 
-            // previouslyTakenMedicinePanel
+            // lblPreviouslyTakenMedicine
             // 
-            this.previouslyTakenMedicinePanel.Controls.Add(this.previouslyTakenMedicineGridView);
-            this.alertTransition.SetDecoration(this.previouslyTakenMedicinePanel, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.previouslyTakenMedicinePanel.Location = new System.Drawing.Point(0, 478);
-            this.previouslyTakenMedicinePanel.Name = "previouslyTakenMedicinePanel";
-            this.previouslyTakenMedicinePanel.ShadowDecoration.Parent = this.previouslyTakenMedicinePanel;
-            this.previouslyTakenMedicinePanel.Size = new System.Drawing.Size(999, 82);
-            this.previouslyTakenMedicinePanel.TabIndex = 100;
+            this.lblPreviouslyTakenMedicine.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblPreviouslyTakenMedicine, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblPreviouslyTakenMedicine.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblPreviouslyTakenMedicine.Location = new System.Drawing.Point(7, 490);
+            this.lblPreviouslyTakenMedicine.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPreviouslyTakenMedicine.Name = "lblPreviouslyTakenMedicine";
+            this.lblPreviouslyTakenMedicine.Size = new System.Drawing.Size(253, 25);
+            this.lblPreviouslyTakenMedicine.TabIndex = 0;
+            this.lblPreviouslyTakenMedicine.Text = "Previously Taken Medicine:";
+            // 
+            // DragableMedicineForm
+            // 
+            this.DragableMedicineForm.TargetControl = this;
+            // 
+            // alertTimer
+            // 
+            this.alertTimer.Enabled = true;
+            this.alertTimer.Interval = 5000;
+            this.alertTimer.Tick += new System.EventHandler(this.AlertTimer_Tick);
+            // 
+            // alertTransition
+            // 
+            this.alertTransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Scale;
+            this.alertTransition.Cursor = null;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.alertTransition.DefaultAnimation = animation2;
+            // 
+            // lblPrescribedMedicine
+            // 
+            this.lblPrescribedMedicine.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblPrescribedMedicine, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblPrescribedMedicine.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblPrescribedMedicine.Location = new System.Drawing.Point(12, 393);
+            this.lblPrescribedMedicine.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPrescribedMedicine.Name = "lblPrescribedMedicine";
+            this.lblPrescribedMedicine.Size = new System.Drawing.Size(195, 25);
+            this.lblPrescribedMedicine.TabIndex = 102;
+            this.lblPrescribedMedicine.Text = "Prescribed Medicine:";
+            // 
+            // alertPanel
+            // 
+            this.alertPanel.BackgroundImage = global::webTRON_Management_Software.Properties.Resources.alert_danger_background;
+            this.alertPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.alertPanel.Controls.Add(this.alertText);
+            this.alertPanel.Controls.Add(this.alertCloseBtn);
+            this.alertPanel.Controls.Add(this.alertImage);
+            this.alertTransition.SetDecoration(this.alertPanel, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.alertPanel.Location = new System.Drawing.Point(7, 699);
+            this.alertPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.alertPanel.Name = "alertPanel";
+            this.alertPanel.ShadowDecoration.Parent = this.alertPanel;
+            this.alertPanel.Size = new System.Drawing.Size(408, 68);
+            this.alertPanel.TabIndex = 101;
+            this.alertPanel.Visible = false;
+            // 
+            // alertText
+            // 
+            this.alertText.AutoSize = true;
+            this.alertTransition.SetDecoration(this.alertText, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.alertText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.alertText.ForeColor = System.Drawing.Color.Red;
+            this.alertText.Location = new System.Drawing.Point(75, 21);
+            this.alertText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.alertText.Name = "alertText";
+            this.alertText.Size = new System.Drawing.Size(116, 25);
+            this.alertText.TabIndex = 2;
+            this.alertText.Text = "{{alertText}}";
+            // 
+            // alertCloseBtn
+            // 
+            this.alertCloseBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.alertTransition.SetDecoration(this.alertCloseBtn, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.alertCloseBtn.Image = global::webTRON_Management_Software.Properties.Resources.alert_close_icon;
+            this.alertCloseBtn.Location = new System.Drawing.Point(359, 21);
+            this.alertCloseBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.alertCloseBtn.Name = "alertCloseBtn";
+            this.alertCloseBtn.ShadowDecoration.Parent = this.alertCloseBtn;
+            this.alertCloseBtn.Size = new System.Drawing.Size(27, 25);
+            this.alertCloseBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.alertCloseBtn.TabIndex = 1;
+            this.alertCloseBtn.TabStop = false;
+            this.alertCloseBtn.Click += new System.EventHandler(this.AlertTimer_Tick);
+            // 
+            // alertImage
+            // 
+            this.alertTransition.SetDecoration(this.alertImage, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.alertImage.Image = global::webTRON_Management_Software.Properties.Resources.alert_danger_icon;
+            this.alertImage.Location = new System.Drawing.Point(29, 21);
+            this.alertImage.Margin = new System.Windows.Forms.Padding(4);
+            this.alertImage.Name = "alertImage";
+            this.alertImage.ShadowDecoration.Parent = this.alertImage;
+            this.alertImage.Size = new System.Drawing.Size(27, 25);
+            this.alertImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.alertImage.TabIndex = 0;
+            this.alertImage.TabStop = false;
+            // 
+            // btnNext
+            // 
+            this.btnNext.Animated = true;
+            this.btnNext.CheckedState.Parent = this.btnNext;
+            this.btnNext.CustomImages.Parent = this.btnNext;
+            this.alertTransition.SetDecoration(this.btnNext, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnNext.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            this.btnNext.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.btnNext.ForeColor = System.Drawing.Color.White;
+            this.btnNext.HoverState.Parent = this.btnNext;
+            this.btnNext.Image = global::webTRON_Management_Software.Properties.Resources.alert_icon;
+            this.btnNext.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnNext.Location = new System.Drawing.Point(1156, 705);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.ShadowDecoration.Parent = this.btnNext;
+            this.btnNext.Size = new System.Drawing.Size(155, 52);
+            this.btnNext.TabIndex = 97;
+            this.btnNext.Text = "Next";
+            this.btnNext.TextOffset = new System.Drawing.Point(-1, 0);
+            this.btnNext.Click += new System.EventHandler(this.BtnNext_Click);
+            // 
+            // activePanel
+            // 
+            this.activePanel.BackgroundImage = global::webTRON_Management_Software.Properties.Resources.rectangle_curved_large;
+            this.activePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.activePanel.Controls.Add(this.activeForm);
+            this.activePanel.Controls.Add(this.activeUserPicture);
+            this.activePanel.Controls.Add(this.activeUserName);
+            this.alertTransition.SetDecoration(this.activePanel, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.activePanel.Location = new System.Drawing.Point(0, -1);
+            this.activePanel.Margin = new System.Windows.Forms.Padding(4);
+            this.activePanel.Name = "activePanel";
+            this.activePanel.ShadowDecoration.Parent = this.activePanel;
+            this.activePanel.Size = new System.Drawing.Size(220, 98);
+            this.activePanel.TabIndex = 31;
+            // 
+            // activeForm
+            // 
+            this.activeForm.AutoSize = true;
+            this.activeForm.BackColor = System.Drawing.Color.Transparent;
+            this.alertTransition.SetDecoration(this.activeForm, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.activeForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.activeForm.ForeColor = System.Drawing.Color.White;
+            this.activeForm.Location = new System.Drawing.Point(85, 49);
+            this.activeForm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.activeForm.Name = "activeForm";
+            this.activeForm.Size = new System.Drawing.Size(108, 25);
+            this.activeForm.TabIndex = 21;
+            this.activeForm.Text = "Dashboard";
+            // 
+            // activeUserPicture
+            // 
+            this.activeUserPicture.BackColor = System.Drawing.Color.Transparent;
+            this.alertTransition.SetDecoration(this.activeUserPicture, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.activeUserPicture.Image = global::webTRON_Management_Software.Properties.Resources.avatar;
+            this.activeUserPicture.Location = new System.Drawing.Point(0, 18);
+            this.activeUserPicture.Margin = new System.Windows.Forms.Padding(4);
+            this.activeUserPicture.Name = "activeUserPicture";
+            this.activeUserPicture.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.activeUserPicture.ShadowDecoration.Parent = this.activeUserPicture;
+            this.activeUserPicture.Size = new System.Drawing.Size(65, 55);
+            this.activeUserPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.activeUserPicture.TabIndex = 0;
+            this.activeUserPicture.TabStop = false;
+            // 
+            // activeUserName
+            // 
+            this.activeUserName.AutoSize = true;
+            this.activeUserName.BackColor = System.Drawing.Color.Transparent;
+            this.alertTransition.SetDecoration(this.activeUserName, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.activeUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.activeUserName.ForeColor = System.Drawing.Color.White;
+            this.activeUserName.Location = new System.Drawing.Point(85, 11);
+            this.activeUserName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.activeUserName.Name = "activeUserName";
+            this.activeUserName.Size = new System.Drawing.Size(65, 29);
+            this.activeUserName.TabIndex = 1;
+            this.activeUserName.Text = "John";
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.alertTransition.SetDecoration(this.btnMinimize, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
+            this.btnMinimize.Location = new System.Drawing.Point(1219, 33);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.ShadowDecoration.Parent = this.btnMinimize;
+            this.btnMinimize.Size = new System.Drawing.Size(21, 4);
+            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnMinimize.TabIndex = 30;
+            this.btnMinimize.TabStop = false;
+            this.btnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.alertTransition.SetDecoration(this.btnExit, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.Location = new System.Drawing.Point(1284, 15);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.ShadowDecoration.Parent = this.btnExit;
+            this.btnExit.Size = new System.Drawing.Size(28, 28);
+            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnExit.TabIndex = 29;
+            this.btnExit.TabStop = false;
+            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            // 
+            // btnBack
+            // 
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.alertTransition.SetDecoration(this.btnBack, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
+            this.btnBack.Location = new System.Drawing.Point(1178, 26);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.ShadowDecoration.Parent = this.btnBack;
+            this.btnBack.Size = new System.Drawing.Size(20, 18);
+            this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnBack.TabIndex = 103;
+            this.btnBack.TabStop = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // lblLastNameOutput
+            // 
+            this.lblLastNameOutput.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblLastNameOutput, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblLastNameOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastNameOutput.Location = new System.Drawing.Point(501, 127);
+            this.lblLastNameOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLastNameOutput.Name = "lblLastNameOutput";
+            this.lblLastNameOutput.Size = new System.Drawing.Size(83, 20);
+            this.lblLastNameOutput.TabIndex = 117;
+            this.lblLastNameOutput.Text = "Lastname";
+            // 
+            // lblGenderOutput
+            // 
+            this.lblGenderOutput.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblGenderOutput, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblGenderOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGenderOutput.Location = new System.Drawing.Point(1193, 90);
+            this.lblGenderOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblGenderOutput.Name = "lblGenderOutput";
+            this.lblGenderOutput.Size = new System.Drawing.Size(110, 20);
+            this.lblGenderOutput.TabIndex = 116;
+            this.lblGenderOutput.Text = "genderOutput";
+            // 
+            // lblReferredToOutput
+            // 
+            this.lblReferredToOutput.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblReferredToOutput, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblReferredToOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReferredToOutput.Location = new System.Drawing.Point(1041, 125);
+            this.lblReferredToOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblReferredToOutput.Name = "lblReferredToOutput";
+            this.lblReferredToOutput.Size = new System.Drawing.Size(137, 20);
+            this.lblReferredToOutput.TabIndex = 115;
+            this.lblReferredToOutput.Text = "referredToOutput";
+            // 
+            // lblAgeOutput
+            // 
+            this.lblAgeOutput.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblAgeOutput, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblAgeOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgeOutput.Location = new System.Drawing.Point(1037, 90);
+            this.lblAgeOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAgeOutput.Name = "lblAgeOutput";
+            this.lblAgeOutput.Size = new System.Drawing.Size(86, 20);
+            this.lblAgeOutput.TabIndex = 114;
+            this.lblAgeOutput.Text = "ageOutput";
+            // 
+            // lblContactOutput
+            // 
+            this.lblContactOutput.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblContactOutput, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblContactOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContactOutput.Location = new System.Drawing.Point(711, 125);
+            this.lblContactOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblContactOutput.Name = "lblContactOutput";
+            this.lblContactOutput.Size = new System.Drawing.Size(114, 20);
+            this.lblContactOutput.TabIndex = 113;
+            this.lblContactOutput.Text = "contactOutput";
+            // 
+            // lblAddressOutput
+            // 
+            this.lblAddressOutput.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblAddressOutput, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblAddressOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddressOutput.Location = new System.Drawing.Point(708, 90);
+            this.lblAddressOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAddressOutput.Name = "lblAddressOutput";
+            this.lblAddressOutput.Size = new System.Drawing.Size(119, 20);
+            this.lblAddressOutput.TabIndex = 112;
+            this.lblAddressOutput.Text = "addressOutput";
+            // 
+            // lblFirstNameOutput
+            // 
+            this.lblFirstNameOutput.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblFirstNameOutput, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblFirstNameOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirstNameOutput.Location = new System.Drawing.Point(377, 129);
+            this.lblFirstNameOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFirstNameOutput.Name = "lblFirstNameOutput";
+            this.lblFirstNameOutput.Size = new System.Drawing.Size(84, 20);
+            this.lblFirstNameOutput.TabIndex = 111;
+            this.lblFirstNameOutput.Text = "Firstname";
+            // 
+            // lblRegistrationDateOutput
+            // 
+            this.lblRegistrationDateOutput.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblRegistrationDateOutput, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblRegistrationDateOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegistrationDateOutput.Location = new System.Drawing.Point(379, 93);
+            this.lblRegistrationDateOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRegistrationDateOutput.Name = "lblRegistrationDateOutput";
+            this.lblRegistrationDateOutput.Size = new System.Drawing.Size(129, 20);
+            this.lblRegistrationDateOutput.TabIndex = 110;
+            this.lblRegistrationDateOutput.Text = "registrationDate";
+            // 
+            // lblReferredTo
+            // 
+            this.lblReferredTo.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblReferredTo, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblReferredTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReferredTo.Location = new System.Drawing.Point(909, 125);
+            this.lblReferredTo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblReferredTo.Name = "lblReferredTo";
+            this.lblReferredTo.Size = new System.Drawing.Size(103, 20);
+            this.lblReferredTo.TabIndex = 109;
+            this.lblReferredTo.Text = "Referred To:";
+            // 
+            // lblAge
+            // 
+            this.lblAge.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblAge, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAge.Location = new System.Drawing.Point(979, 90);
+            this.lblAge.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAge.Name = "lblAge";
+            this.lblAge.Size = new System.Drawing.Size(43, 20);
+            this.lblAge.TabIndex = 108;
+            this.lblAge.Text = "Age:";
+            // 
+            // lblContact
+            // 
+            this.lblContact.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblContact, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContact.Location = new System.Drawing.Point(619, 125);
+            this.lblContact.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblContact.Name = "lblContact";
+            this.lblContact.Size = new System.Drawing.Size(72, 20);
+            this.lblContact.TabIndex = 107;
+            this.lblContact.Text = "Contact:";
+            // 
+            // lblAddress
+            // 
+            this.lblAddress.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblAddress, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress.Location = new System.Drawing.Point(613, 90);
+            this.lblAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(76, 20);
+            this.lblAddress.TabIndex = 106;
+            this.lblAddress.Text = "Address:";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblName, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(304, 127);
+            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(58, 20);
+            this.lblName.TabIndex = 105;
+            this.lblName.Text = "Name:";
+            // 
+            // lblRegistrationDate
+            // 
+            this.lblRegistrationDate.AutoSize = true;
+            this.alertTransition.SetDecoration(this.lblRegistrationDate, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblRegistrationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegistrationDate.Location = new System.Drawing.Point(212, 93);
+            this.lblRegistrationDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRegistrationDate.Name = "lblRegistrationDate";
+            this.lblRegistrationDate.Size = new System.Drawing.Size(136, 20);
+            this.lblRegistrationDate.TabIndex = 104;
+            this.lblRegistrationDate.Text = "Registered Date:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.alertTransition.SetDecoration(this.label1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(262, 43);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(130, 29);
+            this.label1.TabIndex = 118;
+            this.label1.Text = "Patient ID:";
             // 
             // previouslyTakenMedicineGridView
             // 
@@ -806,37 +998,37 @@ namespace webTRON_Management_Software.Views.Doctor
             this.previouslyTakenMedicineGridView.AllowUserToDeleteRows = false;
             this.previouslyTakenMedicineGridView.AllowUserToResizeColumns = false;
             this.previouslyTakenMedicineGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.previouslyTakenMedicineGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.previouslyTakenMedicineGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.previouslyTakenMedicineGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.previouslyTakenMedicineGridView.BackgroundColor = System.Drawing.Color.White;
             this.previouslyTakenMedicineGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.previouslyTakenMedicineGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.previouslyTakenMedicineGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.previouslyTakenMedicineGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.previouslyTakenMedicineGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.previouslyTakenMedicineGridView.ColumnHeadersHeight = 30;
             this.previouslyTakenMedicineGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.alertTransition.SetDecoration(this.previouslyTakenMedicineGridView, Guna.UI2.AnimatorNS.DecorationType.None);
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.previouslyTakenMedicineGridView.DefaultCellStyle = dataGridViewCellStyle6;
-            this.previouslyTakenMedicineGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.previouslyTakenMedicineGridView.DefaultCellStyle = dataGridViewCellStyle12;
             this.previouslyTakenMedicineGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.previouslyTakenMedicineGridView.EnableHeadersVisualStyles = false;
             this.previouslyTakenMedicineGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.previouslyTakenMedicineGridView.Location = new System.Drawing.Point(0, 0);
+            this.previouslyTakenMedicineGridView.Location = new System.Drawing.Point(13, 525);
+            this.previouslyTakenMedicineGridView.Margin = new System.Windows.Forms.Padding(4);
             this.previouslyTakenMedicineGridView.MultiSelect = false;
             this.previouslyTakenMedicineGridView.Name = "previouslyTakenMedicineGridView";
             this.previouslyTakenMedicineGridView.ReadOnly = true;
@@ -844,8 +1036,8 @@ namespace webTRON_Management_Software.Views.Doctor
             this.previouslyTakenMedicineGridView.RowHeadersWidth = 51;
             this.previouslyTakenMedicineGridView.RowTemplate.Height = 28;
             this.previouslyTakenMedicineGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.previouslyTakenMedicineGridView.Size = new System.Drawing.Size(999, 82);
-            this.previouslyTakenMedicineGridView.TabIndex = 32;
+            this.previouslyTakenMedicineGridView.Size = new System.Drawing.Size(1298, 166);
+            this.previouslyTakenMedicineGridView.TabIndex = 88;
             this.previouslyTakenMedicineGridView.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.previouslyTakenMedicineGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.previouslyTakenMedicineGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -869,255 +1061,56 @@ namespace webTRON_Management_Software.Views.Doctor
             this.previouslyTakenMedicineGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.previouslyTakenMedicineGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
-            // lblPreviouslyTakenMedicine
+            // label2
             // 
-            this.lblPreviouslyTakenMedicine.AutoSize = true;
-            this.alertTransition.SetDecoration(this.lblPreviouslyTakenMedicine, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lblPreviouslyTakenMedicine.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblPreviouslyTakenMedicine.Location = new System.Drawing.Point(5, 455);
-            this.lblPreviouslyTakenMedicine.Name = "lblPreviouslyTakenMedicine";
-            this.lblPreviouslyTakenMedicine.Size = new System.Drawing.Size(198, 20);
-            this.lblPreviouslyTakenMedicine.TabIndex = 0;
-            this.lblPreviouslyTakenMedicine.Text = "Previously Taken Medicine:";
+            this.label2.AutoSize = true;
+            this.alertTransition.SetDecoration(this.label2, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(1125, 92);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 20);
+            this.label2.TabIndex = 119;
+            this.label2.Text = "Gender:";
             // 
-            // DragableMedicineForm
+            // Medicine
             // 
-            this.DragableMedicineForm.TargetControl = this;
-            // 
-            // alertTimer
-            // 
-            this.alertTimer.Enabled = true;
-            this.alertTimer.Interval = 5000;
-            this.alertTimer.Tick += new System.EventHandler(this.AlertTimer_Tick);
-            // 
-            // alertTransition
-            // 
-            this.alertTransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Scale;
-            this.alertTransition.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.alertTransition.DefaultAnimation = animation1;
-            // 
-            // lblPrescribedMedicine
-            // 
-            this.lblPrescribedMedicine.AutoSize = true;
-            this.alertTransition.SetDecoration(this.lblPrescribedMedicine, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lblPrescribedMedicine.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblPrescribedMedicine.Location = new System.Drawing.Point(12, 324);
-            this.lblPrescribedMedicine.Name = "lblPrescribedMedicine";
-            this.lblPrescribedMedicine.Size = new System.Drawing.Size(155, 20);
-            this.lblPrescribedMedicine.TabIndex = 102;
-            this.lblPrescribedMedicine.Text = "Prescribed Medicine:";
-            // 
-            // alertPanel
-            // 
-            this.alertPanel.BackgroundImage = global::webTRON_Management_Software.Properties.Resources.alert_danger_background;
-            this.alertPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.alertPanel.Controls.Add(this.alertText);
-            this.alertPanel.Controls.Add(this.alertCloseBtn);
-            this.alertPanel.Controls.Add(this.alertImage);
-            this.alertTransition.SetDecoration(this.alertPanel, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.alertPanel.Location = new System.Drawing.Point(5, 568);
-            this.alertPanel.Name = "alertPanel";
-            this.alertPanel.ShadowDecoration.Parent = this.alertPanel;
-            this.alertPanel.Size = new System.Drawing.Size(306, 55);
-            this.alertPanel.TabIndex = 101;
-            this.alertPanel.Visible = false;
-            // 
-            // alertText
-            // 
-            this.alertText.AutoSize = true;
-            this.alertTransition.SetDecoration(this.alertText, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.alertText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.alertText.ForeColor = System.Drawing.Color.Red;
-            this.alertText.Location = new System.Drawing.Point(56, 17);
-            this.alertText.Name = "alertText";
-            this.alertText.Size = new System.Drawing.Size(90, 20);
-            this.alertText.TabIndex = 2;
-            this.alertText.Text = "{{alertText}}";
-            // 
-            // alertCloseBtn
-            // 
-            this.alertCloseBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.alertTransition.SetDecoration(this.alertCloseBtn, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.alertCloseBtn.Image = global::webTRON_Management_Software.Properties.Resources.alert_close_icon;
-            this.alertCloseBtn.Location = new System.Drawing.Point(269, 17);
-            this.alertCloseBtn.Name = "alertCloseBtn";
-            this.alertCloseBtn.ShadowDecoration.Parent = this.alertCloseBtn;
-            this.alertCloseBtn.Size = new System.Drawing.Size(20, 20);
-            this.alertCloseBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.alertCloseBtn.TabIndex = 1;
-            this.alertCloseBtn.TabStop = false;
-            this.alertCloseBtn.Click += new System.EventHandler(this.AlertTimer_Tick);
-            // 
-            // alertImage
-            // 
-            this.alertTransition.SetDecoration(this.alertImage, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.alertImage.Image = global::webTRON_Management_Software.Properties.Resources.alert_danger_icon;
-            this.alertImage.Location = new System.Drawing.Point(22, 17);
-            this.alertImage.Name = "alertImage";
-            this.alertImage.ShadowDecoration.Parent = this.alertImage;
-            this.alertImage.Size = new System.Drawing.Size(20, 20);
-            this.alertImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.alertImage.TabIndex = 0;
-            this.alertImage.TabStop = false;
-            // 
-            // btnNext
-            // 
-            this.btnNext.Animated = true;
-            this.btnNext.CheckedState.Parent = this.btnNext;
-            this.btnNext.CustomImages.Parent = this.btnNext;
-            this.alertTransition.SetDecoration(this.btnNext, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnNext.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            this.btnNext.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.btnNext.ForeColor = System.Drawing.Color.White;
-            this.btnNext.HoverState.Parent = this.btnNext;
-            this.btnNext.Image = global::webTRON_Management_Software.Properties.Resources.alert_icon;
-            this.btnNext.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnNext.Location = new System.Drawing.Point(867, 573);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.ShadowDecoration.Parent = this.btnNext;
-            this.btnNext.Size = new System.Drawing.Size(116, 42);
-            this.btnNext.TabIndex = 97;
-            this.btnNext.Text = "Next";
-            this.btnNext.TextOffset = new System.Drawing.Point(-1, 0);
-            this.btnNext.Click += new System.EventHandler(this.BtnNext_Click);
-            // 
-            // activePanel
-            // 
-            this.activePanel.BackgroundImage = global::webTRON_Management_Software.Properties.Resources.rectangle_curved_large;
-            this.activePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.activePanel.Controls.Add(this.activeForm);
-            this.activePanel.Controls.Add(this.activeUserPicture);
-            this.activePanel.Controls.Add(this.activeUserName);
-            this.alertTransition.SetDecoration(this.activePanel, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.activePanel.Location = new System.Drawing.Point(0, -1);
-            this.activePanel.Name = "activePanel";
-            this.activePanel.ShadowDecoration.Parent = this.activePanel;
-            this.activePanel.Size = new System.Drawing.Size(165, 80);
-            this.activePanel.TabIndex = 31;
-            // 
-            // activeForm
-            // 
-            this.activeForm.AutoSize = true;
-            this.activeForm.BackColor = System.Drawing.Color.Transparent;
-            this.alertTransition.SetDecoration(this.activeForm, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.activeForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.activeForm.ForeColor = System.Drawing.Color.White;
-            this.activeForm.Location = new System.Drawing.Point(64, 40);
-            this.activeForm.Name = "activeForm";
-            this.activeForm.Size = new System.Drawing.Size(88, 20);
-            this.activeForm.TabIndex = 21;
-            this.activeForm.Text = "Dashboard";
-            // 
-            // activeUserPicture
-            // 
-            this.activeUserPicture.BackColor = System.Drawing.Color.Transparent;
-            this.alertTransition.SetDecoration(this.activeUserPicture, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.activeUserPicture.Image = global::webTRON_Management_Software.Properties.Resources.avatar;
-            this.activeUserPicture.Location = new System.Drawing.Point(0, 15);
-            this.activeUserPicture.Name = "activeUserPicture";
-            this.activeUserPicture.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.activeUserPicture.ShadowDecoration.Parent = this.activeUserPicture;
-            this.activeUserPicture.Size = new System.Drawing.Size(49, 45);
-            this.activeUserPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.activeUserPicture.TabIndex = 0;
-            this.activeUserPicture.TabStop = false;
-            // 
-            // activeUserName
-            // 
-            this.activeUserName.AutoSize = true;
-            this.activeUserName.BackColor = System.Drawing.Color.Transparent;
-            this.alertTransition.SetDecoration(this.activeUserName, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.activeUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.activeUserName.ForeColor = System.Drawing.Color.White;
-            this.activeUserName.Location = new System.Drawing.Point(64, 9);
-            this.activeUserName.Name = "activeUserName";
-            this.activeUserName.Size = new System.Drawing.Size(52, 24);
-            this.activeUserName.TabIndex = 1;
-            this.activeUserName.Text = "John";
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.alertTransition.SetDecoration(this.btnMinimize, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
-            this.btnMinimize.Location = new System.Drawing.Point(914, 27);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.ShadowDecoration.Parent = this.btnMinimize;
-            this.btnMinimize.Size = new System.Drawing.Size(21, 4);
-            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnMinimize.TabIndex = 30;
-            this.btnMinimize.TabStop = false;
-            this.btnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.alertTransition.SetDecoration(this.btnExit, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(963, 12);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.ShadowDecoration.Parent = this.btnExit;
-            this.btnExit.Size = new System.Drawing.Size(28, 28);
-            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnExit.TabIndex = 29;
-            this.btnExit.TabStop = false;
-            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
-            // 
-            // MedicineForm
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1000, 625);
-            this.Controls.Add(this.lblPrescribedMedicine);
-            this.Controls.Add(this.alertPanel);
-            this.Controls.Add(this.previouslyTakenMedicinePanel);
-            this.Controls.Add(this.prescribedMedicinePanel);
-            this.Controls.Add(this.runningMedicinePanel);
-            this.Controls.Add(this.btnNext);
-            this.Controls.Add(this.btnMedicine);
-            this.Controls.Add(this.btnOthers);
-            this.Controls.Add(this.lblPreviouslyTakenMedicine);
-            this.Controls.Add(this.btnTests);
-            this.Controls.Add(this.btnPrescription);
-            this.Controls.Add(this.lblReferredToValue);
-            this.Controls.Add(this.lblGenderValue);
-            this.Controls.Add(this.lblAgeValue);
-            this.Controls.Add(this.lblContactValue);
-            this.Controls.Add(this.lblAddressValue);
-            this.Controls.Add(this.lblNameValue);
-            this.Controls.Add(this.lblRegisteredDateValue);
-            this.Controls.Add(this.lblGender);
-            this.Controls.Add(this.lblRunningMedicine);
+            this.ClientSize = new System.Drawing.Size(1333, 769);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.previouslyTakenMedicineGridView);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblLastNameOutput);
+            this.Controls.Add(this.lblGenderOutput);
+            this.Controls.Add(this.lblReferredToOutput);
+            this.Controls.Add(this.lblAgeOutput);
+            this.Controls.Add(this.lblContactOutput);
+            this.Controls.Add(this.lblAddressOutput);
+            this.Controls.Add(this.lblFirstNameOutput);
+            this.Controls.Add(this.lblRegistrationDateOutput);
             this.Controls.Add(this.lblReferredTo);
             this.Controls.Add(this.lblAge);
-            this.Controls.Add(this.lblPatientIDValue);
             this.Controls.Add(this.lblContact);
             this.Controls.Add(this.lblAddress);
             this.Controls.Add(this.lblName);
-            this.Controls.Add(this.lblRegisteredDate);
-            this.Controls.Add(this.lblRegistrationId);
+            this.Controls.Add(this.lblRegistrationDate);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.lblPrescribedMedicine);
+            this.Controls.Add(this.alertPanel);
+            this.Controls.Add(this.prescribedMedicinePanel);
+            this.Controls.Add(this.runningMedicinePanel);
+            this.Controls.Add(this.btnNext);
+            this.Controls.Add(this.lblPreviouslyTakenMedicine);
+            this.Controls.Add(this.lblRunningMedicine);
+            this.Controls.Add(this.lblPatientIDOutput);
             this.Controls.Add(this.activePanel);
             this.Controls.Add(this.btnMinimize);
             this.Controls.Add(this.btnExit);
             this.alertTransition.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "MedicineForm";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "Medicine";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Medicine";
             this.Load += new System.EventHandler(this.MedicineForm_Load);
@@ -1126,8 +1119,6 @@ namespace webTRON_Management_Software.Views.Doctor
             ((System.ComponentModel.ISupportInitialize)(this.runningMedicinesGridView)).EndInit();
             this.prescribedMedicinePanel.ResumeLayout(false);
             this.prescribedMedicinePanel.PerformLayout();
-            this.previouslyTakenMedicinePanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.previouslyTakenMedicineGridView)).EndInit();
             this.alertPanel.ResumeLayout(false);
             this.alertPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.alertCloseBtn)).EndInit();
@@ -1137,6 +1128,8 @@ namespace webTRON_Management_Software.Views.Doctor
             ((System.ComponentModel.ISupportInitialize)(this.activeUserPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.previouslyTakenMedicineGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1150,26 +1143,7 @@ namespace webTRON_Management_Software.Views.Doctor
         private System.Windows.Forms.Label activeUserName;
         private Guna.UI2.WinForms.Guna2PictureBox btnMinimize;
         private Guna.UI2.WinForms.Guna2PictureBox btnExit;
-        private System.Windows.Forms.Label lblRegistrationId;
-        private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label lblRegisteredDate;
-        private System.Windows.Forms.Label lblContact;
-        private System.Windows.Forms.Label lblAddress;
-        private System.Windows.Forms.Label lblPatientIDValue;
-        private System.Windows.Forms.Label lblReferredTo;
-        private System.Windows.Forms.Label lblAge;
-        private System.Windows.Forms.Label lblGender;
-        private System.Windows.Forms.Label lblRegisteredDateValue;
-        private System.Windows.Forms.Label lblNameValue;
-        private System.Windows.Forms.Label lblAddressValue;
-        private System.Windows.Forms.Label lblContactValue;
-        private System.Windows.Forms.Label lblAgeValue;
-        private System.Windows.Forms.Label lblGenderValue;
-        private System.Windows.Forms.Label lblReferredToValue;
-        private Guna.UI2.WinForms.Guna2Button btnMedicine;
-        private Guna.UI2.WinForms.Guna2Button btnOthers;
-        private Guna.UI2.WinForms.Guna2Button btnTests;
-        private Guna.UI2.WinForms.Guna2Button btnPrescription;
+        private System.Windows.Forms.Label lblPatientIDOutput;
         private Guna.UI2.WinForms.Guna2Button btnNext;
         private Guna.UI2.WinForms.Guna2Panel runningMedicinePanel;
         private Guna.UI2.WinForms.Guna2CircleButton btnAddRunningMedicine;
@@ -1192,7 +1166,6 @@ namespace webTRON_Management_Software.Views.Doctor
         private System.Windows.Forms.Label lblPrescribedMedicineStartDate1;
         private Guna.UI2.WinForms.Guna2TextBox prescribedMedicineTextBox1;
         private System.Windows.Forms.Label lblPrescribedMedicineName1;
-        private Guna.UI2.WinForms.Guna2Panel previouslyTakenMedicinePanel;
         private System.Windows.Forms.Label lblPreviouslyTakenMedicine;
         private Guna.UI2.WinForms.Guna2DragControl DragableMedicineForm;
         private Guna.UI2.WinForms.Guna2Transition alertTransition;
@@ -1202,7 +1175,24 @@ namespace webTRON_Management_Software.Views.Doctor
         private Guna.UI2.WinForms.Guna2PictureBox alertImage;
         private System.Windows.Forms.Timer alertTimer;
         private System.Windows.Forms.Label lblPrescribedMedicine;
-        private Guna.UI2.WinForms.Guna2DataGridView previouslyTakenMedicineGridView;
         private Guna.UI2.WinForms.Guna2DataGridView runningMedicinesGridView;
+        private Guna.UI2.WinForms.Guna2PictureBox btnBack;
+        private System.Windows.Forms.Label lblLastNameOutput;
+        private System.Windows.Forms.Label lblGenderOutput;
+        private System.Windows.Forms.Label lblReferredToOutput;
+        private System.Windows.Forms.Label lblAgeOutput;
+        private System.Windows.Forms.Label lblContactOutput;
+        private System.Windows.Forms.Label lblAddressOutput;
+        private System.Windows.Forms.Label lblFirstNameOutput;
+        private System.Windows.Forms.Label lblRegistrationDateOutput;
+        private System.Windows.Forms.Label lblReferredTo;
+        private System.Windows.Forms.Label lblAge;
+        private System.Windows.Forms.Label lblContact;
+        private System.Windows.Forms.Label lblAddress;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblRegistrationDate;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2DataGridView previouslyTakenMedicineGridView;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -1,7 +1,8 @@
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\webTRON Management Software.exe.config
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\webTRON Management Software.exe
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\webTRON Management Software.pdb
-D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\MySql.Data.dll
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\FluentValidation.dll
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\PasswordGenerator.dll
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\QRCoder.dll
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\Google.Protobuf.dll
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\Zstandard.Net.dll
@@ -14,21 +15,38 @@ D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\System.Buffers.
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\K4os.Compression.LZ4.dll
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\K4os.Hash.xxHash.dll
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\FluentValidation.xml
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\bin\Debug\MySql.Data.xml
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON Management Software.exe.config
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.ChangeInfo.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.ChangePassword.resources
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.Dashboard.resources
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.RenewPatient.resources
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.SearchAndUpdatePatient.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.Settings.resources
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.ChangeInfo.resources
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.ChangePassword.resources
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.Dashboard.resources
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.Search.resources
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.Settings.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.ChangeInfo.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.ChangePassword.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.Others.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.Patients.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.Settings.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.Tests.resources
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.Users.resources
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.CreateAccount.resources
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.Dashboard.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.Medicine.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.TreatmentWindow.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Lab_Assistant.ChangeInfo.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Lab_Assistant.ChangePassword.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Lab_Assistant.Dashboard.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Lab_Assistant.Settings.resources
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Others.ChangeInfo.resources
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Others.ChangePassword.resources
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Others.Form1.resources
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Others.Settings.resources
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Utilities.ChangePassword.resources
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Utilities.ForgetPassword.resources
@@ -41,121 +59,3 @@ D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON Managem
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON Management Software.csproj.CopyComplete
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON Management Software.exe
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON Management Software.pdb
-D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON Management Software.csprojAssemblyReference.cache
-D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.TreatmentWindow.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\bin\Debug\webTRON Management Software.exe.config
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\bin\Debug\webTRON Management Software.exe
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\bin\Debug\webTRON Management Software.pdb
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\bin\Debug\Guna.UI2.dll
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\bin\Debug\MySql.Data.dll
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\bin\Debug\QRCoder.dll
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\bin\Debug\Google.Protobuf.dll
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\bin\Debug\Zstandard.Net.dll
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\bin\Debug\K4os.Compression.LZ4.Streams.dll
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\bin\Debug\BouncyCastle.Crypto.dll
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\bin\Debug\Ubiety.Dns.Core.dll
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\bin\Debug\Renci.SshNet.dll
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\bin\Debug\System.Memory.dll
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\bin\Debug\System.Buffers.dll
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\bin\Debug\K4os.Compression.LZ4.dll
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\bin\Debug\K4os.Hash.xxHash.dll
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\bin\Debug\MySql.Data.xml
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON Management Software.csprojAssemblyReference.cache
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON Management Software.exe.config
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.Dashboard.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.RenewPatient.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.SearchAndUpdatePatient.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.ChangeInfo.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.ChangePassword.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.Dashboard.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.Search.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.Settings.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.Users.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.CreateAccount.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.Dashboard.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.TreatmentWindow.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Others.ChangeInfo.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Others.ChangePassword.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Others.Settings.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Utilities.ChangePassword.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Utilities.ForgetPassword.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.CreateNewPatient.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Landing_Window.LandingWindow.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Others.Dashboard.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Properties.Resources.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON Management Software.csproj.GenerateResource.cache
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON Management Software.csproj.CoreCompileInputs.cache
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON Management Software.csproj.CopyComplete
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON Management Software.exe
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON Management Software.pdb
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.MedicineForm.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.Tests.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.Others.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Lab_Assistant.ChangeInfo.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Lab_Assistant.ChangePassword.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Lab_Assistant.Dashboard.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Lab_Assistant.Settings.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\bin\Debug\webTRON Management Software.exe.config
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\bin\Debug\webTRON Management Software.exe
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\bin\Debug\webTRON Management Software.pdb
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\bin\Debug\MySql.Data.dll
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\bin\Debug\PasswordGenerator.dll
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\bin\Debug\QRCoder.dll
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\bin\Debug\Google.Protobuf.dll
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\bin\Debug\Zstandard.Net.dll
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\bin\Debug\K4os.Compression.LZ4.Streams.dll
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\bin\Debug\BouncyCastle.Crypto.dll
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\bin\Debug\Ubiety.Dns.Core.dll
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\bin\Debug\Renci.SshNet.dll
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\bin\Debug\System.Memory.dll
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\bin\Debug\System.Buffers.dll
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\bin\Debug\K4os.Compression.LZ4.dll
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\bin\Debug\K4os.Hash.xxHash.dll
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\bin\Debug\MySql.Data.xml
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON Management Software.csprojAssemblyReference.cache
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON Management Software.exe.config
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.Dashboard.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.RenewPatient.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.SearchAndUpdatePatient.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.ChangeInfo.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.ChangePassword.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.Dashboard.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.Search.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.Settings.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.Others.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.Tests.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.Users.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Admin.CreateAccount.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.Dashboard.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.MedicineForm.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.TreatmentWindow.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Lab_Assistant.ChangeInfo.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Lab_Assistant.ChangePassword.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Lab_Assistant.Dashboard.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Lab_Assistant.Settings.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Others.ChangeInfo.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Others.ChangePassword.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Others.Settings.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Utilities.ChangePassword.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Utilities.ForgetPassword.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.CreateNewPatient.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Landing_Window.LandingWindow.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Others.Dashboard.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Properties.Resources.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON Management Software.csproj.GenerateResource.cache
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON Management Software.csproj.CoreCompileInputs.cache
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON Management Software.csproj.CopyComplete
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON Management Software.exe
-C:\Users\Pramesh_Karki\Desktop\webTRON-Management-Software\obj\Debug\webTRON Management Software.pdb
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\bin\Debug\FluentValidation.dll
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\bin\Debug\PasswordGenerator.dll
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\bin\Debug\FluentValidation.xml
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.ChangeInfo.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.ChangePassword.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Accountant.Settings.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.ChangeInfo.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.ChangePassword.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.Patients.resources
-C:\Users\Pramesh_Karki\Desktop\webTRON Management Software\webTRON-Management-Software\obj\Debug\webTRON_Management_Software.Views.Doctor.Settings.resources

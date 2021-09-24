@@ -9,22 +9,23 @@ using System.Windows.Forms;
 
 namespace webTRON_Management_Software.Models
 {
-    class Medicine
+   public class Medicine
     {
         //Connection String
-        private static string connectionString = "server=localhost;user id=root;pwd=password;database=webtronmanagement";
+       // private static string connectionString = "server=localhost;user id=root;pwd=password;database=webtronmanagement";
+        private static string connectionString = "server=localhost;user id=root;pwd=laxudb;database=webtronmanagement";
 
         //Properties
-        public string Name { get; set; }
-        public DateTime StartDate { get; set; }
-        public int EndDay { get; set; }
-        public string Remarks { get; set; }
+        public static string Name { get; set; }
+        public static DateTime StartDate { get; set; }
+        public static int EndDay { get; set; }
+        public static string Remarks { get; set; }
 
 
         //Methods
 
         //Method to insert
-        public static bool Insert(string patientID,List<Medicine> medicineList)
+        public static bool Insert(string patientID)
         {
             //Create default variable and set it false
             bool isSucess = false;
@@ -38,16 +39,12 @@ namespace webTRON_Management_Software.Models
             string SQLQuery = "INSERT INTO medicine VALUES";
             
             //Iterate through list
-            for(int index = 0; index < medicineList.Count; index++)
-            {
-                remarks = medicineList[index].Remarks == "" ? "NULL":medicineList[index].Remarks;
-                SQLQuery += $"('{patientID}','{medicineList[index].Name}','{medicineList[index].StartDate.ToString("yyyy-MM-dd")}','{medicineList[index].StartDate.AddDays(medicineList[index].EndDay).ToString("yyyy-MM-dd")}','DIR-21-434344','{remarks}'),";
-            }
+                remarks = Remarks == "" ? "NULL":Remarks;
+                SQLQuery += $"('{patientID}','{Name}','{StartDate.ToString("yyyy-MM-dd")}','{StartDate.AddDays(EndDay).ToString("yyyy-MM-dd")}','DIR-21-434344','{remarks}'),";
             //Remove  ',' from at the end of sql query
             SQLQuery = SQLQuery.Remove(SQLQuery.Length - 1);
             try
             {
-                MessageBox.Show(SQLQuery);
                 //MySqlCommand
                 MySqlCommand cmd = new MySqlCommand(SQLQuery, conn);
                 //Open Connection
