@@ -109,7 +109,7 @@ namespace webTRON_Management_Software.Views.Doctor
             // 
             // btnPatients
             // 
-<<<<<<< HEAD
+
             this.btnPatients.Animated = true;
             this.btnPatients.CheckedState.Parent = this.btnPatients;
             this.btnPatients.CustomImages.Parent = this.btnPatients;
@@ -128,25 +128,8 @@ namespace webTRON_Management_Software.Views.Doctor
             this.btnPatients.Text = "Patients";
             this.btnPatients.TextOffset = new System.Drawing.Point(-8, 10);
             this.btnPatients.Click += new System.EventHandler(this.BtnPatients_Click);
-=======
-            this.btnUsers.Animated = true;
-            this.btnUsers.CheckedState.Parent = this.btnUsers;
-            this.btnUsers.CustomImages.Parent = this.btnUsers;
-            this.btnUsers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            this.btnUsers.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsers.ForeColor = System.Drawing.Color.White;
-            this.btnUsers.HoverState.Parent = this.btnUsers;
-            this.btnUsers.Image = global::webTRON_Management_Software.Properties.Resources.user_icon;
-            this.btnUsers.ImageOffset = new System.Drawing.Point(10, -12);
-            this.btnUsers.Location = new System.Drawing.Point(0, 240);
-            this.btnUsers.Margin = new System.Windows.Forms.Padding(0);
-            this.btnUsers.Name = "btnUsers";
-            this.btnUsers.ShadowDecoration.Parent = this.btnUsers;
-            this.btnUsers.Size = new System.Drawing.Size(91, 59);
-            this.btnUsers.TabIndex = 22;
-            this.btnUsers.Text = "Patient";
-            this.btnUsers.TextOffset = new System.Drawing.Point(-8, 10);
->>>>>>> integration
+           
+
             // 
             // btnDashboard
             // 
@@ -275,7 +258,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.activeUserName.TabIndex = 1;
             this.activeUserName.Text = "John";
             // 
-<<<<<<< HEAD
+
             // BtnMinimize
             // 
             this.BtnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -306,8 +289,7 @@ namespace webTRON_Management_Software.Views.Doctor
             // 
             this.dragOnDashboard.TargetControl = this;
             // 
-=======
->>>>>>> integration
+
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
