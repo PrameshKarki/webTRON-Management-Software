@@ -13,8 +13,8 @@ namespace webTRON_Management_Software.Models
     public class Employee
     {
         //Connection String
-        // private static string connectionString = "server=localhost;user id=root;pwd=password;database=webtronmanagement";
-        private static string connectionString = "server=localhost;user id=root;pwd=laxudb;database=webtronmanagement";
+        private static string connectionString = "server=localhost;user id=root;pwd=password;database=webtronmanagement";
+       // private static string connectionString = "server=localhost;user id=root;pwd=laxudb;database=webtronmanagement";
 
         //Properties
         public string UserID { get; set; }

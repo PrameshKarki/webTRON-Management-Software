@@ -12,8 +12,8 @@ namespace webTRON_Management_Software.Models
     public class Patient
     {
         //connection string
-        //private static string connectionString = "server=localhost;user id=root; password=laxudb;persistsecurityinfo=True;database=webtronmanagement";
-        private static string connectionString = "server=localhost;user id=root;pwd=laxudb;database=webtronmanagement";
+        private static string connectionString = "server=localhost;user id=root; password=password;persistsecurityinfo=True;database=webtronmanagement";
+        //private static string connectionString = "server=localhost;user id=root;pwd=laxudb;database=webtronmanagement";
         //instance variables of the class Patient
         public string patientID { get; set; }
         public string registrationDate { get; set; }
@@ -143,7 +143,7 @@ namespace webTRON_Management_Software.Models
             ad.Fill(dt);
             return dt;
         }
-        public static int Renew(String patientID)
+        public static int UpdateStatus(String patientID,string status)
         {
             MySqlConnection conn = new MySqlConnection(connectionString);
             conn.Open();
@@ -153,7 +153,7 @@ namespace webTRON_Management_Software.Models
                 command.Connection = conn;
                 command.CommandText = "UPDATE patientinfo SET status=@prmStatus WHERE patientID=@prmPatientID";
                 command.Parameters.AddWithValue("prmPatientID", patientID);
-                command.Parameters.AddWithValue("prmStatus", "IN");
+                command.Parameters.AddWithValue("prmStatus",status);
                 int row = command.ExecuteNonQuery();
                 return row;
             }
