@@ -217,5 +217,10 @@ namespace webTRON_Management_Software.Views.Doctor
             patients.Show();
             this.Hide();
         }
+
+        private void contactNumberTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
     }
 }

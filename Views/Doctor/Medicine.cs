@@ -18,6 +18,8 @@ namespace webTRON_Management_Software.Views.Doctor
 
         Patient patient = new Patient();
         Employee employee = new Employee();
+        bool hasMedicineInfo1 = false;
+        bool hasmedicineInfo2 = false;
         public Medicine()
         {
             InitializeComponent();
@@ -54,7 +56,7 @@ namespace webTRON_Management_Software.Views.Doctor
                 Models.Medicine.StartDate=DateTime.Parse(startDatePicker1.Text);
                 Models.Medicine.EndDay=Convert.ToInt32(endDayTextBox1.Text);
                 Models.Medicine.Remarks= remarksTextBox1.Text;
-               if (Models.Medicine.Insert(patient.patientID))
+               if (Models.Medicine.Insert(patient.patientID,employee))
                 {
                     DataTable dt1 = new DataTable();
                     dt1 = Models.Medicine.FetchRunningMedicines(patient.patientID);
@@ -68,6 +70,7 @@ namespace webTRON_Management_Software.Views.Doctor
                     dt = Models.Medicine.FetchPreviouslyTakenMedicines(patient.patientID);
                     previouslyTakenMedicineGridView.DataSource = dt;
                     DisplayAlert("Success", "Successfully inserted.");
+                    hasMedicineInfo1 = false;
 
                 }
             }
@@ -89,7 +92,7 @@ namespace webTRON_Management_Software.Views.Doctor
                 Models.Medicine.StartDate = DateTime.Parse(prescribedMedicineStartDate1.Text);
                 Models.Medicine.EndDay = Convert.ToInt32(prescribedMedicineEndDayTextBox1.Text);
                 Models.Medicine.Remarks = prescribedMedicineRemarksTextBox1.Text;
-                if (Models.Medicine.Insert(patient.patientID))
+                if (Models.Medicine.Insert(patient.patientID,employee))
                 {
                     DataTable dt2 = new DataTable();
                     dt2 = Models.Medicine.FetchRunningMedicines(patient.patientID);
@@ -103,6 +106,7 @@ namespace webTRON_Management_Software.Views.Doctor
                     dt3 = Models.Medicine.FetchPreviouslyTakenMedicines(patient.patientID);
                     previouslyTakenMedicineGridView.DataSource = dt3;
                     DisplayAlert("Success", "Successfully inserted.");
+                    hasmedicineInfo2 = false;
                 }
             }
 
@@ -110,26 +114,32 @@ namespace webTRON_Management_Software.Views.Doctor
         //Click event on Next Button
         private void BtnNext_Click(object sender, EventArgs e)
         {
-            int row = Patient.UpdateStatus(patient.patientID, "OUT");
-            if (row > 0)
+            if (!hasMedicineInfo1 && !hasmedicineInfo2)
             {
-                //move to dashboard
-                Dashboard dashboard = new Dashboard(employee);
-                dashboard.Show();
-                this.Hide();
+                int row = Patient.UpdateStatus(patient.patientID, "OUT");
+                if (row > 0)
+                {
+                    //move to dashboard
+                    Dashboard dashboard = new Dashboard(employee);
+                    dashboard.Show();
+                    this.Hide();
+
+                }
+                else if (row == 0)
+                {
+                    DisplayAlert("Danger", "Provide Valid Patient Details.");
+                }
+                else if (row == -1)
+                {
+                    DisplayAlert("Danger", "Internal Server Error.");
+                }
+
 
             }
-            else if (row == 0)
+            else
             {
-                DisplayAlert("Danger", "Provide Valid Patient Details.");
+                DisplayAlert("Alert", "Please save your data.");
             }
-            else if (row == -1)
-            {
-                DisplayAlert("Danger", "Internal Server Error.");
-            }
-
-
-            
         }
 
         //Load event on medicine form
@@ -232,5 +242,44 @@ namespace webTRON_Management_Software.Views.Doctor
 
         }
 
+        private void endDayTextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void btnAddPrescribedMedicine_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void medicineNameTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            hasMedicineInfo1 = true;
+        }
+
+        private void endDayTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            hasMedicineInfo1 = true;
+        }
+
+        private void remarksTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            hasMedicineInfo1 = true;
+        }
+
+        private void prescribedMedicineTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            hasmedicineInfo2 = true;
+        }
+
+        private void prescribedMedicineEndDayTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            hasmedicineInfo2 = true;
+        }
+
+        private void prescribedMedicineRemarksTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            hasmedicineInfo2 = true;
+        }
     }
 }

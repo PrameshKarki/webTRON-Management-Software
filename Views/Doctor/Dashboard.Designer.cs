@@ -118,11 +118,11 @@ namespace webTRON_Management_Software.Views.Doctor
             this.btnPatients.HoverState.Parent = this.btnPatients;
             this.btnPatients.Image = global::webTRON_Management_Software.Properties.Resources.user_icon;
             this.btnPatients.ImageOffset = new System.Drawing.Point(10, -12);
-            this.btnPatients.Location = new System.Drawing.Point(0, 195);
+            this.btnPatients.Location = new System.Drawing.Point(0, 211);
             this.btnPatients.Margin = new System.Windows.Forms.Padding(0);
             this.btnPatients.Name = "btnPatients";
             this.btnPatients.ShadowDecoration.Parent = this.btnPatients;
-            this.btnPatients.Size = new System.Drawing.Size(68, 48);
+            this.btnPatients.Size = new System.Drawing.Size(91, 70);
             this.btnPatients.TabIndex = 22;
             this.btnPatients.Text = "Patients";
             this.btnPatients.TextOffset = new System.Drawing.Point(-8, 10);

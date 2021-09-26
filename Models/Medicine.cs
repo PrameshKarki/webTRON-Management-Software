@@ -12,8 +12,8 @@ namespace webTRON_Management_Software.Models
    public class Medicine
     {
         //Connection String
-       private static string connectionString = "server=localhost;user id=root;pwd=password;database=webtronmanagement";
-     //   private static string connectionString = "server=localhost;user id=root;pwd=laxudb;database=webtronmanagement";
+       //private static string connectionString = "server=localhost;user id=root;pwd=password;database=webtronmanagement";
+         private static string connectionString = "server=localhost;user id=root;pwd=laxudb;database=webtronmanagement";
 
         //Properties
         public static string Name { get; set; }
@@ -25,7 +25,7 @@ namespace webTRON_Management_Software.Models
         //Methods
 
         //Method to insert
-        public static bool Insert(string patientID)
+        public static bool Insert(string patientID, Employee employee)
         {
             //Create default variable and set it false
             bool isSucess = false;
@@ -40,7 +40,7 @@ namespace webTRON_Management_Software.Models
             
             //Iterate through list
                 remarks = Remarks == "" ? "NULL":Remarks;
-                SQLQuery += $"('{patientID}','{Name}','{StartDate.ToString("yyyy-MM-dd")}','{StartDate.AddDays(EndDay).ToString("yyyy-MM-dd")}','DIR-21-434344','{remarks}'),";
+                SQLQuery += $"('{patientID}','{Name}','{StartDate.ToString("yyyy-MM-dd")}','{StartDate.AddDays(EndDay).ToString("yyyy-MM-dd")}','{employee.UserID}','{remarks}'),";
             //Remove  ',' from at the end of sql query
             SQLQuery = SQLQuery.Remove(SQLQuery.Length - 1);
             try
@@ -52,8 +52,9 @@ namespace webTRON_Management_Software.Models
                 //Execute Query
                 cmd.ExecuteNonQuery();
                 isSucess = true;
-            }catch(Exception)
-            {
+            }
+            catch(Exception ex)
+            { 
                 isSucess = false;
             }
             finally
