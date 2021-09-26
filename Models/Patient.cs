@@ -13,7 +13,7 @@ namespace webTRON_Management_Software.Models
     {
         //connection string
         private static string connectionString = "server=localhost;user id=root; password=password;persistsecurityinfo=True;database=webtronmanagement";
-        //private static string connectionString = "server=localhost;user id=root;pwd=laxudb;database=webtronmanagement";
+       // private static string connectionString = "server=localhost;user id=root;pwd=laxudb;database=webtronmanagement";
         //instance variables of the class Patient
         public string patientID { get; set; }
         public string registrationDate { get; set; }

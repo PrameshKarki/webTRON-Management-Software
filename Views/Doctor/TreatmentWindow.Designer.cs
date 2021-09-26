@@ -103,7 +103,7 @@
             this.lblMinus2.Location = new System.Drawing.Point(707, 23);
             this.lblMinus2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMinus2.Name = "lblMinus2";
-            this.lblMinus2.Size = new System.Drawing.Size(19, 26);
+            this.lblMinus2.Size = new System.Drawing.Size(23, 31);
             this.lblMinus2.TabIndex = 71;
             this.lblMinus2.Text = "-";
             // 
@@ -115,7 +115,7 @@
             this.lblMinus1.Location = new System.Drawing.Point(535, 23);
             this.lblMinus1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMinus1.Name = "lblMinus1";
-            this.lblMinus1.Size = new System.Drawing.Size(19, 26);
+            this.lblMinus1.Size = new System.Drawing.Size(23, 31);
             this.lblMinus1.TabIndex = 70;
             this.lblMinus1.Text = "-";
             // 
@@ -154,7 +154,7 @@
             this.lblRegistrationId.Location = new System.Drawing.Point(306, 27);
             this.lblRegistrationId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRegistrationId.Name = "lblRegistrationId";
-            this.lblRegistrationId.Size = new System.Drawing.Size(102, 25);
+            this.lblRegistrationId.Size = new System.Drawing.Size(130, 29);
             this.lblRegistrationId.TabIndex = 68;
             this.lblRegistrationId.Text = "Patient ID:";
             // 
@@ -192,7 +192,7 @@
             this.lblPtn.Location = new System.Drawing.Point(460, 31);
             this.lblPtn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPtn.Name = "lblPtn";
-            this.lblPtn.Size = new System.Drawing.Size(39, 20);
+            this.lblPtn.Size = new System.Drawing.Size(52, 25);
             this.lblPtn.TabIndex = 72;
             this.lblPtn.Text = "PTN";
             // 
@@ -239,7 +239,7 @@
             this.alertText.Location = new System.Drawing.Point(75, 21);
             this.alertText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.alertText.Name = "alertText";
-            this.alertText.Size = new System.Drawing.Size(90, 20);
+            this.alertText.Size = new System.Drawing.Size(116, 25);
             this.alertText.TabIndex = 2;
             this.alertText.Text = "{{alertText}}";
             // 
@@ -328,7 +328,7 @@
             this.lblprescriptionDateOutput.Location = new System.Drawing.Point(13, 2);
             this.lblprescriptionDateOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblprescriptionDateOutput.Name = "lblprescriptionDateOutput";
-            this.lblprescriptionDateOutput.Size = new System.Drawing.Size(97, 15);
+            this.lblprescriptionDateOutput.Size = new System.Drawing.Size(116, 18);
             this.lblprescriptionDateOutput.TabIndex = 6;
             this.lblprescriptionDateOutput.Text = "prescriptionDate";
             // 
@@ -371,7 +371,7 @@
             this.lblPrescribedBy.Location = new System.Drawing.Point(741, 213);
             this.lblPrescribedBy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrescribedBy.Name = "lblPrescribedBy";
-            this.lblPrescribedBy.Size = new System.Drawing.Size(84, 15);
+            this.lblPrescribedBy.Size = new System.Drawing.Size(102, 18);
             this.lblPrescribedBy.TabIndex = 4;
             this.lblPrescribedBy.Text = "prescribed By:";
             // 
@@ -384,7 +384,7 @@
             this.lblPrescriptionTitleOutput.Location = new System.Drawing.Point(159, 2);
             this.lblPrescriptionTitleOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrescriptionTitleOutput.Name = "lblPrescriptionTitleOutput";
-            this.lblPrescriptionTitleOutput.Size = new System.Drawing.Size(94, 15);
+            this.lblPrescriptionTitleOutput.Size = new System.Drawing.Size(112, 18);
             this.lblPrescriptionTitleOutput.TabIndex = 3;
             this.lblPrescriptionTitleOutput.Text = "prescriptionTitle";
             // 
@@ -397,7 +397,7 @@
             this.lblPrescribedDoctorNameOutput.Location = new System.Drawing.Point(868, 213);
             this.lblPrescribedDoctorNameOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrescribedDoctorNameOutput.Name = "lblPrescribedDoctorNameOutput";
-            this.lblPrescribedDoctorNameOutput.Size = new System.Drawing.Size(135, 15);
+            this.lblPrescribedDoctorNameOutput.Size = new System.Drawing.Size(163, 18);
             this.lblPrescribedDoctorNameOutput.TabIndex = 5;
             this.lblPrescribedDoctorNameOutput.Text = "prescribedDoctorName";
             // 
@@ -424,7 +424,7 @@
             this.lblTodaysPrescriptionTitleOutput.Location = new System.Drawing.Point(100, 0);
             this.lblTodaysPrescriptionTitleOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTodaysPrescriptionTitleOutput.Name = "lblTodaysPrescriptionTitleOutput";
-            this.lblTodaysPrescriptionTitleOutput.Size = new System.Drawing.Size(48, 17);
+            this.lblTodaysPrescriptionTitleOutput.Size = new System.Drawing.Size(55, 20);
             this.lblTodaysPrescriptionTitleOutput.TabIndex = 8;
             this.lblTodaysPrescriptionTitleOutput.Text = ": ____";
             // 
@@ -437,7 +437,7 @@
             this.lblTodaysDateOutput.Location = new System.Drawing.Point(12, 2);
             this.lblTodaysDateOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTodaysDateOutput.Name = "lblTodaysDateOutput";
-            this.lblTodaysDateOutput.Size = new System.Drawing.Size(71, 15);
+            this.lblTodaysDateOutput.Size = new System.Drawing.Size(88, 18);
             this.lblTodaysDateOutput.TabIndex = 7;
             this.lblTodaysDateOutput.Text = "yyyy-mm-dd";
             // 
@@ -523,7 +523,7 @@
             this.lblRegistrationDate.Location = new System.Drawing.Point(220, 94);
             this.lblRegistrationDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRegistrationDate.Name = "lblRegistrationDate";
-            this.lblRegistrationDate.Size = new System.Drawing.Size(115, 17);
+            this.lblRegistrationDate.Size = new System.Drawing.Size(136, 20);
             this.lblRegistrationDate.TabIndex = 74;
             this.lblRegistrationDate.Text = "Registered Date:";
             // 
@@ -535,7 +535,7 @@
             this.lblName.Location = new System.Drawing.Point(312, 128);
             this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(49, 17);
+            this.lblName.Size = new System.Drawing.Size(58, 20);
             this.lblName.TabIndex = 75;
             this.lblName.Text = "Name:";
             // 
@@ -547,7 +547,7 @@
             this.lblAddress.Location = new System.Drawing.Point(621, 91);
             this.lblAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(64, 17);
+            this.lblAddress.Size = new System.Drawing.Size(76, 20);
             this.lblAddress.TabIndex = 76;
             this.lblAddress.Text = "Address:";
             // 
@@ -559,7 +559,7 @@
             this.lblContact.Location = new System.Drawing.Point(627, 126);
             this.lblContact.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContact.Name = "lblContact";
-            this.lblContact.Size = new System.Drawing.Size(60, 17);
+            this.lblContact.Size = new System.Drawing.Size(72, 20);
             this.lblContact.TabIndex = 77;
             this.lblContact.Text = "Contact:";
             // 
@@ -571,7 +571,7 @@
             this.lblAge.Location = new System.Drawing.Point(987, 91);
             this.lblAge.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(37, 17);
+            this.lblAge.Size = new System.Drawing.Size(43, 20);
             this.lblAge.TabIndex = 78;
             this.lblAge.Text = "Age:";
             // 
@@ -583,7 +583,7 @@
             this.lblReferredTo.Location = new System.Drawing.Point(917, 126);
             this.lblReferredTo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblReferredTo.Name = "lblReferredTo";
-            this.lblReferredTo.Size = new System.Drawing.Size(89, 17);
+            this.lblReferredTo.Size = new System.Drawing.Size(103, 20);
             this.lblReferredTo.TabIndex = 79;
             this.lblReferredTo.Text = "Referred To:";
             // 
@@ -595,7 +595,7 @@
             this.lblRegistrationDateOutput.Location = new System.Drawing.Point(387, 94);
             this.lblRegistrationDateOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRegistrationDateOutput.Name = "lblRegistrationDateOutput";
-            this.lblRegistrationDateOutput.Size = new System.Drawing.Size(109, 17);
+            this.lblRegistrationDateOutput.Size = new System.Drawing.Size(129, 20);
             this.lblRegistrationDateOutput.TabIndex = 83;
             this.lblRegistrationDateOutput.Text = "registrationDate";
             // 
@@ -607,7 +607,7 @@
             this.lblFirstNameOutput.Location = new System.Drawing.Point(385, 130);
             this.lblFirstNameOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFirstNameOutput.Name = "lblFirstNameOutput";
-            this.lblFirstNameOutput.Size = new System.Drawing.Size(70, 17);
+            this.lblFirstNameOutput.Size = new System.Drawing.Size(84, 20);
             this.lblFirstNameOutput.TabIndex = 84;
             this.lblFirstNameOutput.Text = "Firstname";
             // 
@@ -619,7 +619,7 @@
             this.lblAddressOutput.Location = new System.Drawing.Point(716, 91);
             this.lblAddressOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAddressOutput.Name = "lblAddressOutput";
-            this.lblAddressOutput.Size = new System.Drawing.Size(102, 17);
+            this.lblAddressOutput.Size = new System.Drawing.Size(119, 20);
             this.lblAddressOutput.TabIndex = 85;
             this.lblAddressOutput.Text = "addressOutput";
             // 
@@ -631,7 +631,7 @@
             this.lblContactOutput.Location = new System.Drawing.Point(719, 126);
             this.lblContactOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContactOutput.Name = "lblContactOutput";
-            this.lblContactOutput.Size = new System.Drawing.Size(97, 17);
+            this.lblContactOutput.Size = new System.Drawing.Size(114, 20);
             this.lblContactOutput.TabIndex = 86;
             this.lblContactOutput.Text = "contactOutput";
             // 
@@ -643,7 +643,7 @@
             this.lblAgeOutput.Location = new System.Drawing.Point(1045, 91);
             this.lblAgeOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgeOutput.Name = "lblAgeOutput";
-            this.lblAgeOutput.Size = new System.Drawing.Size(75, 17);
+            this.lblAgeOutput.Size = new System.Drawing.Size(86, 20);
             this.lblAgeOutput.TabIndex = 87;
             this.lblAgeOutput.Text = "ageOutput";
             // 
@@ -655,7 +655,7 @@
             this.lblReferredToOutput.Location = new System.Drawing.Point(1049, 126);
             this.lblReferredToOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblReferredToOutput.Name = "lblReferredToOutput";
-            this.lblReferredToOutput.Size = new System.Drawing.Size(119, 17);
+            this.lblReferredToOutput.Size = new System.Drawing.Size(137, 20);
             this.lblReferredToOutput.TabIndex = 88;
             this.lblReferredToOutput.Text = "referredToOutput";
             // 
@@ -667,7 +667,7 @@
             this.lblGenderOutput.Location = new System.Drawing.Point(1167, 91);
             this.lblGenderOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGenderOutput.Name = "lblGenderOutput";
-            this.lblGenderOutput.Size = new System.Drawing.Size(96, 17);
+            this.lblGenderOutput.Size = new System.Drawing.Size(110, 20);
             this.lblGenderOutput.TabIndex = 89;
             this.lblGenderOutput.Text = "genderOutput";
             // 
@@ -679,7 +679,7 @@
             this.lblLastNameOutput.Location = new System.Drawing.Point(509, 128);
             this.lblLastNameOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLastNameOutput.Name = "lblLastNameOutput";
-            this.lblLastNameOutput.Size = new System.Drawing.Size(70, 17);
+            this.lblLastNameOutput.Size = new System.Drawing.Size(83, 20);
             this.lblLastNameOutput.TabIndex = 90;
             this.lblLastNameOutput.Text = "Lastname";
             // 
@@ -745,7 +745,7 @@
             this.activeForm.Location = new System.Drawing.Point(85, 49);
             this.activeForm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.activeForm.Name = "activeForm";
-            this.activeForm.Size = new System.Drawing.Size(88, 20);
+            this.activeForm.Size = new System.Drawing.Size(108, 25);
             this.activeForm.TabIndex = 21;
             this.activeForm.Text = "Dashboard";
             // 
@@ -774,7 +774,7 @@
             this.activeUserName.Location = new System.Drawing.Point(85, 11);
             this.activeUserName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.activeUserName.Name = "activeUserName";
-            this.activeUserName.Size = new System.Drawing.Size(52, 24);
+            this.activeUserName.Size = new System.Drawing.Size(65, 29);
             this.activeUserName.TabIndex = 1;
             this.activeUserName.Text = "John";
             // 
@@ -837,9 +837,8 @@
             // 
             // TreatmentWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1333, 769);
             this.Controls.Add(this.btnBack);

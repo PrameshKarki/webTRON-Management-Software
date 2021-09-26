@@ -90,14 +90,16 @@ namespace webTRON_Management_Software.Views.Admin
 
                 //Insert object in database
                 bool isSucess = Employee.Insert(obj);
-
+                
                 if (isSucess)
                 {
                     //Store user's user ID and password in users table
                     bool isUserCreated = StoreUser();
+                   
                     if (isUserCreated)
                     {
                         bool isSend = Email.SendAccountInfo(obj.Email, newUser.userID, newUser.password);
+                    
                         if (isSend)
                         {
                             //Display sucess alert
@@ -107,13 +109,13 @@ namespace webTRON_Management_Software.Views.Admin
                         }
                         else
                         {
-                            DisplayAlert("Danger", "Error occured.");
+                            DisplayAlert("Danger", "Error occured. email not sent");
                         }
 
                     }
                     else
                     {
-                        DisplayAlert("Danger", "Error occured.");
+                        DisplayAlert("Danger", "Error occured. bUSer Not Created.");
                     }
                 }
                 else
