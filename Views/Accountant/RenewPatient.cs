@@ -112,7 +112,7 @@ namespace webTRON_Management_Software.Views.Accountant
             try
             {
                 string patientID = DataGridView.Rows[0].Cells[0].Value.ToString();
-                int row = Patient.Renew(patientID);
+                int row = Patient.UpdateStatus(patientID,"IN");
                 if (row > 0)
                 {
                     DisplayAlert("Sucess", "Successfully Renewed.");

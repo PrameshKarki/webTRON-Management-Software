@@ -42,7 +42,7 @@
             this.lastNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.firstNameTxtBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblName = new System.Windows.Forms.Label();
-            this.genderTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.ageTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblAge = new System.Windows.Forms.Label();
             this.btnCreateNewPatient = new Guna.UI2.WinForms.Guna2Button();
             this.lblReferredTo = new System.Windows.Forms.Label();
@@ -344,33 +344,33 @@
             this.lblName.TabIndex = 44;
             this.lblName.Text = "Name*:";
             // 
-            // genderTextBox
+            // ageTextBox
             // 
-            this.genderTextBox.Animated = true;
-            this.genderTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.alertTransition.SetDecoration(this.genderTextBox, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Transition1.SetDecoration(this.genderTextBox, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.genderTextBox.DefaultText = "";
-            this.genderTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.genderTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.genderTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.genderTextBox.DisabledState.Parent = this.genderTextBox;
-            this.genderTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.genderTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.genderTextBox.FocusedState.Parent = this.genderTextBox;
-            this.genderTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.genderTextBox.ForeColor = System.Drawing.Color.Black;
-            this.genderTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.genderTextBox.HoverState.Parent = this.genderTextBox;
-            this.genderTextBox.Location = new System.Drawing.Point(252, 313);
-            this.genderTextBox.Margin = new System.Windows.Forms.Padding(5);
-            this.genderTextBox.Name = "genderTextBox";
-            this.genderTextBox.PasswordChar = '\0';
-            this.genderTextBox.PlaceholderText = "Age";
-            this.genderTextBox.SelectedText = "";
-            this.genderTextBox.ShadowDecoration.Parent = this.genderTextBox;
-            this.genderTextBox.Size = new System.Drawing.Size(78, 32);
-            this.genderTextBox.TabIndex = 7;
+            this.ageTextBox.Animated = true;
+            this.ageTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.alertTransition.SetDecoration(this.ageTextBox, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Transition1.SetDecoration(this.ageTextBox, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.ageTextBox.DefaultText = "";
+            this.ageTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.ageTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.ageTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.ageTextBox.DisabledState.Parent = this.ageTextBox;
+            this.ageTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.ageTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ageTextBox.FocusedState.Parent = this.ageTextBox;
+            this.ageTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.ageTextBox.ForeColor = System.Drawing.Color.Black;
+            this.ageTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ageTextBox.HoverState.Parent = this.ageTextBox;
+            this.ageTextBox.Location = new System.Drawing.Point(252, 313);
+            this.ageTextBox.Margin = new System.Windows.Forms.Padding(5);
+            this.ageTextBox.Name = "ageTextBox";
+            this.ageTextBox.PasswordChar = '\0';
+            this.ageTextBox.PlaceholderText = "Age";
+            this.ageTextBox.SelectedText = "";
+            this.ageTextBox.ShadowDecoration.Parent = this.ageTextBox;
+            this.ageTextBox.Size = new System.Drawing.Size(78, 32);
+            this.ageTextBox.TabIndex = 7;
             // 
             // lblAge
             // 
@@ -852,7 +852,7 @@
             this.PrintPanelContanerPanel.Controls.Add(this.printPanel);
             this.alertTransition.SetDecoration(this.PrintPanelContanerPanel, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2Transition1.SetDecoration(this.PrintPanelContanerPanel, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.PrintPanelContanerPanel.Location = new System.Drawing.Point(434, 57);
+            this.PrintPanelContanerPanel.Location = new System.Drawing.Point(432, 57);
             this.PrintPanelContanerPanel.Name = "PrintPanelContanerPanel";
             this.PrintPanelContanerPanel.ShadowDecoration.Parent = this.PrintPanelContanerPanel;
             this.PrintPanelContanerPanel.Size = new System.Drawing.Size(541, 506);
@@ -1118,7 +1118,7 @@
             this.Controls.Add(this.lblReferredTo);
             this.Controls.Add(this.btnCreateNewPatient);
             this.Controls.Add(this.guna2PictureBox5);
-            this.Controls.Add(this.genderTextBox);
+            this.Controls.Add(this.ageTextBox);
             this.Controls.Add(this.lblAge);
             this.Controls.Add(this.addressTextBox);
             this.Controls.Add(this.lblAddress);
@@ -1178,7 +1178,7 @@
         private Guna.UI2.WinForms.Guna2TextBox lastNameTextBox;
         private Guna.UI2.WinForms.Guna2TextBox firstNameTxtBox;
         private System.Windows.Forms.Label lblName;
-        private Guna.UI2.WinForms.Guna2TextBox genderTextBox;
+        private Guna.UI2.WinForms.Guna2TextBox ageTextBox;
         private System.Windows.Forms.Label lblAge;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
         private Guna.UI2.WinForms.Guna2Button btnCreateNewPatient;
