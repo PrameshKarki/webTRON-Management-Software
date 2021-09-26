@@ -30,14 +30,14 @@ namespace webTRON_Management_Software.Views.Doctor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            Guna.UI2.AnimatorNS.Animation animation3 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Medicine));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblPatientIDOutput = new System.Windows.Forms.Label();
             this.runningMedicinePanel = new Guna.UI2.WinForms.Guna2Panel();
             this.runningMedicinesGridView = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -148,32 +148,32 @@ namespace webTRON_Management_Software.Views.Doctor
             this.runningMedicinesGridView.AllowUserToDeleteRows = false;
             this.runningMedicinesGridView.AllowUserToResizeColumns = false;
             this.runningMedicinesGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.runningMedicinesGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.runningMedicinesGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.runningMedicinesGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.runningMedicinesGridView.BackgroundColor = System.Drawing.Color.White;
             this.runningMedicinesGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.runningMedicinesGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.runningMedicinesGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.runningMedicinesGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.runningMedicinesGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.runningMedicinesGridView.ColumnHeadersHeight = 30;
             this.runningMedicinesGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.alertTransition.SetDecoration(this.runningMedicinesGridView, Guna.UI2.AnimatorNS.DecorationType.None);
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.runningMedicinesGridView.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.runningMedicinesGridView.DefaultCellStyle = dataGridViewCellStyle15;
             this.runningMedicinesGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.runningMedicinesGridView.EnableHeadersVisualStyles = false;
             this.runningMedicinesGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -256,6 +256,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.remarksTextBox1.ShadowDecoration.Parent = this.remarksTextBox1;
             this.remarksTextBox1.Size = new System.Drawing.Size(261, 37);
             this.remarksTextBox1.TabIndex = 85;
+            this.remarksTextBox1.TextChanged += new System.EventHandler(this.remarksTextBox1_TextChanged);
             // 
             // lblRemarks1
             // 
@@ -294,6 +295,8 @@ namespace webTRON_Management_Software.Views.Doctor
             this.endDayTextBox1.ShadowDecoration.Parent = this.endDayTextBox1;
             this.endDayTextBox1.Size = new System.Drawing.Size(69, 37);
             this.endDayTextBox1.TabIndex = 83;
+            this.endDayTextBox1.TextChanged += new System.EventHandler(this.endDayTextBox1_TextChanged);
+            this.endDayTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.endDayTextBox1_KeyPress);
             // 
             // lblEndDay1
             // 
@@ -363,6 +366,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.medicineNameTextBox1.ShadowDecoration.Parent = this.medicineNameTextBox1;
             this.medicineNameTextBox1.Size = new System.Drawing.Size(236, 37);
             this.medicineNameTextBox1.TabIndex = 79;
+            this.medicineNameTextBox1.TextChanged += new System.EventHandler(this.medicineNameTextBox1_TextChanged);
             // 
             // lblMedicineName1
             // 
@@ -427,6 +431,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.btnAddPrescribedMedicine.Size = new System.Drawing.Size(40, 37);
             this.btnAddPrescribedMedicine.TabIndex = 86;
             this.btnAddPrescribedMedicine.Click += new System.EventHandler(this.BtnAddPrescribedMedicine_Click);
+            this.btnAddPrescribedMedicine.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btnAddPrescribedMedicine_KeyPress);
             // 
             // prescribedMedicineRemarksTextBox1
             // 
@@ -453,6 +458,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.prescribedMedicineRemarksTextBox1.ShadowDecoration.Parent = this.prescribedMedicineRemarksTextBox1;
             this.prescribedMedicineRemarksTextBox1.Size = new System.Drawing.Size(261, 37);
             this.prescribedMedicineRemarksTextBox1.TabIndex = 85;
+            this.prescribedMedicineRemarksTextBox1.TextChanged += new System.EventHandler(this.prescribedMedicineRemarksTextBox1_TextChanged);
             // 
             // prescribedMedicineRemarks1
             // 
@@ -491,6 +497,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.prescribedMedicineEndDayTextBox1.ShadowDecoration.Parent = this.prescribedMedicineEndDayTextBox1;
             this.prescribedMedicineEndDayTextBox1.Size = new System.Drawing.Size(69, 37);
             this.prescribedMedicineEndDayTextBox1.TabIndex = 83;
+            this.prescribedMedicineEndDayTextBox1.TextChanged += new System.EventHandler(this.prescribedMedicineEndDayTextBox1_TextChanged);
             // 
             // lblPrescribedMedicineEndDay1
             // 
@@ -562,6 +569,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.prescribedMedicineTextBox1.ShadowDecoration.Parent = this.prescribedMedicineTextBox1;
             this.prescribedMedicineTextBox1.Size = new System.Drawing.Size(236, 37);
             this.prescribedMedicineTextBox1.TabIndex = 79;
+            this.prescribedMedicineTextBox1.TextChanged += new System.EventHandler(this.prescribedMedicineTextBox1_TextChanged);
             // 
             // lblPrescribedMedicineName1
             // 
@@ -601,22 +609,22 @@ namespace webTRON_Management_Software.Views.Doctor
             // 
             this.alertTransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Scale;
             this.alertTransition.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.alertTransition.DefaultAnimation = animation2;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(0);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 0F;
+            this.alertTransition.DefaultAnimation = animation3;
             // 
             // lblPrescribedMedicine
             // 
@@ -998,32 +1006,32 @@ namespace webTRON_Management_Software.Views.Doctor
             this.previouslyTakenMedicineGridView.AllowUserToDeleteRows = false;
             this.previouslyTakenMedicineGridView.AllowUserToResizeColumns = false;
             this.previouslyTakenMedicineGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.previouslyTakenMedicineGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
+            this.previouslyTakenMedicineGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.previouslyTakenMedicineGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.previouslyTakenMedicineGridView.BackgroundColor = System.Drawing.Color.White;
             this.previouslyTakenMedicineGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.previouslyTakenMedicineGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.previouslyTakenMedicineGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.previouslyTakenMedicineGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(207)))));
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.previouslyTakenMedicineGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.previouslyTakenMedicineGridView.ColumnHeadersHeight = 30;
             this.previouslyTakenMedicineGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.alertTransition.SetDecoration(this.previouslyTakenMedicineGridView, Guna.UI2.AnimatorNS.DecorationType.None);
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.previouslyTakenMedicineGridView.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.previouslyTakenMedicineGridView.DefaultCellStyle = dataGridViewCellStyle18;
             this.previouslyTakenMedicineGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.previouslyTakenMedicineGridView.EnableHeadersVisualStyles = false;
             this.previouslyTakenMedicineGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));

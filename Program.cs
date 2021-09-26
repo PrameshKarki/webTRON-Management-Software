@@ -27,7 +27,7 @@ namespace webTRON_Management_Software
             //Run main window here
             // Application.Run(new LandingWindow());
 
-                Application.Run(new LandingWindow());
+              Application.Run(new LandingWindow());
 
             //Application.Run(new Doctor.Medicine());
             //Application.Run(new Admin.CreateAccount());

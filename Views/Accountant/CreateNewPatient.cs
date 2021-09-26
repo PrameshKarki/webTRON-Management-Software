@@ -70,7 +70,7 @@ namespace webTRON_Management_Software.Views.Accountant
         {
 
             // check if all the fields are Filled or not.
-            if (string.IsNullOrEmpty(firstNameTxtBox.Text) || string.IsNullOrEmpty(lastNameTextBox.Text) || string.IsNullOrEmpty(addressTextBox.Text) || string.IsNullOrEmpty(genderTextBox.Text) || string.IsNullOrEmpty(contactNumberTextBox.Text) || (isMale.Checked == false & isFemale.Checked == false & isOthers.Checked == false))
+            if (string.IsNullOrEmpty(firstNameTxtBox.Text) || string.IsNullOrEmpty(lastNameTextBox.Text) || string.IsNullOrEmpty(addressTextBox.Text) || string.IsNullOrEmpty(ageTextBox.Text) || string.IsNullOrEmpty(contactNumberTextBox.Text) || (isMale.Checked == false & isFemale.Checked == false & isOthers.Checked == false))
             {
                 DisplayAlert("Danger", "Fill all the fields.");
             }
@@ -83,9 +83,9 @@ namespace webTRON_Management_Software.Views.Accountant
                 ptn.lastName = lastNameTextBox.Text;
                 ptn.address = addressTextBox.Text;
                 ptn.referredTo = referredToComboBox.Text;
-                ptn.gender = genderTextBox.Text;
+                ptn.age=Convert.ToInt32(ageTextBox.Text);
                 ptn.contactNumber = contactNumberTextBox.Text;
-                ptn.status = "in";
+                ptn.status = "IN";
               
                 if (isMale.Checked)
                     ptn.gender = isMale.Text;
@@ -96,10 +96,11 @@ namespace webTRON_Management_Software.Views.Accountant
                     
                 else if (isOthers.Checked)
                     ptn.gender = isOthers.Text;
+
+                
                     
 
                 bool isSuccess = Patient.Insert(ptn);
-                MessageBox.Show("message is: "+isSuccess);
                 if (isSuccess)
                 {
                     PrintPanelContanerPanel.Visible = true;
@@ -138,7 +139,7 @@ namespace webTRON_Management_Software.Views.Accountant
             LblPanelRegistrationDateOutput.Text = lblRegistrationDateOutput.Text;
             LblPanelFNameOutput.Text = firstNameTxtBox.Text;
             LblPanelLNameOutput.Text = lastNameTextBox.Text;
-            LblPanelAgeOutput.Text = genderTextBox.Text;
+            LblPanelAgeOutput.Text = ageTextBox.Text;
           
             if (isMale.Checked)
                 LblPanelSexOutput.Text = "M";
@@ -163,7 +164,7 @@ namespace webTRON_Management_Software.Views.Accountant
             isFemale.Checked = false;
             isMale.Checked = false;
             isOthers.Checked = false;
-            genderTextBox.Text = "";
+            ageTextBox.Text = "";
             contactNumberTextBox.Text = "";
             referredToComboBox.SelectedIndex = -1;
             firstNameTxtBox.Focus();

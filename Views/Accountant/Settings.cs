@@ -152,7 +152,6 @@ namespace webTRON_Management_Software.Views.Accountant
             ms = new MemoryStream(employee.img);
             activeUserPicture.Image = Image.FromStream(ms);
 
-
         }
 
         private void AlertTimer_Tick(object sender, EventArgs e)
