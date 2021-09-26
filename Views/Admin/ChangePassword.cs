@@ -221,7 +221,6 @@ namespace webTRON_Management_Software.Views.Admin
                     {
                         DisplayAlert("Danger", "Internal Server Error.");
                     }
-
                 }
                 else
                 {

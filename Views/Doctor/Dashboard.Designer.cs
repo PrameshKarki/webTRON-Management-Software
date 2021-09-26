@@ -109,7 +109,6 @@ namespace webTRON_Management_Software.Views.Doctor
             // 
             // btnPatients
             // 
-
             this.btnPatients.Animated = true;
             this.btnPatients.CheckedState.Parent = this.btnPatients;
             this.btnPatients.CustomImages.Parent = this.btnPatients;
@@ -128,8 +127,6 @@ namespace webTRON_Management_Software.Views.Doctor
             this.btnPatients.Text = "Patients";
             this.btnPatients.TextOffset = new System.Drawing.Point(-8, 10);
             this.btnPatients.Click += new System.EventHandler(this.BtnPatients_Click);
-           
-
             // 
             // btnDashboard
             // 
@@ -180,7 +177,7 @@ namespace webTRON_Management_Software.Views.Doctor
             // 
             this.BtnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("BtnMinimize.Image")));
-            this.BtnMinimize.Location = new System.Drawing.Point(1215, 27);
+            this.BtnMinimize.Location = new System.Drawing.Point(911, 22);
             this.BtnMinimize.Margin = new System.Windows.Forms.Padding(4);
             this.BtnMinimize.Name = "BtnMinimize";
             this.BtnMinimize.ShadowDecoration.Parent = this.BtnMinimize;
@@ -194,7 +191,7 @@ namespace webTRON_Management_Software.Views.Doctor
             // 
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(1280, 9);
+            this.btnExit.Location = new System.Drawing.Point(960, 7);
             this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
             this.btnExit.ShadowDecoration.Parent = this.btnExit;
@@ -202,7 +199,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnExit.TabIndex = 23;
             this.btnExit.TabStop = false;
-            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            this.btnExit.Click += new System.EventHandler(this.LogOut);
             // 
             // activePanel
             // 
@@ -258,44 +255,12 @@ namespace webTRON_Management_Software.Views.Doctor
             this.activeUserName.TabIndex = 1;
             this.activeUserName.Text = "John";
             // 
-
-            // BtnMinimize
-            // 
-            this.BtnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("BtnMinimize.Image")));
-            this.BtnMinimize.Location = new System.Drawing.Point(911, 22);
-            this.BtnMinimize.Name = "BtnMinimize";
-            this.BtnMinimize.ShadowDecoration.Parent = this.BtnMinimize;
-            this.BtnMinimize.Size = new System.Drawing.Size(21, 4);
-            this.BtnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.BtnMinimize.TabIndex = 24;
-            this.BtnMinimize.TabStop = false;
-            this.BtnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(960, 7);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.ShadowDecoration.Parent = this.btnExit;
-            this.btnExit.Size = new System.Drawing.Size(28, 28);
-            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnExit.TabIndex = 23;
-            this.btnExit.TabStop = false;
-            this.btnExit.Click += new System.EventHandler(this.LogOut);
-            // 
-            // dragOnDashboard
-            // 
-            this.dragOnDashboard.TargetControl = this;
-            // 
-
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1333, 769);
+            this.ClientSize = new System.Drawing.Size(1000, 625);
             this.Controls.Add(this.btnTreatmentWindow);
             this.Controls.Add(this.BtnMinimize);
             this.Controls.Add(this.btnExit);

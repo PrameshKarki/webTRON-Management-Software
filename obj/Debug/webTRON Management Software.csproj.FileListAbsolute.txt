@@ -59,3 +59,4 @@ D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON Managem
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON Management Software.csproj.CopyComplete
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON Management Software.exe
 D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON Management Software.pdb
+D:\Projects\NCIT PROJECT-1\webTRON-Management-Software\obj\Debug\webTRON Management Software.csproj.AssemblyReference.cache
