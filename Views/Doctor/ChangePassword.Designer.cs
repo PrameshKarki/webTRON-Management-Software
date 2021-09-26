@@ -30,7 +30,7 @@ namespace webTRON_Management_Software.Views.Doctor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation4 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChangePassword));
             this.sidebarPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.btnSignOut = new Guna.UI2.WinForms.Guna2Button();
@@ -502,6 +502,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.verificationCodeTextBox2.TabIndex = 1;
             this.verificationCodeTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.verificationCodeTextBox2.TextChanged += new System.EventHandler(this.VerificationCodeTextBox2_TextChanged);
+            this.verificationCodeTextBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.verificationCodeTextBox2_KeyPress);
             // 
             // verificationCodeTextBox3
             // 
@@ -531,6 +532,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.verificationCodeTextBox3.TabIndex = 2;
             this.verificationCodeTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.verificationCodeTextBox3.TextChanged += new System.EventHandler(this.VerificationCodeTextBox3_TextChanged);
+            this.verificationCodeTextBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.verificationCodeTextBox3_KeyPress);
             // 
             // verificationCodeTextBox4
             // 
@@ -560,6 +562,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.verificationCodeTextBox4.TabIndex = 3;
             this.verificationCodeTextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.verificationCodeTextBox4.TextChanged += new System.EventHandler(this.VerificationCodeTextBox4_TextChanged);
+            this.verificationCodeTextBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.verificationCodeTextBox4_KeyPress);
             // 
             // btnVerify
             // 
@@ -618,6 +621,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.verificationCodeTextBox1.TabIndex = 0;
             this.verificationCodeTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.verificationCodeTextBox1.TextChanged += new System.EventHandler(this.VerificationCodeTextBox1_TextChanged);
+            this.verificationCodeTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.verificationCodeTextBox1_KeyPress);
             // 
             // alertPanel
             // 
@@ -679,22 +683,22 @@ namespace webTRON_Management_Software.Views.Doctor
             // 
             this.alertTransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Scale;
             this.alertTransition.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.alertTransition.DefaultAnimation = animation1;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 0;
+            animation4.Padding = new System.Windows.Forms.Padding(0);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 0F;
+            this.alertTransition.DefaultAnimation = animation4;
             this.alertTransition.MaxAnimationTime = 5000;
             // 
             // alertTimer

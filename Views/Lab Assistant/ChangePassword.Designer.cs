@@ -30,7 +30,7 @@ namespace webTRON_Management_Software.Views.Lab_Assistant
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation3 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChangePassword));
             this.alertTimer = new System.Windows.Forms.Timer(this.components);
             this.alertText = new System.Windows.Forms.Label();
@@ -62,12 +62,12 @@ namespace webTRON_Management_Software.Views.Lab_Assistant
             this.sidebarPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.btnExit = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.DragableChangePassword = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.lblPasswordMustInclude = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.DragableChangePassword = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.alertCloseBtn)).BeginInit();
             this.alertPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.alertImage)).BeginInit();
@@ -142,22 +142,22 @@ namespace webTRON_Management_Software.Views.Lab_Assistant
             // 
             this.alertTransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Scale;
             this.alertTransition.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(0);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 0F;
-            this.alertTransition.DefaultAnimation = animation3;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.alertTransition.DefaultAnimation = animation1;
             this.alertTransition.MaxAnimationTime = 5000;
             // 
             // verificationCodeTextBox2
@@ -188,6 +188,7 @@ namespace webTRON_Management_Software.Views.Lab_Assistant
             this.verificationCodeTextBox2.TabIndex = 1;
             this.verificationCodeTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.verificationCodeTextBox2.TextChanged += new System.EventHandler(this.VerificationCodeTextBox2_TextChanged);
+            this.verificationCodeTextBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.verificationCodeTextBox2_KeyPress);
             // 
             // verificationCodeTextBox3
             // 
@@ -217,6 +218,7 @@ namespace webTRON_Management_Software.Views.Lab_Assistant
             this.verificationCodeTextBox3.TabIndex = 2;
             this.verificationCodeTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.verificationCodeTextBox3.TextChanged += new System.EventHandler(this.VerificationCodeTextBox3_TextChanged);
+            this.verificationCodeTextBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.verificationCodeTextBox3_KeyPress);
             // 
             // verificationCodeTextBox4
             // 
@@ -246,6 +248,7 @@ namespace webTRON_Management_Software.Views.Lab_Assistant
             this.verificationCodeTextBox4.TabIndex = 3;
             this.verificationCodeTextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.verificationCodeTextBox4.TextChanged += new System.EventHandler(this.VerificationCodeTextBox4_TextChanged);
+            this.verificationCodeTextBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.verificationCodeTextBox4_KeyPress);
             // 
             // btnVerify
             // 
@@ -304,6 +307,7 @@ namespace webTRON_Management_Software.Views.Lab_Assistant
             this.verificationCodeTextBox1.TabIndex = 0;
             this.verificationCodeTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.verificationCodeTextBox1.TextChanged += new System.EventHandler(this.VerificationCodeTextBox1_TextChanged);
+            this.verificationCodeTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.verificationCodeTextBox1_KeyPress);
             // 
             // verificationCodePanel
             // 
@@ -314,7 +318,7 @@ namespace webTRON_Management_Software.Views.Lab_Assistant
             this.verificationCodePanel.Controls.Add(this.lblEnterVerificationCode);
             this.verificationCodePanel.Controls.Add(this.verificationCodeTextBox1);
             this.alertTransition.SetDecoration(this.verificationCodePanel, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.verificationCodePanel.Location = new System.Drawing.Point(261, 22);
+            this.verificationCodePanel.Location = new System.Drawing.Point(252, 50);
             this.verificationCodePanel.Name = "verificationCodePanel";
             this.verificationCodePanel.ShadowDecoration.Parent = this.verificationCodePanel;
             this.verificationCodePanel.Size = new System.Drawing.Size(625, 480);
@@ -617,10 +621,6 @@ namespace webTRON_Management_Software.Views.Lab_Assistant
             this.btnMinimize.TabStop = false;
             this.btnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
             // 
-            // DragableChangePassword
-            // 
-            this.DragableChangePassword.TargetControl = null;
-            // 
             // lblPasswordMustInclude
             // 
             this.lblPasswordMustInclude.AutoSize = true;
@@ -675,6 +675,10 @@ namespace webTRON_Management_Software.Views.Lab_Assistant
             this.label5.Size = new System.Drawing.Size(138, 17);
             this.label5.TabIndex = 68;
             this.label5.Text = "At least 8 characters";
+            // 
+            // DragableChangePassword
+            // 
+            this.DragableChangePassword.TargetControl = null;
             // 
             // ChangePassword
             // 

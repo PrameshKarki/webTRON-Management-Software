@@ -28,8 +28,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
-            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation4 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation3 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateNewPatient));
             this.addressTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblAddress = new System.Windows.Forms.Label();
@@ -62,11 +62,8 @@
             this.LblPanelRegistrationIdOutput = new System.Windows.Forms.Label();
             this.LabelReferredTo = new System.Windows.Forms.Label();
             this.SexOutput = new System.Windows.Forms.Label();
-            this.LabelAddressOutput = new System.Windows.Forms.Label();
             this.AgeOutput = new System.Windows.Forms.Label();
             this.FNameOutpuf = new System.Windows.Forms.Label();
-            this.RegistrationDateOutput = new System.Windows.Forms.Label();
-            this.RegistrationNumberOutput = new System.Windows.Forms.Label();
             this.QRCodePictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -182,6 +179,7 @@
             this.contactNumberTextBox.ShadowDecoration.Parent = this.contactNumberTextBox;
             this.contactNumberTextBox.Size = new System.Drawing.Size(174, 32);
             this.contactNumberTextBox.TabIndex = 8;
+            this.contactNumberTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.contactNumberTextBox_KeyPress);
             // 
             // label5
             // 
@@ -303,6 +301,7 @@
             this.lastNameTextBox.ShadowDecoration.Parent = this.lastNameTextBox;
             this.lastNameTextBox.Size = new System.Drawing.Size(219, 32);
             this.lastNameTextBox.TabIndex = 2;
+            this.lastNameTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.lastNameTextBox_KeyPress);
             // 
             // firstNameTxtBox
             // 
@@ -331,6 +330,7 @@
             this.firstNameTxtBox.ShadowDecoration.Parent = this.firstNameTxtBox;
             this.firstNameTxtBox.Size = new System.Drawing.Size(226, 32);
             this.firstNameTxtBox.TabIndex = 1;
+            this.firstNameTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.firstNameTxtBox_KeyPress);
             // 
             // lblName
             // 
@@ -371,6 +371,7 @@
             this.ageTextBox.ShadowDecoration.Parent = this.ageTextBox;
             this.ageTextBox.Size = new System.Drawing.Size(78, 32);
             this.ageTextBox.TabIndex = 7;
+            this.ageTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ageTextBox_KeyPress);
             // 
             // lblAge
             // 
@@ -497,12 +498,8 @@
             this.printPanel.Controls.Add(this.LblPanelRegistrationDateOutput);
             this.printPanel.Controls.Add(this.LblPanelRegistrationIdOutput);
             this.printPanel.Controls.Add(this.LabelReferredTo);
-            this.printPanel.Controls.Add(this.SexOutput);
-            this.printPanel.Controls.Add(this.LabelAddressOutput);
             this.printPanel.Controls.Add(this.AgeOutput);
             this.printPanel.Controls.Add(this.FNameOutpuf);
-            this.printPanel.Controls.Add(this.RegistrationDateOutput);
-            this.printPanel.Controls.Add(this.RegistrationNumberOutput);
             this.printPanel.Controls.Add(this.QRCodePictureBox);
             this.printPanel.Controls.Add(this.guna2PictureBox6);
             this.printPanel.Controls.Add(this.guna2PictureBox7);
@@ -518,7 +515,7 @@
             this.printPanel.Controls.Add(this.separator3);
             this.alertTransition.SetDecoration(this.printPanel, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2Transition1.SetDecoration(this.printPanel, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.printPanel.Location = new System.Drawing.Point(6, 3);
+            this.printPanel.Location = new System.Drawing.Point(3, 3);
             this.printPanel.Name = "printPanel";
             this.printPanel.ShadowDecoration.Parent = this.printPanel;
             this.printPanel.Size = new System.Drawing.Size(535, 343);
@@ -635,19 +632,10 @@
             // 
             this.guna2Transition1.SetDecoration(this.SexOutput, Guna.UI2.AnimatorNS.DecorationType.None);
             this.alertTransition.SetDecoration(this.SexOutput, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.SexOutput.Location = new System.Drawing.Point(0, 0);
+            this.SexOutput.Location = new System.Drawing.Point(270, 239);
             this.SexOutput.Name = "SexOutput";
             this.SexOutput.Size = new System.Drawing.Size(100, 23);
             this.SexOutput.TabIndex = 21;
-            // 
-            // LabelAddressOutput
-            // 
-            this.guna2Transition1.SetDecoration(this.LabelAddressOutput, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.alertTransition.SetDecoration(this.LabelAddressOutput, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.LabelAddressOutput.Location = new System.Drawing.Point(0, 0);
-            this.LabelAddressOutput.Name = "LabelAddressOutput";
-            this.LabelAddressOutput.Size = new System.Drawing.Size(100, 23);
-            this.LabelAddressOutput.TabIndex = 22;
             // 
             // AgeOutput
             // 
@@ -668,24 +656,6 @@
             this.FNameOutpuf.Name = "FNameOutpuf";
             this.FNameOutpuf.Size = new System.Drawing.Size(0, 13);
             this.FNameOutpuf.TabIndex = 16;
-            // 
-            // RegistrationDateOutput
-            // 
-            this.guna2Transition1.SetDecoration(this.RegistrationDateOutput, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.alertTransition.SetDecoration(this.RegistrationDateOutput, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.RegistrationDateOutput.Location = new System.Drawing.Point(0, 0);
-            this.RegistrationDateOutput.Name = "RegistrationDateOutput";
-            this.RegistrationDateOutput.Size = new System.Drawing.Size(100, 23);
-            this.RegistrationDateOutput.TabIndex = 23;
-            // 
-            // RegistrationNumberOutput
-            // 
-            this.guna2Transition1.SetDecoration(this.RegistrationNumberOutput, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.alertTransition.SetDecoration(this.RegistrationNumberOutput, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.RegistrationNumberOutput.Location = new System.Drawing.Point(0, 0);
-            this.RegistrationNumberOutput.Name = "RegistrationNumberOutput";
-            this.RegistrationNumberOutput.Size = new System.Drawing.Size(100, 23);
-            this.RegistrationNumberOutput.TabIndex = 24;
             // 
             // QRCodePictureBox
             // 
@@ -852,7 +822,7 @@
             this.PrintPanelContanerPanel.Controls.Add(this.printPanel);
             this.alertTransition.SetDecoration(this.PrintPanelContanerPanel, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2Transition1.SetDecoration(this.PrintPanelContanerPanel, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.PrintPanelContanerPanel.Location = new System.Drawing.Point(432, 57);
+            this.PrintPanelContanerPanel.Location = new System.Drawing.Point(430, 115);
             this.PrintPanelContanerPanel.Name = "PrintPanelContanerPanel";
             this.PrintPanelContanerPanel.ShadowDecoration.Parent = this.PrintPanelContanerPanel;
             this.PrintPanelContanerPanel.Size = new System.Drawing.Size(541, 506);
@@ -880,22 +850,22 @@
             // guna2Transition1
             // 
             this.guna2Transition1.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.guna2Transition1.DefaultAnimation = animation2;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 0;
+            animation4.Padding = new System.Windows.Forms.Padding(0);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation4;
             // 
             // activePanel
             // 
@@ -1077,22 +1047,22 @@
             // 
             this.alertTransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Scale;
             this.alertTransition.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.alertTransition.DefaultAnimation = animation1;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(0);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 0F;
+            this.alertTransition.DefaultAnimation = animation3;
             // 
             // alertTimer
             // 
@@ -1107,14 +1077,15 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1000, 625);
             this.Controls.Add(this.alertPanel);
+            this.Controls.Add(this.PrintPanelContanerPanel);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.activePanel);
-            this.Controls.Add(this.PrintPanelContanerPanel);
             this.Controls.Add(this.lblRegistrationDateOutput);
             this.Controls.Add(this.lblRegistrationIdOutput);
             this.Controls.Add(this.lblRegistrationDate);
             this.Controls.Add(this.LblRegistrationId);
             this.Controls.Add(this.referredToComboBox);
+            this.Controls.Add(this.SexOutput);
             this.Controls.Add(this.lblReferredTo);
             this.Controls.Add(this.btnCreateNewPatient);
             this.Controls.Add(this.guna2PictureBox5);
@@ -1198,11 +1169,8 @@
         private System.Windows.Forms.Label LblPanelRegistrationIdOutput;
         private System.Windows.Forms.Label LabelReferredTo;
         private System.Windows.Forms.Label SexOutput;
-        private System.Windows.Forms.Label LabelAddressOutput;
         private System.Windows.Forms.Label AgeOutput;
         private System.Windows.Forms.Label FNameOutpuf;
-        private System.Windows.Forms.Label RegistrationDateOutput;
-        private System.Windows.Forms.Label RegistrationNumberOutput;
         private Guna.UI2.WinForms.Guna2PictureBox QRCodePictureBox;
         private Guna.UI2.WinForms.Guna2Separator separator3;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox6;

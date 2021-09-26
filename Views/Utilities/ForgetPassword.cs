@@ -79,13 +79,13 @@ namespace webTRON_Management_Software.Views.Utilities
                             }
                             else
                             {
-                                MessageBox.Show("Internal Server Error.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                DisplayAlert("Danger", "Internal Server Error");
                             }
 
                         }
                         else
                         {
-                            MessageBox.Show("Internal Server Error.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            DisplayAlert("Danger", "Internal Server Error");
                         }
 
                     }
@@ -107,6 +107,7 @@ namespace webTRON_Management_Software.Views.Utilities
         //Click event on verify button click
         private void BtnVerify_Click(object sender, EventArgs e)
         {
+            int code=0000;
             //Check all the text fields are filled or not
             if(string.IsNullOrEmpty(verificationCodeTextBox1.Text) || string.IsNullOrEmpty(verificationCodeTextBox2.Text)|| string.IsNullOrEmpty(verificationCodeTextBox3.Text) || string.IsNullOrEmpty(verificationCodeTextBox4.Text))
             {
@@ -118,7 +119,19 @@ namespace webTRON_Management_Software.Views.Utilities
             else
             {
                 string verificationCode = $"{verificationCodeTextBox1.Text}{verificationCodeTextBox2.Text}{verificationCodeTextBox3.Text}{verificationCodeTextBox4.Text}";
-                int code = Convert.ToInt32(verificationCode);
+                try
+                {
+                  code = Convert.ToInt32(verificationCode);
+                }
+                catch (Exception)
+                {
+                    verificationCodeTextBox1.BorderColor = Color.Red;
+                    verificationCodeTextBox2.BorderColor = Color.Red;
+                    verificationCodeTextBox3.BorderColor = Color.Red;
+                    verificationCodeTextBox4.BorderColor = Color.Red;
+
+                }
+                
                 //Check verification is valid or not
                 bool isValid = Employee.IsValidVerificationCode(enteredEmail, code);
                 if (isValid)
@@ -209,7 +222,7 @@ namespace webTRON_Management_Software.Views.Utilities
                     }
                     else
                     {
-                        MessageBox.Show("Internal Server Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        DisplayAlert("Danger", "Ïnternal Server Error");
                     }
 
                 }
@@ -240,6 +253,50 @@ namespace webTRON_Management_Software.Views.Utilities
                 confirmPasswordTextBox.BorderColor = Color.FromArgb(213, 218, 223);
             }
 
+        }
+
+        private void AlertTimer_Tick(object sender, EventArgs e)
+        {
+            alertTransition.HideSync(alertPanel);
+        }
+        //Display alert
+        private void DisplayAlert(string type, string message)
+        {
+            if (type == "Danger")
+            {
+                alertPanel.BackgroundImage = Properties.Resources.alert_danger_background;
+                alertImage.Image = Properties.Resources.alert_danger_icon;
+                alertText.ForeColor = Color.Red;
+
+            }
+            else if (type == "Success")
+            {
+                alertPanel.BackgroundImage = Properties.Resources.alert_sucess_background;
+                alertImage.Image = Properties.Resources.alert_sucess_icon;
+                alertText.ForeColor = Color.Green;
+            }
+            alertText.Text = message;
+            alertTransition.ShowSync(alertPanel);
+        }
+
+        private void verificationCodeTextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void verificationCodeTextBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void verificationCodeTextBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void verificationCodeTextBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }

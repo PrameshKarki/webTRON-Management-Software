@@ -232,5 +232,6 @@ namespace webTRON_Management_Software.Views.Doctor
 
         }
 
+       
     }
 }

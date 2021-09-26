@@ -110,7 +110,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.firstNameTxtBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.firstNameTxtBox.HoverState.Parent = this.firstNameTxtBox;
             this.firstNameTxtBox.Location = new System.Drawing.Point(445, 155);
-            this.firstNameTxtBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.firstNameTxtBox.Margin = new System.Windows.Forms.Padding(6);
             this.firstNameTxtBox.Name = "firstNameTxtBox";
             this.firstNameTxtBox.PasswordChar = '\0';
             this.firstNameTxtBox.PlaceholderText = "First Name";
@@ -118,6 +118,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.firstNameTxtBox.ShadowDecoration.Parent = this.firstNameTxtBox;
             this.firstNameTxtBox.Size = new System.Drawing.Size(226, 32);
             this.firstNameTxtBox.TabIndex = 1;
+            this.firstNameTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.firstNameTxtBox_KeyPress);
             // 
             // lastNameTextBox
             // 
@@ -137,7 +138,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.lastNameTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.lastNameTextBox.HoverState.Parent = this.lastNameTextBox;
             this.lastNameTextBox.Location = new System.Drawing.Point(694, 155);
-            this.lastNameTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.lastNameTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.PasswordChar = '\0';
             this.lastNameTextBox.PlaceholderText = "Last Name";
@@ -145,6 +146,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.lastNameTextBox.ShadowDecoration.Parent = this.lastNameTextBox;
             this.lastNameTextBox.Size = new System.Drawing.Size(219, 32);
             this.lastNameTextBox.TabIndex = 2;
+            this.lastNameTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.lastNameTextBox_KeyPress);
             // 
             // lblEmailAddress
             // 
@@ -175,7 +177,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.emailTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.emailTextBox.HoverState.Parent = this.emailTextBox;
             this.emailTextBox.Location = new System.Drawing.Point(445, 205);
-            this.emailTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.emailTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.PasswordChar = '\0';
             this.emailTextBox.PlaceholderText = "Email Address";
@@ -312,7 +314,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.contactNumberTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.contactNumberTextBox.HoverState.Parent = this.contactNumberTextBox;
             this.contactNumberTextBox.Location = new System.Drawing.Point(445, 398);
-            this.contactNumberTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.contactNumberTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.contactNumberTextBox.Name = "contactNumberTextBox";
             this.contactNumberTextBox.PasswordChar = '\0';
             this.contactNumberTextBox.PlaceholderText = "Contact Number";
@@ -320,6 +322,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.contactNumberTextBox.ShadowDecoration.Parent = this.contactNumberTextBox;
             this.contactNumberTextBox.Size = new System.Drawing.Size(239, 32);
             this.contactNumberTextBox.TabIndex = 9;
+            this.contactNumberTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.contactNumberTextBox_KeyPress);
             // 
             // lblContactNumber
             // 
@@ -350,13 +353,13 @@ namespace webTRON_Management_Software.Views.Admin
             this.addressTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.addressTextBox.HoverState.Parent = this.addressTextBox;
             this.addressTextBox.Location = new System.Drawing.Point(445, 257);
-            this.addressTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.addressTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.PasswordChar = '\0';
             this.addressTextBox.PlaceholderText = "Address";
             this.addressTextBox.SelectedText = "";
             this.addressTextBox.ShadowDecoration.Parent = this.addressTextBox;
-            this.addressTextBox.Size = new System.Drawing.Size(239, 32);
+            this.addressTextBox.Size = new System.Drawing.Size(226, 32);
             this.addressTextBox.TabIndex = 4;
             // 
             // lblAddress
@@ -634,6 +637,7 @@ namespace webTRON_Management_Software.Views.Admin
             this.btnSubmit.TabIndex = 10;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.Click += new System.EventHandler(this.BtnSubmit_Click);
+            this.btnSubmit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btnSubmit_KeyPress);
             // 
             // alertTransition
             // 

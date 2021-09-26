@@ -62,11 +62,11 @@
             this.activeUserName = new System.Windows.Forms.Label();
             this.btnBack = new Guna.UI2.WinForms.Guna2PictureBox();
             this.alertTransition = new Guna.UI2.WinForms.Guna2Transition();
-            this.alertTimer = new System.Windows.Forms.Timer(this.components);
             this.alertPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.alertText = new System.Windows.Forms.Label();
             this.alertCloseBtn = new Guna.UI2.WinForms.Guna2PictureBox();
             this.alertImage = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.alertTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
@@ -272,6 +272,7 @@
             this.patientSerialNumberTextBox.Size = new System.Drawing.Size(106, 36);
             this.patientSerialNumberTextBox.TabIndex = 1;
             this.patientSerialNumberTextBox.TextChanged += new System.EventHandler(this.PatientSerialNumberTextBox_TextChanged);
+            this.patientSerialNumberTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.patientSerialNumberTextBox_KeyPress);
             // 
             // lblPatientID
             // 
@@ -462,12 +463,6 @@
             animation1.TransparencyCoeff = 0F;
             this.alertTransition.DefaultAnimation = animation1;
             // 
-            // alertTimer
-            // 
-            this.alertTimer.Enabled = true;
-            this.alertTimer.Interval = 5000;
-            this.alertTimer.Tick += new System.EventHandler(this.AlertTimer_Tick);
-            // 
             // alertPanel
             // 
             this.alertPanel.BackgroundImage = global::webTRON_Management_Software.Properties.Resources.alert_danger_background;
@@ -519,6 +514,12 @@
             this.alertImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.alertImage.TabIndex = 0;
             this.alertImage.TabStop = false;
+            // 
+            // alertTimer
+            // 
+            this.alertTimer.Enabled = true;
+            this.alertTimer.Interval = 5000;
+            this.alertTimer.Tick += new System.EventHandler(this.AlertTimer_Tick);
             // 
             // RenewPatient
             // 

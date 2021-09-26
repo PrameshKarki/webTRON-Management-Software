@@ -439,8 +439,9 @@ namespace webTRON_Management_Software.Views.Doctor
             this.firstNameTxtBox.PlaceholderText = "First Name";
             this.firstNameTxtBox.SelectedText = "";
             this.firstNameTxtBox.ShadowDecoration.Parent = this.firstNameTxtBox;
-            this.firstNameTxtBox.Size = new System.Drawing.Size(226, 32);
+            this.firstNameTxtBox.Size = new System.Drawing.Size(237, 32);
             this.firstNameTxtBox.TabIndex = 110;
+            this.firstNameTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.firstNameTxtBox_KeyPress);
             // 
             // contactNumberTextBox
             // 
@@ -468,6 +469,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.contactNumberTextBox.ShadowDecoration.Parent = this.contactNumberTextBox;
             this.contactNumberTextBox.Size = new System.Drawing.Size(239, 32);
             this.contactNumberTextBox.TabIndex = 118;
+            this.contactNumberTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.contactNumberTextBox_KeyPress);
             // 
             // lbContactNumber
             // 
@@ -607,14 +609,14 @@ namespace webTRON_Management_Software.Views.Doctor
             this.emailTextBox.ForeColor = System.Drawing.Color.Black;
             this.emailTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.emailTextBox.HoverState.Parent = this.emailTextBox;
-            this.emailTextBox.Location = new System.Drawing.Point(417, 240);
+            this.emailTextBox.Location = new System.Drawing.Point(417, 243);
             this.emailTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.PasswordChar = '\0';
             this.emailTextBox.PlaceholderText = "Email Address";
             this.emailTextBox.SelectedText = "";
             this.emailTextBox.ShadowDecoration.Parent = this.emailTextBox;
-            this.emailTextBox.Size = new System.Drawing.Size(407, 32);
+            this.emailTextBox.Size = new System.Drawing.Size(239, 32);
             this.emailTextBox.TabIndex = 112;
             // 
             // lblEmailAddress
@@ -654,6 +656,7 @@ namespace webTRON_Management_Software.Views.Doctor
             this.lastNameTextBox.ShadowDecoration.Parent = this.lastNameTextBox;
             this.lastNameTextBox.Size = new System.Drawing.Size(219, 32);
             this.lastNameTextBox.TabIndex = 111;
+            this.lastNameTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.lastNameTextBox_KeyPress);
             // 
             // lblName
             // 

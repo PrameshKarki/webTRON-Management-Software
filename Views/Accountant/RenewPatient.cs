@@ -188,5 +188,11 @@ namespace webTRON_Management_Software.Views.Accountant
             alertText.Text = message;
             alertTransition.ShowSync(alertPanel);
         }
+
+        private void patientSerialNumberTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+
+        }
     }
 }

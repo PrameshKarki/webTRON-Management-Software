@@ -297,6 +297,7 @@ namespace webTRON_Management_Software.Views.Utilities
             this.verificationCodeTextBox2.TabIndex = 1;
             this.verificationCodeTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.verificationCodeTextBox2.TextChanged += new System.EventHandler(this.VerificationCodeTextBox2_TextChanged);
+            this.verificationCodeTextBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.verificationCodeTextBox2_KeyPress);
             // 
             // verificationCodeTextBox3
             // 
@@ -325,6 +326,7 @@ namespace webTRON_Management_Software.Views.Utilities
             this.verificationCodeTextBox3.TabIndex = 2;
             this.verificationCodeTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.verificationCodeTextBox3.TextChanged += new System.EventHandler(this.VerificationCodeTextBox3_TextChanged);
+            this.verificationCodeTextBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.verificationCodeTextBox3_KeyPress);
             // 
             // verificationCodeTextBox4
             // 
@@ -353,6 +355,7 @@ namespace webTRON_Management_Software.Views.Utilities
             this.verificationCodeTextBox4.TabIndex = 3;
             this.verificationCodeTextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.verificationCodeTextBox4.TextChanged += new System.EventHandler(this.VerificationCodeTextBox4_TextChanged);
+            this.verificationCodeTextBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.verificationCodeTextBox4_KeyPress);
             // 
             // btnVerify
             // 
@@ -408,6 +411,7 @@ namespace webTRON_Management_Software.Views.Utilities
             this.verificationCodeTextBox1.TabIndex = 0;
             this.verificationCodeTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.verificationCodeTextBox1.TextChanged += new System.EventHandler(this.VerificationCodeTextBox1_TextChanged);
+            this.verificationCodeTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.verificationCodeTextBox1_KeyPress);
             // 
             // DragableChangePassword
             // 
